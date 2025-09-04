@@ -1,4 +1,4 @@
-# An introduction to Astronomy
+# Introduction to Astronomy
 
 如果您没有任何天文基础，阅读《天体物理基础》之前请先阅读《球面天文》第一章和《广义相对论基础》。
 
