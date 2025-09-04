@@ -1,0 +1,99 @@
+% !TEX encoding = UTF-8 Unicode
+\documentclass[11pt, a4paper, oneside, onecolumn]{ctexart}
+\usepackage[utf8]{inputenc}
+\usepackage{geometry}
+\geometry{left=1.5cm,right=1.5cm,top=2cm,bottom=1cm}
+\usepackage{ctex}
+\usepackage{CJK}
+\usepackage{xcolor}
+
+\usepackage{amsmath, amsthm, amssymb, graphicx, mathrsfs, siunitx}
+\usepackage{tikz}
+\usepackage{subfigure}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage[flushleft]{threeparttable}
+\usepackage{cases}
+
+\ctexset{section={format=\bfseries\zihao{4}\flushleft}}
+\renewcommand\thesubsection{\thesection.\arabic{subsection}}
+\numberwithin{equation}{subsection}
+\renewcommand\theequation{\thesubsection.\arabic{equation}}
+\makeatletter
+\renewcommand{\maketag@@@}[1]{\hbox{\m@th\normalsize\normalfont#1}}%
+\makeatother
+
+\usepackage{bookmark}
+\usepackage{hyperref}
+\hypersetup{colorlinks=true,linkcolor=black}
+\usepackage{indentfirst}
+\usepackage{inconsolata}
+
+\usepackage{listings}
+\lstset{
+     basicstyle      =   \zihao{-5}\ttfamily,
+     numberstyle     =   \zihao{-5}\ttfamily,
+     keywordstyle    =   \color{blue},
+     keywordstyle    =   [2] \color{teal},
+     stringstyle     =   \color{magenta},
+     commentstyle    =   \color{red}\ttfamily,
+     breaklines      =   true,   % 自动换行，建议不要写太长的行
+     columns         =   fixed,  % 如果不加这一句，字间距就不固定
+     flexiblecolumns,                % 别问为什么，加上这个
+     numbers             =   left,   % 行号的位置在左边
+     showspaces          =   false,  % 是否显示空格，显示了有点乱
+     numberstyle         =   \zihao{-5}\ttfamily,    % 行号的样式，小五号，tt 等宽字体
+     showstringspaces    =   false,
+     captionpos          =   t,      % 这段代码的名字所呈现的位置，t 指的是 top 上面
+     frame               =   lrtb,   % 显示边框
+}
+
+\lstdefinestyle{Python}{
+     language        =   Python,
+     basicstyle      =   \zihao{-5}\ttfamily,
+     numberstyle     =   \zihao{-5}\ttfamily,
+     keywordstyle    =   \color{blue},
+     keywordstyle    =   [2] \color{teal},
+     stringstyle     =   \color{magenta},
+     commentstyle    =   \color{red}\ttfamily,
+     breaklines      =   true,   % 自动换行，建议不要写太长的行
+     columns         =   fixed,  % 如果不加这一句，字间距就不固定
+basewidth       =   0.5em,
+}
+
+% \usepackage{physics} % 物理百宝箱
+% \usepackage[version=4]{mhchem} % 绘制分子式
+% \usepackage{algorithm,algorithmic} % 展示算法伪代码
+\usepackage[backend=biber,sorting=none]{biblatex}
+\addbibresource{/Users/Linyan/Zotero/MyBibTex.bib}
+
+\title{天体物理基础}
+\author{林衍}
+\date{\today}
+
+\usepackage[notitle]{subfiles}
+
+\begin{document}
+\maketitle
+\subsection*{前言}
+本文是南京大学本科生课程《大学天文学》《普通天文学》、中国科学技术大学研究生课程《天体物理基础》讲义大杂烩，对天文感兴趣的同学们可以尝试阅读。
+
+天文学是自然科学中的基础学科之一，其研究对象是宇宙，及其中的天体和各种形态的物质。天文学家观测和研究它们的位置、分布、运动、形态、结构、物理状态、化学组成、相互关系和起源演化。
+
+一般来讲，天文研究对象距离远，演化时标长，物理条件极端复杂，许多现象是地球上的物理实验室不可能复现的。由于人类还将长久地困于太阳系，研究对象距离远意味着观测是天文学主要的研究手段。天文学是沿着观测—理论—观测的途径发展的。然而，演化时标长，意味着我们无法完整观测同一天文现象的全部演化历程。幸运的是宇宙足够大天体足够多，我们能通过观测许多处于不同演化阶段的天体“拼凑”出它的一生。此外，由于遥远过去的星光现在才到达此处，我们可以像进行地质研究一样研究宇宙不同时期天体间的异同。当然，受限于观测精度，许多研究颇类似盲人摸象，比如关于活动星系核的研究。人们花了好长时间才意识到不同类型的活动星系核其实可以用一个统一模型来描述。观测中还会不可避免地引入选择效应。比如说，由于我们的望远镜只能观测到高于某一亮度的天体，不谨慎的研究者可能会认为宇宙中不存在低于这个亮度的天体，从而得出错误的结论。物理条件极端复杂，意味着宇宙中的天体是宝贵的物理学研究对象，为新理论的发展提供研究材料。
+
+按研究领域分类，天文学可分为天体测量学、天体力学和天体物理学，简单来讲是研究天体的位置、运动和物理状态。本系列讲义《球面天文》就属于天体测量学。按观测手段分类，实际上可以到达地球的、携带天体信息的载体主要有电磁辐射、宇宙线、中微子和引力波，其中电磁辐射最重要。而地球大气对光学和射电比较友好，因此这两个波段的研究比较丰富。如果按照观测对象非常粗略地区分，可以认为天文学在研究恒星、星系和宇宙。当然还可细分下去。本文会按此方法分类，简要介绍不同天体的物理特性，希望能呈现出较清晰的宇宙图景。
+
+\newpage
+\tableofcontents
+
+\newpage
+\subfile{天体物理基础 Chapter1/天体物理基础 Chapter1.tex}
+%\subfile{天体物理基础 Chapter2/天体物理基础 Chapter2.tex}
+%\subfile{天体物理基础 Chapter3/天体物理基础 Chapter3.tex}
+%\subfile{天体物理基础 Chapter4/天体物理基础 Chapter4.tex}
+%\subfile{天体物理基础 Chapter5/天体物理基础 Chapter5.tex}
+%\subfile{天体物理基础 Chapter6/天体物理基础 Chapter6.tex}
+
+\printbibliography
+\end{document}
