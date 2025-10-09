@@ -1,4 +1,12 @@
 .DS_Store
+*.aux
+*.bcf
+*.log
+*.run.xml
+.synctex.gz
+.toc
+.bbl
+.blg
 0球面天文/.DS_Store
 0球面天文/Notes/.DS_Store
 0球面天文/Notes/球面天文.aux
