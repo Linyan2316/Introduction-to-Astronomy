@@ -1410,7 +1410,7 @@ F_{\mu\nu}=T_{\mu\nu},
 \end{equation}
 其中$F_{\mu\nu}$是由度规及其微商构成的张量，$T_{\mu\nu}$是物质的能动张量。其次牛顿引力方程
 \begin{equation}
-\nabla^{2}\varphi=4\pi G\rho
+\nabla^{2}\varphi=4\pi\mathrm{G}\rho
 \end{equation}
 是一个引力势的二阶线性偏微分方程，因此$F_{\mu\nu}$最高只含$g_{\mu\nu}$的二阶微商，且对二阶微商是线性的。黎曼几何中有一条定理：由度规张量及其一阶和二阶微商构成的，对二阶微商为线性的张量只有曲率张量及其缩并，此外就是$g_{\mu\nu}$自身，这一数学定理几乎完全确定了$F_{\mu\nu}$.它最一般只能是
 \begin{equation}
@@ -1426,7 +1426,7 @@ G_{\mu\nu}+\lambda g_{\mu\nu}=\kappa T_{\mu\nu}.
 \end{equation}
 $\kappa$的具体形式可通过场方程的牛顿近似确定，现在先直接给出答案，后续给出证明。$\lambda$是唯一剩下的任意参量，读者也许已经注意到，$\lambda g_{\mu\nu}$这一项就是所谓的宇宙项，源于暗能量的作用。我们现在先令其为零，于是得到爱因斯坦场方程
 \begin{equation}
-G_{\mu\nu}=R_{\mu\nu}-\frac12g_{\mu\nu}R=\frac{8\pi G}{c^{4}}T_{\mu\nu}.
+G_{\mu\nu}=R_{\mu\nu}-\frac12g_{\mu\nu}R=\frac{8\pi\mathrm{G}}{c^{4}}T_{\mu\nu}.
 \end{equation}
 将其升高一个指标再缩并可得
 \begin{equation}
@@ -1532,8 +1532,8 @@ m\frac{\mathrm{d}^{2}x^{i}}{\mathrm{d}t^{2}}=m\left(-\frac{\partial{}\varphi}{\p
 \end{equation}
 无穷远处牛顿引力场应该消失，度规也该回到闵氏度规，因此常数为零。
 \begin{align}
-\varphi&=-\frac{c^{2}}{2}h_{00}=-\frac{GM}{r}.\\
-g_{00}&=-1+h_{00}=-\left(1+\frac{2\varphi}{c^{2}}\right)=-\left(1-\frac{2GM}{c^{2}r}\right).
+\varphi&=-\frac{c^{2}}{2}h_{00}=-\frac{\mathrm{G}M}{r}.\\
+g_{00}&=-1+h_{00}=-\left(1+\frac{2\varphi}{c^{2}}\right)=-\left(1-\frac{2\mathrm{G}M}{c^{2}r}\right).
 \end{align}
 
 \subsection{场方程的牛顿近似}
@@ -1589,11 +1589,11 @@ h_{00,i,i}=-c^{2}\kappa\rho.
 \end{equation}
 它与牛顿力学的泊松方程一致，
 \begin{equation}
-\Delta{}\varphi=4\pi G\rho,
+\Delta{}\varphi=4\pi\mathrm{G}\rho,
 \end{equation}
 可见
 \begin{equation}
-\kappa=\frac{8\pi G}{c^{4}}.
+\kappa=\frac{8\pi\mathrm{G}}{c^{4}}.
 \end{equation}
 
 \subsection{广义相对论中的力学与电磁学方程}
@@ -1771,11 +1771,11 @@ h=h^{\alpha}_{\alpha}=\eta^{\alpha\beta}h_{\alpha\beta}=-h_{00}+h_{11}+h_{22}+h_
 \end{equation}
 线性化的场方程
 \begin{equation}
-\overline{R}_{\mu\nu}=R_{\mu\nu}-\frac{1}{2}\eta_{\mu\nu}R=8\pi GT_{\mu\nu}
+\overline{R}_{\mu\nu}=R_{\mu\nu}-\frac{1}{2}\eta_{\mu\nu}R=8\pi\mathrm{G}T_{\mu\nu}
 \end{equation}
 可写作
 \begin{equation}
-\overline{h}_{\mu\nu,\alpha}^{,\alpha}+\eta_{\mu\nu}\overline{h}_{\alpha\beta}^{,\alpha,\beta}-\overline{h}_{\mu\alpha,\nu}^{,\alpha}-\overline{h}_{\nu\alpha,\mu}^{,\alpha}=-16\pi GT_{\mu\nu}.
+\overline{h}_{\mu\nu,\alpha}^{,\alpha}+\eta_{\mu\nu}\overline{h}_{\alpha\beta}^{,\alpha,\beta}-\overline{h}_{\mu\alpha,\nu}^{,\alpha}-\overline{h}_{\nu\alpha,\mu}^{,\alpha}=-16\pi\mathrm{G}T_{\mu\nu}.
 \end{equation}
 另一方面，谐和条件本身可写作
 \begin{equation}
@@ -1783,7 +1783,7 @@ h=h^{\alpha}_{\alpha}=\eta^{\alpha\beta}h_{\alpha\beta}=-h_{00}+h_{11}+h_{22}+h_
 \end{equation}
 因此场方程后三项均为零，我们得到谐和条件下的线性化引力场：
 \begin{equation}
-\overline{h}_{\mu\nu,\alpha}^{,\alpha}=-16\pi GT_{\mu\nu}.\label{3.6.14}
+\overline{h}_{\mu\nu,\alpha}^{,\alpha}=-16\pi\mathrm{G}T_{\mu\nu}.\label{3.6.14}
 \end{equation}
 (\ref{3.6.13})(\ref{3.6.14}) 式就是谐和条件下的线性化引力场方程。它与电磁学中的洛伦兹规范与电磁场方程很类似，因此 (\ref{3.6.13}) 式也被称作引力的洛伦兹规范条件。很明显该规范没有完全确定坐标，如果再作坐标变换
 \begin{equation}
@@ -1895,16 +1895,16 @@ g_{00}=-c^{2}\mathrm{e}^{A}\left(1-\frac{B}{r}\right),g_{11}=\left(1-\frac{B}{r}
 \end{equation}
 通过改变时间尺度可以消去常数$\mathrm{e}^{A}$.将其与牛顿引力势对比，可以得到
 \begin{equation}
-B=\frac{2GM}{c^{2}}.
+B=\frac{2\mathrm{G}M}{c^{2}}.
 \end{equation}
 因此静态球对称真空线元为
 \begin{equation}
-\mathrm{d}s^{2}=-c^{2}\left(1-\frac{2GM}{c^{2}r}\right)\mathrm{d}t^{2}+\left(1-\frac{2GM}{c^{2}r}\right)^{-1}\mathrm{d}r^{2}+r^{2}\left(\mathrm{d}\theta^{2}+\sin^{2}\theta\mathrm{d}\varphi^{2}\right).
+\mathrm{d}s^{2}=-c^{2}\left(1-\frac{2\mathrm{G}M}{c^{2}r}\right)\mathrm{d}t^{2}+\left(1-\frac{2\mathrm{G}M}{c^{2}r}\right)^{-1}\mathrm{d}r^{2}+r^{2}\left(\mathrm{d}\theta^{2}+\sin^{2}\theta\mathrm{d}\varphi^{2}\right).
 \end{equation}
 
 史瓦西时空时轴正交，这样的时空可以建立同时面，但要注意坐标时间没有测量意义，有意义的固有时间和坐标时间不同。类似我们知道，对于静止观测者有纯空间度规，史瓦西时空固有距离为
 \begin{equation}
-\mathrm{d}l^{2}=\left(1-\frac{2GM}{c^{2}r}\right)^{-1}\mathrm{d}r^{2}+r^{2}\left(\mathrm{d}\theta^{2}+\sin^{2}\theta\mathrm{d}\varphi^{2}\right).
+\mathrm{d}l^{2}=\left(1-\frac{2\mathrm{G}M}{c^{2}r}\right)^{-1}\mathrm{d}r^{2}+r^{2}\left(\mathrm{d}\theta^{2}+\sin^{2}\theta\mathrm{d}\varphi^{2}\right).
 \end{equation}
 沿着$\theta,\varphi$方向就是普通欧氏空间球面几何，但是沿着$\mathrm{d}r$方向，坐标距离$\mathrm{d}r$不等于固有距离$\mathrm{d}l$.
 
@@ -1940,7 +1940,7 @@ T^{\mu}_{\nu}=\left(\frac{p}{c^{2}}+\rho\right)
 \end{equation}
 以及混合形式引力场方程
 \begin{equation}
-R^{\mu}_{\nu}-\frac{1}{2}\delta{}^{\mu}_{\nu}R=\frac{8\pi G}{c^{4}}T^{\mu}_{\nu},
+R^{\mu}_{\nu}-\frac{1}{2}\delta{}^{\mu}_{\nu}R=\frac{8\pi\mathrm{G}}{c^{4}}T^{\mu}_{\nu},
 \end{equation}
 其中
 \begin{align}
@@ -1951,9 +1951,9 @@ R^{2}_{2}=R^{3}_{3}&=\mathrm{e}^{-2\alpha}\left[-\frac{1}{r^{2}}+\frac{1}{r^{2}}
 \end{align}
 由于$R^{2}_{2}=R^{3}_{3}$,场方程只有三个看似独立的分量式：
 \begin{align}
-\mathrm{e}^{-2\alpha}\left[-\frac{2}{r}\frac{\mathrm{d}\alpha}{\mathrm{d}r}+\frac{1}{r^{2}}\right]-\frac{1}{r^{2}}&=-\frac{8\pi G}{c^{2}}\rho,\label{4.2.5}\\
-\mathrm{e}^{-2\alpha}\left[\frac{2}{r}\frac{\mathrm{d}\beta}{\mathrm{d}r}+\frac{1}{r^{2}}\right]-\frac{1}{r^{2}}&=\frac{8\pi G}{c^{4}}p,\label{4.2.6}\\
-\mathrm{e}^{-2\alpha}\left[\frac{1}{r}\left(\frac{\mathrm{d}\beta}{\mathrm{d}r}-\frac{\mathrm{d}\alpha}{\mathrm{d}r}\right)+\frac{\mathrm{d}^{2}\beta}{\mathrm{d}r^{2}}+\frac{\mathrm{d}\beta}{\mathrm{d}r}\left(\frac{\mathrm{d}\beta}{\mathrm{d}r}-\frac{\mathrm{d}\alpha}{\mathrm{d}r}\right)\right]&=\frac{8\pi G}{c^{4}}p,\label{4.2.7}
+\mathrm{e}^{-2\alpha}\left[-\frac{2}{r}\frac{\mathrm{d}\alpha}{\mathrm{d}r}+\frac{1}{r^{2}}\right]-\frac{1}{r^{2}}&=-\frac{8\pi\mathrm{G}}{c^{2}}\rho,\label{4.2.5}\\
+\mathrm{e}^{-2\alpha}\left[\frac{2}{r}\frac{\mathrm{d}\beta}{\mathrm{d}r}+\frac{1}{r^{2}}\right]-\frac{1}{r^{2}}&=\frac{8\pi\mathrm{G}}{c^{4}}p,\label{4.2.6}\\
+\mathrm{e}^{-2\alpha}\left[\frac{1}{r}\left(\frac{\mathrm{d}\beta}{\mathrm{d}r}-\frac{\mathrm{d}\alpha}{\mathrm{d}r}\right)+\frac{\mathrm{d}^{2}\beta}{\mathrm{d}r^{2}}+\frac{\mathrm{d}\beta}{\mathrm{d}r}\left(\frac{\mathrm{d}\beta}{\mathrm{d}r}-\frac{\mathrm{d}\alpha}{\mathrm{d}r}\right)\right]&=\frac{8\pi\mathrm{G}}{c^{4}}p,\label{4.2.7}
 \end{align}
 为此我们需要引入更多的方程以使方程组完备。
 
@@ -1984,11 +1984,11 @@ Bianchi 恒等式的性质使 (\ref{4.2.5})(\ref{4.2.6})(\ref{4.2.7})(\ref{4.2.1
 
 方程组完备后，注意边界条件
 \begin{align}
-p\left(R\right)=0,\mathrm{e}^{2\beta\left(R\right)}=\mathrm{e}^{-2\alpha\left(R\right)}=\left(1-\frac{2GM}{c^{2}r}\right).
+p\left(R\right)=0,\mathrm{e}^{2\beta\left(R\right)}=\mathrm{e}^{-2\alpha\left(R\right)}=\left(1-\frac{2\mathrm{G}M}{c^{2}r}\right).
 \end{align}
 现在我们开始求解这组方程。首先将场方程的 00 分量方程，即 (\ref{4.2.5}) 式写成如下形式
 \begin{equation}
-\frac{c^{2}}{2G}\left[2r\mathrm{e}^{-2\alpha}\frac{\mathrm{d}\alpha}{\mathrm{d}r}+1-\mathrm{e}^{-2\alpha}\right]=4\pi r^{2}\rho,
+\frac{c^{2}}{2\mathrm{G}}\left[2r\mathrm{e}^{-2\alpha}\frac{\mathrm{d}\alpha}{\mathrm{d}r}+1-\mathrm{e}^{-2\alpha}\right]=4\pi r^{2}\rho,
 \end{equation}
 可见左半部分括号内部分实际上是
 \begin{equation}
@@ -1996,7 +1996,7 @@ p\left(R\right)=0,\mathrm{e}^{2\beta\left(R\right)}=\mathrm{e}^{-2\alpha\left(R\
 \end{equation}
 因此我们不妨定义半径为坐标距离$r$的球面内的质量为
 \begin{equation}
-m\left(r\right)=\frac{c^{2}}{2G}r\left(1-\mathrm{e}^{-2\alpha}\right),\label{4.2.15}
+m\left(r\right)=\frac{c^{2}}{2\mathrm{G}}r\left(1-\mathrm{e}^{-2\alpha}\right),\label{4.2.15}
 \end{equation}
 之所以这么定义是因为这样场方程就可写为
 \begin{equation}
@@ -2004,11 +2004,11 @@ m\left(r\right)=\int_{0}^{r}4\pi r^{2}\rho\left(r\right)\mathrm{d}r.
 \end{equation}
 现在将 (\ref{4.2.15}) 式代入场方程的 11 分量方程，即 (\ref{4.2.6}) 式，得到
 \begin{equation}
-\frac{\mathrm{d}\beta}{\mathrm{d}r}=\frac{\dfrac{4\pi G}{c^{2}}pr^{3}+Gm}{r\left(rc^{2}-2Gm\right)},\label{4.2.17}
+\frac{\mathrm{d}\beta}{\mathrm{d}r}=\frac{\dfrac{4\pi\mathrm{G}}{c^{2}}pr^{3}+\mathrm{G}m}{r\left(rc^{2}-2\mathrm{G}m\right)},\label{4.2.17}
 \end{equation}
 此结果代入能动张量分量方程，得到
 \begin{equation}
-\frac{\mathrm{d}p}{\mathrm{d}r}=-\frac{\left(p+\rho c^{2}\right)\left(\dfrac{4\pi G}{c^{2}}pr^{3}+Gm\right)}{r\left(rc^{2}-2Gm\right)}.\label{4.2.18}
+\frac{\mathrm{d}p}{\mathrm{d}r}=-\frac{\left(p+\rho c^{2}\right)\left(\dfrac{4\pi\mathrm{G}}{c^{2}}pr^{3}+\mathrm{G}m\right)}{r\left(rc^{2}-2\mathrm{G}m\right)}.\label{4.2.18}
 \end{equation}
 (\ref{4.2.18}) 式也被称作奥本海默方程，将其与物态方程联立就可求解恒星内部结构。容易发现光速趋向于无穷时奥本海默方程退化为牛顿引力下流体静力学平衡解。对于较实际的物态方程，奥本海默方程都无法解析地给出。故接下来只讨论一种理想模型，即密度均匀的星体。
 
@@ -2018,39 +2018,39 @@ m\left(r\right)=\frac{4\pi}{3}\rho_{0}r^{3},\label{4.2.19}
 \end{equation}
 此时奥本海默方程具有可分离变数的形式：
 \begin{align}
-&\frac{\mathrm{d}p}{\mathrm{d}r}=-\frac{4\pi G}{c^{2}}\frac{\left(p+\rho_{0}c^{2}\right)\left(p+\dfrac{1}{3}\rho_{0}c^{2}\right)r}{c^{2}-\dfrac{8\pi G}{3}\rho_{0}r^{2}},\label{4.2.20}\\
-&\int_{0}^{p\left(r\right)}\frac{1}{\left(p+\rho_{0}c^{2}\right)\left(p+\dfrac{1}{3}\rho_{0}c^{2}\right)}\mathrm{d}p=\frac{4\pi G}{c^{4}}\int_{R}^{r}\frac{r}{\left(\dfrac{8\pi G}{3c^{2}}\rho_{0}r^{2}-1\right)}\mathrm{d}r,\notag\\
-&\frac{3}{2\rho_{0}c^{2}}\int_{0}^{p\left(r\right)}\left(\frac{1}{p+\dfrac{1}{3}\rho_{0}c^{2}}-\frac{1}{p+\rho_{0}c^{2}}\right)\mathrm{d}p=\frac{3}{4\rho_{0}c^{2}}\ln\left(\frac{\dfrac{8\pi G}{3c^{2}}\rho_{0}r^{2}-1}{\dfrac{8\pi G}{3c^{2}}\rho_{0}R^{2}-1}\right),\notag\\
-&\frac{3p+\rho_{0}c^{2}}{p+\rho_{0}c^{2}}=\left(\frac{\dfrac{8\pi G}{3c^{2}}\rho_{0}r^{2}-1}{\dfrac{8\pi G}{3c^{2}}\rho_{0}R^{2}-1}\right)^{\frac{1}{2}},\notag\\
-&p\left(r\right)=\rho_{0}c^{2}\frac{\left(1-\dfrac{8\pi G}{3c^{2}}\rho_{0}r^{2}\right)^{\frac{1}{2}}-\left(1-\dfrac{8\pi G}{3c^{2}}\rho_{0}R^{2}\right)^{\frac12}}{3\left(1-\dfrac{8\pi G}{3c^{2}}\rho_{0}R^{2}\right)^{\frac12}-\left(1-\dfrac{8\pi G}{3c^{2}}\rho_{0}r^{2}\right)^{\frac{1}{2}}}.\label{4.2.21}
+&\frac{\mathrm{d}p}{\mathrm{d}r}=-\frac{4\pi\mathrm{G}}{c^{2}}\frac{\left(p+\rho_{0}c^{2}\right)\left(p+\dfrac{1}{3}\rho_{0}c^{2}\right)r}{c^{2}-\dfrac{8\pi\mathrm{G}}{3}\rho_{0}r^{2}},\label{4.2.20}\\
+&\int_{0}^{p\left(r\right)}\frac{1}{\left(p+\rho_{0}c^{2}\right)\left(p+\dfrac{1}{3}\rho_{0}c^{2}\right)}\mathrm{d}p=\frac{4\pi\mathrm{G}}{c^{4}}\int_{R}^{r}\frac{r}{\left(\dfrac{8\pi\mathrm{G}}{3c^{2}}\rho_{0}r^{2}-1\right)}\mathrm{d}r,\notag\\
+&\frac{3}{2\rho_{0}c^{2}}\int_{0}^{p\left(r\right)}\left(\frac{1}{p+\dfrac{1}{3}\rho_{0}c^{2}}-\frac{1}{p+\rho_{0}c^{2}}\right)\mathrm{d}p=\frac{3}{4\rho_{0}c^{2}}\ln\left(\frac{\dfrac{8\pi\mathrm{G}}{3c^{2}}\rho_{0}r^{2}-1}{\dfrac{8\pi\mathrm{G}}{3c^{2}}\rho_{0}R^{2}-1}\right),\notag\\
+&\frac{3p+\rho_{0}c^{2}}{p+\rho_{0}c^{2}}=\left(\frac{\dfrac{8\pi\mathrm{G}}{3c^{2}}\rho_{0}r^{2}-1}{\dfrac{8\pi\mathrm{G}}{3c^{2}}\rho_{0}R^{2}-1}\right)^{\frac{1}{2}},\notag\\
+&p\left(r\right)=\rho_{0}c^{2}\frac{\left(1-\dfrac{8\pi\mathrm{G}}{3c^{2}}\rho_{0}r^{2}\right)^{\frac{1}{2}}-\left(1-\dfrac{8\pi\mathrm{G}}{3c^{2}}\rho_{0}R^{2}\right)^{\frac12}}{3\left(1-\dfrac{8\pi\mathrm{G}}{3c^{2}}\rho_{0}R^{2}\right)^{\frac12}-\left(1-\dfrac{8\pi\mathrm{G}}{3c^{2}}\rho_{0}r^{2}\right)^{\frac{1}{2}}}.\label{4.2.21}
 \end{align}
 (\ref{4.2.20}) 式告诉我们压力向中心递增。(\ref{4.2.21}) 式取$r=0$即为中心压力，得到
 \begin{equation}
-p_{c}=p\left(0\right)=\rho_{0}c^{2}\frac{1-\left(1-\dfrac{8\pi G}{3c^{2}}\rho_{0}R^{2}\right)^{\frac12}}{3\left(1-\dfrac{8\pi G}{3c^{2}}\rho_{0}R^{2}\right)^{\frac12}-1}.
+p_{c}=p\left(0\right)=\rho_{0}c^{2}\frac{1-\left(1-\dfrac{8\pi\mathrm{G}}{3c^{2}}\rho_{0}R^{2}\right)^{\frac12}}{3\left(1-\dfrac{8\pi\mathrm{G}}{3c^{2}}\rho_{0}R^{2}\right)^{\frac12}-1}.
 \end{equation}
 简单分析可知恒星半径$R$越大，中心压力越高。中心压力正无穷时，恒星半径和总质量$M$满足
 \begin{equation}
-R=\frac{c}{\sqrt{3\pi G\rho_{0}}},M=\frac{4}{3}\pi \rho_{0}R^{3}=\frac{4}{9}\frac{c^{3}}{\sqrt{3\pi G^{3}\rho_{0}}},\frac{2GM}{c^{2}R}=\frac{8}{9}.
+R=\frac{c}{\sqrt{3\pi\mathrm{G}\rho_{0}}},M=\frac{4}{3}\pi \rho_{0}R^{3}=\frac{4}{9}\frac{c^{3}}{\sqrt{3\pi\mathrm{G}^{3}\rho_{0}}},\frac{2\mathrm{G}M}{c^{2}R}=\frac{8}{9}.
 \end{equation}
-可以证明其他物态方程下$\dfrac{2GM}{c^{2}R}$极限值都小于$\dfrac{8}{9}$,注意到恒星表面时空偏离平坦的程度正是由$\dfrac{2GM}{c^{2}R}$表征，说明恒星表面引力场强度有极限。这也是牛顿引力所无法预言的。
+可以证明其他物态方程下$\dfrac{2\mathrm{G}M}{c^{2}R}$极限值都小于$\dfrac{8}{9}$,注意到恒星表面时空偏离平坦的程度正是由$\dfrac{2\mathrm{G}M}{c^{2}R}$表征，说明恒星表面引力场强度有极限。这也是牛顿引力所无法预言的。
 
 (\ref{4.2.21}) 式告诉我们均匀密度星体内部压强分布，因此我们可以推出史瓦西度规内部引力场分布。首先不妨将 (\ref{4.2.21}) 式改写成如下形式：
 \begin{equation}
-p\left(r\right)=\rho_{0}c^{2}\frac{\left(1-\dfrac{2GM}{c^{2}R^{3}}r^{2}\right)^{\frac{1}{2}}-\left(1-\dfrac{2GM}{c^{2}R}\right)^{\frac12}}{3\left(1-\dfrac{2GM}{c^{2}R}\right)^{\frac12}-\left(1-\dfrac{2GM}{c^{2}R^{3}}r^{2}\right)^{\frac{1}{2}}}.
+p\left(r\right)=\rho_{0}c^{2}\frac{\left(1-\dfrac{2\mathrm{G}M}{c^{2}R^{3}}r^{2}\right)^{\frac{1}{2}}-\left(1-\dfrac{2\mathrm{G}M}{c^{2}R}\right)^{\frac12}}{3\left(1-\dfrac{2\mathrm{G}M}{c^{2}R}\right)^{\frac12}-\left(1-\dfrac{2\mathrm{G}M}{c^{2}R^{3}}r^{2}\right)^{\frac{1}{2}}}.
 \end{equation}
 代入 (\ref{4.2.17}) 式得到
 \begin{equation}
-\frac{\mathrm{d}\beta}{\mathrm{d}r}=\frac{\dfrac{2GM}{c^{2}R^{3}}r}{\left[3\left(1-\dfrac{2GM}{c^{2}R}\right)^{\frac12}-\left(1-\dfrac{2GM}{c^{2}R^{3}}r^{2}\right)^{\frac{1}{2}}\right]\left(1-\dfrac{2GM}{c^{2}R^{3}}r^{2}\right)^{\frac{1}{2}}},
+\frac{\mathrm{d}\beta}{\mathrm{d}r}=\frac{\dfrac{2\mathrm{G}M}{c^{2}R^{3}}r}{\left[3\left(1-\dfrac{2\mathrm{G}M}{c^{2}R}\right)^{\frac12}-\left(1-\dfrac{2\mathrm{G}M}{c^{2}R^{3}}r^{2}\right)^{\frac{1}{2}}\right]\left(1-\dfrac{2\mathrm{G}M}{c^{2}R^{3}}r^{2}\right)^{\frac{1}{2}}},
 \end{equation}
 右侧原函数是个简单的对数函数，代入恒星表面引力场的边界条件，
 \begin{align}
-\beta-\ln\left(1-\frac{2GM}{c^{2}R}\right)^{\frac{1}{2}}&=\ln\left[\dfrac{3\left(1-\dfrac{2GM}{c^{2}R}\right)^{\frac12}-\left(1-\dfrac{2GM}{c^{2}R^{3}}r^{2}\right)^{\frac{1}{2}}}{3\left(1-\dfrac{2GM}{c^{2}R}\right)^{\frac12}-\left(1-\dfrac{2GM}{c^{2}R^{3}}R^{2}\right)^{\frac{1}{2}}}\right],\notag\\
-\mathrm{e}^{\beta}&=\frac{3}{2}\left(1-\dfrac{2GM}{c^{2}R}\right)^{\frac12}-\frac{1}{2}\left(1-\dfrac{2GM}{c^{2}R^{3}}r^{2}\right)^{\frac{1}{2}}.
+\beta-\ln\left(1-\frac{2\mathrm{G}M}{c^{2}R}\right)^{\frac{1}{2}}&=\ln\left[\dfrac{3\left(1-\dfrac{2\mathrm{G}M}{c^{2}R}\right)^{\frac12}-\left(1-\dfrac{2\mathrm{G}M}{c^{2}R^{3}}r^{2}\right)^{\frac{1}{2}}}{3\left(1-\dfrac{2\mathrm{G}M}{c^{2}R}\right)^{\frac12}-\left(1-\dfrac{2\mathrm{G}M}{c^{2}R^{3}}R^{2}\right)^{\frac{1}{2}}}\right],\notag\\
+\mathrm{e}^{\beta}&=\frac{3}{2}\left(1-\dfrac{2\mathrm{G}M}{c^{2}R}\right)^{\frac12}-\frac{1}{2}\left(1-\dfrac{2\mathrm{G}M}{c^{2}R^{3}}r^{2}\right)^{\frac{1}{2}}.
 \end{align}
 
 有关$\alpha$的方程则要简单许多，联立 (\ref{4.2.15})(\ref{4.2.19}) 式简单得到
 \begin{equation}
-\mathrm{e}^{\alpha}=\left(1-\frac{2GM}{c^{2}R^{3}}r^{2}\right)^{-\frac{1}{2}}.
+\mathrm{e}^{\alpha}=\left(1-\frac{2\mathrm{G}M}{c^{2}R^{3}}r^{2}\right)^{-\frac{1}{2}}.
 \end{equation}
 
 \subsection{时空对称性和守恒量}
@@ -2079,7 +2079,7 @@ P_{\mu}\xi^{\mu}=P_{\mu}\delta{}^{\mu}_{k}=P_{k}.
 \end{equation}
 即协变动量的该分量守恒。注意不是逆变动量。作为应用可以考虑质点在史瓦西场中的运动，很明显$t,\varphi$是该度规的循环坐标，因此$P_{\mu}$的$t$和$\varphi$分量守恒：
 \begin{align}
-P_{0}&=g_{0\nu}P^{\nu}=g_{00}P^{0}=-\left(1-\frac{2GM}{c^{2}r}\right)\frac{mc\mathrm{d}t}{\mathrm{d}\tau}=\text{const}.\\
+P_{0}&=g_{0\nu}P^{\nu}=g_{00}P^{0}=-\left(1-\frac{2\mathrm{G}M}{c^{2}r}\right)\frac{mc\mathrm{d}t}{\mathrm{d}\tau}=\text{const}.\\
 P_{3}&=g_{3\nu}P^{\nu}=g_{33}P^{3}=r^{2}\sin^{2}\theta\frac{m\mathrm{d}\varphi}{\mathrm{d}\tau}=\text{const}.
 \end{align}
 通过这点我们就能得到引力红移的结果。不仅是史瓦西引力场，对稳定的引力场只要适当选取度规就能实现$P_{0}$守恒。而静止观测者观测到的光子能量为
@@ -2088,11 +2088,11 @@ P_{3}&=g_{3\nu}P^{\nu}=g_{33}P^{3}=r^{2}\sin^{2}\theta\frac{m\mathrm{d}\varphi}{
 \end{equation}
 可见测得光子能量只与观测者所在度规有关，而远离引力场的地方$-g_{00}$越大，因此测得的能量越低，光子波长越大，产生引力红移。容易发现在太阳表面测起来频率为$\nu_{0}$的光传播到无穷远处变为$\nu$,二者之比为
 \begin{equation}
-\frac{\nu}{\nu_{0}}=\sqrt{1-\frac{2GM}{c^{2}R}}\approx1-\frac{GM}{c^{2}R},
+\frac{\nu}{\nu_{0}}=\sqrt{1-\frac{2\mathrm{G}M}{c^{2}R}}\approx1-\frac{\mathrm{G}M}{c^{2}R},
 \end{equation}
 其中$R$是太阳半径。通常定义红移量为
 \begin{equation}
-z=\frac{\nu_{0}}{\nu}-1\approx\frac{GM}{R}.
+z=\frac{\nu_{0}}{\nu}-1\approx\frac{\mathrm{G}M}{R}.
 \end{equation}
 约等号是一级近似，该结论其实与牛顿引力给出的红移一级近似一致。不过二者二级近似后有差异。
 
@@ -2125,20 +2125,20 @@ $\mathrm{d}t_{1}$是发出光信号的坐标时间间隔，其对应的固有时
 \end{equation}
 根据上节分析，$P_{0},P_{3}$是守恒量，不妨采用
 \begin{align}
-E&=\left(1-\frac{2GM}{c^{2}r}\right)\frac{c^{2}\mathrm{d}t}{\mathrm{d}\tau},\\
+E&=\left(1-\frac{2\mathrm{G}M}{c^{2}r}\right)\frac{c^{2}\mathrm{d}t}{\mathrm{d}\tau},\\
 \widetilde{L}&=r^{2}\sin^{2}\theta\frac{\mathrm{d}\varphi}{\mathrm{d}\tau}.
 \end{align}
 此外四速归一条件也提供一个方程
 \begin{equation}
--\left(1-\frac{2GM}{c^{2}r}\right)\left(\frac{c\mathrm{d}t}{\mathrm{d}\tau}\right)^{2}+\left(1-\frac{2GM}{c^{2}r}\right)^{-1}\left(\frac{\mathrm{d}r}{\mathrm{d}\tau}\right)^{2}+r^{2}\left(\frac{\mathrm{d}\varphi}{\mathrm{d}\tau}\right)^{2}=-c^{2}.\label{4.4.4}
+-\left(1-\frac{2\mathrm{G}M}{c^{2}r}\right)\left(\frac{c\mathrm{d}t}{\mathrm{d}\tau}\right)^{2}+\left(1-\frac{2\mathrm{G}M}{c^{2}r}\right)^{-1}\left(\frac{\mathrm{d}r}{\mathrm{d}\tau}\right)^{2}+r^{2}\left(\frac{\mathrm{d}\varphi}{\mathrm{d}\tau}\right)^{2}=-c^{2}.\label{4.4.4}
 \end{equation}
 
 \newpage
 这四个方程构成质点动力学的一组完备的微分方程。整理一下方程组可写作更简洁的形式
 \begin{align}
 \frac{\mathrm{d}\varphi}{\mathrm{d}\tau}&=\frac{\widetilde{L}}{r^{2}},\\
-\frac{c^{2}\mathrm{d}t}{\mathrm{d}\tau}&=\frac{E}{1-\dfrac{2GM}{c^{2}r}},\\
-\left(\frac{\mathrm{d}r}{\mathrm{d}\tau}\right)^{2}&=\left(\frac{E}{c}\right)^{2}-\left(c^{2}-\frac{2GM}{r}\right)\left(1+\frac{\widetilde{L}^{2}}{c^{2}r^{2}}\right).\label{4.4.7}
+\frac{c^{2}\mathrm{d}t}{\mathrm{d}\tau}&=\frac{E}{1-\dfrac{2\mathrm{G}M}{c^{2}r}},\\
+\left(\frac{\mathrm{d}r}{\mathrm{d}\tau}\right)^{2}&=\left(\frac{E}{c}\right)^{2}-\left(c^{2}-\frac{2\mathrm{G}M}{r}\right)\left(1+\frac{\widetilde{L}^{2}}{c^{2}r^{2}}\right).\label{4.4.7}
 \end{align}
 对于光子，(\ref{4.4.4}) 式右端为零，采用的仿射参量也不能为$\tau$,但为了形式上统一，我们不妨定义
 \begin{equation}
@@ -2150,7 +2150,7 @@ E&=\left(1-\frac{2GM}{c^{2}r}\right)\frac{c^{2}\mathrm{d}t}{\mathrm{d}\tau},\\
 \end{equation}
 (\ref{4.4.7}) 式写作（对于质点$\lambda=\tau$）
 \begin{equation}
-\left(\frac{\mathrm{d}r}{\mathrm{d}\lambda}\right)^{2}=\left(\frac{E}{c}\right)^{2}-\left(c^{2}-\frac{2GM}{r}\right)\left(\eta+\frac{\widetilde{L}^{2}}{c^{2}r^{2}}\right).
+\left(\frac{\mathrm{d}r}{\mathrm{d}\lambda}\right)^{2}=\left(\frac{E}{c}\right)^{2}-\left(c^{2}-\frac{2\mathrm{G}M}{r}\right)\left(\eta+\frac{\widetilde{L}^{2}}{c^{2}r^{2}}\right).
 \end{equation}
 
 我们也可以从拉格朗日函数出发寻找守恒量
@@ -2165,7 +2165,7 @@ L=\frac12\left(\frac{\mathrm{d}\tau}{\mathrm{d}\lambda}\right)^{2}=-\frac12g_{\a
 
 史瓦西度规中的拉氏量为
 \begin{equation}
-L=\frac12\left[\left(1-\frac{2GM}{c^{2}r}\right)c^{2}\dot{t}^{2}-\left(1-\frac{2GM}{c^{2}r}\right)^{-1}\dot{r}^{2}-r^{2}\dot{\theta}^{2}-r^{2}\sin^{2}\theta\dot{\varphi}^{2}\right].
+L=\frac12\left[\left(1-\frac{2\mathrm{G}M}{c^{2}r}\right)c^{2}\dot{t}^{2}-\left(1-\frac{2\mathrm{G}M}{c^{2}r}\right)^{-1}\dot{r}^{2}-r^{2}\dot{\theta}^{2}-r^{2}\sin^{2}\theta\dot{\varphi}^{2}\right].
 \end{equation}
 对于光子，$L=0$,对于质点，$\lambda=\tau$时$L=\dfrac12$.因此
 \begin{equation}
@@ -2173,7 +2173,7 @@ L=\frac{\eta}{2}.
 \end{equation}
 度规不是时间和转角的函数，因此存在两个守恒量
 \begin{align}
-E&=\frac{\partial{}L}{\partial{}\dot{t}}=\left(1-\frac{2GM}{c^{2}r}\right)\frac{c^{2}\mathrm{d}t}{\mathrm{d}\lambda},\\
+E&=\frac{\partial{}L}{\partial{}\dot{t}}=\left(1-\frac{2\mathrm{G}M}{c^{2}r}\right)\frac{c^{2}\mathrm{d}t}{\mathrm{d}\lambda},\\
 \widetilde{L}&=-\frac{\partial{}L}{\partial{}\dot{\varphi}}=r^{2}\sin^{2}\theta\frac{\mathrm{d}\varphi}{\mathrm{d}\lambda}.
 \end{align}
 我们还可以得到关于$\theta$的方程：
@@ -2206,15 +2206,15 @@ P^{\hat{3}}=P_{\mu}\omega^{\hat{3}\mu}=P_{\mu}\omega^{\mu}_{\hat{3}}=\frac{m\wid
 \subsection{运动的分类}
 牛顿引力学中我们常会将角动量的作用看作一个势阱，相对论中同样可以引入相对论性的等效势：
 \begin{equation}
-U=2\Phi_{\text{eff}}\left(r\right)=\left(c^{2}-\frac{2GM}{r}\right)\left(\eta+\frac{\widetilde{L}^{2}}{c^{2}r^{2}}\right),
+U=2\Phi_{\text{eff}}\left(r\right)=\left(c^{2}-\frac{2\mathrm{G}M}{r}\right)\left(\eta+\frac{\widetilde{L}^{2}}{c^{2}r^{2}}\right),
 \end{equation}
 径向方程写作
 \begin{equation}
 \left(\frac{\mathrm{d}r}{\mathrm{d}\tau}\right)^{2}=\left(\frac{E}{c}\right)^{2}-U.
 \end{equation}
-等式左边正定，运动只能发生在$\left(\dfrac{E}{c}\right)^{2}>U$的地方。和牛顿等效势比起来，可以发现$U$多了一项$c^{2}$和$-\dfrac{2GM\widetilde{L}^{2}}{c^{2}r^{3}}$.$c^{2}$不是实质性的，因为相对论性的能量不再是单纯的动能，无穷远处静止质点$E\to c^{2}$,减去这种静能的话和$c^{2}$“相消”。而第二项在$r$很小的时候起决定作用，根本改变了运动情况。
+等式左边正定，运动只能发生在$\left(\dfrac{E}{c}\right)^{2}>U$的地方。和牛顿等效势比起来，可以发现$U$多了一项$c^{2}$和$-\dfrac{2\mathrm{G}M\widetilde{L}^{2}}{c^{2}r^{3}}$.$c^{2}$不是实质性的，因为相对论性的能量不再是单纯的动能，无穷远处静止质点$E\to c^{2}$,减去这种静能的话和$c^{2}$“相消”。而第二项在$r$很小的时候起决定作用，根本改变了运动情况。
 
-这么多$c^{2}$还是太麻烦了，我们不妨采用$c=G=1,\eta=1$,中心天体质量$M$也为$1$,据此先将粒子可能的运动分成三类：
+这么多$c^{2}$还是太麻烦了，我们不妨采用$c=\mathrm{G}=1,\eta=1$,中心天体质量$M$也为$1$,据此先将粒子可能的运动分成三类：
 
 \quad-\quad $E^{2}<1,$束缚态；
 
@@ -2265,50 +2265,50 @@ U=1-\frac{2}{r}+\frac{\widetilde{L}^{2}}{r^{2}}-\frac{2\widetilde{L}^{2}}{r^{3}}
 
 在$r$较小的地方，$\widetilde{L}>4$的时候有一峰值大于 1 的势垒，在$r$较大的地方有一势阱（图\ref{等效势阱。}并未绘制出，但随着$r$的增大，$U$会回升至趋向于 1 的情形），此时三类运动都是可能发生的。随着$\widetilde{L}$减小，势垒也在下降，$\widetilde{L}\le4$时，势垒降到$1$以下，散射态消失了。$\widetilde{L}<2\sqrt{3}$时，势垒也消失了，此时也没有势阱的概念了，粒子有很大可能向引力源坠落。实际上，牛顿引力论可以实现半径任意小的圆轨道，但是根据相对论的等效势不可能实现。对于
 \begin{equation}
-\Phi_{\text{eff}}(r)=\frac{\widetilde{L}^{2}}{2r^{2}}-\frac{GM\widetilde{L}^{2}}{c^{2}r^{3}}-\frac{GM}{r}+\frac12c^{2},
+\Phi_{\text{eff}}(r)=\frac{\widetilde{L}^{2}}{2r^{2}}-\frac{\mathrm{G}M\widetilde{L}^{2}}{c^{2}r^{3}}-\frac{\mathrm{G}M}{r}+\frac12c^{2},
 \end{equation}
 对$r$求导发现
 \begin{equation}
-\frac{\mathrm{d}\Phi_{\text{eff}}}{\mathrm{d}r}=\frac{\widetilde{L}^{2}}{r^{4}}(\frac{3GM}{c^{2}}-r)+\frac{GM}{r^{2}}.
+\frac{\mathrm{d}\Phi_{\text{eff}}}{\mathrm{d}r}=\frac{\widetilde{L}^{2}}{r^{4}}(\frac{3\mathrm{G}M}{c^{2}}-r)+\frac{\mathrm{G}M}{r^{2}}.
 \end{equation}
-可见对于$r<3GM_{\text{BH}}/c^{2},\dfrac{\mathrm{d}\Phi_{\text{eff}}}{\mathrm{d}r}>0$,无法实现圆轨道。
+可见对于$r<3\mathrm{G}M_{\text{BH}}/c^{2},\dfrac{\mathrm{d}\Phi_{\text{eff}}}{\mathrm{d}r}>0$,无法实现圆轨道。
 
 要实现稳定轨道，首先要求一阶导为零有解
 \begin{align}
-r^{4}\frac{\mathrm{d}\Phi_{\text{eff}}}{\mathrm{d}r}&=\frac{3\widetilde{L}^{2}GM}{c^{2}}-\widetilde{L}^{2}r+GMr^{2}=0,\\
-\Delta{}&=\widetilde{L}^{4}-12\frac{G^{2}M^{2}}{c^{2}}\widetilde{L}^{2}>0,\\
-\widetilde{L}&>\frac{2\sqrt{3}GM}{c}.
+r^{4}\frac{\mathrm{d}\Phi_{\text{eff}}}{\mathrm{d}r}&=\frac{3\widetilde{L}^{2}\mathrm{G}M}{c^{2}}-\widetilde{L}^{2}r+\mathrm{G}Mr^{2}=0,\\
+\Delta{}&=\widetilde{L}^{4}-12\frac{\mathrm{G}^{2}M^{2}}{c^{2}}\widetilde{L}^{2}>0,\\
+\widetilde{L}&>\frac{2\sqrt{3}\mathrm{G}M}{c}.
 \end{align}
 这也是前文$2\sqrt{3}$的来源。进一步要求二阶导大于零，
 \begin{align}
-r^{5}\frac{\mathrm{d}^{2}\Phi_{\text{eff}}}{\mathrm{d}r^{2}}&=-\frac{12\widetilde{L}^{2}GM}{c^{2}}+3\widetilde{L}^{2}r-2GMr^{2}>0.\tag{5}\\
-r&=\frac{-3\widetilde{L}^{2}\pm\sqrt{(9\widetilde{L}^{4}-96\widetilde{L}^{2}G^{2}M^{2}/c^{2})}}{-4GM},\notag\\
-\widetilde{L}&>\frac{2\sqrt3GM}{c},\notag\\
-r_{\min}&=\frac{6GM}{c^{2}},r_{\max}=\frac{12GM}{c^{2}}.\tag{6}
+r^{5}\frac{\mathrm{d}^{2}\Phi_{\text{eff}}}{\mathrm{d}r^{2}}&=-\frac{12\widetilde{L}^{2}\mathrm{G}M}{c^{2}}+3\widetilde{L}^{2}r-2\mathrm{G}Mr^{2}>0.\tag{5}\\
+r&=\frac{-3\widetilde{L}^{2}\pm\sqrt{(9\widetilde{L}^{4}-96\widetilde{L}^{2}\mathrm{G}^{2}M^{2}/c^{2})}}{-4\mathrm{G}M},\notag\\
+\widetilde{L}&>\frac{2\sqrt3\mathrm{G}M}{c},\notag\\
+r_{\min}&=\frac{6\mathrm{G}M}{c^{2}},r_{\max}=\frac{12\mathrm{G}M}{c^{2}}.\tag{6}
 \end{align}
-因此最小可实现的圆轨道为$\dfrac{6GM}{c^{2}}$.
+因此最小可实现的圆轨道为$\dfrac{6\mathrm{G}M}{c^{2}}$.
 
 \subsection{行星的轨道}
 理论力学中，行星运动有关的第一积分是
 \begin{align}
 \frac{\mathrm{d}\varphi}{\mathrm{d}t}&=\frac{L}{r^{2}},\\
-\frac12\left(\frac{\mathrm{d}r}{\mathrm{d}t}\right)^{2}&=E+\frac{GM}{r}-\frac{L^{2}}{2r^{2}}.
+\frac12\left(\frac{\mathrm{d}r}{\mathrm{d}t}\right)^{2}&=E+\frac{\mathrm{G}M}{r}-\frac{L^{2}}{2r^{2}}.
 \end{align}
 其中$L$是行星的角动量。消去时间可以得到轨道方程
 \begin{equation}
-\frac{1}{2}\left[\frac{\mathrm{d}}{\mathrm{d}\varphi}\left(\frac{1}{r}\right)\right]^{2}=\frac{E}{L^{2}}-\frac{1}{2r^{2}}+\frac{GM}{rL^{2}}.
+\frac{1}{2}\left[\frac{\mathrm{d}}{\mathrm{d}\varphi}\left(\frac{1}{r}\right)\right]^{2}=\frac{E}{L^{2}}-\frac{1}{2r^{2}}+\frac{\mathrm{G}M}{rL^{2}}.
 \end{equation}
 对$\varphi$微商，得到
 \begin{equation}
-\frac{\mathrm{d}^{2}}{\mathrm{d}\varphi^{2}}\left(\frac{1}{r}\right)+\frac{1}{r}=\frac{GM}{L^{2}}.
+\frac{\mathrm{d}^{2}}{\mathrm{d}\varphi^{2}}\left(\frac{1}{r}\right)+\frac{1}{r}=\frac{\mathrm{G}M}{L^{2}}.
 \end{equation}
-变量代换$u=\dfrac{GM}{r}$,
+变量代换$u=\dfrac{\mathrm{G}M}{r}$,
 \begin{equation}
-\frac{\mathrm{d}^{2}u}{\mathrm{d}\varphi^{2}}+u=\left(\frac{GM}{L}\right)^{2}.
+\frac{\mathrm{d}^{2}u}{\mathrm{d}\varphi^{2}}+u=\left(\frac{\mathrm{G}M}{L}\right)^{2}.
 \end{equation}
 该方程的解是
 \begin{equation}
-u=\left(\frac{GM}{L}\right)^{2}\left(1+e\cos\varphi\right).
+u=\left(\frac{\mathrm{G}M}{L}\right)^{2}\left(1+e\cos\varphi\right).
 \end{equation}
 在极坐标系中根据“到准线和到焦点距离比值为定值”的定义容易发现这是一个椭圆轨道。$e$是偏心率。
 
@@ -2361,7 +2361,7 @@ T=\frac{2\pi}{1-3\left(\dfrac{M}{\widetilde{L}}\right)^{2}},
 \end{equation}
 才能回到近日点。相邻两个近日点的方位角之差是
 \begin{equation}
-\Delta{}\varphi=6\pi\left(\frac{M}{\widetilde{L}}\right)^{2}=6\pi\left(\frac{GM}{c\widetilde{L}}\right)^{2}.
+\Delta{}\varphi=6\pi\left(\frac{M}{\widetilde{L}}\right)^{2}=6\pi\left(\frac{\mathrm{G}M}{c\widetilde{L}}\right)^{2}.
 \end{equation}
 对于水星，每运动一周，$\Delta{}\varphi=0.1^{\prime\prime}$,累积一世纪积累的进动角是$43^{\prime\prime}$,与观测数据达成了惊人的一致。
 
@@ -2376,9 +2376,9 @@ T=\frac{2\pi}{1-3\left(\dfrac{M}{\widetilde{L}}\right)^{2}},
 \begin{equation}
 \frac{\mathrm{d}^{2}u}{\mathrm{d}\varphi^{2}}+u=3u^{2},
 \end{equation}
-其中$u=\dfrac{GM}{c^{2}r}=\dfrac{GM}{c^{2}}\widetilde{u}$,方程改写成
+其中$u=\dfrac{\mathrm{G}M}{c^{2}r}=\dfrac{\mathrm{G}M}{c^{2}}\widetilde{u}$,方程改写成
 \begin{equation}
-\frac{\mathrm{d}^{2}\widetilde{u}}{\mathrm{d}\varphi^{2}}+\widetilde{u}=\frac{3GM}{c^{2}}\widetilde{u}^{2}.
+\frac{\mathrm{d}^{2}\widetilde{u}}{\mathrm{d}\varphi^{2}}+\widetilde{u}=\frac{3\mathrm{G}M}{c^{2}}\widetilde{u}^{2}.
 \end{equation}
 可以使用逐次逼近法求解。首先考虑
 \begin{equation}
@@ -2390,21 +2390,21 @@ T=\frac{2\pi}{1-3\left(\dfrac{M}{\widetilde{L}}\right)^{2}},
 \end{equation}
 其中$R$是光线到恒星中心的最短距离。上式是一条通过“黄道面”的直线。零级近似代入原方程可求一级近似解
 \begin{equation}
-\frac{\mathrm{d}^{2}\widetilde{u}_{1}}{\mathrm{d}\varphi^{2}}+\widetilde{u}_{1}=\frac{3GM}{c^{2}R^{2}}\cos^{2}\varphi.
+\frac{\mathrm{d}^{2}\widetilde{u}_{1}}{\mathrm{d}\varphi^{2}}+\widetilde{u}_{1}=\frac{3\mathrm{G}M}{c^{2}R^{2}}\cos^{2}\varphi.
 \end{equation}
 猜测解形式为$\widetilde{u}_{1}=B\sin^{2}\varphi+B'$,可以定出系数具体值，得到特解：
 \begin{equation}
-\widetilde{u}_{1}=\frac{GM}{c^{2}R^{2}}\left(1+\sin^{2}\varphi\right).
+\widetilde{u}_{1}=\frac{\mathrm{G}M}{c^{2}R^{2}}\left(1+\sin^{2}\varphi\right).
 \end{equation}
 因此光线轨道可以写作
 \begin{equation}
-\widetilde{u}=\widetilde{u}_{0}+\widetilde{u}_{1}=R^{-1}\cos\varphi+\frac{GM}{c^{2}R^{2}}\left(1+\sin^{2}\varphi\right).
+\widetilde{u}=\widetilde{u}_{0}+\widetilde{u}_{1}=R^{-1}\cos\varphi+\frac{\mathrm{G}M}{c^{2}R^{2}}\left(1+\sin^{2}\varphi\right).
 \end{equation}
 无穷远处 ($\widetilde{u}_{0}=0$) 直线解方位角为$\varphi=\pm\dfrac{\pi}{2}$,一级解可看作添加一个小量$a$,泰勒展开得到无穷远处
 \begin{align}
-0&=-R^{-1}\sin\alpha+\frac{GM}{c^{2}R^{2}}\left(1+\cos^{2}\alpha\right).\\
-a&=\frac{2GM}{c^{2}R}.\\
-\Delta{}\theta&=2a=\frac{4GM}{c^{2}R}.
+0&=-R^{-1}\sin\alpha+\frac{\mathrm{G}M}{c^{2}R^{2}}\left(1+\cos^{2}\alpha\right).\\
+a&=\frac{2\mathrm{G}M}{c^{2}R}.\\
+\Delta{}\theta&=2a=\frac{4\mathrm{G}M}{c^{2}R}.
 \end{align}
 太阳附近数据为$\Delta{}\theta=1.75^{\prime\prime}$,已被日全食时拍摄的星空照片证实。
 

@@ -321,8 +321,8 @@ f=\frac{1}{c}\kappa F=\frac{1}{c}\kappa\dfrac{L}{4\pi R^2}=\frac{L\sigma}{4\pi R
 
 于是我们自然地引出 Eddington 光度。星系中心的超大质量黑洞，吸积物质时可以将物质的引力能转化为辐射能。当黑洞的引力与辐射力达到平衡时，吸积率就不能再上升，此时有最大光度。假设被吸积的物质为纯氢气体，散射截面为汤姆孙散射截面$\sigma_{\text{T}}=6.65\times10^{-25}\,\mathrm{cm}^{2}$,此时最大光度被称作 Eddington 光度：
 \begin{align}
-\frac{GM_{\text{BH}}}{R^{2}}&=\frac{L\sigma}{4\pi R^{2}cm},\\
-L_{\text{Edd}}&=\frac{4\pi cGM_{\text{BH}}m_{\mathrm{H}}}{\sigma_{\text{T}}}=1.25\times10^{38}\frac{M_{\text{BH}}}{M_\odot}\,\mathrm{erg\cdot{}s^{-1}}.
+\frac{\mathrm{G}M_{\text{BH}}}{R^{2}}&=\frac{L\sigma}{4\pi R^{2}cm},\\
+L_{\text{Edd}}&=\frac{4\pi c\mathrm{G}M_{\text{BH}}m_{\mathrm{H}}}{\sigma_{\text{T}}}=1.25\times10^{38}\frac{M_{\text{BH}}}{M_\odot}\,\mathrm{erg\cdot{}s^{-1}}.
 \end{align}
 球对称吸积并不常见，大多数情况下吸积物质会形成一个盘，因此与盘呈一定夹角的辐射并不能有效转换为对物质的推力，因此可以实现超 Eddington 吸积。但随着黑洞质量逐渐提高，它的吸积能力可能会不断下降，一般超大质量黑洞辐射功率仅能达到 Eddington 光度的百分之一。但与太阳光度$L_{\odot}=3.86\times10^{33}\,\mathrm{erg\cdot s^{-1}}$对比，黑洞吸积能释放的辐射依旧是巨大的。
 
@@ -678,7 +678,7 @@ R=\frac{e^{3}}{2\pi m^{2}c^{4}}\int_{0}^{r}N_{e}B\cos\theta\mathrm{d}r,
 \begin{equation}
 \Delta{}=R\lambda^{2}.
 \end{equation}
-距离取$\mathrm{pc}$,电子数密度$\mathrm{cm^{-3}}$,磁场取$\mu G$时，$R=0.81\int_{0}^{r}nB\cos\theta\mathrm{d}r$.可见通过测量不同频率线偏振波偏振面的旋转角度可以确定$R$的值。
+距离取$\mathrm{pc}$,电子数密度$\mathrm{cm^{-3}}$,磁场取$\mu\mathrm{G}$时，$R=0.81\int_{0}^{r}nB\cos\theta\mathrm{d}r$.可见通过测量不同频率线偏振波偏振面的旋转角度可以确定$R$的值。
 
 \newpage
 下一个问题是，$R$中电子数密度和磁场是耦合在一起的，能不能将它们区分开呢？答案是可以的，要用到本小节开头提及的相速度。无磁场等离子体中射电波的相速度为
@@ -1487,8 +1487,8 @@ M & $3000\,\mathrm{K}$ & 红 & 中性金属线、分子带\\
 \subsubsection{质光关系}
 我们发现在赫罗图中主序星跨越了 OBAFGKM 整个哈佛光谱型范围，光度和温度跨越极大，但是 MK 分类中将其分为一种，这背后有什么物理原因吗？实际上人们在观测中确实发现主序星之间性质的联系，这便是本小节要介绍的质光关系。质光关系源自对恒星模型的大致近似。对于一个稳定燃烧的恒星，我们假设其处于流体静力学平衡，即
 \begin{align}
-\frac{GM_{r}\rho\mathrm{d}A\mathrm{d}r}{r^{2}}&=\mathrm{d}P\mathrm{d}A,\\
-\frac{\mathrm{d}P}{\mathrm{d}r}&=\frac{GM_{r}\rho}{r^{2}}.\label{1.4.4}
+\frac{\mathrm{G}M_{r}\rho\mathrm{d}A\mathrm{d}r}{r^{2}}&=\mathrm{d}P\mathrm{d}A,\\
+\frac{\mathrm{d}P}{\mathrm{d}r}&=\frac{\mathrm{G}M_{r}\rho}{r^{2}}.\label{1.4.4}
 \end{align}
 于是我们大概得知两种关系，$\dfrac{P}{R}\sim\dfrac{M\rho}{R^{2}},\rho\sim\dfrac{M}{R^{3}}$,并由此推出$P\sim\dfrac{M^{2}}{R^{4}}$.我们一般假设恒星内部气体遵循理想气体状态方程，即$P=\dfrac{\rho k_{\text{B}}T}{\mu m_{\mathrm{H}}}$,其中$\mu$是相对分子质量，$m_{\mathrm{H}}$是氢原子质量，由此得到$T\sim\dfrac{M}{R}$.与引力相抗衡的压力有辐射压和气压两种，此处我们只考虑辐射压存在，可进一步建立辐射压和温度的关系。我们曾介绍过球对称情况下的能量密度，对于黑体辐射，
 \begin{equation}
@@ -1514,11 +1514,11 @@ P_{\text{rad}}&=\frac{1}{3}a_{\text{B}}T^{4}.\label{1.4.9}
 \end{align}
 进一步地，我们可以建立起光度和质量的关系。在推导 Eddington 光度时我们曾经建立过有关光度和引力的方程，将其稍作修改可得
 \begin{equation}
-\frac{1}{c}\kappa\frac{L}{4\pi r^{2}}=\frac{GM_{r}}{r^{2}},\label{1.4.10}
+\frac{1}{c}\kappa\frac{L}{4\pi r^{2}}=\frac{\mathrm{G}M_{r}}{r^{2}},\label{1.4.10}
 \end{equation}
 联立 (\ref{1.4.4})(\ref{1.4.9})(\ref{1.4.10}) 式得到
 \begin{align}
-\frac{GM}{r^{2}}=\frac{1}{\rho}\frac{\mathrm{d}P}{\mathrm{d}r}=\frac{1}{c}\kappa\frac{L}{4\pi r^{2}}=\frac{1}{\rho}\frac{4}{3}a_{\text{B}}T^{3}\frac{\mathrm{d}T}{\mathrm{d}r},\label{1.4.11}
+\frac{\mathrm{G}M}{r^{2}}=\frac{1}{\rho}\frac{\mathrm{d}P}{\mathrm{d}r}=\frac{1}{c}\kappa\frac{L}{4\pi r^{2}}=\frac{1}{\rho}\frac{4}{3}a_{\text{B}}T^{3}\frac{\mathrm{d}T}{\mathrm{d}r},\label{1.4.11}
 \end{align}
 由此可得
 \begin{equation}
@@ -1762,29 +1762,29 @@ R&=g^{\mu\nu}R_{\mu\nu}=3\frac{\ddot a}{a}+\left[\frac{\ddot a}{a}+2\left(\frac{
 0 & 0 & 0 & P
 \end{pmatrix}$,考虑爱因斯坦场方程的 00 分量
 \begin{equation}
-G_{00}=R_{00}-\frac{1}{2}g_{00}R=8\pi G\rho=3\left[\left(\frac{\dot a}{a}\right)^{2}+\frac{k}{a^{2}}\right].\notag
+G_{00}=R_{00}-\frac{1}{2}g_{00}R=8\pi\mathrm{G}\rho=3\left[\left(\frac{\dot a}{a}\right)^{2}+\frac{k}{a^{2}}\right].\notag
 \end{equation}
 改写一下就是 the first Friedmann equation
 \begin{equation}
-H^{2}\left(t\right)=\left(\frac{\dot{a}\left(t\right)}{a\left(t\right)}\right)^{2}=\frac{8\pi G}{3}\rho\left(t\right)-\frac{k}{a^{2}\left(t\right)}.
+H^{2}\left(t\right)=\left(\frac{\dot{a}\left(t\right)}{a\left(t\right)}\right)^{2}=\frac{8\pi\mathrm{G}}{3}\rho\left(t\right)-\frac{k}{a^{2}\left(t\right)}.
 \end{equation}
 当然还可以在场方程中添加一项宇宙学常数（暗能量）,方程变为
 \begin{equation}
-\left(\frac{\dot{a}\left(t\right)}{a\left(t\right)}\right)^{2}=\frac{8\pi G}{3}\rho\left(t\right)-\frac{k}{a^{2}\left(t\right)}+\frac{\Lambda}{3}.\label{1.6.8}
+\left(\frac{\dot{a}\left(t\right)}{a\left(t\right)}\right)^{2}=\frac{8\pi\mathrm{G}}{3}\rho\left(t\right)-\frac{k}{a^{2}\left(t\right)}+\frac{\Lambda}{3}.\label{1.6.8}
 \end{equation}
 于是我们发现决定宇宙膨胀速率的要素有物质密度$\rho$,曲率$k$,还有暗能量$\Lambda$.如果要让现在的宇宙继续维持平坦（即$k=0$）且不考虑暗能量，密度就需要达到
 \begin{equation}
-\rho_{\text{cri}\left(t\right)}=\frac{3H_{0}^{2}\left(t\right)}{8\pi G}\sim1.88\times10^{-29}h^{2}\,\mathrm{g\cdot{}cm^{-3}}.
+\rho_{\text{cri}\left(t\right)}=\frac{3H_{0}^{2}\left(t\right)}{8\pi\mathrm{G}}\sim1.88\times10^{-29}h^{2}\,\mathrm{g\cdot{}cm^{-3}}.
 \end{equation}
 这就是临界密度的表达式。
 
 考虑场方程其他分量我们还能得到
 \begin{equation}
-\left(\frac{\dot{a}}{a}\right)^{2}+\frac{k}{a^{2}}+2\frac{\ddot{a}}{a}=-8\pi GP.\\
+\left(\frac{\dot{a}}{a}\right)^{2}+\frac{k}{a^{2}}+2\frac{\ddot{a}}{a}=-8\pi\mathrm{G}P.\\
 \end{equation}
 同样考虑暗能量，得到 the second Friedmann equation
 \begin{equation}
-\frac{\ddot{a}}{a}=-\frac{4\pi G}{3}\left(\rho\left(t\right)+3P\left(t\right)\right)+\frac{\Lambda}{3}.\label{1.6.10}
+\frac{\ddot{a}}{a}=-\frac{4\pi\mathrm{G}}{3}\left(\rho\left(t\right)+3P\left(t\right)\right)+\frac{\Lambda}{3}.\label{1.6.10}
 \end{equation}
 可见决定宇宙膨胀加速度的要素有物质的能动张量和暗能量。
 
@@ -1814,7 +1814,7 @@ a\propto{}t^{1/2},H=\frac{1}{2t}.
 \end{equation}
 暗能量主导时宇宙指数膨胀
 \begin{equation}
-a=e^{Ht},H=\sqrt{\frac{8\pi G\rho_{\Lambda}}{3}}.
+a=e^{Ht},H=\sqrt{\frac{8\pi\mathrm{G}\rho_{\Lambda}}{3}}.
 \end{equation}
 最后，(\ref{1.6.8}) 式两侧同除现在的哈勃常数$H_{0}^{2}$可以得到无量纲形式，更方便地展示各组分的贡献
 \begin{equation}
@@ -1922,7 +1922,7 @@ I(x)=\frac{F}{\theta^{2}}=\frac{L/(4\pi d_{L}^{2})}{D^{2}/d_{\theta}^{2}}=\frac{
 
 图\ref{距离阶梯。}中的光谱法一般翻译成分光视差，但它其实和“视差”没关系。视差是一种几何手段，而分光视差可以算是标准烛光法的一种。蜡烛的光度是常量，拿到不同远处看起来则不同，即亮度发生了变化，我们在观测中可以得到天体的亮度，如果再知道它的光度，很容易就能算出距离。唯一的问题是不同天体光度不同，于是我们需要标准烛光。比如造父变星，它是一类光度周期性变化的恒星，且有周光关系：周期越长光度越高。长周期的造父变星光度可达$10^{6}L_{\odot}$,适用于 6000 万光年距离的测距。通过三角视差确定近邻造父变星的距离和实际光度，就可以将其应用在其他造父变星上了。（用下一级阶梯为上一级阶梯定标，所以叫距离阶梯。）\uppercase\expandafter{\romannumeral 1}a 型超新星也可作为标准烛光，原理前文已经解释过了。回到分光视差，我们知道不同质量的主序星会发出不同类型的光谱，观测中可借此区分，所以叫分光。接着假设光谱型相同的恒星光度相同，结合亮度就可测距，因为涉及到测距，所以才叫视差。Tully-Fisher 关系和漩涡星系有关，牛顿引力告诉我们
 \begin{equation}
-M=\frac{V_{\max}^{2}R}{G},
+M=\frac{V_{\max}^{2}R}{\mathrm{G}},
 \end{equation}
 假设不同漩涡星系的质光比都相同，那么$L\propto{}M\propto{}V_{\text{max}}^{2}R$.再假设漩涡星系中心面亮度是常数，那么$L\propto{}R^{2}$,因此$L^{2}\propto{}V_{\max}^{4}R^{2}\propto{}V_{\max}^{4}L,L\propto{}V_{\max}^{4}$.通过光谱红移确定自转速度就可确定光度进而测距。
 
