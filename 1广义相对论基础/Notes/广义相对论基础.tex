@@ -447,7 +447,7 @@ U_{\nu}^{\mu}=g_{\nu\alpha}U^{\alpha\mu},U_{\nu}^{\mu}=g^{\mu\alpha}U_{\alpha\nu
 
 值得一提的是，广义相对论中习惯上取$x^{0}$为时间坐标，即
 \begin{equation}
-x^{\mu}=\left(ct,x,y,z\right).
+x^{\mu}=\left(\mathrm{c}t,x,y,z\right).
 \end{equation}
 计算中时常会将空间部分单独提出来讨论，习惯上用$i,j$作为空间指标，如$g_{ij}$指代的就是空间部分的度规。
 
@@ -773,17 +773,17 @@ Killing 矢量的作用是刻画时空结构的对称性。黎曼空间某方向
 \subsection{时空间隔投影}
 在广义相对论框架下测量，我们需要考虑四个因素。第一是观测对象，即要测量的物理量。第二是时空的几何性质，即度规。第三是观测者，脱离观测者是没有测量概念的。第四是表述观测者运动情况和物理量的坐标系，理论上可以任取，因为对相同物理量相同观测者，观测量理应相同，是个标量。
 
-现在我们选定一个坐标系，任意事件时空坐标为$\left(x^{0},x^{1},x^{2},x^{3}\right)$.习惯上称以速率$t=\dfrac{x^{0}}{c}$运行的钟为坐标钟，称$t$为坐标时间。值得注意是，坐标系中同时发生的事件并非是指坐标时间相同的事件。我们将在后续阐明。
+现在我们选定一个坐标系，任意事件时空坐标为$\left(x^{0},x^{1},x^{2},x^{3}\right)$.习惯上称以速率$t=\dfrac{x^{0}}{\mathrm{c}}$运行的钟为坐标钟，称$t$为坐标时间。值得注意是，坐标系中同时发生的事件并非是指坐标时间相同的事件。我们将在后续阐明。
 
 设坐标系中有两个事件，$P$的时空坐标为$x^{\mu},Q$的时空坐标为$x^{\mu}+\mathrm{d}x^{\mu}$.坐标时间显然不是零阶张量，为此需要定义固有时间。狭义相对论中，固有时间指的是固定于惯性系中的时钟所记录的时间：
 \begin{equation}
-\mathrm{d}s^{2}=-c^{2}\mathrm{d}t^{2}+\mathrm{d}x^{2}+\mathrm{d}y^{2}+\mathrm{d}z^{2}=-c^{2}\mathrm{d}t^{2}+0=-c^{2}\mathrm{d}\tau^{2}.
+\mathrm{d}s^{2}=-\mathrm{c}^{2}\mathrm{d}t^{2}+\mathrm{d}x^{2}+\mathrm{d}y^{2}+\mathrm{d}z^{2}=-\mathrm{c}^{2}\mathrm{d}t^{2}+0=-\mathrm{c}^{2}\mathrm{d}\tau^{2}.
 \end{equation}
 可见固有时间$\mathrm{d}\tau$正比于世界线（即观测者在四维时空走过的曲线）长度，而后者正是个标量。广义相对论中也可这么考虑。尽管时空处处有引力存在，但黎曼时空中总可以找到一个沿测地线（即引力场中自由下落）无转动的无穷小坐标系作为局部惯性系。微分几何告诉我们，在一点的邻域，曲线的线元与其切线的线元相等。因此，我们可以沿观测者的世界线逐点建立无数相对观测者静止的局部惯性系，将它们各自记录的固有时间加起来作为观测者的固有时间。按这种定义，观测者的固有时间依旧正比于观测者的世界线长度。我们称观测者携带的钟为标准钟，记录的是观测者的固有时间。
 
 现在考虑固有时间和坐标时间的联系。还是任意定义某个坐标系，然后认为观测者相对该坐标系静止，有
 \begin{equation}
-\mathrm{d}\tau=\sqrt{-\frac{\mathrm{d}s^{2}}{c^{2}}}=\frac{1}{c}\sqrt{-g_{\mu\nu}\mathrm{d}x^{\mu}\mathrm{d}x^{\nu}}=\frac{1}{c}\sqrt{-g_{00}}\mathrm{d}x^{0}=\sqrt{-g_{00}}\mathrm{d}t.\label{2.1.2}
+\mathrm{d}\tau=\sqrt{-\frac{\mathrm{d}s^{2}}{\mathrm{c}^{2}}}=\frac{1}{\mathrm{c}}\sqrt{-g_{\mu\nu}\mathrm{d}x^{\mu}\mathrm{d}x^{\nu}}=\frac{1}{\mathrm{c}}\sqrt{-g_{00}}\mathrm{d}x^{0}=\sqrt{-g_{00}}\mathrm{d}t.\label{2.1.2}
 \end{equation}
 $g_{00}$是时空坐标的函数，因此每个时空点都不同，故固有时间计时一般只能在观测者邻域使用，要做大范围时空计算必须用到坐标时间。但要注意坐标时间是计算用虚构量，实验仪器只能测量固有时间。最后，固有时间依赖质点的世界线，但不依赖坐标系的选择；坐标时间依赖坐标系的选择，但不依赖质点的世界线。
 
@@ -793,11 +793,11 @@ U^{\mu}=\frac{\mathrm{d}x^{\mu}}{\mathrm{d}\tau}.
 \end{equation}
 对于光子四速要用另外的标量参量定义。不难看出
 \begin{equation}
-U^{\mu}U_{\mu}=g_{\mu\nu}U^{\mu}U^{\nu}=\frac{g_{\mu\nu}\mathrm{d}x^{\mu}\mathrm{d}x^{\nu}}{\mathrm{d}\tau^{2}}=-c^{2}.
+U^{\mu}U_{\mu}=g_{\mu\nu}U^{\mu}U^{\nu}=\frac{g_{\mu\nu}\mathrm{d}x^{\mu}\mathrm{d}x^{\nu}}{\mathrm{d}\tau^{2}}=-\mathrm{c}^{2}.
 \end{equation}
-可见静止质量非零粒子的四维速度内积始终为$-c^{2}$.由于很多时候我们希望时间轴基矢是个单位矢量，同时在广义相对论中常采用自然单位制取$c=1$,故不妨再定义一个
+可见静止质量非零粒子的四维速度内积始终为$-\mathrm{c}^{2}$.由于很多时候我们希望时间轴基矢是个单位矢量，同时在广义相对论中常采用自然单位制取$\mathrm{c}=1$,故不妨再定义一个
 \begin{equation}
-u^{\mu}=\frac{1}{c}U^{\mu},
+u^{\mu}=\frac{1}{\mathrm{c}}U^{\mu},
 \end{equation}
 为了书写上的方便也称其为四速，仅在符号上作区分。
 
@@ -815,15 +815,15 @@ A^{\mu}_{\parallel}=\pi^{\mu}_{\nu}A^{\nu}=-u_{\nu}A^{\nu}u^{\mu}.
 \end{equation}
 它仍是矢量，求长度后可得观测者观测到的时间间隔：
 \begin{align}
-c\Delta{}t&=\sqrt{-g_{\mu\nu}\mathrm{d}x^{\mu}_{\parallel}\mathrm{d}x^{\nu}_{\parallel}}=\sqrt{-g_{\mu\nu}\pi^{\mu}_{\alpha}\mathrm{d}x^{\alpha}\pi^{\nu}_{\beta}\mathrm{d}x^{\beta}}\notag\\
+\mathrm{c}\Delta{}t&=\sqrt{-g_{\mu\nu}\mathrm{d}x^{\mu}_{\parallel}\mathrm{d}x^{\nu}_{\parallel}}=\sqrt{-g_{\mu\nu}\pi^{\mu}_{\alpha}\mathrm{d}x^{\alpha}\pi^{\nu}_{\beta}\mathrm{d}x^{\beta}}\notag\\
 &=\sqrt{-g_{\mu\nu}u^{\mu}u^{\nu}u_{\alpha}u_{\beta}\mathrm{d}x^{\alpha}\mathrm{d}x^{\beta}}=\sqrt{u_{\alpha}u_{\beta}\mathrm{d}x^{\alpha}\mathrm{d}x^{\beta}}\notag\\
 &=-u_{\alpha}\mathrm{d}x^{\alpha}=-g_{\alpha\mu}u^{\mu}\mathrm{d}x^{\alpha}.
 \end{align}
-这是个标量。不同坐标系中所表征的，同一个观测者的四速、时空的度规分量、所观测的物理量张量分量各不相同，但对同一个观测者同一观测对象算出的观测量总是相同的。需要注意的是，上式中$g_{\alpha\mu},u^{\mu}$是观测者邻域的值，$\mathrm{d}x^{\alpha}$是事件的时空间隔，后二者的$\mathrm{d}x^{\alpha}$含义不同，不要混为一谈用$g_{\mu\nu}\mathrm{d}x^{\mu}\mathrm{d}x^{\nu}$算出个$-c^{2}$出来。
+这是个标量。不同坐标系中所表征的，同一个观测者的四速、时空的度规分量、所观测的物理量张量分量各不相同，但对同一个观测者同一观测对象算出的观测量总是相同的。需要注意的是，上式中$g_{\alpha\mu},u^{\mu}$是观测者邻域的值，$\mathrm{d}x^{\alpha}$是事件的时空间隔，后二者的$\mathrm{d}x^{\alpha}$含义不同，不要混为一谈用$g_{\mu\nu}\mathrm{d}x^{\mu}\mathrm{d}x^{\nu}$算出个$-\mathrm{c}^{2}$出来。
 
-利用投影算符我们可以给出洛伦兹变换中的经典结论。对于平坦时空的静观测者，采用闵氏度规，观测者四速为$u^{\mu}=\left(1,0,0,0\right)$,显然$\Delta{}t=-\dfrac{g_{\alpha\beta}u^{\alpha}\mathrm{d}x^{\beta}}{c}=-\dfrac{g_{0\alpha}u^{0}\mathrm{d}x^{\alpha}}{c}=-\dfrac{g_{00}u^{0}\mathrm{d}x^{0}}{c}=\mathrm{d}t$.而对于一个与静观测者擦身而过，沿$x$正方向以速度$v$前进的观测者，他的坐标满足$\mathrm{d}x^{\mu}=\left(c\mathrm{d}t,v\mathrm{d}t,0,0\right),\mathrm{d}\tau=\sqrt{-\dfrac{\mathrm{d}s^{2}}{c^{2}}}=\mathrm{d}t\sqrt{1-\dfrac{v^{2}}{c^{2}}}$,显然四速$u^{\mu}=\left(\dfrac{1}{\sqrt{1-\dfrac{v^{2}}{c^{2}}}},\dfrac{\dfrac{v}{c}}{\sqrt{1-\dfrac{v^{2}}{c^{2}}}},0,0\right)$,因此他观测到的事件时间间隔为
+利用投影算符我们可以给出洛伦兹变换中的经典结论。对于平坦时空的静观测者，采用闵氏度规，观测者四速为$u^{\mu}=\left(1,0,0,0\right)$,显然$\Delta{}t=-\dfrac{g_{\alpha\beta}u^{\alpha}\mathrm{d}x^{\beta}}{\mathrm{c}}=-\dfrac{g_{0\alpha}u^{0}\mathrm{d}x^{\alpha}}{\mathrm{c}}=-\dfrac{g_{00}u^{0}\mathrm{d}x^{0}}{\mathrm{c}}=\mathrm{d}t$.而对于一个与静观测者擦身而过，沿$x$正方向以速度$v$前进的观测者，他的坐标满足$\mathrm{d}x^{\mu}=\left(\mathrm{c}\mathrm{d}t,v\mathrm{d}t,0,0\right),\mathrm{d}\tau=\sqrt{-\dfrac{\mathrm{d}s^{2}}{\mathrm{c}^{2}}}=\mathrm{d}t\sqrt{1-\dfrac{v^{2}}{\mathrm{c}^{2}}}$,显然四速$u^{\mu}=\left(\dfrac{1}{\sqrt{1-\dfrac{v^{2}}{\mathrm{c}^{2}}}},\dfrac{\dfrac{v}{\mathrm{c}}}{\sqrt{1-\dfrac{v^{2}}{\mathrm{c}^{2}}}},0,0\right)$,因此他观测到的事件时间间隔为
 \begin{equation}
-\Delta{}t=-\frac{g_{\alpha\beta}u^{\alpha}\mathrm{d}x^{\beta}}{c}=-\frac{g_{0\alpha}u^{0}\mathrm{d}x^{\alpha}+g_{1\alpha}u^{1}\mathrm{d}x^{\alpha}}{c}=\frac{\mathrm{d}t-\dfrac{v}{c^{2}}\mathrm{d}x}{\sqrt{1-\dfrac{v^{2}}{c^{2}}}}.
+\Delta{}t=-\frac{g_{\alpha\beta}u^{\alpha}\mathrm{d}x^{\beta}}{\mathrm{c}}=-\frac{g_{0\alpha}u^{0}\mathrm{d}x^{\alpha}+g_{1\alpha}u^{1}\mathrm{d}x^{\alpha}}{\mathrm{c}}=\frac{\mathrm{d}t-\dfrac{v}{\mathrm{c}^{2}}\mathrm{d}x}{\sqrt{1-\dfrac{v^{2}}{\mathrm{c}^{2}}}}.
 \end{equation}
 
 类似地，我们希望得到空间投影算符。首先一个矢量的空间投影部分加上时间投影部分应该等于它自身，其次空间投影部分和时间轴应当垂直，因此$\gamma^{\mu}_{\nu}A^{\nu}=A^{\nu}-\pi_{\nu}^{\mu}A^{\nu}$,
@@ -838,7 +838,7 @@ c\Delta{}t&=\sqrt{-g_{\mu\nu}\mathrm{d}x^{\mu}_{\parallel}\mathrm{d}x^{\nu}_{\pa
 
 值得注意的是
 \begin{equation}
--\left(c\Delta{}t\right)^{2}+\Delta{}l^{2}=\left(\pi_{\alpha\beta}+\gamma_{\alpha\beta}\right)\mathrm{d}x^{\alpha}\mathrm{d}x^{\beta}=g_{\alpha\beta}\mathrm{d}x^{\alpha}\mathrm{d}x^{\beta}=\mathrm{d}s^{2}.
+-\left(\mathrm{c}\Delta{}t\right)^{2}+\Delta{}l^{2}=\left(\pi_{\alpha\beta}+\gamma_{\alpha\beta}\right)\mathrm{d}x^{\alpha}\mathrm{d}x^{\beta}=g_{\alpha\beta}\mathrm{d}x^{\alpha}\mathrm{d}x^{\beta}=\mathrm{d}s^{2}.
 \end{equation}
 
 对于空间投影同样给出洛伦兹变换中的结论。考虑平坦空间中的静观测者，空间投影算符非零项为$\gamma_{11}=\gamma_{22}=\gamma_{33}=1$,此时给出欧氏几何结果。而对于运动中的观测者（注意由于$u_{\mu}=g_{\mu\nu}u^{\nu},\gamma_{\mu\nu}$非对角分量前有负号），
@@ -850,26 +850,26 @@ c\Delta{}t&=\sqrt{-g_{\mu\nu}\mathrm{d}x^{\mu}_{\parallel}\mathrm{d}x^{\nu}_{\pa
 0 & 0 & 0 & 1\\
 \end{pmatrix}+
 \begin{pmatrix}
-\dfrac{c^{2}}{c^{2}-v^{2}} & -\dfrac{cv}{c^{2}-v^{2}} & 0 & 0\\
--\dfrac{cv}{c^{2}-v^{2}} & \dfrac{v^{2}}{c^{2}-v^{2}} & 0 & 0\\
+\dfrac{\mathrm{c}^{2}}{\mathrm{c}^{2}-v^{2}} & -\dfrac{cv}{\mathrm{c}^{2}-v^{2}} & 0 & 0\\
+-\dfrac{cv}{\mathrm{c}^{2}-v^{2}} & \dfrac{v^{2}}{\mathrm{c}^{2}-v^{2}} & 0 & 0\\
 0 & 0 & 0 & 0\\
 0 & 0 & 0 & 0\\
 \end{pmatrix}=
 \begin{pmatrix}
-\dfrac{v^{2}}{c^{2}-v^{2}} & -\dfrac{cv}{c^{2}-v^{2}} & 0 & 0\\
--\dfrac{cv}{c^{2}-v^{2}} & \dfrac{c^{2}}{c^{2}-v^{2}} & 0 & 0\\
+\dfrac{v^{2}}{\mathrm{c}^{2}-v^{2}} & -\dfrac{cv}{\mathrm{c}^{2}-v^{2}} & 0 & 0\\
+-\dfrac{cv}{\mathrm{c}^{2}-v^{2}} & \dfrac{\mathrm{c}^{2}}{\mathrm{c}^{2}-v^{2}} & 0 & 0\\
 0 & 0 & 1 & 0\\
 0 & 0 & 0 & 1\\
 \end{pmatrix}.
 \end{equation}
 立刻得到
 \begin{equation}
-\Delta{}l^{2}=\left(\frac{\mathrm{d}x^{1}-v\mathrm{d}t}{\sqrt{1-\frac{v^{2}}{c^{2}}}}\right)^{2}+\left(\mathrm{d}x^{2}\right)^{2}+\left(\mathrm{d}x^{3}\right)^{2}.
+\Delta{}l^{2}=\left(\frac{\mathrm{d}x^{1}-v\mathrm{d}t}{\sqrt{1-\frac{v^{2}}{\mathrm{c}^{2}}}}\right)^{2}+\left(\mathrm{d}x^{2}\right)^{2}+\left(\mathrm{d}x^{3}\right)^{2}.
 \end{equation}
 
 (\ref{2.1.11}) 式暗示$\gamma_{\alpha\beta}$扮演了空间度规的角色。我们可以验证一下。对于一个观测者，他应该会倾向于采用相对于他静止的坐标系进行观测。反过来讲，给定一个坐标系，考虑一个相对坐标系随动的观测者。该观测者随身携带的钟走时与坐标时间的关系其实就是 (\ref{2.1.2}) 式。这给出了该观测者的四速
 \begin{equation}
-u^{\mu}=\frac{\mathrm{d}x^{\mu}}{c\mathrm{d}\tau}=\frac{\left(c\mathrm{d}t,0,0,0\right)}{c\mathrm{d}\tau}=\left(\frac{1}{\sqrt{-g_{00}}},0,0,0\right).
+u^{\mu}=\frac{\mathrm{d}x^{\mu}}{\mathrm{c}\mathrm{d}\tau}=\frac{\left(\mathrm{c}\mathrm{d}t,0,0,0\right)}{\mathrm{c}\mathrm{d}\tau}=\left(\frac{1}{\sqrt{-g_{00}}},0,0,0\right).
 \end{equation}
 空间投影算符为
 \begin{equation}
@@ -888,11 +888,11 @@ u^{\mu}=\frac{\mathrm{d}x^{\mu}}{c\mathrm{d}\tau}=\frac{\left(c\mathrm{d}t,0,0,0
 
 需要注意的，实践中在测定光速不变时，采用的时间计量是实验仪器的固有时间（哦当然是这样，固有时间才是零阶张量，$\mathrm{d}x^{0}_{\left(1\right)}$和$\mathrm{d}x^{0}_{\left(2\right)}$可不一定相等），因此我们必须引入一个局部静止惯性系，不妨就在$B$点建立，这样考虑光线的往返也比较方便。在$B$点与坐标时间$\Delta{}x^{0}$相应的固有时间是
 \begin{equation}
-\Delta{}\tau=\frac{1}{c}\sqrt{-g_{00}}\Delta{}x^{0}.
+\Delta{}\tau=\frac{1}{\mathrm{c}}\sqrt{-g_{00}}\Delta{}x^{0}.
 \end{equation}
 根据光速各向同性，得到纯空间距离为
 \begin{equation}
-\mathrm{d}l=\frac{c\Delta{}\tau}{2}=\frac12\sqrt{-g_{00}}\Delta{}x^{0}.
+\mathrm{d}l=\frac{\mathrm{c}\Delta{}\tau}{2}=\frac12\sqrt{-g_{00}}\Delta{}x^{0}.
 \end{equation}
 接下来要得到$\Delta{}x^{0}$的具体表达式。我们知道光走过的路径满足（$\pm$对应往返的光信号）：
 \begin{align}
@@ -919,7 +919,7 @@ g_{0i}=0,
 \end{equation}
 即时轴正交。而做到这一点的时候，根据 (\ref{2.1.26}) 式，异地事件同时发生时坐标时间也已经相同了。当然，即使将坐标钟调同时了，由于固有时间
 \begin{equation}
-\Delta{}\tau=\frac{1}{c}\sqrt{-g_{00}}\Delta{}x^{0},
+\Delta{}\tau=\frac{1}{\mathrm{c}}\sqrt{-g_{00}}\Delta{}x^{0},
 \end{equation}
 如果度规分量各时空点不同，可测得的固有时间也不同。因此不一定能实现同步。
 
@@ -948,7 +948,7 @@ g_{0i}=0,
 \subsection{物理的坐标系条件}
 按等效原理，引力场中任意一点都可引进局部惯性系。记局部惯性系中
 \begin{align}
-x^{\mu}&=\left(ct,x^{1},x^{2},x^{3}\right),\\
+x^{\mu}&=\left(\mathrm{c}t,x^{1},x^{2},x^{3}\right),\\
 \mathrm{d}s^{2}&=\eta_{\mu\nu}\mathrm{d}x^{\mu}\mathrm{d}x^{\nu}.
 \end{align}
 其中$\eta_{\mu\nu}$是闵可夫斯基度规。引入坐标变换$\widetilde{x}^{\mu}=\widetilde{x}^{\mu}\left(x^{\nu}\right)$,要求连续、可微，且雅可比行列式满足
@@ -966,7 +966,7 @@ g_{\mu\nu}&=\eta_{\alpha\beta}\frac{\partial{}x^{\alpha}}{\partial{}\widetilde{x
 \end{equation}
 此空间固定点在局部惯性系中的速度为
 \begin{equation}
-v^{i}=\frac{\mathrm{d}x^{i}}{\mathrm{d}t}=\frac{c\mathrm{d}x^{i}}{\mathrm{d}x^{0}}.
+v^{i}=\frac{\mathrm{d}x^{i}}{\mathrm{d}t}=\frac{\mathrm{c}\mathrm{d}x^{i}}{\mathrm{d}x^{0}}.
 \end{equation}
 根据坐标变换，
 \begin{align}
@@ -975,9 +975,9 @@ v^{i}=\frac{\mathrm{d}x^{i}}{\mathrm{d}t}=\frac{c\mathrm{d}x^{i}}{\mathrm{d}x^{0
 \end{align}
 因此
 \begin{equation}
-v^{i}=c\left(\frac{\partial{}x^{i}}{\partial{}\widetilde{x}^{0}}/\frac{\partial{}x^{0}}{\partial{}\widetilde{x}^{0}}\right).
+v^{i}=\mathrm{c}\left(\frac{\partial{}x^{i}}{\partial{}\widetilde{x}^{0}}/\frac{\partial{}x^{0}}{\partial{}\widetilde{x}^{0}}\right).
 \end{equation}
-由于光速是极限速度，$v^{2}/c^{2}<1$,因此
+由于光速是极限速度，$v^{2}/\mathrm{c}^{2}<1$,因此
 \begin{equation}
 g_{00}=\left(-1\right)\left(\frac{\partial{}x^{0}}{\partial{}\widetilde{x}^{0}}\right)\left(\frac{\partial{}x^{0}}{\partial{}\widetilde{x}^{0}}\right)+\left(\frac{\partial{}x^{i}}{\partial{}\widetilde{x}^{0}}\right)\left(\frac{\partial{}x^{i}}{\partial{}\widetilde{x}^{0}}\right)<0.\label{2.2.11}
 \end{equation}
@@ -1170,11 +1170,11 @@ T^{\hat{a}\hat{b}}=T^{\mu\nu}\delta{}^{\hat{a}}_{\mu}\delta{}^{\hat{b}}_{\nu}=T^
 \end{equation}
 即在平坦时空中，张量在该坐标系下表征出的分量本身就等于该坐标系静观测者的可观测量。以粒子的能动张量$T^{\mu\nu}=\rho U^{\mu}U^{\nu}$为例。对于平坦时空中相对坐标系静止的粒子，其能动张量只有一项非零项，为
 \begin{equation}
-T^{00}=\rho c^{2},
+T^{00}=\rho \mathrm{c}^{2},
 \end{equation}
 观测量为
 \begin{equation}
-T^{\hat{0}\hat{0}}=T^{00}\omega_{0}^{\hat{0}}\omega_{0}^{\hat{0}}=\rho c^{2}.
+T^{\hat{0}\hat{0}}=T^{00}\omega_{0}^{\hat{0}}\omega_{0}^{\hat{0}}=\rho \mathrm{c}^{2}.
 \end{equation}
 可见确实一致。实际上，能动张量式中$\rho$的定义就是粒子随动参考系中测得的粒子质量密度。
 
@@ -1188,24 +1188,24 @@ T^{\hat{0}\hat{0}}=-T^{\mu\nu}\frac{g_{\mu0}g_{\nu0}}{g_{00}},
 \end{equation}
 即观测量不等于张量分量。同样以能动张量为例，粒子相对坐标系静止时，张量分量为
 \begin{equation}
-T^{00}=\frac{\rho c^{2}}{-g_{00}},
+T^{00}=\frac{\rho \mathrm{c}^{2}}{-g_{00}},
 \end{equation}
 但观测量仍然为
 \begin{equation}
-T^{\hat{0}\hat{0}}=-T^{00}\frac{g_{00}g_{00}}{g_{00}}=\rho c^{2}.
+T^{\hat{0}\hat{0}}=-T^{00}\frac{g_{00}g_{00}}{g_{00}}=\rho \mathrm{c}^{2}.
 \end{equation}
 这正是我们需要观测量理论的理由。
 
-接下来可以考虑洛伦兹变换。对于平坦时空中的静观测者，根据 (\ref{2.3.22}) 到 (\ref{2.3.25}) 式，可知事件间隔$\left(c\delta{}t,\delta{}x,\delta{}y,\delta{}z\right)$在四轴系上的投影就是其各分量。但对于向着$x$轴正方向运动的观测者，四轴系有
+接下来可以考虑洛伦兹变换。对于平坦时空中的静观测者，根据 (\ref{2.3.22}) 到 (\ref{2.3.25}) 式，可知事件间隔$\left(\mathrm{c}\delta{}t,\delta{}x,\delta{}y,\delta{}z\right)$在四轴系上的投影就是其各分量。但对于向着$x$轴正方向运动的观测者，四轴系有
 \begin{align}
-\omega^{\hat{0}}_{\mu}&=\left(\frac{1}{\sqrt{1-\dfrac{v^{2}}{c^{2}}}},-\frac{\dfrac{v}{c}}{\sqrt{1-\dfrac{v^{2}}{c^{2}}}},0,0\right),\omega^{\hat{1}}_{\mu}=\left(-\frac{\dfrac{v}{c}}{\sqrt{1-\dfrac{v^{2}}{c^{2}}}},\frac{1}{\sqrt{1-\dfrac{v^{2}}{c^{2}}}},0,0\right),\\
+\omega^{\hat{0}}_{\mu}&=\left(\frac{1}{\sqrt{1-\dfrac{v^{2}}{\mathrm{c}^{2}}}},-\frac{\dfrac{v}{\mathrm{c}}}{\sqrt{1-\dfrac{v^{2}}{\mathrm{c}^{2}}}},0,0\right),\omega^{\hat{1}}_{\mu}=\left(-\frac{\dfrac{v}{\mathrm{c}}}{\sqrt{1-\dfrac{v^{2}}{\mathrm{c}^{2}}}},\frac{1}{\sqrt{1-\dfrac{v^{2}}{\mathrm{c}^{2}}}},0,0\right),\\
 \omega^{\hat{2}}_{\mu}&=\left(0,0,1,0\right),\omega^{\hat{3}}_{\mu}=\left(0,0,0,1\right).
 \end{align}
-把事件间隔$\left(c\delta{}t,\delta{}x,\delta{}y,\delta{}z\right)$代入就得到洛伦兹变换了。
+把事件间隔$\left(\mathrm{c}\delta{}t,\delta{}x,\delta{}y,\delta{}z\right)$代入就得到洛伦兹变换了。
 
 从洛伦兹变换推广开，考虑任意度规场中任意观测者观测到的时空间隔。记该坐标系中的事件间隔为$\delta{}x^{\mu}$,观测者观测到的时空间隔为
 \begin{equation}
-c\Delta{}t=\delta{}x^{\mu}\omega_{\mu}^{\hat{0}},\Delta{}x=\delta{}x^{\mu}\omega_{\mu}^{\hat{1}},\Delta{}y=\delta{}x^{\mu}\omega_{\mu}^{\hat{2}},\Delta{}z=\delta{}x^{\mu}\omega_{\mu}^{\hat{3}}.
+\mathrm{c}\Delta{}t=\delta{}x^{\mu}\omega_{\mu}^{\hat{0}},\Delta{}x=\delta{}x^{\mu}\omega_{\mu}^{\hat{1}},\Delta{}y=\delta{}x^{\mu}\omega_{\mu}^{\hat{2}},\Delta{}z=\delta{}x^{\mu}\omega_{\mu}^{\hat{3}}.
 \end{equation}
 由于
 \begin{equation}
@@ -1213,11 +1213,11 @@ c\Delta{}t=\delta{}x^{\mu}\omega_{\mu}^{\hat{0}},\Delta{}x=\delta{}x^{\mu}\omega
 \end{equation}
 可见时空间隔投影到时间轴上的矢量前的系数为
 \begin{equation}
-c\Delta{}t=-\omega_{\mu\hat{0}}\delta{}x^{\mu}=-\delta{}x^{\mu}u_{\mu}.
+\mathrm{c}\Delta{}t=-\omega_{\mu\hat{0}}\delta{}x^{\mu}=-\delta{}x^{\mu}u_{\mu}.
 \end{equation}
 时空间隔投影到观测者时间轴上的矢量为
 \begin{equation}
-c\Delta{}t\cdot\omega^{\mu}_{\hat{0}}=c\Delta{}tu^{\mu}=-\delta{}x^{\mu}u_{\mu}u^{\nu}.
+\mathrm{c}\Delta{}t\cdot\omega^{\mu}_{\hat{0}}=\mathrm{c}\Delta{}tu^{\mu}=-\delta{}x^{\mu}u_{\mu}u^{\nu}.
 \end{equation}
 本章第一节提到时间投影算符为
 \begin{equation}
@@ -1308,7 +1308,7 @@ A^{\mu}_{\parallel}=\pi^{\mu}_{\nu}\delta{}x^{\nu}=-u^{\mu}u_{\nu}\delta{}x^{\nu
 
 局部惯性系沿着测地线运动，一旦有了加速度就会偏离黎曼空间中的短程线，某种意义上这说明四维加速度是能带来绝对效应的，因为世界线长度是个标量，任何坐标系中都应当能用观测量理论确定它的相对长度。实际上四维加速度的影响可以解释双生子佯谬，因为引力势或惯性力场大的地方时钟走得慢。
 
-我们不妨以转动参考系为例来研究绝对效应。首先将实验室直角坐标系$X^{\mu}=\left(cT,X,Y,Z\right)$变成转动坐标系$\left(ct,r,\theta,z\right)$,坐标变换满足
+我们不妨以转动参考系为例来研究绝对效应。首先将实验室直角坐标系$X^{\mu}=\left(\mathrm{c}T,X,Y,Z\right)$变成转动坐标系$\left(\mathrm{c}t,r,\theta,z\right)$,坐标变换满足
 \begin{equation}
 \begin{cases}
 X=r\cos\left(\theta+\omega t\right),\\
@@ -1319,57 +1319,57 @@ Z=z,\\
 \end{equation}
 可知
 \begin{align}
-\mathrm{d}s^{2}&=-\left(c\mathrm{d}T\right)^{2}+\mathrm{d}X^{2}+\mathrm{d}Y^{2}+\mathrm{d}Z^{2}\notag\\
-&=-\left(c\mathrm{d}t\right)^{2}+\left[\mathrm{d}r\cos\left(\theta+\omega t\right)-r\sin\left(\theta+\omega t\right)\mathrm{d}\theta-r\sin\left(\theta+\omega t\right)\omega\mathrm{d}t\right]^{2}\notag\\
+\mathrm{d}s^{2}&=-\left(\mathrm{c}\mathrm{d}T\right)^{2}+\mathrm{d}X^{2}+\mathrm{d}Y^{2}+\mathrm{d}Z^{2}\notag\\
+&=-\left(\mathrm{c}\mathrm{d}t\right)^{2}+\left[\mathrm{d}r\cos\left(\theta+\omega t\right)-r\sin\left(\theta+\omega t\right)\mathrm{d}\theta-r\sin\left(\theta+\omega t\right)\omega\mathrm{d}t\right]^{2}\notag\\
 &\quad+\left[\mathrm{d}r\sin\left(\theta+\omega t\right)+r\cos\left(\theta+\omega t\right)\mathrm{d}\theta+r\cos\left(\theta+\omega t\right)\omega\mathrm{d}t\right]^{2}+\mathrm{d}z^{2}\notag\\
-&=-\left(c\mathrm{d}t\right)^{2}+\mathrm{d}r^{2}+r^{2}\mathrm{d}\theta^{2}+r^{2}\omega^{2}\mathrm{d} t^{2}+2r^{2}\omega\mathrm{d}\theta\mathrm{d}t+\mathrm{d}z^{2}.
+&=-\left(\mathrm{c}\mathrm{d}t\right)^{2}+\mathrm{d}r^{2}+r^{2}\mathrm{d}\theta^{2}+r^{2}\omega^{2}\mathrm{d} t^{2}+2r^{2}\omega\mathrm{d}\theta\mathrm{d}t+\mathrm{d}z^{2}.
 \end{align}
 可见转动系度规分量为
 \begin{equation}
 g_{\mu\nu}=\begin{pmatrix}
--\left(1-\dfrac{r^{2}\omega^{2}}{c^{2}}\right) & 0 & \dfrac{\omega r^{2}}{c} & 0\\
+-\left(1-\dfrac{r^{2}\omega^{2}}{\mathrm{c}^{2}}\right) & 0 & \dfrac{\omega r^{2}}{\mathrm{c}} & 0\\
 0 & 1 & 0 & 0\\
-\dfrac{\omega r^{2}}{c} & 0 & r^{2} & 0\\
+\dfrac{\omega r^{2}}{\mathrm{c}} & 0 & r^{2} & 0\\
 0 & 0 & 0 & 1\\
 \end{pmatrix}.
 \end{equation}
 由于转动系时轴非正交，无法定义大范围的同时面，故先前坐标变换中时间项只能用微分表示。此外该度规偏离了平直时空中的柱坐标系度规，在转动系静观测者看来是有惯性场或引力场作用。但这并不意味着时空发生了弯曲。联络可以“无中生有”，但是曲率是张量，实验室系中为零不可能在转动系中不为零，因此四维时空还是平直的，只是在转动系观测者看来三维子时空发生了弯曲。
 
-为更好地说明三维子时空的弯曲，我们现在来研究转动系中的几何。一个常被提及的问题是，对于转动系中心的观测者而言，遥远星系运行速度难道不是超光速了吗？且让我们看看超光速的结论是如何得到的。半径$r$处的，相对实验室系静止的恒星，转动系坐标时间$t=0$时恒星位于$A\left(0,r,0,z\right)$,经过时间$t$后恒星位于$B\left(ct,r,-\omega t,z\right)$,当然我们知道距离测量是要同时的，所以还要考虑$C\left(ct,r,0,0\right)$,将$B$和$C$一比较就知道角速度为$\omega$,那么线速度一定是$\omega r>c$就超光速了。那么问题来了，$B$和$C$真的是同时的吗？不是“同时”测量得到的距离没有意义，但是转动系的坐标时间$t$是同时的判据吗？这样测量得到的距离是“合法”距离吗？其实这种测距方法是平直时空中的做法，它的不可行确实说明转动系几何与欧氏几何不同。
+为更好地说明三维子时空的弯曲，我们现在来研究转动系中的几何。一个常被提及的问题是，对于转动系中心的观测者而言，遥远星系运行速度难道不是超光速了吗？且让我们看看超光速的结论是如何得到的。半径$r$处的，相对实验室系静止的恒星，转动系坐标时间$t=0$时恒星位于$A\left(0,r,0,z\right)$,经过时间$t$后恒星位于$B\left(\mathrm{c}t,r,-\omega t,z\right)$,当然我们知道距离测量是要同时的，所以还要考虑$C\left(\mathrm{c}t,r,0,0\right)$,将$B$和$C$一比较就知道角速度为$\omega$,那么线速度一定是$\omega r>\mathrm{c}$就超光速了。那么问题来了，$B$和$C$真的是同时的吗？不是“同时”测量得到的距离没有意义，但是转动系的坐标时间$t$是同时的判据吗？这样测量得到的距离是“合法”距离吗？其实这种测距方法是平直时空中的做法，它的不可行确实说明转动系几何与欧氏几何不同。
 
 接下来作定量分析。要研究几何必然要得到两点间的固有距离。但在实验室系中容易看出，不同半径处的四速不同，因此对同样的时空间隔不同的转动系静观测者也会得到不同的结果。另一方面，时轴非正交的坐标系中同时可以沿着不同的路径进行定义，因此两点同时测量得到的距离对同一个观测者来讲可能都不一样。而既然要研究几何，我们希望得到的是周长与半径$r$的关系。综上，我们暂且研究半径$r$处，实验室系静参考点在相对转动系转一圈的时空间隔对于半径$r$处的转动系静观测者意味着什么。而对于这样一个在实验室系中作加速运动的观测者，他的观测量应该是无数相对观测者瞬间静止的惯性系中记录的观测量求和。
 
 考虑测量四要素：观测量、观测者、度规、表征上述一切的坐标系。我们先选取转动系作为坐标系，转动系半径$r$处静观测者为观测者，该观测者与实验室系静参考点再次会和的事件间隔为观测量，度规前面已经给出。此时转动系静观测者的空间度规为
 \begin{equation}
-\gamma_{ik}=g_{ik}-\frac{g_{i0}g_{k0}}{g_{00}},\gamma_{11}=1,\gamma_{22}=\frac{r^{2}}{1-\dfrac{r^{2}\omega^{2}}{c^{2}}},\gamma_{33}=1.
+\gamma_{ik}=g_{ik}-\frac{g_{i0}g_{k0}}{g_{00}},\gamma_{11}=1,\gamma_{22}=\frac{r^{2}}{1-\dfrac{r^{2}\omega^{2}}{\mathrm{c}^{2}}},\gamma_{33}=1.
 \end{equation}
-将事件拆分成无数小间隔$\left(c\mathrm{d}t,0,-\omega\mathrm{d}t,0\right)$,利用空间度规计算出
+将事件拆分成无数小间隔$\left(\mathrm{c}\mathrm{d}t,0,-\omega\mathrm{d}t,0\right)$,利用空间度规计算出
 \begin{equation}
-\Delta{}l=\sqrt{\gamma_{22}\mathrm{d}\theta^{2}}=\frac{\omega r\mathrm{d}t}{\sqrt{1-\dfrac{r^{2}\omega^{2}}{c^{2}}}}.
+\Delta{}l=\sqrt{\gamma_{22}\mathrm{d}\theta^{2}}=\frac{\omega r\mathrm{d}t}{\sqrt{1-\dfrac{r^{2}\omega^{2}}{\mathrm{c}^{2}}}}.
 \end{equation}
 如果对其进行积分会发现
 \begin{equation}
-l=\frac{2\pi r}{\sqrt{1-\dfrac{r^{2}\omega^{2}}{c^{2}}}}.
+l=\frac{2\pi r}{\sqrt{1-\dfrac{r^{2}\omega^{2}}{\mathrm{c}^{2}}}}.
 \end{equation}
 也就是说观测者再次与该参考点相遇时，他会认为该参考点走过的距离比$2\pi r$大。
 
 我们还可计算转动系静观测者的固有时间，
 \begin{equation}
-\mathrm{d}\tau^{2}=-\frac{\mathrm{d}s^{2}}{c^{2}}=-g_{00}\mathrm{d}t^{2}=-g_{00}\mathrm{d}T^{2}=\left(1-\frac{r^{2}\omega^{2}}{c^{2}}\right)\mathrm{d}T^{2},
+\mathrm{d}\tau^{2}=-\frac{\mathrm{d}s^{2}}{\mathrm{c}^{2}}=-g_{00}\mathrm{d}t^{2}=-g_{00}\mathrm{d}T^{2}=\left(1-\frac{r^{2}\omega^{2}}{\mathrm{c}^{2}}\right)\mathrm{d}T^{2},
 \end{equation}
 而我们知道实验室系静参考点的固有时间等于$\mathrm{d}T$,因此二者再次会和时，转动系静观测者带的钟走得更慢，他更年轻。原因就是他走过的世界线不是短程线，比测地线更短一点。
 
 通过固有时间计算得到静观测者的时间轴为
 \begin{align}
-\omega_{\hat{0}}^{\mu}=u^{\mu}=\left(\frac{1}{\sqrt{1-\dfrac{r^{2}\omega^{2}}{c^{2}}}},0,0,0\right),\omega_{\mu}^{\hat{0}}=\left(\sqrt{1-\frac{r^{2}\omega^{2}}{c^{2}}},0,-\frac{\dfrac{r^{2}\omega}{c}}{\sqrt{1-\dfrac{r^{2}\omega^{2}}{c^{2}}}},0\right),
+\omega_{\hat{0}}^{\mu}=u^{\mu}=\left(\frac{1}{\sqrt{1-\dfrac{r^{2}\omega^{2}}{\mathrm{c}^{2}}}},0,0,0\right),\omega_{\mu}^{\hat{0}}=\left(\sqrt{1-\frac{r^{2}\omega^{2}}{\mathrm{c}^{2}}},0,-\frac{\dfrac{r^{2}\omega}{\mathrm{c}}}{\sqrt{1-\dfrac{r^{2}\omega^{2}}{\mathrm{c}^{2}}}},0\right),
 \end{align}
-因此事件间隔$\left(c\mathrm{d}t,0,-\omega t,0\right)$的投影为
+因此事件间隔$\left(\mathrm{c}\mathrm{d}t,0,-\omega t,0\right)$的投影为
 \begin{equation}
-c\Delta{}t=\sqrt{1-\frac{r^{2}\omega^{2}}{c^{2}}}c\mathrm{d}t+\frac{\dfrac{r^{2}\omega^{2}}{c}\mathrm{d}t}{\sqrt{1-\dfrac{r^{2}\omega^{2}}{c^{2}}}}=\frac{c\mathrm{d}t}{\sqrt{1-\dfrac{r^{2}\omega^{2}}{c^{2}}}}.
+\mathrm{c}\Delta{}t=\sqrt{1-\frac{r^{2}\omega^{2}}{\mathrm{c}^{2}}}\mathrm{c}\mathrm{d}t+\frac{\dfrac{r^{2}\omega^{2}}{\mathrm{c}}\mathrm{d}t}{\sqrt{1-\dfrac{r^{2}\omega^{2}}{\mathrm{c}^{2}}}}=\frac{\mathrm{c}\mathrm{d}t}{\sqrt{1-\dfrac{r^{2}\omega^{2}}{\mathrm{c}^{2}}}}.
 \end{equation}
 值得注意的是事件的固有时间和观测者的固有时间不同，实际上本来也不是同一个观测量。另外容易验证
 \begin{equation}
--\left(c\Delta{}t\right)^{2}+\Delta{}l^{2}=\mathrm{d}s^{2}.
+-\left(\mathrm{c}\Delta{}t\right)^{2}+\Delta{}l^{2}=\mathrm{d}s^{2}.
 \end{equation}
 按固有距离和固有时间定义固有速度即
 \begin{equation}
@@ -1426,7 +1426,7 @@ G_{\mu\nu}+\lambda g_{\mu\nu}=\kappa T_{\mu\nu}.
 \end{equation}
 $\kappa$的具体形式可通过场方程的牛顿近似确定，现在先直接给出答案，后续给出证明。$\lambda$是唯一剩下的任意参量，读者也许已经注意到，$\lambda g_{\mu\nu}$这一项就是所谓的宇宙项，源于暗能量的作用。我们现在先令其为零，于是得到爱因斯坦场方程
 \begin{equation}
-G_{\mu\nu}=R_{\mu\nu}-\frac12g_{\mu\nu}R=\frac{8\pi\mathrm{G}}{c^{4}}T_{\mu\nu}.
+G_{\mu\nu}=R_{\mu\nu}-\frac12g_{\mu\nu}R=\frac{8\pi\mathrm{G}}{\mathrm{c}^{4}}T_{\mu\nu}.
 \end{equation}
 将其升高一个指标再缩并可得
 \begin{equation}
@@ -1477,13 +1477,13 @@ R_{\mu\nu}=0.
 \begin{equation}
 \frac{\mathrm{d}}{\mathrm{d}x^{0}}\int\rho U^{0}\sqrt{-g}\mathrm{d}^{3}x=0.
 \end{equation}
-随动局部惯性系中，$U^{0}=c,\mathrm{d}t=\mathrm{d}\tau$,
+随动局部惯性系中，$U^{0}=\mathrm{c},\mathrm{d}t=\mathrm{d}\tau$,
 \begin{equation}
 \frac{\mathrm{d}}{\mathrm{d}x^{0}}\int\rho U^{0}\sqrt{-g}\mathrm{d}^{3}x=\frac{\mathrm{d}}{\mathrm{d}t}\int\rho\mathrm{d}^{3}x=\frac{\mathrm{d}}{\mathrm{d}\tau}\int\rho\mathrm{d}^{3}x=0.
 \end{equation}
 可以看出
 \begin{equation}
-\frac{1}{c}\int\rho U^{0}\sqrt{-g}\mathrm{d}^{3}x=\int\rho\mathrm{d}^{3}x=m,
+\frac{1}{\mathrm{c}}\int\rho U^{0}\sqrt{-g}\mathrm{d}^{3}x=\int\rho\mathrm{d}^{3}x=m,
 \end{equation}
 是个常数。它不依赖固有时间，也不依赖坐标时间，是沿质点世界线守恒的量。它就是静止质量。
 
@@ -1518,9 +1518,9 @@ m\frac{\mathrm{d}^{2}x^{i}}{\left(\mathrm{d}x^{0}\right)^{2}}=-m\Gamma_{00}^{i}.
 \begin{equation}
 \Gamma_{\alpha\beta}^{\mu}=\frac{1}{2}\eta^{\mu\rho}\left(h_{\rho\alpha,\beta}+h_{\rho\beta,\alpha}-h_{\alpha\beta,\rho}\right).
 \end{equation}
-再考虑到$x^{0}=ct$,(\ref{3.3.17}) 式可以写作
+再考虑到$x^{0}=\mathrm{c}t$,(\ref{3.3.17}) 式可以写作
 \begin{equation}
-m\frac{\mathrm{d}^{2}x^{i}}{\mathrm{d}t^{2}}=\frac{m}{2}c^{2}h_{00,i}.
+m\frac{\mathrm{d}^{2}x^{i}}{\mathrm{d}t^{2}}=\frac{m}{2}\mathrm{c}^{2}h_{00,i}.
 \end{equation}
 我们知道在经典的万有引力场中，
 \begin{equation}
@@ -1528,12 +1528,12 @@ m\frac{\mathrm{d}^{2}x^{i}}{\mathrm{d}t^{2}}=m\left(-\frac{\partial{}\varphi}{\p
 \end{equation}
 于是自由粒子运动方程变成了经典力学中粒子在引力场中运动的牛顿方程。对比得到
 \begin{equation}
-\varphi=-\frac{c^{2}}{2}h_{00}+\text{const}.
+\varphi=-\frac{\mathrm{c}^{2}}{2}h_{00}+\text{const}.
 \end{equation}
 无穷远处牛顿引力场应该消失，度规也该回到闵氏度规，因此常数为零。
 \begin{align}
-\varphi&=-\frac{c^{2}}{2}h_{00}=-\frac{\mathrm{G}M}{r}.\\
-g_{00}&=-1+h_{00}=-\left(1+\frac{2\varphi}{c^{2}}\right)=-\left(1-\frac{2\mathrm{G}M}{c^{2}r}\right).
+\varphi&=-\frac{\mathrm{c}^{2}}{2}h_{00}=-\frac{\mathrm{G}M}{r}.\\
+g_{00}&=-1+h_{00}=-\left(1+\frac{2\varphi}{\mathrm{c}^{2}}\right)=-\left(1-\frac{2\mathrm{G}M}{\mathrm{c}^{2}r}\right).
 \end{align}
 
 \subsection{场方程的牛顿近似}
@@ -1545,15 +1545,15 @@ T^{\mu\nu}=\rho U^{\mu}U^{\nu}.
 \end{equation}
 其中$\rho$是随动惯性系中测得的质量密度。相对介质静止的坐标系中四速为
 \begin{equation}
-U^{\mu}=\frac{\mathrm{d}x^{\mu}}{\mathrm{d}\tau}=\frac{1}{\sqrt{-g_{00}}}\left(c,0,0,0\right).
+U^{\mu}=\frac{\mathrm{d}x^{\mu}}{\mathrm{d}\tau}=\frac{1}{\sqrt{-g_{00}}}\left(\mathrm{c},0,0,0\right).
 \end{equation}
 此时能动张量只有一个不为零的分量，即
 \begin{equation}
-T^{00}=-\rho c^{2}/g_{00}.
+T^{00}=-\rho\mathrm{c}^{2}/g_{00}.
 \end{equation}
 张量的迹为
 \begin{equation}
-T=g_{\mu\nu}T^{\mu\nu}=\rho U^{\mu}U_{\mu}=-\rho c^{2}.
+T=g_{\mu\nu}T^{\mu\nu}=\rho U^{\mu}U_{\mu}=-\rho\mathrm{c}^{2}.
 \end{equation}
 静态弱场空间缓变近似，保留$h_{\mu\nu}$和$h_{\mu\nu,\rho}$的一阶小量，计算联络不为零的分量
 \begin{align}
@@ -1577,15 +1577,15 @@ R^{00}=\kappa\left(T^{00}-\frac12g^{00}T\right).
 \end{equation}
 可以得到
 \begin{equation}
-h_{00,i,i}=-c^{2}\kappa\rho.
+h_{00,i,i}=-\mathrm{c}^{2}\kappa\rho.
 \end{equation}
 我们得到过引力势和度规的关系
 \begin{equation}
-\varphi=-\frac{c^{2}}{2}h_{00},
+\varphi=-\frac{\mathrm{c}^{2}}{2}h_{00},
 \end{equation}
 代入得到
 \begin{equation}
-\Delta{}\varphi=\frac{c^{4}}{2}\kappa\rho.
+\Delta{}\varphi=\frac{\mathrm{c}^{4}}{2}\kappa\rho.
 \end{equation}
 它与牛顿力学的泊松方程一致，
 \begin{equation}
@@ -1593,21 +1593,21 @@ h_{00,i,i}=-c^{2}\kappa\rho.
 \end{equation}
 可见
 \begin{equation}
-\kappa=\frac{8\pi\mathrm{G}}{c^{4}}.
+\kappa=\frac{8\pi\mathrm{G}}{\mathrm{c}^{4}}.
 \end{equation}
 
 \subsection{广义相对论中的力学与电磁学方程}
 四维动量可以用四维速度定义
 \begin{equation}
-P^{\mu}=m_{0}U^{\mu}=\left(\frac{E}{c},\boldsymbol{p}\right)=\left(\frac{m_{0}c}{\sqrt{1-\frac{v^{2}}{c^{2}}}},\frac{m_{0}\boldsymbol{v}}{\sqrt{1-\frac{v^{2}}{c^{2}}}}\right).
+P^{\mu}=m_{0}U^{\mu}=\left(\frac{E}{\mathrm{c}},\boldsymbol{p}\right)=\left(\frac{m_{0}\mathrm{c}}{\sqrt{1-\frac{v^{2}}{\mathrm{c}^{2}}}},\frac{m_{0}\boldsymbol{v}}{\sqrt{1-\frac{v^{2}}{\mathrm{c}^{2}}}}\right).
 \end{equation}
 四维力为
 \begin{equation}
-\frac{\mathrm{d}P^{\mu}}{\mathrm{d}\tau}=F^{\mu}=\left(\frac{\boldsymbol{f}\cdot\boldsymbol{v}/c}{\sqrt{1-\frac{v^{2}}{c^{2}}}},\frac{\boldsymbol{f}}{\sqrt{1-\frac{v^{2}}{c^{2}}}}\right).
+\frac{\mathrm{d}P^{\mu}}{\mathrm{d}\tau}=F^{\mu}=\left(\frac{\boldsymbol{f}\cdot\boldsymbol{v}/\mathrm{c}}{\sqrt{1-\frac{v^{2}}{\mathrm{c}^{2}}}},\frac{\boldsymbol{f}}{\sqrt{1-\frac{v^{2}}{\mathrm{c}^{2}}}}\right).
 \end{equation}
 号差 +2 时，$G_{00}=G^{00}=-1,U_{0}=-U^{0},P_{0}=-P^{0},F_{0}=-F^{0},U_{i}=U^{i},P_{i}=P^{i},F_{i}=F^{i}$.此外方程全部改成广义协变形式，将普通微商改成协变微商，普通导数改成协变导数，另外可记
 \begin{equation}
-\frac{1}{\sqrt{1-\frac{v^{2}}{c^{2}}}}\to\frac{\mathrm{d}t}{\mathrm{d}\tau}.
+\frac{1}{\sqrt{1-\frac{v^{2}}{\mathrm{c}^{2}}}}\to\frac{\mathrm{d}t}{\mathrm{d}\tau}.
 \end{equation}
 动力学方程可以改为
 \begin{equation}
@@ -1620,9 +1620,9 @@ P^{\mu}=m_{0}U^{\mu}=\left(\frac{E}{c},\boldsymbol{p}\right)=\left(\frac{m_{0}c}
 
 对于电动力学，麦克斯韦方程组
 \begin{align}
-&\nabla\times\boldsymbol{E}+\frac{1}{c}\frac{\partial{}\boldsymbol{B}}{\partial{}t}=0,\\
+&\nabla\times\boldsymbol{E}+\frac{1}{\mathrm{c}}\frac{\partial{}\boldsymbol{B}}{\partial{}t}=0,\\
 &\nabla\cdot\boldsymbol{B}=0,\\
-&\nabla\times\boldsymbol{B}-\frac{1}{c}\frac{\partial{}\boldsymbol{E}}{\partial{}t}=\frac{4\pi}{c}\boldsymbol{j},\\
+&\nabla\times\boldsymbol{B}-\frac{1}{\mathrm{c}}\frac{\partial{}\boldsymbol{E}}{\partial{}t}=\frac{4\pi}{\mathrm{c}}\boldsymbol{j},\\
 &\nabla\cdot\boldsymbol{E}=4\pi\rho,
 \end{align}
 可以写成洛伦兹协变的形式。首先引入电磁场张量
@@ -1640,24 +1640,24 @@ F_{\mu\nu}=A_{\nu,\mu}-A_{\mu,\nu}.
 \end{equation}
 即
 \begin{align}
-\boldsymbol{E}&=-\nabla\Phi-\frac{1}{c}\frac{\partial{}\boldsymbol{A}}{\partial{}t},\\
+\boldsymbol{E}&=-\nabla\Phi-\frac{1}{\mathrm{c}}\frac{\partial{}\boldsymbol{A}}{\partial{}t},\\
 \boldsymbol{B}&=\nabla\times\boldsymbol{A}.
 \end{align}
 可知麦克斯韦方程组可以写成
 \begin{align}
 &F_{\mu\nu,\tau}+F_{\nu\tau,\mu}+F_{\tau\mu,\nu}=0.\\
-&F_{\mu\nu,\nu}=\frac{4\pi}{c}J_{\mu}=-A_{\mu,\alpha,\alpha}.\label{3.5.15}
+&F_{\mu\nu,\nu}=\frac{4\pi}{\mathrm{c}}J_{\mu}=-A_{\mu,\alpha,\alpha}.\label{3.5.15}
 \end{align}
 其中四维电流密度为
 \begin{align}
-J^{\mu}=\rho_{0}u^{\mu}=\left(c\rho,\boldsymbol{j}\right)=\left(\frac{c\rho_{0}}{\sqrt{1-\frac{v^{2}}{c^{2}}}},\rho\boldsymbol{v}\right),
+J^{\mu}=\rho_{0}u^{\mu}=\left(\mathrm{c}\rho,\boldsymbol{j}\right)=\left(\frac{\mathrm{c}\rho_{0}}{\sqrt{1-\frac{v^{2}}{\mathrm{c}^{2}}}},\rho\boldsymbol{v}\right),
 \end{align}
 其中$\rho_{0}$为静止粒子的电荷密度，$\boldsymbol{j}$是三维电流密度。
 
 (\ref{3.5.15}) 式也可以写成
 \begin{align}
-\nabla^{2}\Phi-\frac{1}{c^{2}}\frac{\partial{}^{2}\Phi}{\partial{}t^{2}}&=-4\pi\rho,\\
-\nabla^{2}\boldsymbol{A}-\frac{1}{c^{2}}\frac{\partial{}^{2}\boldsymbol{A}}{\partial{}t^{2}}&=-\frac{4\pi}{c}\boldsymbol{j}.
+\nabla^{2}\Phi-\frac{1}{\mathrm{c}^{2}}\frac{\partial{}^{2}\Phi}{\partial{}t^{2}}&=-4\pi\rho,\\
+\nabla^{2}\boldsymbol{A}-\frac{1}{\mathrm{c}^{2}}\frac{\partial{}^{2}\boldsymbol{A}}{\partial{}t^{2}}&=-\frac{4\pi}{\mathrm{c}}\boldsymbol{j}.
 \end{align}
 其中用到了洛伦兹规范
 \begin{equation}
@@ -1665,7 +1665,7 @@ A_{\nu,\nu}=0,
 \end{equation}
 即
 \begin{equation}
-\nabla\cdot\boldsymbol{A}+\frac{1}{c}\frac{\partial{}\Phi}{\partial{}t}=0.
+\nabla\cdot\boldsymbol{A}+\frac{1}{\mathrm{c}}\frac{\partial{}\Phi}{\partial{}t}=0.
 \end{equation}
 
 电荷守恒定律为
@@ -1680,17 +1680,17 @@ J^{\mu}_{,\mu}=0,
 广义相对论中方程都应写成广义协变形式
 \begin{align}
 &F_{\mu\nu;\tau}+F_{\nu\tau;\mu}+F_{\tau\mu;\nu}=F_{\mu\nu,\tau}+F_{\nu\tau,\mu}+F_{\tau\mu,\nu}=0.\\
-&F^{\mu\nu}_{;\nu}=\frac{1}{\sqrt{-g}}\left(F^{\mu\nu}\sqrt{-g}\right)_{,\nu}=\frac{4\pi}{c}J^{\mu},\\
+&F^{\mu\nu}_{;\nu}=\frac{1}{\sqrt{-g}}\left(F^{\mu\nu}\sqrt{-g}\right)_{,\nu}=\frac{4\pi}{\mathrm{c}}J^{\mu},\\
 &J^{\mu}_{;\mu}=\frac{1}{\sqrt{-g}}\left(\sqrt{-g}J^{\mu}\right)_{,\mu}=0,\\
 &F_{\mu\nu}=A_{\nu;\mu}-A_{\mu;\nu}=A_{\nu,\mu}-A_{\mu,\nu},\\
-&A_{\mu;\nu}^{;\nu}-R_{\mu\alpha}A^{\alpha}=-\frac{4\pi}{c}J_{\mu},\\
+&A_{\mu;\nu}^{;\nu}-R_{\mu\alpha}A^{\alpha}=-\frac{4\pi}{\mathrm{c}}J_{\mu},\\
 &A^{\nu}_{;\nu}=\frac{1}{\sqrt{-g}}\left(\sqrt{-g}A^{\nu}\right)_{,\nu}=0.
 \end{align}
 
 对于能动张量，狭义相对论中，
 \begin{equation}
 T_{\mu\nu}=\begin{pmatrix}
-\varepsilon & S_{1}/c & S_{2}/c & S_{3}/c\\
+\varepsilon & S_{1}/\mathrm{c} & S_{2}/\mathrm{c} & S_{3}/\mathrm{c}\\
 cM_{1} & T_{11} & T_{12} & T_{13}\\
 cM_{2} & T_{21} & T_{22} & T_{23}\\
 cM_{3} & T_{31} & T_{32} & T_{33}\\
@@ -1707,7 +1707,7 @@ T^{\mu\nu}_{;\nu}=0.
 
 理想流体（如光子流体）能动张量为
 \begin{equation}
-T^{\mu\nu}=\left(\rho+\frac{p}{c^{2}}\right)U^{\mu}U^{\nu}+pg^{\mu\nu},
+T^{\mu\nu}=\left(\rho+\frac{p}{\mathrm{c}^{2}}\right)U^{\mu}U^{\nu}+pg^{\mu\nu},
 \end{equation}
 无相互作用的松散物质（即压强为零）
 \begin{equation}
@@ -1805,9 +1805,9 @@ g_{\mu\nu}=\eta_{\mu\nu}+h_{\mu\nu}=\eta_{\mu\nu}+\overline{h}_{\mu\nu}-\frac12\
 \end{equation}
 实际上通过计算可得
 \begin{equation}
-\overline{h}_{\mu\nu}\left(\boldsymbol{r},t\right)=\frac{\kappa}{2\pi}\int\frac{T_{\mu\nu}\left(\boldsymbol{r},t-\frac{r}{c}\right)}{r}\mathrm{d}V',
+\overline{h}_{\mu\nu}\left(\boldsymbol{r},t\right)=\frac{\kappa}{2\pi}\int\frac{T_{\mu\nu}\left(\boldsymbol{r},t-\frac{r}{\mathrm{c}}\right)}{r}\mathrm{d}V',
 \end{equation}
-其中$\mathrm{d}V'$是体积元，而$r=\left[\left(x^{i}-x'^{i}\right)\cdot\left(x^{i}-x'^{i}\right)\right]^{\frac12}$.该解是推迟解，表明时刻$t$距离引力源$r$的引力势是$t-\frac{r}{c}$时刻物质分布和运动状态决定的，这意味着引力场以光速传播。如果引力源局限于一个很小的区域，观测者又远离引力源，推迟解可简化为
+其中$\mathrm{d}V'$是体积元，而$r=\left[\left(x^{i}-x'^{i}\right)\cdot\left(x^{i}-x'^{i}\right)\right]^{\frac12}$.该解是推迟解，表明时刻$t$距离引力源$r$的引力势是$t-\frac{r}{\mathrm{c}}$时刻物质分布和运动状态决定的，这意味着引力场以光速传播。如果引力源局限于一个很小的区域，观测者又远离引力源，推迟解可简化为
 \begin{equation}
 \overline{h}_{\mu\nu}=\frac{\kappa}{2\pi r_{0}}\int T_{\mu\nu}^{*}\mathrm{d}V'.
 \end{equation}
@@ -1859,19 +1859,19 @@ R_{\mu\nu}=0.
 
 仅考虑几何上的对称性，最一般的真空球度规应该写成
 \begin{equation}
-\mathrm{d}s^{2}=b\left(r,t\right)c^{2}\mathrm{d}t^{2}+a\left(r,t\right)\mathrm{d}r^{2}+r^{2}\left(\mathrm{d}\theta^{2}+\sin^{2}\theta\mathrm{d}\varphi^{2}\right).
+\mathrm{d}s^{2}=b\left(r,t\right)\mathrm{c}^{2}\mathrm{d}t^{2}+a\left(r,t\right)\mathrm{d}r^{2}+r^{2}\left(\mathrm{d}\theta^{2}+\sin^{2}\theta\mathrm{d}\varphi^{2}\right).
 \end{equation}
 
 1927 年，Birkhoff 证明只要引力源物质分布是球对称的，不管引力源是膨胀收缩还是径向振动，源外真空引力场一定球对称，而且静态。（一步步计算场方程所有项，得到该结果是容易的。）为了方便度规可以写作
 \begin{equation}
 g_{\mu\nu}=\begin{pmatrix}
--c^{2}\mathrm{e}^{2\beta} & 0 & 0 & 0\\
+-\mathrm{c}^{2}\mathrm{e}^{2\beta} & 0 & 0 & 0\\
 0 & \mathrm{e}^{2\alpha} & 0 & 0\\
 0 & 0 & r^{2} & 0\\
 0 & 0 & 0 & r^{2}\sin^{2}\theta\\
 \end{pmatrix},
 g^{\mu\nu}=\begin{pmatrix}
--\frac{1}{c^{2}}\mathrm{e}^{-2\beta} & 0 & 0 & 0\\
+-\frac{1}{\mathrm{c}^{2}}\mathrm{e}^{-2\beta} & 0 & 0 & 0\\
 0 & \mathrm{e}^{-2\alpha} & 0 & 0\\
 0 & 0 & r^{-2} & 0\\
 0 & 0 & 0 & \dfrac{1}{r^{2}\sin^{2}\theta}\\
@@ -1879,9 +1879,9 @@ g^{\mu\nu}=\begin{pmatrix}
 \end{equation}
 计算得到克氏符以及 Ricci 显式非零分量为
 \begin{align}
-&\Gamma_{10}^{0}=\Gamma_{01}^{0}=\frac{\mathrm{d}\beta}{\mathrm{d}r},\Gamma_{00}^{1}=c^{2}\mathrm{e}^{2\left(\beta-\alpha\right)}\frac{\mathrm{d}\beta}{\mathrm{d}r},\Gamma_{11}^{1}=\frac{\mathrm{d}\alpha}{\mathrm{d}r},\Gamma_{22}^{1}=-r\mathrm{e}^{-2\alpha},\Gamma_{33}^{1}=-r\mathrm{e}^{-2\alpha}\sin^{2}\theta,\notag\\
+&\Gamma_{10}^{0}=\Gamma_{01}^{0}=\frac{\mathrm{d}\beta}{\mathrm{d}r},\Gamma_{00}^{1}=\mathrm{c}^{2}\mathrm{e}^{2\left(\beta-\alpha\right)}\frac{\mathrm{d}\beta}{\mathrm{d}r},\Gamma_{11}^{1}=\frac{\mathrm{d}\alpha}{\mathrm{d}r},\Gamma_{22}^{1}=-r\mathrm{e}^{-2\alpha},\Gamma_{33}^{1}=-r\mathrm{e}^{-2\alpha}\sin^{2}\theta,\notag\\
 &\Gamma_{12}^{2}=\Gamma_{21}^{2}=\frac{1}{r},\Gamma_{33}^{2}=-\sin\theta\cos\theta,\Gamma_{13}^{3}=\Gamma_{31}^{3}=\frac{1}{r},\Gamma_{23}^{3}=\Gamma_{32}^{3}=\cot\theta.\notag\\
-&R_{00}=c^{2}\mathrm{e}^{2\left(\beta-\alpha\right)}\left[\frac{\mathrm{d}^{2}\beta}{\mathrm{d}r^{2}}+\frac{2}{r}\frac{\mathrm{d}\beta}{\mathrm{d}r}+\frac{\mathrm{d}\beta}{\mathrm{d}r}\left(\frac{\mathrm{d}\beta}{\mathrm{d}r}-\frac{\mathrm{d}\alpha}{\mathrm{d}r}\right)\right],\notag\\
+&R_{00}=\mathrm{c}^{2}\mathrm{e}^{2\left(\beta-\alpha\right)}\left[\frac{\mathrm{d}^{2}\beta}{\mathrm{d}r^{2}}+\frac{2}{r}\frac{\mathrm{d}\beta}{\mathrm{d}r}+\frac{\mathrm{d}\beta}{\mathrm{d}r}\left(\frac{\mathrm{d}\beta}{\mathrm{d}r}-\frac{\mathrm{d}\alpha}{\mathrm{d}r}\right)\right],\notag\\
 &R_{11}=\left[-\frac{\mathrm{d}^{2}\beta}{\mathrm{d}r^{2}}+\frac{2}{r}\frac{\mathrm{d}\alpha}{\mathrm{d}r}-\frac{\mathrm{d}\beta}{\mathrm{d}r}\left(\frac{\mathrm{d}\beta}{\mathrm{d}r}-\frac{\mathrm{d}\alpha}{\mathrm{d}r}\right)\right],\notag\\
 &R_{22}=\mathrm{e}^{-2\alpha}\left[-1+\mathrm{e}^{2\alpha}-r\left(\frac{\mathrm{d}\beta}{\mathrm{d}r}-\frac{\mathrm{d}\alpha}{\mathrm{d}r}\right)\right],R_{33}=R_{22}\sin^{2}\theta.\notag
 \end{align}
@@ -1891,20 +1891,20 @@ g^{\mu\nu}=\begin{pmatrix}
 \end{equation}
 即
 \begin{equation}
-g_{00}=-c^{2}\mathrm{e}^{A}\left(1-\frac{B}{r}\right),g_{11}=\left(1-\frac{B}{r}\right)^{-1}.
+g_{00}=-\mathrm{c}^{2}\mathrm{e}^{A}\left(1-\frac{B}{r}\right),g_{11}=\left(1-\frac{B}{r}\right)^{-1}.
 \end{equation}
 通过改变时间尺度可以消去常数$\mathrm{e}^{A}$.将其与牛顿引力势对比，可以得到
 \begin{equation}
-B=\frac{2\mathrm{G}M}{c^{2}}.
+B=\frac{2\mathrm{G}M}{\mathrm{c}^{2}}.
 \end{equation}
 因此静态球对称真空线元为
 \begin{equation}
-\mathrm{d}s^{2}=-c^{2}\left(1-\frac{2\mathrm{G}M}{c^{2}r}\right)\mathrm{d}t^{2}+\left(1-\frac{2\mathrm{G}M}{c^{2}r}\right)^{-1}\mathrm{d}r^{2}+r^{2}\left(\mathrm{d}\theta^{2}+\sin^{2}\theta\mathrm{d}\varphi^{2}\right).
+\mathrm{d}s^{2}=-\mathrm{c}^{2}\left(1-\frac{2\mathrm{G}M}{\mathrm{c}^{2}r}\right)\mathrm{d}t^{2}+\left(1-\frac{2\mathrm{G}M}{\mathrm{c}^{2}r}\right)^{-1}\mathrm{d}r^{2}+r^{2}\left(\mathrm{d}\theta^{2}+\sin^{2}\theta\mathrm{d}\varphi^{2}\right).
 \end{equation}
 
 史瓦西时空时轴正交，这样的时空可以建立同时面，但要注意坐标时间没有测量意义，有意义的固有时间和坐标时间不同。类似我们知道，对于静止观测者有纯空间度规，史瓦西时空固有距离为
 \begin{equation}
-\mathrm{d}l^{2}=\left(1-\frac{2\mathrm{G}M}{c^{2}r}\right)^{-1}\mathrm{d}r^{2}+r^{2}\left(\mathrm{d}\theta^{2}+\sin^{2}\theta\mathrm{d}\varphi^{2}\right).
+\mathrm{d}l^{2}=\left(1-\frac{2\mathrm{G}M}{\mathrm{c}^{2}r}\right)^{-1}\mathrm{d}r^{2}+r^{2}\left(\mathrm{d}\theta^{2}+\sin^{2}\theta\mathrm{d}\varphi^{2}\right).
 \end{equation}
 沿着$\theta,\varphi$方向就是普通欧氏空间球面几何，但是沿着$\mathrm{d}r$方向，坐标距离$\mathrm{d}r$不等于固有距离$\mathrm{d}l$.
 
@@ -1913,14 +1913,14 @@ B=\frac{2\mathrm{G}M}{c^{2}}.
 
 设引力源是静止的理想流体，它的能动张量和四速满足
 \begin{align}
-T^{\mu\nu}&=\left(\frac{p}{c^{2}}+\rho\right)U^{\mu}U^{\nu}+pg^{\mu\nu}.\\
-U^{\mu}&=\left(\frac{c}{\sqrt{-g_{00}}},0,0,0\right),U_{\mu}=\left(\frac{g_{00}c}{\sqrt{-g_{00}}},0,0,0\right),
+T^{\mu\nu}&=\left(\frac{p}{\mathrm{c}^{2}}+\rho\right)U^{\mu}U^{\nu}+pg^{\mu\nu}.\\
+U^{\mu}&=\left(\frac{\mathrm{c}}{\sqrt{-g_{00}}},0,0,0\right),U_{\mu}=\left(\frac{g_{00}\mathrm{c}}{\sqrt{-g_{00}}},0,0,0\right),
 \end{align}
 为简化场方程中的度规分量，利用能动张量混合形式
 \begin{equation}
-T^{\mu}_{\nu}=\left(\frac{p}{c^{2}}+\rho\right)
+T^{\mu}_{\nu}=\left(\frac{p}{\mathrm{c}^{2}}+\rho\right)
 \begin{pmatrix}
--c^{2} & 0 & 0 & 0\\
+-\mathrm{c}^{2} & 0 & 0 & 0\\
 0 & 0 & 0 & 0\\
 0 & 0 & 0 & 0\\
 0 & 0 & 0 & 0\\
@@ -1932,7 +1932,7 @@ T^{\mu}_{\nu}=\left(\frac{p}{c^{2}}+\rho\right)
 0 & 0 & 0 & 1\\
 \end{pmatrix}
 =\begin{pmatrix}
--\rho c^{2} & 0 & 0 & 0\\
+-\rho \mathrm{c}^{2} & 0 & 0 & 0\\
 0 & p & 0 & 0\\
 0 & 0 & p & 0\\
 0 & 0 & 0 & p\\
@@ -1940,7 +1940,7 @@ T^{\mu}_{\nu}=\left(\frac{p}{c^{2}}+\rho\right)
 \end{equation}
 以及混合形式引力场方程
 \begin{equation}
-R^{\mu}_{\nu}-\frac{1}{2}\delta{}^{\mu}_{\nu}R=\frac{8\pi\mathrm{G}}{c^{4}}T^{\mu}_{\nu},
+R^{\mu}_{\nu}-\frac{1}{2}\delta{}^{\mu}_{\nu}R=\frac{8\pi\mathrm{G}}{\mathrm{c}^{4}}T^{\mu}_{\nu},
 \end{equation}
 其中
 \begin{align}
@@ -1951,9 +1951,9 @@ R^{2}_{2}=R^{3}_{3}&=\mathrm{e}^{-2\alpha}\left[-\frac{1}{r^{2}}+\frac{1}{r^{2}}
 \end{align}
 由于$R^{2}_{2}=R^{3}_{3}$,场方程只有三个看似独立的分量式：
 \begin{align}
-\mathrm{e}^{-2\alpha}\left[-\frac{2}{r}\frac{\mathrm{d}\alpha}{\mathrm{d}r}+\frac{1}{r^{2}}\right]-\frac{1}{r^{2}}&=-\frac{8\pi\mathrm{G}}{c^{2}}\rho,\label{4.2.5}\\
-\mathrm{e}^{-2\alpha}\left[\frac{2}{r}\frac{\mathrm{d}\beta}{\mathrm{d}r}+\frac{1}{r^{2}}\right]-\frac{1}{r^{2}}&=\frac{8\pi\mathrm{G}}{c^{4}}p,\label{4.2.6}\\
-\mathrm{e}^{-2\alpha}\left[\frac{1}{r}\left(\frac{\mathrm{d}\beta}{\mathrm{d}r}-\frac{\mathrm{d}\alpha}{\mathrm{d}r}\right)+\frac{\mathrm{d}^{2}\beta}{\mathrm{d}r^{2}}+\frac{\mathrm{d}\beta}{\mathrm{d}r}\left(\frac{\mathrm{d}\beta}{\mathrm{d}r}-\frac{\mathrm{d}\alpha}{\mathrm{d}r}\right)\right]&=\frac{8\pi\mathrm{G}}{c^{4}}p,\label{4.2.7}
+\mathrm{e}^{-2\alpha}\left[-\frac{2}{r}\frac{\mathrm{d}\alpha}{\mathrm{d}r}+\frac{1}{r^{2}}\right]-\frac{1}{r^{2}}&=-\frac{8\pi\mathrm{G}}{\mathrm{c}^{2}}\rho,\label{4.2.5}\\
+\mathrm{e}^{-2\alpha}\left[\frac{2}{r}\frac{\mathrm{d}\beta}{\mathrm{d}r}+\frac{1}{r^{2}}\right]-\frac{1}{r^{2}}&=\frac{8\pi\mathrm{G}}{\mathrm{c}^{4}}p,\label{4.2.6}\\
+\mathrm{e}^{-2\alpha}\left[\frac{1}{r}\left(\frac{\mathrm{d}\beta}{\mathrm{d}r}-\frac{\mathrm{d}\alpha}{\mathrm{d}r}\right)+\frac{\mathrm{d}^{2}\beta}{\mathrm{d}r^{2}}+\frac{\mathrm{d}\beta}{\mathrm{d}r}\left(\frac{\mathrm{d}\beta}{\mathrm{d}r}-\frac{\mathrm{d}\alpha}{\mathrm{d}r}\right)\right]&=\frac{8\pi\mathrm{G}}{\mathrm{c}^{4}}p,\label{4.2.7}
 \end{align}
 为此我们需要引入更多的方程以使方程组完备。
 
@@ -1963,7 +1963,7 @@ T^{\mu\nu}_{;\nu}=\frac{1}{\sqrt{-g}}\frac{\partial{}}{\partial{}x^{\nu}}\left(T
 \end{equation}
 注意到
 \begin{equation}
-g=-c^{2}\mathrm{e}^{\left(2\alpha+2\beta\right)}r^{4}\sin^{2}\theta,T^{\mu\nu}=
+g=-\mathrm{c}^{2}\mathrm{e}^{\left(2\alpha+2\beta\right)}r^{4}\sin^{2}\theta,T^{\mu\nu}=
 \begin{pmatrix}
 \rho \mathrm{e}^{-2\beta} & 0 & 0 & 0\\
 0 & p\mathrm{e}^{-2\alpha} & 0 & 0\\
@@ -1973,7 +1973,7 @@ g=-c^{2}\mathrm{e}^{\left(2\alpha+2\beta\right)}r^{4}\sin^{2}\theta,T^{\mu\nu}=
 \end{equation}
 计算能动张量守恒方程$\mu=1$的分量方程，得到
 \begin{equation}
-\frac{\mathrm{d}p}{\mathrm{d}r}+\left(p+\rho c^{2}\right)\frac{\mathrm{d}\beta}{\mathrm{d}r}=0.\label{4.2.10}
+\frac{\mathrm{d}p}{\mathrm{d}r}+\left(p+\rho \mathrm{c}^{2}\right)\frac{\mathrm{d}\beta}{\mathrm{d}r}=0.\label{4.2.10}
 \end{equation}
 Bianchi 恒等式的性质使 (\ref{4.2.5})(\ref{4.2.6})(\ref{4.2.7})(\ref{4.2.10}) 式中只有三个独立方程。为计算简便可选择忽略 (4.2.7) 式。
 
@@ -1984,11 +1984,11 @@ Bianchi 恒等式的性质使 (\ref{4.2.5})(\ref{4.2.6})(\ref{4.2.7})(\ref{4.2.1
 
 方程组完备后，注意边界条件
 \begin{align}
-p\left(R\right)=0,\mathrm{e}^{2\beta\left(R\right)}=\mathrm{e}^{-2\alpha\left(R\right)}=\left(1-\frac{2\mathrm{G}M}{c^{2}r}\right).
+p\left(R\right)=0,\mathrm{e}^{2\beta\left(R\right)}=\mathrm{e}^{-2\alpha\left(R\right)}=\left(1-\frac{2\mathrm{G}M}{\mathrm{c}^{2}r}\right).
 \end{align}
 现在我们开始求解这组方程。首先将场方程的 00 分量方程，即 (\ref{4.2.5}) 式写成如下形式
 \begin{equation}
-\frac{c^{2}}{2\mathrm{G}}\left[2r\mathrm{e}^{-2\alpha}\frac{\mathrm{d}\alpha}{\mathrm{d}r}+1-\mathrm{e}^{-2\alpha}\right]=4\pi r^{2}\rho,
+\frac{\mathrm{c}^{2}}{2\mathrm{G}}\left[2r\mathrm{e}^{-2\alpha}\frac{\mathrm{d}\alpha}{\mathrm{d}r}+1-\mathrm{e}^{-2\alpha}\right]=4\pi r^{2}\rho,
 \end{equation}
 可见左半部分括号内部分实际上是
 \begin{equation}
@@ -1996,7 +1996,7 @@ p\left(R\right)=0,\mathrm{e}^{2\beta\left(R\right)}=\mathrm{e}^{-2\alpha\left(R\
 \end{equation}
 因此我们不妨定义半径为坐标距离$r$的球面内的质量为
 \begin{equation}
-m\left(r\right)=\frac{c^{2}}{2\mathrm{G}}r\left(1-\mathrm{e}^{-2\alpha}\right),\label{4.2.15}
+m\left(r\right)=\frac{\mathrm{c}^{2}}{2\mathrm{G}}r\left(1-\mathrm{e}^{-2\alpha}\right),\label{4.2.15}
 \end{equation}
 之所以这么定义是因为这样场方程就可写为
 \begin{equation}
@@ -2004,11 +2004,11 @@ m\left(r\right)=\int_{0}^{r}4\pi r^{2}\rho\left(r\right)\mathrm{d}r.
 \end{equation}
 现在将 (\ref{4.2.15}) 式代入场方程的 11 分量方程，即 (\ref{4.2.6}) 式，得到
 \begin{equation}
-\frac{\mathrm{d}\beta}{\mathrm{d}r}=\frac{\dfrac{4\pi\mathrm{G}}{c^{2}}pr^{3}+\mathrm{G}m}{r\left(rc^{2}-2\mathrm{G}m\right)},\label{4.2.17}
+\frac{\mathrm{d}\beta}{\mathrm{d}r}=\frac{\dfrac{4\pi\mathrm{G}}{\mathrm{c}^{2}}pr^{3}+\mathrm{G}m}{r\left(r\mathrm{c}^{2}-2\mathrm{G}m\right)},\label{4.2.17}
 \end{equation}
 此结果代入能动张量分量方程，得到
 \begin{equation}
-\frac{\mathrm{d}p}{\mathrm{d}r}=-\frac{\left(p+\rho c^{2}\right)\left(\dfrac{4\pi\mathrm{G}}{c^{2}}pr^{3}+\mathrm{G}m\right)}{r\left(rc^{2}-2\mathrm{G}m\right)}.\label{4.2.18}
+\frac{\mathrm{d}p}{\mathrm{d}r}=-\frac{\left(p+\rho \mathrm{c}^{2}\right)\left(\dfrac{4\pi\mathrm{G}}{\mathrm{c}^{2}}pr^{3}+\mathrm{G}m\right)}{r\left(r\mathrm{c}^{2}-2\mathrm{G}m\right)}.\label{4.2.18}
 \end{equation}
 (\ref{4.2.18}) 式也被称作奥本海默方程，将其与物态方程联立就可求解恒星内部结构。容易发现光速趋向于无穷时奥本海默方程退化为牛顿引力下流体静力学平衡解。对于较实际的物态方程，奥本海默方程都无法解析地给出。故接下来只讨论一种理想模型，即密度均匀的星体。
 
@@ -2018,39 +2018,39 @@ m\left(r\right)=\frac{4\pi}{3}\rho_{0}r^{3},\label{4.2.19}
 \end{equation}
 此时奥本海默方程具有可分离变数的形式：
 \begin{align}
-&\frac{\mathrm{d}p}{\mathrm{d}r}=-\frac{4\pi\mathrm{G}}{c^{2}}\frac{\left(p+\rho_{0}c^{2}\right)\left(p+\dfrac{1}{3}\rho_{0}c^{2}\right)r}{c^{2}-\dfrac{8\pi\mathrm{G}}{3}\rho_{0}r^{2}},\label{4.2.20}\\
-&\int_{0}^{p\left(r\right)}\frac{1}{\left(p+\rho_{0}c^{2}\right)\left(p+\dfrac{1}{3}\rho_{0}c^{2}\right)}\mathrm{d}p=\frac{4\pi\mathrm{G}}{c^{4}}\int_{R}^{r}\frac{r}{\left(\dfrac{8\pi\mathrm{G}}{3c^{2}}\rho_{0}r^{2}-1\right)}\mathrm{d}r,\notag\\
-&\frac{3}{2\rho_{0}c^{2}}\int_{0}^{p\left(r\right)}\left(\frac{1}{p+\dfrac{1}{3}\rho_{0}c^{2}}-\frac{1}{p+\rho_{0}c^{2}}\right)\mathrm{d}p=\frac{3}{4\rho_{0}c^{2}}\ln\left(\frac{\dfrac{8\pi\mathrm{G}}{3c^{2}}\rho_{0}r^{2}-1}{\dfrac{8\pi\mathrm{G}}{3c^{2}}\rho_{0}R^{2}-1}\right),\notag\\
-&\frac{3p+\rho_{0}c^{2}}{p+\rho_{0}c^{2}}=\left(\frac{\dfrac{8\pi\mathrm{G}}{3c^{2}}\rho_{0}r^{2}-1}{\dfrac{8\pi\mathrm{G}}{3c^{2}}\rho_{0}R^{2}-1}\right)^{\frac{1}{2}},\notag\\
-&p\left(r\right)=\rho_{0}c^{2}\frac{\left(1-\dfrac{8\pi\mathrm{G}}{3c^{2}}\rho_{0}r^{2}\right)^{\frac{1}{2}}-\left(1-\dfrac{8\pi\mathrm{G}}{3c^{2}}\rho_{0}R^{2}\right)^{\frac12}}{3\left(1-\dfrac{8\pi\mathrm{G}}{3c^{2}}\rho_{0}R^{2}\right)^{\frac12}-\left(1-\dfrac{8\pi\mathrm{G}}{3c^{2}}\rho_{0}r^{2}\right)^{\frac{1}{2}}}.\label{4.2.21}
+&\frac{\mathrm{d}p}{\mathrm{d}r}=-\frac{4\pi\mathrm{G}}{\mathrm{c}^{2}}\frac{\left(p+\rho_{0}\mathrm{c}^{2}\right)\left(p+\dfrac{1}{3}\rho_{0}\mathrm{c}^{2}\right)r}{\mathrm{c}^{2}-\dfrac{8\pi\mathrm{G}}{3}\rho_{0}r^{2}},\label{4.2.20}\\
+&\int_{0}^{p\left(r\right)}\frac{1}{\left(p+\rho_{0}\mathrm{c}^{2}\right)\left(p+\dfrac{1}{3}\rho_{0}\mathrm{c}^{2}\right)}\mathrm{d}p=\frac{4\pi\mathrm{G}}{\mathrm{c}^{4}}\int_{R}^{r}\frac{r}{\left(\dfrac{8\pi\mathrm{G}}{3\mathrm{c}^{2}}\rho_{0}r^{2}-1\right)}\mathrm{d}r,\notag\\
+&\frac{3}{2\rho_{0}\mathrm{c}^{2}}\int_{0}^{p\left(r\right)}\left(\frac{1}{p+\dfrac{1}{3}\rho_{0}\mathrm{c}^{2}}-\frac{1}{p+\rho_{0}\mathrm{c}^{2}}\right)\mathrm{d}p=\frac{3}{4\rho_{0}\mathrm{c}^{2}}\ln\left(\frac{\dfrac{8\pi\mathrm{G}}{3\mathrm{c}^{2}}\rho_{0}r^{2}-1}{\dfrac{8\pi\mathrm{G}}{3\mathrm{c}^{2}}\rho_{0}R^{2}-1}\right),\notag\\
+&\frac{3p+\rho_{0}\mathrm{c}^{2}}{p+\rho_{0}\mathrm{c}^{2}}=\left(\frac{\dfrac{8\pi\mathrm{G}}{3\mathrm{c}^{2}}\rho_{0}r^{2}-1}{\dfrac{8\pi\mathrm{G}}{3\mathrm{c}^{2}}\rho_{0}R^{2}-1}\right)^{\frac{1}{2}},\notag\\
+&p\left(r\right)=\rho_{0}\mathrm{c}^{2}\frac{\left(1-\dfrac{8\pi\mathrm{G}}{3\mathrm{c}^{2}}\rho_{0}r^{2}\right)^{\frac{1}{2}}-\left(1-\dfrac{8\pi\mathrm{G}}{3\mathrm{c}^{2}}\rho_{0}R^{2}\right)^{\frac12}}{3\left(1-\dfrac{8\pi\mathrm{G}}{3\mathrm{c}^{2}}\rho_{0}R^{2}\right)^{\frac12}-\left(1-\dfrac{8\pi\mathrm{G}}{3\mathrm{c}^{2}}\rho_{0}r^{2}\right)^{\frac{1}{2}}}.\label{4.2.21}
 \end{align}
 (\ref{4.2.20}) 式告诉我们压力向中心递增。(\ref{4.2.21}) 式取$r=0$即为中心压力，得到
 \begin{equation}
-p_{c}=p\left(0\right)=\rho_{0}c^{2}\frac{1-\left(1-\dfrac{8\pi\mathrm{G}}{3c^{2}}\rho_{0}R^{2}\right)^{\frac12}}{3\left(1-\dfrac{8\pi\mathrm{G}}{3c^{2}}\rho_{0}R^{2}\right)^{\frac12}-1}.
+p_{c}=p\left(0\right)=\rho_{0}\mathrm{c}^{2}\frac{1-\left(1-\dfrac{8\pi\mathrm{G}}{3\mathrm{c}^{2}}\rho_{0}R^{2}\right)^{\frac12}}{3\left(1-\dfrac{8\pi\mathrm{G}}{3\mathrm{c}^{2}}\rho_{0}R^{2}\right)^{\frac12}-1}.
 \end{equation}
 简单分析可知恒星半径$R$越大，中心压力越高。中心压力正无穷时，恒星半径和总质量$M$满足
 \begin{equation}
-R=\frac{c}{\sqrt{3\pi\mathrm{G}\rho_{0}}},M=\frac{4}{3}\pi \rho_{0}R^{3}=\frac{4}{9}\frac{c^{3}}{\sqrt{3\pi\mathrm{G}^{3}\rho_{0}}},\frac{2\mathrm{G}M}{c^{2}R}=\frac{8}{9}.
+R=\frac{\mathrm{c}}{\sqrt{3\pi\mathrm{G}\rho_{0}}},M=\frac{4}{3}\pi \rho_{0}R^{3}=\frac{4}{9}\frac{\mathrm{c}^{3}}{\sqrt{3\pi\mathrm{G}^{3}\rho_{0}}},\frac{2\mathrm{G}M}{\mathrm{c}^{2}R}=\frac{8}{9}.
 \end{equation}
-可以证明其他物态方程下$\dfrac{2\mathrm{G}M}{c^{2}R}$极限值都小于$\dfrac{8}{9}$,注意到恒星表面时空偏离平坦的程度正是由$\dfrac{2\mathrm{G}M}{c^{2}R}$表征，说明恒星表面引力场强度有极限。这也是牛顿引力所无法预言的。
+可以证明其他物态方程下$\dfrac{2\mathrm{G}M}{\mathrm{c}^{2}R}$极限值都小于$\dfrac{8}{9}$,注意到恒星表面时空偏离平坦的程度正是由$\dfrac{2\mathrm{G}M}{\mathrm{c}^{2}R}$表征，说明恒星表面引力场强度有极限。这也是牛顿引力所无法预言的。
 
 (\ref{4.2.21}) 式告诉我们均匀密度星体内部压强分布，因此我们可以推出史瓦西度规内部引力场分布。首先不妨将 (\ref{4.2.21}) 式改写成如下形式：
 \begin{equation}
-p\left(r\right)=\rho_{0}c^{2}\frac{\left(1-\dfrac{2\mathrm{G}M}{c^{2}R^{3}}r^{2}\right)^{\frac{1}{2}}-\left(1-\dfrac{2\mathrm{G}M}{c^{2}R}\right)^{\frac12}}{3\left(1-\dfrac{2\mathrm{G}M}{c^{2}R}\right)^{\frac12}-\left(1-\dfrac{2\mathrm{G}M}{c^{2}R^{3}}r^{2}\right)^{\frac{1}{2}}}.
+p\left(r\right)=\rho_{0}\mathrm{c}^{2}\frac{\left(1-\dfrac{2\mathrm{G}M}{\mathrm{c}^{2}R^{3}}r^{2}\right)^{\frac{1}{2}}-\left(1-\dfrac{2\mathrm{G}M}{\mathrm{c}^{2}R}\right)^{\frac12}}{3\left(1-\dfrac{2\mathrm{G}M}{\mathrm{c}^{2}R}\right)^{\frac12}-\left(1-\dfrac{2\mathrm{G}M}{\mathrm{c}^{2}R^{3}}r^{2}\right)^{\frac{1}{2}}}.
 \end{equation}
 代入 (\ref{4.2.17}) 式得到
 \begin{equation}
-\frac{\mathrm{d}\beta}{\mathrm{d}r}=\frac{\dfrac{2\mathrm{G}M}{c^{2}R^{3}}r}{\left[3\left(1-\dfrac{2\mathrm{G}M}{c^{2}R}\right)^{\frac12}-\left(1-\dfrac{2\mathrm{G}M}{c^{2}R^{3}}r^{2}\right)^{\frac{1}{2}}\right]\left(1-\dfrac{2\mathrm{G}M}{c^{2}R^{3}}r^{2}\right)^{\frac{1}{2}}},
+\frac{\mathrm{d}\beta}{\mathrm{d}r}=\frac{\dfrac{2\mathrm{G}M}{\mathrm{c}^{2}R^{3}}r}{\left[3\left(1-\dfrac{2\mathrm{G}M}{\mathrm{c}^{2}R}\right)^{\frac12}-\left(1-\dfrac{2\mathrm{G}M}{\mathrm{c}^{2}R^{3}}r^{2}\right)^{\frac{1}{2}}\right]\left(1-\dfrac{2\mathrm{G}M}{\mathrm{c}^{2}R^{3}}r^{2}\right)^{\frac{1}{2}}},
 \end{equation}
 右侧原函数是个简单的对数函数，代入恒星表面引力场的边界条件，
 \begin{align}
-\beta-\ln\left(1-\frac{2\mathrm{G}M}{c^{2}R}\right)^{\frac{1}{2}}&=\ln\left[\dfrac{3\left(1-\dfrac{2\mathrm{G}M}{c^{2}R}\right)^{\frac12}-\left(1-\dfrac{2\mathrm{G}M}{c^{2}R^{3}}r^{2}\right)^{\frac{1}{2}}}{3\left(1-\dfrac{2\mathrm{G}M}{c^{2}R}\right)^{\frac12}-\left(1-\dfrac{2\mathrm{G}M}{c^{2}R^{3}}R^{2}\right)^{\frac{1}{2}}}\right],\notag\\
-\mathrm{e}^{\beta}&=\frac{3}{2}\left(1-\dfrac{2\mathrm{G}M}{c^{2}R}\right)^{\frac12}-\frac{1}{2}\left(1-\dfrac{2\mathrm{G}M}{c^{2}R^{3}}r^{2}\right)^{\frac{1}{2}}.
+\beta-\ln\left(1-\frac{2\mathrm{G}M}{\mathrm{c}^{2}R}\right)^{\frac{1}{2}}&=\ln\left[\dfrac{3\left(1-\dfrac{2\mathrm{G}M}{\mathrm{c}^{2}R}\right)^{\frac12}-\left(1-\dfrac{2\mathrm{G}M}{\mathrm{c}^{2}R^{3}}r^{2}\right)^{\frac{1}{2}}}{3\left(1-\dfrac{2\mathrm{G}M}{\mathrm{c}^{2}R}\right)^{\frac12}-\left(1-\dfrac{2\mathrm{G}M}{\mathrm{c}^{2}R^{3}}R^{2}\right)^{\frac{1}{2}}}\right],\notag\\
+\mathrm{e}^{\beta}&=\frac{3}{2}\left(1-\dfrac{2\mathrm{G}M}{\mathrm{c}^{2}R}\right)^{\frac12}-\frac{1}{2}\left(1-\dfrac{2\mathrm{G}M}{\mathrm{c}^{2}R^{3}}r^{2}\right)^{\frac{1}{2}}.
 \end{align}
 
 有关$\alpha$的方程则要简单许多，联立 (\ref{4.2.15})(\ref{4.2.19}) 式简单得到
 \begin{equation}
-\mathrm{e}^{\alpha}=\left(1-\frac{2\mathrm{G}M}{c^{2}R^{3}}r^{2}\right)^{-\frac{1}{2}}.
+\mathrm{e}^{\alpha}=\left(1-\frac{2\mathrm{G}M}{\mathrm{c}^{2}R^{3}}r^{2}\right)^{-\frac{1}{2}}.
 \end{equation}
 
 \subsection{时空对称性和守恒量}
@@ -2079,16 +2079,16 @@ P_{\mu}\xi^{\mu}=P_{\mu}\delta{}^{\mu}_{k}=P_{k}.
 \end{equation}
 即协变动量的该分量守恒。注意不是逆变动量。作为应用可以考虑质点在史瓦西场中的运动，很明显$t,\varphi$是该度规的循环坐标，因此$P_{\mu}$的$t$和$\varphi$分量守恒：
 \begin{align}
-P_{0}&=g_{0\nu}P^{\nu}=g_{00}P^{0}=-\left(1-\frac{2\mathrm{G}M}{c^{2}r}\right)\frac{mc\mathrm{d}t}{\mathrm{d}\tau}=\text{const}.\\
+P_{0}&=g_{0\nu}P^{\nu}=g_{00}P^{0}=-\left(1-\frac{2\mathrm{G}M}{\mathrm{c}^{2}r}\right)\frac{m\mathrm{c}\mathrm{d}t}{\mathrm{d}\tau}=\text{const}.\\
 P_{3}&=g_{3\nu}P^{\nu}=g_{33}P^{3}=r^{2}\sin^{2}\theta\frac{m\mathrm{d}\varphi}{\mathrm{d}\tau}=\text{const}.
 \end{align}
 通过这点我们就能得到引力红移的结果。不仅是史瓦西引力场，对稳定的引力场只要适当选取度规就能实现$P_{0}$守恒。而静止观测者观测到的光子能量为
 \begin{equation}
-\frac{E_{\text{obs}}}{c}=P^{\mu}\left(-g_{\mu\nu}u^{\nu}\right)=-P_{\nu}u^{\nu}=-\frac{P_{0}}{\sqrt{-g_{00}}}.
+\frac{E_{\text{obs}}}{\mathrm{c}}=P^{\mu}\left(-g_{\mu\nu}u^{\nu}\right)=-P_{\nu}u^{\nu}=-\frac{P_{0}}{\sqrt{-g_{00}}}.
 \end{equation}
 可见测得光子能量只与观测者所在度规有关，而远离引力场的地方$-g_{00}$越大，因此测得的能量越低，光子波长越大，产生引力红移。容易发现在太阳表面测起来频率为$\nu_{0}$的光传播到无穷远处变为$\nu$,二者之比为
 \begin{equation}
-\frac{\nu}{\nu_{0}}=\sqrt{1-\frac{2\mathrm{G}M}{c^{2}R}}\approx1-\frac{\mathrm{G}M}{c^{2}R},
+\frac{\nu}{\nu_{0}}=\sqrt{1-\frac{2\mathrm{G}M}{\mathrm{c}^{2}R}}\approx1-\frac{\mathrm{G}M}{\mathrm{c}^{2}R},
 \end{equation}
 其中$R$是太阳半径。通常定义红移量为
 \begin{equation}
@@ -2119,26 +2119,26 @@ $\mathrm{d}t_{1}$是发出光信号的坐标时间间隔，其对应的固有时
 \end{equation}
 
 \subsection{史瓦西时空中的运动方程与守恒量}
-由于球坐标的对称性，质点只会在初速度矢量（三维）与引力中心构成的平面上（或者说一种黄道面）运动，取垂直轨道平面的方向为极轴，$\theta$始终等于$90^{\circ}$.
+由于球坐标的对称性，质点只会在初速度矢量（三维）与引力中心构成的平面上（或者说一种黄道面）运动，取垂直轨道平面的方向为极轴，$\theta$始终等于$\ang{90;;}$.
 \begin{equation}
 \theta=\frac{\pi}{2},\frac{\mathrm{d}\theta}{\mathrm{d}\tau}=0.
 \end{equation}
 根据上节分析，$P_{0},P_{3}$是守恒量，不妨采用
 \begin{align}
-E&=\left(1-\frac{2\mathrm{G}M}{c^{2}r}\right)\frac{c^{2}\mathrm{d}t}{\mathrm{d}\tau},\\
+E&=\left(1-\frac{2\mathrm{G}M}{\mathrm{c}^{2}r}\right)\frac{\mathrm{c}^{2}\mathrm{d}t}{\mathrm{d}\tau},\\
 \widetilde{L}&=r^{2}\sin^{2}\theta\frac{\mathrm{d}\varphi}{\mathrm{d}\tau}.
 \end{align}
 此外四速归一条件也提供一个方程
 \begin{equation}
--\left(1-\frac{2\mathrm{G}M}{c^{2}r}\right)\left(\frac{c\mathrm{d}t}{\mathrm{d}\tau}\right)^{2}+\left(1-\frac{2\mathrm{G}M}{c^{2}r}\right)^{-1}\left(\frac{\mathrm{d}r}{\mathrm{d}\tau}\right)^{2}+r^{2}\left(\frac{\mathrm{d}\varphi}{\mathrm{d}\tau}\right)^{2}=-c^{2}.\label{4.4.4}
+-\left(1-\frac{2\mathrm{G}M}{\mathrm{c}^{2}r}\right)\left(\frac{\mathrm{c}\mathrm{d}t}{\mathrm{d}\tau}\right)^{2}+\left(1-\frac{2\mathrm{G}M}{\mathrm{c}^{2}r}\right)^{-1}\left(\frac{\mathrm{d}r}{\mathrm{d}\tau}\right)^{2}+r^{2}\left(\frac{\mathrm{d}\varphi}{\mathrm{d}\tau}\right)^{2}=-\mathrm{c}^{2}.\label{4.4.4}
 \end{equation}
 
 \newpage
 这四个方程构成质点动力学的一组完备的微分方程。整理一下方程组可写作更简洁的形式
 \begin{align}
 \frac{\mathrm{d}\varphi}{\mathrm{d}\tau}&=\frac{\widetilde{L}}{r^{2}},\\
-\frac{c^{2}\mathrm{d}t}{\mathrm{d}\tau}&=\frac{E}{1-\dfrac{2\mathrm{G}M}{c^{2}r}},\\
-\left(\frac{\mathrm{d}r}{\mathrm{d}\tau}\right)^{2}&=\left(\frac{E}{c}\right)^{2}-\left(c^{2}-\frac{2\mathrm{G}M}{r}\right)\left(1+\frac{\widetilde{L}^{2}}{c^{2}r^{2}}\right).\label{4.4.7}
+\frac{\mathrm{c}^{2}\mathrm{d}t}{\mathrm{d}\tau}&=\frac{E}{1-\dfrac{2\mathrm{G}M}{\mathrm{c}^{2}r}},\\
+\left(\frac{\mathrm{d}r}{\mathrm{d}\tau}\right)^{2}&=\left(\frac{E}{\mathrm{c}}\right)^{2}-\left(\mathrm{c}^{2}-\frac{2\mathrm{G}M}{r}\right)\left(1+\frac{\widetilde{L}^{2}}{\mathrm{c}^{2}r^{2}}\right).\label{4.4.7}
 \end{align}
 对于光子，(\ref{4.4.4}) 式右端为零，采用的仿射参量也不能为$\tau$,但为了形式上统一，我们不妨定义
 \begin{equation}
@@ -2150,7 +2150,7 @@ E&=\left(1-\frac{2\mathrm{G}M}{c^{2}r}\right)\frac{c^{2}\mathrm{d}t}{\mathrm{d}\
 \end{equation}
 (\ref{4.4.7}) 式写作（对于质点$\lambda=\tau$）
 \begin{equation}
-\left(\frac{\mathrm{d}r}{\mathrm{d}\lambda}\right)^{2}=\left(\frac{E}{c}\right)^{2}-\left(c^{2}-\frac{2\mathrm{G}M}{r}\right)\left(\eta+\frac{\widetilde{L}^{2}}{c^{2}r^{2}}\right).
+\left(\frac{\mathrm{d}r}{\mathrm{d}\lambda}\right)^{2}=\left(\frac{E}{\mathrm{c}}\right)^{2}-\left(\mathrm{c}^{2}-\frac{2\mathrm{G}M}{r}\right)\left(\eta+\frac{\widetilde{L}^{2}}{\mathrm{c}^{2}r^{2}}\right).
 \end{equation}
 
 我们也可以从拉格朗日函数出发寻找守恒量
@@ -2165,7 +2165,7 @@ L=\frac12\left(\frac{\mathrm{d}\tau}{\mathrm{d}\lambda}\right)^{2}=-\frac12g_{\a
 
 史瓦西度规中的拉氏量为
 \begin{equation}
-L=\frac12\left[\left(1-\frac{2\mathrm{G}M}{c^{2}r}\right)c^{2}\dot{t}^{2}-\left(1-\frac{2\mathrm{G}M}{c^{2}r}\right)^{-1}\dot{r}^{2}-r^{2}\dot{\theta}^{2}-r^{2}\sin^{2}\theta\dot{\varphi}^{2}\right].
+L=\frac12\left[\left(1-\frac{2\mathrm{G}M}{\mathrm{c}^{2}r}\right)\mathrm{c}^{2}\dot{t}^{2}-\left(1-\frac{2\mathrm{G}M}{\mathrm{c}^{2}r}\right)^{-1}\dot{r}^{2}-r^{2}\dot{\theta}^{2}-r^{2}\sin^{2}\theta\dot{\varphi}^{2}\right].
 \end{equation}
 对于光子，$L=0$,对于质点，$\lambda=\tau$时$L=\dfrac12$.因此
 \begin{equation}
@@ -2173,7 +2173,7 @@ L=\frac{\eta}{2}.
 \end{equation}
 度规不是时间和转角的函数，因此存在两个守恒量
 \begin{align}
-E&=\frac{\partial{}L}{\partial{}\dot{t}}=\left(1-\frac{2\mathrm{G}M}{c^{2}r}\right)\frac{c^{2}\mathrm{d}t}{\mathrm{d}\lambda},\\
+E&=\frac{\partial{}L}{\partial{}\dot{t}}=\left(1-\frac{2\mathrm{G}M}{\mathrm{c}^{2}r}\right)\frac{\mathrm{c}^{2}\mathrm{d}t}{\mathrm{d}\lambda},\\
 \widetilde{L}&=-\frac{\partial{}L}{\partial{}\dot{\varphi}}=r^{2}\sin^{2}\theta\frac{\mathrm{d}\varphi}{\mathrm{d}\lambda}.
 \end{align}
 我们还可以得到关于$\theta$的方程：
@@ -2206,15 +2206,15 @@ P^{\hat{3}}=P_{\mu}\omega^{\hat{3}\mu}=P_{\mu}\omega^{\mu}_{\hat{3}}=\frac{m\wid
 \subsection{运动的分类}
 牛顿引力学中我们常会将角动量的作用看作一个势阱，相对论中同样可以引入相对论性的等效势：
 \begin{equation}
-U=2\Phi_{\text{eff}}\left(r\right)=\left(c^{2}-\frac{2\mathrm{G}M}{r}\right)\left(\eta+\frac{\widetilde{L}^{2}}{c^{2}r^{2}}\right),
+U=2\Phi_{\text{eff}}\left(r\right)=\left(\mathrm{c}^{2}-\frac{2\mathrm{G}M}{r}\right)\left(\eta+\frac{\widetilde{L}^{2}}{\mathrm{c}^{2}r^{2}}\right),
 \end{equation}
 径向方程写作
 \begin{equation}
-\left(\frac{\mathrm{d}r}{\mathrm{d}\tau}\right)^{2}=\left(\frac{E}{c}\right)^{2}-U.
+\left(\frac{\mathrm{d}r}{\mathrm{d}\tau}\right)^{2}=\left(\frac{E}{\mathrm{c}}\right)^{2}-U.
 \end{equation}
-等式左边正定，运动只能发生在$\left(\dfrac{E}{c}\right)^{2}>U$的地方。和牛顿等效势比起来，可以发现$U$多了一项$c^{2}$和$-\dfrac{2\mathrm{G}M\widetilde{L}^{2}}{c^{2}r^{3}}$.$c^{2}$不是实质性的，因为相对论性的能量不再是单纯的动能，无穷远处静止质点$E\to c^{2}$,减去这种静能的话和$c^{2}$“相消”。而第二项在$r$很小的时候起决定作用，根本改变了运动情况。
+等式左边正定，运动只能发生在$\left(\dfrac{E}{\mathrm{c}}\right)^{2}>U$的地方。和牛顿等效势比起来，可以发现$U$多了一项$\mathrm{c}^{2}$和$-\dfrac{2\mathrm{G}M\widetilde{L}^{2}}{\mathrm{c}^{2}r^{3}}$. $\mathrm{c}^{2}$不是实质性的，因为相对论性的能量不再是单纯的动能，无穷远处静止质点$E\to \mathrm{c}^{2}$,减去这种静能的话和$\mathrm{c}^{2}$“相消”。而第二项在$r$很小的时候起决定作用，根本改变了运动情况。
 
-这么多$c^{2}$还是太麻烦了，我们不妨采用$c=\mathrm{G}=1,\eta=1$,中心天体质量$M$也为$1$,据此先将粒子可能的运动分成三类：
+这么多$\mathrm{c}^{2}$还是太麻烦了，我们不妨采用$\mathrm{c}=\mathrm{G}=1,\eta=1$,中心天体质量$M$也为$1$,据此先将粒子可能的运动分成三类：
 
 \quad-\quad $E^{2}<1,$束缚态；
 
@@ -2265,28 +2265,28 @@ U=1-\frac{2}{r}+\frac{\widetilde{L}^{2}}{r^{2}}-\frac{2\widetilde{L}^{2}}{r^{3}}
 
 在$r$较小的地方，$\widetilde{L}>4$的时候有一峰值大于 1 的势垒，在$r$较大的地方有一势阱（图\ref{等效势阱。}并未绘制出，但随着$r$的增大，$U$会回升至趋向于 1 的情形），此时三类运动都是可能发生的。随着$\widetilde{L}$减小，势垒也在下降，$\widetilde{L}\le4$时，势垒降到$1$以下，散射态消失了。$\widetilde{L}<2\sqrt{3}$时，势垒也消失了，此时也没有势阱的概念了，粒子有很大可能向引力源坠落。实际上，牛顿引力论可以实现半径任意小的圆轨道，但是根据相对论的等效势不可能实现。对于
 \begin{equation}
-\Phi_{\text{eff}}(r)=\frac{\widetilde{L}^{2}}{2r^{2}}-\frac{\mathrm{G}M\widetilde{L}^{2}}{c^{2}r^{3}}-\frac{\mathrm{G}M}{r}+\frac12c^{2},
+\Phi_{\text{eff}}(r)=\frac{\widetilde{L}^{2}}{2r^{2}}-\frac{\mathrm{G}M\widetilde{L}^{2}}{\mathrm{c}^{2}r^{3}}-\frac{\mathrm{G}M}{r}+\frac12\mathrm{c}^{2},
 \end{equation}
 对$r$求导发现
 \begin{equation}
-\frac{\mathrm{d}\Phi_{\text{eff}}}{\mathrm{d}r}=\frac{\widetilde{L}^{2}}{r^{4}}(\frac{3\mathrm{G}M}{c^{2}}-r)+\frac{\mathrm{G}M}{r^{2}}.
+\frac{\mathrm{d}\Phi_{\text{eff}}}{\mathrm{d}r}=\frac{\widetilde{L}^{2}}{r^{4}}(\frac{3\mathrm{G}M}{\mathrm{c}^{2}}-r)+\frac{\mathrm{G}M}{r^{2}}.
 \end{equation}
-可见对于$r<3\mathrm{G}M_{\text{BH}}/c^{2},\dfrac{\mathrm{d}\Phi_{\text{eff}}}{\mathrm{d}r}>0$,无法实现圆轨道。
+可见对于$r<3\mathrm{G}M_{\text{BH}}/\mathrm{c}^{2},\dfrac{\mathrm{d}\Phi_{\text{eff}}}{\mathrm{d}r}>0$,无法实现圆轨道。
 
 要实现稳定轨道，首先要求一阶导为零有解
 \begin{align}
-r^{4}\frac{\mathrm{d}\Phi_{\text{eff}}}{\mathrm{d}r}&=\frac{3\widetilde{L}^{2}\mathrm{G}M}{c^{2}}-\widetilde{L}^{2}r+\mathrm{G}Mr^{2}=0,\\
-\Delta{}&=\widetilde{L}^{4}-12\frac{\mathrm{G}^{2}M^{2}}{c^{2}}\widetilde{L}^{2}>0,\\
-\widetilde{L}&>\frac{2\sqrt{3}\mathrm{G}M}{c}.
+r^{4}\frac{\mathrm{d}\Phi_{\text{eff}}}{\mathrm{d}r}&=\frac{3\widetilde{L}^{2}\mathrm{G}M}{\mathrm{c}^{2}}-\widetilde{L}^{2}r+\mathrm{G}Mr^{2}=0,\\
+\Delta{}&=\widetilde{L}^{4}-12\frac{\mathrm{G}^{2}M^{2}}{\mathrm{c}^{2}}\widetilde{L}^{2}>0,\\
+\widetilde{L}&>\frac{2\sqrt{3}\mathrm{G}M}{\mathrm{c}}.
 \end{align}
 这也是前文$2\sqrt{3}$的来源。进一步要求二阶导大于零，
 \begin{align}
-r^{5}\frac{\mathrm{d}^{2}\Phi_{\text{eff}}}{\mathrm{d}r^{2}}&=-\frac{12\widetilde{L}^{2}\mathrm{G}M}{c^{2}}+3\widetilde{L}^{2}r-2\mathrm{G}Mr^{2}>0.\tag{5}\\
-r&=\frac{-3\widetilde{L}^{2}\pm\sqrt{(9\widetilde{L}^{4}-96\widetilde{L}^{2}\mathrm{G}^{2}M^{2}/c^{2})}}{-4\mathrm{G}M},\notag\\
-\widetilde{L}&>\frac{2\sqrt3\mathrm{G}M}{c},\notag\\
-r_{\min}&=\frac{6\mathrm{G}M}{c^{2}},r_{\max}=\frac{12\mathrm{G}M}{c^{2}}.\tag{6}
+r^{5}\frac{\mathrm{d}^{2}\Phi_{\text{eff}}}{\mathrm{d}r^{2}}&=-\frac{12\widetilde{L}^{2}\mathrm{G}M}{\mathrm{c}^{2}}+3\widetilde{L}^{2}r-2\mathrm{G}Mr^{2}>0.\tag{5}\\
+r&=\frac{-3\widetilde{L}^{2}\pm\sqrt{(9\widetilde{L}^{4}-96\widetilde{L}^{2}\mathrm{G}^{2}M^{2}/\mathrm{c}^{2})}}{-4\mathrm{G}M},\notag\\
+\widetilde{L}&>\frac{2\sqrt3\mathrm{G}M}{\mathrm{c}},\notag\\
+r_{\min}&=\frac{6\mathrm{G}M}{\mathrm{c}^{2}},r_{\max}=\frac{12\mathrm{G}M}{\mathrm{c}^{2}}.\tag{6}
 \end{align}
-因此最小可实现的圆轨道为$\dfrac{6\mathrm{G}M}{c^{2}}$.
+因此最小可实现的圆轨道为$\dfrac{6\mathrm{G}M}{\mathrm{c}^{2}}$.
 
 \subsection{行星的轨道}
 理论力学中，行星运动有关的第一积分是
@@ -2361,9 +2361,9 @@ T=\frac{2\pi}{1-3\left(\dfrac{M}{\widetilde{L}}\right)^{2}},
 \end{equation}
 才能回到近日点。相邻两个近日点的方位角之差是
 \begin{equation}
-\Delta{}\varphi=6\pi\left(\frac{M}{\widetilde{L}}\right)^{2}=6\pi\left(\frac{\mathrm{G}M}{c\widetilde{L}}\right)^{2}.
+\Delta{}\varphi=6\pi\left(\frac{M}{\widetilde{L}}\right)^{2}=6\pi\left(\frac{\mathrm{G}M}{\mathrm{c}\widetilde{L}}\right)^{2}.
 \end{equation}
-对于水星，每运动一周，$\Delta{}\varphi=0.1^{\prime\prime}$,累积一世纪积累的进动角是$43^{\prime\prime}$,与观测数据达成了惊人的一致。
+对于水星，每运动一周，$\Delta{}\varphi=\ang{;;0.1}$,累积一世纪积累的进动角是$\ang{;;43}$,与观测数据达成了惊人的一致。
 
 \subsection{光线偏折}
 类似行星轨道，可以给出光线运动方程（此时采用其他的仿射参量，且$\eta=0$）
@@ -2376,9 +2376,9 @@ T=\frac{2\pi}{1-3\left(\dfrac{M}{\widetilde{L}}\right)^{2}},
 \begin{equation}
 \frac{\mathrm{d}^{2}u}{\mathrm{d}\varphi^{2}}+u=3u^{2},
 \end{equation}
-其中$u=\dfrac{\mathrm{G}M}{c^{2}r}=\dfrac{\mathrm{G}M}{c^{2}}\widetilde{u}$,方程改写成
+其中$u=\dfrac{\mathrm{G}M}{\mathrm{c}^{2}r}=\dfrac{\mathrm{G}M}{\mathrm{c}^{2}}\widetilde{u}$,方程改写成
 \begin{equation}
-\frac{\mathrm{d}^{2}\widetilde{u}}{\mathrm{d}\varphi^{2}}+\widetilde{u}=\frac{3\mathrm{G}M}{c^{2}}\widetilde{u}^{2}.
+\frac{\mathrm{d}^{2}\widetilde{u}}{\mathrm{d}\varphi^{2}}+\widetilde{u}=\frac{3\mathrm{G}M}{\mathrm{c}^{2}}\widetilde{u}^{2}.
 \end{equation}
 可以使用逐次逼近法求解。首先考虑
 \begin{equation}
@@ -2390,23 +2390,23 @@ T=\frac{2\pi}{1-3\left(\dfrac{M}{\widetilde{L}}\right)^{2}},
 \end{equation}
 其中$R$是光线到恒星中心的最短距离。上式是一条通过“黄道面”的直线。零级近似代入原方程可求一级近似解
 \begin{equation}
-\frac{\mathrm{d}^{2}\widetilde{u}_{1}}{\mathrm{d}\varphi^{2}}+\widetilde{u}_{1}=\frac{3\mathrm{G}M}{c^{2}R^{2}}\cos^{2}\varphi.
+\frac{\mathrm{d}^{2}\widetilde{u}_{1}}{\mathrm{d}\varphi^{2}}+\widetilde{u}_{1}=\frac{3\mathrm{G}M}{\mathrm{c}^{2}R^{2}}\cos^{2}\varphi.
 \end{equation}
 猜测解形式为$\widetilde{u}_{1}=B\sin^{2}\varphi+B'$,可以定出系数具体值，得到特解：
 \begin{equation}
-\widetilde{u}_{1}=\frac{\mathrm{G}M}{c^{2}R^{2}}\left(1+\sin^{2}\varphi\right).
+\widetilde{u}_{1}=\frac{\mathrm{G}M}{\mathrm{c}^{2}R^{2}}\left(1+\sin^{2}\varphi\right).
 \end{equation}
 因此光线轨道可以写作
 \begin{equation}
-\widetilde{u}=\widetilde{u}_{0}+\widetilde{u}_{1}=R^{-1}\cos\varphi+\frac{\mathrm{G}M}{c^{2}R^{2}}\left(1+\sin^{2}\varphi\right).
+\widetilde{u}=\widetilde{u}_{0}+\widetilde{u}_{1}=R^{-1}\cos\varphi+\frac{\mathrm{G}M}{\mathrm{c}^{2}R^{2}}\left(1+\sin^{2}\varphi\right).
 \end{equation}
 无穷远处 ($\widetilde{u}_{0}=0$) 直线解方位角为$\varphi=\pm\dfrac{\pi}{2}$,一级解可看作添加一个小量$a$,泰勒展开得到无穷远处
 \begin{align}
-0&=-R^{-1}\sin\alpha+\frac{\mathrm{G}M}{c^{2}R^{2}}\left(1+\cos^{2}\alpha\right).\\
-a&=\frac{2\mathrm{G}M}{c^{2}R}.\\
-\Delta{}\theta&=2a=\frac{4\mathrm{G}M}{c^{2}R}.
+0&=-R^{-1}\sin\alpha+\frac{\mathrm{G}M}{\mathrm{c}^{2}R^{2}}\left(1+\cos^{2}\alpha\right).\\
+a&=\frac{2\mathrm{G}M}{\mathrm{c}^{2}R}.\\
+\Delta{}\theta&=2a=\frac{4\mathrm{G}M}{\mathrm{c}^{2}R}.
 \end{align}
-太阳附近数据为$\Delta{}\theta=1.75^{\prime\prime}$,已被日全食时拍摄的星空照片证实。
+太阳附近数据为$\Delta{}\theta=\ang{;;1.75}$,已被日全食时拍摄的星空照片证实。
 
 \printbibliography
 

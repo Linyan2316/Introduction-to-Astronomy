@@ -6,13 +6,13 @@
 
 \subsection{一点光度学、星等系统和测光系统}
 \subsubsection{星等}
-早在茹毛饮血的年代，人类就已经在用肉眼比较恒星的亮度了。很明显，亮度与两个因素有关，一个是恒星的固有辐射功率，我们称其为光度$L$,另一个是恒星到我们的距离$d$.观测表明恒星的连续辐射近似为黑体辐射，而黑体辐射满足$L=4\pi R^{2}\sigma_{\mathrm{SB}}T^{4}$,于是可借此定义恒星的有效温度：光度$L$,半径$R$的恒星，其有效温度$T_{\mathrm{eff}}$为具有相同光度相同半径的黑体的温度$T$.恒星光度即为
+早在茹毛饮血的年代，人类就已经在用肉眼比较恒星的亮度了。很明显，亮度与两个因素有关，一个是恒星的固有辐射功率，我们称其为光度$L$,另一个是恒星到我们的距离$d$.观测表明恒星的连续辐射近似为黑体辐射，而黑体辐射满足$L=4\pi R^{2}\sigma_{\text{SB}}T^{4}$,于是可借此定义恒星的有效温度：光度$L$,半径$R$的恒星，其有效温度$T_{\text{eff}}$为具有相同光度相同半径的黑体的温度$T$.恒星光度即为
 \begin{equation}
-L=4\pi R^{2}\sigma_{\mathrm{SB}}T_{\text{eff}}^{4}.
+L=4\pi R^{2}\sigma_{\text{SB}}T_{\text{eff}}^{4}.
 \end{equation}
 其中$\sigma_{\text{SB}}$是斯特藩{}-{}玻尔兹曼常数。
 
-有效温度一般接近恒星光球层温度的平均值。如太阳光度为$L_{\odot}=3.86\times10^{33}\,\mathrm{erg\cdot s^{-1}},1\,\mathrm{erg}=10^{-7}\,\mathrm{J}$,有效温度约$5780\,\mathrm{K}$.一般恒星光度$\sim10^{-4}\text{\textendash}10^{6}L_{\odot}$.
+有效温度一般接近恒星光球层温度的平均值。如太阳光度为$L_{\odot}=\qty{3.86e33}{erg\cdot{}s^{-1}},\qty{1}{erg}=10^{-7}\,\unit{J}$,有效温度约$\qty{5780}{K}$.一般恒星光度$\sim10^{-4}\text{\textendash}10^{6}\,\unit{L_{\odot}}$.
 
 如果假设恒星辐射是各向同性的，那么地球上单位时间单位面积接收到的能量应该为
 \begin{equation}
@@ -28,7 +28,7 @@ m_{1}-m_{2}=-2.5\log_{10}\left(\frac{F_{1}}{F_{2}}\right).\label{1.1.2}
 \end{equation}
 即 1 等星比 6 等星亮了 100 倍。星等越低，亮度越高。
 
-视星等衡量了天体的亮度，但是亮度与距离有关，而我们更关心天体的固有发光能力，为此需要定义一种能够衡量光度的星等：绝对星等。它的定义为将天体放到距我们$10\,\mathrm{pc}$远处观测到的视星等，这样就去除了距离因素。习惯上用$M$表示绝对星等。注意，此时我们尚未确定星等系统零点，星等和光度尚不能建立完整的函数关系，只能在比较两颗恒星亮度或光度时使用。
+视星等衡量了天体的亮度，但是亮度与距离有关，而我们更关心天体的固有发光能力，为此需要定义一种能够衡量光度的星等：绝对星等。它的定义为将天体放到距我们$\qty{10}{pc}$远处观测到的视星等，这样就去除了距离因素。习惯上用$M$表示绝对星等。注意，此时我们尚未确定星等系统零点，星等和光度尚不能建立完整的函数关系，只能在比较两颗恒星亮度或光度时使用。
 
 \subsubsection{辐射强度和辐射转移方程}
 从绝对星等的引入我们看出，亮度作为实际的可观测量，并不足以直接体现天体的固有性质。另一方面，各向同性的情形并没有那么常见，我们希望找到一种物理量，让亮度成为该物理量的积分。为此我们定义辐射强度 (Specific Intensity)$I_{\nu}$,定义为一束通过面元$\mathrm{d}A$、传播方向与面元法向呈$\theta$角的，频率为$\nu$的光线，单位时间单位频率间隔单位立体角内所传播的能量：
@@ -44,7 +44,7 @@ m_{1}-m_{2}=-2.5\log_{10}\left(\frac{F_{1}}{F_{2}}\right).\label{1.1.2}
 \mathrm{d}\Omega&=\frac{\mathrm{d}A}{r^{2}}=\sin\theta\mathrm{d}\theta\mathrm{d}\varphi,\\
 \Omega&=\int\mathrm{d}\Omega=\int_{0}^{2\pi}\mathrm{d}\varphi\int_{0}^{\pi}\sin\theta\mathrm{d}\theta=4\pi.
 \end{align}
-即整个球面的立体角为$4\pi$,考虑到弧度制与角度制的转换$180^{\circ}=\pi$,全天立体角大约为$4\pi\times\left(\dfrac{180^{\circ}}{\pi}\right)^{2}\approx41252.96$平方度。目前最强的望远镜分辨率可以达到毫角秒$(\mathrm{mas})$甚至微角秒$(\mathrm{\mu as})$,可见我们能分辨出的恒星确实是一个天文数字！
+即整个球面的立体角为$4\pi$,考虑到弧度制与角度制的转换$180^{\circ}=\pi$,全天立体角大约为$4\pi\times\left(\dfrac{180^{\circ}}{\pi}\right)^{2}\approx41252.96$平方度。目前最强的望远镜分辨率可以达到毫角秒$(\unit{mas})$甚至微角秒$(\unit{\mu as})$,可见我们能分辨出的恒星确实是一个天文数字！
 
 \begin{figure}[!htp]
 \centering
@@ -140,7 +140,7 @@ I_{\nu\text{obs}}&=I_{\nu0}\mathrm{e}^{-\tau_{\nu}}+S_{\nu}\int^{\tau_{\nu}}_{0}
 习惯上称$\tau_{\nu}\gg1$时为光学厚，$\tau_{\nu}\ll1$时为光学薄。根据上式可知，介质光学厚时所观测到的辐射强度就是介质的源函数。此外我们将在后续说明，源函数往往与介质的温度有关。而介质光学薄时所观测到的辐射强度为$I_{\nu0}+S_{_{\nu}}\tau_{\nu}$,因此如果我们先前就对背景辐射有较为明确的了解，可借此研究介质的光深，而$\mathrm{d}\tau_{\nu}=\alpha_{\nu}\mathrm{d}l=n\sigma\mathrm{d}l$,进一步可了解介质的密度。
 
 \subsubsection{测光系统和星等系统}
-前文提到立体角的引入与面元有关。辐射强度的定义用到面元的优点是，很容易建立辐射强度与亮度的关系，这也是我们最初的目的之一。只要对立体角做积分（要对整个$4\pi$积分，因为面元可以通过来自四面八方的辐射）就能得到自面元两侧方向穿过面元的能量的差额（如向左$10\,\mathrm{J}$向右$20\,\mathrm{J}$合计向右$10\,\mathrm{J}$）：
+前文提到立体角的引入与面元有关。辐射强度的定义用到面元的优点是，很容易建立辐射强度与亮度的关系，这也是我们最初的目的之一。只要对立体角做积分（要对整个$4\pi$积分，因为面元可以通过来自四面八方的辐射）就能得到自面元两侧方向穿过面元的能量的差额（如向左$\qty{10}{J}$向右$\qty{20}{J}$合计向右$\qty{10}{J}$）：
 \begin{equation}
 E_{\nu}=\int_{\Omega}I_{\nu}\cos\theta\mathrm{d}A\mathrm{d}t\mathrm{d}\nu\mathrm{d}\Omega,
 \end{equation}
@@ -163,15 +163,15 @@ m_{\nu}'=m_{\nu}+A_{\nu}=m_{\nu}-2.5\log_{10}\left(\mathrm{e}^{-\tau_{\nu}}\righ
 
 前文已经提到过恒星的辐射可以近似地用黑体辐射来表示，即
 \begin{equation}
-I_{\nu}=B_{\nu}\left(T\right)=\frac{2h\nu^{3}}{c^{2}}\frac{1}{\mathrm{e}^{\frac{h\nu}{k_{\text{B}}T}}-1},
+I_{\nu}=B_{\nu}\left(T\right)=\frac{2h\nu^{3}}{\mathrm{c}^{2}}\frac{1}{\mathrm{e}^{\frac{h\nu}{k_{\text{B}}T}}-1},
 \end{equation}
 可见随着温度变化，辐射强度随频率的分布也会发生变化。一方面会体现在色指数上。温度较高，辐射会集中在频率较高的地方，色指数就较低。有各种经验公式
 \begin{equation}
-T=\frac{7300\,\mathrm{K}}{\mathrm{B-V}+0.6},T=\frac{7090\,\mathrm{K}}{\mathrm{B-V}+0.71},T=\frac{8450\,\mathrm{K}}{\mathrm{B-V}+0.865},
+T=\frac{\qty{7300}{K}}{\mathrm{B-V}+0.6},T=\frac{\qty{7090}{K}}{\mathrm{B-V}+0.71},T=\frac{\qty{8450}{K}}{\mathrm{B-V}+0.865},
 \end{equation}
 其中 B, V 指代 B 波段和 V 波段测得的星等，一些常见波段如表\ref{常用滤光片波段。}所示。另一方面则会体现在峰值频率的移动，通过对以波长（而非频率）和温度为自变量的黑体辐射公式求导容易得出
 \begin{equation}
-\lambda_{\max}T=2.9\times10^{6}\,\mathrm{nm\cdot K},
+\lambda_{\max}T=\qty{2.9e6}{nm\cdot K},
 \end{equation}
 这被称作维恩位移定律，是温度和辐射峰值波长所满足的关系。具体可见图\ref{黑体辐射峰值随温度的变化。}所示。
 
@@ -200,7 +200,7 @@ $\Delta{}\lambda\left(\si{\angstrom}\right)$ & 680 & 980 & 890 & 2200 & 2400 & 3
 
 此处可能有读者会疑惑为什么不用$L=4\pi R^{2}\sigma_{\text{SB}}T^{4}$求温度，因为恒星离我们过于遥远，很难通过观测分辨其大小，即使能做到也很浪费观测资源，应该要反过来用这个公式求半径才对。
 
-我们注意到表\ref{常用滤光片波段。}中有一栏为$\Delta{}\lambda$,这个量又是如何定义的？首先对于滤光片，我们用带通 (Bandpass) 表征波长$\lambda$处透过光的比例，取值范围$0\le T_{\text{BP}}(\lambda)\le 1$,光可以完全透过滤光片时$T_{\text{BP}}$取 1. $\Delta\lambda$为滤光片带宽，是$T_{\text{BP}}=0.5$所对应的两个波长的差值。习惯上用宽带 ($\Delta\lambda>30\,\mathrm{nm}$) 滤光片进行暗弱天体测光，或者粗略测量辐射的频率分布（连续谱），用窄带 ($\Delta\lambda<10\,\mathrm{nm}$) 滤光片测量吸收和发射谱线轮廓，中带滤光片带宽则介于二者之间。
+我们注意到表\ref{常用滤光片波段。}中有一栏为$\Delta{}\lambda$,这个量又是如何定义的？首先对于滤光片，我们用带通 (Bandpass) 表征波长$\lambda$处透过光的比例，取值范围$0\le T_{\text{BP}}(\lambda)\le 1$,光可以完全透过滤光片时$T_{\text{BP}}$取 1. $\Delta\lambda$为滤光片带宽，是$T_{\text{BP}}=0.5$所对应的两个波长的差值。习惯上用宽带 ($\Delta\lambda>\qty{30}{nm}$) 滤光片进行暗弱天体测光，或者粗略测量辐射的频率分布（连续谱），用窄带 ($\Delta\lambda<\qty{10}{nm}$) 滤光片测量吸收和发射谱线轮廓，中带滤光片带宽则介于二者之间。
 
 采用不同的滤光片组合我们可以得到不同的测光系统。所谓测光，就是用辐射探测器配合望远镜测定天体的亮度。常用的有 UBVRI（紫外、蓝、可见、红、红外）五色测光系统，$m_{\text{pg}},m_{\text{pv}}$二色测光系统，uvby 四色测光系统等。我们简单介绍一下后面两者吧。在各种光电器件（使用光电效应测光的器件）还没发明的时候，人类使用照相底片拍摄天区，于是有了照相星等$m_{\text{pg}}$；另一方面则使用正色片前加黄滤光片测光得到仿视星等$m_{\text{pv}}$（类似目视星等），如此以来便得到最初的色指数。uvby 四色系统波段则如表\ref{uvby 四色测光滤光片波段。}所示。我们发现 uvby 的带宽较 UVBRI 测光系统更窄一点，主要用来测吸收线。uvby 主要使用三个参数进行分析。首先$\text{b}-\text{y}$与$\text{B}-\text{V}$相当，只与恒星温度有关。接着是$C_{1}=\left(\text{u}-\text{v}\right)-\left(\text{v}-\text{b}\right)$,与 Balmer Break（我们后续会解释这是什么）有关。最后是$m_{1}=\left(\text{v}-\text{b}\right)-\left(\text{b}-\text{y}\right)$,与恒星金属丰度有关。
 
@@ -223,35 +223,35 @@ $\Delta{}\lambda\left(\si{\angstrom}\right)$ & 300 & 190 & 180 & 230\\
 
 - Vega Magnitude System: 织女星在所有滤光片中的视星等（注意，不是绝对星等）为 0.织女星不同波段的亮度肯定是不同的，因此不同波段相同星等所对应的亮度也是不同的。如果一颗恒星 V 波段星等是$5.4$等，B 波段星等是$4.2$,并不一定意味着 B 波段流量更高。
 
-- AB Magnitude System: 早期用 Vega 星等是因为观测中用标准星定标比较方便和准确，但后来观测精度提高，织女星流量测得更加准确，零点就发生了漂移。同时观测波段也有拓展，紫外红外波段没有合适的标准星，于是不如将各个波段所使用的流量零点统一，取流量零点为常数$\langle F_{\text{V},m=0}\rangle=3631\times10^{-23}\,\mathrm{erg\cdot s^{-1}\cdot cm^{-2}\cdot Hz^{-1}}$.这个值的来源是织女星在 V 波段的流量。注意，$\langle{}F_{\text{V},m=0}\rangle$量纲最后一项是$\mathrm{Hz}^{-1}$,我们认为单位频率间隔和单位波长间隔满足
+- AB Magnitude System: 早期用 Vega 星等是因为观测中用标准星定标比较方便和准确，但后来观测精度提高，织女星流量测得更加准确，零点就发生了漂移。同时观测波段也有拓展，紫外红外波段没有合适的标准星，于是不如将各个波段所使用的流量零点统一，取流量零点为常数$\langle F_{\text{V},m=0}\rangle=\qty{3631e-23}{erg\cdot{}s^{-1}\cdot cm^{-2}\cdot Hz^{-1}}$.这个值的来源是织女星在 V 波段的流量。注意，$\langle{}F_{\text{V},m=0}\rangle$量纲最后一项是$\unit{Hz^{-1}}$,我们认为单位频率间隔和单位波长间隔满足
 \begin{align}
-\nu&=\frac{c}{\lambda},\\
-\mathrm{d}\nu&=-\frac{c}{\lambda^{2}}\mathrm{d}\lambda,
+\nu&=\frac{\mathrm{c}}{\lambda},\\
+\mathrm{d}\nu&=-\frac{\mathrm{c}}{\lambda^{2}}\mathrm{d}\lambda,
 \end{align}
 因此如果用波长为单位来描述流量零点，
 \begin{align}
-F_{\lambda}=F_{\nu}\left\vert{}\frac{\mathrm{d}\nu}{\mathrm{d}\lambda}\right\vert{}=\frac{c}{\lambda^{2}}F_{\nu},
+F_{\lambda}=F_{\nu}\left\vert{}\frac{\mathrm{d}\nu}{\mathrm{d}\lambda}\right\vert{}=\frac{\mathrm{c}}{\lambda^{2}}F_{\nu},
 \end{align}
 零点并不是一个常数，会随波长变化而变化。前文维恩位移定律强调对波长求导也是出于这个原因。如果有心计算，会发现相同温度下，黑体辐射峰值波长和峰值频率相乘并不等于光速，原因就在于$\mathrm{d}\nu$和$\mathrm{d}\lambda$的划分并非线性对应，能量在$\mathrm{d}\nu$和$\mathrm{d}\lambda$中的分配是不一样的。
 
 而 AB 星等则定义为
 \begin{align}
-m_{\mathrm{BP}}&=-2.5\log_{10}(\frac{\langle F_{\mathrm{BP}}\rangle}{\langle F_{\text{V},m=0}\rangle}),\\
-\langle F_{\mathrm{BP}}\rangle&=\frac{\int T_{\mathrm{BP}}(\lambda)F_{\text{obj}}(\lambda)\mathrm{d}\lambda}{\int T_{\mathrm{BP}}(\lambda)\mathrm{d}\lambda}.
+m_{\text{BP}}&=-2.5\log_{10}(\frac{\langle F_{\text{BP}}\rangle}{\langle F_{\text{V},m=0}\rangle}),\\
+\langle F_{\text{BP}}\rangle&=\frac{\int T_{\text{BP}}(\lambda)F_{\text{obj}}(\lambda)\mathrm{d}\lambda}{\int T_{\text{BP}}(\lambda)\mathrm{d}\lambda}.
 \end{align}
 
-滤光片测得的光度（去除距离因素后）都是某一波段内的光度，如果对全波段积分就得到了天体的总光度（或称热光度）。前文给出的$L_{\odot}$就是太阳的总光度。总光度对应的星等被称作热星等。热星等自然也是一种绝对星等。按照定义，总光度观测要求得到天体在整个电磁波段的辐射，但实际观测中，大气吸收使我们在地面上只能观测到光学、近红外、射电波段的信号，同时强度也有所减弱，全波段测量困难。因此没法通过观测确定天体的热星等。常见方法是在$M_{\text{V}}$加上一个改正值（热改正）得到“真实”的热星等。热星等也需要流量零点，定标方法为将太阳热星等定作$M_{\mathrm{bol},\odot}=4.76$,对应的热改正$\mathrm{BC}_{\odot}=M_{\mathrm{V},\odot}-M_{\mathrm{bol},\odot}=0.07$.一般来讲较热和较冷的恒星热改正大（辐射集中在 V 波段两侧），中间区间的恒星热改正小（辐射本就集中在 V 波段）。
+滤光片测得的光度（去除距离因素后）都是某一波段内的光度，如果对全波段积分就得到了天体的总光度（或称热光度）。前文给出的$L_{\odot}$就是太阳的总光度。总光度对应的星等被称作热星等。热星等自然也是一种绝对星等。按照定义，总光度观测要求得到天体在整个电磁波段的辐射，但实际观测中，大气吸收使我们在地面上只能观测到光学、近红外、射电波段的信号，同时强度也有所减弱，全波段测量困难。因此没法通过观测确定天体的热星等。常见方法是在$M_{\text{V}}$加上一个改正值（热改正）得到“真实”的热星等。热星等也需要流量零点，定标方法为将太阳热星等定作$M_{\text{bol},\odot}=4.76$,对应的热改正$\text{BC}_{\odot}=M_{\text{V},\odot}-M_{\text{bol},\odot}=0.07$.一般来讲较热和较冷的恒星热改正大（辐射集中在 V 波段两侧），中间区间的恒星热改正小（辐射本就集中在 V 波段）。
 
 \subsubsection{描述辐射场的其他物理量}
 本小节我们将通过辐射强度构建一些描述辐射场的物理量。
 
-首先我们介绍一种辐射强度的等价描述方法。我们已经知道辐射强度是用通过面元的能量来定义的，实际上这种能量也可以用通过面元的光子来描述。定义辐射场单位体积中光子数为$f_{R}\left(\vec{r},\vec{m},\nu,t\right)$,单位时间内通过面元的体积为$\mathrm{d}A\cos\theta c\mathrm{d}t$,光子所携带的能量为
+首先我们介绍一种辐射强度的等价描述方法。我们已经知道辐射强度是用通过面元的能量来定义的，实际上这种能量也可以用通过面元的光子来描述。定义辐射场单位体积中光子数为$f_{R}\left(\vec{r},\vec{m},\nu,t\right)$,单位时间内通过面元的体积为$\mathrm{d}A\cos\theta\mathrm{c}\mathrm{d}t$,光子所携带的能量为
 \begin{equation}
-\mathrm{d}E_{\nu}=h\nu\cdot f_{R}\left(\vec{r},\vec{m},\nu,t\right)\left(\mathrm{d}A\cos\theta\mathrm{d}\Omega\mathrm{d}\nu c\mathrm{d}t\right),
+\mathrm{d}E_{\nu}=h\nu\cdot f_{R}\left(\vec{r},\vec{m},\nu,t\right)\left(\mathrm{d}A\cos\theta\mathrm{d}\Omega\mathrm{d}\nu\mathrm{c}\mathrm{d}t\right),
 \end{equation}
 对照得到
 \begin{equation}
-I_{\nu}\left(\vec{r},\vec{m},t\right)=ch\nu f_{R}\left(\vec{r},\vec{m},\nu,t\right).
+I_{\nu}\left(\vec{r},\vec{m},t\right)=\mathrm{c}h\nu f_{R}\left(\vec{r},\vec{m},\nu,t\right).
 \end{equation}
 其中$\vec{r}$是面元坐标，$\vec{m}$是光线传播方向。
 
@@ -270,73 +270,73 @@ F_{\nu}=\vec{\mathcal{F}_{\nu}}\cdot\vec{n}.
 \end{equation}
 其中$\vec{n}$是面元法向。
 
-辐射穿过单位体积元所用的时间为$\mathrm{d}t=\dfrac{\mathrm{d}l\sec\theta}{c}$,该单位时间中还保留着能量
+辐射穿过单位体积元所用的时间为$\mathrm{d}t=\dfrac{\mathrm{d}l\sec\theta}{\mathrm{c}}$,该单位时间中还保留着能量
 \begin{align}
 \mathrm{d}E_{\nu}&=I_\nu\left(\vec{r},\vec{m},t\right)\mathrm{d}A\cos\theta\mathrm{d}\Omega\mathrm{d}\nu\mathrm{d}t\notag\\
-&=\frac{1}{c}I_\nu\left(\vec{r},\vec{m},t\right)\mathrm{d}V\mathrm{d}\Omega\mathrm{d}\nu.
+&=\frac{1}{\mathrm{c}}I_\nu\left(\vec{r},\vec{m},t\right)\mathrm{d}V\mathrm{d}\Omega\mathrm{d}\nu.
 \end{align}
 总计所有方向积分就得到体元从各个方向得到的能量。定义辐射密度
 \begin{equation}
-U_{\nu}=\frac1c\int_{4\pi}I_{\nu}\mathrm{d}\Omega=\frac{4\pi}{c}J_{\nu},
+U_{\nu}=\frac1c\int_{4\pi}I_{\nu}\mathrm{d}\Omega=\frac{4\pi}{\mathrm{c}}J_{\nu},
 \end{equation}
 表示通过辐射场内某处单位体积单位频率间隔的辐射能。
 
 有能量自然要考虑动量。单位辐射能光子携带动量的法向分量为
 \begin{equation}
-\mathrm{d}p_{n}=\frac{\mathrm{d}E_{\nu}}{c}\cos\theta=\frac{1}{c}I_{\nu}\cos^{2}\theta\mathrm{d}\Omega\mathrm{d}\nu\mathrm{d}A\mathrm{d}t.
+\mathrm{d}p_{n}=\frac{\mathrm{d}E_{\nu}}{\mathrm{c}}\cos\theta=\frac{1}{\mathrm{c}}I_{\nu}\cos^{2}\theta\mathrm{d}\Omega\mathrm{d}\nu\mathrm{d}A\mathrm{d}t.
 \end{equation}
 进而可以根据单位面积单位频率间隔面元受力定义辐射压力
 \begin{equation}
-P_{R,\nu}=\frac1c\int_{4\pi}I_{\nu}\cos^{2}\theta\mathrm{d}\Omega,
+P_{R,\nu}=\frac{1}{\mathrm{c}}\int_{4\pi}I_{\nu}\cos^{2}\theta\mathrm{d}\Omega,
 \end{equation}
 即单位频率间隔施加于面元的压强。它本质是个二阶对称张量
 \begin{align}
-\overset{\rightharpoonup\!\!\!\rightharpoonup}{P}_{R,\nu}\left(\vec{r},t\right)&=\frac{1}{c}\int_{4\pi}I_\nu\left(\vec{r},\vec{m},t\right)\vec{m}\vec{m}\mathrm{d}\Omega,\\
+\overset{\rightharpoonup\!\!\!\rightharpoonup}{P}_{R,\nu}\left(\vec{r},t\right)&=\frac{1}{\mathrm{c}}\int_{4\pi}I_\nu\left(\vec{r},\vec{m},t\right)\vec{m}\vec{m}\mathrm{d}\Omega,\\
 P&=\left[\overset{\rightharpoonup\!\!\!\rightharpoonup}P\cdot\vec n\right]\cdot\vec n.
 \end{align}
 分量形式
 \begin{equation}
-\overset{\rightharpoonup\!\!\!\rightharpoonup}P_{ij}=\frac{1}{c}\int_{4\pi}I_{\nu}m_{i}m_{j}\mathrm{d}\Omega,
+\overset{\rightharpoonup\!\!\!\rightharpoonup}P_{ij}=\frac{1}{\mathrm{c}}\int_{4\pi}I_{\nu}m_{i}m_{j}\mathrm{d}\Omega,
 \end{equation}
 
 但更多时候我们并不关心压力的压强效果，而是关心压力所带来的加速度，因此有必要考虑介质的质量，为此先通过吸收系数定义质量吸收系数（或称不透明系数）
 \begin{equation}
 \kappa_\nu=\frac{\alpha_\nu}\rho=\frac{n\sigma_{\nu}}{\rho}=\frac{\sigma_\nu}{m}.
 \end{equation}
-介质吸收某一辐射$I_{\nu}\left(\vec{m}\right)$在$\vec n$方向得到的动量为$\dfrac{1}{c}\left(\alpha_\nu I_\nu\mathrm{d}l\right)\mathrm{d}A\mathrm{d}\Omega\mathrm{d}\nu\mathrm{d}t\vec{m}\cdot\vec{n}$,积分得到
+介质吸收某一辐射$I_{\nu}\left(\vec{m}\right)$在$\vec n$方向得到的动量为$\dfrac{1}{\mathrm{c}}\left(\alpha_\nu I_\nu\mathrm{d}l\right)\mathrm{d}A\mathrm{d}\Omega\mathrm{d}\nu\mathrm{d}t\vec{m}\cdot\vec{n}$,积分得到
 \begin{align}
-\vec{F}\mathrm{d}t&=\int_{\nu}\mathrm{d}\nu\int_{\Omega}\mathrm{d}\Omega\vec{m}\cdot\vec{n}\left[\frac{1}{c}\left(\alpha_{\nu}I_{\nu}\mathrm{d}l\right)\mathrm{d}A\mathrm{d}t\right]\notag\\
-&=\int_{\nu}\mathrm{d}\nu\int_{\Omega}\mathrm{d}\Omega\vec{m}\cdot\vec{n}\cdot\left[\frac{1}{c}\left(\kappa_{\nu}\frac{m}{\mathrm{d}l\mathrm{d}A}I_{\nu}\mathrm{d}l\right)\mathrm{d}A\mathrm{d}t\right]\notag\\
-&=\frac{1}{c}m\mathrm{d}t\int_{\nu}\kappa_{\nu}F_{\nu}\mathrm{d}\nu.
+\vec{F}\mathrm{d}t&=\int_{\nu}\mathrm{d}\nu\int_{\Omega}\mathrm{d}\Omega\vec{m}\cdot\vec{n}\left[\frac{1}{\mathrm{c}}\left(\alpha_{\nu}I_{\nu}\mathrm{d}l\right)\mathrm{d}A\mathrm{d}t\right]\notag\\
+&=\int_{\nu}\mathrm{d}\nu\int_{\Omega}\mathrm{d}\Omega\vec{m}\cdot\vec{n}\cdot\left[\frac{1}{\mathrm{c}}\left(\kappa_{\nu}\frac{m}{\mathrm{d}l\mathrm{d}A}I_{\nu}\mathrm{d}l\right)\mathrm{d}A\mathrm{d}t\right]\notag\\
+&=\frac{1}{\mathrm{c}}m\mathrm{d}t\int_{\nu}\kappa_{\nu}F_{\nu}\mathrm{d}\nu.
 \end{align}
 由此得到辐射场中单位质量受力（加速度）为
 \begin{equation}
-\vec{f}=\frac{\vec{F}}{m}=\frac{1}{c}\int\kappa_{\nu}\vec{F}_{\nu}\mathrm{d}\nu.
+\vec{f}=\frac{\vec{F}}{m}=\frac{1}{\mathrm{c}}\int\kappa_{\nu}\vec{F}_{\nu}\mathrm{d}\nu.
 \end{equation}
 在球对称辐射场中常写作
 \begin{equation}
-f=\frac{1}{c}\kappa F=\frac{1}{c}\kappa\dfrac{L}{4\pi R^2}=\frac{L\sigma}{4\pi R^{2}cm}.
+f=\frac{1}{\mathrm{c}}\kappa F=\frac{1}{\mathrm{c}}\kappa\dfrac{L}{4\pi R^2}=\frac{L\sigma}{4\pi R^{2}\mathrm{c}m}.
 \end{equation}
 可见介质受辐射力所得到的加速度取决于辐射源光度、介质散射截面大小（越大相当于面积越大，能接收到的光子越多）、介质到辐射源的距离以及介质质量。
 
-于是我们自然地引出 Eddington 光度。星系中心的超大质量黑洞，吸积物质时可以将物质的引力能转化为辐射能。当黑洞的引力与辐射力达到平衡时，吸积率就不能再上升，此时有最大光度。假设被吸积的物质为纯氢气体，散射截面为汤姆孙散射截面$\sigma_{\text{T}}=6.65\times10^{-25}\,\mathrm{cm}^{2}$,此时最大光度被称作 Eddington 光度：
+于是我们自然地引出 Eddington 光度。星系中心的超大质量黑洞，吸积物质时可以将物质的引力能转化为辐射能。当黑洞的引力与辐射力达到平衡时，吸积率就不能再上升，此时有最大光度。假设被吸积的物质为纯氢气体，散射截面为汤姆孙散射截面$\sigma_{\text{T}}=\qty{6.65e-25}{cm^{2}}$,此时最大光度被称作 Eddington 光度：
 \begin{align}
-\frac{\mathrm{G}M_{\text{BH}}}{R^{2}}&=\frac{L\sigma}{4\pi R^{2}cm},\\
-L_{\text{Edd}}&=\frac{4\pi c\mathrm{G}M_{\text{BH}}m_{\mathrm{H}}}{\sigma_{\text{T}}}=1.25\times10^{38}\frac{M_{\text{BH}}}{M_\odot}\,\mathrm{erg\cdot{}s^{-1}}.
+\frac{\mathrm{G}M_{\text{BH}}}{R^{2}}&=\frac{L\sigma}{4\pi R^{2}\mathrm{c}m},\\
+L_{\text{Edd}}&=\frac{4\pi\mathrm{c}\mathrm{G}M_{\text{BH}}m_{\ce{H}}}{\sigma_{\text{T}}}=1.25\times10^{38}\frac{M_{\text{BH}}}{\unit{M_\odot}}\unit{erg\cdot{}s^{-1}}.
 \end{align}
-球对称吸积并不常见，大多数情况下吸积物质会形成一个盘，因此与盘呈一定夹角的辐射并不能有效转换为对物质的推力，因此可以实现超 Eddington 吸积。但随着黑洞质量逐渐提高，它的吸积能力可能会不断下降，一般超大质量黑洞辐射功率仅能达到 Eddington 光度的百分之一。但与太阳光度$L_{\odot}=3.86\times10^{33}\,\mathrm{erg\cdot s^{-1}}$对比，黑洞吸积能释放的辐射依旧是巨大的。
+球对称吸积并不常见，大多数情况下吸积物质会形成一个盘，因此与盘呈一定夹角的辐射并不能有效转换为对物质的推力，因此可以实现超 Eddington 吸积。但随着黑洞质量逐渐提高，它的吸积能力可能会不断下降，一般超大质量黑洞辐射功率仅能达到 Eddington 光度的百分之一。但与太阳光度$L_{\odot}=\qty{3.86e33}{erg\cdot{}s^{-1}}$对比，黑洞吸积能释放的辐射依旧是巨大的。
 
 \subsubsection{洛伦兹不变量}
 众所周知，我们所身处的宇宙是在不断膨胀的，且距离我们越远的空间中的天体退行速度越快。学过广义相对论的我们自然要考虑这么一个问题：这些天体辐射出的光是什么样子的呢？接下来我们将改写辐射转移方程的形式，开始研究辐射场中不随洛伦兹变换而发生变化的物理量，解答这个问题的一小部分。
 
-注意到$\mathrm{d}t=\dfrac{\mathrm{d}l}c$,辐射强度沿光线传播方向的变化可以写作
+注意到$\mathrm{d}t=\dfrac{\mathrm{d}l}{\mathrm{c}}$,辐射强度沿光线传播方向的变化可以写作
 \begin{align}
 I_{\nu}\left(\vec{r}+\mathrm{d}\vec{r},t+\mathrm{d}t\right)&=I_\nu\left(\vec r,t\right)+\left(\frac{\partial I_\nu}{\partial t}\mathrm{d}t+\frac{\partial I_\nu}{\partial l}\mathrm{d}l\right)\notag\\
-&=I_\nu\left(\vec r,t\right)+\left(\frac1c\frac{\partial}{\partial t}+\frac{\partial}{\partial l}\right)I_\nu \mathrm{d}l.
+&=I_\nu\left(\vec r,t\right)+\left(\frac{1}{\mathrm{c}}\frac{\partial}{\partial t}+\frac{\partial}{\partial l}\right)I_\nu \mathrm{d}l.
 \end{align}
 因此辐射转移方程可以写作
 \begin{equation}
-\left(\frac{1}{c}\frac{\partial}{\partial t}+\frac{\partial}{\partial l}\right)I_\nu\left(\vec r,t\right)=j_\nu-\alpha_\nu I_\nu\left(\vec{r},t\right).\label{1.1.51}
+\left(\frac{1}{\mathrm{c}}\frac{\partial}{\partial t}+\frac{\partial}{\partial l}\right)I_\nu\left(\vec r,t\right)=j_\nu-\alpha_\nu I_\nu\left(\vec{r},t\right).\label{1.1.51}
 \end{equation}
 洛伦兹变换下，$t,I_{_{\nu}},j_{\nu},\alpha_{\nu}$等都可能发生变化，我们并不确定换系后辐射转移方程是否还成立，因此要逐个分析各个物理量的变化。
 
@@ -344,9 +344,9 @@ I_{\nu}\left(\vec{r}+\mathrm{d}\vec{r},t+\mathrm{d}t\right)&=I_\nu\left(\vec r,t
 \begin{equation}
 \left(n_x,n_y,n_z\right)=\left(\cos\varphi\sin\theta,\sin\varphi\sin\theta,\cos\theta\right).
 \end{equation}
-虽然听起来有点离谱，但此处我们采用$ict$“度规”，取$x^{1}=x,x^{2}=y,x^{3}=z,x^{4}=ict,\beta=\dfrac{v}{c},\gamma=\dfrac{1}{\sqrt{1-\dfrac{v^2}{c^2}}}$,光子四维动量写作
+虽然听起来有点离谱，但此处我们采用$i\mathrm{c}t$“度规”，取$x^{1}=x,x^{2}=y,x^{3}=z,x^{4}=i\mathrm{c}t,\beta=\dfrac{v}{\mathrm{c}},\gamma=\dfrac{1}{\sqrt{1-\dfrac{v^2}{\mathrm{c}^2}}}$,光子四维动量写作
 \begin{equation}
-p=\frac{h\nu}{c}
+p=\frac{h\nu}{\mathrm{c}}
 \begin{pmatrix}
 n_x,n_y,n_z,i
 \end{pmatrix}.
@@ -394,11 +394,11 @@ n_x,n_y,n_z,i
 换系后则要添加一项，面元扫过的区域中所含的光子数：
 \begin{align}
 \mathrm{d}N'&=\frac{1}{h\nu'}I'\left(\cos\theta',\nu'\right)\mathrm{d}A\cos\theta'\mathrm{d}\Omega'\mathrm{d}\nu' \mathrm{d}t'+f_{R}'\left(\vec{r'},\nu',t'\right)v\mathrm{d}t'\mathrm{d}A\mathrm{d}\Omega'\mathrm{d}\nu'\notag\\
-&=\frac{1}{h\nu'}I'\left(\cos\theta',\nu'\right)\mathrm{d}A\mathrm{d}\Omega'\mathrm{d}\nu'\mathrm{d}t'\left(\frac{v}{c}+\cos\theta'\right),
+&=\frac{1}{h\nu'}I'\left(\cos\theta',\nu'\right)\mathrm{d}A\mathrm{d}\Omega'\mathrm{d}\nu'\mathrm{d}t'\left(\frac{v}{\mathrm{c}}+\cos\theta'\right),
 \end{align}
 联立方程，配出$\nu\mathrm{d}\nu\mathrm{d}\Omega$形式得到
 \begin{equation}
-\frac{1}{\nu^2}I_{\nu}\cos\theta\mathrm{d}t=\frac{1}{\nu'^2}I_{\nu'}'\mathrm{d}t'\left(\frac{v}{c}+\cos\theta'\right).
+\frac{1}{\nu^2}I_{\nu}\cos\theta\mathrm{d}t=\frac{1}{\nu'^2}I_{\nu'}'\mathrm{d}t'\left(\frac{v}{\mathrm{c}}+\cos\theta'\right).
 \end{equation}
 根据对称性写出
 \begin{align}
@@ -424,30 +424,30 @@ n_x,n_y,n_z,i
 \begin{equation}
 \alpha_{\nu}\nu=\alpha'_{\nu'}\nu'.
 \end{equation}
-所需要的洛伦兹不变量都已得到，现在可以写出运动系下辐射转移方程的形式。首先写出算符$\left(\dfrac{1}{c}\dfrac{\partial{}}{\partial{}t}+\dfrac{\partial{}}{\partial{}l}\right)$的变化
+所需要的洛伦兹不变量都已得到，现在可以写出运动系下辐射转移方程的形式。首先写出算符$\left(\dfrac{1}{\mathrm{c}}\dfrac{\partial{}}{\partial{}t}+\dfrac{\partial{}}{\partial{}l}\right)$的变化
 \begin{equation}
 \begin{pmatrix}
 \dfrac{\partial}{\partial z}\\
 \dfrac{\partial}{\partial x}\\
 \dfrac{\partial}{\partial y}\\
-\dfrac1{ic}\dfrac{\partial}{\partial t}\\
+\dfrac1{i\mathrm{c}}\dfrac{\partial}{\partial t}\\
 \end{pmatrix}
 =L^{-1}
 \begin{pmatrix}
 \dfrac{\partial}{\partial z'}\\
 \dfrac{\partial}{\partial x'}\\
 \dfrac{\partial}{\partial y'}\\
-\dfrac1{ic}\dfrac{\partial}{\partial t'}\\
+\dfrac1{i\mathrm{c}}\dfrac{\partial}{\partial t'}\\
 \end{pmatrix}
 =\begin{pmatrix}
-\gamma(\dfrac{\partial}{\partial z'}-\dfrac{\beta}c\dfrac{\partial}{\partial t'})\\
+\gamma(\dfrac{\partial}{\partial z'}-\dfrac{\beta}{\mathrm{c}}\dfrac{\partial}{\partial t'})\\
 \dfrac{\partial}{\partial x'}\\
 \dfrac{\partial}{\partial y'}\\
-\dfrac\gamma{ic}(\dfrac{\partial}{\partial t'}-c\beta\dfrac{\partial}{\partial z'})\\
+\dfrac\gamma{i\mathrm{c}}(\dfrac{\partial}{\partial t'}-\mathrm{c}\beta\dfrac{\partial}{\partial z'})\\
 \end{pmatrix},
 \end{equation}
 \begin{equation}
-\frac1c\frac{\partial }{\partial t}+n_{x}\frac{\partial}{\partial x}+n_{y}\frac{\partial}{\partial y}+n_{z}\frac{\partial}{\partial z}=\frac{\nu'}{\nu}[\frac1c\frac{\partial}{\partial t'}+n_{x}'\frac{\partial}{\partial x'}+n_{y}'\frac{\partial}{\partial y'}+n_{z}'\frac{\partial}{\partial z'}].
+\frac{1}{\mathrm{c}}\frac{\partial }{\partial t}+n_{x}\frac{\partial}{\partial x}+n_{y}\frac{\partial}{\partial y}+n_{z}\frac{\partial}{\partial z}=\frac{\nu'}{\nu}\left[\frac{1}{\mathrm{c}}\frac{\partial}{\partial t'}+n_{x}'\frac{\partial}{\partial x'}+n_{y}'\frac{\partial}{\partial y'}+n_{z}'\frac{\partial}{\partial z'}\right].
 \end{equation}
 注意到有$\dfrac{\nu'}{\nu}$这个因子，再将前文得到的$I'_{\nu'},j'_{\nu'},\alpha'_{\nu'}$代入 (\ref{1.1.51}) 式，容易发现运动系中辐射转移方程的形式并未改变。
 
@@ -526,14 +526,14 @@ n_x,n_y,n_z,i
 \end{align}
 显然满足椭圆方程
 \begin{equation}
-(\frac{\xi_\chi}{\xi^{\left(0\right)}\cos\beta})^2+(\frac{\xi_{\chi+\frac\pi2}}{\xi^{\left(0\right)}\sin\beta})^2=1.
+\left(\frac{\xi_\chi}{\xi^{\left(0\right)}\cos\beta}\right)^2+\left(\frac{\xi_{\chi+\frac\pi2}}{\xi^{\left(0\right)}\sin\beta}\right)^2=1.
 \end{equation}
 定义椭率$\cot\beta=\pm\dfrac{\text{长轴强度}}{\text{短轴强度}},-\dfrac{\pi}{4}\le\beta\le\dfrac{\pi}{4}$.
 
 现在任取一个坐标系，将其分解为沿两个不同坐标轴方向振动的线偏振光：
 \begin{align}
-\xi_l&=\xi_l^{(0)}\sin(\omega t-\varepsilon_l),\label{2.1.4}\\
-\xi_r&=\xi_r^{(0)}\sin(\omega t-\varepsilon_r),\label{2.1.5}\\
+\xi_l&=\xi_l^{\left(0\right)}\sin\left(\omega t-\varepsilon_l\right),\label{2.1.4}\\
+\xi_r&=\xi_r^{\left(0\right)}\sin\left(\omega t-\varepsilon_r\right),\label{2.1.5}\\
 \varepsilon_{r}&=\varepsilon_{l}+\delta.
 \end{align}
 根据几何关系
@@ -628,14 +628,14 @@ I(\psi,\eta)&=\overline{\left[\xi_l^{\left(0\right)}\right]^2}\cos^2\psi+\overli
 因此要完全了解偏振波性质需要通过持续观测确定$I,Q,U,V,\psi,\eta$六个参量。
 
 \subsubsection{Faraday 旋转}
-天体物理学中，线偏振的电磁波在有磁场存在的等离子体中传播时，偏振面会发生旋转，原因在于左旋偏振光和右旋偏振光在磁等离子体中的相速度不同。相速度和等离子体折射率有关，$v=\dfrac{c}{n}$.磁场的存在造成磁等离子体空间各向异性，折射率不仅随电磁波频率而改变，也随传播方向与磁场的夹角改变，且给定频率和夹角有两个折射率，这两个折射率可以写成：
+天体物理学中，线偏振的电磁波在有磁场存在的等离子体中传播时，偏振面会发生旋转，原因在于左旋偏振光和右旋偏振光在磁等离子体中的相速度不同。相速度和等离子体折射率有关，$v=\dfrac{\mathrm{c}}{n}$.磁场的存在造成磁等离子体空间各向异性，折射率不仅随电磁波频率而改变，也随传播方向与磁场的夹角改变，且给定频率和夹角有两个折射率，这两个折射率可以写成：
 \begin{equation}
 n^{2}_{\text{o,e}}=1-\frac{2V\left(1-V\right)}{2\left(1-V\right)-U\sin^{2}\theta\pm\left[U^{2}\sin^{4}\theta+4U\left(1-V\right)^{2}\cos^{2}\theta\right]^{\frac{1}{2}}},
 \end{equation}
 其中
 \begin{align}
 V&=\left(\frac{\omega_{\text{p}}}{\omega}\right)^{2},\omega_{\text{p}}=\sqrt{\frac{4\pi N_{e}e^{2}}{m_{0}}},\\
-U&=\left(\frac{\omega_{\text{L}}}{\omega}\right)^{2},\omega_{\text{L}}=\frac{eB}{m_{0}c},
+U&=\left(\frac{\omega_{\text{L}}}{\omega}\right)^{2},\omega_{\text{L}}=\frac{eB}{m_{0}\mathrm{c}},
 \end{align}
 $m_{0}$是电子质量。$\omega_{\text{p}}$被称作等离子体频率，$\omega_{\text{L}}$被称作 Larmor 频率，是电子在磁场中的回旋频率。$\text{o}$表示寻常波折射率，分母取正号，$\text{e}$表示非常波折射率，分母取负号。
 
@@ -662,40 +662,40 @@ n^{2}_{\text{o,e}}=1-\frac{\omega_{\text{p}}^{2}}{\omega\left(\omega\pm\omega_{\
 \end{equation}
 可以看到这个形式于平行磁场方向传播的模式非常近似，只是 Larmor 频率稍作修改。
 
-沿直线的简谐运动总能分解为两个同频率同振幅但旋转方向相反的圆周运动，因此线偏振可以分解为左旋偏振光和右旋偏振光。如果没有磁场干扰，二者电矢量的旋转速度都是$\omega t$,只是一个左旋一个右旋，最后合成的电矢量方向没有发生改变，是线偏振。现在有了磁场，经过时间$t$,在传播距离$r$处，左旋光电矢量转动角度为$\omega\left(t-\dfrac{n_{\text{e}}r}{c}\right)$,右旋为$\omega\left(t-\dfrac{n_{\text{o}}r}{c}\right)$,合成后电矢量相对传播距离$r=0$的合成矢量的夹角为
+沿直线的简谐运动总能分解为两个同频率同振幅但旋转方向相反的圆周运动，因此线偏振可以分解为左旋偏振光和右旋偏振光。如果没有磁场干扰，二者电矢量的旋转速度都是$\omega t$,只是一个左旋一个右旋，最后合成的电矢量方向没有发生改变，是线偏振。现在有了磁场，经过时间$t$,在传播距离$r$处，左旋光电矢量转动角度为$\omega\left(t-\dfrac{n_{\text{e}}r}{\mathrm{c}}\right)$,右旋为$\omega\left(t-\dfrac{n_{\text{o}}r}{\mathrm{c}}\right)$,合成后电矢量相对传播距离$r=0$的合成矢量的夹角为
 \begin{equation}
-\Delta{}=\frac{\omega}{2c}\left(n_{\text{o}}-n_{\text{e}}\right)r.
+\Delta{}=\frac{\omega}{2\mathrm{c}}\left(n_{\text{o}}-n_{\text{e}}\right)r.
 \end{equation}
 将 (\ref{1.2.40}) 式代入其中，得到
 \begin{equation}
-\Delta{}=\frac{2\pi e^{3}}{m_{0}^{2}c^{2}\omega^{2}}N_{e}rB\cos\theta=\frac{2\pi e^{3}}{m_{0}^{2}c^{2}\omega^{2}}\int_{0}^{r}N_{e}B\cos\theta\mathrm{d}r.
+\Delta{}=\frac{2\pi e^{3}}{m_{0}^{2}\mathrm{c}^{2}\omega^{2}}N_{e}rB\cos\theta=\frac{2\pi e^{3}}{m_{0}^{2}\mathrm{c}^{2}\omega^{2}}\int_{0}^{r}N_{e}B\cos\theta\mathrm{d}r.
 \end{equation}
 所以偏振面的旋转角和等离子体密度、磁场、传播距离和传播方向与磁场方向夹角的余弦有关，且与偏振波的波长平方成正比。故定义旋转量度
 \begin{equation}
-R=\frac{e^{3}}{2\pi m^{2}c^{4}}\int_{0}^{r}N_{e}B\cos\theta\mathrm{d}r,
+R=\frac{e^{3}}{2\pi m^{2}\mathrm{c}^{4}}\int_{0}^{r}N_{e}B\cos\theta\mathrm{d}r,
 \end{equation}
 波长为$\lambda$的电磁波穿过长度为$r$的等离子体后偏振面旋转的角度为
 \begin{equation}
 \Delta{}=R\lambda^{2}.
 \end{equation}
-距离取$\mathrm{pc}$,电子数密度$\mathrm{cm^{-3}}$,磁场取$\mu\mathrm{G}$时，$R=0.81\int_{0}^{r}nB\cos\theta\mathrm{d}r$.可见通过测量不同频率线偏振波偏振面的旋转角度可以确定$R$的值。
+距离取$\unit{pc}$,电子数密度$\unit{cm^{-3}}$,磁场取$\unit{\mu G}$时，$R=0.81\int_{0}^{r}nB\cos\theta\mathrm{d}r$.可见通过测量不同频率线偏振波偏振面的旋转角度可以确定$R$的值。
 
 \newpage
 下一个问题是，$R$中电子数密度和磁场是耦合在一起的，能不能将它们区分开呢？答案是可以的，要用到本小节开头提及的相速度。无磁场等离子体中射电波的相速度为
 \begin{equation}
-v_{\text{p}}=\frac{\omega}{k}=\frac{c}{n}=\frac{c}{\sqrt{1-\dfrac{\omega_{\text{p}}^{2}}{\omega^{2}}}},
+v_{\text{p}}=\frac{\omega}{k}=\frac{\mathrm{c}}{n}=\frac{\mathrm{c}}{\sqrt{1-\dfrac{\omega_{\text{p}}^{2}}{\omega^{2}}}},
 \end{equation}
 而能量与信息沿着群速度传播，不同频率的电磁波群速度不同，发生色散。高频电磁波速度快：
 \begin{equation}
-v_{\text{g}}=\frac{\partial{}\omega}{\partial{}k}=c\sqrt{1-\frac{\omega_{\text{p}}^{2}}{\omega^{2}}}.
+v_{\text{g}}=\frac{\partial{}\omega}{\partial{}k}=\mathrm{c}\sqrt{1-\frac{\omega_{\text{p}}^{2}}{\omega^{2}}}.
 \end{equation}
 既然相速度有差异，那么不同频率传输到地球所花费的时间自然也不同：
 \begin{equation}
-t_{\text{p}}=\int_{0}^{r}\frac{\mathrm{d}r}{v_{\text{g}}}\approx\frac{r}{c}+\frac{2\pi e^{2}}{mc\omega^{2}}\int_{0}^{r}n\mathrm{d}r,
+t_{\text{p}}=\int_{0}^{r}\frac{\mathrm{d}r}{v_{\text{g}}}\approx\frac{r}{\mathrm{c}}+\frac{2\pi e^{2}}{m\mathrm{c}\omega^{2}}\int_{0}^{r}n\mathrm{d}r,
 \end{equation}
 因此距离地球$r$的脉冲星发出的频率为$\nu_{1}$和$\nu_{2}$的脉冲信号到达地球的时间差为
 \begin{equation}
-\Delta{}\tau=\frac{e^{2}}{2\pi mc}\left(\frac{1}{\nu_{1}^{2}}-\frac{1}{\nu_{2}^{2}}\right)\int_{0}^{r}n\mathrm{d}r.
+\Delta{}\tau=\frac{e^{2}}{2\pi m\mathrm{c}}\left(\frac{1}{\nu_{1}^{2}}-\frac{1}{\nu_{2}^{2}}\right)\int_{0}^{r}n\mathrm{d}r.
 \end{equation}
 定义频散量度
 \begin{equation}
@@ -703,7 +703,7 @@ D=\int_{0}^{r}n\mathrm{d}r.
 \end{equation}
 比较频散量和旋转量度可以近似得到视线方向平均磁场强度
 \begin{equation}
-\overline{B}=\frac{\int_{0}^{r}nB\cos\theta\mathrm{d}r}{\int_{0}^{r}n\mathrm{d}r}=1.232\frac{R}{D}\,\mathrm{\mu G}.
+\overline{B}=\frac{\int_{0}^{r}nB\cos\theta\mathrm{d}r}{\int_{0}^{r}n\mathrm{d}r}=1.232\frac{R}{D}\,\unit{\mu G}.
 \end{equation}
 实际观测中，脉冲星和活动星系核 (Active Galactic Nuclei, AGN, 指星系中心正在吸积物质的超大质量黑洞) 可以产生强烈的射电偏振信号，可用来测量银河系磁场。其辐射机制我们将在下节阐述。
 
@@ -715,17 +715,17 @@ D=\int_{0}^{r}n\mathrm{d}r.
 \hline
 波段 & 波长 & 物质特征温度 & 主要辐射来源\\
 \cline{1-4}
-伽马 & $0.03\text{\textendash}0.1\,\si{\angstrom}$ & $>10^{8}\,\mathrm{K}$ & AGN 吸积盘、超新星爆发、双中子星碰撞\\
+伽马 & $0.03\text{\textendash}0.1\,\si{\angstrom}$ & $>10^{8}\,\unit{K}$ & AGN 吸积盘、超新星爆发、双中子星碰撞\\
 \cline{1-4}
-X 射线 & $0.1\text{\textendash}100\,\si{\angstrom}$ & $10^{6}\text{\textendash}10^{8}\,\mathrm{K}$ & 星系团中气体、超新星遗迹、恒星冕区、AGN\\
+X 射线 & $0.1\text{\textendash}100\,\si{\angstrom}$ & $10^{6}\text{\textendash}10^{8}\,\unit{K}$ & 星系团中气体、超新星遗迹、恒星冕区、AGN\\
 \cline{1-4}
-紫外 & $100\text{\textendash}4000\,\si{\angstrom}$ & $10^{4}\text{\textendash}10^{6}\,\mathrm{K}$ & 超新星遗迹、热恒星、AGN\\
+紫外 & $100\text{\textendash}4000\,\si{\angstrom}$ & $10^{4}\text{\textendash}10^{6}\,\unit{K}$ & 超新星遗迹、热恒星、AGN\\
 \cline{1-4}
-可见光 & $4000\text{\textendash}7600\,\si{\angstrom}$ & $10^{3}\text{\textendash}10^{4}\,\mathrm{K}$ & 恒星、行星及某些卫星的反射\\
+可见光 & $4000\text{\textendash}7600\,\si{\angstrom}$ & $10^{3}\text{\textendash}10^{4}\,\unit{K}$ & 恒星、行星及某些卫星的反射\\
 \cline{1-4}
-红外 & $0.76\text{\textendash}1\,\mathrm{mm}$ & $10\text{\textendash}10^{3}\,\mathrm{K}$ & 冷尘埃云和气体、行星\\
+红外 & $0.76\text{\textendash}\qty{1}{mm}$ & $10\text{\textendash}10^{3}\,\unit{K}$ & 冷尘埃云和气体、行星\\
 \cline{1-4}
-射电 & $1\,\mathrm{mm}\text{\textendash}100\,\mathrm{m}$ & $<10\,\mathrm{K}$ & 磁场中的电子运动、射电星系\\
+射电 & $\qty{1}{mm}\text{\textendash}\qty{100}{m}$ & $<\qty{10}{K}$ & 磁场中的电子运动、射电星系\\
 \cline{1-4}
 \end{tabular}
 \label{不同波段辐射波长范围和主要辐射来源。}
@@ -744,7 +744,7 @@ X 射线 & $0.1\text{\textendash}100\,\si{\angstrom}$ & $10^{6}\text{\textendash
 \end{figure}
 
 \subsubsection{热辐射和脉泽}
-辐射机制可分为热辐射与非热辐射两类。热辐射本质是微观粒子热运动能量通过电磁相互作用的量子化释放，其宏观表现（如光谱分布）由统计物理与量子理论共同描述。一般来讲温度大于$0\,\mathrm{K}$的物质都能释放热辐射，同时这些物质也能吸收热辐射。大部分天体可见光波段辐射具有热辐射的性质。
+辐射机制可分为热辐射与非热辐射两类。热辐射本质是微观粒子热运动能量通过电磁相互作用的量子化释放，其宏观表现（如光谱分布）由统计物理与量子理论共同描述。一般来讲温度大于$\qty{0}{K}$的物质都能释放热辐射，同时这些物质也能吸收热辐射。大部分天体可见光波段辐射具有热辐射的性质。
 
 一种特殊的热辐射是黑体辐射。黑体是一种能吸收所有波长电磁波的理想模型，其辐射仅由温度决定。当物质处于热动平衡状态（系统宏观性质如温度压强等不随时间变化，吸收与发射辐射平衡）时，热辐射具有黑体辐射的特征：其发射与吸收单色辐射能力的比值等于同温度下黑体发射单色辐射的能力，即
 \begin{equation}
@@ -793,7 +793,7 @@ I_\nu&=\frac{\frac{A_{ki}}{B_{ki}}}{\frac{g_iB_{ik}}{g_kB_{ki}}\mathrm{e}^\frac{
 前文提到热动平衡下辐射强度等于$B_\nu(T)$,对比形式得到
 \begin{align}
 g_iB_{ik}&=g_kB_{ki},\\
-A_{ki}&=\frac{2h\nu_{ki}^3}{c^2}B_{ki}.
+A_{ki}&=\frac{2h\nu_{ki}^3}{\mathrm{c}^{2}}B_{ki}.
 \end{align}
 
 因为受激发射和受激吸收都涉及到辐射场，一般将二者合在一起考虑。如图\ref{三种光谱。}所示，线谱一般并非一条无限细的线，而是有一定的轮廓。定义自发发射轮廓$\psi_\nu$,受激吸收和受激发射轮廓$\varphi_\nu$.物质发射系数可记作
@@ -807,7 +807,7 @@ j_\nu=\frac{h\nu}{4\pi}A_{ki}N_k\psi_\nu,
 源函数
 \begin{equation}
 S_\nu=\frac{j_\nu}{\alpha_\nu}=\frac{A_{ki}}{B_{ki}}\frac{1}{\frac{g_k}{g_i}\frac{N_i}{N_k}-1}\frac{\psi_\nu}{\varphi
-_\nu}=\frac{2h\nu^3}{c^2}\frac{1}{\frac{g_k}{g_i}\frac{N_i}{N_k}-1}\frac{\psi_\nu}{\varphi
+_\nu}=\frac{2h\nu^3}{\mathrm{c}^{2}}\frac{1}{\frac{g_k}{g_i}\frac{N_i}{N_k}-1}\frac{\psi_\nu}{\varphi
 _\nu}.
 \end{equation}
 即当$\psi_\nu=\varphi_\nu$,且原子分布满足玻尔兹曼分布时，源函数才转化为普朗克函数。
@@ -825,7 +825,7 @@ _\nu}.
 一般情况下原子数目按能级分布会偏离玻尔兹曼分布：
 \begin{align}
 \frac{N_k}{N_i}&=\frac{b_k}{b_i}\frac{g_k}{g_i}\mathrm{e}^{-\frac{\varepsilon_i-\varepsilon_k}{k_{\text{B}}T}},\\
-S_\nu&=\frac{2h\nu^3}{c^2}\frac{1}{\frac{b_i}{b_k}\mathrm{e}^{\frac{h\nu}{k_{\text{B}}T}}-1}\frac{\psi_\nu}{\varphi_\nu}.
+S_\nu&=\frac{2h\nu^3}{\mathrm{c}^{2}}\frac{1}{\frac{b_i}{b_k}\mathrm{e}^{\frac{h\nu}{k_{\text{B}}T}}-1}\frac{\psi_\nu}{\varphi_\nu}.
 \end{align}
 
 观察 ($\ref{1.2.14}$) 式发现，如果$B_{ik}N_{i}<B_{ki}N_{k}$,那么吸收系数为负，相当于辐射沿着路径不断增强。此时高能级粒子跃迁到低能级时，释放的辐射被邻近粒子吸收，邻近粒子受激辐射，短时间内连续发生向低能级迁移，整体将形成强有力的放射。当放射波长为可见光到红外波段时称为激光 (Laser),射电的情形则称为微波受激辐射放大 (Microwave Amplification by Stimulated Emission of Radiation, Maser),又称脉泽。
@@ -959,48 +959,48 @@ I_\nu(\theta,0)=S_{0}+S_{1}\cos\theta.
 \end{figure}
 
 \subsubsection{高斯单位制}
-国际单位制 (SI) 中，与力学和电磁学有关的基本单位有$\mathrm{kg,m,s,A}$.之所以选择$\mathrm{A}$而不是电荷是因为电流比较好测定。$\mathrm{A}$的定义方式如下：考虑$F=\dfrac{\mu_{0}I_{1}I_{2}L}{2\pi r}$,两根电流相同的直导线，相距$r=1\,\mathrm{m}$的情况下，单位长度产生$2\times10^{-7}\,\mathrm{N}$的相互作用力时，导线中通过的电流强度为$1\,\mathrm{A}$.此定义等价于定义真空磁导率为$\mu_{0}=4\pi\times10^{-7}\,\mathrm{kg\cdot m\cdot A^{-2}\cdot s^{-2}}$.另外可得电荷单位$1\,\mathrm{C}=\sqrt{4\pi\varepsilon_{0}}\cdot\mathrm{N^{\frac12}\cdot m}$.
+国际单位制 (SI) 中，与力学和电磁学有关的基本单位有$\unit{kg,m,s,A}$.之所以选择$\unit{A}$而不是电荷是因为电流比较好测定。$\unit{A}$的定义方式如下：考虑$F=\dfrac{\mu_{0}I_{1}I_{2}L}{2\pi r}$,两根电流相同的直导线，相距$r=\qty{1}{m}$的情况下，单位长度产生$\qty{2e-7}{N}$的相互作用力时，导线中通过的电流强度为$\qty{1}{A}$.此定义等价于定义真空磁导率为$\mu_{0}=4\pi\times10^{-7}\,\unit{kg\cdot m\cdot A^{-2}\cdot s^{-2}}$.另外可得电荷单位$\qty{1}{C}=\sqrt{4\pi\varepsilon_{0}}\cdot\unit{N^{\frac12}\cdot m}$.
 
-而在厘米克秒制 (cgs) 中，只有$\mathrm{g,cm,s}$三个基本单位。首先导出力的单位$1\,\mathrm{dyne}=1\,\mathrm{g\cdot cm\cdot{}s^{-2}}=10^{-5}\,\mathrm{N}$以及能量单位$1\,\mathrm{erg}=1\,\mathrm{g\cdot cm^{2}\cdot{}s^{-2}}=10^{-7}\,\mathrm{J}$.
+而在厘米克秒制 (cgs) 中，只有$\unit{g,cm,s}$三个基本单位。首先导出力的单位$\qty{1}{dyne}=\qty{1}{g\cdot cm\cdot{}s^{-2}}=10^{-5}\,\unit{N}$以及能量单位$\qty{1}{erg}=\qty{1}{g\cdot cm^{2}\cdot{}s^{-2}}=10^{-7}\,\unit{J}$.
 
-静电制中力与电磁的桥梁是库仑定律$F=\dfrac{1}{4\pi\varepsilon_{0}}\dfrac{q_{1}q_{2}}{r^{2}}$.静电制不希望看到前面的系数，故选择定义真空介电常数，取$\varepsilon_{0\text{cgs}}=\dfrac{1}{4\pi},\mu_{0\text{cgs}}=\dfrac{4\pi}{c^{2}}$,其中$c$为真空光速。换句话讲静电制定义了$1\,\mathrm{A}=0.1c\cdot\mathrm{dyne}^{\frac12},1\,\mathrm{C}=0.1c\cdot\rm{dyne}^{\frac12}\cdot s$.类似的操作可在自然单位制中见到，那里定义$1\,\mathrm{s}=3\times10^{8}\,\mathrm{m}$故$c=1$.
+静电制中力与电磁的桥梁是库仑定律$F=\dfrac{1}{4\pi\varepsilon_{0}}\dfrac{q_{1}q_{2}}{r^{2}}$.静电制不希望看到前面的系数，故选择定义真空介电常数，取$\varepsilon_{0\text{cgs}}=\dfrac{1}{4\pi},\mu_{0\text{cgs}}=\dfrac{4\pi}{\mathrm{c}^{2}}$,其中$\mathrm{c}$为真空光速。换句话讲静电制定义了$\qty{1}{A}=0.1\mathrm{c}\cdot\unit{dyne}^{\frac12},\qty{1}{C}=0.1\mathrm{c}\cdot\rm{dyne}^{\frac12}\cdot s$.类似的操作可在自然单位制中见到，那里定义$\qty{1}{s}=\qty{3e8}{m}$故$\mathrm{c}=1$.
 
-不管怎样库仑定律简化为$F=\dfrac{q_{1}q_{2}}{r^{2}}$,静电制中电荷单位也变为$1\,\mathrm{statC}=1\,\mathrm{dyne^{\frac12}\cdot cm}$.考虑无量纲的真空光速数值$c_{n},1\,\mathrm{C}=2.99792458\times10^{9}\,\mathrm{statC}$.静电制中电流基本单位$1\,\mathrm{statA}=1\,\mathrm{esu}=1\,\mathrm{statC\cdot{}s^{-1}}$.考虑$B=\dfrac{F}{IL}$我们还可以得到磁感应强度基本单位$1\,\mathrm{statT}=1\,\mathrm{dyne^{\frac{1}{2}}\cdot cm^{-2}\cdot s}=10^{-4}c_{n}\mathrm{T}$.
+不管怎样库仑定律简化为$F=\dfrac{q_{1}q_{2}}{r^{2}}$,静电制中电荷单位也变为$\qty{1}{statC}=\qty{1}{dyne^{\frac{1}{2}}\cdot cm}$.考虑无量纲的真空光速数值$\mathrm{c}_{n}$, $\qty{1}{C}=\qty{2.99792458e9}{statC}$.静电制中电流基本单位$\qty{1}{statA}=\qty{1}{esu}=\qty{1}{statC\cdot{}s^{-1}}$.考虑$B=\dfrac{F}{IL}$我们还可以得到磁感应强度基本单位$\qty{1}{statT}=\qty{1}{dyne^{\frac{1}{2}}\cdot cm^{-2}\cdot s}=10^{-4}\mathrm{c}_{n}\,\unit{T}$.
 
-而在静磁制中，电流的基本单位用以下方法定义：相距$1\,\mathrm{cm}$单位长度产生$2\,\mathrm{dyne}$相互作用力时的导线中的电流强度为$1\,\mathrm{emu}$.即$1\,\mathrm{emu}=c\cdot\rm dyne^{\frac12}=10\,\mathrm{A}$.此时得到静磁制下磁感应强度基本单位$1\,\mathrm{G}=\dfrac{1}{c}\cdot\mathrm{dyne}^{\frac12}\cdot\mathrm{cm}^{-1}=10^{-4}\,\mathrm{T}=\dfrac1{c_{n}}\,\mathrm{statT}$.
+而在静磁制中，电流的基本单位用以下方法定义：相距$\qty{1}{cm}$单位长度产生$\qty{2}{dyne}$相互作用力时的导线中的电流强度为$\qty{1}{emu}$.即$\qty{1}{emu}=\mathrm{c}\cdot\unit{dyne^{\frac{1}{2}}}=\qty{10}{A}$.此时得到静磁制下磁感应强度基本单位$\qty{1}{G}=\dfrac{1}{\mathrm{c}}\cdot\unit{dyne}^{\frac{1}{2}}\cdot\unit{cm}^{-1}=10^{-4}\,\unit{T}=\dfrac1{\mathrm{c}_{n}}\,\unit{statT}$.
 
-高斯单位制杂糅了静电制和静磁制，在电荷上使用静电制，磁场上使用静磁制，数值运算的时候可能会出现问题。如进行运动学运算的时候不能简单使用如$B=3\,\mu\mathrm{G}$的数据，而要转变成$B=\dfrac{3\mu}{c_{n}}\,\mathrm{statT}$进行运算，否则静电制和静磁制会相互冲突。
+高斯单位制杂糅了静电制和静磁制，在电荷上使用静电制，磁场上使用静磁制，数值运算的时候可能会出现问题。如进行运动学运算的时候不能简单使用如$B=\qty{3}{\mu G}$的数据，而要转变成$B=\dfrac{3\mu}{\mathrm{c}_{n}}\,\unit{statT}$进行运算，否则静电制和静磁制会相互冲突。
 
-但有意思的是，相对一般的 cgs 制，高斯单位制还有一个独立选择，定义$B_{\text{G}}=c\cdot B_{\text{cgs}}$,使电场强度和磁感应强度有相同的量纲。这时候有些公式会变形，如洛伦兹力公式会变为$\boldsymbol{F}=q\dfrac{\boldsymbol{v}}c\times\boldsymbol{B}_{\text{G}}$.考虑数值计算我们会惊奇地发现$B_{\text{G}}=3\,\mu\dfrac{c}{c_{n}}\,\mathrm{statT}=3\,\mu\cdot\mathrm{statT}\cdot\mathrm{cm\cdot{}s^{-1}}=3\,\mu\,\mathrm{dyne^{\frac{1}{2}}}\cdot\mathrm{cm}^{-1}$.即本质上$B_{\text{cgs}}=n\,\mathrm{G}$,运算上$B_{\text{G}}=n\,\mathrm{dyne^{\frac{1}{2}}\cdot cm^{-1}}$,高斯单位制成功统一了数值和量纲。
+但有意思的是，相对一般的 cgs 制，高斯单位制还有一个独立选择，定义$B_{\text{G}}=\mathrm{c}\cdot B_{\text{cgs}}$,使电场强度和磁感应强度有相同的量纲。这时候有些公式会变形，如洛伦兹力公式会变为$\boldsymbol{F}=q\dfrac{\boldsymbol{v}}{\mathrm{c}}\times\boldsymbol{B}_{\text{G}}$.考虑数值计算我们会惊奇地发现$B_{\text{G}}=3\,\mu\dfrac{\mathrm{c}}{\mathrm{c}_{n}}\,\unit{statT}=3\,\mu\cdot\unit{statT}\cdot\unit{cm\cdot{}s^{-1}}=3\,\mu\,\unit{dyne^{\frac{1}{2}}}\cdot\unit{cm}^{-1}$.即本质上$B_{\text{cgs}}=n\,\unit{G}$,运算上$B_{\text{G}}=n\,\unit{dyne^{\frac{1}{2}}\cdot cm^{-1}}$,高斯单位制成功统一了数值和量纲。
 
 \subsubsection{运动粒子的辐射}
 接下来要讲的是非热辐射。非热辐射能谱一般和热辐射很不一样，后者特征是黑体谱，而一些重要的非热辐射为幂律谱，即辐射强度与频率的指数成正比。原因在于二者机制不同。热辐射来自能级跃迁产生的辐射，非热辐射主要来自运动的带电粒子。查询一般电动力学教程可知，运动带电粒子的电磁场为
 \begin{equation}
-\boldsymbol{E}\left(x,y,z,t\right)=q\left[\frac{\left(\boldsymbol{n}-\boldsymbol{\beta}\right)\left(1-\boldsymbol{\beta}^{2}\right)}{K^{3}r^{2}}\right]_{\text{ret}}+\frac{q}{c}\left\{\frac{\boldsymbol{n}}{K^{3}r}\times\left[\left(\boldsymbol{n}-\boldsymbol{\beta}\right)\times\dot{\boldsymbol{\beta}}\right]\right\}_{\text{ret}}.\label{1.3.38}
+\boldsymbol{E}\left(x,y,z,t\right)=q\left[\frac{\left(\boldsymbol{n}-\boldsymbol{\beta}\right)\left(1-\boldsymbol{\beta}^{2}\right)}{K^{3}r^{2}}\right]_{\text{ret}}+\frac{q}{\mathrm{c}}\left\{\frac{\boldsymbol{n}}{K^{3}r}\times\left[\left(\boldsymbol{n}-\boldsymbol{\beta}\right)\times\dot{\boldsymbol{\beta}}\right]\right\}_{\text{ret}}.\label{1.3.38}
 \end{equation}
-其中 ret 表示 retarded potentials，推迟势，即因为光速有限，时刻$t$观测者观测到的电磁场是时刻$t'$粒子所在处的电磁场。$\boldsymbol{n}$是$t'$时刻粒子所在处到观测者方向的单位矢量，$\boldsymbol{\beta}=\dfrac{\boldsymbol{v}}{c},K=1-\boldsymbol{n}\cdot\boldsymbol{\beta},\boldsymbol{v}$是粒子速度。等号右侧第一项在粒子静止时退化为库仑场，第二项是辐射场，在粒子作加速运动时才产生。有不少机制能让粒子获得能量进行运动，产生非热辐射，比如回旋辐射（电子在磁场中非相对论性螺旋运动）、同步加速辐射（电子在磁场中相对论性螺旋运动）、曲率辐射（电子在弯曲磁力线中运动）、逆康普顿散射（电子与光子碰撞，能量转移给光子）、轫致辐射（带电粒子碰撞，电子受库仑场影响骤然减速，又称刹车辐射、自由{}-{}自由跃迁）、切伦科夫辐射（即使不作加速运动，粒子速度超过介质光的相速度时也会产生辐射）。注意到主要涉及电子与电磁场的作用。这是为什么呢？而电子作为带电粒子，质量相比其他粒子极小，容易被加速，且能被加速到相对论速度，因此它产生的辐射最强。
+其中 ret 表示 retarded potentials，推迟势，即因为光速有限，时刻$t$观测者观测到的电磁场是时刻$t'$粒子所在处的电磁场。$\boldsymbol{n}$是$t'$时刻粒子所在处到观测者方向的单位矢量，$\boldsymbol{\beta}=\dfrac{\boldsymbol{v}}{\mathrm{c}},K=1-\boldsymbol{n}\cdot\boldsymbol{\beta},\boldsymbol{v}$是粒子速度。等号右侧第一项在粒子静止时退化为库仑场，第二项是辐射场，在粒子作加速运动时才产生。有不少机制能让粒子获得能量进行运动，产生非热辐射，比如回旋辐射（电子在磁场中非相对论性螺旋运动）、同步加速辐射（电子在磁场中相对论性螺旋运动）、曲率辐射（电子在弯曲磁力线中运动）、逆康普顿散射（电子与光子碰撞，能量转移给光子）、轫致辐射（带电粒子碰撞，电子受库仑场影响骤然减速，又称刹车辐射、自由{}-{}自由跃迁）、切伦科夫辐射（即使不作加速运动，粒子速度超过介质光的相速度时也会产生辐射）。注意到主要涉及电子与电磁场的作用。这是为什么呢？而电子作为带电粒子，质量相比其他粒子极小，容易被加速，且能被加速到相对论速度，因此它产生的辐射最强。
 
 讨论辐射问题时，我们总会关心粒子在单位时间中辐射的能量（功率），不同方向的辐射强度（角分布），不同频率的辐射强度（谱分布）以及辐射的偏振情况。
 
 我们先来研究角分布。我们用 Poynting 矢量描述空间中某一点的瞬时能量通量：
 \begin{equation}
-\boldsymbol{S}=\frac{1}{\mu_{0}}\boldsymbol{E}\times\boldsymbol{B}_{\text{SI}}=\frac{c^{2}}{4\pi}\boldsymbol{E}\times\frac{\boldsymbol{B}_{\text{G}}}{c}=\frac{c}{4\pi}\boldsymbol{E}\times\left(\boldsymbol{n}\times\boldsymbol{E}\right)=\frac{c}{4\pi}\left\vert{}\boldsymbol{E}\right\vert{}^{2}\boldsymbol{n}.
+\boldsymbol{S}=\frac{1}{\mu_{0}}\boldsymbol{E}\times\boldsymbol{B}_{\text{SI}}=\frac{\mathrm{c}^{2}}{4\pi}\boldsymbol{E}\times\frac{\boldsymbol{B}_{\text{G}}}{\mathrm{c}}=\frac{\mathrm{c}}{4\pi}\boldsymbol{E}\times\left(\boldsymbol{n}\times\boldsymbol{E}\right)=\frac{\mathrm{c}}{4\pi}\left\vert{}\boldsymbol{E}\right\vert{}^{2}\boldsymbol{n}.
 \end{equation}
 在观察点$\left(x,y,z\right)$作一小面元$\mathrm{d}\boldsymbol{\sigma}$,其法向沿 Poynting 矢量方向。该面元对$t'$时刻粒子所在点张的立体角为$\mathrm{d}\Omega,\mathrm{d}\boldsymbol{\sigma}=r^{2}\mathrm{d}\Omega\boldsymbol{n}$,故单位时间通过$\mathrm{d}\boldsymbol{\sigma}$的能量为
 \begin{equation}
-\mathrm{d}P\left(t\right)=\boldsymbol{S}\cdot\mathrm{d}\boldsymbol{\sigma}=\left(\boldsymbol{S}\cdot\boldsymbol{n}\right)r^{2}\mathrm{d}\Omega=\frac{c}{4\pi}r^{2}\left\vert{}\boldsymbol{E}\right\vert{}^{2}\mathrm{d}\Omega.
+\mathrm{d}P\left(t\right)=\boldsymbol{S}\cdot\mathrm{d}\boldsymbol{\sigma}=\left(\boldsymbol{S}\cdot\boldsymbol{n}\right)r^{2}\mathrm{d}\Omega=\frac{\mathrm{c}}{4\pi}r^{2}\left\vert{}\boldsymbol{E}\right\vert{}^{2}\mathrm{d}\Omega.
 \end{equation}
-由此我们就得到了每单位立体角辐射的功率。但需要注意的是，这是$t'$时刻发出的辐射$t$时刻的观测者处所接收到的部分，而我们更关心$t'$时刻粒子处的辐射分布。所以需要改写。$t\text{\textendash}t+\mathrm{d}t$时间段内观测者在面元$\mathrm{d}\sigma$中接收的能量$\mathrm{d}P\left(t\right)\mathrm{d}t$是电荷在$t'\text{\textendash}t'+\mathrm{d}t'$时间段内发出的，按能量守恒有
+由此我们就得到了每单位立体角辐射的功率。但需要注意的是，这是$t'$时刻发出的辐射$t$时刻的观测者处所接收到的部分，而我们更关心$t'$时刻粒子处的辐射分布。所以需要改写。$t\text{\textendash}t+\mathrm{d}t$时间段内观测者在面元$\mathrm{d}\sigma$中接收的能量$\mathrm{d}P\left(t\right)\mathrm{d}t$是电荷在$t'$至$t'+\mathrm{d}t'$时间段内发出的，按能量守恒有
 \begin{equation}
 \mathrm{d}P\left(t'\right)=\mathrm{d}P\left(t\right)\frac{\mathrm{d}t}{\mathrm{d}t'}.
 \end{equation}
 已知
 \begin{equation}
-t'=t-\frac{r\left(t'\right)}{c},
+t'=t-\frac{r\left(t'\right)}{\mathrm{c}},
 \end{equation}
 故
 \begin{equation}
-\mathrm{d}t'=\mathrm{d}t-\frac{1}{c}\frac{\mathrm{d}r\left(t'\right)}{\mathrm{d}t'}\mathrm{d}t'=\mathrm{d}t+\frac{1}{c}\boldsymbol{v}\left(t'\right)\cdot\boldsymbol{n}\mathrm{d}t',
+\mathrm{d}t'=\mathrm{d}t-\frac{1}{\mathrm{c}}\frac{\mathrm{d}r\left(t'\right)}{\mathrm{d}t'}\mathrm{d}t'=\mathrm{d}t+\frac{1}{\mathrm{c}}\boldsymbol{v}\left(t'\right)\cdot\boldsymbol{n}\mathrm{d}t',
 \end{equation}
 由此可见
 \begin{equation}
@@ -1008,20 +1008,20 @@ t'=t-\frac{r\left(t'\right)}{c},
 \end{equation}
 因此粒子单位时间中沿给定方向单位立体角辐射的能量为
 \begin{equation}
-\frac{\mathrm{d}P\left(t'\right)}{\mathrm{d}\Omega}=\frac{\mathrm{d}P\left(t\right)}{\mathrm{d}\Omega}\frac{\mathrm{d}t}{\mathrm{d}t'}=\frac{cK}{4\pi}r^{2}\left\vert{}\boldsymbol{E}\right\vert{}^{2}.
+\frac{\mathrm{d}P\left(t'\right)}{\mathrm{d}\Omega}=\frac{\mathrm{d}P\left(t\right)}{\mathrm{d}\Omega}\frac{\mathrm{d}t}{\mathrm{d}t'}=\frac{\mathrm{c}K}{4\pi}r^{2}\left\vert{}\boldsymbol{E}\right\vert{}^{2}.
 \end{equation}
 注意 (\ref{1.3.38}) 式等号右侧第二项，由此得出粒子辐射的角分布特征：
 \begin{equation}
-\frac{\mathrm{d}P\left(t'\right)}{\mathrm{d}\Omega}=\frac{q^{2}}{4\pi c}\frac{\left\{\boldsymbol{n}\times\left[\left(\boldsymbol{n}-\boldsymbol{\beta}\right)\times\dot{\boldsymbol{\beta}}\right]\right\}^{2}}{K^{5}}.\label{1.3.46}
+\frac{\mathrm{d}P\left(t'\right)}{\mathrm{d}\Omega}=\frac{q^{2}}{4\pi\mathrm{c}}\frac{\left\{\boldsymbol{n}\times\left[\left(\boldsymbol{n}-\boldsymbol{\beta}\right)\times\dot{\boldsymbol{\beta}}\right]\right\}^{2}}{K^{5}}.\label{1.3.46}
 \end{equation}
 
 非相对论情形下，$\beta\to0,K\to1$,此时上式简化为
 \begin{equation}
-\frac{\mathrm{d}P\left(t'\right)}{\mathrm{d}\Omega}=\frac{q^{2}}{4\pi c}\left[\boldsymbol{n}\times\left(\boldsymbol{n}\times\dot{\boldsymbol{\beta}}\right)\right]^{2}.
+\frac{\mathrm{d}P\left(t'\right)}{\mathrm{d}\Omega}=\frac{q^{2}}{4\pi\mathrm{c}}\left[\boldsymbol{n}\times\left(\boldsymbol{n}\times\dot{\boldsymbol{\beta}}\right)\right]^{2}.
 \end{equation}
 用$\theta$表示加速度$\dot{\boldsymbol{v}}$和$\boldsymbol{n}$的夹角，则有
 \begin{equation}
-\frac{\mathrm{d}P\left(t'\right)}{\mathrm{d}\Omega}=\frac{q^{2}\dot{\boldsymbol{v}}^{2}}{4\pi c^{3}}\sin^{2}\theta.
+\frac{\mathrm{d}P\left(t'\right)}{\mathrm{d}\Omega}=\frac{q^{2}\dot{\boldsymbol{v}}^{2}}{4\pi\mathrm{c}^{3}}\sin^{2}\theta.
 \end{equation}
 实际上这是偶极辐射的角分布，$q^{2}\dot{\boldsymbol{v}}^{2}$就是偶极子$\boldsymbol{d}$的二阶时间导数。非相对论的辐射角分布有两个特点，其一辐射和速度无关而和加速度有关，其二辐射分布在很宽的角范围中。具体可如图\ref{非相对论性粒子辐射的角分布。}所示。
 \begin{figure}[!htbp]
@@ -1036,11 +1036,11 @@ t'=t-\frac{r\left(t'\right)}{c},
 
 而对相对论性粒子的辐射我们先来作一些定性分析。根据 (\ref{1.3.46}) 式不难看出相对论速度对角分布有所影响，因为分子含$\beta^{2}$项而分母含$\beta^{5}$项。由于$K=1-\boldsymbol{n}\cdot\boldsymbol{\beta}$,当$\beta\to1$时，如果$\boldsymbol{n}$指向$\boldsymbol{\beta}$的方向，$K\to0$,此时$\dfrac{\mathrm{d}P\left(t'\right)}{\mathrm{d}\Omega}\to\infty$,即辐射能量极大地集中在粒子运动的方向上，这被称作集束效应 (beaming effect).
 
-进一步地，我们认为辐射集中以粒子运动方向为中心线，张角为$\theta=\dfrac{1}{\gamma}=\sqrt{1-\dfrac{v^{2}}{c^{2}}}=\sqrt{1-\beta^{2}}$的圆锥范围内。$\theta=\sqrt{1-\beta^{2}}$时认为此时$K$大约是极大值的$\dfrac{1}{2}$,辐射也相对极大方向下降到$\dfrac{1}{2^{5}}$.电子速度可以达到$\gamma\sim10^{6}$,对应$\theta\sim0.2^{\prime\prime}$,因此相对论性粒子辐射十分集中。
+进一步地，我们认为辐射集中以粒子运动方向为中心线，张角为$\theta=\dfrac{1}{\gamma}=\sqrt{1-\dfrac{v^{2}}{\mathrm{c}^{2}}}=\sqrt{1-\beta^{2}}$的圆锥范围内。$\theta=\sqrt{1-\beta^{2}}$时认为此时$K$大约是极大值的$\dfrac{1}{2}$,辐射也相对极大方向下降到$\dfrac{1}{2^{5}}$.电子速度可以达到$\gamma\sim10^{6}$,对应$\theta\sim0.2^{\prime\prime}$,因此相对论性粒子辐射十分集中。
 
 进一步，为了定量说明相对论粒子辐射角分布具体图形，考虑速度与加速度方向相互平行和相互垂直两种情况。先考虑平行情况，此时辐射角分布为
 \begin{equation}
-\frac{\mathrm{d}P\left(t'\right)}{\mathrm{d}\Omega}=\frac{q^{2}}{4\pi c}\frac{\dot{\beta}^{2}\sin^{2}\theta}{\left(1-\beta\cos\theta\right)^{5}},
+\frac{\mathrm{d}P\left(t'\right)}{\mathrm{d}\Omega}=\frac{q^{2}}{4\pi\mathrm{c}}\frac{\dot{\beta}^{2}\sin^{2}\theta}{\left(1-\beta\cos\theta\right)^{5}},
 \end{equation}
 其中$\theta$是$\boldsymbol{n}$和速度方向的夹角。此时的角分布图形与非相对论情形的对比可如图\ref{加速度与速度平行时相对论性粒子的辐射角分布。}所示。
 \begin{figure}[!htbp]
@@ -1068,11 +1068,11 @@ t'=t-\frac{r\left(t'\right)}{c},
 \end{align}
 因此辐射角分布公式为
 \begin{equation}
-\frac{\mathrm{d}P\left(t'\right)}{\mathrm{d}\Omega}=\frac{q^{2}}{4\pi c}\frac{\left(1-\boldsymbol{n}\cdot\boldsymbol{\beta}\right)^{2}\dot{\boldsymbol{\beta}}^{2}-\left(1-\beta^{2}\right)\left(\boldsymbol{n}\cdot\dot{\boldsymbol{\beta}}\right)^{2}}{\left(1-\boldsymbol{n}\cdot\boldsymbol{\beta}\right)^{5}}.
+\frac{\mathrm{d}P\left(t'\right)}{\mathrm{d}\Omega}=\frac{q^{2}}{4\pi\mathrm{c}}\frac{\left(1-\boldsymbol{n}\cdot\boldsymbol{\beta}\right)^{2}\dot{\boldsymbol{\beta}}^{2}-\left(1-\beta^{2}\right)\left(\boldsymbol{n}\cdot\dot{\boldsymbol{\beta}}\right)^{2}}{\left(1-\boldsymbol{n}\cdot\boldsymbol{\beta}\right)^{5}}.
 \end{equation}
 以$\theta$表示$\boldsymbol{n}$与$\boldsymbol{\beta}$的夹角，$\varphi$表示$\boldsymbol{n}$与$\boldsymbol{\beta}$所成平面与$\dot{\boldsymbol{\beta}}$的夹角，并注意$\boldsymbol{n}\cdot\dot{\boldsymbol{\beta}}=\dot{\boldsymbol{\beta}}\cos\varphi\sin\theta$,有
 \begin{equation}
-\frac{\mathrm{d}P\left(t'\right)}{\mathrm{d}\Omega}=\frac{q^{2}}{4\pi c}\dot{\boldsymbol{\beta}}^{2}\frac{\gamma^{2}\left(1-\beta\cos\theta\right)^{2}-\sin^{2}\theta\cos^{2}\varphi}{\gamma^{2}\left(1-\beta\cos\theta\right)^{5}}.
+\frac{\mathrm{d}P\left(t'\right)}{\mathrm{d}\Omega}=\frac{q^{2}}{4\pi\mathrm{c}}\dot{\boldsymbol{\beta}}^{2}\frac{\gamma^{2}\left(1-\beta\cos\theta\right)^{2}-\sin^{2}\theta\cos^{2}\varphi}{\gamma^{2}\left(1-\beta\cos\theta\right)^{5}}.
 \end{equation}
 此时辐射角分布可如图\ref{加速度与速度垂直时相对论性粒子的辐射角分布。}所示。
 \begin{figure}[!htbp]
@@ -1087,23 +1087,23 @@ t'=t-\frac{r\left(t'\right)}{c},
 
 对非相对论粒子，此时$\mathrm{d}\Omega=2\pi\sin\theta\mathrm{d}\theta$,得到总功率为
 \begin{equation}
-P\left(t'\right)=\frac{\mathrm{d}W}{\mathrm{d}t'}=\int\frac{q^{2}\dot{v}^{2}}{4\pi c^{3}}\sin^{2}\theta2\pi\sin\theta\mathrm{d}\theta=\frac{2q^{2}\dot{v}^{2}}{3c^{3}}.
+P\left(t'\right)=\frac{\mathrm{d}W}{\mathrm{d}t'}=\int\frac{q^{2}\dot{v}^{2}}{4\pi \mathrm{c}^{3}}\sin^{2}\theta2\pi\sin\theta\mathrm{d}\theta=\frac{2q^{2}\dot{v}^{2}}{3\mathrm{c}^{3}}.
 \end{equation}
 对相对论粒子，加速度与速度平行时
 \begin{equation}
-P_{\parallel}=\frac{2q^{2}}{3c}\gamma^{6}\dot{\beta}^{2}.
+P_{\parallel}=\frac{2q^{2}}{3\mathrm{c}}\gamma^{6}\dot{\beta}^{2}.
 \end{equation}
 垂直时
 \begin{equation}
-P_{\bot}=\frac{2q^{2}}{3c}\gamma^{4}\dot{\beta}^{2}.
+P_{\bot}=\frac{2q^{2}}{3\mathrm{c}}\gamma^{4}\dot{\beta}^{2}.
 \end{equation}
 对于一般粒子的运动可以分解，进而得到
 \begin{equation}
-P=\frac{2q^{2}}{3c}\left(\gamma^{6}\dot{\beta}_{\parallel}^{2}+\gamma^{4}\dot{\beta}_{\bot}^{2}\right).
+P=\frac{2q^{2}}{3\mathrm{c}}\left(\gamma^{6}\dot{\beta}_{\parallel}^{2}+\gamma^{4}\dot{\beta}_{\bot}^{2}\right).
 \end{equation}
 也可以写成
 \begin{equation}
-P=\frac{2q^{2}}{3c}\gamma^{6}\left[\dot{\boldsymbol{\beta}}^{2}-\left(\boldsymbol{\beta}\times\dot{\boldsymbol{\beta}}\right)^{2}\right].\label{1.3.59}
+P=\frac{2q^{2}}{3\mathrm{c}}\gamma^{6}\left[\dot{\boldsymbol{\beta}}^{2}-\left(\boldsymbol{\beta}\times\dot{\boldsymbol{\beta}}\right)^{2}\right].\label{1.3.59}
 \end{equation}
 
 \subsubsection{同步加速辐射}
@@ -1118,51 +1118,51 @@ P=\frac{2q^{2}}{3c}\gamma^{6}\left[\dot{\boldsymbol{\beta}}^{2}-\left(\boldsymbo
 
 利用 (\ref{1.3.59}) 式，我们可以计算出单个电子在磁场中运动的辐射的功率：
 \begin{equation}
-P=\frac{2e^{4}}{3m_{0}^{2}c^{5}}\gamma^{2}v_{\bot}^{2}B^{2}.\label{1.3.60}
+P=\frac{2e^{4}}{3m_{0}^{2}\mathrm{c}^{5}}\gamma^{2}v_{\bot}^{2}B^{2}.\label{1.3.60}
 \end{equation}
-其中$e$是电子电量，$B$是高斯单位制下的磁场强度，$m_{0}$是电子质量，$c$是光速。引入电子经典半径$r_{0}=\dfrac{e^{2}}{m_{0}c^{2}}$,上式写作
+其中$e$是电子电量，$B$是高斯单位制下的磁场强度，$m_{0}$是电子质量，$\mathrm{c}$是光速。引入电子经典半径$r_{0}=\dfrac{e^{2}}{m_{0}\mathrm{c}^{2}}$,上式写作
 \begin{equation}
-P=\frac{2}{3}r_{0}^{2}c\gamma^{2}\beta_{\bot}^{2}B^{2}.
+P=\frac{2}{3}r_{0}^{2}\mathrm{c}\gamma^{2}\beta_{\bot}^{2}B^{2}.
 \end{equation}
 对于速度各向同性的电子集体，$\beta_{\bot}^{2}$对立体角平均后得到平均功率为
 \begin{equation}
-\langle{}P\rangle=\frac{4}{9}r_{0}^{2}c\gamma^{2}\beta^{2}B^{2}.
+\langle{}P\rangle=\frac{4}{9}r_{0}^{2}\mathrm{c}\gamma^{2}\beta^{2}B^{2}.
 \end{equation}
 引入汤姆孙散射截面$\sigma_{\text{T}}=\dfrac{8\pi}{3}r_{0}^{2}$和磁场能量密度$U_{B}=\dfrac{B^{2}}{8\pi}$,平均功率可以表示为
 \begin{equation}
-\langle{}P\rangle=\frac{4}{3}\sigma_{\text{T}}c\gamma^{2}\beta^{2}U_{B}.\label{1.2.35}
+\langle{}P\rangle=\frac{4}{3}\sigma_{\text{T}}\mathrm{c}\gamma^{2}\beta^{2}U_{B}.\label{1.2.35}
 \end{equation}
-对于 (\ref{1.3.60}) 式，我们发现$P=-\dfrac{\mathrm{d}E}{\mathrm{d}t}=bE^{2},b=\dfrac{2e^4}{3m_0^4c^9}B^{2}v_\bot^2$,解得，
+对于 (\ref{1.3.60}) 式，我们发现$P=-\dfrac{\mathrm{d}E}{\mathrm{d}t}=bE^{2},b=\dfrac{2e^4}{3m_0^4\mathrm{c}^9}B^{2}v_\bot^2$,解得，
 \begin{equation}
 E=\frac{E_0}{1+bE_0t}.
 \end{equation}
-电子能量下降到原先一半即$E=\dfrac12E_0$所用的时间（取$v_{\bot}=c$）为
+电子能量下降到原先一半即$E=\dfrac12E_0$所用的时间（取$v_{\bot}=\mathrm{c}$）为
 \begin{align}
-T_\frac12=\frac1{bE_0}&=\frac{3m_{0}^{3}c^{7}}{2e^{4}}\frac{1}{B^{2}v_\bot^2}\frac{m_0c^2}{E_0}\notag\\
-&=\frac{5.1\times10^{8}\,\mathrm{s}}{B_{\text{数值}}^{2}}\frac{m_{0}c^{2}}{E_{0}}.
+T_\frac12=\frac1{bE_0}&=\frac{3m_{0}^{3}\mathrm{c}^{7}}{2e^{4}}\frac{1}{B^{2}v_\bot^2}\frac{m_{0}\mathrm{c}^{2}}{E_0}\notag\\
+&=\frac{\qty{5.1e8}{s}}{B_{\text{数值}}^{2}}\frac{m_{0}\mathrm{c}^{2}}{E_{0}}.
 \end{align}
 
 查阅《天体物理中的辐射机制》（尤峻汉）可知，同步加速辐射是一种连续谱，其单位频率间隔的辐射功率为
 \begin{equation}
-\langle\frac{\mathrm{d}P_\nu}{\mathrm{d}\nu}\rangle=\frac{\sqrt3e^3B}{m_0c^2}\frac{\nu}{\nu_c}\int_{\frac{\nu}{\nu_c}}^\infty K_\frac53(t)\mathrm{d}t,
+\langle\frac{\mathrm{d}P_\nu}{\mathrm{d}\nu}\rangle=\frac{\sqrt3e^3B}{m_{0}\mathrm{c}^{2}}\frac{\nu}{\nu_{\text{c}}}\int_{\frac{\nu}{\nu_{\text{c}}}}^\infty K_\frac{5}{3}\left(t\right)\mathrm{d}t,
 \end{equation}
 其中$K_{n}\left(x\right)$为$n$阶修正的贝塞尔函数。辐射功率在低频波段以$\nu^{\frac{1}{3}}$缓慢上升，辐射的峰值频率约为
 \begin{equation}
-\nu_{\max}=0.3\nu_{c}=\frac{9\gamma^2eB}{40\pi m_0c},
+\nu_{\max}=0.3\nu_{\text{c}}=\frac{9\gamma^2eB}{40\pi m_{0}\mathrm{c}},
 \end{equation}
-峰值后辐射强度以自然常数的指数$\mathrm{e}^{-\frac{\nu}{\nu_{c}}}$快速下降。
+峰值后辐射强度以自然常数的指数$\mathrm{e}^{-\frac{\nu}{\nu_{\text{c}}}}$快速下降。
 
 上述结论适用于单个电子的辐射谱。而实际过程中肯定有很多电子在磁场中运动。对于数密度随能量分布为$E^{-\mu}$的电子集体，同步加速辐射谱满足
 \begin{align}
-\langle I_{\nu}\rangle&=\frac{2^{\frac{\mu-1}{2}}\sqrt3\Gamma(\frac{\mu+5}{4})\Gamma(\frac{3\mu-1}{12})\Gamma(\frac{3\mu+19}{12})}{8\sqrt\pi(\mu+1)\Gamma(\frac{\mu+7}{4})}\frac{e^{3}}{m_{0}c^{2}}(\frac{3e}{4\pi m_{0}^{3}c^{5}})^{\frac{\mu-1}2}B^{\frac{\mu+1}{2}}\nu^{-\frac{\mu-1}{2}}LN_{0}\notag\\
-&=a(\mu)\frac{e^{3}}{m_{0}c^{2}}(\frac{3e}{4\pi m_{0}^{3}c^{5}})^{\frac{\mu-1}2}B^{\frac{\mu+1}{2}}\nu^{-\frac{\mu-1}{2}}LN_{0},\label{1.3.67}
+\langle I_{\nu}\rangle&=\frac{2^{\frac{\mu-1}{2}}\sqrt3\Gamma\left(\frac{\mu+5}{4}\right)\Gamma\left(\frac{3\mu-1}{12}\right)\Gamma\left(\frac{3\mu+19}{12}\right)}{8\sqrt\pi\left(\mu+1\right)\Gamma\left(\frac{\mu+7}{4}\right)}\frac{e^{3}}{m_{0}\mathrm{c}^{2}}\left(\frac{3e}{4\pi m_{0}^{3}\mathrm{c}^{5}}\right)^{\frac{\mu-1}2}B^{\frac{\mu+1}{2}}\nu^{-\frac{\mu-1}{2}}LN_{0}\notag\\
+&=a\left(\mu\right)\frac{e^{3}}{m_{0}\mathrm{c}^{2}}\left(\frac{3e}{4\pi m_{0}^{3}\mathrm{c}^{5}}\right)^{\frac{\mu-1}2}B^{\frac{\mu+1}{2}}\nu^{-\frac{\mu-1}{2}}LN_{0},\label{1.3.67}
 \end{align}
-其中$L$是沿视线方向辐射区域长度，$N_{0}$量纲$\mathrm{cm^{-3}\cdot erg^{\mu-1}}$,表征了数密度。根据上式可见辐射强度$\propto{}\nu^{-\frac{\mu-1}{2}}$,谱指数反映了电子能量分布。在典型 AGN 吸积活动中，$\mu=2.5$,可以发现辐射强度谱指数为$-0.75$.
+其中$L$是沿视线方向辐射区域长度，$N_{0}$量纲$\unit{cm^{-3}\cdot erg^{\mu-1}}$,表征了数密度。根据上式可见辐射强度$\propto{}\nu^{-\frac{\mu-1}{2}}$,谱指数反映了电子能量分布。在典型 AGN 吸积活动中，$\mu=2.5$,可以发现辐射强度谱指数为$-0.75$.
 
 对于电子集体来讲另一个要考虑的因素是，当电子密度足够大时，产生辐射的这些电子会与光子碰撞，反过来吸收辐射。吸收系数为
 \begin{align}
-\langle{}\alpha_{\nu}\rangle&=\frac{\sqrt{3}}{4}\Gamma\left(\frac{3\mu+2}{12}\right)\Gamma\left(\frac{3\mu+22}{12}\right)\frac{e^{3}}{2\pi m_{0}}\left(\frac{3e}{2\pi m_{0}^{3}c^{5}}\right)^{\frac{\mu}{2}}N_{0}\left(B\sin\alpha\right)^{\frac{\mu+2}{2}}\nu^{-\frac{\mu+4}{2}}\notag\\
-&=g\left(\mu\right)\frac{e^{3}}{2\pi m_{0}}\left(\frac{3e}{2\pi m_{0}^{3}c^{5}}\right)^{\frac{\mu}{2}}N_{0}\left(B\sin\alpha\right)^{\frac{\mu+2}{2}}\nu^{-\frac{\mu+4}{2}}.\label{1.2.41}
+\langle{}\alpha_{\nu}\rangle&=\frac{\sqrt{3}}{4}\Gamma\left(\frac{3\mu+2}{12}\right)\Gamma\left(\frac{3\mu+22}{12}\right)\frac{e^{3}}{2\pi m_{0}}\left(\frac{3e}{2\pi m_{0}^{3}\mathrm{c}^{5}}\right)^{\frac{\mu}{2}}N_{0}\left(B\sin\alpha\right)^{\frac{\mu+2}{2}}\nu^{-\frac{\mu+4}{2}}\notag\\
+&=g\left(\mu\right)\frac{e^{3}}{2\pi m_{0}}\left(\frac{3e}{2\pi m_{0}^{3}\mathrm{c}^{5}}\right)^{\frac{\mu}{2}}N_{0}\left(B\sin\alpha\right)^{\frac{\mu+2}{2}}\nu^{-\frac{\mu+4}{2}}.\label{1.2.41}
 \end{align}
 可见低频波段吸收系数较大，相当于说低频波段电子相对辐射是光学厚的。我们知道光学厚观测到的辐射为源函数，将 (\ref{1.3.67})(\ref{1.2.41}) 式相比得到
 \begin{equation}
@@ -1172,7 +1172,7 @@ S_{\nu}\propto{}\nu^{2.5}.
 
 最后，同步加速辐射还有显著的偏振特征，单电子同步加速辐射为椭圆偏振光，偏振度为
 \begin{equation}
-\Pi=\frac{K_{\frac{2}{3}}\left(\frac{\nu}{\nu_{c}}\right)}{\int_{\frac{\nu}{\nu_{c}}}^{\infty}K_{\frac{5}{3}}\left(t\right)\mathrm{d}t}.
+\Pi=\frac{K_{\frac{2}{3}}\left(\frac{\nu}{\nu_\mathrm{c}}\right)}{\int_{\frac{\nu}{\nu_\mathrm{c}}}^{\infty}K_{\frac{5}{3}}\left(t\right)\mathrm{d}t}.
 \end{equation}
 对于电子集体，由于速度各向同性，最后呈现出的偏振为垂直磁场方向的线偏振。对于电子能量分布为$E^{-\mu}$的电子集体，偏振度为
 \begin{equation}
@@ -1185,7 +1185,7 @@ S_{\nu}\propto{}\nu^{2.5}.
 
 记入射光子能量为$h\nu$,散射出的光子能量为$h\nu_{1}$,光子散射前后方向夹角为$\theta$,根据能量与动量守恒有
 \begin{equation}
-\nu_{1}=\frac{\nu}{1+\dfrac{h\nu}{m_{0}c^{2}}\left(1-\cos\theta\right)}.
+\nu_{1}=\frac{\nu}{1+\dfrac{h\nu}{m_{0}\mathrm{c}^{2}}\left(1-\cos\theta\right)}.
 \end{equation}
 我们已经知道散射到$\theta$方向光子的能量，但我们还需要知道朝此方向散射的光子数有多少。我们用微分散射截面描述光子散射到该立体角的概率：
 \begin{equation}
@@ -1195,7 +1195,7 @@ S_{\nu}\propto{}\nu^{2.5}.
 \begin{equation}
 \sigma=\sigma_{\text{T}}\cdot\frac34\left\{\frac{1+x}{x^{3}}\left[\frac{2x\left(1+x\right)}{1+2x}-\ln\left(1+2x\right)\right]+\frac1{2x}\ln\left(1+2x\right)-\frac{1+3x}{\left(1+2x\right)^{2}}\right\},
 \end{equation}
-其中$x=\dfrac{h\nu}{m_{0}c^{2}},\sigma_{\text{T}}=\dfrac{8\pi}{3}r_{0}^{2}$,被称作汤姆孙散射截面。
+其中$x=\dfrac{h\nu}{m_{0}\mathrm{c}^{2}},\sigma_{\text{T}}=\dfrac{8\pi}{3}r_{0}^{2}$,被称作汤姆孙散射截面。
 
 对于非相对论情形，$x\ll1,\sigma=\sigma_{\text{T}}\left(1-2x+\dfrac{26}{5}x^{2}+\cdots\right)$,此式中只取第一项，即汤姆孙散射截面。
 
@@ -1209,11 +1209,11 @@ T_{e}=\frac{h\overline{v}}{4k_{\text{B}}}=\frac{h}{4k_{\text{B}}}\frac{\int\nu L
 \begin{equation}
 L_{\nu}=\int j_{\nu}\mathrm{d}V,
 \end{equation}
-表征光度。即电子集体温度取决于非热辐射场的能谱。在 AGN 中，$T_{e}$往往能达到$10^{8}\,\mathrm{K}$.
+表征光度。即电子集体温度取决于非热辐射场的能谱。在 AGN 中，$T_{e}$往往能达到$10^{8}\,\unit{K}$.
 
-在 ICS 情形下，对于相对论性电子$E=\gamma m_{0}c^{2}$,其散射后的光子能量大约是散射前的$\gamma^{2}$倍，即光子能量被极大提高，且沿着电子速度方向辐射。在 AGN 中，紫外辐射常被电子打到 X 甚至伽马波段。$\dfrac{4h\nu\gamma}{m_{0}c^{2}}\ll1$时，电子损失能量速率为
+在 ICS 情形下，对于相对论性电子$E=\gamma m_{0}\mathrm{c}^{2}$,其散射后的光子能量大约是散射前的$\gamma^{2}$倍，即光子能量被极大提高，且沿着电子速度方向辐射。在 AGN 中，紫外辐射常被电子打到 X 甚至伽马波段。$\dfrac{4h\nu\gamma}{m_{0}\mathrm{c}^{2}}\ll1$时，电子损失能量速率为
 \begin{equation}
-\frac{\mathrm{d}E_{e}}{\mathrm{d}t}=\frac{4}{3}\gamma^{2}\sigma_{\text{T}}cU_{\text{rad}}.\label{1.2.48}
+\frac{\mathrm{d}E_{e}}{\mathrm{d}t}=\frac{4}{3}\gamma^{2}\sigma_{\text{T}}\mathrm{c}U_{\text{rad}}.\label{1.2.48}
 \end{equation}
 其中$U_{\text{rad}}$是背景辐射场的能量密度。
 
@@ -1221,11 +1221,11 @@ L_{\nu}=\int j_{\nu}\mathrm{d}V,
 
 最后要讨论的话题是同步加速辐射的自康普顿效应 (Synchrotron Self-Compton, SSC),即相对论性电子在磁场中产生同步加速辐射后，低能光子又被同一电子群体通过 ICS 散射至高能波段的过程。通常发生在较为致密 (compact, 一般指这个源所占空间范围较小，反义词是延展，extended) 的同步加速源中。
 
-因此实际观测中我们能同时看到两段光谱。一段是同步加速辐射，一段是被散射到$\gamma^{2}\nu_{\text{sync}}$的 ICS 能谱。由于产生同步加速辐射和 ICS 的是同一电子群体，因此谱指数是相同的，容易识别出。值得注意的是，ICS 在高能处会发生截断。一个原因是电子能量分布可能有上限，$\gamma_{\max}^{2}\nu_{\text{sync}}$往上的光子数大大减少，另一个原因是，在电子静止系中，光子能量接近$m_{0}c^{2}$时，散射截面大大减小，流量也减少。
+因此实际观测中我们能同时看到两段光谱。一段是同步加速辐射，一段是被散射到$\gamma^{2}\nu_{\text{sync}}$的 ICS 能谱。由于产生同步加速辐射和 ICS 的是同一电子群体，因此谱指数是相同的，容易识别出。值得注意的是，ICS 在高能处会发生截断。一个原因是电子能量分布可能有上限，$\gamma_{\max}^{2}\nu_{\text{sync}}$往上的光子数大大减少，另一个原因是，在电子静止系中，光子能量接近$m_{0}\mathrm{c}^{2}$时，散射截面大大减小，流量也减少。
 
 \begin{figure}[!htbp]
 \centering
-\includegraphics[width=7cm]{figures/figure1_9.png}
+\includegraphics[width=6cm]{figures/figure1_9.png}
 \captionsetup{justification=raggedright, singlelinecheck=false}
 \caption{同步加速辐射和 SSC 能谱示意图。}
 \label{同步加速辐射和 SSC 能谱示意图。}
@@ -1238,56 +1238,56 @@ L_{\nu}=\int j_{\nu}\mathrm{d}V,
 其中已经用到了$\beta\to1$的假定，可见峰值反映了磁场和辐射场的比值。
 
 \subsubsection{正负电子对产生与湮灭}
-电子{}-{}正电子对在湮灭时会产生双光子。在电子静止系中观察，能量为$\gamma m_{0}c^{2}$的正电子和静止电子的湮灭截面为
+电子{}-{}正电子对在湮灭时会产生双光子。在电子静止系中观察，能量为$\gamma m_{0}\mathrm{c}^{2}$的正电子和静止电子的湮灭截面为
 \begin{equation}
 \sigma_{\text{湮灭}}=\frac{\pi r_{0}^{2}}{\gamma+1}\left[\frac{\gamma^{2}+4\gamma+1}{\gamma^{2}-1}\cdot \ln\left(\gamma+\sqrt{\gamma^{2}+1}\right)-\frac{\gamma+3}{\sqrt{\gamma^{2}-1}}\right].
 \end{equation}
 低速极限下上式接近
 \begin{equation}
-\sigma_{\text{湮灭}}=\pi r_{0}^{2}\left(\frac{v}{c}\right)^{-1}.
+\sigma_{\text{湮灭}}=\pi r_{0}^{2}\left(\frac{v}{\mathrm{c}}\right)^{-1}.
 \end{equation}
 正电子速度$v\to0$情形下，截面发散，不过湮灭概率$R$应该依旧有限。设电子密度$N_{e}$,则每秒湮灭次数应该为
 \begin{equation}
-R=N_{e}\sigma_{\text{湮灭}}v=\pi r_{0}^{2}cN_{e},
+R=N_{e}\sigma_{\text{湮灭}}v=\pi r_{0}^{2}\mathrm{c}N_{e},
 \end{equation}
-我们知道汤姆孙散射截面是$\dfrac{8}{3}\pi r_{0}^{2}$,光速$v=c$,因此正电子被电子湮灭速率和光子被电子散射速率是差不多的。而高速情形下的湮灭截面为
+我们知道汤姆孙散射截面是$\dfrac{8}{3}\pi r_{0}^{2}$,光速$v=\mathrm{c}$,因此正电子被电子湮灭速率和光子被电子散射速率是差不多的。而高速情形下的湮灭截面为
 \begin{equation}
 \sigma_{\text{湮灭}}=\frac{\pi r_{0}^{2}}{\gamma}\left(\ln\left(2\gamma\right)-1\right).
 \end{equation}
 可见高能正电子的湮灭截面很小。而此截面也与极端相对论情形下的康普顿散射截面很接近。
 
-电子对湮灭产生的两光子一般不具有相同频率。极端相对论情况下，向前方射出的光子几乎取走全部正电子能量，而第二个光子能量近似只有$m_{0}c^{2}$的量级，且从后方射出。
+电子对湮灭产生的两光子一般不具有相同频率。极端相对论情况下，向前方射出的光子几乎取走全部正电子能量，而第二个光子能量近似只有$m_{0}\mathrm{c}^{2}$的量级，且从后方射出。
 
 电子对湮灭的逆过程，双光子湮灭产生电子对，同样有重要的作用。在许多 AGN 的喷流 (jet) 与冕 (corona) 中，$\gamma$光子和 X 射线光子（高能提供能量，低能保证散射截面足够大，都高能或都低能不利于湮灭）碰撞会产生电子对 (pair production),造成$\gamma$射线出射强度显著减弱，同时导致正负电子会在中心黑洞某些区域集中，引起小区域的光变。极端相对论情况下，湮灭截面为
 \begin{equation}
-\sigma_{\text{湮灭}}=\pi r_{0}^{2}\left(\frac{m_{0}c^{2}}{\hbar\omega_{0}}\right)^{2}\left[\left(2\ln2\right)\left(\frac{\hbar\omega_{0}}{m_{0}c^{2}2}\right)-1\right].
+\sigma_{\text{湮灭}}=\pi r_{0}^{2}\left(\frac{m_{0}\mathrm{c}^{2}}{\hbar\omega_{0}}\right)^{2}\left[\left(2\ln2\right)\left(\frac{\hbar\omega_{0}}{m_{0}\mathrm{c}^{2}}\right)-1\right].
 \end{equation}
 如果是两个伽马光子碰撞，典型散射截面大小为$0.2\sigma_{\text{T}}$.当
 \begin{equation}
-l_{\text{X-ray}}=\frac{L_{\text{X-ray}}\sigma_{\text{T}}}{4\pi m_{0}c^{3}R}\gg\frac{h\nu_{\text{X-ray}}}{m_{0}c^{2}}
+l_{\text{X-ray}}=\frac{L_{\text{X-ray}}\sigma_{\text{T}}}{4\pi m_{0}\mathrm{c}^{3}R}\gg\frac{h\nu_{\text{X-ray}}}{m_{0}\mathrm{c}^{2}}
 \end{equation}
 时伽马光子就很难不与 X 射线光子湮灭，基本上无法从区域中逃离。其中$R$是源半径，$l$又被称作 compactness parameter，描述了光深。
 
-AGN 中电子产生与湮灭速率可以平衡，康普顿厚 (compton-thick, CT, 指氢原子柱密度达到$10^{24}\,\mathrm{cm^{-2}}$) 的等离子体温度可以达到$10^{9}\,\mathrm{K}$,提供了电子产生和湮灭的环境。
+AGN 中电子产生与湮灭速率可以平衡，康普顿厚 (compton-thick, CT, 指氢原子柱密度达到$10^{24}\,\unit{cm^{-2}}$) 的等离子体温度可以达到$10^{9}\,\unit{K}$,提供了电子产生和湮灭的环境。
 
 单个高能光子有足够的能量也能产生电子对，不过此时为了满足能量和动量守恒必须有其他粒子在场，因此高频光子在等离子体场中穿行也是损失能量的重要原因之一。
 
 还有一种对高能光子的重要吸收机制，即高能光子穿越强磁场时，被磁场吸收转化为正负电子对，其辐射吸收系数为
 \begin{equation}
-k=\frac{m_{0}c}{\hbar}\alpha\frac{B\sin\theta}{2B_{c}}\frac{1}{4}\left(\frac{3}{2}\right)^{\frac{1}{2}}\exp\left[-\frac{8m_{0}c^{2}B_{c}}{3EB\sin\theta}\right],
+k=\frac{m_{0}\mathrm{c}}{\hbar}\alpha\frac{B\sin\theta}{2B_\mathrm{c}}\frac{1}{4}\left(\frac{3}{2}\right)^{\frac{1}{2}}\exp\left[-\frac{8m_{0}\mathrm{c}^{2}B_\mathrm{c}}{3EB\sin\theta}\right],
 \end{equation}
-其中精细结构常数$\alpha=\dfrac{e^{2}}{\hbar c}$,中子星临界磁场$B_{c}=\dfrac{m_{0}c^{3}}{e\hbar},\theta$是光子传播路径与磁场的夹角。
+其中精细结构常数$\alpha=\dfrac{e^{2}}{\hbar\mathrm{c}}$,中子星临界磁场$B_\mathrm{c}=\dfrac{m_{0}\mathrm{c}^{3}}{e\hbar},\theta$是光子传播路径与磁场的夹角。
 
 \subsubsection{轫致辐射}
 轫致辐射来自电子受库仑场影响骤然改变速度的过程，而最常见的库仑场自然是等离子体中另一个离子的库仑场。不过严格来讲轫致辐射是量子过程，而量子理论中，电子和离子的组合可以看作是一个处于“自由态”的粒子，辐射出一个光子电子态就从一个自由态跃迁到另一个自由态，故也被称作自由{}-{}自由跃迁。这种意义上轫致辐射其实也算热辐射的一种。
 
 一般仅考虑电子和正离子的碰撞。查阅\textit{Radiative Processes in Astrophysic} by George B. Rybicki 可知，速度服从 Maxwell 分布，温度为$T$的等离子体，发射率为
 \begin{equation}
-4\pi j_{\nu}=\frac{2}{\pi}mc^{2}\sigma_{\text{T}}^{\frac{3}{2}}\left(\frac{mc^{2}}{k_{\text{B}}T}\right)^{\frac{1}{2}}Z^{2}n_{e}n_{i}\exp\left(-\frac{h\nu}{k_{\text{B}}T}\right)\overline{g}_{\text{ff}}\left(T,Z,\nu\right),
+4\pi j_{\nu}=\frac{2}{\pi}m\mathrm{c}^{2}\sigma_{\text{T}}^{\frac{3}{2}}\left(\frac{m\mathrm{c}^{2}}{k_{\text{B}}T}\right)^{\frac{1}{2}}Z^{2}n_{e}n_{i}\exp\left(-\frac{h\nu}{k_{\text{B}}T}\right)\overline{g}_{\text{ff}}\left(T,Z,\nu\right),
 \end{equation}
 其中$Z$是离子电荷数，$\overline{g}_{\text{ff}}$是对速度作平均后的 Gaunt 因子。将$\overline{g}_{\text{ff}}$进一步对频率作平均后得到$\overline{g}_{B}$,单位体积的功率为
 \begin{equation}
-C_{\text{ff}}=\left(\frac{2\pi k_{\text{B}}T}{3m}\right)^{\frac{1}{2}}\frac{2^{5}\pi e^{6}}{3hmc^{3}}Z^{2}n_{e}n_{i}\overline{g}_{B}.
+C_{\text{ff}}=\left(\frac{2\pi k_{\text{B}}T}{3m}\right)^{\frac{1}{2}}\frac{2^{5}\pi e^{6}}{3hm\mathrm{c}^{3}}Z^{2}n_{e}n_{i}\overline{g}_{B}.
 \end{equation}
 
 我们提到轫致辐射可看作是热辐射，因此吸收系数近似满足
@@ -1317,22 +1317,22 @@ $h\nu\gg k_{\text{B}}T$时$\alpha_{\nu}\propto{}\nu^{-3}$, $h\nu\ll k_{\text{B}}
 
 对于吸收和发射谱线，可以根据跃迁能级将谱线划分为不同的线系，以氢原子为例，不同能级间的能量差满足
 \begin{equation}
-\Delta{}E=13.6\,\mathrm{eV}\left(\frac{1}{n^{2}}-\frac{1}{m^{2}}\right),
+\Delta{}E=\qty{13,6}{eV}\left(\frac{1}{n^{2}}-\frac{1}{m^{2}}\right),
 \end{equation}
 $n=1,2,3,4$所对应的线系分别为 Lyman, Balmer, Paschen, Brackett 线系，具体如图\ref{氢原子的不同线系。}所示。
 
 \begin{figure}[!htbp]
 \centering
-\includegraphics[width=10cm]{figures/figure1_11.png}
+\includegraphics[width=9cm]{figures/figure1_11.png}
 \captionsetup{justification=raggedright, singlelinecheck=false}
 \caption{氢原子的不同线系。}
 \label{氢原子的不同线系。}
 \end{figure}
 
-以 Balmer 线系为例，自第一激发态跃迁到第二激发态时需要吸收波长为$656.3\,\mathrm{nm}$的光子，而恒星大气中有氢元素，因此恒星光谱中可以产生$\mathrm{H\alpha}$吸收线。当光子能量逐渐提高，波长短于$364.6\,\mathrm{nm}$时，电子可以被完全电离，光子都可以被处于第一激发态的氢原子吸收，因此产生连续的吸收谱。如图\ref{Balmer break.}所示，因为光谱在这一波长附近出现明显的下降，仿佛光谱发生了断裂，被称作 Balmer break.这个特征在天文学中非常重要，特别是在研究恒星和星系的年龄和金属丰度时。前文提到的 uvby 四色测光便研究了这一特征。
+以 Balmer 线系为例，自第一激发态跃迁到第二激发态时需要吸收波长为$\qty{656.3}{nm}$的光子，而恒星大气中有氢元素，因此恒星光谱中可以产生$\ce{H}\alpha$吸收线。当光子能量逐渐提高，波长短于$\qty{364.6}{nm}$时，电子可以被完全电离，光子都可以被处于第一激发态的氢原子吸收，因此产生连续的吸收谱。如图\ref{Balmer break.}所示，因为光谱在这一波长附近出现明显的下降，仿佛光谱发生了断裂，被称作 Balmer break.这个特征在天文学中非常重要，特别是在研究恒星和星系的年龄和金属丰度时。前文提到的 uvby 四色测光便研究了这一特征。
 \begin{figure}[!htbp]
 \centering
-\includegraphics[width=8cm]{figures/figure1_12.png}
+\includegraphics[width=7cm]{figures/figure1_12.png}
 \captionsetup{justification=raggedright, singlelinecheck=false}
 \caption{Balmer break.}
 \label{Balmer break.}
@@ -1342,11 +1342,11 @@ $n=1,2,3,4$所对应的线系分别为 Lyman, Balmer, Paschen, Brackett 线系�
 
 前文曾提到热辐射源自粒子能量通过电磁相互作用的量子化释放。实际上，研究这种能级跃迁我们需要研究粒子哈密顿量 (Hamiltonian) 在电磁场下的含时演化，最终计算得到的跃迁概率，其一阶展开可看作是原子电偶极矩与外界电场相互作用的结果，被称作电偶极辐射，也就是上述由主量子数$n$所定的原子谱线。电偶极辐射只涉及到电子的轨道运动，因此仅由主量子数决定，服从选择定则，要求轨道量子数和磁量子数变化满足$\Delta{}l=\pm1,\Delta{}m_{l}=0,\pm1$.
 
-而其他高阶项展开可以得到磁偶极矩和电四极矩辐射。这些类型的辐射被称作禁戒跃迁，意为跃迁概率很小。禁戒跃迁不服从电偶极辐射的选择定则，只能发生于密度非常低的环境。地球上禁线不可能出现，一是禁线$A_{ik}$太小，自发辐射时标$>1\,\mathrm{s}$,太长了，与之相比电偶极辐射对应的原子能级寿命往往小于$10^{-8}\,\mathrm{s}$.二是人类的真空科技点太低，实验室制造的真空气体密度远高于宇宙的超真空 (<$1\,\mathrm{atom\cdot cm^{-3}}$).禁线强度非常强烈地依赖于发射禁线气体的密度和温度，因此可用来确定星系发射线区的密度和温度。一般用方括号包裹元素符号来标记禁线。如$\lambda=5007\,\si{\angstrom}$的$\mathrm{[O\,\uppercase\expandafter{\romannumeral3}]}$线。值得注意的是，\uppercase\expandafter{\romannumeral3}表示失去了两个电子，因此类似$\mathrm{H\,\uppercase\expandafter{\romannumeral1}}$的符号其实表示的是中性原子。后续会反复用到这种表示法。
+而其他高阶项展开可以得到磁偶极矩和电四极矩辐射。这些类型的辐射被称作禁戒跃迁，意为跃迁概率很小。禁戒跃迁不服从电偶极辐射的选择定则，只能发生于密度非常低的环境。地球上禁线不可能出现，一是禁线$A_{ik}$太小，自发辐射时标$>\qty{1}{s}$,太长了，与之相比电偶极辐射对应的原子能级寿命往往小于$10^{-8}\,\unit{s}$.二是人类的真空科技点太低，实验室制造的真空气体密度远高于宇宙的超真空 (<$\qty{1}{atom\cdot cm^{-3}}$).禁线强度非常强烈地依赖于发射禁线气体的密度和温度，因此可用来确定星系发射线区的密度和温度。一般用方括号包裹元素符号来标记禁线。如$\lambda=\qty{5007}{\angstrom}$的$\left[\ce{O}\,\mathrm{\uppercase\expandafter{\romannumeral3}}\right]$线。值得注意的是，\uppercase\expandafter{\romannumeral3}表示失去了两个电子，因此类似$\ce{H}\,\mathrm{\uppercase\expandafter{\romannumeral1}}$的符号其实表示的是中性原子。后续会反复用到这种表示法。
 
-源自原子精细结构和超精细结构的辐射属于禁戒跃迁。精细结构来自电子自旋和轨道角动量产生的磁矩之间的相互作用。对应能量差只有主能级能量差的$\dfrac{1}{137^{2}}$,辐射集中在远红外区域。超精细结构是核自旋和轨道电子自旋产生的磁场之间的耦合结果。能级分类比精细结构谱线还要小 2000 倍。辐射甚至来到射电的厘米波段。如$21\,\mathrm{cm}$谱线来自氢原子中电子自旋和原子核自旋处于平行状态（能量更高）向反平行状态的禁戒跃迁，时标$10^{7}\,\mathrm{yr}$.尽管单个氢原子的跃迁概率极低，但由于星际空间中的中性氢非常丰富，其产生的$21\,\mathrm{cm}$谱线仍然能够观测到。由于射电波段受尘埃的影响小，因此$21\,\mathrm{cm}$线是研究星系结构的重要手段。
+源自原子精细结构和超精细结构的辐射属于禁戒跃迁。精细结构来自电子自旋和轨道角动量产生的磁矩之间的相互作用。对应能量差只有主能级能量差的$\dfrac{1}{137^{2}}$,辐射集中在远红外区域。超精细结构是核自旋和轨道电子自旋产生的磁场之间的耦合结果。能级分类比精细结构谱线还要小 2000 倍。辐射甚至来到射电的厘米波段。如$\qty{21}{cm}$谱线来自氢原子中电子自旋和原子核自旋处于平行状态（能量更高）向反平行状态的禁戒跃迁，时标$10^{7}\,\unit{yr}$.尽管单个氢原子的跃迁概率极低，但由于星际空间中的中性氢非常丰富，其产生的$\qty{21}{cm}$谱线仍然能够观测到。由于射电波段受尘埃的影响小，因此$\qty{21}{cm}$谱线是研究星系结构的重要手段。
 
-当星际间的物质温度较低 ($T<100\,\mathrm{K}$) 时，原子不足以达到激发态，难以产生强发射线。好在分子振动和转动同样会发出辐射。转动跃迁集中在射电波段，振动跃迁则集中在红外波段。转动跃迁往往要求分子具有永久的偶极矩，这不是个好消息，因为我们比较关注宇宙中的氢元素，而对称分子的辐射较弱。但好在，$\mathrm{CO}$分子往往和氢分子一起出现，且丰度仅次于氢分子，$1.3\,\mathrm{mm}$和$2.6\,\mathrm{mm}$的转动跃迁在密度$n(\mathrm{H}_{2})\sim100\text{\textendash}1000\,\mathrm{cm^{-3}}$通常最强，因此可以利用$\,\mathrm{CO}$的毫米射电辐射可以研究氢分子的分布。分子转动谱线还有个非常有趣的特点。具体转动能级的能量满足
+当星际间的物质温度较低 ($T<\qty{100}{K}$) 时，原子不足以达到激发态，难以产生强发射线。好在分子振动和转动同样会发出辐射。转动跃迁集中在射电波段，振动跃迁则集中在红外波段。转动跃迁往往要求分子具有永久的偶极矩，这不是个好消息，因为我们比较关注宇宙中的氢元素，而对称分子的辐射较弱。但好在，$\ce{CO}$分子往往和氢分子一起出现，且丰度仅次于氢分子，$\qty{1.3}{mm}$和$\qty{2.6}{mm}$的转动跃迁在密度$n\left(\ce{^{}H2}\right)\sim100\text{\textendash}1000\,\unit{cm^{-3}}$通常最强，因此可以利用$\ce{CO}$的毫米射电辐射可以研究氢分子的分布。分子转动谱线还有个非常有趣的特点。具体转动能级的能量满足
 \begin{equation}
 E=\frac{J(J+1)}{2I}\hbar^{2},
 \end{equation}
@@ -1391,7 +1391,7 @@ $W_{\lambda}$也被称作等值宽度 (equivalent width, EW),即与吸收（或�
 \end{equation}
 对于宇宙学红移，本章第六节将会简要介绍。
 
-多普勒红移结合多普勒运动引起的辐射强度变化会改变谱线轮廓。比如 AGN 吸积物质时，由于角动量守恒被吸积的物质会构成一个高速转动的吸积盘，beaming effect 和多普勒效应会共同导致吸积盘的一半比另一半亮得多，同时光谱中 Fe 元素谱线的轮廓极度不对称。
+多普勒红移结合多普勒运动引起的辐射强度变化会改变谱线轮廓。比如 AGN 吸积物质时，由于角动量守恒被吸积的物质会构成一个高速转动的吸积盘，beaming effect 和多普勒效应会共同导致吸积盘的一半比另一半亮得多，同时光谱中 $\ce{Fe}$ 元素谱线的轮廓极度不对称。
 
 最后要考虑的则是谱线的宽度。现代天文研究中谱线宽度相当重要，能告诉我们很多天体物理信息。首先，量子力学告诉我们，$\Delta{}E\Delta{}t>\dfrac{h}{4\pi}$,即原子停留在某一能级的所具有的能量值有不确定值，因此谱线不能是无限窄的，而是有一宽度，这被称作自然展宽。第二种宽度来自多普勒效应，以吸收线为例，如果光子能量低于能级差，光子无法被原子吸收，但如果原子具有热运动，其与光子双向奔赴，动能填补了能量差，即使光子能量较低也能被吸收。在吸收线谱中则表现为频率较低的部分也被吸收，因此谱线变宽。原子间的碰撞也会导致谱线变宽，而碰撞次数多意味着压力更大，因此可通过谱线宽度确定气压大小，而后者和恒星的引力大小有关。除此之外，磁场（塞曼效应）和电场（斯塔克效应）也会导致谱线变宽或分裂。多普勒展宽得到的谱线形状是高斯型，碰撞展宽是洛伦兹型。实际观测得到的谱线轮廓，一般中心以高斯轮廓为主，线翼以洛仑兹轮廓为主。有关致宽机制更具体的细节可以翻阅《恒星大气物理》（汪珍如、曲钦岳）。高斯型和洛伦兹型谱线轮廓可大致如图\ref{高斯型和洛伦兹型谱线轮廓。}所示，可以发现洛伦兹型谱线轮廓的线翼更宽。
 \begin{figure}[!htbp]
@@ -1406,18 +1406,18 @@ $W_{\lambda}$也被称作等值宽度 (equivalent width, EW),即与吸收（或�
 \subsubsection{金属丰度表示法}
 我们已经了解了关于电磁辐射的大部分知识。对于宇宙中大部分天体，我们都是通过图像和光谱了解其物理信息的，包括天体的面亮度、光度、大小、距离、年龄、温度和化学成分。比如，结合光谱特征谱线的种类和强度可以确定恒星或星际气体和尘埃的温度和金属丰度。金属丰度常用以下三种方法表示：
 
-1. 以质量分数表示，比如可直接记氧元素含量为$\mathrm{O}=0.02$.
+1. 以质量分数表示，比如可直接记氧元素含量为$\ce{O}=0.02$.
 
-2. 按原子数目比表示，任意金属（天文学中氢氦以外的元素都是“金属”）$\mathrm{Z}$的含量为
+2. 按原子数目比表示，任意金属（天文学中氢氦以外的元素都是“金属”）$\ce{Z}$的含量为
 \begin{equation}
-\log(\mathrm{Z}/\mathrm{H})+12=\log(N_{\mathrm{Z}}/N_{\mathrm{H}})+12.
+\log\left(\ce{Z}/\ce{H}\right)+12=\log\left(N_{\ce{Z}}/N_{\ce{H}}\right)+12.
 \end{equation}
 
 3. 按相对太阳的元素丰度
 \begin{equation}
-[A/B]=\lg\,[\frac{(\textrm{number\,of\,A\,atoms/number\,of\,B\,atoms})_{\mathrm{star}}}{(\textrm{number\,of\,A\,atoms/number\,of\,B\,atoms})_{\mathrm{\odot}}}],
+\left[\ce{A}/\ce{B}\right]=\lg\left[\frac{\left(\textrm{number\,of\,A\,atoms/number\,of\,B\,atoms}\right)_{\text{star}}}{\left(\textrm{number\,of\,A\,atoms/number\,of\,B\,atoms}\right)_{\odot}}\right],
 \end{equation}
-因此$[\mathrm{Fe/H}]=-2$的恒星，其铁丰度就是太阳的$1\%$.一般来讲$[\mathrm{Fe/H}]$等价于一颗恒星相对于太阳的平均重元素丰度。
+因此$\left[\ce{Fe/H}\right]=-2$的恒星，其铁丰度就是太阳的$1\%$.一般来讲$\left[\ce{Fe/H}\right]$等价于一颗恒星相对于太阳的平均重元素丰度。
 
 \subsubsection{恒星分类系统与赫罗图}
 进一步，我们可以根据恒星的这些特征对其进行分类。早期天文研究中人们用 Balmer 线系吸收线的强度确定恒星的温度，因为恒星温度越高，从基态来到第一激发态的氢原子就越多，能吸收的 Balmer 光子也就越多，吸收线就越强。于是人们根据吸收线强度从高到低将恒星排成 ABCD……但后来发现这样分类有问题，因为温度再高一点电离程度提高，Balmer 线所对应的第一激发态原子数反而变少，因此字母顺序不一定对应温度顺序。在漫长的观测中，哈佛大学天文台逐渐完善了哈佛光谱分类系统，基于光谱特征谱线和谱带的种类、等值宽度、强度比值和连续谱的能量分布进行分类。它以温度为一元参量，按有效温度从高到低，将恒星分为七个光谱型，OBAFGKM，每型又分为十个次型，用阿拉伯数字表示，比如太阳是 G2 型恒星。人们常用``Oh, be a fine girl/guy kiss me!''来记忆哈佛光谱型。（如果你不确定对面是否学过天文兴许能用这句话作为接头暗号。）常把 O、B、A 型恒星叫作早型恒星，F、G 型叫作中型，K、M 型叫作晚型。星系光谱是由不同温度恒星的光谱混合而成的，较热的恒星（早型恒星）贡献了大部分的蓝光。较冷的恒星贡献了大部分的红光。每个光谱型的有效温度和特征谱线如表\ref{哈佛}所示。后来哈佛分类系统还添加了 R、N 分支以反映恒星化学成分的差别。
@@ -1431,19 +1431,19 @@ $W_{\lambda}$也被称作等值宽度 (equivalent width, EW),即与吸收（或�
 \hline
 光谱型 & 有效温度 & 颜色 & 特征谱线\\
 \cline{1-4}
-O & $30000\,\mathrm{K}$ & 蓝 & 强电离$\mathrm{He}$线、重元素多次电离线\\
+O & $\qty{30000}{K}$ & 蓝 & 强电离$\ce{He}$线、重元素多次电离线\\
 \cline{1-4}
-B & $20000\,\mathrm{K}$ & 蓝白 & 中性$\mathrm{He}$线，重元素一次电离线，$\mathrm{H}$线\\
+B & $\qty{20000}{K}$ & 蓝白 & 中性$\ce{He}$线，重元素一次电离线，$\ce{H}$线\\
 \cline{1-4}
-A & $10000\,\mathrm{K}$ & 白 & 重元素一次电离线，$\mathrm{H}$线\\
+A & $\qty{10000}{K}$ & 白 & 重元素一次电离线，$\ce{H}$线\\
 \cline{1-4}
-F & $7000\,\mathrm{K}$ & 黄白 & 中性金属线，重元素一次电离线，$\mathrm{H}$线\\
+F & $\qty{7000}{K}$ & 黄白 & 中性金属线，重元素一次电离线，$\ce{H}$线\\
 \cline{1-4}
-G & $6000\,\mathrm{K}$ & 黄 & 中性金属线，重元素一次电离线\\
+G & $\qty{6000}{K}$ & 黄 & 中性金属线，重元素一次电离线\\
 \cline{1-4}
-K & $4000\,\mathrm{K}$ & 红橙 & 中性金属线，重元素一次电离线\\
+K & $\qty{4000}{K}$ & 红橙 & 中性金属线，重元素一次电离线\\
 \cline{1-4}
-M & $3000\,\mathrm{K}$ & 红 & 中性金属线、分子带\\
+M & $\qty{3000}{K}$ & 红 & 中性金属线、分子带\\
 \cline{1-4}
 \end{tabular}
 \label{哈佛}
@@ -1474,7 +1474,7 @@ M & $3000\,\mathrm{K}$ & 红 & 中性金属线、分子带\\
 \label{Yerkes}
 \end{table}
 
-有了温度和光度二元分类，我们很自然地引入赫罗图的概念。如图\ref{赫罗图。}所示，我们将观测到的恒星绘制在以温度和光度为坐标轴的二维平面上，其中横轴是温度，左高右低，纵轴是光度，上高下低，可以发现恒星大致分为三个区域。其一是从赫罗图左上方延伸至右下方的窄带，绝大部分恒星坐落其中，该窄带被称作主序带。主序带恒星拥有均匀的化学组成，稳定的核心氢燃烧，完全流体静力学平衡，质量范围$\sim0.08\text{\textendash}120M_{\odot}$（质量低不足以点燃氢核聚变，质量太高动力学不稳定）。其二是赫罗图左下方温度极高亮度极低的白矮星，其三是赫罗图右上方温度较低光度极高的巨星。读者朋友可能有疑问，为什么温度高（低）光度反而低（高）。答案是白矮星半径太小 ($10^{-2}\text{\textendash}10^{-1}R_{\odot}$),巨星半径太大 ($10\text{\textendash}1000R_{\odot}$),而光度满足$L=4\pi R^{2}\sigma_{\text{SB}}T^{4}$,且温度差异的数量级不显著影响较小。同时在图\ref{赫罗图。}左半部分上方还能看到哈佛光谱型，赫罗图直观展示了同一光谱型可能对应不同类型恒星的事实，因此有必要引入 MK 分类。根据光度公式可在赫罗图上绘制等半径线$\log\left(R/R_{\odot}\right)=\log\left(L/L_{\odot}\right)/2-2\log\left(T/T_{\odot}\right)$.图\ref{赫罗图。}中更多的名词解释我们将在后续恒星演化部分提及。
+有了温度和光度二元分类，我们很自然地引入赫罗图的概念。如图\ref{赫罗图。}所示，我们将观测到的恒星绘制在以温度和光度为坐标轴的二维平面上，其中横轴是温度，左高右低，纵轴是光度，上高下低，可以发现恒星大致分为三个区域。其一是从赫罗图左上方延伸至右下方的窄带，绝大部分恒星坐落其中，该窄带被称作主序带。主序带恒星拥有均匀的化学组成，稳定的核心氢燃烧，完全流体静力学平衡，质量范围$\sim0.08\text{\textendash}120\,\unit{M_{\odot}}$（质量低不足以点燃氢核聚变，质量太高动力学不稳定）。其二是赫罗图左下方温度极高亮度极低的白矮星，其三是赫罗图右上方温度较低光度极高的巨星。读者朋友可能有疑问，为什么温度高（低）光度反而低（高）。答案是白矮星半径太小 ($10^{-2}\text{\textendash}10^{-1}\,\unit{R_{\odot}}$),巨星半径太大 ($10\text{\textendash}1000\,\unit{R_{\odot}}$),而光度满足$L=4\pi R^{2}\sigma_{\text{SB}}T^{4}$,且温度差异的数量级不显著影响较小。同时在图\ref{赫罗图。}左半部分上方还能看到哈佛光谱型，赫罗图直观展示了同一光谱型可能对应不同类型恒星的事实，因此有必要引入 MK 分类。根据光度公式可在赫罗图上绘制等半径线$\log\left(R/R_{\odot}\right)=\log\left(L/L_{\odot}\right)/2-2\log\left(T/T_{\odot}\right)$.图\ref{赫罗图。}中更多的名词解释我们将在后续恒星演化部分提及。
 
 \begin{figure}[!htbp]
 \centering
@@ -1490,35 +1490,35 @@ M & $3000\,\mathrm{K}$ & 红 & 中性金属线、分子带\\
 \frac{\mathrm{G}M_{r}\rho\mathrm{d}A\mathrm{d}r}{r^{2}}&=\mathrm{d}P\mathrm{d}A,\\
 \frac{\mathrm{d}P}{\mathrm{d}r}&=\frac{\mathrm{G}M_{r}\rho}{r^{2}}.\label{1.4.4}
 \end{align}
-于是我们大概得知两种关系，$\dfrac{P}{R}\sim\dfrac{M\rho}{R^{2}},\rho\sim\dfrac{M}{R^{3}}$,并由此推出$P\sim\dfrac{M^{2}}{R^{4}}$.我们一般假设恒星内部气体遵循理想气体状态方程，即$P=\dfrac{\rho k_{\text{B}}T}{\mu m_{\mathrm{H}}}$,其中$\mu$是相对分子质量，$m_{\mathrm{H}}$是氢原子质量，由此得到$T\sim\dfrac{M}{R}$.与引力相抗衡的压力有辐射压和气压两种，此处我们只考虑辐射压存在，可进一步建立辐射压和温度的关系。我们曾介绍过球对称情况下的能量密度，对于黑体辐射，
+于是我们大概得知两种关系，$\dfrac{P}{R}\sim\dfrac{M\rho}{R^{2}},\rho\sim\dfrac{M}{R^{3}}$,并由此推出$P\sim\dfrac{M^{2}}{R^{4}}$.我们一般假设恒星内部气体遵循理想气体状态方程，即$P=\dfrac{\rho k_{\text{B}}T}{\mu m_{\ce{H}}}$,其中$\mu$是相对分子质量，$m_{\ce{H}}$是氢原子质量，由此得到$T\sim\dfrac{M}{R}$.与引力相抗衡的压力有辐射压和气压两种，此处我们只考虑辐射压存在，可进一步建立辐射压和温度的关系。我们曾介绍过球对称情况下的能量密度，对于黑体辐射，
 \begin{equation}
-U_{\nu}=\frac{4\pi{}}{c}B_{\nu}=\frac{8\pi\nu^{2}}{c^{3}}\cdot\frac{1}{e^{\frac{h\nu}{k_{\text{B}}T}}-1}\cdot h\nu.
+U_{\nu}=\frac{4\pi{}}{\mathrm{c}}B_{\nu}=\frac{8\pi\nu^{2}}{\mathrm{c}^{3}}\cdot\frac{1}{\mathrm{e}^{\frac{h\nu}{k_{\text{B}}T}}-1}\cdot h\nu.
 \end{equation}
 对频率积分可以得到总能量密度：
 \begin{equation}
-U=\int\varepsilon\left(\nu\right)\mathrm{d}\nu=\frac{8\pi h}{c^3}\int\frac{\nu^3\mathrm{d}\nu}{e^{\frac{h\nu}{k_{\text{B}}T}}-1}=\frac{8\pi}{c^3}\frac{k_{\text{B}}^4T^4}{h^3}\int\frac{x^3\mathrm{d}x}{e^{x}-1}=\frac{8\pi^{5}k_{\text{B}}^{4}}{15h^{3}c^{3}}T^{4}=a_{\text{B}}T^4.
+U=\int\varepsilon\left(\nu\right)\mathrm{d}\nu=\frac{8\pi h}{\mathrm{c}^{3}}\int\frac{\nu^3\mathrm{d}\nu}{\mathrm{e}^{\frac{h\nu}{k_{\text{B}}T}}-1}=\frac{8\pi}{\mathrm{c}^{3}}\frac{k_{\text{B}}^4T^4}{h^3}\int\frac{x^3\mathrm{d}x}{\mathrm{e}^{x}-1}=\frac{8\pi^{5}k_{\text{B}}^{4}}{15h^{3}\mathrm{c}^{3}}T^{4}=a_{\text{B}}T^4.
 \end{equation}
 而流量满足（仅考虑向外辐射部分，进而可通过$F=\dfrac{L}{4\pi R^{2}}$确定系数）
 \begin{align}
 F_\nu&=\int I_\nu\cos\theta\mathrm{d}\Omega\notag\\
-&=\int_0^{2\pi}\mathrm{d}\varphi\int_0^{\frac{\pi}{2}}\frac{c}{4\pi}U_\nu\cos\theta\sin\theta\mathrm{d}\theta\notag\\
-&=\frac{c}{4}U_\nu\int_0^{\frac{\pi}{2}}\sin\left(2\theta\right)\mathrm{d}\left(2\theta\right)=\frac{c}{4}U_\nu.\\
-\therefore F&=\frac{c}{4}a_{\text{B}}T^4,\sigma_{\text{SB}}=\frac{ca_{\text{B}}}{4}.
+&=\int_0^{2\pi}\mathrm{d}\varphi\int_0^{\frac{\pi}{2}}\frac{\mathrm{c}}{4\pi}U_\nu\cos\theta\sin\theta\mathrm{d}\theta\notag\\
+&=\frac{\mathrm{c}}{4}U_\nu\int_0^{\frac{\pi}{2}}\sin\left(2\theta\right)\mathrm{d}\left(2\theta\right)=\frac{\mathrm{c}}{4}U_\nu.\\
+\therefore F&=\frac{\mathrm{c}}{4}a_{\text{B}}T^4,\sigma_{\text{SB}}=\frac{\mathrm{c}a_{\text{B}}}{4}.
 \end{align}
 辐射压（要考虑各向同性贡献，因此积分限有变化）满足
 \begin{align}
-P_{R,\nu}&=\frac{1}{c}\int_{4\pi{}}I_{\nu}\cos^{2}\theta\mathrm{d}\Omega\notag\\
-&=\frac{1}{c}\int_{0}^{2\pi{}}\mathrm{d}\varphi\int_{0}^{\pi}\frac{c}{4\pi{}}U_{\nu}\cos^{2}\theta\sin\theta\mathrm{d}\theta\notag\\
+P_{R,\nu}&=\frac{1}{\mathrm{c}}\int_{4\pi{}}I_{\nu}\cos^{2}\theta\mathrm{d}\Omega\notag\\
+&=\frac{1}{\mathrm{c}}\int_{0}^{2\pi{}}\mathrm{d}\varphi\int_{0}^{\pi}\frac{\mathrm{c}}{4\pi{}}U_{\nu}\cos^{2}\theta\sin\theta\mathrm{d}\theta\notag\\
 &=-\frac{1}{2}U_{\nu}\int_{0}^{\pi}\cos^{2}\theta\mathrm{d}\cos\theta=\frac{1}{3}U_{\nu},\notag\\
 P_{\text{rad}}&=\frac{1}{3}a_{\text{B}}T^{4}.\label{1.4.9}
 \end{align}
 进一步地，我们可以建立起光度和质量的关系。在推导 Eddington 光度时我们曾经建立过有关光度和引力的方程，将其稍作修改可得
 \begin{equation}
-\frac{1}{c}\kappa\frac{L}{4\pi r^{2}}=\frac{\mathrm{G}M_{r}}{r^{2}},\label{1.4.10}
+\frac{1}{\mathrm{c}}\kappa\frac{L}{4\pi r^{2}}=\frac{\mathrm{G}M_{r}}{r^{2}},\label{1.4.10}
 \end{equation}
 联立 (\ref{1.4.4})(\ref{1.4.9})(\ref{1.4.10}) 式得到
 \begin{align}
-\frac{\mathrm{G}M}{r^{2}}=\frac{1}{\rho}\frac{\mathrm{d}P}{\mathrm{d}r}=\frac{1}{c}\kappa\frac{L}{4\pi r^{2}}=\frac{1}{\rho}\frac{4}{3}a_{\text{B}}T^{3}\frac{\mathrm{d}T}{\mathrm{d}r},\label{1.4.11}
+\frac{\mathrm{G}M}{r^{2}}=\frac{1}{\rho}\frac{\mathrm{d}P}{\mathrm{d}r}=\frac{1}{\mathrm{c}}\kappa\frac{L}{4\pi r^{2}}=\frac{1}{\rho}\frac{4}{3}a_{\text{B}}T^{3}\frac{\mathrm{d}T}{\mathrm{d}r},\label{1.4.11}
 \end{align}
 由此可得
 \begin{equation}
@@ -1535,7 +1535,7 @@ L\sim R^{2}\frac{1}{\rho}\frac{T^{4}}{R}\sim R^{2}\frac{R^{3}}{M}\frac{M^{4}}{R^
 此外，基于主序星物理量之间的关系容易证明，质量不同的主序星表面重力加速度相差无几，因此主序星表面的压力对谱线宽度的影响较为一致，这也是 MK 分类中将主序星划分为一类的依据之一。
 
 \subsubsection{\uppercase\expandafter{\romannumeral1}a 型超新星}
-接下来简要说明一下\uppercase\expandafter{\romannumeral1}a 型超新星的图景。热核反应不断将恒星内部的轻元素转变为重元素，随着原子序数提高，库仑力会不断增强，需要更高的压力和温度以进行核反应。因此要点燃的元素越重，恒星所需的初始质量就越大。如果恒星质量不高，在初始氢燃料燃烧完毕留下一个高温的碳氧核心后核反应就停止了。不过，即使恒星初始质量极高，核反应也不能无限进行下去。根据质能关系可知原子核的结合能为$Q=\left[Zm_{\text{p}}+Nm_{\text{n}}-m_{Z,n}\right]c^{2}$,其中$Z$是质子数，$N$是中子数，$m_{Z,n}$是原子核质量。记原子量为$A=Z+N$,可以定义比结合能$Q/A$.铁元素拥有最大的比结合能，因此核聚变形成比铁元素重的元素时反而要消耗能量，核反应终究会停止。如此一来气压和辐射压不足以平衡引力，要维持恒星结构，必须由电子简并压抗衡引力，我们称这样的星体为白矮星。但电子简并压也不是无上限的，如果白矮星质量超过一定限度（称其为钱德拉塞卡极限），星体会进一步坍缩为中子星或黑洞。
+接下来简要说明一下\uppercase\expandafter{\romannumeral1}a 型超新星的图景。热核反应不断将恒星内部的轻元素转变为重元素，随着原子序数提高，库仑力会不断增强，需要更高的压力和温度以进行核反应。因此要点燃的元素越重，恒星所需的初始质量就越大。如果恒星质量不高，在初始氢燃料燃烧完毕留下一个高温的碳氧核心后核反应就停止了。不过，即使恒星初始质量极高，核反应也不能无限进行下去。根据质能关系可知原子核的结合能为$Q=\left[Zm_{\text{p}}+Nm_{\text{n}}-m_{Z,n}\right]\mathrm{c}^{2}$,其中$Z$是质子数，$N$是中子数，$m_{Z,n}$是原子核质量。记原子量为$A=Z+N$,可以定义比结合能$Q/A$.铁元素拥有最大的比结合能，因此核聚变形成比铁元素重的元素时反而要消耗能量，核反应终究会停止。如此一来气压和辐射压不足以平衡引力，要维持恒星结构，必须由电子简并压抗衡引力，我们称这样的星体为白矮星。但电子简并压也不是无上限的，如果白矮星质量超过一定限度（称其为钱德拉塞卡极限），星体会进一步坍缩为中子星或黑洞。
 
 于是我们可以考虑这样一种情形，在白矮星{}-{}恒星双星系统中，白矮星不断吸积伴星的物质，质量不断提高，直到超过钱德拉塞卡极限。此时星体会发生爆轰，整个星体彻底瓦解，什么也不剩下。我们称这样的星体为\uppercase\expandafter{\romannumeral1}a 型超新星。由于发生爆轰的 CO 核质量都差不多，因此峰值绝对星等都一致，大约$-19.5$等。因此可以用\uppercase\expandafter{\romannumeral1}a 型超新星测距。
 
@@ -1571,7 +1571,7 @@ Edwin Hubble 基于星系的形状和形态特征进行星系分类，主要根�
 
 和恒星能组成星团一样，星系也能组成星系群和星系团，前者一般包含数十个星系，后者成员数目可以上千。星系团中椭圆星系占主导地位，核心区主要是 E, S0 等早型星系，S 多处于星系团外围。星系群中则是漩涡星系主导。
 
-星系分布的不均匀不仅体现在成团性上。观测数千个星系光谱以确定距离和位置，发现宇宙主要由纤维和巨洞 (voids) 组成，大部分物质处于纤维结构上，约占整个空间体积 1\%。巨洞典型大小$50\,\mathrm{Mpc}$.
+星系分布的不均匀不仅体现在成团性上。观测数千个星系光谱以确定距离和位置，发现宇宙主要由纤维和巨洞 (voids) 组成，大部分物质处于纤维结构上，约占整个空间体积 1\%。巨洞典型大小$\qty{50}{Mpc}$.
 
 接下来我们将介绍各类型星系的特征，并解释一下图\ref{哈勃音叉图。}所呈现出的信息。
 
@@ -1584,11 +1584,11 @@ Edwin Hubble 基于星系的形状和形态特征进行星系分类，主要根�
 n=\frac{10\left(a-b\right)}{a}.
 \end{equation}
 
-椭圆星系没有星系盘、颜色偏红，星系中心最亮，亮度向边缘递减。椭圆星系主要由年老恒星和大量热气体组成，没有或仅有少量的冷气体和尘埃。椭圆星系的特征为强吸收线，少有发射线，因为年老的低光度恒星成员大气中有很多金属。普通椭圆星系光度为银河系数倍，特征尺度为数十个$\mathrm{kpc}$.
+椭圆星系没有星系盘、颜色偏红，星系中心最亮，亮度向边缘递减。椭圆星系主要由年老恒星和大量热气体组成，没有或仅有少量的冷气体和尘埃。椭圆星系的特征为强吸收线，少有发射线，因为年老的低光度恒星成员大气中有很多金属。普通椭圆星系光度为银河系数倍，特征尺度为数十个$\unit{kpc}$.
 
-一种特殊的椭圆星系记作 cD, c 表示星系非常大，D 表示星系外观非常弥散，这种星系称作巨椭圆星系，通常为星系团中最明亮的星系，比银河系亮 100 倍以上，巨大弥散包层可延伸到数百$\mathrm{kpc}$,质量可达$10^{13}M_{\odot}$. cD 多位于星系团中心，可能诞生自星系团中最亮的星系吞噬次亮星系，弥散包层（星系晕）可能为次亮星系的遗迹。这个推断并非空穴来风，实际上普通椭圆星系也有子结构。10\%\text{\textendash}20\%的椭圆星系外区有弧状壳和其他不对称的结构，应当是被大星系引力撕碎并捕获的小星系遗迹（这个过程是星系并合的一种），壳层是星系吸积过程的直接证据。
+一种特殊的椭圆星系记作 cD, c 表示星系非常大，D 表示星系外观非常弥散，这种星系称作巨椭圆星系，通常为星系团中最明亮的星系，比银河系亮 100 倍以上，巨大弥散包层可延伸到数百$\unit{kpc}$,质量可达$10^{13}\,\unit{M_{\odot}}$. cD 多位于星系团中心，可能诞生自星系团中最亮的星系吞噬次亮星系，弥散包层（星系晕）可能为次亮星系的遗迹。这个推断并非空穴来风，实际上普通椭圆星系也有子结构。10\%\text{\textendash}20\%的椭圆星系外区有弧状壳和其他不对称的结构，应当是被大星系引力撕碎并捕获的小星系遗迹（这个过程是星系并合的一种），壳层是星系吸积过程的直接证据。
 
-除了普通椭圆星系和 cD，还有暗椭圆星系。暗椭圆星系光度不足银河系光度十分之一，分为致密的矮椭圆星系 (dE)、暗弱的弥散矮椭圆星系和更暗的矮椭球星系 (dSph).多数矮星系内部有球状星团存在。dE 是小的椭圆星系，质量可能只有$10^{7}M_{\odot}$,但属性与一般的椭圆星系差别较大。dSph 本质和 dE 可能并无区别，但面亮度更低，光度甚至接近球状星团，因此大部分是我们无法观测到的。dSph 内部几乎没有年轻的恒星（只有 2\%的恒星年龄小于 25 亿年），主要由老年、中年恒星组成（诞生于宇宙年龄$3/7/15\,\mathrm{Gyr}$的三次暴发），说明 dSph 的形成时间很早。dSph 尘埃、气体很少，易受到主星系的引力作用从而碎裂、瓦解。dSph 中有大量暗物质，而球状星团中还没有探测到暗物质。
+除了普通椭圆星系和 cD, 还有暗椭圆星系。暗椭圆星系光度不足银河系光度十分之一，分为致密的矮椭圆星系 (dE)、暗弱的弥散矮椭圆星系和更暗的矮椭球星系 (dSph).多数矮星系内部有球状星团存在。dE 是小的椭圆星系，质量可能只有$10^{7}\,\unit{M_{\odot}}$,但属性与一般的椭圆星系差别较大。dSph 本质和 dE 可能并无区别，但面亮度更低，光度甚至接近球状星团，因此大部分是我们无法观测到的。dSph 内部几乎没有年轻的恒星（只有 2\%的恒星年龄小于 25 亿年），主要由老年、中年恒星组成（诞生于宇宙年龄$3/7/15\,\unit{Gyr}$的三次暴发），说明 dSph 的形成时间很早。dSph 尘埃、气体很少，易受到主星系的引力作用从而碎裂、瓦解。dSph 中有大量暗物质，而球状星团中还没有探测到暗物质。
 
 椭圆星系的光度决定了椭圆星系的很多特性。亮椭圆星系中恒星运动以随机（谈轨道随机主要指角速度方向随机，不会像银河系那样基本都指向北银极）的椭圆轨道运动为主，朝向统一方向的旋转运动少。反过来讲，较暗椭圆星系有较多的旋转运动，随机运动较小。dE 和 dSph 旋转和随机运动的相对重要性无明显规律。此外，一般来讲星系越暗，金属丰度越低。所有的 dSph 重元素丰度低，最亮的 dSph 金属丰度也不过太阳的$\dfrac{1}{30}$.原因在于这些星系恒星形成困难，难以通过热核反应生成重元素，同时引力较弱，即使生成了，由于主序阶段结束时剧烈的质量抛射，金属增丰的气体也容易脱离星系束缚来到星系际空间。
 
@@ -1606,7 +1606,7 @@ n=\frac{10\left(a-b\right)}{a}.
 
 不规则星系可分为 Irr\uppercase\expandafter{\romannumeral 1}和 Irr\uppercase\expandafter{\romannumeral 2}类。前者有隐约可见的旋涡结构，后者无定形外貌，可能是正在爆发或爆发后的星系，或者是受伴星系引力扰动而扭曲了的星系。
 
-小的不规则星系称为矮不规则星系，内部以年轻星族为主、气体含量多，质量不大$(<10^{10}M_{\odot})$.与矮椭球星系的不同之处是它们有气体和年轻蓝星，因此矮椭球星系很可能是失去或用尽了气体的矮不规则星系。
+小的不规则星系称为矮不规则星系，内部以年轻星族为主、气体含量多，质量不大$(<10^{10}\,\unit{M_{\odot}})$.与矮椭球星系的不同之处是它们有气体和年轻蓝星，因此矮椭球星系很可能是失去或用尽了气体的矮不规则星系。
 
 \paragraph{总结}~{}
 
@@ -1651,16 +1651,16 @@ I\left(x\right)=\frac{F}{\theta^{2}}=\dfrac{\dfrac{L}{4\pi{}d^{2}}}{\dfrac{D^{2}
 \end{equation}
 可以发现面亮度不依赖于星系的距离。(但实际上并非如此，我们会在宇宙学一节说明这一点。）
 
-自 (\ref{1.5.2}) 式出发，我们发现星系某一点处的面亮度有两种表示方法，一种是$I\left(x\right)=m\,\mathrm{mag\cdot arcsec^{-2}}$,即单位平方角秒的星等，用于孔径测光很方便。但星等涉及到距离，有时我们更关心星系的本征性质，因此需要用$L_{\odot}\cdot\mathrm{pc^{-2}}$作为单位。记太阳绝对星等为$M_{\odot}$,星系距离$d\,\mathrm{pc}$,第二种表示法与第一种表示法的关系为：
+自 (\ref{1.5.2}) 式出发，我们发现星系某一点处的面亮度有两种表示方法，一种是$I\left(x\right)=m\,\unit{mag\cdot arcsec^{-2}}$,即单位平方角秒的星等，用于孔径测光很方便。但星等涉及到距离，有时我们更关心星系的本征性质，因此需要用$\unit{L_{\odot}pc^{-2}}$作为单位。记太阳绝对星等为$M_{\odot}$,星系距离$d\,\unit{pc}$,第二种表示法与第一种表示法的关系为：
 \begin{align}
-m-M_{\odot}&=-2.5\log_{10}\left(\frac{\dfrac{L}{4\pi\left(d\,\mathrm{pc}\right)^{2}}}{\dfrac{L_{\odot}}{4\pi\left(10\,\mathrm{pc}\right)^{2}}}\right),\notag\\
+m-M_{\odot}&=-2.5\log_{10}\left(\frac{\dfrac{L}{4\pi\left(d\,\unit{pc}\right)^{2}}}{\dfrac{L_{\odot}}{4\pi\left(\qty{10}{pc}\right)^{2}}}\right),\notag\\
 L&=L_{\odot}\times10^{-\frac{m-M_{\odot}}{2.5}-2}\times d^{2},\notag\\
-I\left(R\right)&=\frac{L}{\left(d\,\mathrm{pc}\times1^{\prime\prime}\right)^{2}}=\left(\frac{64800}{\pi}\right)^{2}\frac{L}{\left(d\,\mathrm{pc}\right)^{2}}=\left(\frac{64800}{\pi}\right)^{2}\times10^{-\frac{m-M_{\odot}}{2.5}-2}L_{\odot}\cdot\mathrm{pc}^{-2}.
+I\left(R\right)&=\frac{L}{\left(d\,\unit{pc}\times1^{\prime\prime}\right)^{2}}=\left(\frac{64800}{\pi}\right)^{2}\frac{L}{\left(d\,\unit{pc}\right)^{2}}=\left(\frac{64800}{\pi}\right)^{2}\times10^{-\frac{m-M_{\odot}}{2.5}-2}\,\unit{L_{\odot}pc^{-2}}.
 \end{align}
 
-确立了描述光度的方法，就可以确定边界了。首先定义等照度线，它是星系图像上面亮度相等的像源的连线。通常取 B 波段$I_{\text{B}}(x)=25\,\mathrm{mag\cdot arcsec^{-2}}$的等照度线作为星系边界，对应的半径记为$R_{25}$.或者取霍姆伯格半径$I_{\text{B}}(x)=26.5\,\mathrm{mag\cdot arcsec^{-2}}$.
+确立了描述光度的方法，就可以确定边界了。首先定义等照度线，它是星系图像上面亮度相等的像源的连线。通常取 B 波段$I_{\text{B}}(x)=\qty{25}{mag\cdot{}arcsec^{-2}}$的等照度线作为星系边界，对应的半径记为$R_{25}$.或者取霍姆伯格半径$I_{\text{B}}(x)=\qty{26.5}{mag\cdot{}arcsec^{-2}}$.
 
-有一类星系被称作 Low Surface Brightness Galaxy (LSBGs),它们中心区域$I_{\text{B}}$低于$23\,\mathrm{mag\cdot arcsec^{-2}}$.多数 LSBGs 为矮星系。转动曲线显示质量光度比较大，可能的原因包括：暗物质比例大；平均气体密度小，恒星形成效率低，重子物质主要以气体而非恒星形式存在。
+有一类星系被称作 Low Surface Brightness Galaxy (LSBGs),它们中心区域$I_{\text{B}}$低于$\qty{23}{mag\cdot{}arcsec^{-2}}$.多数 LSBGs 为矮星系。转动曲线显示质量光度比较大，可能的原因包括：暗物质比例大；平均气体密度小，恒星形成效率低，重子物质主要以气体而非恒星形式存在。
 
 \subsection{宇宙学基础}
 宇宙学可能是本章节最有趣的部分，但是绪论部分已经特别长了，所以本节就简单推导一下用来描述宇宙的 Friedmann 方程，填一下宇宙学红移的坑并介绍一下宇宙历史吧。
@@ -1670,7 +1670,7 @@ I\left(R\right)&=\frac{L}{\left(d\,\mathrm{pc}\times1^{\prime\prime}\right)^{2}}
 \begin{equation}
 v=H_{0}\cdot D,
 \end{equation}
-其中$H_{0}$被称作哈勃常数，大约$70\,\mathrm{km\cdot{}s^{-1}\cdot Mpc^{-1}}$.习惯上还会引入一个参数$h$,它是哈勃常数数值的百分之一，和普朗克常数并没有什么关系。
+其中$H_{0}$被称作哈勃常数，大约$\qty{70}{km\cdot{}s^{-1}\cdot{}Mpc^{-1}}$.习惯上还会引入一个参数$h$,它是哈勃常数数值的百分之一，和普朗克常数并没有什么关系。
 
 即然星系都在离我们远去，一个自然的想法是进行时间反演，那是不是说明宇宙的最初所有物质都集中在一点？如果空间无限大而只有物质集中似乎也不是一个很合理图景，那有没有可能空间最初也集中在一点，只是随着时间不断膨胀。如同一根不断拉伸的橡皮筋，物质则是橡皮筋上的刻度，如此便解释了哈勃定律的线性关系。
 
@@ -1681,7 +1681,7 @@ v=\frac{\mathrm{d}r}{\mathrm{d}t}=\frac{\mathrm{d}a}{\mathrm{d}t}x=\dot{a}\frac{
 
 除了尺寸，方格纸的弯曲程度（度规）也是我们关心的部分。我们很自然期望物质分布对称一点这样度规也对称一点。人们在观测中提出了宇宙学原理：宇宙大尺度上是均匀和各向同性的。前者意味着处处一样，后者意味着朝各个方向看都是一样的。如此便要求空间具有最大对称性，可以推导出这个度规的形式为
 \begin{equation}
-\mathrm{d}s^{2}=c^{2}\mathrm{d}t^{2}-a^{2}\left(t\right)\left(\mathrm{d}r^{2}+S_{k}^{2}\left(r\right)\mathrm{d}\Omega^{2}\right),\quad S_{k}\left(r\right)=
+\mathrm{d}s^{2}=\mathrm{c}^{2}\mathrm{d}t^{2}-a^{2}\left(t\right)\left(\mathrm{d}r^{2}+S_{k}^{2}\left(r\right)\mathrm{d}\Omega^{2}\right),\quad S_{k}\left(r\right)=
 \begin{cases}
 \sin r,&k=1,\\
 r,&k=0,\\
@@ -1774,7 +1774,7 @@ H^{2}\left(t\right)=\left(\frac{\dot{a}\left(t\right)}{a\left(t\right)}\right)^{
 \end{equation}
 于是我们发现决定宇宙膨胀速率的要素有物质密度$\rho$,曲率$k$,还有暗能量$\Lambda$.如果要让现在的宇宙继续维持平坦（即$k=0$）且不考虑暗能量，密度就需要达到
 \begin{equation}
-\rho_{\text{cri}\left(t\right)}=\frac{3H_{0}^{2}\left(t\right)}{8\pi\mathrm{G}}\sim1.88\times10^{-29}h^{2}\,\mathrm{g\cdot{}cm^{-3}}.
+\rho_{\text{cri}\left(t\right)}=\frac{3H_{0}^{2}\left(t\right)}{8\pi\mathrm{G}}\sim1.88\times10^{-29}h^{2}\,\unit{g\cdot{}cm^{-3}}.
 \end{equation}
 这就是临界密度的表达式。
 
@@ -1814,7 +1814,7 @@ a\propto{}t^{1/2},H=\frac{1}{2t}.
 \end{equation}
 暗能量主导时宇宙指数膨胀
 \begin{equation}
-a=e^{Ht},H=\sqrt{\frac{8\pi\mathrm{G}\rho_{\Lambda}}{3}}.
+a=\mathrm{e}^{Ht},H=\sqrt{\frac{8\pi\mathrm{G}\rho_{\Lambda}}{3}}.
 \end{equation}
 最后，(\ref{1.6.8}) 式两侧同除现在的哈勃常数$H_{0}^{2}$可以得到无量纲形式，更方便地展示各组分的贡献
 \begin{equation}
@@ -1867,8 +1867,8 @@ d_{\theta}=\frac{l}{\theta}=a\chi=\frac{\chi}{1+z}.
 \begin{align}
 a\left(t\right)&=a_{0}\left(\frac32H_{0}t\right)^{\frac23}.\notag\\
 H\left(z\right)&=\frac{\dot a}{a}=\frac{2}{3t}=H_{0}\left(1+z\right)^{\frac32}.\notag\\
-\chi&=\frac{c}{H_{0}}\int_{0}^{z}\left(1+z\right)^{-\frac32}\mathrm{d}z=\frac{2c}{H_{0}}\left(1-\left(1+z\right)^{-\frac12}\right).\notag\\
-\theta&=\frac{l}{\chi}\left(1+z\right)=\frac{lH_{0}}{2c}\frac{1+z}{1-\left(1+z\right)^{-\frac12}}.
+\chi&=\frac{\mathrm{c}}{H_{0}}\int_{0}^{z}\left(1+z\right)^{-\frac32}\mathrm{d}z=\frac{2\mathrm{c}}{H_{0}}\left(1-\left(1+z\right)^{-\frac12}\right).\notag\\
+\theta&=\frac{l}{\chi}\left(1+z\right)=\frac{lH_{0}}{2\mathrm{c}}\frac{1+z}{1-\left(1+z\right)^{-\frac12}}.
 \end{align}
 于是我们发现，天体的角直径随红移增加先下降后上升，高红移处天体看起来反而更大了。
 
@@ -1887,17 +1887,17 @@ I(x)=\frac{F}{\theta^{2}}=\frac{L/(4\pi d_{L}^{2})}{D^{2}/d_{\theta}^{2}}=\frac{
 不再是常数，而是随着红移增加快速下降，因此高红移天体非常暗。
 
 \subsubsection{宇宙历史}
-最后我们简单介绍一下宇宙历史。首先是大爆炸，宇宙诞生。$0\text{\textendash}10^{-43}\,\mathrm{s}$被称作普朗克时期，此时$T\sim10^{32}\,\mathrm{K}$,宇宙半径$\sim0.01\,\mathrm{cm}$,四大作用力基本统一。我们认为宇宙中存在一种特殊的场（真空能），它可以推动空间随时间的指数膨胀，按半径算的话，宇宙至少膨胀了$10^{25}$,由于真空能能量密度不变，总能量至少翻了$10^{75}$,这个过程被称作暴胀 (Inflation).暴胀大概在宇宙年龄$10^{-30}\,\mathrm{s}$就结束了。
+最后我们简单介绍一下宇宙历史。首先是大爆炸，宇宙诞生。$0\text{\textendash}10^{-43}\,\unit{s}$被称作普朗克时期，此时$T\sim10^{32}\,\unit{K}$,宇宙半径$\sim\qty{0.01}{cm}$,四大作用力基本统一。我们认为宇宙中存在一种特殊的场（真空能），它可以推动空间随时间的指数膨胀，按半径算的话，宇宙至少膨胀了$10^{25}$,由于真空能能量密度不变，总能量至少翻了$10^{75}$,这个过程被称作暴胀 (Inflation).暴胀大概在宇宙年龄$10^{-30}\,\unit{s}$就结束了。
 
 接下来暴胀场的能量会转移到标准模型粒子中，此时物质都是相对论性的基本粒子和其反粒子，能量等于温度，所以宇宙变得高热，充满了可以把任何原子核粉碎为其组成粒子的高能光子。此时光子和粒子数目大致相等。但值得注意的是，如今的宇宙几乎没有反物质，因此这些粒子含量其实是不对称的。
 
 随着宇宙膨胀温度下降，重子和反重子大量湮灭（温度降低无法进行逆过程），留下大量轻子（光子、正负电子、正负$\mu$介子，中微子以及少数核子）。此时电子、光子、中微子耦合在一起（持续相互碰撞，相互产生）。宇宙一片黑暗。
 
-等到宇宙诞生$1\,\mathrm{s}$时，由于温度进一步降低，中微子退耦了，散射了出去，形成了中微子背景。不过实际上尚未观测到。
+等到宇宙诞生$\qty{1}{s}$时，由于温度进一步降低，中微子退耦了，散射了出去，形成了中微子背景。不过实际上尚未观测到。
 
-第三分钟，随着温度进一步下降 ($10^{9}\,\mathrm{K}$),粒子动能不足以撞散原子核，质子和中子开始结合成氢、氦等元素。等宇宙膨胀速率大于质子中子碰撞速率的时候，合成就停止了。以质量计，约四分之三的质子变为氢原子核，剩下四分之一变成氦，还有少量的氘、锂和其他氢原子核。理论计算得到的元素丰度与观测结果符合得很好。
+第三分钟，随着温度进一步下降 ($10^{9}\,\unit{K}$),粒子动能不足以撞散原子核，质子和中子开始结合成氢、氦等元素。等宇宙膨胀速率大于质子中子碰撞速率的时候，合成就停止了。以质量计，约四分之三的质子变为氢原子核，剩下四分之一变成氦，还有少量的氘、锂和其他氢原子核。理论计算得到的元素丰度与观测结果符合得很好。
 
-之后，温度进一步下降 ($3000\,\mathrm{K}$),电子开始和质子结合在一起。这个过程被称作 recombination.加个 re 是因为早期学者认为等离子体的电中性是常态，现在是回到常态。然而并没有什么最初的常态，这就是第一次 combination.电子光子开始退耦，产生微波背景辐射 (cosmic microwave background, CMB),时间大约是 38 万年，或者说红移$z=1100$左右。此时宇宙处处都在发光，我们如今所在的位置也在发光，只是此地的 CMB 光子早就跑到遥远的地方去了。如今观测到的 CMB 温度大约只有$3\,\mathrm{K}$,但 CMB 光子合计能量巨大，也是射电波段的主要辐射。
+之后，温度进一步下降 ($\qty{3000}{K}$),电子开始和质子结合在一起。这个过程被称作 recombination.加个 re 是因为早期学者认为等离子体的电中性是常态，现在是回到常态。然而并没有什么最初的常态，这就是第一次 combination.电子光子开始退耦，产生微波背景辐射 (cosmic microwave background, CMB),时间大约是 38 万年，或者说红移$z=1100$左右。此时宇宙处处都在发光，我们如今所在的位置也在发光，只是此地的 CMB 光子早就跑到遥远的地方去了。如今观测到的 CMB 温度大约只有$\qty{3}{K}$,但 CMB 光子合计能量巨大，也是射电波段的主要辐射。
 
 宇宙进一步膨胀，光子压强不再能阻止物质在引力作用下坍缩。$10^{8}$年第一批恒星和星系诞生。它们发出的光电离了电子，此时进入再电离时期（这个称呼倒是对了）。再电离时期是天文学的热点研究领域之一。
 
@@ -1911,7 +1911,7 @@ I(x)=\frac{F}{\theta^{2}}=\frac{L/(4\pi d_{L}^{2})}{D^{2}/d_{\theta}^{2}}=\frac{
 \label{距离阶梯。}
 \end{figure}
 
-不同的测距方法适用于不同的距离。最基本的三角视差法原理我们在《球面天文》已经介绍过了，通常只适用于$30-500\,\mathrm{pc}$范围内的恒星。它比较依赖望远镜的分辨率。一般来讲，地面望远镜单镜分辨率$\sim10\,\mathrm{mas}$,地面光学/近红外干涉$\sim1\,\mathrm{mas}$,甚长基线干涉$\sim0.1\,\mathrm{mas}$,空间天体测量卫星 Hipparcos 可达$1\,\mathrm{mas}$, 天体测量卫星 Gaia 可达$0.04\,\mathrm{mas}$.有关 Gaia 卫星的原理我们可以在这里提一下，它沿用了 Hipparcos 的扫描空间天体测量原理 (the principle of scanning space astrometry).考虑距离太阳一个天文单位的观测者，恒星视差$\varpi$会造成恒星在天球上的位移，具体形式为$\varpi\sin\theta$,其中$\theta$是天体方向单位矢量与太阳方向单位矢量的夹角。令卫星缓慢自转，当恒星通过卫星搭载的望远镜的视场时，恒星位移垂直自转轴的部分会影响到恒星通过焦平面的时间，因此可将视差测定转换成时间测定。同一视场内$\theta$角差异极小，时间的差值难以测量，因此需要在垂直自转轴的平面上放置两个指向呈一定大角度$\Gamma$的望远镜，比较两个视场内的天体。利用该方法不仅可以实现相对视差测量，还可在不依赖背景天体的情况下实现绝对视差测量。如图\ref{absolute_parallax}左所示，指向 P 点的望远镜测得的沿扫描方向视差位移 (along-scan shift, 简称 AL shift) 等于$0$时，指向 F 点的望远镜测得的沿扫描方向视差位移为$\varpi_{F}\sin\theta\sin\psi=\varpi_{F}\sin\xi\sin\Gamma$,其中$\xi$是太阳方向单位矢量与自转轴的夹角。如此绝对视差测量就变得可行。
+不同的测距方法适用于不同的距离。最基本的三角视差法原理我们在《球面天文》已经介绍过了，通常只适用于$30\text{\textendash}500\,\unit{pc}$范围内的恒星。它比较依赖望远镜的分辨率。一般来讲，地面望远镜单镜分辨率$\sim\qty{10}{mas}$,地面光学/近红外干涉$\sim\qty{1}{mas}$,甚长基线干涉$\sim\qty{0.1}{mas}$,空间天体测量卫星 Hipparcos 可达$\qty{1}{mas}$, 天体测量卫星 Gaia 可达$\qty{0.04}{mas}$.有关 Gaia 卫星的原理我们可以在这里提一下，它沿用了 Hipparcos 的扫描空间天体测量原理 (the principle of scanning space astrometry).考虑距离太阳一个天文单位的观测者，恒星视差$\varpi$会造成恒星在天球上的位移，具体形式为$\varpi\sin\theta$,其中$\theta$是天体方向单位矢量与太阳方向单位矢量的夹角。令卫星缓慢自转，当恒星通过卫星搭载的望远镜的视场时，恒星位移垂直自转轴的部分会影响到恒星通过焦平面的时间，因此可将视差测定转换成时间测定。同一视场内$\theta$角差异极小，时间的差值难以测量，因此需要在垂直自转轴的平面上放置两个指向呈一定大角度$\Gamma$的望远镜，比较两个视场内的天体。利用该方法不仅可以实现相对视差测量，还可在不依赖背景天体的情况下实现绝对视差测量。如图\ref{absolute_parallax}左所示，指向 P 点的望远镜测得的沿扫描方向视差位移 (along-scan shift, 简称 AL shift) 等于$0$时，指向 F 点的望远镜测得的沿扫描方向视差位移为$\varpi_{F}\sin\theta\sin\psi=\varpi_{F}\sin\xi\sin\Gamma$,其中$\xi$是太阳方向单位矢量与自转轴的夹角。如此绝对视差测量就变得可行。
 \begin{figure}[!htp]
 \centering
 \includegraphics[width=0.9\textwidth]{figures/figure1_19.png}
@@ -1920,7 +1920,7 @@ I(x)=\frac{F}{\theta^{2}}=\frac{L/(4\pi d_{L}^{2})}{D^{2}/d_{\theta}^{2}}=\frac{
 \label{absolute_parallax}
 \end{figure}
 
-图\ref{距离阶梯。}中的光谱法一般翻译成分光视差，但它其实和“视差”没关系。视差是一种几何手段，而分光视差可以算是标准烛光法的一种。蜡烛的光度是常量，拿到不同远处看起来则不同，即亮度发生了变化，我们在观测中可以得到天体的亮度，如果再知道它的光度，很容易就能算出距离。唯一的问题是不同天体光度不同，于是我们需要标准烛光。比如造父变星，它是一类光度周期性变化的恒星，且有周光关系：周期越长光度越高。长周期的造父变星光度可达$10^{6}L_{\odot}$,适用于 6000 万光年距离的测距。通过三角视差确定近邻造父变星的距离和实际光度，就可以将其应用在其他造父变星上了。（用下一级阶梯为上一级阶梯定标，所以叫距离阶梯。）\uppercase\expandafter{\romannumeral 1}a 型超新星也可作为标准烛光，原理前文已经解释过了。回到分光视差，我们知道不同质量的主序星会发出不同类型的光谱，观测中可借此区分，所以叫分光。接着假设光谱型相同的恒星光度相同，结合亮度就可测距，因为涉及到测距，所以才叫视差。Tully-Fisher 关系和漩涡星系有关，牛顿引力告诉我们
+图\ref{距离阶梯。}中的光谱法一般翻译成分光视差，但它其实和“视差”没关系。视差是一种几何手段，而分光视差可以算是标准烛光法的一种。蜡烛的光度是常量，拿到不同远处看起来则不同，即亮度发生了变化，我们在观测中可以得到天体的亮度，如果再知道它的光度，很容易就能算出距离。唯一的问题是不同天体光度不同，于是我们需要标准烛光。比如造父变星，它是一类光度周期性变化的恒星，且有周光关系：周期越长光度越高。长周期的造父变星光度可达$10^{6}\,\unit{L_{\odot}}$,适用于 6000 万光年距离的测距。通过三角视差确定近邻造父变星的距离和实际光度，就可以将其应用在其他造父变星上了。（用下一级阶梯为上一级阶梯定标，所以叫距离阶梯。）\uppercase\expandafter{\romannumeral 1}a 型超新星也可作为标准烛光，原理前文已经解释过了。回到分光视差，我们知道不同质量的主序星会发出不同类型的光谱，观测中可借此区分，所以叫分光。接着假设光谱型相同的恒星光度相同，结合亮度就可测距，因为涉及到测距，所以才叫视差。Tully-Fisher 关系和漩涡星系有关，牛顿引力告诉我们
 \begin{equation}
 M=\frac{V_{\max}^{2}R}{\mathrm{G}},
 \end{equation}
@@ -1930,6 +1930,7 @@ M=\frac{V_{\max}^{2}R}{\mathrm{G}},
 \begin{equation}
 V_{\mathrm{r}}=H_{0}d+V_{\text{pec}}.
 \end{equation}
-富团内本动速度高达$1500\,\mathrm{km\cdot s^{-1}}$.
+富团内本动速度高达$\qty{1500}{km\cdot{}s^{-1}}$.
+
 \printbibliography
 \end{document}
