@@ -31,14 +31,14 @@ U_{\text{g}}&=-\mathrm{G}\int_{0}^{R}\frac{4}{3}\pi r^{3}\rho \frac{4\pi r^{2}\r
 
 到了 1920 年代，卢瑟福等人已经测定了原子核的质量，同时相对论质能方程的提出让人们意识到恒星的能量可能来自于热核反应。那么，恒星内部的环境满足进行核聚变的条件吗？我们先估计一下电荷数最小的氢原子聚变所需克服的经典库仑势垒。取质子直径$r\sim10^{-15}\,\unit{m}$,所需的温度为
 \begin{align}
-\frac{1}{2}m_{\ce{H}}v^{2}&=\frac{3}{2}k_{\text{B}}T_{\text{classical}}=\frac{1}{4\pi\varepsilon_{0}}\frac{Z_{1}Z_{2}e^{2}}{r},\\
-T_{\text{classical}}&=\frac{Z_{1}Z_{2}e^{2}}{6\pi\varepsilon_{0}k_{\text{B}}r}\sim10^{10}\,\unit{K}.
+\frac{1}{2}m_{\ce{H}}v^{2}&=\frac{3}{2}k_{\text{B}}T_{\text{classical}}=\frac{1}{4\pi\varepsilon_{0}}\frac{Z_{1}Z_{2}{\color{blue}{\ce{e}}}^{2}}{r},\\
+T_{\text{classical}}&=\frac{Z_{1}Z_{2}{\color{blue}{\ce{e}}}^{2}}{6\pi\varepsilon_{0}k_{\text{B}}r}\sim10^{10}\,\unit{K}.
 \end{align}
 对于恒星来讲这个温度实在是难以达到。好在量子图景下，即使核子动能不足以跨越库仑势垒，它也有一定的概率穿越它。此时所需的温度为
 \begin{align}
-\frac{1}{4\pi\varepsilon_{0}}\frac{Z_{1}Z_{2}e^{2}}{\lambda}&=\frac{p^{2}}{2m_{\ce{H}}}=\frac{\left(h/\lambda\right)^{2}}{2m_{\ce{H}}},\\
-\lambda&=\frac{2\pi\varepsilon_{0}h^{2}}{Z_{1}Z_{2}e^{2}m_{\ce{H}}}\to r,\\
-T_{\text{quantum}}&=\frac{Z_{1}^{2}Z_{2}^{2}e^{4}m_{\ce{H}}}{12\pi^{2}\varepsilon_{0}^{2}k_{\text{B}}h^{2}}\sim10^{7}\,\unit{K}.
+\frac{1}{4\pi\varepsilon_{0}}\frac{Z_{1}Z_{2}{\color{blue}{\ce{e}}}^{2}}{\lambda}&=\frac{p^{2}}{2m_{\ce{H}}}=\frac{\left(h/\lambda\right)^{2}}{2m_{\ce{H}}},\\
+\lambda&=\frac{2\pi\varepsilon_{0}h^{2}}{Z_{1}Z_{2}{\color{blue}{\ce{e}}}^{2}m_{\ce{H}}}\to r,\\
+T_{\text{quantum}}&=\frac{Z_{1}^{2}Z_{2}^{2}{\color{blue}{\ce{e}}}^{4}m_{\ce{H}}}{12\pi^{2}\varepsilon_{0}^{2}k_{\text{B}}h^{2}}\sim10^{7}\,\unit{K}.
 \end{align}
 这个温度就比较容易达到了。我们可以来估计一下太阳内部的压力和温度。根据 (\ref{2.1.2}) 式可知，
 \begin{equation}
@@ -50,7 +50,7 @@ P=\int_{0}^{P}\mathrm{d}P=\int_{R}^{0}-\frac{\mathrm{G}M_{r}\rho}{r^{2}}\mathrm{
 
 氢核聚变是最为常见的热核反应，其核反应方程式为
 \begin{equation}
-4{}^{1}\ce{H}\to\ce{^{4}He}+2\ce{e+}+2\nu_{\ce{e}}+\text{energy}.
+\ce{4{}^{1}H ->{}^{4}He +2e^{+}}+2\nu_{\ce{e}}+\text{energy}.
 \end{equation}
 其中$\nu_{\ce{e}}$是电子中微子。此过程中释放的能量为$E=\left(4m_{\ce{H}}-m_{\ce{He}}\right)\mathrm{c}^{2}=\qty{4e-5}{erg}$,燃烧效率为$0.7\%$,即以质量计有$0.7\%$的初始燃料完全转化为能量。
 
@@ -67,42 +67,42 @@ P=\int_{0}^{P}\mathrm{d}P=\int_{R}^{0}-\frac{\mathrm{G}M_{r}\rho}{r^{2}}\mathrm{
 
 碳氮氧循环的路径则为
 \begin{align*}
-\ce{^{12}C}+\ce{^{1}H}&\to\ce{^{13}N}+\gamma,\\
-\ce{^{13}N}&\to\ce{^{13}C}+\ce{e+}+\nu_{\ce{e}},\\
-\ce{^{13}C}+\ce{^{1}H}&\to\ce{^{14}N}+\gamma,\\
-\ce{^{14}N}+\ce{^{1}H}&\to\ce{^{15}O}+\gamma,\\
-\ce{^{15}O}&\to\ce{^{15}N}+\ce{e+}+\nu_{\ce{e}},\\
-\ce{^{15}N}+\ce{^{1}H}&\to\ce{^{12}C}+\ce{^{4}He}.
+\ce{^{12}C +^{1}H &->^{13}N}+\gamma,\\
+\ce{^{13}N &->^{13}C +e+}+\nu_{\ce{e}},\\
+\ce{^{13}C +^{1}H &->^{14}N}+\gamma,\\
+\ce{^{14}N +^{1}H &->^{15}O}+\gamma,\\
+\ce{^{15}O &->^{15}N +e+}+\nu_{\ce{e}},\\
+\ce{^{15}N +^{1}H &->^{12}C +^{4}He}.
 \end{align*}
 
 温度高于$10^{8}\,\unit{K}$，将会进行氦燃烧：
 \begin{align*}
-\ce{^{4}He}+\ce{^{4}He}&\to\ce{^{8}Be},\\
-\ce{^{8}Be}+\ce{^{4}He}&\to\ce{^{12}C}+\gamma.
+\ce{^{4}He +^{4}He &->^{8}Be},\\
+\ce{^{8}Be +^{4}He &->^{12}C}+\gamma.
 \end{align*}
 
 温度高于$\qty{5e8}{K}$时进行碳燃烧，共有五种路径：
 \begin{align}
-\ce{^{12}C}+\ce{^{12}C}&\to\ce{^{24}Mg}+\gamma,\notag\\
-&\to\ce{^{23}Na}+\ce{p},\notag\\
-&\to\ce{^{20}Ne}+\ce{^{4}He},\notag\\
-&\to\ce{^{23}Mg}+\ce{n},\notag\\
-&\to\ce{^{16}O}+2\ce{^{4}He}.\notag
+\ce{^{12}C +^{12}C &->^{24}Mg}+\gamma,\notag\\
+\ce{&->^{23}Na +p},\notag\\
+\ce{&->^{20}Ne +^{4}He},\notag\\
+\ce{&->^{23}Mg +n},\notag\\
+\ce{&->^{16}O +2^{4}He}.\notag
 \end{align}
 
 温度高于$\qty{1.5e9}{K}$时进行氧燃烧
 \begin{align}
-\ce{^{16}O}+\ce{^{16}O}&\to\ce{^{32}S}+\gamma,\notag\\
-&\to\ce{^{31}P}+\ce{p},\notag\\
-&\to\ce{^{28}Si}+\ce{^{4}He},\notag\\
-&\to\ce{^{31}S}+\ce{n},\notag\\
-&\to\ce{^{24}Mg}+2\ce{^{4}He}.\notag
+\ce{^{16}O +^{16}O &->^{32}S}+\gamma,\notag\\
+\ce{&->^{31}P +p},\notag\\
+\ce{&->^{28}Si +^{4}He},\notag\\
+\ce{&->^{31}S +n},\notag\\
+\ce{&->^{24}Mg +2^{4}He}.
 \end{align}
 
 温度高于$\qty{3e9}{K}$时进行硅燃烧
 \begin{align}
-\ce{^{28}Si}+\ce{^{28}Si}&\to\ce{^{56}Ni}+\gamma,\notag\\
-\ce{^{56}Ni}&\to\ce{^{56}Fe}+2\ce{e+}+2\nu_{\ce{e}}.\notag
+\ce{^{28}Si +^{28}Si &->^{56}Ni}+\gamma,\notag\\
+\ce{^{56}Ni &->^{56}Fe +2e+}+2\nu_{\ce{e}}.\notag
 \end{align}
 
 更重元素的燃烧要求核心有更高的温度。热核反应导致恒星内部形成洋葱状结构，越里面的元素越重，温度越高。
@@ -182,7 +182,7 @@ P_{\text{g}}=\frac{\rho k_{\text{B}}T}{\mu m_{\ce{H}}}.
 \end{equation}
 进一步，我们需要确定恒星中气体的相对分子量。考虑完全电离的中性等离子体，记$n_{i}$是各元素数密度，$\chi_{i}$是各元素所占的质量分数，$Z_{i}$是该元素的质子数（电荷数），$A_{i}$是该元素的质量数（即质子和中子数和），那么气压将是电子气体气压和各离子气体气压之和
 \begin{equation}
-P_{\text{g}}=n_{e}k_{\text{B}}T+\sum_{i}n_{i}k_{\text{B}}T=\sum_{i}\left(Z_{i}+1\right)n_{i}k_{\text{B}}T=\sum_{i}\left(1+Z_{i}\right)\frac{\rho\chi_{i}k_{\text{B}}T}{A_{i}m_{\ce{H}}}=\frac{\rho k_{\text{B}}T}{\mu m_{\ce{H}}}.
+P_{\text{g}}=n_{{\color{blue}{\ce{e}}}}k_{\text{B}}T+\sum_{i}n_{i}k_{\text{B}}T=\sum_{i}\left(Z_{i}+1\right)n_{i}k_{\text{B}}T=\sum_{i}\left(1+Z_{i}\right)\frac{\rho\chi_{i}k_{\text{B}}T}{A_{i}m_{\ce{H}}}=\frac{\rho k_{\text{B}}T}{\mu m_{\ce{H}}}.
 \end{equation}
 因此相对分子量为
 \begin{equation}
@@ -200,7 +200,7 @@ P_{\text{g}}&=\rho k_{\text{B}}T\frac{X+\dfrac{1}{4}Y}{m_{\ce{H}}}.
 \end{align}
 同时我们还能给出电子气体的相对分子质量来表征其贡献
 \begin{equation}
-\mu_{e}^{-1}=\sum_{i}\frac{Z_{i}\chi_{i}}{A_{i}}\approx X+\frac{1}{2}(1-X)=\frac{1+X}{2}.
+\mu_{{\color{blue}{\ce{e}}}}^{-1}=\sum_{i}\frac{Z_{i}\chi_{i}}{A_{i}}\approx X+\frac{1}{2}(1-X)=\frac{1+X}{2}.
 \end{equation}
 
 当引力越来越强时，即使密度不断提高，理想气体所提供的气压也不足以抗衡引力，此时电子简并压逐渐发挥主导作用。根据泡利不相容原理，电子不可能占据两个相同的能态，宏观上呈现出一定的抗压缩性。
@@ -254,7 +254,7 @@ a_{n}&=\left[\frac{\left(n+1\right)K}{4\pi\mathrm{G}}\rho_{\text{c}}^{\frac{1}{n
 
 中微子会和四氯乙烯相互作用，生成半衰期$35$天的$\ce{Ar}$:
 \begin{equation}
-\ce{^{37}Cl}+\nu_{\ce{e}}\to\ce{^{37}Ar}+\ce{e-}.\\
+\ce{^{37}Cl}+\nu_{\ce{e}}\ce{->^{37}Ar +e-}.\\
 \end{equation}
 要进行反应$\nu_{\ce{e}}$能量最低达到$\qty{0.814}{MeV}$, 而$\ce{^{37}Ar}$的半衰期为 35 天。
 
@@ -307,8 +307,8 @@ Schonberg-Chandrasekhar 质量极限：主序结束后在恒星核心形成一�
 
 比$\ce{Fe}$轻的元素来自于恒星内部的核合成，比$\ce{Fe}$重的元素来自中子俘获反应。
 \begin{align}
-\left(Z,A\right)+\ce{n}&\to\left(Z,A+1\right)+\gamma,\\
-\left(Z,A+1\right)&\to\left(Z+1,A+1\right)+\ce{e-}+\overline{\nu}_{\ce{e}}.
+\left(Z,A\right)+\ce{n &->}\left(Z,A+1\right)+\gamma,\\
+\left(Z,A+1\right)\ce{&->}\left(Z+1,A+1\right)+\ce{e-}+\overline{\nu}_{\ce{e}}.
 \end{align}
 中子俘获反应有两种方式：慢中子俘获 (s-process) 和快中子俘获 (r-process).前者发生在中小质量恒星的渐近巨星支，后者发生在核坍缩超新星爆发和中子星并合。比如$\ce{^{26}Al}$只产生于核坍缩超新星爆发，半衰期为$\qty{7e5}{yr}$,衰变过程产生能量为$\qty{1.8}{Myr}$的$\gamma$射线，可追踪该辐射研究大质量恒星形成。
 
@@ -534,7 +534,7 @@ $\ce{O}$型星$\to$蓝超巨星$\to$红超巨星$\to$ WR 星$\to$ \uppercase\exp
 白矮星基本参数：
 质量$\sim0.2\text{\textendash}1.3\,\unit{M_{\odot}}$, 半径$\sim5\times10^{8}\text{\textendash}10^{9}\,\unit{cm}$, 密度$\sim10^{5}\text{\textendash}10^{7}\,\unit{g\cdot cm^{-3}}$, 绝对星等$M_{\text{V}}\sim8\text{\textendash}16$, 有效温度$\sim5\times10^{3}\text{\textendash}4\times10^{4}\,\unit{K}$,自转周期$\ge\qty{10}{s}$. 外层包裹着厚度约$\qty{50}{km}$，主要由氢组成的大气。
 
-对于非相对论性 ($v_{e}\ll c$) 电子，$P_{e}\propto\rho^{\frac{5}{3}}$,对于相对论性电子，$P_{e}\propto\rho^{\frac{4}{3}}$.
+对于非相对论性 ($v_{{\color{blue}{\ce{e}}}}\ll\mathrm{c}$) 电子，$P_{{\color{blue}{\ce{e}}}}\propto\rho^{\frac{5}{3}}$,对于相对论性电子，$P_{{\color{blue}{\ce{e}}}}\propto\rho^{\frac{4}{3}}$.
 
 随着白矮星质量增大，白矮星质量增大，简并气体运动变成相对论性。此时引力$\dfrac{\mathrm{G}\rho{}M}{R^{2}}\propto{}\dfrac{M^{2}}{R^{5}}$比压力$\dfrac{\mathrm{d}P}{\mathrm{d}R}\propto{}\dfrac{\rho^{\frac{4}{3}}}{R}\propto{}\dfrac{M^{\frac{4}{3}}}{R^{5}}$增长得更快，因此白矮星有质量上限。
 
@@ -548,7 +548,7 @@ $\ce{O}$型星$\to$蓝超巨星$\to$红超巨星$\to$ WR 星$\to$ \uppercase\exp
 
 等总质量达到钱德拉塞卡质量极限时转变为\uppercase\expandafter{\romannumeral1}a 型超新星，光变在爆发后 20 天达到峰值，接着在一个月左右的时间内快速下降$\ce{^{56}Ni}$衰变，然后缓慢下降$\ce{^{56}Co}$衰变。
 
-M。菲利普发现 B 波段峰值星等与峰值后 15 天星等的衰减量有很好的相关性。光度衰减得越快，峰值光度越低。利用该关系将光变曲线归一化后，\uppercase\expandafter{\romannumeral1}a 型超新星几乎具有相同的峰值光度，是已知最好的标准烛光源。
+菲利普发现 B 波段峰值星等与峰值后 15 天星等的衰减量有很好的相关性。光度衰减得越快，峰值光度越低。利用该关系将光变曲线归一化后，\uppercase\expandafter{\romannumeral1}a 型超新星几乎具有相同的峰值光度，是已知最好的标准烛光源。
 
 \subsection{中子星}
 

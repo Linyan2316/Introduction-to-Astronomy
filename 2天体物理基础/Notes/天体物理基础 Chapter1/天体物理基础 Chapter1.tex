@@ -277,7 +277,7 @@ F_{\nu}=\vec{\mathcal{F}_{\nu}}\cdot\vec{n}.
 \end{align}
 总计所有方向积分就得到体元从各个方向得到的能量。定义辐射密度
 \begin{equation}
-U_{\nu}=\frac1c\int_{4\pi}I_{\nu}\mathrm{d}\Omega=\frac{4\pi}{\mathrm{c}}J_{\nu},
+U_{\nu}=\frac{1}{\mathrm{c}}\int_{4\pi}I_{\nu}\mathrm{d}\Omega=\frac{4\pi}{\mathrm{c}}J_{\nu},
 \end{equation}
 表示通过辐射场内某处单位体积单位频率间隔的辐射能。
 
@@ -412,7 +412,7 @@ n_x,n_y,n_z,i
 \end{equation}
 因此辐射强度和频率三次方成正比。辐射源靠近我们运动时，我们所观测到的频率会变高，上式告诉我们辐射强度会增强，反之变弱。实际观测中我们确实发现了该效应所引起的现象。超大质量黑洞吸积时会在两极产生喷流，但多数时候只能观测到一支喷流，原因就是另一支的物质远离我们运动，难以观测到。
 
-接着我们来研究发射系数和吸收系数的变化。同样考虑光子数，同一体元$dV$发射的光子数是一定的：
+接着我们来研究发射系数和吸收系数的变化。同样考虑光子数，同一体元$\mathrm{d}V$发射的光子数是一定的：
 \begin{equation}
 \frac{j_\nu\mathrm{d}V\mathrm{d}\Omega\mathrm{d}\nu\mathrm{d}t}{h\nu}=\frac{j_\nu'\mathrm{d}V'\mathrm{d}\Omega'\mathrm{d}\nu'\mathrm{d}t'}{h\nu'},
 \end{equation}
@@ -634,10 +634,10 @@ n^{2}_{\text{o,e}}=1-\frac{2V\left(1-V\right)}{2\left(1-V\right)-U\sin^{2}\theta
 \end{equation}
 其中
 \begin{align}
-V&=\left(\frac{\omega_{\text{p}}}{\omega}\right)^{2},\omega_{\text{p}}=\sqrt{\frac{4\pi N_{e}e^{2}}{m_{0}}},\\
-U&=\left(\frac{\omega_{\text{L}}}{\omega}\right)^{2},\omega_{\text{L}}=\frac{eB}{m_{0}\mathrm{c}},
+V&=\left(\frac{\omega_{\text{p}}}{\omega}\right)^{2},\omega_{\text{p}}=\sqrt{\frac{4\pi N_{{\color{blue}{\ce{e}}}}{\color{blue}{\ce{e}}}^{2}}{m_{0}}},\\
+U&=\left(\frac{\omega_{\text{L}}}{\omega}\right)^{2},\omega_{\text{L}}=\frac{{\color{blue}{\ce{e}}}B}{m_{0}\mathrm{c}},
 \end{align}
-$m_{0}$是电子质量。$\omega_{\text{p}}$被称作等离子体频率，$\omega_{\text{L}}$被称作 Larmor 频率，是电子在磁场中的回旋频率。$\text{o}$表示寻常波折射率，分母取正号，$\text{e}$表示非常波折射率，分母取负号。
+${\color{blue}{\ce{e}}}$是电子电量，$m_{0}$是电子质量。$\omega_{\text{p}}$被称作等离子体频率，$\omega_{\text{L}}$被称作 Larmor 频率，是电子在磁场中的回旋频率。$\text{o}$表示寻常波折射率，分母取正号，$\text{e}$表示非常波折射率，分母取负号。
 
 传播方向平行于磁场时，
 \begin{equation}
@@ -668,11 +668,11 @@ n^{2}_{\text{o,e}}=1-\frac{\omega_{\text{p}}^{2}}{\omega\left(\omega\pm\omega_{\
 \end{equation}
 将 (\ref{1.2.40}) 式代入其中，得到
 \begin{equation}
-\Delta{}=\frac{2\pi e^{3}}{m_{0}^{2}\mathrm{c}^{2}\omega^{2}}N_{e}rB\cos\theta=\frac{2\pi e^{3}}{m_{0}^{2}\mathrm{c}^{2}\omega^{2}}\int_{0}^{r}N_{e}B\cos\theta\mathrm{d}r.
+\Delta{}=\frac{2\pi{\color{blue}{\ce{e}}}^{3}}{m_{0}^{2}\mathrm{c}^{2}\omega^{2}}N_{{\color{blue}{\ce{e}}}}rB\cos\theta=\frac{2\pi{\color{blue}{\ce{e}}}^{3}}{m_{0}^{2}\mathrm{c}^{2}\omega^{2}}\int_{0}^{r}N_{{\color{blue}{\ce{e}}}}B\cos\theta\mathrm{d}r.
 \end{equation}
 所以偏振面的旋转角和等离子体密度、磁场、传播距离和传播方向与磁场方向夹角的余弦有关，且与偏振波的波长平方成正比。故定义旋转量度
 \begin{equation}
-R=\frac{e^{3}}{2\pi m^{2}\mathrm{c}^{4}}\int_{0}^{r}N_{e}B\cos\theta\mathrm{d}r,
+R=\frac{{\color{blue}{\ce{e}}}^{3}}{2\pi m^{2}\mathrm{c}^{4}}\int_{0}^{r}N_{{\color{blue}{\ce{e}}}}B\cos\theta\mathrm{d}r,
 \end{equation}
 波长为$\lambda$的电磁波穿过长度为$r$的等离子体后偏振面旋转的角度为
 \begin{equation}
@@ -691,11 +691,11 @@ v_{\text{g}}=\frac{\partial{}\omega}{\partial{}k}=\mathrm{c}\sqrt{1-\frac{\omega
 \end{equation}
 既然相速度有差异，那么不同频率传输到地球所花费的时间自然也不同：
 \begin{equation}
-t_{\text{p}}=\int_{0}^{r}\frac{\mathrm{d}r}{v_{\text{g}}}\approx\frac{r}{\mathrm{c}}+\frac{2\pi e^{2}}{m\mathrm{c}\omega^{2}}\int_{0}^{r}n\mathrm{d}r,
+t_{\text{p}}=\int_{0}^{r}\frac{\mathrm{d}r}{v_{\text{g}}}\approx\frac{r}{\mathrm{c}}+\frac{2\pi{\color{blue}{\ce{e}}}^{2}}{m\mathrm{c}\omega^{2}}\int_{0}^{r}n\mathrm{d}r,
 \end{equation}
 因此距离地球$r$的脉冲星发出的频率为$\nu_{1}$和$\nu_{2}$的脉冲信号到达地球的时间差为
 \begin{equation}
-\Delta{}\tau=\frac{e^{2}}{2\pi m\mathrm{c}}\left(\frac{1}{\nu_{1}^{2}}-\frac{1}{\nu_{2}^{2}}\right)\int_{0}^{r}n\mathrm{d}r.
+\Delta{}\tau=\frac{{\color{blue}{\ce{e}}}^{2}}{2\pi m\mathrm{c}}\left(\frac{1}{\nu_{1}^{2}}-\frac{1}{\nu_{2}^{2}}\right)\int_{0}^{r}n\mathrm{d}r.
 \end{equation}
 定义频散量度
 \begin{equation}
@@ -897,8 +897,8 @@ Maser 强度极高，比热辐射的高几个数量级，易与其他辐射区�
 首先，每个体元都有向外和向内（指向恒星内部）辐射的部分
 \begin{equation}
 I_\nu=\begin{cases}
-I_\nu(\theta,\tau_\nu), & 0\le\theta<\frac{\pi}{2},\\
-I_\nu'(\psi,\tau_\nu), & \frac{\pi}2<\theta\le\pi,\psi=\pi-\theta.
+I_\nu(\theta,\tau_\nu), & 0\le\theta<\dfrac{\pi}{2},\\
+I_\nu'(\psi,\tau_\nu), & \dfrac{\pi}{2}<\theta\le\pi,\psi=\pi-\theta.
 \end{cases}
 \end{equation}
 一般的辐射转移教材中，$\mathrm{d}r$是从恒星表面向下计量的，因此方程要变号。向外的辐射转移方程为
@@ -1032,8 +1032,6 @@ t'=t-\frac{r\left(t'\right)}{\mathrm{c}},
 \label{非相对论性粒子辐射的角分布。}
 \end{figure}
 
-你好{}-{}你哈
-
 而对相对论性粒子的辐射我们先来作一些定性分析。根据 (\ref{1.3.46}) 式不难看出相对论速度对角分布有所影响，因为分子含$\beta^{2}$项而分母含$\beta^{5}$项。由于$K=1-\boldsymbol{n}\cdot\boldsymbol{\beta}$,当$\beta\to1$时，如果$\boldsymbol{n}$指向$\boldsymbol{\beta}$的方向，$K\to0$,此时$\dfrac{\mathrm{d}P\left(t'\right)}{\mathrm{d}\Omega}\to\infty$,即辐射能量极大地集中在粒子运动的方向上，这被称作集束效应 (beaming effect).
 
 进一步地，我们认为辐射集中以粒子运动方向为中心线，张角为$\theta=\dfrac{1}{\gamma}=\sqrt{1-\dfrac{v^{2}}{\mathrm{c}^{2}}}=\sqrt{1-\beta^{2}}$的圆锥范围内。$\theta=\sqrt{1-\beta^{2}}$时认为此时$K$大约是极大值的$\dfrac{1}{2}$,辐射也相对极大方向下降到$\dfrac{1}{2^{5}}$.电子速度可以达到$\gamma\sim10^{6}$,对应$\theta\sim0.2^{\prime\prime}$,因此相对论性粒子辐射十分集中。
@@ -1118,9 +1116,9 @@ P=\frac{2q^{2}}{3\mathrm{c}}\gamma^{6}\left[\dot{\boldsymbol{\beta}}^{2}-\left(\
 
 利用 (\ref{1.3.59}) 式，我们可以计算出单个电子在磁场中运动的辐射的功率：
 \begin{equation}
-P=\frac{2e^{4}}{3m_{0}^{2}\mathrm{c}^{5}}\gamma^{2}v_{\bot}^{2}B^{2}.\label{1.3.60}
+P=\frac{2{\color{blue}{\ce{e}}}^{4}}{3m_{0}^{2}\mathrm{c}^{5}}\gamma^{2}v_{\bot}^{2}B^{2}.\label{1.3.60}
 \end{equation}
-其中$e$是电子电量，$B$是高斯单位制下的磁场强度，$m_{0}$是电子质量，$\mathrm{c}$是光速。引入电子经典半径$r_{0}=\dfrac{e^{2}}{m_{0}\mathrm{c}^{2}}$,上式写作
+其中${\color{blue}{\ce{e}}}$是电子电量，$B$是高斯单位制下的磁场强度，$m_{0}$是电子质量，$\mathrm{c}$是光速。引入电子经典半径$r_{0}=\dfrac{{\color{blue}{\ce{e}}}^{2}}{m_{0}\mathrm{c}^{2}}$,上式写作
 \begin{equation}
 P=\frac{2}{3}r_{0}^{2}\mathrm{c}\gamma^{2}\beta_{\bot}^{2}B^{2}.
 \end{equation}
@@ -1132,37 +1130,37 @@ P=\frac{2}{3}r_{0}^{2}\mathrm{c}\gamma^{2}\beta_{\bot}^{2}B^{2}.
 \begin{equation}
 \langle{}P\rangle=\frac{4}{3}\sigma_{\text{T}}\mathrm{c}\gamma^{2}\beta^{2}U_{B}.\label{1.2.35}
 \end{equation}
-对于 (\ref{1.3.60}) 式，我们发现$P=-\dfrac{\mathrm{d}E}{\mathrm{d}t}=bE^{2},b=\dfrac{2e^4}{3m_0^4\mathrm{c}^9}B^{2}v_\bot^2$,解得，
+对于 (\ref{1.3.60}) 式，我们发现$P=-\dfrac{\mathrm{d}E}{\mathrm{d}t}=bE^{2},b=\dfrac{2{\color{blue}{\ce{e}}}^{4}}{3m_{0}^{4}\mathrm{c}^9}B^{2}v_{\bot}^{2}$,解得，
 \begin{equation}
-E=\frac{E_0}{1+bE_0t}.
+E=\frac{E_{0}}{1+bE_{0}t}.
 \end{equation}
-电子能量下降到原先一半即$E=\dfrac12E_0$所用的时间（取$v_{\bot}=\mathrm{c}$）为
+电子能量下降到原先一半即$E=\dfrac{1}{2}E_{0}$所用的时间（取$v_{\bot}=\mathrm{c}$）为
 \begin{align}
-T_\frac12=\frac1{bE_0}&=\frac{3m_{0}^{3}\mathrm{c}^{7}}{2e^{4}}\frac{1}{B^{2}v_\bot^2}\frac{m_{0}\mathrm{c}^{2}}{E_0}\notag\\
+T_{\frac{1}{2}}=\frac{1}{bE_{0}}&=\frac{3m_{0}^{3}\mathrm{c}^{7}}{2{\color{blue}{\ce{e}}}^{4}}\frac{1}{B^{2}v_{\bot}^{2}}\frac{m_{0}\mathrm{c}^{2}}{E_{0}}\notag\\
 &=\frac{\qty{5.1e8}{s}}{B_{\text{数值}}^{2}}\frac{m_{0}\mathrm{c}^{2}}{E_{0}}.
 \end{align}
 
 查阅《天体物理中的辐射机制》（尤峻汉）可知，同步加速辐射是一种连续谱，其单位频率间隔的辐射功率为
 \begin{equation}
-\langle\frac{\mathrm{d}P_\nu}{\mathrm{d}\nu}\rangle=\frac{\sqrt3e^3B}{m_{0}\mathrm{c}^{2}}\frac{\nu}{\nu_{\text{c}}}\int_{\frac{\nu}{\nu_{\text{c}}}}^\infty K_\frac{5}{3}\left(t\right)\mathrm{d}t,
+\langle\frac{\mathrm{d}P_\nu}{\mathrm{d}\nu}\rangle=\frac{\sqrt3{\color{blue}{\ce{e}}}^{3}B}{m_{0}\mathrm{c}^{2}}\frac{\nu}{\nu_{\text{c}}}\int_{\frac{\nu}{\nu_{\text{c}}}}^{\infty}K_{\frac{5}{3}}\left(t\right)\mathrm{d}t,
 \end{equation}
 其中$K_{n}\left(x\right)$为$n$阶修正的贝塞尔函数。辐射功率在低频波段以$\nu^{\frac{1}{3}}$缓慢上升，辐射的峰值频率约为
 \begin{equation}
-\nu_{\max}=0.3\nu_{\text{c}}=\frac{9\gamma^2eB}{40\pi m_{0}\mathrm{c}},
+\nu_{\max}=0.3\nu_{\text{c}}=\frac{9\gamma^{2}{\color{blue}{\ce{e}}}B}{40\pi m_{0}\mathrm{c}},
 \end{equation}
 峰值后辐射强度以自然常数的指数$\mathrm{e}^{-\frac{\nu}{\nu_{\text{c}}}}$快速下降。
 
 上述结论适用于单个电子的辐射谱。而实际过程中肯定有很多电子在磁场中运动。对于数密度随能量分布为$E^{-\mu}$的电子集体，同步加速辐射谱满足
 \begin{align}
-\langle I_{\nu}\rangle&=\frac{2^{\frac{\mu-1}{2}}\sqrt3\Gamma\left(\frac{\mu+5}{4}\right)\Gamma\left(\frac{3\mu-1}{12}\right)\Gamma\left(\frac{3\mu+19}{12}\right)}{8\sqrt\pi\left(\mu+1\right)\Gamma\left(\frac{\mu+7}{4}\right)}\frac{e^{3}}{m_{0}\mathrm{c}^{2}}\left(\frac{3e}{4\pi m_{0}^{3}\mathrm{c}^{5}}\right)^{\frac{\mu-1}2}B^{\frac{\mu+1}{2}}\nu^{-\frac{\mu-1}{2}}LN_{0}\notag\\
-&=a\left(\mu\right)\frac{e^{3}}{m_{0}\mathrm{c}^{2}}\left(\frac{3e}{4\pi m_{0}^{3}\mathrm{c}^{5}}\right)^{\frac{\mu-1}2}B^{\frac{\mu+1}{2}}\nu^{-\frac{\mu-1}{2}}LN_{0},\label{1.3.67}
+\langle I_{\nu}\rangle&=\frac{2^{\frac{\mu-1}{2}}\sqrt3\Gamma\left(\frac{\mu+5}{4}\right)\Gamma\left(\frac{3\mu-1}{12}\right)\Gamma\left(\frac{3\mu+19}{12}\right)}{8\sqrt\pi\left(\mu+1\right)\Gamma\left(\frac{\mu+7}{4}\right)}\frac{{\color{blue}{\ce{e}}}^{3}}{m_{0}\mathrm{c}^{2}}\left(\frac{3{\color{blue}{\ce{e}}}}{4\pi m_{0}^{3}\mathrm{c}^{5}}\right)^{\frac{\mu-1}2}B^{\frac{\mu+1}{2}}\nu^{-\frac{\mu-1}{2}}LN_{0}\notag\\
+&=a\left(\mu\right)\frac{{\color{blue}{\ce{e}}}^{3}}{m_{0}\mathrm{c}^{2}}\left(\frac{3{\color{blue}{\ce{e}}}}{4\pi m_{0}^{3}\mathrm{c}^{5}}\right)^{\frac{\mu-1}2}B^{\frac{\mu+1}{2}}\nu^{-\frac{\mu-1}{2}}LN_{0},\label{1.3.67}
 \end{align}
 其中$L$是沿视线方向辐射区域长度，$N_{0}$量纲$\unit{cm^{-3}\cdot erg^{\mu-1}}$,表征了数密度。根据上式可见辐射强度$\propto{}\nu^{-\frac{\mu-1}{2}}$,谱指数反映了电子能量分布。在典型 AGN 吸积活动中，$\mu=2.5$,可以发现辐射强度谱指数为$-0.75$.
 
 对于电子集体来讲另一个要考虑的因素是，当电子密度足够大时，产生辐射的这些电子会与光子碰撞，反过来吸收辐射。吸收系数为
 \begin{align}
-\langle{}\alpha_{\nu}\rangle&=\frac{\sqrt{3}}{4}\Gamma\left(\frac{3\mu+2}{12}\right)\Gamma\left(\frac{3\mu+22}{12}\right)\frac{e^{3}}{2\pi m_{0}}\left(\frac{3e}{2\pi m_{0}^{3}\mathrm{c}^{5}}\right)^{\frac{\mu}{2}}N_{0}\left(B\sin\alpha\right)^{\frac{\mu+2}{2}}\nu^{-\frac{\mu+4}{2}}\notag\\
-&=g\left(\mu\right)\frac{e^{3}}{2\pi m_{0}}\left(\frac{3e}{2\pi m_{0}^{3}\mathrm{c}^{5}}\right)^{\frac{\mu}{2}}N_{0}\left(B\sin\alpha\right)^{\frac{\mu+2}{2}}\nu^{-\frac{\mu+4}{2}}.\label{1.2.41}
+\langle{}\alpha_{\nu}\rangle&=\frac{\sqrt{3}}{4}\Gamma\left(\frac{3\mu+2}{12}\right)\Gamma\left(\frac{3\mu+22}{12}\right)\frac{{\color{blue}{\ce{e}}}^{3}}{2\pi m_{0}}\left(\frac{3{\color{blue}{\ce{e}}}}{2\pi m_{0}^{3}\mathrm{c}^{5}}\right)^{\frac{\mu}{2}}N_{0}\left(B\sin\alpha\right)^{\frac{\mu+2}{2}}\nu^{-\frac{\mu+4}{2}}\notag\\
+&=g\left(\mu\right)\frac{{\color{blue}{\ce{e}}}^{3}}{2\pi m_{0}}\left(\frac{3{\color{blue}{\ce{e}}}}{2\pi m_{0}^{3}\mathrm{c}^{5}}\right)^{\frac{\mu}{2}}N_{0}\left(B\sin\alpha\right)^{\frac{\mu+2}{2}}\nu^{-\frac{\mu+4}{2}}.\label{1.2.41}
 \end{align}
 可见低频波段吸收系数较大，相当于说低频波段电子相对辐射是光学厚的。我们知道光学厚观测到的辐射为源函数，将 (\ref{1.3.67})(\ref{1.2.41}) 式相比得到
 \begin{equation}
@@ -1201,23 +1199,23 @@ S_{\nu}\propto{}\nu^{2.5}.
 
 对于极端相对论情形，$x\gg1,\sigma=\dfrac{3}{8}\sigma_{\text{T}}\dfrac{1}{x}\left(\ln\left(2x\right)+\dfrac{1}{2}\right)$.
 
-当辐射场与电子集体通过 CS 和 ICS 达到平衡的时候，电子集体得到和损失能量速度相同，我们称这种状态为康普顿化。此时电子集体温度$T_{e}$和辐射场平均频率满足
+当辐射场与电子集体通过 CS 和 ICS 达到平衡的时候，电子集体得到和损失能量速度相同，我们称这种状态为康普顿化。此时电子集体温度$T_{{\color{blue}{\ce{e}}}}$和辐射场平均频率满足
 \begin{equation}
-T_{e}=\frac{h\overline{v}}{4k_{\text{B}}}=\frac{h}{4k_{\text{B}}}\frac{\int\nu L_{\nu}\mathrm{d}\nu}{L_{\nu}\mathrm{d}\nu},
+T_{{\color{blue}{\ce{e}}}}=\frac{h\overline{v}}{4k_{\text{B}}}=\frac{h}{4k_{\text{B}}}\frac{\int\nu L_{\nu}\mathrm{d}\nu}{L_{\nu}\mathrm{d}\nu},
 \end{equation}
 其中
 \begin{equation}
 L_{\nu}=\int j_{\nu}\mathrm{d}V,
 \end{equation}
-表征光度。即电子集体温度取决于非热辐射场的能谱。在 AGN 中，$T_{e}$往往能达到$10^{8}\,\unit{K}$.
+表征光度。即电子集体温度取决于非热辐射场的能谱。在 AGN 中，$T_{{\color{blue}{\ce{e}}}}$往往能达到$10^{8}\,\unit{K}$.
 
 在 ICS 情形下，对于相对论性电子$E=\gamma m_{0}\mathrm{c}^{2}$,其散射后的光子能量大约是散射前的$\gamma^{2}$倍，即光子能量被极大提高，且沿着电子速度方向辐射。在 AGN 中，紫外辐射常被电子打到 X 甚至伽马波段。$\dfrac{4h\nu\gamma}{m_{0}\mathrm{c}^{2}}\ll1$时，电子损失能量速率为
 \begin{equation}
-\frac{\mathrm{d}E_{e}}{\mathrm{d}t}=\frac{4}{3}\gamma^{2}\sigma_{\text{T}}\mathrm{c}U_{\text{rad}}.\label{1.2.48}
+\frac{\mathrm{d}E_{{\color{blue}{\ce{e}}}}}{\mathrm{d}t}=\frac{4}{3}\gamma^{2}\sigma_{\text{T}}\mathrm{c}U_{\text{rad}}.\label{1.2.48}
 \end{equation}
 其中$U_{\text{rad}}$是背景辐射场的能量密度。
 
-与同步加速辐射类似，我们要考虑电子集体散射出的光子能谱分布。如果电子数量随能量分布满足$N_{e}\propto{}\gamma^{-\mu}$,同样有$I_{\nu}\propto{}\nu^{-\frac{\mu-1}{2}}$.
+与同步加速辐射类似，我们要考虑电子集体散射出的光子能谱分布。如果电子数量随能量分布满足$N_{{\color{blue}{\ce{e}}}}\propto{}\gamma^{-\mu}$,同样有$I_{\nu}\propto{}\nu^{-\frac{\mu-1}{2}}$.
 
 最后要讨论的话题是同步加速辐射的自康普顿效应 (Synchrotron Self-Compton, SSC),即相对论性电子在磁场中产生同步加速辐射后，低能光子又被同一电子群体通过 ICS 散射至高能波段的过程。通常发生在较为致密 (compact, 一般指这个源所占空间范围较小，反义词是延展，extended) 的同步加速源中。
 
@@ -1246,9 +1244,9 @@ L_{\nu}=\int j_{\nu}\mathrm{d}V,
 \begin{equation}
 \sigma_{\text{湮灭}}=\pi r_{0}^{2}\left(\frac{v}{\mathrm{c}}\right)^{-1}.
 \end{equation}
-正电子速度$v\to0$情形下，截面发散，不过湮灭概率$R$应该依旧有限。设电子密度$N_{e}$,则每秒湮灭次数应该为
+正电子速度$v\to0$情形下，截面发散，不过湮灭概率$R$应该依旧有限。设电子密度$N_{{\color{blue}{\ce{e}}}}$,则每秒湮灭次数应该为
 \begin{equation}
-R=N_{e}\sigma_{\text{湮灭}}v=\pi r_{0}^{2}\mathrm{c}N_{e},
+R=N_{{\color{blue}{\ce{e}}}}\sigma_{\text{湮灭}}v=\pi r_{0}^{2}\mathrm{c}N_{{\color{blue}{\ce{e}}}},
 \end{equation}
 我们知道汤姆孙散射截面是$\dfrac{8}{3}\pi r_{0}^{2}$,光速$v=\mathrm{c}$,因此正电子被电子湮灭速率和光子被电子散射速率是差不多的。而高速情形下的湮灭截面为
 \begin{equation}
@@ -1276,18 +1274,18 @@ AGN 中电子产生与湮灭速率可以平衡，康普顿厚 (compton-thick, CT
 \begin{equation}
 k=\frac{m_{0}\mathrm{c}}{\hbar}\alpha\frac{B\sin\theta}{2B_\mathrm{c}}\frac{1}{4}\left(\frac{3}{2}\right)^{\frac{1}{2}}\exp\left[-\frac{8m_{0}\mathrm{c}^{2}B_\mathrm{c}}{3EB\sin\theta}\right],
 \end{equation}
-其中精细结构常数$\alpha=\dfrac{e^{2}}{\hbar\mathrm{c}}$,中子星临界磁场$B_\mathrm{c}=\dfrac{m_{0}\mathrm{c}^{3}}{e\hbar},\theta$是光子传播路径与磁场的夹角。
+其中精细结构常数$\alpha=\dfrac{{\color{blue}{\ce{e}}}^{2}}{\hbar\mathrm{c}}$,中子星临界磁场$B_\mathrm{c}=\dfrac{m_{0}\mathrm{c}^{3}}{{\color{blue}{\ce{e}}}\hbar}$, $\theta$是光子传播路径与磁场的夹角。
 
 \subsubsection{轫致辐射}
 轫致辐射来自电子受库仑场影响骤然改变速度的过程，而最常见的库仑场自然是等离子体中另一个离子的库仑场。不过严格来讲轫致辐射是量子过程，而量子理论中，电子和离子的组合可以看作是一个处于“自由态”的粒子，辐射出一个光子电子态就从一个自由态跃迁到另一个自由态，故也被称作自由{}-{}自由跃迁。这种意义上轫致辐射其实也算热辐射的一种。
 
 一般仅考虑电子和正离子的碰撞。查阅\textit{Radiative Processes in Astrophysic} by George B. Rybicki 可知，速度服从 Maxwell 分布，温度为$T$的等离子体，发射率为
 \begin{equation}
-4\pi j_{\nu}=\frac{2}{\pi}m\mathrm{c}^{2}\sigma_{\text{T}}^{\frac{3}{2}}\left(\frac{m\mathrm{c}^{2}}{k_{\text{B}}T}\right)^{\frac{1}{2}}Z^{2}n_{e}n_{i}\exp\left(-\frac{h\nu}{k_{\text{B}}T}\right)\overline{g}_{\text{ff}}\left(T,Z,\nu\right),
+4\pi j_{\nu}=\frac{2}{\pi}m\mathrm{c}^{2}\sigma_{\text{T}}^{\frac{3}{2}}\left(\frac{m\mathrm{c}^{2}}{k_{\text{B}}T}\right)^{\frac{1}{2}}Z^{2}n_{{\color{blue}{\ce{e}}}}n_{i}\exp\left(-\frac{h\nu}{k_{\text{B}}T}\right)\overline{g}_{\text{ff}}\left(T,Z,\nu\right),
 \end{equation}
 其中$Z$是离子电荷数，$\overline{g}_{\text{ff}}$是对速度作平均后的 Gaunt 因子。将$\overline{g}_{\text{ff}}$进一步对频率作平均后得到$\overline{g}_{B}$,单位体积的功率为
 \begin{equation}
-C_{\text{ff}}=\left(\frac{2\pi k_{\text{B}}T}{3m}\right)^{\frac{1}{2}}\frac{2^{5}\pi e^{6}}{3hm\mathrm{c}^{3}}Z^{2}n_{e}n_{i}\overline{g}_{B}.
+C_{\text{ff}}=\left(\frac{2\pi k_{\text{B}}T}{3m}\right)^{\frac{1}{2}}\frac{2^{5}\pi{\color{blue}{\ce{e}}}^{6}}{3hm\mathrm{c}^{3}}Z^{2}n_{{\color{blue}{\ce{e}}}}n_{i}\overline{g}_{B}.
 \end{equation}
 
 我们提到轫致辐射可看作是热辐射，因此吸收系数近似满足
@@ -1296,9 +1294,9 @@ C_{\text{ff}}=\left(\frac{2\pi k_{\text{B}}T}{3m}\right)^{\frac{1}{2}}\frac{2^{5
 \end{equation}
 $h\nu\gg k_{\text{B}}T$时$\alpha_{\nu}\propto{}\nu^{-3}$, $h\nu\ll k_{\text{B}}T$时$\alpha_{\nu}\propto{}\nu^{-2}$.因此低频波段光学厚，光谱是电子温度的黑体谱的 Rayleigh-Jeans 近似。而高频波段光学薄，谱形状与黑体谱很不一样，由 Gaunt 因子决定，近似平谱。
 
-对于电离氢来说，$Z=1,n_{e}=n_{i}$,用吸收系数计算出的光深近似公式为
+对于电离氢来说，$Z=1,n_{{\color{blue}{\ce{e}}}}=n_{i}$,用吸收系数计算出的光深近似公式为
 \begin{equation}
-\tau_{\nu}\approx8.235\times10^{-2}T_{e}^{-1.35}\nu^{-2.1}\int n_{e}^{2}\mathrm{d}l.
+\tau_{\nu}\approx8.235\times10^{-2}T_{{\color{blue}{\ce{e}}}}^{-1.35}\nu^{-2.1}\int n_{{\color{blue}{\ce{e}}}}^{2}\mathrm{d}l.
 \end{equation}
 
 前文提到单个高能光子可以产生电子对，它和轫致辐射结合是宇宙线 (cosmic ray) 中电⼦{}-{}光⼦级联簇射的原因。能量极⾼的$\gamma$光⼦（例如可通过介⼦的衰变得到）穿过介质⽽产生⾼能电⼦对，这些电子又通过轫致辐射失去部分能量，产⽣次级光⼦，这些$\gamma$光⼦又进一步产⽣电⼦对。
