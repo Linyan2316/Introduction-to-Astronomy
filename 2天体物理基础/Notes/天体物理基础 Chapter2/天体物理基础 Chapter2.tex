@@ -5,6 +5,10 @@
 
 \begin{document}
 \section{恒星、致密星和行星}
+从本章节开始我们将依次介绍宇宙中的各类天体，从恒星到星际介质到星系再到宇宙本身。
+
+太阳仅有$\qty{6000}{K}$，氢原子难以激发，何来不透明度？原因在于氢负离子电子容易被激发。
+
 \subsection{恒星的结构}
 本节中我们将会建立简单的恒星模型。在球对称的前提下，给定恒星的初始质量，化学组成和边界条件，在某一特定半径的球壳处求解一些方程便可大致确定恒星的性质。这些方程包括质量连续性方程、流体静力学平衡方程、能量守恒方程、能量传输方程、物态方程、产能率公式和不透明度公式。我们会在各个小节的叙述中了解恒星的性质并补完这些方程。其中质量连续性方程
 \begin{equation}
@@ -292,6 +296,40 @@ t_{\text{the}}=0.5\frac{\mathrm{G}M^{2}}{RL}\approx2\times10^{7}\,\unit{yr}\left
 t_{\text{dyn}}=\frac{R}{V}\approx\sqrt\frac{R^{3}}{\mathrm{G}M}\approx27\,\unit{min}\left(\frac{R}{\unit{R_{\odot}}}\right)^{\frac{3}{2}}\left(\frac{M}{\unit{M_{\odot}}}\right)^{-\frac{1}{2}}.
 \end{equation}
 
+\subsubsection{Jeans 质量}
+流体静力学色散关系：
+\begin{equation}
+\omega^{2}=k^{2}v_{\text{s}}^{2}-4\pi\mathrm{G}\rho_{0},
+\end{equation}
+其中$v_{\text{s}}$是声速。要让波发生演化而不是形成驻波，需要$\omega$是复数。于是我们引入金斯波长
+\begin{equation}
+\lambda_{\text{J}}=\frac{h}{p_{\text{J}}}=\frac{2\pi}{k_{\text{J}}}=\sqrt{\frac{\pi v_{\text{s}}^{2}}{\mathrm{G}\rho_{0}}},
+\end{equation}
+同时有金斯质量：
+\begin{equation}
+M_{\text{J}}=\frac{4\pi}{3}\rho\lambda_{\text{J}}^{3}\sim 2M_{\odot}\cdot\left(\frac{v_{\text{s}}}{\qty{0.2}{km\cdot{}s^{-1}}}\right)^{3}\left(\frac{n}{\qty{e3}{cm^{-3}}}\right)^{-\frac{1}{2}}.
+\end{equation}
+
+氢原子玻尔半径
+\begin{equation}
+\alpha_{0}=\frac{4\pi\varepsilon_{0}\hbar^{2}}{m_{0}{\color{blue}{\ce{e}}}^{2}}=\frac{\hbar}{m_{0}\mathrm{c}\alpha}.
+\end{equation}
+
+想象有一大堆聚集在一起的气体，其引力势能为
+\begin{equation}
+E_{\text{gravity}}\sim\frac{\mathrm{G}M^{2}}{R}\sim\frac{\mathrm{G}N^{2}m_{\ce{p}}^{2}}{R},
+\end{equation}
+分子间的结合能为
+\begin{equation}
+E_{0}\sim N\alpha^{2}m_{0}\mathrm{c}^{2},
+\end{equation}
+令二者相等，得到
+\begin{align}
+N=\left(\frac{\alpha\mathrm{c}\hbar}{\mathrm{G}m_{\ce{p}}^{2}}\right)^{\frac{3}{2}}\sim10^{54},\\
+M_{\text{c}}=Nm_{\ce{p}}\sim\qty{e30}{g}.
+\end{align}
+$M<M_{\text{c}}$，结合能胜利，固态行星，否则分子间电磁力无法抗衡引力，固态结构无法维持，将会转化为等离子体。
+
 \subsubsection{主序星演化}
 随着核反应的进行，核心区的$\ce{H}$元素越来越少，直至枯竭，全部转变成$\ce{He}$.
 
@@ -557,6 +595,10 @@ $\ce{O}$型星$\to$蓝超巨星$\to$红超巨星$\to$ WR 星$\to$ \uppercase\exp
 中子星的特征质量为$\qty{1.4}{M_{\odot}}$,半径约$\qty{10}{km}$.
 
 中子星的观测表现：内能表现为热辐射。转动动能表现为脉冲星。强引力场表现为 X 射线双星。强磁场表现为强磁星。
+
+中子星质量估计：考虑质子德布罗意波长和普朗克质量$m_{\text{planck}}=\sqrt{\dfrac{\hbar\mathrm{c}}{\mathrm{G}}}$,估计得到半径上限$R_{\max}\sim\dfrac{m_{\text{planck}}}{m_{\ce{p}}}\times\lambda_{n}\sim\qty{10}{km}$, 粒子数上限$N\sim\left(\dfrac{m_{\text{planck}}}{m_{\ce{p}}}\right)^{3}\sim2.2\times10^{57}$, 质量上限$M_{\max}\sim Nm_{\ce{p}}\sim M_{\odot}$,密度上限$\rho_{\max}\sim\dfrac{m_{\ce{p}}}{\lambda_{n}}\sim\qty{e18}{kg\cdot m^{-3}}$.
+
+磁星磁场能达到$\qty{1.6e10}{T}$，而人类制造的最大稳定磁场仅有$\qty{45.22}{T}$.
 
 为什么脉冲星是中子星？
 
