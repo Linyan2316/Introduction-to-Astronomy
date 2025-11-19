@@ -2,7 +2,7 @@
 \documentclass[../天体物理基础.tex]{subfiles}
 \begin{document}
 \section{了解我们的宇宙：从电磁辐射出发}
-电磁辐射是人类获取天体信息的重要渠道。电磁波主要性质有强度、频率和偏振。电磁波得以产生的不同物理机制（或称辐射机制）、物质各自拥有的不同物理属性，会使不同的物质辐射出性质不同的电磁辐射，因此观测不同性质的电磁辐射可以了解不同类型天体的性质。本章第一节会介绍如何描述辐射的强度，第二节会介绍如何描述偏振，第三节会简单介绍一些辐射机制，以及从频率出发我们能得到哪些物理信息。随后我们会简单介绍恒星、星系和一些宇宙学。最后我们会了解测定天体距离的一些方法。
+电磁辐射是人类获取天体信息的重要渠道。电磁波主要性质有强度、频率和偏振。电磁波得以产生的不同物理机制（或称辐射机制）、物质各自拥有的物理属性，会使不同的物质辐射出不同性质的电磁辐射，因此观测电磁辐射可以了解天体的独特性质。本章第一节会介绍如何描述辐射的强度，第二节会介绍如何描述偏振，第三节会简单介绍一些辐射机制，以及从频率出发我们能得到哪些物理信息。随后我们会简单介绍恒星、星系和一些宇宙学。最后我们会了解测定天体距离的一些方法。附录部分会记载一些公式的推导过程。
 
 \subsection{一点光度学、星等系统和测光系统}
 \subsubsection{星等}
@@ -20,9 +20,9 @@ F=\frac{L}{4\pi d^{2}}.
 \end{equation}
 这其实是个挺方便的量，因为利用望远镜的有效镜面直径很容易计算出单位时间内望远镜接收到的能量。望远镜集光能力越强，它的灵敏度（探测暗弱天体的能力）就越高。人眼也可看作是两个小望远镜，不过人眼对亮度的反应并非线性，而是更接近对数反应，即亮度差 10 倍的恒星感觉上可能只差了一两倍。为此，人们定义两颗恒星的视星等满足
 \begin{equation}
-m_{1}-m_{2}=-2.5\log_{10}\left(\frac{F_{1}}{F_{2}}\right).\label{1.1.2}
+m_{1}-m_{2}=-2.5\log_{10}\left(\frac{F_{1}}{F_{2}}\right).\label{1.1.3}
 \end{equation}
-有趣的是天文领域对数关系也是个常见关系，比如暗的恒星比亮的多得多，坐标轴用对数的话在某些样本下可以画出数量和光度的线性关系，因此在现代科研中依旧在使用古希腊时期就已经被发明的星等。按 (\ref{1.1.2}) 式，一颗 6 等星和一颗 1 等星的亮度之比就为
+有趣的是天文领域对数关系也是个常见关系，比如暗的恒星比亮的多得多，坐标轴用对数的话在某些样本下可以画出数量和光度的线性关系，因此在现代科研中依旧在使用古希腊时期就已经被发明的星等。按 (\ref{1.1.3}) 式，一颗 6 等星和一颗 1 等星的亮度之比就为
 \begin{equation}
 \frac{F_{m=6}}{F_{m=1}}=10^{\left(6-1\right)/\left(-2.5\right)}=10^{-2},
 \end{equation}
@@ -51,28 +51,28 @@ m_{1}-m_{2}=-2.5\log_{10}\left(\frac{F_{1}}{F_{2}}\right).\label{1.1.2}
 \tikzset{every picture/.style={line width=0.75pt}}
 \begin{tikzpicture}[x=0.7pt,y=0.7pt,yscale=-1,xscale=1]
 %Shape: Ellipse [id:dp28359105607492074] 
-\draw   (77.88,155.91) .. controls (67.46,131.83) and (70.59,107.3) .. (84.87,101.12) .. controls (99.15,94.94) and (119.18,109.44) .. (129.6,133.51) .. controls (140.03,157.59) and (136.9,182.12) .. (122.61,188.3) .. controls (108.33,194.48) and (88.3,179.98) .. (77.88,155.91) -- cycle ;
+\draw (77.88,155.91) .. controls (67.46,131.83) and (70.59,107.3) .. (84.87,101.12) .. controls (99.15,94.94) and (119.18,109.44) .. (129.6,133.51) .. controls (140.03,157.59) and (136.9,182.12) .. (122.61,188.3) .. controls (108.33,194.48) and (88.3,179.98) .. (77.88,155.91) -- cycle;
 %Shape: Ellipse [id:dp7012701228447336] 
-\draw   (519.55,90.84) .. controls (533.29,94.51) and (537.7,122.66) .. (529.41,153.71) .. controls (521.12,184.76) and (503.26,206.97) .. (489.52,203.3) .. controls (475.78,199.63) and (471.37,171.48) .. (479.66,140.43) .. controls (487.95,109.37) and (505.81,87.17) .. (519.55,90.84) -- cycle ;
+\draw (519.55,90.84) .. controls (533.29,94.51) and (537.7,122.66) .. (529.41,153.71) .. controls (521.12,184.76) and (503.26,206.97) .. (489.52,203.3) .. controls (475.78,199.63) and (471.37,171.48) .. (479.66,140.43) .. controls (487.95,109.37) and (505.81,87.17) .. (519.55,90.84) -- cycle;
 %Straight Lines [id:da8821845411756091] 
-\draw    (84.87,101.12) -- (502.55,146.85) ;
-\draw [shift={(504.54,147.07)}, rotate = 186.25] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
+\draw (84.87,101.12) -- (502.55,146.85);
+\draw [shift={(504.54,147.07)}, rotate = 186.25] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29);
 %Straight Lines [id:da5836272245786938] 
-\draw    (122.61,188.3) -- (502.55,147.28) ;
-\draw [shift={(504.54,147.07)}, rotate = 173.84] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
+\draw (122.61,188.3) -- (502.55,147.28);
+\draw [shift={(504.54,147.07)}, rotate = 173.84] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29);
 %Straight Lines [id:da12406201856368304] 
-\draw    (103.74,144.71) -- (517.57,91.1) ;
-\draw [shift={(519.55,90.84)}, rotate = 172.62] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
+\draw [red](103.74,144.71) -- (517.57,91.1);
+\draw [shift={(519.55,90.84)}, rotate = 172.62] [color={rgb, 255:red, 255; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29);
 %Straight Lines [id:da3285717001142934] 
-\draw    (103.74,144.71) -- (487.54,203) ;
-\draw [shift={(489.52,203.3)}, rotate = 188.64] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
+\draw [red](103.74,144.71) -- (487.54,203);
+\draw [shift={(489.52,203.3)}, rotate = 188.64] [color={rgb, 255:red, 255; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29);
 %Straight Lines [id:da6237274486637393] 
-\draw    (32,144.5) -- (612,148.49) ;
-\draw [shift={(614,148.5)}, rotate = 180.37] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
+\draw (32,144.5) -- (612,148.49);
+\draw [shift={(614,148.5)}, rotate = 180.37] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29);
 %Shape: Ellipse [id:dp851728180287646] 
-\draw   (237.47,127.5) .. controls (242.94,127.41) and (247.51,135.51) .. (247.67,145.58) .. controls (247.83,155.65) and (243.53,163.89) .. (238.06,163.98) .. controls (232.58,164.07) and (228.02,155.97) .. (227.86,145.9) .. controls (227.69,135.82) and (232,127.59) .. (237.47,127.5) -- cycle ;
+\draw [red](237.47,127.5) .. controls (242.94,127.41) and (247.51,135.51) .. (247.67,145.58) .. controls (247.83,155.65) and (243.53,163.89) .. (238.06,163.98) .. controls (232.58,164.07) and (228.02,155.97) .. (227.86,145.9) .. controls (227.69,135.82) and (232,127.59) .. (237.47,127.5) -- cycle;
 %Shape: Ellipse [id:dp8181356418303902] 
-\draw   (327.8,128.42) .. controls (333.27,128.33) and (337.84,136.43) .. (338,146.5) .. controls (338.16,156.57) and (333.86,164.81) .. (328.38,164.9) .. controls (322.91,164.99) and (318.34,156.89) .. (318.18,146.82) .. controls (318.02,136.74) and (322.33,128.51) .. (327.8,128.42) -- cycle ;
+\draw (327.8,128.42) .. controls (333.27,128.33) and (337.84,136.43) .. (338,146.5) .. controls (338.16,156.57) and (333.86,164.81) .. (328.38,164.9) .. controls (322.91,164.99) and (318.34,156.89) .. (318.18,146.82) .. controls (318.02,136.74) and (322.33,128.51) .. (327.8,128.42) -- cycle;
 \draw (510,120) node {$\mathrm{d}A'$};
 \draw (100,120) node {$\mathrm{d}A$};
 \draw (305,140) node {$\mathrm{d}\Omega'$};
@@ -161,7 +161,7 @@ m_{\nu}'=m_{\nu}+A_{\nu}=m_{\nu}-2.5\log_{10}\left(\mathrm{e}^{-\tau_{\nu}}\righ
 
 现在我们继续研究 (\ref{1.1.22}) 式。一个很自然的想法是，在望远镜里塞各种滤光片就能得到不同波段范围内的亮度。由此我们定义色指数，为某一短波段的视星等减去某一长波段的视星等。由于星等相减消去了距离因素，故色指数不需要测距也能直接使用。（如果不同波段消光程度相同的话。）
 
-前文已经提到过恒星的辐射可以近似地用黑体辐射来表示，即
+前文已经提到过恒星的辐射可以近似地用\hyperref[黑体辐射能量密度简单推导]{黑体辐射}（此链接通往附录，简单推导了黑体辐射能量密度）来表示，即
 \begin{equation}
 I_{\nu}=B_{\nu}\left(T\right)=\frac{2h\nu^{3}}{\mathrm{c}^{2}}\frac{1}{\mathrm{e}^{\frac{h\nu}{k_{\text{B}}T}}-1},
 \end{equation}
@@ -754,11 +754,11 @@ S_{\nu}=B_{\nu}\left(T\right).
 
 我们将对此作进一步说明。首先，在热平衡状态下，两个能级的粒子数分布满足玻尔兹曼公式：
 \begin{equation}
-\frac{N_{r,k}}{N_{r,i}}=\frac{g_{r,k}}{g_{r,i}}\mathrm{e}^{-\frac{\varepsilon_{r,k}-\varepsilon_{r,i}}{k_{\text{B}}T}},\label{1.2.2}
+\frac{N_{r,k}}{N_{r,i}}=\frac{g_{r,k}}{g_{r,i}}\mathrm{e}^{-\frac{\varepsilon_{r,k}-\varepsilon_{r,i}}{k_{\text{B}}T}},\label{1.3.2}
 \end{equation}
 $r$表示该原子已经被电离了$r$个电子，表征电离级；$k,i$是第$r+1$个电子所处的能级，表征激发态，基态时$k=1$, $g$是统计权重；$\varepsilon$是从基态电离到该能级所需要的能量；$k_{\text{B}}$是玻尔兹曼常数。根据上式，热平衡状态时高能级原子数小于低能级原子数。但如果有某种外界能量输入使高能级原子数大于低能级原子数（称其为布居反转 (population invertion)），那么此时体系的“温度”小于$0$,称作负温度。负温度只是形式上的温度，此时系统并不处于热平衡状态。
 
-根据 (\ref{1.2.2}) 式，同一电离级原子总数为
+根据 (\ref{1.3.2}) 式，同一电离级原子总数为
 \begin{equation}
 N_{r}=\sum_{i}N_{r,i}=\frac{N_{r,1}}{g_{r,1}}\left(g_{r,1}\mathrm{e}^{-\frac{\varepsilon_{r,1}-\varepsilon_{r,1}}{k_{\text{B}}T}}+g_{r,2}\mathrm{e}^{-\frac{\varepsilon_{r,2}-\varepsilon_{r,1}}{k_{\text{B}}T}}+\cdots\right)=\frac{N_{r,1}}{g_{r,1}}\left(g_{r,1}+g_{r,2}\mathrm{e}^{-\frac{\varepsilon_{r,2}}{k_{\text{B}}T}}+\cdots\right).
 \end{equation}
@@ -802,7 +802,7 @@ j_\nu=\frac{h\nu}{4\pi}A_{ki}N_k\psi_\nu,
 \end{equation}
 吸收系数为
 \begin{equation}
-\alpha_{\nu}=\frac{h\nu}{4\pi}(B_{ik}N_i-B_{ki}N_{k})\varphi_\nu.\label{1.2.14}
+\alpha_{\nu}=\frac{h\nu}{4\pi}(B_{ik}N_i-B_{ki}N_{k})\varphi_\nu.\label{1.3.14}
 \end{equation}
 源函数
 \begin{equation}
@@ -828,7 +828,7 @@ _\nu}.
 S_\nu&=\frac{2h\nu^3}{\mathrm{c}^{2}}\frac{1}{\frac{b_i}{b_k}\mathrm{e}^{\frac{h\nu}{k_{\text{B}}T}}-1}\frac{\psi_\nu}{\varphi_\nu}.
 \end{align}
 
-观察 (\ref{1.2.14}) 式发现，如果$B_{ik}N_{i}<B_{ki}N_{k}$,那么吸收系数为负，相当于辐射沿着路径不断增强。此时高能级粒子跃迁到低能级时，释放的辐射被邻近粒子吸收，邻近粒子受激辐射，短时间内连续发生向低能级迁移，整体将形成强有力的放射。当放射波长为可见光到红外波段时称为激光 (Laser),射电的情形则称为微波受激辐射放大 (Microwave Amplification by Stimulated Emission of Radiation, Maser),又称脉泽。
+观察 (\ref{1.3.14}) 式发现，如果$B_{ik}N_{i}<B_{ki}N_{k}$,那么吸收系数为负，相当于辐射沿着路径不断增强。此时高能级粒子跃迁到低能级时，释放的辐射被邻近粒子吸收，邻近粒子受激辐射，短时间内连续发生向低能级迁移，整体将形成强有力的放射。当放射波长为可见光到红外波段时称为激光 (Laser),射电的情形则称为微波受激辐射放大 (Microwave Amplification by Stimulated Emission of Radiation, Maser),又称脉泽。
 
 为进一步研究脉泽，我们首先写出辐射转移方程：
 \begin{equation}
@@ -1128,7 +1128,7 @@ P=\frac{2}{3}r_{0}^{2}\mathrm{c}\gamma^{2}\beta_{\bot}^{2}B^{2}.
 \end{equation}
 引入汤姆孙散射截面$\sigma_{\text{T}}=\dfrac{8\pi}{3}r_{0}^{2}$和磁场能量密度$U_{B}=\dfrac{B^{2}}{8\pi}$,平均功率可以表示为
 \begin{equation}
-\langle{}P\rangle=\frac{4}{3}\sigma_{\text{T}}\mathrm{c}\gamma^{2}\beta^{2}U_{B}.\label{1.2.35}
+\langle{}P\rangle=\frac{4}{3}\sigma_{\text{T}}\mathrm{c}\gamma^{2}\beta^{2}U_{B}.\label{1.3.63}
 \end{equation}
 对于 (\ref{1.3.60}) 式，我们发现$P=-\dfrac{\mathrm{d}E}{\mathrm{d}t}=bE^{2},b=\dfrac{2{\color{blue}{\ce{e}}}^{4}}{3m_{0}^{4}\mathrm{c}^9}B^{2}v_{\bot}^{2}$,解得，
 \begin{equation}
@@ -1153,16 +1153,16 @@ T_{\frac{1}{2}}=\frac{1}{bE_{0}}&=\frac{3m_{0}^{3}\mathrm{c}^{7}}{2{\color{blue}
 上述结论适用于单个电子的辐射谱。而实际过程中肯定有很多电子在磁场中运动。对于数密度随能量分布为$E^{-\mu}$的电子集体，同步加速辐射谱满足
 \begin{align}
 \langle I_{\nu}\rangle&=\frac{2^{\frac{\mu-1}{2}}\sqrt3\Gamma\left(\frac{\mu+5}{4}\right)\Gamma\left(\frac{3\mu-1}{12}\right)\Gamma\left(\frac{3\mu+19}{12}\right)}{8\sqrt\pi\left(\mu+1\right)\Gamma\left(\frac{\mu+7}{4}\right)}\frac{{\color{blue}{\ce{e}}}^{3}}{m_{0}\mathrm{c}^{2}}\left(\frac{3{\color{blue}{\ce{e}}}}{4\pi m_{0}^{3}\mathrm{c}^{5}}\right)^{\frac{\mu-1}2}B^{\frac{\mu+1}{2}}\nu^{-\frac{\mu-1}{2}}LN_{0}\notag\\
-&=a\left(\mu\right)\frac{{\color{blue}{\ce{e}}}^{3}}{m_{0}\mathrm{c}^{2}}\left(\frac{3{\color{blue}{\ce{e}}}}{4\pi m_{0}^{3}\mathrm{c}^{5}}\right)^{\frac{\mu-1}2}B^{\frac{\mu+1}{2}}\nu^{-\frac{\mu-1}{2}}LN_{0},\label{1.3.67}
+&=a\left(\mu\right)\frac{{\color{blue}{\ce{e}}}^{3}}{m_{0}\mathrm{c}^{2}}\left(\frac{3{\color{blue}{\ce{e}}}}{4\pi m_{0}^{3}\mathrm{c}^{5}}\right)^{\frac{\mu-1}2}B^{\frac{\mu+1}{2}}\nu^{-\frac{\mu-1}{2}}LN_{0},\label{1.3.68}
 \end{align}
 其中$L$是沿视线方向辐射区域长度，$N_{0}$量纲$\unit{cm^{-3}\cdot erg^{\mu-1}}$,表征了数密度。根据上式可见辐射强度$\propto{}\nu^{-\frac{\mu-1}{2}}$,谱指数反映了电子能量分布。在典型 AGN 吸积活动中，$\mu=2.5$,可以发现辐射强度谱指数为$-0.75$.
 
 对于电子集体来讲另一个要考虑的因素是，当电子密度足够大时，产生辐射的这些电子会与光子碰撞，反过来吸收辐射。吸收系数为
 \begin{align}
 \langle{}\alpha_{\nu}\rangle&=\frac{\sqrt{3}}{4}\Gamma\left(\frac{3\mu+2}{12}\right)\Gamma\left(\frac{3\mu+22}{12}\right)\frac{{\color{blue}{\ce{e}}}^{3}}{2\pi m_{0}}\left(\frac{3{\color{blue}{\ce{e}}}}{2\pi m_{0}^{3}\mathrm{c}^{5}}\right)^{\frac{\mu}{2}}N_{0}\left(B\sin\alpha\right)^{\frac{\mu+2}{2}}\nu^{-\frac{\mu+4}{2}}\notag\\
-&=g\left(\mu\right)\frac{{\color{blue}{\ce{e}}}^{3}}{2\pi m_{0}}\left(\frac{3{\color{blue}{\ce{e}}}}{2\pi m_{0}^{3}\mathrm{c}^{5}}\right)^{\frac{\mu}{2}}N_{0}\left(B\sin\alpha\right)^{\frac{\mu+2}{2}}\nu^{-\frac{\mu+4}{2}}.\label{1.2.41}
+&=g\left(\mu\right)\frac{{\color{blue}{\ce{e}}}^{3}}{2\pi m_{0}}\left(\frac{3{\color{blue}{\ce{e}}}}{2\pi m_{0}^{3}\mathrm{c}^{5}}\right)^{\frac{\mu}{2}}N_{0}\left(B\sin\alpha\right)^{\frac{\mu+2}{2}}\nu^{-\frac{\mu+4}{2}}.\label{1.3.69}
 \end{align}
-可见低频波段吸收系数较大，相当于说低频波段电子相对辐射是光学厚的。我们知道光学厚观测到的辐射为源函数，将 (\ref{1.3.67})(\ref{1.2.41}) 式相比得到
+可见低频波段吸收系数较大，相当于说低频波段电子相对辐射是光学厚的。我们知道光学厚观测到的辐射为源函数，将 (\ref{1.3.68})(\ref{1.3.69}) 式相比得到
 \begin{equation}
 S_{\nu}\propto{}\nu^{2.5}.
 \end{equation}
@@ -1211,7 +1211,7 @@ L_{\nu}=\int j_{\nu}\mathrm{d}V,
 
 在 ICS 情形下，对于相对论性电子$E=\gamma m_{0}\mathrm{c}^{2}$,其散射后的光子能量大约是散射前的$\gamma^{2}$倍，即光子能量被极大提高，且沿着电子速度方向辐射。在 AGN 中，紫外辐射常被电子打到 X 甚至伽马波段。$\dfrac{4h\nu\gamma}{m_{0}\mathrm{c}^{2}}\ll1$时，电子损失能量速率为
 \begin{equation}
-\frac{\mathrm{d}E_{{\color{blue}{\ce{e}}}}}{\mathrm{d}t}=\frac{4}{3}\gamma^{2}\sigma_{\text{T}}\mathrm{c}U_{\text{rad}}.\label{1.2.48}
+\frac{\mathrm{d}E_{{\color{blue}{\ce{e}}}}}{\mathrm{d}t}=\frac{4}{3}\gamma^{2}\sigma_{\text{T}}\mathrm{c}U_{\text{rad}}.\label{1.3.78}
 \end{equation}
 其中$U_{\text{rad}}$是背景辐射场的能量密度。
 
@@ -1229,7 +1229,7 @@ L_{\nu}=\int j_{\nu}\mathrm{d}V,
 \label{同步加速辐射和 SSC 能谱示意图。}
 \end{figure}
 
-图\ref{同步加速辐射和 SSC 能谱示意图。}就展示了同步加速辐射和 SSC 能谱。可以发现左侧能谱左侧第一段受到同步加速辐射自吸收的影响。第二段的谱指数则与 SSC 一致。同步加速辐射第三段以$\mathrm{e}$指数下降，而右侧 SSC 能谱则在高能处截断。因此光谱中能观测到双峰分布，根据 (\ref{1.2.35})(\ref{1.2.48}) 式可知二者峰值比为
+图\ref{同步加速辐射和 SSC 能谱示意图。}就展示了同步加速辐射和 SSC 能谱。可以发现左侧能谱左侧第一段受到同步加速辐射自吸收的影响。第二段的谱指数则与 SSC 一致。同步加速辐射第三段以$\mathrm{e}$指数下降，而右侧 SSC 能谱则在高能处截断。因此光谱中能观测到双峰分布，根据 (\ref{1.3.63})(\ref{1.3.78}) 式可知二者峰值比为
 \begin{equation}
 \frac{P_{\text{sync}}}{P_{\text{ICS}}}=\frac{\left.\nu F_{\nu}\right\vert{}_{\text{sync}}}{\left.\nu F_{\nu}\right\vert{}_{\text{ICS}}}=\frac{U_{B}}{U_{\text{rad}}}.
 \end{equation}
@@ -1782,12 +1782,12 @@ H^{2}\left(t\right)=\left(\frac{\dot{a}\left(t\right)}{a\left(t\right)}\right)^{
 \end{equation}
 同样考虑暗能量，得到 the second Friedmann equation
 \begin{equation}
-\frac{\ddot{a}}{a}=-\frac{4\pi\mathrm{G}}{3}\left(\rho\left(t\right)+3P\left(t\right)\right)+\frac{\Lambda}{3}.\label{1.6.10}
+\frac{\ddot{a}}{a}=-\frac{4\pi\mathrm{G}}{3}\left(\rho\left(t\right)+3P\left(t\right)\right)+\frac{\Lambda}{3}.\label{1.6.11}
 \end{equation}
 可见决定宇宙膨胀加速度的要素有物质的能动张量和暗能量。
 
 \subsubsection{物态方程}
-(\ref{1.6.8}) 式对时间求导代入 (\ref{1.6.10}) 式得到连续性方程
+(\ref{1.6.8}) 式对时间求导代入 (\ref{1.6.11}) 式得到连续性方程
 \begin{equation}
 \dot{\rho}+3\frac{\dot{a}}{a}\left(\rho\left(t\right)+P\left(t\right)\right)=0.
 \end{equation}
@@ -1931,8 +1931,52 @@ V_{\mathrm{r}}=H_{0}d+V_{\text{pec}}.
 富团内本动速度高达$\qty{1500}{km\cdot{}s^{-1}}$.
 
 \subsection{附录}
-这部分会记载一些公式的推导。
-\subsubsection{黑体辐射公式}
+\subsubsection{黑体辐射能量密度简单推导}\label{黑体辐射能量密度简单推导}
+要计算黑体辐射能量密度，就要计算单位体积中从$\nu$到$\nu+\mathrm{d}\nu$有多少个量子态，以及每个量子态上有多少个光子，最后再考虑光子的能量$h\nu$,即
+\begin{equation}
+\varepsilon\left(\nu\right)\mathrm{d}\nu=\left[\left(\nu,\nu+\mathrm{d}\nu\right)\text{中量子态数目}\right]\times\left[\text{每个量子态上的光子数}\right]\times h\nu.
+\end{equation}
+
+将电磁辐射视为在三维空腔中的驻波，量子态数目可看作是这些驻波的可能模式数量。我们将黑体辐射模型化作边长分别为$L_{x},L_{y},L_{z}$的立方体空腔。电磁波在导电壁上的电场切向分量必须为零，因此每个方向上的波长必须满足：
+\begin{equation}
+L_{i}=n_{i}\left(\frac{\lambda_{i}}{2}\right),i=x,y,z.
+\end{equation}
+其中$n_{i}$是正整数，代表了在每个方向上驻波的半波数目，每个$\left(n_{x},n_{y},n_{z}\right)$所确定的点都代表一种允许的电磁波模式。注意到波数$k$与波长$\lambda$的关系为$k=\dfrac{2\pi{}}{\lambda}=\dfrac{2\pi{}\nu}{\mathrm{c}}$,我们也可以将上述边界条件用波数分量表示：
+\begin{equation}
+k^{2}=\sum_{i}k_{i}^{2},k_{i}=n_{i}\left(\frac{\pi}{L_{i}}\right),i=x,y,z.
+\end{equation}
+进而单位体积量子态的数目可以表示为
+\begin{equation}
+f\left(\nu\right)\mathrm{d}\nu=\frac{\mathrm{d}N}{V}=\frac{\mathrm{d}n_{x}\mathrm{d}n_{y}\mathrm{d}n_{z}}{V}=\frac{1}{\pi{}^{3}}\frac{L_{x}L_{y}L_{z}}{V}\mathrm{d}k_{x}\mathrm{d}k_{y}\mathrm{d}k_{z}=\frac{\mathrm{d}^{3}\vec{k}}{\pi{}^{3}}.
+\end{equation}
+在波数空间中，所有波数大小为$k$的点构成一个半径为$k$的球面，由于$n_{i}$都是正整数，因此只考虑八分之一球体体积，
+\begin{equation}
+f\left(\nu\right)\mathrm{d}\nu=\frac{1}{\pi^{3}}\frac{1}{8}4\pi{}k^{2}\mathrm{d}k=\frac{1}{\pi{}^{3}}\frac{1}{8}4\pi\cdot{}\frac{8\pi^{3}\nu^{2}}{\mathrm{c}^{3}}\mathrm{d}\nu=\frac{4\pi{}\nu^{2}}{\mathrm{c}^{3}}\mathrm{d}\nu.
+\end{equation}
+由于一个空间模式的电磁波有两种偏振，因此还要乘以 2，最后得到
+\begin{equation}
+f\left(\nu\right)\mathrm{d}\nu=\frac{8\pi{}\nu^{2}}{\mathrm{c}^{3}}\mathrm{d}\nu.
+\end{equation}
+
+下一步是求解频率为$\nu$的量子态上的光子数。光子是玻色子，记$\beta=\dfrac{1}{k_{\text{B}}T}$,一堆混杂在一起的、频率各不相同的玻色子所构成的体系，其（简化）巨配分函数为
+\begin{equation}
+Z=\sum_{n_{1},n_{2},\cdots}\exp\left[-\beta\left(n_{1}\varepsilon_{1}+n_{2}\varepsilon_{2}+\cdots\right)\right].
+\end{equation}
+其中$\varepsilon_{i}$表示第$i$个单粒子量子态的能量，$n_{i}$表示第$i$个频率模式上的光子数，可以取$0,1,2,\cdots$,但要满足$\sum_{i}n_{i}$为总粒子数$n$.由于是指数函数，在这里交换连乘和累加的顺序，得到
+\begin{align}
+Z&=\left(\sum_{n_{1}=1,2,\cdots}\mathrm{e}^{-\beta n_{1}\varepsilon_{1}}\right)\left(\sum_{n_{2}=1,2,\cdots}\mathrm{e}^{-\beta n_{2}\varepsilon_{2}}\right)\cdots\\
+&=\left(\frac{1}{1-\mathrm{e}^{-\beta\varepsilon_{1}}}\right) \left(\frac{1}{1-\mathrm{e}^{-\beta\varepsilon_{2}}}\right)\cdots.
+\end{align}
+第$i$个模式上的平均光子数可通过对巨配分函数的对数求导得到：
+\begin{equation}
+\langle{}n_{i}\rangle=-\frac{1}{\beta}\frac{\partial\ln Z}{\partial\varepsilon_{i}}=\frac{1}{\mathrm{e}^{\beta\varepsilon_{i}}-1}.
+\end{equation}
+综上我们便求得了黑体辐射的公式：
+\begin{equation}
+\varepsilon\left(\nu\right)\mathrm{d}\nu=\frac{8\pi{}\nu^{2}}{\mathrm{c}^{3}}\cdot\frac{1}{\mathrm{e}^{\frac{h\nu}{k_{\text{B}}T}}-1}\cdot{}h\nu\mathrm{d}\nu.
+\end{equation}
+
+
 
 \subsubsection{汤姆孙散射截面}
 汤姆孙散射可看作平面波驱动电子偶极震荡
