@@ -19,11 +19,11 @@
 \cline{1-3}
 组成 & $70\%\ce{H},28\%\ce{He}$,其余$\ce{N,Ne,Na}$ & 冰、硅、石墨等固体粒子\\
 \cline{1-3}
-粒子数密度 & $10^{-4}\text{\textendash}10^{6}\,\unit{cm^{-3}}$ & $10^{-13}\,\unit{cm^{-3}}$\\
+粒子数密度 & $10^{-4}\text{\textendash}\qty{e6}{cm^{-3}}$ & $\qty{e-13}{cm^{-3}}$\\
 \cline{1-3}
-质量密度 & $10^{-24}\,\unit{g\cdot cm^{-3}}$ & $10^{-27}\,\unit{g\cdot cm^{-3}}$\\
+质量密度 & $\qty{e-24}{g\cdot cm^{-3}}$ & $\qty{e-27}{g\cdot cm^{-3}}$\\
 \cline{1-3}
-温度 & $20\,\unit{K},100\,\unit{K},10000\,\unit{K},\ce{H2},\ce{H}\,\mathrm{\uppercase\expandafter{\romannumeral1}},\ce{H}\,\mathrm{\uppercase\expandafter{\romannumeral2}}$ & $10\text{\textendash}20\,\unit{K}$\\
+温度 & $\qty{20}{K},\qty{100}{K},\qty{e4}{K},\ce{H2},\ce{H}\,\mathrm{\uppercase\expandafter{\romannumeral1}},\ce{H}\,\mathrm{\uppercase\expandafter{\romannumeral2}}$ & $10\text{\textendash}\qty{20}{K}$\\
 \cline{1-3}
 研究手段 & 星际吸收线、氢 21 厘米谱线，分子谱线 & 星际消光和红化、星际极化、红外热辐射\\
 \hline
@@ -82,11 +82,11 @@ $\ce{H}\,\mathrm{\uppercase\expandafter{\romannumeral2}}$区 & 光学和红外�
 
 示踪分子：氢分子不发射射电辐射，但是其他分子发射线大部分由氢分子的热运动碰撞激发产生。如利用$\ce{CO}$分子的$\qty{2.6}{mm}$射电辐射可以研究氢分子的分布
 
-分子云：通过对$\ce{CO}$分子的观测，发现星际分子聚集成团而形成分子云，质量$10^{6}\,\unit{M_{\odot}}$，直径$\qty{600}{ly}$，密度$10^{3}\text{\textendash}10^{5}\,\unit{cm^{-3}}$
+分子云：通过对$\ce{CO}$分子的观测，发现星际分子聚集成团而形成分子云，质量$\qty{e6}{M_{\odot}}$，直径$\qty{600}{ly}$，密度$10^{3}\text{\textendash}\qty{e5}{cm^{-3}}$.
 
 分子云占据银盘内大约$1\%$的空间，质量大约占星际气体总质量的$50\%$
 
-巨分子云：质量$10^{6}\,\unit{M_{\odot}}$，直径$\qty{300}{ly}$，温度$\qty{20}{K}$，数密度$100\text{\textendash}300\,\unit{cm^{-3}}$，寿命$10^{7}\text{\textendash}10^{8}\,\unit{yr}$。大约$10\%$的分子云足够致密，可以形成恒星。
+巨分子云：质量$\qty{e6}{M_{\odot}}$，直径$\qty{300}{ly}$，温度$\qty{20}{K}$，数密度$100\text{\textendash}\qty{300}{cm^{-3}}$，寿命$10^{7}\text{\textendash}\qty{e8}{yr}$。大约$10\%$的分子云足够致密，可以形成恒星。
 
 \subsubsection{星际尘埃}
 
@@ -121,9 +121,9 @@ $\ce{H}\,\mathrm{\uppercase\expandafter{\romannumeral2}}$区 & 光学和红外�
 
 \subsubsection{简单分析}
 
-银河系内恒星总质量$\qty{5e10}{M_{\odot}}$，年龄$10^{10}\,\unit{yr}$，因此银河系平均恒星诞生率$\qty{5}{M_{\odot}yr^{-1}}$.
+银河系内恒星总质量$\qty{5e10}{M_{\odot}}$，年龄$\qty{e10}{yr}$，因此银河系平均恒星诞生率$\qty{5}{M_{\odot}yr^{-1}}$.
 
-O 型星寿命约$10^{6}\,\unit{yr}$，是最近形成的天体，观测 O 型星确定目前的恒星诞生率为$\qty{1.65}{M_{\odot}yr^{-1}}$.
+O 型星寿命约$\qty{e6}{yr}$，是最近形成的天体，观测 O 型星确定目前的恒星诞生率为$\qty{1.65}{M_{\odot}yr^{-1}}$.
 
 康德{}-{}拉普拉斯星云说：
 太阳系起源于旋转的星云，由于冷却凝缩，星云旋转速度加快，呈扁平状，当离心力超过引力时逐渐分裂出许多环状物。星云中心部分凝聚成太阳，各个环状物碎裂并凝结成围绕太阳运行的行星。
@@ -138,18 +138,18 @@ O 型星寿命约$10^{6}\,\unit{yr}$，是最近形成的天体，观测 O 型�
 
 无粘性流体的运动方程为：
 \begin{align}
-\rho\frac{\mathrm{d}\boldsymbol{u}}{\mathrm{d}t}&=-\nabla{}P-\rho\nabla\phi_{g}+\frac{1}{c}\boldsymbol{J}\times\boldsymbol{B}.\\
+\rho\frac{\mathrm{d}\boldsymbol{u}}{\mathrm{d}t}&=-\nabla{}P-\rho\nabla\phi_{g}+\frac{1}{\mathrm{c}}\boldsymbol{J}\times\boldsymbol{B}.\\
 \rho\frac{\mathrm{d}\boldsymbol{u}}{\mathrm{d}t}&=-\nabla P-\rho\nabla\phi_{g}+\frac{1}{4\pi}\left(\boldsymbol{B}\cdot\nabla \boldsymbol{B}\right)-\frac{1}{8\pi}\nabla{}\left\vert{}\boldsymbol{B}\right\vert{}^{2}.
 \end{align}
 不考虑外界压强，即自引力主导下，方程转化为
 \begin{equation}
 \frac{1}{2}\frac{\partial{}^{2}I}{\partial{}t^{2}}=2T+2U+W+M,
 \end{equation}
-其中转动惯量$I=\int\rho\left\vert{}\boldsymbol{r}\right\vert{}^{2}\mathrm{d}^{3}x$,动能$T=\dfrac{1}{2}\int\rho\left\vert{}\boldsymbol{u}\right\vert{}^2\mathrm{d}^{3}x$,热能$U=\dfrac{3}{2}\int nkT\mathrm{d}^3x$,引力势能$W=\dfrac{1}{2}\int\rho\phi_{g}\mathrm{d}^{3}x$，磁能$M=\dfrac{1}{8\pi}\int\left\vert{}\boldsymbol{B}\right\vert{}^{2}\mathrm{d}^{3}x$.
+其中转动惯量$I=\int\rho\left\vert{}\boldsymbol{r}\right\vert{}^{2}\mathrm{d}^{3}x$,动能$T=\dfrac{1}{2}\int\rho\left\vert{}\boldsymbol{u}\right\vert{}^2\mathrm{d}^{3}x$,热能$U=\dfrac{3}{2}\int nk_{\text{B}}T\mathrm{d}^3x$,引力势能$W=\dfrac{1}{2}\int\rho\phi_{g}\mathrm{d}^{3}x$，磁能$M=\dfrac{1}{8\pi}\int\left\vert{}\boldsymbol{B}\right\vert{}^{2}\mathrm{d}^{3}x$.
 
 气体云在引力坍缩时，$\dfrac{1}{2}\dfrac{\partial{}^{2}I}{\partial{}t^{2}}\approx-\dfrac{\mathrm{G}M^{2}}{R}$.坍缩时标
 \begin{equation}
-t_{\text{ff}}\sim\left(\frac{1}{4\pi{}\mathrm{G}\rho}\right)^{\frac{1}{2}}\sim5\times10^{5}\left(\frac{n}{10^{4}\,\unit{cm^{-3}}}\right)^{-\frac{1}{2}}\,\unit{yr}.
+t_{\text{ff}}\sim\left(\frac{1}{4\pi{}\mathrm{G}\rho}\right)^{\frac{1}{2}}\sim5\times10^{5}\left(\frac{n}{\qty{e4}{cm^{-3}}}\right)^{-\frac{1}{2}}\,\unit{yr}.
 \end{equation}
 
 星云坍缩触发机制：
@@ -222,7 +222,7 @@ t_{\text{ff}}\sim\left(\frac{1}{4\pi{}\mathrm{G}\rho}\right)^{\frac{1}{2}}\sim5\
 
 $M_{\text{J}}\sim\qty{0.5}{M_{\odot}}$,处于引力优势位置的原恒星更容易通过吸积周围的气体生长，但这样提供的恒星形成效率低。
 
-3. 小质量原恒星的并合，要求原恒星中心数密度达到$10^{8}\,\unit{pc^{-3}}$.
+3. 小质量原恒星的并合，要求原恒星中心数密度达到$\qty{e8}{pc^{-3}}$.
 
 \paragraph{极小质量恒星可能的形成机制}~{}
 
@@ -245,7 +245,7 @@ $M_{\text{J}}\sim\qty{0.5}{M_{\odot}}$,处于引力优势位置的原恒星更�
 
 
 
-O、B 型恒星表面温度高能产生大量紫外 ($\lambda<912\,\unit{\angstrom}$) 光子电离氢，产生$\ce{H}\,\mathrm{\uppercase\expandafter{\romannumeral2}}$区。如斯特龙根球就是年轻 O、B 型恒星周围存在的电离氢区。光致电离产生的大量自由电子之间相互频繁碰撞，建立电子气的平衡态速度分布。
+O、B 型恒星表面温度高能产生大量紫外 ($\lambda<\qty{912}{\angstrom}$) 光子电离氢，产生$\ce{H}\,\mathrm{\uppercase\expandafter{\romannumeral2}}$区。如斯特龙根球就是年轻 O、B 型恒星周围存在的电离氢区。光致电离产生的大量自由电子之间相互频繁碰撞，建立电子气的平衡态速度分布。
 
 
 

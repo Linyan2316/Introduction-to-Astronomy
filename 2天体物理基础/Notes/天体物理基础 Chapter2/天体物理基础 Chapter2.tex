@@ -5,9 +5,7 @@
 
 \begin{document}
 \section{恒星、致密星和行星}
-从本章节开始我们将依次介绍宇宙中的各类天体，从恒星到星际介质到星系再到宇宙本身。
-
-太阳仅有$\qty{6000}{K}$，氢原子难以激发，何来不透明度？原因在于氢负离子电子容易被激发。
+从本章开始我们将依次介绍宇宙中的各类天体，从恒星到星际介质到星系再到宇宙本身。
 
 \subsection{恒星的结构}
 本节中我们将会建立简单的恒星模型。在球对称的前提下，给定恒星的初始质量，化学组成和边界条件，在某一特定半径的球壳处求解一些方程便可大致确定恒星的性质。这些方程包括质量连续性方程、流体静力学平衡方程、能量守恒方程、能量传输方程、物态方程、产能率公式和不透明度公式。我们会在各个小节的叙述中了解恒星的性质并补完这些方程。其中质量连续性方程
@@ -21,7 +19,7 @@
 就不赘述了。
 
 \subsubsection{恒星的能量来源}
-太阳为地球提供了大量的光和热，一个很自然的问题便出现在科学家们的脑海中：恒星的能量来源是什么？有人认为来自氢氧合成水过程中所释放的化学能 (Herschel, 1837)，有人认为来自小行星撞击恒星所提供的能量 (Mayer, 1846). 一个看起来比较靠谱的猜想是引力能的释放 (Waterson, Helmholtz, Kelvin, 1850), 恒星不断向外辐射能量，内能降低导致压强下降，此时为了平衡引力恒星就会收缩，引力能在此过程中转化为内能。那么这个过程足以维持数亿年的辐射吗？简单计算恒星的引力能为
+太阳为地球提供了大量的光和热，一个很自然的问题便出现在科学家们的脑海中：恒星的能量来源是什么？有人 (Herschel, 1837) 认为来自氢氧合成水过程中所释放的化学能，有人 (Mayer, 1846) 认为来自小行星撞击恒星所提供的能量。一个看起来比较靠谱的猜想是引力能的释放 (Waterson, Helmholtz, Kelvin, 1850), 恒星不断向外辐射能量，内能降低导致压强下降，此时为了平衡引力恒星就会收缩，引力能在此过程中转化为内能。那么这个过程足以维持数亿年的辐射吗？假设恒星密度均匀，恒星的引力能为
 \begin{align}
 \mathrm{d}U_{\text{g},i}&=-\mathrm{G}\frac{M_{r}\mathrm{d}m_{i}}{r},\notag\\
 U_{\text{g}}&=-\mathrm{G}\int_{0}^{R}\frac{4}{3}\pi r^{3}\rho \frac{4\pi r^{2}\rho\mathrm{d}r}{r}\notag\\
@@ -29,24 +27,24 @@ U_{\text{g}}&=-\mathrm{G}\int_{0}^{R}\frac{4}{3}\pi r^{3}\rho \frac{4\pi r^{2}\r
 \end{align}
 以太阳为例，假设引力能全部转换为辐射能，所维持的时间也不过
 \begin{equation}
-\tau\sim\frac{\mathrm{G}M_{\odot}^{2}}{R_{\odot}L_{\odot}}\sim10^{7}\,\unit{yr}.
+\tau\sim\frac{\mathrm{G}M_{\odot}^{2}}{R_{\odot}L_{\odot}}\sim\qty{e7}{yr}.
 \end{equation}
 而地质鉴定告诉我们地球已有 46 亿年的历史，因此人们还需寻找其他类型的能源。
 
-到了 1920 年代，卢瑟福等人已经测定了原子核的质量，同时相对论质能方程的提出让人们意识到恒星的能量可能来自于热核反应。那么，恒星内部的环境满足进行核聚变的条件吗？我们先估计一下电荷数最小的氢原子聚变所需克服的经典库仑势垒。取质子直径$r\sim10^{-15}\,\unit{m}$,所需的温度为
+到了 1920 年代，卢瑟福等人已经测定了原子核的质量，同时相对论质能方程的提出让人们意识到恒星的能量可能来自于热核反应。那么，恒星内部的环境满足进行核聚变的条件吗？我们先估计一下电荷数最小的氢原子聚变所需克服的经典库仑势垒。取质子直径$r\sim\qty{e-15}{m}$,所需的温度为
 \begin{align}
 \frac{1}{2}m_{\ce{H}}v^{2}&=\frac{3}{2}k_{\text{B}}T_{\text{classical}}=\frac{1}{4\pi\varepsilon_{0}}\frac{Z_{1}Z_{2}{\color{blue}{\ce{e}}}^{2}}{r},\\
-T_{\text{classical}}&=\frac{Z_{1}Z_{2}{\color{blue}{\ce{e}}}^{2}}{6\pi\varepsilon_{0}k_{\text{B}}r}\sim10^{10}\,\unit{K}.
+T_{\text{classical}}&=\frac{Z_{1}Z_{2}{\color{blue}{\ce{e}}}^{2}}{6\pi\varepsilon_{0}k_{\text{B}}r}\sim\qty{e10}{K}.
 \end{align}
 对于恒星来讲这个温度实在是难以达到。好在量子图景下，即使核子动能不足以跨越库仑势垒，它也有一定的概率穿越它。此时所需的温度为
 \begin{align}
 \frac{1}{4\pi\varepsilon_{0}}\frac{Z_{1}Z_{2}{\color{blue}{\ce{e}}}^{2}}{\lambda}&=\frac{p^{2}}{2m_{\ce{H}}}=\frac{\left(h/\lambda\right)^{2}}{2m_{\ce{H}}},\\
 \lambda&=\frac{2\pi\varepsilon_{0}h^{2}}{Z_{1}Z_{2}{\color{blue}{\ce{e}}}^{2}m_{\ce{H}}}\to r,\\
-T_{\text{quantum}}&=\frac{Z_{1}^{2}Z_{2}^{2}{\color{blue}{\ce{e}}}^{4}m_{\ce{H}}}{12\pi^{2}\varepsilon_{0}^{2}k_{\text{B}}h^{2}}\sim10^{7}\,\unit{K}.
+T_{\text{quantum}}&=\frac{Z_{1}^{2}Z_{2}^{2}{\color{blue}{\ce{e}}}^{4}m_{\ce{H}}}{12\pi^{2}\varepsilon_{0}^{2}k_{\text{B}}h^{2}}\sim\qty{e7}{K}.
 \end{align}
 这个温度就比较容易达到了。我们可以来估计一下太阳内部的压力和温度。根据 (\ref{2.1.2}) 式可知，
 \begin{equation}
-P=\int_{0}^{P}\mathrm{d}P=\int_{R}^{0}-\frac{\mathrm{G}M_{r}\rho}{r^{2}}\mathrm{d}r=\int_{R}^{0}-\frac{\mathrm{G}4\pi{}r^{3}\rho^{2}}{3r^{2}}\mathrm{d}r=\frac{2\pi{}}{3}\rho^{2}\mathrm{G}R^{2},\overline{P}\sim10^{14}\,\unit{Pa},
+P=\int_{0}^{P}\mathrm{d}P=\int_{R}^{0}-\frac{\mathrm{G}M_{r}\rho}{r^{2}}\mathrm{d}r=\int_{R}^{0}-\frac{\mathrm{G}4\pi{}r^{3}\rho^{2}}{3r^{2}}\mathrm{d}r=\frac{2\pi{}}{3}\rho^{2}\mathrm{G}R^{2},\overline{P}\sim\qty{e14}{Pa},
 \end{equation}
 因此太阳平均温度可达$T=\dfrac{\mu m_{\ce{H}}\overline{P}}{k_{\text{B}}\rho}\sim\qty{5e6}{K}$,核心温度可达$\qty{1.5e7}{K}$,足以进行氢的热核反应。
 
@@ -58,7 +56,7 @@ P=\int_{0}^{P}\mathrm{d}P=\int_{R}^{0}-\frac{\mathrm{G}M_{r}\rho}{r^{2}}\mathrm{
 \end{equation}
 其中$\nu_{\ce{e}}$是电子中微子。此过程中释放的能量为$E=\left(4m_{\ce{H}}-m_{\ce{He}}\right)\mathrm{c}^{2}=\qty{4e-5}{erg}$,燃烧效率为$0.7\%$,即以质量计有$0.7\%$的初始燃料完全转化为能量。
 
-氢燃烧的方式有两种，一是质子{}-{}质子链 (proton-proton chain, pp chain),二是碳氮氧循环。pp chain 的速率$\propto T^{4}$, CNO 循环的速率$\propto{}T^{20}$,温度高于$1.5\times10^{7}\,\unit{K}$时 CNO 效率更高。因此前者主要发生在质量$M<\qty{1.1}{M_{\odot}}$的恒星中，后者发生在$M>\qty{1.1}{M_{\odot}}$的恒星中。
+氢燃烧的方式有两种，一是质子{}-{}质子链 (proton-proton chain, pp chain),二是碳氮氧循环。pp chain 的速率$\propto T^{4}$, CNO 循环的速率$\propto{}T^{20}$,温度高于$\qty{1.5e7}{K}$时 CNO 效率更高。因此前者主要发生在质量$M<\qty{1.1}{M_{\odot}}$的恒星中，后者发生在$M>\qty{1.1}{M_{\odot}}$的恒星中。
 
 质子{}-{}链又可分为三种路径，记作 pp\uppercase\expandafter{\romannumeral1}, pp\uppercase\expandafter{\romannumeral2}, pp\uppercase\expandafter{\romannumeral3},其中 pp\uppercase\expandafter{\romannumeral1}最重要。
 \begin{figure}[!htbp]
@@ -79,7 +77,7 @@ P=\int_{0}^{P}\mathrm{d}P=\int_{R}^{0}-\frac{\mathrm{G}M_{r}\rho}{r^{2}}\mathrm{
 \ce{^{15}N +^{1}H &->^{12}C +^{4}He}.
 \end{align*}
 
-温度高于$10^{8}\,\unit{K}$，将会进行氦燃烧：
+温度高于$\qty{e8}{K}$，将会进行氦燃烧：
 \begin{align*}
 \ce{^{4}He +^{4}He &->^{8}Be},\\
 \ce{^{8}Be +^{4}He &->^{12}C}+\gamma.
@@ -141,6 +139,8 @@ P=\int_{0}^{P}\mathrm{d}P=\int_{R}^{0}-\frac{\mathrm{G}M_{r}\rho}{r^{2}}\mathrm{
 \end{equation}
 可见不透明度$\kappa$会影响辐射能传输的效率。不透明度下降，散逸的能量增多，导致核心区温度下降，压强下降，恒星收缩，密度上升，进而导致不透明度上升，产生$\kappa$机制振荡。
 
+太阳仅有$\qty{6000}{K}$，氢原子难以激发，何来不透明度？原因在于氢负离子的电子容易被激发。 
+
 当恒星内部的不透明度或产能率增大时，辐射温度梯度值也随之增大，半径增加一点温度就快速下降，说明辐射不再是传递能量的有效方式，恒星依靠对流传递能量。或者当辐射平衡不稳定时，也会产生对流。对流是气体在冷热区域间大规模的循环流动。热气体膨胀上升，冷却后下沉，形成物质流动的循环和能量的传递。对流不仅传递能量，还起到混合物质的作用。
 
 我们可以研究一下绝热条件下的温度梯度。假设恒星内部流体元在上升过程中绝热膨胀，不与周围交换热量，根据
@@ -159,11 +159,11 @@ P=K\rho^{\gamma}
 \end{align}
 我们认为$\left\vert{}\dfrac{\mathrm{d}T}{\mathrm{d}r}\right\vert{}_{\text{actual}}<\left\vert{}\dfrac{\mathrm{d}T}{\mathrm{d}r}\right\vert{}_{\text{ad}}$的是辐射区，反之是对流区。
 
-$M>1.5\text{\textendash}2\,\unit{M_{\odot}}$的恒星，拥有对流核区和辐射包层，核区发生$\ce{CNO}$循环核反应，产生能量的内核很小。
+$M>1.5\text{\textendash}\qty{2}{M_{\odot}}$的恒星，拥有对流核区和辐射包层，核区发生$\ce{CNO}$循环核反应，产生能量的内核很小。
 
-$0.8\,\unit{M_{\odot}}<M<1.5\text{\textendash}2\,\unit{M_{\odot}}$的恒星，拥有辐射核区和对流包层，核心区发生 pp chain 核反应，能量产生于较大的内核。
+$\qty{0.8}{M_{\odot}}<M<1.5\text{\textendash}\qty{2}{M_{\odot}}$的恒星，拥有辐射核区和对流包层，核心区发生 pp chain 核反应，能量产生于较大的内核。
 
-$0.1\,\unit{M_{\odot}}<M<0.8\,\unit{M_{\odot}}$的主序星，低温，整体对流。
+$\qty{0.1}{M_{\odot}}<M<\qty{0.8}{M_{\odot}}$的主序星，低温，整体对流。
 
 \subsubsection{恒星的物态方程和气体总压强}
 恒星内部的总压强主要由两部分组成：气体粒子运动产生的气体压强$P_{\text{g}}$和光子辐射压$P_{\text{rad}}$.不同的物态将会给出不同的压强形式。
@@ -283,17 +283,17 @@ Russell-Vogt 原理：如果恒星处于流体静力学平衡和热平衡，而�
 
 核时标，恒星核心区（约占总质量的$10\%$）核燃料消耗殆尽所需的时间
 \begin{equation}
-t_{n}=\frac{E}{L}=\frac{\eta\Delta{}M\mathrm{c}^{2}}{L}\approx0.7\%\times\frac{0.1\,M_{\odot}\mathrm{c}^{2}}{L}\approx10^{10}\,\unit{yr}\frac{M}{\unit{M_{\odot}}}\left(\frac{L}{\unit{L_{\odot}}}\right)^{-1}.
+t_{n}=\frac{E}{L}=\frac{\eta\Delta{}M\mathrm{c}^{2}}{L}\approx0.7\%\times\frac{0.1\,M_{\odot}\mathrm{c}^{2}}{L}\approx\qty{e10}{yr}\frac{M}{\unit{M_{\odot}}}\left(\frac{L}{\unit{L_{\odot}}}\right)^{-1}.
 \end{equation}
 
 热时标，恒星辐射完自身内能所需的时间，或者光子从恒星内部到达表面的时间（根据位力定理，内能是引力能的$\dfrac{1}{2}$）
 \begin{equation}
-t_{\text{the}}=0.5\frac{\mathrm{G}M^{2}}{RL}\approx2\times10^{7}\,\unit{yr}\left(\frac{M}{\unit{M_{\odot}}}\right)^{2}\left(\frac{R}{\unit{R_{\odot}}}\right)^{-1}\left(\frac{L}{\unit{L_{\odot}}}\right)^{-1}.
+t_{\text{the}}=0.5\frac{\mathrm{G}M^{2}}{RL}\approx\qty{2e7}{yr}\left(\frac{M}{\unit{M_{\odot}}}\right)^{2}\left(\frac{R}{\unit{R_{\odot}}}\right)^{-1}\left(\frac{L}{\unit{L_{\odot}}}\right)^{-1}.
 \end{equation}
 
 动力学时标，如果恒星内部压力突然消失，引力作用下恒星坍缩的时间
 \begin{equation}
-t_{\text{dyn}}=\frac{R}{V}\approx\sqrt\frac{R^{3}}{\mathrm{G}M}\approx27\,\unit{min}\left(\frac{R}{\unit{R_{\odot}}}\right)^{\frac{3}{2}}\left(\frac{M}{\unit{M_{\odot}}}\right)^{-\frac{1}{2}}.
+t_{\text{dyn}}=\frac{R}{V}\approx\sqrt\frac{R^{3}}{\mathrm{G}M}\approx\qty{27}{min}\left(\frac{R}{\unit{R_{\odot}}}\right)^{\frac{3}{2}}\left(\frac{M}{\unit{M_{\odot}}}\right)^{-\frac{1}{2}}.
 \end{equation}
 
 \subsubsection{Jeans 质量}
@@ -411,7 +411,7 @@ $\ce{^{26}Al}$只产生于核坍缩超新星爆发，它的半衰期只有$\qty{
  & 壳层氢燃烧产能率上升，半径上升， & \\
  & 温度下降，恒星对流区增大 & \\
 \cline{1-3}
-氦闪 & $T_{\text{c}}$达到$10^{8}\,\unit{K}$时氦开始燃烧，& 攀升到红巨星支的顶点\\
+氦闪 & $T_{\text{c}}$达到$\qty{e8}{K}$时氦开始燃烧，& 攀升到红巨星支的顶点\\
 (helium flash) & 由于电子简并，缺乏负反馈机制， & \\
  & 温度上升至氦爆燃，电子简并解除 & \\
 \cline{1-3}
@@ -456,7 +456,7 @@ $\ce{^{26}Al}$只产生于核坍缩超新星爆发，它的半衰期只有$\qty{
 
 $\ce{O}$型星$\to$蓝超巨星$\to$红超巨星$\to$ WR 星$\to$ \uppercase\expandafter{\romannumeral1}b/\uppercase\expandafter{\romannumeral1}c 型超新星$\to$中子星/黑洞
 
-高光度恒星通常有很强的星风（损失率$\sim10^{-6}\text{\textendash}10^{-4}\,\unit{M_{\odot}yr^{-1}}$），可以剥离恒星包层使氦核裸露。这类天体被称作沃尔夫{}-{}拉叶 (Wolf-Rayet, WR) 星。
+高光度恒星通常有很强的星风（损失率$\sim10^{-6}\text{\textendash}\qty{e-4}{M_{\odot}yr^{-1}}$），可以剥离恒星包层使氦核裸露。这类天体被称作沃尔夫{}-{}拉叶 (Wolf-Rayet, WR) 星。
 
 \subsubsection{超新星爆发}
 
@@ -464,7 +464,7 @@ $\ce{O}$型星$\to$蓝超巨星$\to$红超巨星$\to$ WR 星$\to$ \uppercase\exp
 
 不过即时爆发实际上是不可能的，因为激波中的绝大部分能量被用来离解下落的铁原子核，电子俘获过程产生的中微子带走了大部分能量。因此，需要给激波再次注入能量（如通过中微子与下落物质的相互作用），才能使爆发成功发生。
 
-核坍缩超新星极大光度可达$10^{7}\text{\textendash}10^{10}\,\unit{L_{\odot}}$，总爆发能$10^{53}\,\unit{erg}$, 其中$99\%$以上以中微子形式释放；放射性衰变释放能量$\sim10^{49}\,\unit{erg}$, 可以产生时标几个月的可见光辐射；抛射物质$\sim10\,\unit{M_{\odot}}$, 速度$\sim\qty{3000}{km\cdot{}s^{-1}}$, 合计总动能$\sim10^{51}\,\unit{erg}$.
+核坍缩超新星极大光度可达$10^{7}\text{\textendash}\qty{e10}{L_{\odot}}$，总爆发能$\qty{e53}{erg}$, 其中$99\%$以上以中微子形式释放；放射性衰变释放能量$\sim\qty{e49}{erg}$, 可以产生时标几个月的可见光辐射；抛射物质$\sim\qty{10}{M_{\odot}}$, 速度$\sim\qty{3000}{km\cdot{}s^{-1}}$, 合计总动能$\sim\qty{e51}{erg}$.
 
 超新星遗迹：超新星爆发抛出的大量物质在向外膨胀过程中与星际物质和磁场相互作用而形成的气体星云。是强射电辐射和高能辐射源（同步加速辐射，激波加热）。年龄不超过十万年。
 
@@ -491,7 +491,7 @@ $\ce{O}$型星$\to$蓝超巨星$\to$红超巨星$\to$ WR 星$\to$ \uppercase\exp
 
 脉动变星 (Pulsating Variables) 是星体发生有节律的、大规模运动而使亮度发生变化的恒星。恒星演化到一定阶段，内部出现不稳定性，引力和压力失去平衡。维持脉动要求恒星在收缩时内部压力增大，在膨胀时内部压力减小。
 
-经典造父变星的脉动周期越长，光度越高。质量$3\text{\textendash}10\,\unit{M_{\odot}}$的 F\text{\textendash}K 巨星，处于氦核燃烧阶段位于赫罗图主序上方的造父不稳定带。其光变主要来自表面温度的变化，半径越低，温度越高，光度又高。恒星演化到一定阶段，内部出现不稳定性，引力和压力失去平衡。维持脉动要求恒星在收缩时内部压力增大，在膨胀时内部压力减小。$\varepsilon$机制属于核心的核反应率变化。脉动主要是包层的周期性膨胀和收缩，不涉及恒星的核心。$\kappa$机制——包层不透明度的变化（阀门机制）。$\kappa\propto{}\rho{}T^{-3.5}$,一般情况下半径下降，导致温度上升，密度上升，$\kappa$减小，辐射更容易通过，包层失去能量，压力下降，半径进一步下降。但如果包层中有部分电离的元素（$\ce{He+},\ce{He++}$），恒星收缩时部分对气体做的功会被用来进一步电离气体而不是提高温度，此时温度不变而密度上升，$\kappa$增大，辐射不易通过，包层吸收能量，压力上升，半径膨胀，形成负反馈。因此脉动的显著性（参与脉动的物质量、脉动振幅）等与部分电离区的位置有关。
+经典造父变星的脉动周期越长，光度越高。质量$3\text{\textendash}\qty{10}{M_{\odot}}$的 F\text{\textendash}K 巨星，处于氦核燃烧阶段位于赫罗图主序上方的造父不稳定带。其光变主要来自表面温度的变化，半径越低，温度越高，光度又高。恒星演化到一定阶段，内部出现不稳定性，引力和压力失去平衡。维持脉动要求恒星在收缩时内部压力增大，在膨胀时内部压力减小。$\varepsilon$机制属于核心的核反应率变化。脉动主要是包层的周期性膨胀和收缩，不涉及恒星的核心。$\kappa$机制——包层不透明度的变化（阀门机制）。$\kappa\propto{}\rho{}T^{-3.5}$,一般情况下半径下降，导致温度上升，密度上升，$\kappa$减小，辐射更容易通过，包层失去能量，压力下降，半径进一步下降。但如果包层中有部分电离的元素（$\ce{He+},\ce{He++}$），恒星收缩时部分对气体做的功会被用来进一步电离气体而不是提高温度，此时温度不变而密度上升，$\kappa$增大，辐射不易通过，包层吸收能量，压力上升，半径膨胀，形成负反馈。因此脉动的显著性（参与脉动的物质量、脉动振幅）等与部分电离区的位置有关。
 
 \subsubsection{密近双星的演化}
 1864 年，法国数学家$\rm E. Roche$首先提出计算密近双星系统引力势的简化模型。
@@ -570,7 +570,7 @@ $\ce{O}$型星$\to$蓝超巨星$\to$红超巨星$\to$ WR 星$\to$ \uppercase\exp
 白矮星内部高温高密，高温使原子电离产生大量自由电子，高密使电子简并产生电子简并压。
 
 白矮星基本参数：
-质量$\sim0.2\text{\textendash}1.3\,\unit{M_{\odot}}$, 半径$\sim5\times10^{8}\text{\textendash}10^{9}\,\unit{cm}$, 密度$\sim10^{5}\text{\textendash}10^{7}\,\unit{g\cdot cm^{-3}}$, 绝对星等$M_{\text{V}}\sim8\text{\textendash}16$, 有效温度$\sim5\times10^{3}\text{\textendash}4\times10^{4}\,\unit{K}$,自转周期$\ge\qty{10}{s}$. 外层包裹着厚度约$\qty{50}{km}$，主要由氢组成的大气。
+质量$\sim0.2\text{\textendash}\qty{1.3}{M_{\odot}}$, 半径$\sim5\times10^{8}\text{\textendash}\qty{e9}{cm}$, 密度$\sim10^{5}\text{\textendash}\qty{e7}{g\cdot cm^{-3}}$, 绝对星等$M_{\text{V}}\sim8\text{\textendash}16$, 有效温度$\sim5\times10^{3}\text{\textendash}\qty{4e4}{K}$,自转周期$\ge\qty{10}{s}$. 外层包裹着厚度约$\qty{50}{km}$，主要由氢组成的大气。
 
 对于非相对论性 ($v_{{\color{blue}{\ce{e}}}}\ll\mathrm{c}$) 电子，$P_{{\color{blue}{\ce{e}}}}\propto\rho^{\frac{5}{3}}$,对于相对论性电子，$P_{{\color{blue}{\ce{e}}}}\propto\rho^{\frac{4}{3}}$.
 
@@ -580,7 +580,7 @@ $\ce{O}$型星$\to$蓝超巨星$\to$红超巨星$\to$ WR 星$\to$ \uppercase\exp
 
 激变变星是白矮星与低质量恒星构成的半相接双星，白矮星吸积伴星物质，表面发生失控的热核反应，产生光学、紫外、X 射线辐射和爆发，同时抛射吸积物质。激变变星有新星、再发新星等分类。
 
-新星的观测特征为在数天至数星期内亮度增加$7\text{\textendash}16$等，然后缓慢下降，经几个月或几年回复到原先的状态。辐射主要在光学和紫外波段，爆发时的能量释放率$\sim10^{45}\text{\textendash}10^{46}\,\unit{erg\cdot{}s^{-1}}$,抛射约$10^{-5}\text{\textendash}10^{-3}\,\unit{M_{\odot}}$的物质。
+新星的观测特征为在数天至数星期内亮度增加$7\text{\textendash}16$等，然后缓慢下降，经几个月或几年回复到原先的状态。辐射主要在光学和紫外波段，爆发时的能量释放率$\sim10^{45}\text{\textendash}\qty{e46}{erg\cdot{}s^{-1}}$,抛射约$10^{-5}\text{\textendash}\qty{e-3}{M_{\odot}}$的物质。
 
 物质传输会导致新星反复爆发，表现为再发新星，爆发间隔约$10\text{\textendash}100$年。
 
@@ -609,11 +609,11 @@ $\ce{O}$型星$\to$蓝超巨星$\to$红超巨星$\to$ WR 星$\to$ \uppercase\exp
 脉冲星的能量来源和辐射机制是什么？
 
 
-X 射线双星：吸积物质的引力势能转化为动能，进而转化为热能，温度高达$10^{7}\,\unit{K}$,表现为 X 射线辐射。根据伴星质量不同分为两类。高质量$M>\qty{10}{M_{\odot}}$ X 射线双星，伴星早型，质量大，年轻$<10^{7}\,\unit{yr}$,分布在银盘附近，中子星具有强磁场，物质来自星风。低质量$M\le\qty{1}{M_{\odot}}$ X 射线双星，伴星晚型，低质量，年老$>\qty{5e9}{yr}$,物质来自洛希瓣渗溢，分布在银心和球状星团中，中子星具有弱磁场。
+X 射线双星：吸积物质的引力势能转化为动能，进而转化为热能，温度高达$\qty{e7}{K}$,表现为 X 射线辐射。根据伴星质量不同分为两类。高质量 ($M>\qty{10}{M_{\odot}}$) X 射线双星，伴星早型，质量大，年轻$<\qty{e7}{yr}$,分布在银盘附近，中子星具有强磁场，物质来自星风。低质量 ($M\le\qty{1}{M_{\odot}}$) X 射线双星，伴星晚型，低质量，年老$>\qty{5e9}{yr}$,物质来自洛希瓣渗溢，分布在银心和球状星团中，中子星具有弱磁场。
 
 在高质量 X 射线双星中，吸积流在中子星磁层处被截断。吸积物质沿着中子星磁力线流向中子星的两极。由此产生的辐射是非各向同性的，表现为 X 射线脉冲星。
 
-低质量 X 射线双星往往具有 X 射线暴。上升时标$\sim1\text{\textendash}10\,\unit{s}$,衰减时标数十秒，释放能量$10^{39}\text{\textendash}10^{40}\,\unit{erg}$,爆发间隔几小时，爆发机制吸积中子星表面 H, He 壳层的失控热核反应。
+低质量 X 射线双星往往具有 X 射线暴。上升时标$\sim1\text{\textendash}\qty{10}{s}$,衰减时标数十秒，释放能量$10^{39}\text{\textendash}\qty{e40}{erg}$,爆发间隔几小时，爆发机制吸积中子星表面 H, He 壳层的失控热核反应。
 
 \subsection{黑洞}
 描述黑洞的物理参数只有质量、角动量和电荷。
@@ -662,9 +662,9 @@ kT\sim\frac{h\mathrm{c}}{\lambda}=\frac{h\mathrm{c}}{2\mathrm{G}M/\mathrm{c}^{2}
 t=\frac{E}{L}=\frac{M\mathrm{c}^{2}}{4\pi R_{\text{s}}^{2}\sigma T^{4}}\propto{}M^{3}
 \end{equation}
 
-$M=\qty{1}{M_{\odot}},T\sim10^{-6}\,\unit{K},t\sim10^{67}\,\unit{yr}$,
+$M=\qty{1}{M_{\odot}},T\sim\qty{e-6}{K},t\sim\qty{e67}{yr}$,
 
-$M=10^{15}\,\unit{g},T\sim10^{13}\,\unit{K},t\sim10^{10}\,\unit{yr}$.因此小黑洞已经蒸发。
+$M=\qty{e15}{g},T\sim\qty{e13}{K},t\sim\qty{e10}{yr}$.因此小黑洞已经蒸发。
 
 \subsubsection{如何搜索黑洞？}
 黑洞强引力场的观测效应：
