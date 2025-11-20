@@ -97,6 +97,115 @@ CMB 光子会被星系团散射。
 
 宇宙线是十分高能的。高速粒子 ($\qty{e20}{eV}$) 与 CMB 光子反应，观测中会发现 Greisen-Zatsepin-Kuzmin cutoff.
 
+\section{宇宙的基本观测事实}
+大尺度满足空间平移不变性和旋转不变性，均匀且各向同性。
+
+利用元素半衰期，利用球状星体 turnoff point 的年龄，利用白矮星光度函数的截止光度（$L\propto{}Mt^{-\frac{7}{5}}$，更低光度宇宙年龄还不到）。
+
+Sunyaev-Zel'dovich Effect: 星系团中的热气体与宇宙微波背景辐射的光子发生 ICS, 使得 CMB 谱向高能段偏移。如果星系团相对于 CMBR 静止参考系存在一个本动速度，被散射的 CMBR 光子会经历 Doppler 效应，也会导致 CMBR 辐射强度的变化。运动学 S-Z 效应比热 S-Z 效应弱。
+
+星系团是宇宙中最大的引力束缚体系。其物质组成（重子物质和暗物质）应代表整个宇宙的组分。CMBR 光子经过星系团时产生的 S-Z 效应不依赖于星系团的红移。因此被视为强有力的宇宙学探针。
+
+结合 X 射线观测确定 Hubble 常数和利用星系团的 S-Z 效应计数可以确定角直径距离、限制宇宙学基本参量、研究星系团的演化。从而最终限制宇宙学模型。
+
+\section{宇宙膨胀的动力学}
+
+解爱因斯坦方程得到 Friedmann 方程组
+\begin{align}
+\left(\frac{\dot a}{a}\right)^{2}&=\frac{8\pi\mathrm{G}}{3}\sum_{i}\rho_{i}-\frac{k}{a^{2}},\\
+\frac{\ddot a}{a}&=-\frac{4\pi\mathrm{G}}{3}\sum_{i}\left(\rho_{i}+3\mathcal{P}_{i}\right).
+\end{align}
+对第一式求导，得到
+\begin{equation}
+2\dot a\ddot a=\frac{8\pi\mathrm{G}}{3}\left(\dot\rho a^{2}+2\rho\dot aa\right).
+\end{equation}
+结合第二式得到
+\begin{equation}
+\dot\rho+\frac{3\dot a}{a}\left(\rho+\mathcal{P}\right)=0.
+\end{equation}
+
+定义减速因子
+\begin{equation}
+q=-\frac{\ddot aa}{{\dot a}^{2}}=\frac{1}{2}\Omega_{\text{m}}+\Omega_{\text{r}}-\Omega_{\Lambda}.
+\end{equation}
+
+哈勃常数变化
+\begin{align}
+\Omega_{\text{r}}=\frac{8\pi\mathrm{G}}{3H_{0}^{2}}\rho_{\text{r}},\Omega_{\text{m}}=\frac{8\pi\mathrm{G}}{3H_{0}^{2}}\rho_{\text{m}},\Omega_{\Lambda}=\frac{8\pi\mathrm{G}}{3H_{0}^{2}}\rho_{\Lambda},\Omega_{\text{k}}=-\frac{k}{a^{2}H_{0}^{2}}.\\
+H\left(z\right)=H_{0}\sqrt{\Omega_{\text{r0}}\left(1+z\right)^{4}+\Omega_{\text{m0}}\left(1+z\right)^{3}+\Omega_{\text{k0}}\left(1+z\right)^{2}+\Omega_{\Lambda0}}.
+\end{align}
+
+宇宙年龄
+\begin{equation}
+t_{0}=\int_{0}^{a_{0}}\frac{\mathrm{d}a}{\dot a}=\int_{0}^{\infty}\frac{\mathrm{d}z}{\left(1+z\right)H\left(z\right)}.
+\end{equation}
+
+视界
+\begin{equation}
+d_{\text{H}}=a_{0}\int_{0}^{t_{0}}\frac{\mathrm{c}\mathrm{d}t}{a\left(t\right)}.
+\end{equation}
+$z=1000$时视界的尺度是今天的视界尺度的$0.03$倍，按理说宇宙有$0.03^{-3}$个独立的区域。那么 CMB 各向同性是如何发生的？
+
+宇宙起源于一个极小的区域（比经典大爆炸模型小），在暴胀前宇宙的大小远小于视界大小，因而具有相同的温度，暴胀后的宇宙依然具有相同的温度。
+
+即使宇宙早期位形是高度弯曲的，经过暴胀会变为平直。
+
+\section{CMB}
+Acoustic oscillations：Recombination 以前声速达到$\dfrac{\mathrm{c}}{\sqrt{3}}$，直到共动声学世界在$R_{\text{s}}\sim150\,\mathrm{Mpc}$冻结。Recombination 时 Jeans 长度比视界尺度大得多，因此我们预计在所有亚视界尺度上都会有流体振荡，包括 Recombination 时刚好进入视界的尺度。视界尺度上流体的动力学将转化为宇宙微波背景辐射功率谱中的第一个声学峰。
+
+曲率：声波震荡峰的位置。
+
+暗能量：基本无影响。
+
+重子含量：越多峰越高。
+
+物质密度：物质越多，辐射 - 物质密度相等时刻越靠前，震荡变弱。
+
+Silk damping tail：比自由程尺度小的扰动被抹平。
+
+张量扰动能影响 CMB 偏振全部分量，标量扰动只能影响部分。
+
+在大尺度结构的观测上，另一个重要的方向是重子声波振荡（Baryon Acoustic Oscillations）。在宇宙的光子退耦前，物质在引力的作用下向内收缩，而又在物质压强下向外扩张，从而形成了声波振荡，这种振荡会在光子退耦后保留下来。
+
+\section{扰动}
+扰动场$\delta{}\left(\vec{x}\right)$，Fourier 变换
+\begin{align}
+\delta{}\left(\vec{x}\right)&=\frac{1}{\left(2\pi\right)^{\frac32}}\int\delta{}\left(\vec{k}\right)e^{-i\boldsymbol{k}\cdot\boldsymbol{x}}\mathrm{d}^{3}\vec{k}.\\
+\delta{}\left(\vec{k}\right)&=\frac{1}{\left(2\pi\right)^{\frac32}}\int\delta{}\left(\vec{x}\right)e^{i\boldsymbol{k}\cdot\boldsymbol{x}}\mathrm{d}^{3}\vec{x}.\\
+\end{align}
+
+定义物质扰动满足
+\begin{align}
+&\frac{\delta{}\rho}{\rho_{0}}=\delta{}\left(t\right)e^{i\boldsymbol{k}\cdot\boldsymbol{r}}.\\
+&\frac{\mathrm{d}^{2}\delta{}}{\mathrm{d}t^{2}}+2\left(\frac{\dot a}{a}\right)\frac{\mathrm{d}\delta{}}{\mathrm{d}t}-\delta{}\left(4\pi\mathrm{G}\rho_{0}-k^{2}c_{\text{s}}^{2}\right)=0.
+\end{align}
+
+对于小扰动，忽略声波，考虑纯物质宇宙
+\begin{equation}
+4\pi\mathrm{G}\rho_{0}=\frac{2}{3t^{2}},\frac{\dot a}{a}=\frac{2}{3t},
+\end{equation}
+得到
+\begin{equation}
+\frac{\mathrm{d}^{2}\delta{}}{\mathrm{d}t^{2}}+\frac{4}{3t}\frac{\mathrm{d}\delta{}}{\mathrm{d}t}-\frac{2}{3t^{2}}\delta{}=0.
+\end{equation}
+取$\delta{}=at^{n}$，代入得到
+\begin{equation}
+n_{1}=\frac{2}{3},n_{2}=-1.
+\end{equation}
+由于宇宙膨胀，增长部分远慢于指数增长，$\delta{}\propto{}a$。
+
+曲率为主的宇宙，
+\begin{equation}
+\frac{\mathrm{d}^{2}\delta{}}{\mathrm{d}t^{2}}+\frac{2}{t}\frac{\mathrm{d}\delta{}}{\mathrm{d}t}=0.
+\end{equation}
+解只有$n=0,-1$，即扰动不能增长。
+
+辐射主导时，物质扰动不增长。
+
+小尺度的扰动进入视界时间早，如果仍然为辐射为主，扰动基本不能增长。
+
+大尺度的扰动在物质为主时进入视界，扰动随尺度因子线性增长。
+
 \printbibliography
 
 \end{document}
