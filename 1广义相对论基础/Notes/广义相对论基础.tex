@@ -1,19 +1,21 @@
-% !TEX encoding = UTF-8 Unicode
-\documentclass[11pt, a4paper, oneside, onecolumn]{ctexart}
-\usepackage[utf8]{inputenc}
+\documentclass[UTF8, 12pt, a4paper, oneside, onecolumn, fontset=none]{ctexart}
 \usepackage{geometry}
-\geometry{left=1.5cm,right=1.5cm,top=2cm,bottom=1cm}
-\usepackage{ctex}
-\usepackage{CJK}
-\usepackage{xcolor}
+\geometry{left=1.5cm,right=1.5cm,top=1.8cm,bottom=0.9cm}
 
-\usepackage{amsmath, amsthm, amssymb, graphicx, mathrsfs, siunitx,esint}
-\usepackage{tikz}
-\usepackage{subfigure}
-\usepackage{caption}
-\usepackage{subcaption}
+\usepackage{unicode-math, mathrsfs, xcolor, inputenc}
+\setCJKmainfont[AutoFakeBold, AutoFakeSlant]{LXGW WenKai}
+\setmainfont[AutoFakeBold, AutoFakeSlant]{LXGW WenKai}
+\setmathfont{Latin Modern Math}
+\setmathrm{Latin Modern Math}
+
+\usepackage{amsmath, amsthm, cases, graphicx, subfigure, tikz, caption, subcaption, siunitx, keyval, physics2}
+\usephysicsmodule{ab,ab.braket}
+\usepackage[version=4]{mhchem}
 \usepackage[flushleft]{threeparttable}
-\usepackage{cases}
+\usepackage{hyperref, bookmark}
+\hypersetup{colorlinks=true, urlcolor=yellow, filecolor=green, linkcolor=red}
+\usepackage[backend=biber,sorting=none]{biblatex}
+\addbibresource{/Users/Linyan/Zotero/MyBibTeX.bib}
 
 \ctexset{section={format=\bfseries \zihao{4} \flushleft}}
 \renewcommand\thesubsection{\thesection.\arabic{subsection}}
@@ -22,52 +24,39 @@
 \makeatletter
 \renewcommand{\maketag@@@}[1]{\hbox{\m@th\normalsize\normalfont#1}}%
 \makeatother
-
-\usepackage{bookmark}
-\usepackage{hyperref}
-\hypersetup{colorlinks=true, urlcolor=yellow, filecolor=green, linkcolor=red}
 \usepackage{indentfirst}
-\usepackage{inconsolata}
 
 \usepackage{listings}
 \lstset{
-    basicstyle      =   \zihao{-5}\ttfamily,
-    numberstyle     =   \zihao{-5}\ttfamily,
-    keywordstyle    =   \color{blue},
-    keywordstyle    =   [2] \color{teal},
-    stringstyle     =   \color{magenta},
-    commentstyle    =   \color{red}\ttfamily,
-    breaklines      =   true,   % 自动换行，建议不要写太长的行
-    columns         =   fixed,  % 如果不加这一句，字间距就不固定
-    flexiblecolumns,                % 别问为什么，加上这个
-    numbers             =   left,   % 行号的位置在左边
-    showspaces          =   false,  % 是否显示空格，显示了有点乱
-    numberstyle         =   \zihao{-5}\ttfamily,    % 行号的样式，小五号，tt 等宽字体
-    showstringspaces    =   false,
-    captionpos          =   t,      % 这段代码的名字所呈现的位置，t 指的是 top 上面
-    frame               =   lrtb,   % 显示边框
+     basicstyle      =    \zihao{-5}\ttfamily,
+     numberstyle     =    \zihao{-5}\ttfamily,
+     keywordstyle    =    \color{blue},
+     keywordstyle    =    [2]\color{teal},
+     stringstyle     =    \color{magenta},
+     commentstyle    =    \color{red}\ttfamily,
+     breaklines=true,     % 自动换行
+     columns=fixed,       % 固定字间距
+     flexiblecolumns,     % 别问为什么，加上这个
+     numbers         =    left,% 行号的位置在左边
+     showspaces      =    false,% 是否显示空格
+     numberstyle     =    \zihao{-5}\ttfamily,% 行号的样式，小五号，tt 等宽字体
+     showstringspaces=    false,
+     captionpos      =    t,%这段代码的名字所呈现的位置，t 指的是 top 上面
+     frame           =    lrtb,% 显示边框
 }
+
 \lstdefinestyle{Python}{
-    language        =   Python, % 语言选 Python
-    basicstyle      =   \zihao{-5}\ttfamily,
-    numberstyle     =   \zihao{-5}\ttfamily,
-    keywordstyle    =   \color{blue},
-    keywordstyle    =   [2] \color{teal},
-    stringstyle     =   \color{magenta},
-    commentstyle    =   \color{red}\ttfamily,
-    breaklines      =   true,   % 自动换行，建议不要写太长的行
-    columns         =   fixed,  % 如果不加这一句，字间距就不固定
-    basewidth       =   0.5em, 
+     language=Python,     
+     basicstyle      =    \zihao{-5}\ttfamily,
+     numberstyle     =    \zihao{-5}\ttfamily,
+     keywordstyle    =    \color{blue},
+     keywordstyle    =    [2] \color{teal},
+     stringstyle     =    \color{magenta},
+     commentstyle    =    \color{red}\ttfamily,
+     breaklines      =    true,   % 自动换行，建议不要写太长的行
+     columns         =    fixed,  % 如果不加这一句，字间距就不固定
+     basewidth       =    0.5em,
 }
-
-% \usepackage{physics} % 物理百宝箱
-% \usepackage[version=4]{mhchem} % 绘制分子式
-% \usepackage{algorithm,algorithmic} % 展示算法伪代码
-% \DeclareMathOperator{\spn}{span}
-% \NewDocumentCommand\mathbi{m}{\textbf{\em #1}}
-
-\usepackage[backend=biber]{biblatex}
-\addbibresource{/Users/Linyan/Zotero/MyBibTeX.bib}
 
 \title{广义相对论基础}
 \author{林衍}
@@ -94,9 +83,9 @@
 \subsection{张量}
 一般来讲，观测得到的物理量使用一组数来表示的。而这组数与观测者选定的坐标系相关，比如说火车参考系和地面参考系测得的火车速度不同。然而，尽管同一时空点测量的物理量在不同坐标系会用不同的数组表示，它们本质上描述的是同一个物理量，因此数组的变化应该与坐标变换（即同一时空点在不同坐标系中坐标间的联系）有密切联系。由此可以引出张量的概念。
 
-零阶张量，又被称作标量，是时空坐标的函数。$\widetilde{\boldsymbol{x}}$和$\boldsymbol{x}$是同一时空点在不同坐标系的坐标，但在同一点上测得的物理量应该是一样的，所以标量的值不随广义坐标变换而改变：
+零阶张量，又被称作标量，是时空坐标的函数。$\widetilde{\symbf{x}}$和$\symbf{x}$是同一时空点在不同坐标系的坐标，但在同一点上测得的物理量应该是一样的，所以标量的值不随广义坐标变换而改变：
 \begin{equation}
-\widetilde{U}\left(\widetilde{\boldsymbol{x}}\right)=U\left(\boldsymbol{x}\right).
+\widetilde{U}\left(\widetilde{\symbf{x}}\right)=U\left(\symbf{x}\right).
 \end{equation}
 
 一阶张量，又被称作向量，可分为逆变向量和协变向量。$n$维空间向量有$n$个分量，每个分量都是时空坐标的函数。向量随坐标变换而变化的规律分别为
@@ -216,11 +205,11 @@ $\Gamma_{\mu\nu}^{\lambda}\left(P\right)$被称作$P$点的仿射联络，简称
 \subsection{协变微商}
 有了矢量平移和仿射联络，我们就可以定义张量场的微商运算。这种运算叫协变微商，能保证微商后的量仍是张量。本节需要区分普通微商和协变微商。对于标量场，普通微商用$U_{,\mu}$来表示
 \begin{equation}
-U_{,\mu}=\frac{\partial{}U\left(\boldsymbol{x}\right)}{\partial{}x^{\mu}}.
+U_{,\mu}=\frac{\partial{}U\left(\symbf{x}\right)}{\partial{}x^{\mu}}.
 \end{equation}
 变换到新参考系，得到
 \begin{equation}
-\widetilde{U}_{,\mu}=\frac{\partial{}\widetilde{U}\left(\widetilde{\boldsymbol{x}}\right)}{\partial{}\widetilde{x}^{\mu}}=\frac{\partial{}\widetilde{U}\left(\widetilde{\boldsymbol{x}}\right)}{\partial{}x^{\alpha}}\frac{\partial{}x^{\alpha}}{\partial{}\widetilde{x}^{\mu}}=\frac{\partial{}U\left(\boldsymbol{x}\right)}{\partial{}x^{\alpha}}\frac{\partial{}x^{\alpha}}{\partial{}\widetilde{x}^{\mu}}=U_{,\alpha}\frac{\partial{}x^{\alpha}}{\partial{}\widetilde{x}^{\mu}}.
+\widetilde{U}_{,\mu}=\frac{\partial{}\widetilde{U}\left(\widetilde{\symbf{x}}\right)}{\partial{}\widetilde{x}^{\mu}}=\frac{\partial{}\widetilde{U}\left(\widetilde{\symbf{x}}\right)}{\partial{}x^{\alpha}}\frac{\partial{}x^{\alpha}}{\partial{}\widetilde{x}^{\mu}}=\frac{\partial{}U\left(\symbf{x}\right)}{\partial{}x^{\alpha}}\frac{\partial{}x^{\alpha}}{\partial{}\widetilde{x}^{\mu}}=U_{,\alpha}\frac{\partial{}x^{\alpha}}{\partial{}\widetilde{x}^{\mu}}.
 \end{equation}
 可见$U_{,\mu}$是协变矢量。标量场的普通微商就是它的协变微商：
 \begin{equation}
@@ -330,7 +319,7 @@ A^{\mu}\left(Q\right)=A^{\mu}\left(P\to Q\right),
 \subsection{曲率和挠率}
 联络的反称部分是个张量。由联络出发还可定义另一个张量，即曲率张量。
 
-对一个给定的协变矢量$A_{\lambda}\left(\boldsymbol{x}\right)$求两次协变微商得到
+对一个给定的协变矢量$A_{\lambda}\left(\symbf{x}\right)$求两次协变微商得到
 \begin{align}
 A_{\lambda;\mu;\nu}&=\left(A_{\lambda,\mu}-\Gamma_{\lambda\mu}^{\rho}A_{\rho}\right)_{;\nu}\notag\\
 &=\left(A_{\lambda,\mu}-\Gamma_{\lambda\mu}^{\rho}A_{\rho}\right)_{,\nu}-\Gamma_{\lambda\nu}^{\sigma}\left(A_{\sigma,\mu}-\Gamma_{\sigma\mu}^{\rho}A_{\rho}\right)-\Gamma_{\mu\nu}^{\sigma}\left(A_{\lambda,\sigma}-\Gamma_{\lambda\sigma}^{\rho}A_{\rho}\right)\notag\\
@@ -353,7 +342,6 @@ A_{\lambda;\mu;\nu}-A_{\lambda;\nu;\mu}&=\left(\Gamma_{\lambda\nu,\mu}^{\rho}-\G
 \end{align}
 该式左侧是张量，右侧与挠率张量$\Gamma^{\rho}_{\left[\mu\nu\right]}$有关的那一项也是张量，因此$R_{\lambda\mu\nu}^{\rho}$也必然是张量，我们称其为曲率张量。观察 (\ref{1.5.4}) 式发现曲率张量后一对指标反称，因此只有一二、一三两种独立缩并。
 
-挠率的几何意义是什么呢？考虑自$O$点出发有两个小位移$OQ$和$OQ'$,将$OQ$平移到$Q'P',OQ'$平移到$QP$,如图\ref{挠率的几何意义。}所示。
 \begin{figure}[!htp]
 \centering
 \tikzset{every picture/.style={line width=0.75pt}}
@@ -376,7 +364,7 @@ A_{\lambda;\mu;\nu}-A_{\lambda;\nu;\mu}&=\left(\Gamma_{\lambda\nu,\mu}^{\rho}-\G
 \label{挠率的几何意义。}
 \end{figure}
 
-简单计算平移可得
+挠率的几何意义是什么呢？考虑自$O$点出发有两个小位移$OQ$和$OQ'$,将$OQ$平移到$Q'P',OQ'$平移到$QP$,如图\ref{挠率的几何意义。}所示。简单计算平移可得
 \begin{align}
 OQ&=\mathrm{d}x^{\mu},Q'P'=\mathrm{d}x^{\mu}-\Gamma_{\lambda\nu}^{\mu}\mathrm{d}x^{\lambda}\delta{}x^{\nu},\\
 OQ'&=\delta{}x^{\mu},QP=\delta{}x^{\mu}-\Gamma_{\nu\lambda}^{\mu}\delta{}x^{\nu}\mathrm{d}x^{\lambda},\\
@@ -666,7 +654,7 @@ g\times\delta{}_{\alpha}^{\nu}&=g_{\alpha\rho}\Delta{}^{\nu\rho},\\
 \end{equation}
 达朗贝尔算符
 \begin{equation}
-\square\Phi=\text{div}\left(\text{grad}\Phi\right)=\text{div}\left(g^{\mu\nu}\frac{\partial{}\Phi}{\partial{}x^{\nu}}\right)=\frac{1}{\sqrt{-g}}\frac{\partial{}}{\partial{}x^{\mu}}\left(\sqrt{-g}g^{\mu\nu}\frac{\partial{}\Phi}{\partial{}x^{\nu}}\right).
+\mdlgwhtsquare\Phi=\text{div}\left(\text{grad}\Phi\right)=\text{div}\left(g^{\mu\nu}\frac{\partial{}\Phi}{\partial{}x^{\nu}}\right)=\frac{1}{\sqrt{-g}}\frac{\partial{}}{\partial{}x^{\mu}}\left(\sqrt{-g}g^{\mu\nu}\frac{\partial{}\Phi}{\partial{}x^{\nu}}\right).
 \end{equation}
 二阶逆变张量的散度
 \begin{equation}
@@ -1383,7 +1371,7 @@ v=\frac{\Delta{}l}{\Delta{}t}=\omega r.
 广义相对论是⼀个协变的引⼒理论，它包含两部分。⼀部分是等效原理，它说明有引⼒场存在的时空构成弯曲的黎曼空间，空间度规起着引⼒势的作⽤。另⼀部分是爱因斯坦场⽅程，它指明空间度规即引⼒势对物质分布的依赖关系。本章讨论的就是这两部分内容。
 
 \subsection{等效原理}
-经典力学中曾经引入过两种质量，一种是在伽利略变换前提下表征动量与速度比例关系的惯性质量$m=\dfrac{\boldsymbol{p}}{\boldsymbol{v}}$,一种是在万有引力定律中衡量引力大小的引力质量。从概念上讲，这两个完全没关系，但实践却告诉我们二者在量级上等同。比方说自由落体情形，
+经典力学中曾经引入过两种质量，一种是在伽利略变换前提下表征动量与速度比例关系的惯性质量$m=\dfrac{\symbf{p}}{\symbf{v}}$,一种是在万有引力定律中衡量引力大小的引力质量。从概念上讲，这两个完全没关系，但实践却告诉我们二者在量级上等同。比方说自由落体情形，
 \begin{align}
 m_{\text{惯}}a&=m_{\text{引}}g,\\
 a&=\frac{m_{\text{引}}}{m_{\text{惯}}}g.
@@ -1598,11 +1586,11 @@ h_{00,i,i}=-\mathrm{c}^{2}\kappa\rho.
 \subsection{广义相对论中的力学与电磁学方程}
 四维动量可以用四维速度定义
 \begin{equation}
-P^{\mu}=m_{0}U^{\mu}=\left(\frac{E}{\mathrm{c}},\boldsymbol{p}\right)=\left(\frac{m_{0}\mathrm{c}}{\sqrt{1-\frac{v^{2}}{\mathrm{c}^{2}}}},\frac{m_{0}\boldsymbol{v}}{\sqrt{1-\frac{v^{2}}{\mathrm{c}^{2}}}}\right).
+P^{\mu}=m_{0}U^{\mu}=\left(\frac{E}{\mathrm{c}},\symbf{p}\right)=\left(\frac{m_{0}\mathrm{c}}{\sqrt{1-\frac{v^{2}}{\mathrm{c}^{2}}}},\frac{m_{0}\symbf{v}}{\sqrt{1-\frac{v^{2}}{\mathrm{c}^{2}}}}\right).
 \end{equation}
 四维力为
 \begin{equation}
-\frac{\mathrm{d}P^{\mu}}{\mathrm{d}\tau}=F^{\mu}=\left(\frac{\boldsymbol{f}\cdot\boldsymbol{v}/\mathrm{c}}{\sqrt{1-\frac{v^{2}}{\mathrm{c}^{2}}}},\frac{\boldsymbol{f}}{\sqrt{1-\frac{v^{2}}{\mathrm{c}^{2}}}}\right).
+\frac{\mathrm{d}P^{\mu}}{\mathrm{d}\tau}=F^{\mu}=\left(\frac{\symbf{f}\cdot\symbf{v}/\mathrm{c}}{\sqrt{1-\frac{v^{2}}{\mathrm{c}^{2}}}},\frac{\symbf{f}}{\sqrt{1-\frac{v^{2}}{\mathrm{c}^{2}}}}\right).
 \end{equation}
 号差 +2 时，$G_{00}=G^{00}=-1,U_{0}=-U^{0},P_{0}=-P^{0},F_{0}=-F^{0},U_{i}=U^{i},P_{i}=P^{i},F_{i}=F^{i}$.此外方程全部改成广义协变形式，将普通微商改成协变微商，普通导数改成协变导数，另外可记
 \begin{equation}
@@ -1619,10 +1607,10 @@ P^{\mu}=m_{0}U^{\mu}=\left(\frac{E}{\mathrm{c}},\boldsymbol{p}\right)=\left(\fra
 
 对于电动力学，麦克斯韦方程组
 \begin{align}
-&\nabla\times\boldsymbol{E}+\frac{1}{\mathrm{c}}\frac{\partial{}\boldsymbol{B}}{\partial{}t}=0,\\
-&\nabla\cdot\boldsymbol{B}=0,\\
-&\nabla\times\boldsymbol{B}-\frac{1}{\mathrm{c}}\frac{\partial{}\boldsymbol{E}}{\partial{}t}=\frac{4\pi}{\mathrm{c}}\boldsymbol{j},\\
-&\nabla\cdot\boldsymbol{E}=4\pi\rho,
+&\nabla\times\symbf{E}+\frac{1}{\mathrm{c}}\frac{\partial{}\symbf{B}}{\partial{}t}=0,\\
+&\nabla\cdot\symbf{B}=0,\\
+&\nabla\times\symbf{B}-\frac{1}{\mathrm{c}}\frac{\partial{}\symbf{E}}{\partial{}t}=\frac{4\pi}{\mathrm{c}}\symbf{j},\\
+&\nabla\cdot\symbf{E}=4\pi\rho,
 \end{align}
 可以写成洛伦兹协变的形式。首先引入电磁场张量
 \begin{equation}
@@ -1639,8 +1627,8 @@ F_{\mu\nu}=A_{\nu,\mu}-A_{\mu,\nu}.
 \end{equation}
 即
 \begin{align}
-\boldsymbol{E}&=-\nabla\Phi-\frac{1}{\mathrm{c}}\frac{\partial{}\boldsymbol{A}}{\partial{}t},\\
-\boldsymbol{B}&=\nabla\times\boldsymbol{A}.
+\symbf{E}&=-\nabla\Phi-\frac{1}{\mathrm{c}}\frac{\partial{}\symbf{A}}{\partial{}t},\\
+\symbf{B}&=\nabla\times\symbf{A}.
 \end{align}
 可知麦克斯韦方程组可以写成
 \begin{align}
@@ -1649,14 +1637,14 @@ F_{\mu\nu}=A_{\nu,\mu}-A_{\mu,\nu}.
 \end{align}
 其中四维电流密度为
 \begin{align}
-J^{\mu}=\rho_{0}u^{\mu}=\left(\mathrm{c}\rho,\boldsymbol{j}\right)=\left(\frac{\mathrm{c}\rho_{0}}{\sqrt{1-\frac{v^{2}}{\mathrm{c}^{2}}}},\rho\boldsymbol{v}\right),
+J^{\mu}=\rho_{0}u^{\mu}=\left(\mathrm{c}\rho,\symbf{j}\right)=\left(\frac{\mathrm{c}\rho_{0}}{\sqrt{1-\frac{v^{2}}{\mathrm{c}^{2}}}},\rho\symbf{v}\right),
 \end{align}
-其中$\rho_{0}$为静止粒子的电荷密度，$\boldsymbol{j}$是三维电流密度。
+其中$\rho_{0}$为静止粒子的电荷密度，$\symbf{j}$是三维电流密度。
 
 (\ref{3.5.15}) 式也可以写成
 \begin{align}
 \nabla^{2}\Phi-\frac{1}{\mathrm{c}^{2}}\frac{\partial{}^{2}\Phi}{\partial{}t^{2}}&=-4\pi\rho,\\
-\nabla^{2}\boldsymbol{A}-\frac{1}{\mathrm{c}^{2}}\frac{\partial{}^{2}\boldsymbol{A}}{\partial{}t^{2}}&=-\frac{4\pi}{\mathrm{c}}\boldsymbol{j}.
+\nabla^{2}\symbf{A}-\frac{1}{\mathrm{c}^{2}}\frac{\partial{}^{2}\symbf{A}}{\partial{}t^{2}}&=-\frac{4\pi}{\mathrm{c}}\symbf{j}.
 \end{align}
 其中用到了洛伦兹规范
 \begin{equation}
@@ -1664,7 +1652,7 @@ A_{\nu,\nu}=0,
 \end{equation}
 即
 \begin{equation}
-\nabla\cdot\boldsymbol{A}+\frac{1}{\mathrm{c}}\frac{\partial{}\Phi}{\partial{}t}=0.
+\nabla\cdot\symbf{A}+\frac{1}{\mathrm{c}}\frac{\partial{}\Phi}{\partial{}t}=0.
 \end{equation}
 
 电荷守恒定律为
@@ -1673,7 +1661,7 @@ J^{\mu}_{,\mu}=0,
 \end{equation}
 即
 \begin{equation}
-\frac{\partial{}\rho}{\partial{}t}+\nabla\cdot\left(\rho\boldsymbol{v}\right)=0.
+\frac{\partial{}\rho}{\partial{}t}+\nabla\cdot\left(\rho\symbf{v}\right)=0.
 \end{equation}
 
 广义相对论中方程都应写成广义协变形式
@@ -1740,11 +1728,11 @@ T^{\mu\nu}=\frac{1}{4\pi}\left(F_{\lambda}^{\mu}F^{\lambda\nu}-\frac{1}{4}g^{\mu
 \end{align}
 我们知道谐和量需满足谐和方程：
 \begin{equation}
-\square\phi=\left(g^{\lambda\rho}\phi_{;\lambda}\right)_{;\rho}=\frac{1}{\sqrt{-g}}\frac{\partial{}}{\partial{}x^{\rho}}\left(\sqrt{-g}g^{\lambda\rho}\frac{\partial{}\phi}{\partial{}x^{\lambda}}\right)=0,
+\mdlgwhtsquare\phi=\left(g^{\lambda\rho}\phi_{;\lambda}\right)_{;\rho}=\frac{1}{\sqrt{-g}}\frac{\partial{}}{\partial{}x^{\rho}}\left(\sqrt{-g}g^{\lambda\rho}\frac{\partial{}\phi}{\partial{}x^{\lambda}}\right)=0,
 \end{equation}
 当谐和量本身就是坐标时，可见
 \begin{equation}
-\square x^{\mu}=-\Gamma^{\mu}=0.
+\mdlgwhtsquare x^{\mu}=-\Gamma^{\mu}=0.
 \end{equation}
 因此满足谐和条件的坐标本身就是谐和函数，这也是谐和条件名字的由来。容易验证闵氏度规满足谐和坐标，因此谐和坐标可看作满足闵氏度规的笛卡尔坐标系在引力场下的拓展。
 
@@ -1804,7 +1792,7 @@ g_{\mu\nu}=\eta_{\mu\nu}+h_{\mu\nu}=\eta_{\mu\nu}+\overline{h}_{\mu\nu}-\frac12\
 \end{equation}
 实际上通过计算可得
 \begin{equation}
-\overline{h}_{\mu\nu}\left(\boldsymbol{r},t\right)=\frac{\kappa}{2\pi}\int\frac{T_{\mu\nu}\left(\boldsymbol{r},t-\frac{r}{\mathrm{c}}\right)}{r}\mathrm{d}V',
+\overline{h}_{\mu\nu}\left(\symbf{r},t\right)=\frac{\kappa}{2\pi}\int\frac{T_{\mu\nu}\left(\symbf{r},t-\frac{r}{\mathrm{c}}\right)}{r}\mathrm{d}V',
 \end{equation}
 其中$\mathrm{d}V'$是体积元，而$r=\left[\left(x^{i}-x'^{i}\right)\cdot\left(x^{i}-x'^{i}\right)\right]^{\frac12}$.该解是推迟解，表明时刻$t$距离引力源$r$的引力势是$t-\frac{r}{\mathrm{c}}$时刻物质分布和运动状态决定的，这意味着引力场以光速传播。如果引力源局限于一个很小的区域，观测者又远离引力源，推迟解可简化为
 \begin{equation}
@@ -2132,7 +2120,6 @@ E&=\left(1-\frac{2\mathrm{G}M}{\mathrm{c}^{2}r}\right)\frac{\mathrm{c}^{2}\mathr
 -\left(1-\frac{2\mathrm{G}M}{\mathrm{c}^{2}r}\right)\left(\frac{\mathrm{c}\mathrm{d}t}{\mathrm{d}\tau}\right)^{2}+\left(1-\frac{2\mathrm{G}M}{\mathrm{c}^{2}r}\right)^{-1}\left(\frac{\mathrm{d}r}{\mathrm{d}\tau}\right)^{2}+r^{2}\left(\frac{\mathrm{d}\varphi}{\mathrm{d}\tau}\right)^{2}=-\mathrm{c}^{2}.\label{4.4.4}
 \end{equation}
 
-\newpage
 这四个方程构成质点动力学的一组完备的微分方程。整理一下方程组可写作更简洁的形式
 \begin{align}
 \frac{\mathrm{d}\varphi}{\mathrm{d}\tau}&=\frac{\widetilde{L}}{r^{2}},\\
@@ -2189,7 +2176,6 @@ E&=\frac{\partial{}L}{\partial{}\dot{t}}=\left(1-\frac{2\mathrm{G}M}{\mathrm{c}^
 \end{equation}
 那么粒子将一直保持在赤道面移动。
 
-\newpage
 从拉氏量的分析中我们发现$E$和$\widetilde{L}$分别对应单位质量的能量和角动量。当然这还不是观测者观测到的量。根据观测量理论有
 \begin{equation}
 P^{\hat{0}}=P_{\mu}\omega^{\hat{0}\mu}=-P_{\mu}u^{\mu}=\frac{mE}{\sqrt{-g_{00}}}.
@@ -2407,6 +2393,6 @@ a&=\frac{2\mathrm{G}M}{\mathrm{c}^{2}R}.\\
 \end{align}
 太阳附近数据为$\Delta{}\theta=\ang{;;1.75}$,已被日全食时拍摄的星空照片证实。
 
-\printbibliography
+%\printbibliography
 
 \end{document}

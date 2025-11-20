@@ -1,70 +1,62 @@
-% !TEX encoding = UTF-8 Unicode
-\documentclass[11pt, a4paper, oneside]{ctexart}
-\usepackage[utf8]{inputenc}
+\documentclass[UTF8, 12pt, a4paper, oneside, onecolumn, fontset=none]{ctexart}
 \usepackage{geometry}
-\geometry{left=1.5cm,right=1.5cm,top=2cm,bottom=1cm}
-\usepackage{ctex}
-\usepackage{CJK}
-\usepackage{xcolor}
+\geometry{left=1.5cm,right=1.5cm,top=1.8cm,bottom=0.9cm}
 
-\usepackage{amsmath, amsthm, amssymb, graphicx, mathrsfs}
-\usepackage{tikz}
-\usepackage{subfigure}
-\usepackage{caption}
-\usepackage{subcaption}
+\usepackage{unicode-math, mathrsfs, xcolor, inputenc}
+\setCJKmainfont[AutoFakeBold, AutoFakeSlant]{LXGW WenKai}
+\setmainfont[AutoFakeBold, AutoFakeSlant]{LXGW WenKai}
+\setmathfont{Latin Modern Math}
+\setmathrm{Latin Modern Math}
+
+\usepackage{amsmath, amsthm, cases, graphicx, subfigure, tikz, caption, subcaption, siunitx, keyval, physics2}
+\usephysicsmodule{ab,ab.braket}
+\usepackage[version=4]{mhchem}
 \usepackage[flushleft]{threeparttable}
-\usepackage{cases}
+\usepackage{hyperref, bookmark}
+\hypersetup{colorlinks=true, urlcolor=yellow, filecolor=green, linkcolor=red}
+\usepackage[backend=biber,sorting=none]{biblatex}
+\addbibresource{/Users/Linyan/Zotero/MyBibTeX.bib}
 
-\ctexset{section={format=\bfseries \zihao{4} \flushleft}}
+\ctexset{section={format=\bfseries \zihao{4}\flushleft}}
 \renewcommand\thesubsection{\thesection.\arabic{subsection}}
 \numberwithin{equation}{subsection}
 \renewcommand\theequation{\thesubsection.\arabic{equation}}
 \makeatletter
 \renewcommand{\maketag@@@}[1]{\hbox{\m@th\normalsize\normalfont#1}}%
 \makeatother
-
-\usepackage{bookmark}
-\usepackage{hyperref}
-\hypersetup{colorlinks=true, urlcolor=yellow, filecolor=green, linkcolor=red}
 \usepackage{indentfirst}
-\usepackage{inconsolata}
 
 \usepackage{listings}
 \lstset{
-    basicstyle          =   \sffamily,          % 基本代码风格
-    keywordstyle        =   \bfseries,          % 关键字风格
-    commentstyle        =   \rmfamily\itshape,  % 注释的风格，斜体
-    stringstyle         =   \ttfamily,  		% 字符串风格
-    flexiblecolumns,                % 别问为什么，加上这个
-    numbers             =   left,   % 行号的位置在左边
-    showspaces          =   false,  % 是否显示空格，显示了有点乱
-    numberstyle         =   \zihao{-5}\ttfamily,    % 行号的样式，小五号，tt 等宽字体
-    showstringspaces    =   false,
-    captionpos          =   t,      % 这段代码的名字所呈现的位置，t 指的是 top 上面
-    frame               =   lrtb,   % 显示边框
+     basicstyle=\zihao{-5}\ttfamily,
+     numberstyle=\zihao{-5}\ttfamily,
+     keywordstyle=\color{blue},
+     keywordstyle=[2]\color{teal},
+     stringstyle=\color{magenta},
+     commentstyle=\color{red}\ttfamily,
+     breaklines=true,% 自动换行
+     columns=fixed,% 固定字间距
+     flexiblecolumns,% 别问为什么，加上这个
+     numbers=left,% 行号的位置在左边
+     showspaces=false,% 是否显示空格
+     numberstyle=\zihao{-5}\ttfamily,% 行号的样式，小五号，tt 等宽字体
+     showstringspaces=false,
+     captionpos=t,% 这段代码的名字所呈现的位置，t 指的是 top 上面
+     frame=lrtb,% 显示边框
 }
+
 \lstdefinestyle{Python}{
-    language        =   Python, % 语言选 Python
-    basicstyle      =   \zihao{-5}\ttfamily,
-    numberstyle     =   \zihao{-5}\ttfamily,
-    keywordstyle    =   \color{blue},
-    keywordstyle    =   [2] \color{teal},
-    stringstyle     =   \color{magenta},
-    commentstyle    =   \color{red}\ttfamily,
-    breaklines      =   true,   % 自动换行，建议不要写太长的行
-    columns         =   fixed,  % 如果不加这一句，字间距就不固定
-    basewidth       =   0.5em,
+     language=Python,
+     basicstyle=\zihao{-5}\ttfamily,
+     numberstyle=\zihao{-5}\ttfamily,
+     keywordstyle=\color{blue},
+     keywordstyle=[2]\color{teal},
+     stringstyle=\color{magenta},
+     commentstyle=\color{red}\ttfamily,
+     breaklines=true,
+     columns=fixed,
+     basewidth=0.5em,
 }
-
-\usepackage{siunitx} % 标准单位符号
-% \usepackage{physics} % 物理百宝箱
-% \usepackage[version=4]{mhchem} % 绘制分子式
-% \usepackage{algorithm,algorithmic} % 展示算法伪代码
-% \DeclareMathOperator{\spn}{span}
-% \NewDocumentCommand\mathbi{m}{\textbf{\em #1}}
-
-\usepackage[backend=biber]{biblatex}
-\addbibresource{/Users/Linyan/Zotero/MyBibTeX.bib}
 
 \title{球面天文}
 \author{林衍}
@@ -81,11 +73,7 @@
 \newpage
 \section{基本知识}
 \subsection{球面三角与天球}
-通过球心的平面截球面所得的截面是一个圆，叫做大圆。
-
-不通过球心的平面截球面所得的截面也是一个圆，叫做小圆。
-
-通过球面上不在同一直径两端的两个点，能作且只能作一个大圆。
+通过球心的平面截球面所得的截面是一个圆，叫做大圆。不通过球心的平面截球面所得的截面也是一个圆，叫做小圆。通过球面上不在同一直径两端的两个点，能作且只能作一个大圆。
 
 垂直于球面上一已知圆的球直径的端点，叫做这个圆的极。极到圆上各点的角距都是相等的。两个大圆的夹角等于两个大圆的两极之间的大圆弧。
 
@@ -268,7 +256,7 @@ P_YR_X\left(\theta\right)P_Y&=R_X\left(-\theta\right).
 \begin{figure}[!htp]
 \centering
 \tikzset{every picture/.style={line width=0.75pt}}
-\begin{tikzpicture}[x=0.45pt,y=0.45pt,yscale=0.5,xscale=0.5]
+\begin{tikzpicture}[x=0.42pt,y=0.42pt,yscale=0.5,xscale=0.5]
 %天球
 \draw (300,0) arc(0:360:300);
 %x
@@ -323,7 +311,7 @@ P_YR_X\left(\theta\right)P_Y&=R_X\left(-\theta\right).
 \begin{figure}[!htp]
 \centering
 \tikzset{every picture/.style={line width=0.75pt}}
-\begin{tikzpicture}[x=0.4pt,y=0.4pt,yscale=0.5,xscale=0.5]
+\begin{tikzpicture}[x=0.36pt,y=0.36pt,yscale=0.5,xscale=0.5]
 %天球
 \draw (300,0) arc(0:360:300);
 %三角形
@@ -493,7 +481,6 @@ A=\left(\alpha_0,\delta_0\right),\sigma=\left(\alpha,\delta\right),\sigma'=\left
 
 很明显，天顶与观测站的地理坐标有关。如果掌握了观测时间以及一些恒星的地平坐标和赤道坐标，就可以根据球面三角给出天顶的赤道坐标，完成定位。
 
-\newpage
 北天极和南天极将子午圈分成两个半圆，天体运行到上半子午圈的时候我们称天体上中天。
 
 虽然实际观测中常用地平系来估计光污染和大气扰动，但由于不同观测者的天顶不同，以及地平坐标受地球自转影响而非线性变化，地平系不适合用来统一天体坐标。我们希望能找到一些坐标线性变化的天球系。这其实很简单，只要让地球自转的影响只体现在经角上就可以了，故采用北天极作为第一极。
@@ -621,7 +608,7 @@ t_{\odot}=S_{\text{平}}-\alpha_{\odot}=\left(S_{0}-\alpha_{0}\right)+\left(\ome
 
 除了地球自转外，我们还可根据地球公转进行计时，如历书时 ET、太阳系质心力学时 TDB、地心力学时 TDT 等。显然地球公转涉及到了年的概念。
 
-定义太阳连续两次经过平春分点所需要的时间为一回归年，历书时秒长是回归年长度的 31556925.9747 分之一。接下来记$T$为 1900 年 1 月 0.5 日 ET 起算的儒略世纪数。因为春分点在后退，实际上太阳并没有转一整圈，一回归年等于$365^{\unit{d}}.24219878-0^{\unit{d}}.00000614T$.
+定义太阳连续两次经过平春分点所需要的时间为一回归年，历书时秒长是回归年长度的 $31556\\925.9747$ 分之一。接下来记$T$为 1900 年 1 月 0.5 日 ET 起算的儒略世纪数。因为春分点在后退，实际上太阳并没有转一整圈，一回归年等于$365^{\unit{d}}.24219878-0^{\unit{d}}.00000614T$.
 
 定义恒星年为太阳连续两次通过同一遥远背景恒星的时间间隔，恒星年比回归年长一个黄经岁差，一恒星年等于$365^{\unit{d}}.25636042+0^{\unit{d}}.000000111T$.恒星年和回归年的比值为$\dfrac{366.24219878}{365.24219878}$.
 
@@ -666,7 +653,6 @@ BJD 是 JD 经过校正以考虑地球相对于太阳系质心的位置差异。
 \qty{1}{pc}=\frac{\qty{1}{AU}}{\ang{;;1}}=\frac{\qty{1}{AU}}{\dfrac{\ang{1;;}}{3600}\times\dfrac{\pi}{\ang{180;;}}}\approx\qty{206265}{AU}.
 \end{equation}
 
-\newpage
 \section{站心坐标}
 从天体到观测者的光线因通过地球大气层而产生弯曲，观测者测得的天体位置与没有大气时不同，方向差$p=z-z_{\text{obs}}$称为大气折射。作了大气折射改正后得到的天体坐标为站心坐标。
 
@@ -1162,7 +1148,7 @@ h&=r^{2}\dot f=\frac{2\pi ab}{T}=\frac{2\pi}{T}a^{2}\sqrt{1-e^{2}},\\
 \begin{figure}[!htp]
 \centering
 \tikzset{every picture/.style={line width=0.75pt}}
-\begin{tikzpicture}[x=0.4pt,y=0.4pt,yscale=1,xscale=1]
+\begin{tikzpicture}[x=0.45pt,y=0.45pt,yscale=1,xscale=1]
 \draw (0,0) -- (0,300) ;
 \draw (0,0) -- (300,0) ;
 \draw (0,270) arc(90:0:270) ;
@@ -1199,8 +1185,6 @@ r&=a\left(1-e\cos E\right).
 M=E-e\sin E=\frac{2\pi}{T}\left(t-\tau_{0}\right).
 \end{equation}
 
-\newpage
-接着我们考虑椭圆轨道在天球上的投影。
 \begin{figure}[!htp]
 \centering
 \tikzset{every picture/.style={line width=0.75pt}} 
@@ -1240,7 +1224,7 @@ M=E-e\sin E=\frac{2\pi}{T}\left(t-\tau_{0}\right).
 \label{轨道根数。}
 \end{figure}
 
-图\ref{轨道根数。}中$X\text{\textendash}Y$平面是黄道面，$X$是春分点方向，$P$表示此时行星位置。很明显黄道坐标系中$P$的坐标就是$r$乘上其与三个坐标轴之间的夹角，即
+接着我们考虑椭圆轨道在天球上的投影。图\ref{轨道根数。}中$X\text{\textendash}Y$平面是黄道面，$X$是春分点方向，$P$表示此时行星位置。很明显黄道坐标系中$P$的坐标就是$r$乘上其与三个坐标轴之间的夹角，即
 \begin{equation}
 \vec{r}=r\begin{pmatrix}
 \cos\overset{\frown}{PX}\\
@@ -1484,7 +1468,7 @@ k&=-K,\\
 \begin{figure}[!htp]
 \centering
 \tikzset{every picture/.style={line width=0.75pt}}
-\begin{tikzpicture}[x=0.5pt,y=0.5pt,yscale=1,xscale=1]
+\begin{tikzpicture}[x=0.45pt,y=0.45pt,yscale=1,xscale=1]
 \draw (0,0) -- (120,150) ;
 \draw (30,0) arc(0:49:30) ;
 \draw (240,0) arc(180:135:30) ;
@@ -1729,7 +1713,6 @@ x\cos\varphi_0\cos\lambda_0-y\cos\varphi_0\sin\lambda_0+\sin\varphi_0
 \varphi-\varphi_{0}&=x\cos\lambda_{0}-y\sin\lambda_{0}.
 \end{align}
 
-\newpage
 \section{恒星的运动}
 如果恒星全部静止不动，经过章动和岁差改正后我们已经得到了星表历元太阳系质心平赤道坐标。但实际上恒星相对太阳有速度，这会引起坐标位移，且这种位移随观测历元和定向历元发生改变。为此我们需要研究恒星的运动。确定恒星的自行后，对观测历元太阳系质心真赤道坐标系坐标进行章动改正后可得观测历元太阳系质心平赤道坐标系坐标，再进行岁差和自行改正可得星表历元太阳系质心平赤道坐标系坐标。
 
@@ -1765,18 +1748,15 @@ x\cos\varphi_0\cos\lambda_0-y\cos\varphi_0\sin\lambda_0+\sin\varphi_0
 V_r'&=V_r''+\vec{v'}\cdot\vec S,\\
 V_r&=V_r'+\vec v\cdot\vec S.
 \end{align}
-其中$\vec{v'}$是观测者相对地心的速度，$\vec v$是地心相对日心的速度。
-
-前者与周日光行差相联系，始终指向东点，一定精度下可以取$v'=v_0\cos\varphi$,其中$v_{0}=\qty{0.465}{km\cdot{}s^{-1}},\varphi$是站心地理纬度。记恒星赤纬为$\delta{}$,时角为$t$,
+其中$\vec{v'}$是观测者相对地心的速度，$\vec v$是地心相对日心的速度。前者与周日光行差相联系，始终指向东点，一定精度下可以取$v'=v_{0}\cos\varphi$,其中$v_{0}=\qty{0.465}{km\cdot{}s^{-1}},\varphi$是站心地理纬度。记恒星赤纬为$\delta{}$,时角为$t$,
 \begin{equation}
 \vec v'\cdot\vec S=-v'\cos\delta\sin t.
 \end{equation}
-
-后者与周年光行差相联系，可以分解成切向速度$\vec v_1$和平行地球短轴速度$\vec v_2$.记地球近日点黄经为$\pi$,黄道坐标系中
+后者与周年光行差相联系，可以分解成切向速度$\vec{v}_{1}$和平行地球短轴速度$\vec{v}_{2}$.记地球近日点黄经为$\pi$,黄道坐标系中
 \begin{align}
-\vec v_1&=V_0\begin{pmatrix}
-\sin\lambda_\odot\\
--\cos\lambda_\odot\\
+\vec{v}_{1}&=V_{0}\begin{pmatrix}
+\sin\lambda_{\odot}\\
+-\cos\lambda_{\odot}\\
 0
 \end{pmatrix},\vec v_2=eV_0\begin{pmatrix}
 -\sin\pi\\
@@ -1950,12 +1930,6 @@ M&=R_Z\left(-\alpha_0\right)R_Y\left(\delta_0-\ang{90;;}\right)R_Z\left(\varphi_
 不同历元观测所得的恒星位置，通过岁差常数变换到同一定向历元后，进行比较可以得到恒星自行，这种自行称为星表自行。除了恒星本动引起的自行主要部分、太阳系相对 LSR 运动引起的视差动、银河系自转引起的对自行影响，星表自行还要考虑岁差常数误差产生的影响和星表分点测量误差的影响。本节仅研究视差动和银河系自转的影响。
 
 \subsubsection{视差动}
-假设太阳的本动速度为$V_\odot\,\unit{km\cdot{}s^{-1}}$,在一年时间中位移了$nV_\odot\,\unit{km}$,其中$n$为一年的秒数。此位移会在恒星的自行中表现出来。记恒星视差为$\pi^{\prime\prime}$,可以定义一个长期视差
-\begin{equation}
-h^{\prime\prime}=\frac{nV_{\odot}\,\unit{km}}{r}=\frac{nV_{\odot}\,\unit{km}}{\qty{1}{AU}}\pi^{\prime\prime}=\frac{V_{\odot}\pi^{\prime\prime}}{4.74}.
-\end{equation}
-
-显然视差动对天体坐标的影响有与自行类似的形式。延长太阳运动方向在天球上投射出太阳向点$S$,赤道坐标$\left(A,D\right)$.记$\overset{\frown}{S\sigma}=\lambda$,恒星位移在通过$\overset{\frown}{S\sigma}$的大圆上，记恒星位移方向为$V$.类似地可定义视差动的方向位置角$\angle{P\sigma V}=\varphi_{s}$.
 \begin{figure}[!htp]
 \centering
 \tikzset{every picture/.style={line width=0.75pt}}
@@ -1977,6 +1951,13 @@ h^{\prime\prime}=\frac{nV_{\odot}\,\unit{km}}{r}=\frac{nV_{\odot}\,\unit{km}}{\q
 \caption{视差动。}
 \label{视差动。}
 \end{figure}
+
+假设太阳的本动速度为$V_\odot\,\unit{km\cdot{}s^{-1}}$,在一年时间中位移了$nV_\odot\,\unit{km}$,其中$n$为一年的秒数。此位移会在恒星的自行中表现出来。记恒星视差为$\pi^{\prime\prime}$,可以定义一个长期视差
+\begin{equation}
+h^{\prime\prime}=\frac{nV_{\odot}\,\unit{km}}{r}=\frac{nV_{\odot}\,\unit{km}}{\qty{1}{AU}}\pi^{\prime\prime}=\frac{V_{\odot}\pi^{\prime\prime}}{4.74}.
+\end{equation}
+
+显然视差动对天体坐标的影响有与自行类似的形式。延长太阳运动方向在天球上投射出太阳向点$S$,赤道坐标$\left(A,D\right)$.记$\overset{\frown}{S\sigma}=\lambda$,恒星位移在通过$\overset{\frown}{S\sigma}$的大圆上，记恒星位移方向为$V$.类似地可定义视差动的方向位置角$\angle{P\sigma V}=\varphi_{s}$, 如图\ref{视差动。}所示。
 
 视差动$\mu_{s}$在赤经赤纬方向的分解为
 \begin{align}
@@ -2118,6 +2099,6 @@ V_r=Ar\cos^2b\sin2l.
 \end{align}
 其中$\psi$是银道星位角。
 
-\printbibliography
+%\printbibliography
 
 \end{document}
