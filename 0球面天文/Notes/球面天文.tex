@@ -377,7 +377,7 @@ A=\left(\alpha_0,\delta_0\right),\sigma=\left(\alpha,\delta\right),\sigma'=\left
 \end{align}
 并且记
 \begin{equation}
-\overset{\frown}{A\sigma}=\theta,\overset{\frown}{\sigma\sigma'}=\mathrm{d}\theta,\mathrm{d}\theta=k\sin\theta.
+\overset{\frown}{A\sigma}=\theta,\overset{\frown}{\sigma\sigma'}=\symup{d}\theta,\symup{d}\theta=k\sin\theta.
 \end{equation}
 再引入两个辅助矢量$\vec{a}=\left\vert{}\vec{a}\right\vert{}\vec{S}_{0},\vec{b}=\left\vert{}\vec{b}\right\vert{}\vec{S},\vec{S}'-\vec{S}=\vec{b}-\vec{a}$.
 \begin{figure}[!htp]
@@ -405,7 +405,7 @@ A=\left(\alpha_0,\delta_0\right),\sigma=\left(\alpha,\delta\right),\sigma'=\left
 \draw (-40,200) node [anchor=north west][inner sep=0.75pt]   [align=left] {$\vec{S}'$};
 \draw (40,300) node [anchor=north west][inner sep=0.75pt]   [align=left] {$\vec{a}$};
 \draw (120,260) node [anchor=north west][inner sep=0.75pt]   [align=left] {$\vec{b}$};
-\draw (1,90) node [anchor=north west][inner sep=0.75pt]   [align=left] {$\mathrm{d}\theta$};
+\draw (1,90) node [anchor=north west][inner sep=0.75pt]   [align=left] {$\symup{d}\theta$};
 \draw (30,40) node [anchor=north west][inner sep=0.75pt]   [align=left] {$\theta$};
 \end{tikzpicture}
 \captionsetup{justification=raggedright, singlelinecheck=false}
@@ -413,26 +413,26 @@ A=\left(\alpha_0,\delta_0\right),\sigma=\left(\alpha,\delta\right),\sigma'=\left
 \label{天体方向单位矢量示意图。}
 \end{figure}
 
-如图\ref{天体方向单位矢量示意图。}所示，$\vec{a}$正对角为$\ang{90;;}+\frac{\mathrm{d}\theta}{2}$,$\vec{b}$正对角为$\ang{90;;}-\theta-\frac{\mathrm{d}\theta}{2}$,运用平面三角正弦公式，得到
+如图\ref{天体方向单位矢量示意图。}所示，$\vec{a}$正对角为$\ang{90;;}+\frac{\symup{d}\theta}{2}$,$\vec{b}$正对角为$\ang{90;;}-\theta-\frac{\symup{d}\theta}{2}$,运用平面三角正弦公式，得到
 \begin{align}
-\left\vert{}\vec a\right\vert{}&=\left\vert{}\vec S'-\vec S\right\vert{}\cos\frac{\mathrm{d}\theta}{2}/\sin\theta,\\
-\left\vert{}\vec b\right\vert{}&=\left\vert{}\vec S'-\vec S\right\vert{}\cos\left(\theta+\frac{\mathrm{d}\theta}{2}\right)/\sin\theta.
+\left\vert{}\vec a\right\vert{}&=\left\vert{}\vec S'-\vec S\right\vert{}\cos\frac{\symup{d}\theta}{2}/\sin\theta,\\
+\left\vert{}\vec b\right\vert{}&=\left\vert{}\vec S'-\vec S\right\vert{}\cos\left(\theta+\frac{\symup{d}\theta}{2}\right)/\sin\theta.
 \end{align}
 由于
 \begin{equation}
-\left\vert{}\vec S'-\vec S\right\vert{}=2\sin\frac{\mathrm{d}\theta}{2},
+\left\vert{}\vec S'-\vec S\right\vert{}=2\sin\frac{\symup{d}\theta}{2},
 \end{equation}
 直接得到
 \begin{equation}
-\vec{b}-\vec{a}=\vec{S}'-\vec{S}=\frac{2\sin\frac{\mathrm{d}\theta}{2}}{\sin\theta}\left[\cos\left(\theta+\frac{\mathrm{d}\theta}{2}\right)\vec{S}-\cos\frac{\mathrm{d}\theta}{2}\vec{S}_{0}\right].
+\vec{b}-\vec{a}=\vec{S}'-\vec{S}=\frac{2\sin\frac{\symup{d}\theta}{2}}{\sin\theta}\left[\cos\left(\theta+\frac{\symup{d}\theta}{2}\right)\vec{S}-\cos\frac{\symup{d}\theta}{2}\vec{S}_{0}\right].
 \end{equation}
 保留到小角的一阶量，上式变为
 \begin{align}
-\vec{S}'-\vec{S}&=\frac{\mathrm{d}\theta}{\sin\theta}\left(\cos\theta\vec{S}-\vec{S}_{0}\right)\notag\\
+\vec{S}'-\vec{S}&=\frac{\symup{d}\theta}{\sin\theta}\left(\cos\theta\vec{S}-\vec{S}_{0}\right)\notag\\
 &=\frac{k\sin\theta}{\sin\theta}\vec{S}\times\left(\vec{S}\times\vec{S}_{0}\right)\notag\\
 &=k\vec{S}\times\left(\vec{S}\times\vec{S}_{0}\right)=k\left[\vec{S}\left(\vec{S}\cdot\vec{S}_{0}\right)-\vec{S}_{0}\right].\label{1.1.32}
 \end{align}
-若采用赤道坐标系，(\ref{1.1.32}) 就变为 (\ref{1.1.24}) 和 (\ref{1.1.25}) 的形式。计算$\mathrm{d}\alpha$和$\mathrm{d}\delta{}$的具体方式为（一阶近似）
+若采用赤道坐标系，(\ref{1.1.32}) 就变为 (\ref{1.1.24}) 和 (\ref{1.1.25}) 的形式。计算$\symup{d}\alpha$和$\symup{d}\delta{}$的具体方式为（一阶近似）
 \begin{align}
 \vec S&=\begin{pmatrix}
 \cos\alpha\cos\delta\\
@@ -444,10 +444,10 @@ A=\left(\alpha_0,\delta_0\right),\sigma=\left(\alpha,\delta\right),\sigma'=\left
 \sin\alpha_{0}\cos\delta_{0}\\
 \sin\delta_{0}
 \end{pmatrix},\\
-\vec S'-\vec S&=\mathrm{d}\vec S=\begin{pmatrix}
--\sin\alpha\cos\delta\mathrm{d}\alpha-\cos\alpha\sin\delta\mathrm{d}\delta\\
-\cos\alpha\cos\delta\mathrm{d}\alpha-\sin\alpha\sin\delta\mathrm{d}\delta\\
-\cos\delta\mathrm{d}\delta
+\vec S'-\vec S&=\symup{d}\vec S=\begin{pmatrix}
+-\sin\alpha\cos\delta\symup{d}\alpha-\cos\alpha\sin\delta\symup{d}\delta\\
+\cos\alpha\cos\delta\symup{d}\alpha-\sin\alpha\sin\delta\symup{d}\delta\\
+\cos\delta\symup{d}\delta
 \end{pmatrix}=k\left[\vec{S}\left(\vec{S}\cdot\vec{S}_{0}\right)-\vec{S}_{0}\right].
 \end{align}
 
@@ -552,7 +552,7 @@ l_{N}&=\theta-\ang{90;;}=\ang{32.93192;;}.
 
 平春分点的周日运动是地球自转角速度与岁差的合成
 \begin{equation}
-\frac{\mathrm{d}S_\text{平}}{\mathrm{d}t}=\omega+\frac{\mathrm{d}m_A}{\mathrm{d}t},
+\frac{\symup{d}S_\text{平}}{\symup{d}t}=\omega+\frac{\symup{d}m_A}{\symup{d}t},
 \end{equation}
 其中$\omega$是地球自转速度，$m_A$是赤经总岁差。日月主摄动项是线性的，行星摄动不是线性的，因此岁差可以表示为
 \begin{equation}
@@ -576,7 +576,7 @@ m_\odot=t_\odot+12\,\unit{h}.
 \end{equation}
 真太阳的视运动是地球自转与公转运动的共同反映，因此很不均匀，为此需要引入平太阳时。定义平太阳时前需要假定平太阳。首先假设有一个黄道平太阳，运行速度等于真太阳视运动的平均速度，并且和真太阳同时经过近地点和远地点，黄道平太阳的黄经变化可以表示为
 \begin{equation}
-\frac{\mathrm{d}\lambda_{\odot}}{\mathrm{d}t}=n+\frac{\mathrm{d}}{\mathrm{d}t}p_{A}.
+\frac{\symup{d}\lambda_{\odot}}{\symup{d}t}=n+\frac{\symup{d}}{\symup{d}t}p_{A}.
 \end{equation}
 其中$n$是平均速度，$p_{A}$是黄经总岁差，可以表示为
 \begin{equation}
@@ -584,7 +584,7 @@ p_{A}=pt+p't^{2}.
 \end{equation}
 再假设一个赤道平太阳，满足
 \begin{equation}
-\frac{\mathrm{d}\alpha_{\odot}}{\mathrm{d}t}=\mu+\frac{\mathrm{d}}{\mathrm{d}t}m_{A}.
+\frac{\symup{d}\alpha_{\odot}}{\symup{d}t}=\mu+\frac{\symup{d}}{\symup{d}t}m_{A}.
 \end{equation}
 其中$m_{A}$是赤经总岁差，同样可以表示为
 \begin{equation}
@@ -675,7 +675,7 @@ n_0\sin z_{\text{obs}}&=\sin z=\sin\left(z_{\text{obs}}+\rho\right).\notag
 \end{align}
 其中$\lambda$是以微米为单位的波长。
 
-现在我们可以考虑大气折射引起的恒星位移。向点$A$显然是天顶$Z$,记地理纬度$\varphi$,任一恒星赤道坐标观测值$\sigma\left(\alpha,\delta{}\right)$,时角为$t$,则天顶赤道坐标为$\left(\alpha+t,\varphi\right)$.改正是从$z_{\text{obs}}$向$z$移动，$k$取正值，因此$\mathrm{d}\theta=\rho=z-z_{\text{obs}}=k\sin\theta=k\sin z_{\text{obs}}=R\tan z_{\text{obs}}$,因此
+现在我们可以考虑大气折射引起的恒星位移。向点$A$显然是天顶$Z$,记地理纬度$\varphi$,任一恒星赤道坐标观测值$\sigma\left(\alpha,\delta{}\right)$,时角为$t$,则天顶赤道坐标为$\left(\alpha+t,\varphi\right)$.改正是从$z_{\text{obs}}$向$z$移动，$k$取正值，因此$\symup{d}\theta=\rho=z-z_{\text{obs}}=k\sin\theta=k\sin z_{\text{obs}}=R\tan z_{\text{obs}}$,因此
 \begin{align}
 k&=R\sec z_{\text{obs}}.\\
 \alpha'-\alpha&=k\sec\delta\cos\varphi\sin\left(-t\right),\\
@@ -707,9 +707,9 @@ S_0=\begin{pmatrix}
 \end{align}
 \begin{align}
 \begin{pmatrix}
--\sin\alpha\cos\delta\mathrm{d}\alpha-\cos\alpha\sin\delta\mathrm{d}\delta\\
-\cos\alpha\cos\delta\mathrm{d}\alpha-\sin\alpha\sin\delta\mathrm{d}\delta\\
-\cos\delta\mathrm{d}\delta
+-\sin\alpha\cos\delta\symup{d}\alpha-\cos\alpha\sin\delta\symup{d}\delta\\
+\cos\alpha\cos\delta\symup{d}\alpha-\sin\alpha\sin\delta\symup{d}\delta\\
+\cos\delta\symup{d}\delta
 \end{pmatrix}&=k
 \begin{pmatrix}
 \cos\delta{}\cos\alpha\left(\cos\delta\cos\varphi\cos t+\sin\delta\sin\varphi\right)-\cos\varphi\cos\left(a+t\right)\\
@@ -719,8 +719,8 @@ S_0=\begin{pmatrix}
 \end{align}
 整理得到
 \begin{align}
-\cos\delta\mathrm{d}\alpha&=-k\cos\varphi\sin t,\\
-\cos\delta\mathrm{d}\delta&=k\left(\sin\delta\cos\delta\cos\varphi\cos t-\cos^2\delta\sin\varphi\right),
+\cos\delta\symup{d}\alpha&=-k\cos\varphi\sin t,\\
+\cos\delta\symup{d}\delta&=k\left(\sin\delta\cos\delta\cos\varphi\cos t-\cos^2\delta\sin\varphi\right),
 \end{align}
 最后可以得到与球面三角一致的结论。
 
@@ -797,11 +797,11 @@ S_0=\begin{pmatrix}
 
 角$\psi$实际描述了星光传播路径的变化，根据极坐标变化规律易得
 \begin{equation}
-\tan\psi=\frac{r\mathrm{d}\theta}{\mathrm{d}r}.
+\tan\psi=\frac{r\symup{d}\theta}{\symup{d}r}.
 \end{equation}
 因此
 \begin{equation}
-\mathrm{d}z=\mathrm{d}\psi+\mathrm{d}\theta=\mathrm{d}\psi+\frac{\tan\psi}{r}\mathrm{d}r.
+\symup{d}z=\symup{d}\psi+\symup{d}\theta=\symup{d}\psi+\frac{\tan\psi}{r}\symup{d}r.
 \end{equation}
 
 根据折射定律和几何关系可知
@@ -813,25 +813,25 @@ r_{i+1}n_{i+1}\sin\psi_{i+1}&=r_{i}n_{i}\sin\psi_{i}=r_{0}n_{0}\sin z_{\text{obs
 \end{align}
 微分$rn\sin\psi=\text{const}$得到
 \begin{align}
-&n\sin\psi\mathrm{d}r+r\sin\psi\mathrm{d}n+rn\cos\psi\mathrm{d}\psi=0,\notag\\
-&\mathrm{d}\psi=-\frac{\tan\psi}{r}\mathrm{d}r-\frac{\tan\psi}{n}\mathrm{d}n,\notag\\
-&\mathrm{d}z=-\frac{\tan\psi}{n}\mathrm{d}n.
+&n\sin\psi\symup{d}r+r\sin\psi\symup{d}n+rn\cos\psi\symup{d}\psi=0,\notag\\
+&\symup{d}\psi=-\frac{\tan\psi}{r}\symup{d}r-\frac{\tan\psi}{n}\symup{d}n,\notag\\
+&\symup{d}z=-\frac{\tan\psi}{n}\symup{d}n.
 \end{align}
 积分就可得到大气折射引起的天顶距的变化，
 \begin{equation}
-\rho'=\int_{M}^{\sigma'}\mathrm{d}z=\int_{1}^{n_{0}}\frac{r_{0}n_{0}\sin z_{\text{obs}}}{n\sqrt{r^{2}n^{2}-r_{0}^{2}n_{0}^{2}\sin^{2}z_{\text{obs}}}}\mathrm{d}n.\label{2.2.8}
+\rho'=\int_{M}^{\sigma'}\symup{d}z=\int_{1}^{n_{0}}\frac{r_{0}n_{0}\sin z_{\text{obs}}}{n\sqrt{r^{2}n^{2}-r_{0}^{2}n_{0}^{2}\sin^{2}z_{\text{obs}}}}\symup{d}n.\label{2.2.8}
 \end{equation}
 之所以加角标是因为，$\rho'$还不是真正的大气折射。$\rho'$是$M\sigma$和$\sigma'$处光线切线$A\sigma'$的夹角，$\rho$是$M\sigma$和$M\sigma'$的夹角，$\rho=\rho'-\angle{M\sigma'A}$.现在我们先认为$\rho=\rho'$.
 
 现在的问题是我们不知道$r$和$n$的具体关系，只能作一些假设。首先令$r=r_0+h$,顺便记$z_{\text{obs}}=z_{0}$,(\ref{2.2.8}) 转化为
 \begin{equation}
-\rho=n_0\sin z_0\int_1^{n_0}\frac{\mathrm{d}n}{n\sqrt{\left(1+\frac{h}{r_0}^2\right)n^2-n_0^2\sin^{2}z_0}},
+\rho=n_0\sin z_0\int_1^{n_0}\frac{\symup{d}n}{n\sqrt{\left(1+\frac{h}{r_0}^2\right)n^2-n_0^2\sin^{2}z_0}},
 \end{equation}
 天顶距不是非常大时，将上式展开成幂级数并保留零阶和一阶项，记作
 \begin{align}
 \rho&=\rho_1-\rho_2+O\left(\frac{h^2}{r_0^2}\right),\\
-\rho_1&=n_0\sin z_0\int_1^{n_0}\frac{\mathrm{d}n}{n\sqrt{n^2-n_0^2\sin^2z_0}}=\arcsin\left(n_0\sin z_0\right)-z_0,\\
-\rho_2&=\frac{n_0\sin z_0}{r_0}\int_1^{n_0}\frac{hn\mathrm{d}n}{\left(n^2-n_0^2\sin^2z_0\right)^\frac32},
+\rho_1&=n_0\sin z_0\int_1^{n_0}\frac{\symup{d}n}{n\sqrt{n^2-n_0^2\sin^2z_0}}=\arcsin\left(n_0\sin z_0\right)-z_0,\\
+\rho_2&=\frac{n_0\sin z_0}{r_0}\int_1^{n_0}\frac{hn\symup{d}n}{\left(n^2-n_0^2\sin^2z_0\right)^\frac32},
 \end{align}
 如果将$\rho_1$展开成$n_0-1$的幂级数，仅保留到第二项可以得到
 \begin{equation}
@@ -843,12 +843,12 @@ n=1+\left(n_0-1\right)\frac{\rho}{\rho_0},
 \end{equation}
 其中$\rho_0$是地面处大气密度。保留到一阶项
 \begin{align}
-\rho_2&=\frac{\tan z_0\sec^2 z_0}{r_0}\frac{n_0-1}{\rho_0}\int_0^{\rho_0}h\mathrm{d}\rho\notag\\
+\rho_2&=\frac{\tan z_0\sec^2 z_0}{r_0}\frac{n_0-1}{\rho_0}\int_0^{\rho_0}h\symup{d}\rho\notag\\
 &=\left(n_0-1\right)\frac{H_0}{r_0}\tan z_0\sec^2z_0,
 \end{align}
 其中标高
 \begin{equation}
-H_0=\frac{1}{\rho_0}\int_0^{\rho_0}h\mathrm{d}\rho=\frac{1}{\rho_0}\int_0^\infty\rho\mathrm{d}h.
+H_0=\frac{1}{\rho_0}\int_0^{\rho_0}h\symup{d}\rho=\frac{1}{\rho_0}\int_0^\infty\rho\symup{d}h.
 \end{equation}
 
 最终我们得到大气折射的形式
@@ -863,9 +863,9 @@ B&=-\left(n_0-1\right)\left[\frac{H_0}{r_0}-\frac{1}{2}\left(n_0-1\right)\right]
 \end{equation}
 可见天顶距较小时这与平面平行层大气结论接近。
 
-我们还可根据$\mathrm{d}\theta=\dfrac{\tan\psi}{r}\mathrm{d}r$计算光线传播路径上各点具体的极坐标：
+我们还可根据$\symup{d}\theta=\dfrac{\tan\psi}{r}\symup{d}r$计算光线传播路径上各点具体的极坐标：
 \begin{align}
-\theta&=r_0n_0\sin z_0\int_{r_0}^r\frac{\mathrm{d}r'}{r'\sqrt{r'^{2}n^2-r^2_0n_0^2\sin^2z_0}},\\
+\theta&=r_0n_0\sin z_0\int_{r_0}^r\frac{\symup{d}r'}{r'\sqrt{r'^{2}n^2-r^2_0n_0^2\sin^2z_0}},\\
 MA&=h_0=r_0\left[\frac{n_0\sin z_0}{\sin\left(z_0+\rho\right)}-1\right].
 \end{align}
 天顶距不大时，$h_{0}$很小，引起的视差变化$\angle{M\sigma'A}$可以忽略不计，可认为$\rho=\rho'$.在观测地球人造卫星和地平附近的月球时此视差才重要。
@@ -911,7 +911,7 @@ MA&=h_0=r_0\left[\frac{n_0\sin z_0}{\sin\left(z_0+\rho\right)}-1\right].
 因为近似标准椭球，因此测地天顶和地心天顶仅有地理纬度方向的差异，可以记二者坐标分别为$\left(\lambda,\varphi_{g}\right)$和$\left(\lambda,\varphi\right)$.记站心位置为$M\left(x,y\right)$,地心距$OM=\rho$,对应大地水准面上的点为$M'\left(x',y'\right)$,海拔高度海拔高度$MM'=h$.具体几何关系可如图\ref{测地天顶和地心天顶。}所示。易知坐标关系满足
 \begin{align}
 \frac{x'^2}{a^2}&+\frac{y'^2}{a^2\left(1-f\right)^2}=1,\\
-\tan\varphi_g&=-\frac{1}{\dfrac{\mathrm{d}y'}{\mathrm{d}x'}}=\frac{y'}{x'\left(1-f\right)^2},\\
+\tan\varphi_g&=-\frac{1}{\dfrac{\symup{d}y'}{\symup{d}x'}}=\frac{y'}{x'\left(1-f\right)^2},\\
 x&=\rho\cos\varphi=x'+h\cos\varphi_g,\\
 y&=\rho\sin\varphi=y'+h\sin\varphi_g.
 \end{align}
@@ -959,10 +959,10 @@ v=\rho\cos\varphi\frac{v_{0}}{a}=\rho\omega\cos\varphi.
 \end{equation}
 地球自西向东旋转，可知恒星位移自东向西。但实际上我们考虑天体自$\sigma$向$\sigma'$的位移，取向点为东点$E$,此时$k$是负值。$E$的赤道坐标为$\left(S+\ang{90;;},0\right)$.记$E$与$\sigma$夹角为$\theta$,恒星位移为$\alpha$,因为$\alpha$是小量，由几何关系可知
 \begin{align}
-\sigma\sigma'&=\alpha\approx\sin\alpha=\frac{v}{\mathrm{c}}\sin\theta,\\
-k&=-\frac{v}{\mathrm{c}}=-\frac{\rho}a\frac{v_0}{\mathrm{c}}\cos\varphi=-\frac{\rho}{a}k'\cos\varphi.
+\sigma\sigma'&=\alpha\approx\sin\alpha=\frac{v}{\symup{c}}\sin\theta,\\
+k&=-\frac{v}{\symup{c}}=-\frac{\rho}a\frac{v_0}{\symup{c}}\cos\varphi=-\frac{\rho}{a}k'\cos\varphi.
 \end{align}
-其中周日光行差常数$k'=\dfrac{v_0}{\mathrm{c}}=\ang{;;0.320}$.
+其中周日光行差常数$k'=\dfrac{v_0}{\symup{c}}=\ang{;;0.320}$.
 
 代入恒星位移公式得到
 \begin{align}
@@ -1142,7 +1142,7 @@ r'\sin\delta'=a\csc p_0\sin\delta-\rho\sin\varphi,
 \begin{align}
 r&=\frac{a\left(1-e^{2}\right)}{1+e\cos f},\\
 h&=r^{2}\dot f=\frac{2\pi ab}{T}=\frac{2\pi}{T}a^{2}\sqrt{1-e^{2}},\\
-\frac{a^{3}}{T^{2}}&=\frac{\mathrm{G}M}{4\pi^{2}}.
+\frac{a^{3}}{T^{2}}&=\frac{\symup{G}M}{4\pi^{2}}.
 \end{align}
 但是椭圆轨道的角速度并不恒定，要用均匀的时间系统描述，需要引入平近点角。为了计算平近点角，则要引入偏近点角。
 \begin{figure}[!htp]
@@ -1309,12 +1309,12 @@ a\left(\cos E-e\right)\sin\pi+a\sqrt{1-e^2}\sin E\cos\pi\\
 
 如图\ref{速度分解。}所示，我们将切向速度$\vec{V}$分解成垂直矢径方向的分量$\vec{V}_{1}$和平行短轴方向的分量$\vec{V}_{2}$,根据几何关系可知
 \begin{align}
-\left\vert{}\vec{V}_{1}\right\vert{}&=r\frac{\mathrm{d}f}{\mathrm{d}t}-\cot f\frac{\mathrm{d}r}{\mathrm{d}t},\\
-\left\vert{}\vec{V}_{2}\right\vert{}&=\csc f\frac{\mathrm{d}r}{\mathrm{d}t}.
+\left\vert{}\vec{V}_{1}\right\vert{}&=r\frac{\symup{d}f}{\symup{d}t}-\cot f\frac{\symup{d}r}{\symup{d}t},\\
+\left\vert{}\vec{V}_{2}\right\vert{}&=\csc f\frac{\symup{d}r}{\symup{d}t}.
 \end{align}
 根据开普勒第一和第二定律可以推出
 \begin{align}
-\frac{\mathrm{d}r}{\mathrm{d}t}&=\frac{he\sin f}{a\left(1-e^2\right)},\\
+\frac{\symup{d}r}{\symup{d}t}&=\frac{he\sin f}{a\left(1-e^2\right)},\\
 V_1&=\frac{h}{a\left(1-e^2\right)}=V_0,\\
 V_2&=eV_0.
 \end{align}
@@ -1350,7 +1350,7 @@ V_2&=eV_0.
 \end{equation}
 由于地球公转（此处看作圆周运动）引起的光行差
 \begin{equation}
-\alpha=\frac{V_{0}}{\mathrm{c}}\sin\theta.
+\alpha=\frac{V_{0}}{\symup{c}}\sin\theta.
 \end{equation}
 其中$\theta$是天体真方向和地球运动方向$A$的夹角。很明显$A$的黄道坐标是$\left(\lambda_{\odot}-\ang{90;;},0\right)$,利用黄赤坐标转换可得
 \begin{equation}
@@ -1364,7 +1364,7 @@ V_2&=eV_0.
 -\sin\varepsilon\cos\lambda_\odot
 \end{pmatrix}.
 \end{equation}
-我们同样可以记光行差常数$K=\dfrac{V_{0}}{\mathrm{c}}$,可得恒星位移公式
+我们同样可以记光行差常数$K=\dfrac{V_{0}}{\symup{c}}$,可得恒星位移公式
 \begin{align}
 k&=-K,\\
 \alpha'-\alpha&=k\sec\delta\cos\delta_A\sin\left(\alpha-\alpha_A\right)\notag\\
@@ -1385,8 +1385,8 @@ k&=-K,\\
 -\cos\lambda_\odot\cos\varepsilon\\
 -\cos\lambda_\odot\sin\varepsilon
 \end{pmatrix}.\\
-\alpha'-\alpha&=-\frac{1}{\mathrm{c}}\left(\dot x_E\sin\alpha\sec\delta-\dot y_E\cos\alpha\sec\delta\right),\\
-\delta'-\delta&=-\frac{1}{\mathrm{c}}\left[\dot x_E\cos\alpha\sin\delta-\dot y_E\left(\tan\varepsilon\cos\delta-\sin\alpha\sin\delta\right)\right].
+\alpha'-\alpha&=-\frac{1}{\symup{c}}\left(\dot x_E\sin\alpha\sec\delta-\dot y_E\cos\alpha\sec\delta\right),\\
+\delta'-\delta&=-\frac{1}{\symup{c}}\left[\dot x_E\cos\alpha\sin\delta-\dot y_E\left(\tan\varepsilon\cos\delta-\sin\alpha\sin\delta\right)\right].
 \end{align}
 黄道坐标代入上式得到
 \begin{align}
@@ -1434,17 +1434,17 @@ k&=-K,\\
 
 黄道岁差对黄道坐标的影响可以表示为
 \begin{equation}
-\mathrm{d}\lambda=\psi\mathrm{d}t,\mathrm{d}\beta=0,\mathrm{d}\varepsilon=0,
+\symup{d}\lambda=\psi\symup{d}t,\symup{d}\beta=0,\symup{d}\varepsilon=0,
 \end{equation}
 利用坐标系旋转可以得到
 \begin{align}
-\mathrm{d}\alpha&=\psi\left(\cos\varepsilon+\sin\varepsilon\sin\alpha\tan\delta{}\right)\mathrm{d}t,\\
-\mathrm{d}\delta{}&=\psi\sin\varepsilon\cos\alpha\mathrm{d}t.
+\symup{d}\alpha&=\psi\left(\cos\varepsilon+\sin\varepsilon\sin\alpha\tan\delta{}\right)\symup{d}t,\\
+\symup{d}\delta{}&=\psi\sin\varepsilon\cos\alpha\symup{d}t.
 \end{align}
 
 考虑行星岁差时，我们则认为$P_{0}$固定不动，$K$绕着$P_{0}$逆时针（从天球外看）运动，因此春分点在赤道上东移（因此也被称作赤道岁差），并且有非常简单的关系：
 \begin{equation}
-\mathrm{d}\alpha=-\chi\mathrm{d}t,\mathrm{d}\delta=0.
+\symup{d}\alpha=-\chi\symup{d}t,\symup{d}\delta=0.
 \end{equation}
 但计算黄道坐标却并非如此容易，因为行星岁差影响了黄赤交角。考虑坐标变换
 \begin{align}
@@ -1455,16 +1455,16 @@ k&=-K,\\
 \end{align}
 微分 (\ref{5.1.5})(\ref{5.1.6}) 得到
 \begin{align}
-\cos\beta\sin\lambda\mathrm{d}\lambda+\sin\beta\cos\lambda\mathrm{d}\beta&=\cos\delta{}\sin\alpha\mathrm{d}\alpha=-\chi\cos\delta{}\sin\alpha\mathrm{d}t,\\
-\cos\beta\mathrm{d}\beta&=-\sin\delta{}\sin\varepsilon\mathrm{d}\varepsilon-\cos\delta{}\left(\cos\varepsilon\sin\alpha\mathrm{d}\varepsilon+\sin\varepsilon\cos\alpha\mathrm{d}\alpha\right).
+\cos\beta\sin\lambda\symup{d}\lambda+\sin\beta\cos\lambda\symup{d}\beta&=\cos\delta{}\sin\alpha\symup{d}\alpha=-\chi\cos\delta{}\sin\alpha\symup{d}t,\\
+\cos\beta\symup{d}\beta&=-\sin\delta{}\sin\varepsilon\symup{d}\varepsilon-\cos\delta{}\left(\cos\varepsilon\sin\alpha\symup{d}\varepsilon+\sin\varepsilon\cos\alpha\symup{d}\alpha\right).
 \end{align}
 将 (\ref{5.1.7})(\ref{5.1.8}) 代入其中，整理得到
 \begin{align}
-\mathrm{d}\lambda&=\left(\tan\beta\sin\varepsilon\sin\lambda-\cos\varepsilon\right)\chi\mathrm{d}t+\tan\beta\cos\lambda\mathrm{d}\varepsilon,\\
-\mathrm{d}\beta&=\sin\varepsilon\cos\lambda\chi\mathrm{d}t-\sin\lambda\mathrm{d}\varepsilon.
+\symup{d}\lambda&=\left(\tan\beta\sin\varepsilon\sin\lambda-\cos\varepsilon\right)\chi\symup{d}t+\tan\beta\cos\lambda\symup{d}\varepsilon,\\
+\symup{d}\beta&=\sin\varepsilon\cos\lambda\chi\symup{d}t-\sin\lambda\symup{d}\varepsilon.
 \end{align}
 
-现在我们需要知道黄赤交角具体的变化$\mathrm{d}\varepsilon$.将黄道的运动拆分为倾角和升交点位置的变化。首先，随着黄极的变化，变化前后的黄道交于$N'N$两点，便可以用以$N'$为顶点的夹角变化速率$\pi$描述倾角的变化。记$N$的黄经为$\Pi$,则$N'$与变化前春分点$\gamma$间的夹角为$\ang{180;;}-\Pi$.我们便可以利用球面三角$\Delta{}N'\gamma\gamma'$来研究行星岁差。注意，$N'\gamma$位于变化前黄道，$N'\gamma'$位于变化后黄道，$\gamma\gamma'$位于平赤道，这些关系有助于我们确定边角关系。
+现在我们需要知道黄赤交角具体的变化$\symup{d}\varepsilon$.将黄道的运动拆分为倾角和升交点位置的变化。首先，随着黄极的变化，变化前后的黄道交于$N'N$两点，便可以用以$N'$为顶点的夹角变化速率$\pi$描述倾角的变化。记$N$的黄经为$\Pi$,则$N'$与变化前春分点$\gamma$间的夹角为$\ang{180;;}-\Pi$.我们便可以利用球面三角$\Delta{}N'\gamma\gamma'$来研究行星岁差。注意，$N'\gamma$位于变化前黄道，$N'\gamma'$位于变化后黄道，$\gamma\gamma'$位于平赤道，这些关系有助于我们确定边角关系。
 \begin{figure}[!htp]
 \centering
 \tikzset{every picture/.style={line width=0.75pt}}
@@ -1482,9 +1482,9 @@ k&=-K,\\
 \draw (260,-5) node [anchor=north west][inner sep=0.75pt]   [align=left] {$\gamma'$};
 \draw (-50,100) node [anchor=north west][inner sep=0.75pt]   [align=left] {$\ang{180;;}-\Pi$};
 \draw (80,100) node [anchor=north west][inner sep=0.75pt]   [align=left] {$\ang{180;;}-\varepsilon$};
-\draw (200,100) node [anchor=north west][inner sep=0.75pt]   [align=left] {$\chi\mathrm{d}t$};
-\draw (170,30) node [anchor=north west][inner sep=0.75pt]   [align=left] {$\varepsilon+\mathrm{d}\varepsilon$};
-\draw (30,30) node [anchor=north west][inner sep=0.75pt]   [align=left] {$\pi\mathrm{d}t$};
+\draw (200,100) node [anchor=north west][inner sep=0.75pt]   [align=left] {$\chi\symup{d}t$};
+\draw (170,30) node [anchor=north west][inner sep=0.75pt]   [align=left] {$\varepsilon+\symup{d}\varepsilon$};
+\draw (30,30) node [anchor=north west][inner sep=0.75pt]   [align=left] {$\pi\symup{d}t$};
 \end{tikzpicture}
 \captionsetup{justification=raggedright, singlelinecheck=false}
 \caption{球面三角$\Delta{}N'\gamma\gamma'$.}
@@ -1493,21 +1493,21 @@ k&=-K,\\
 
 运用正弦定理和四元素公式可得
 \begin{align}
-\cos\left(\chi\mathrm{d}t\right)\cos\left(\ang{180;;}-\varepsilon\right)&=\sin\left(\chi\mathrm{d}t\right)\cot\left(\ang{180;;}-\pi\right)-\sin\left(\ang{180;;}-\varepsilon\right)\cot\left(\varepsilon+\mathrm{d}\varepsilon\right),\\
-\sin\left(\chi\mathrm{d}t\right)\sin\left(\varepsilon+\mathrm{d}\varepsilon\right)&=\sin\Pi\sin\left(\pi\mathrm{d}t\right),\\
+\cos\left(\chi\symup{d}t\right)\cos\left(\ang{180;;}-\varepsilon\right)&=\sin\left(\chi\symup{d}t\right)\cot\left(\ang{180;;}-\pi\right)-\sin\left(\ang{180;;}-\varepsilon\right)\cot\left(\varepsilon+\symup{d}\varepsilon\right),\\
+\sin\left(\chi\symup{d}t\right)\sin\left(\varepsilon+\symup{d}\varepsilon\right)&=\sin\Pi\sin\left(\pi\symup{d}t\right),\\
 \chi&=\pi\sin\Pi\csc\varepsilon,\\
-\mathrm{d}\varepsilon&=\pi\cos\Pi\mathrm{d}t.
+\symup{d}\varepsilon&=\pi\cos\Pi\symup{d}t.
 \end{align}
 代入之前的结果得到行星岁差对黄道坐标的影响
 \begin{align}
-\mathrm{d}\lambda&=-\chi\cos\varepsilon\mathrm{d}t+\pi\tan\beta\cos\left(\Pi-\lambda\right)\mathrm{d}t,\\
-\mathrm{d}\beta&=\pi\sin\left(\Pi-\lambda\right)\mathrm{d}t,
+\symup{d}\lambda&=-\chi\cos\varepsilon\symup{d}t+\pi\tan\beta\cos\left(\Pi-\lambda\right)\symup{d}t,\\
+\symup{d}\beta&=\pi\sin\left(\Pi-\lambda\right)\symup{d}t,
 \end{align}
 
 总岁差就是上述两种要素的总和。此外我们还可以定义黄经总岁差速率$p=\psi-\chi\cos\varepsilon$、赤经总岁差速率$m=\psi\cos\varepsilon-\chi$以及赤纬岁差速率$n=\psi\sin\varepsilon$,从而有
 \begin{align}
-\mathrm{d}\alpha&=\left(m+n\sin\alpha\tan\delta\right)\mathrm{d}t,\mathrm{d}\delta=n\cos\alpha\mathrm{d}t,\\
-\mathrm{d}\lambda&=p\mathrm{d}t+\pi\tan\beta\cos\left(\Pi-\lambda\right)\mathrm{d}t,\mathrm{d}\beta=\pi\sin\left(\Pi-\lambda\right)\mathrm{d}t.
+\symup{d}\alpha&=\left(m+n\sin\alpha\tan\delta\right)\symup{d}t,\symup{d}\delta=n\cos\alpha\symup{d}t,\\
+\symup{d}\lambda&=p\symup{d}t+\pi\tan\beta\cos\left(\Pi-\lambda\right)\symup{d}t,\symup{d}\beta=\pi\sin\left(\Pi-\lambda\right)\symup{d}t.
 \end{align}
 
 总岁差还会影响天体的轨道根数。为方便起见，我们考虑轨道对变化前黄道升交点为$L$,对变化后黄道升交点为$L'$以及$N$点组成的球面三角形。三条边分别是行星轨道和变化前后两条黄道。因为近日点“绝对位置”没有发生变化，因此升交点间的距离就是近心点幅角的变化量。
@@ -1528,22 +1528,22 @@ k&=-K,\\
 \draw (-30,-10) node [anchor=north west][inner sep=0.75pt]   [align=left] {$L'$};
 \draw (260,-5) node [anchor=north west][inner sep=0.75pt]   [align=left] {$N$};
 \draw (70,-10) node [anchor=north west][inner sep=0.75pt]   [align=left] {$Q$};
-\draw (20,100) node [anchor=north west][inner sep=0.75pt]   [align=left] {$\mathrm{d}\omega$};
+\draw (20,100) node [anchor=north west][inner sep=0.75pt]   [align=left] {$\symup{d}\omega$};
 \draw (80,100) node [anchor=north west][inner sep=0.75pt]   [align=left] {$\ang{180;;}-i$};
 \draw (200,100) node [anchor=north west][inner sep=0.75pt]   [align=left] {$\Pi-\Omega$};
-\draw (190,30) node [anchor=north west][inner sep=0.75pt]   [align=left] {$\pi\mathrm{d}t$};
-\draw (30,30) node [anchor=north west][inner sep=0.75pt]   [align=left] {$i+\mathrm{d}i$};
+\draw (190,30) node [anchor=north west][inner sep=0.75pt]   [align=left] {$\pi\symup{d}t$};
+\draw (30,30) node [anchor=north west][inner sep=0.75pt]   [align=left] {$i+\symup{d}i$};
 \end{tikzpicture}
 \captionsetup{justification=raggedright, singlelinecheck=false}
 \caption{球面三角$LL'N$.}
 \label{球面三角 222.}
 \end{figure}
 
-如图\ref{球面三角 222.}所示，过$L$点以$N$为极作小圆交$L'N$为$Q$,$L'Q$反映了黄道岁差和$\Omega$的变化量，可以记$\overset{\frown}{L'Q}=p\mathrm{d}t-\mathrm{d}\Omega$.将$\Delta{}LL'Q$看作平面直角三角形，并利用$\Delta{}LL'N$的四元素公式得到
+如图\ref{球面三角 222.}所示，过$L$点以$N$为极作小圆交$L'N$为$Q$,$L'Q$反映了黄道岁差和$\Omega$的变化量，可以记$\overset{\frown}{L'Q}=p\symup{d}t-\symup{d}\Omega$.将$\Delta{}LL'Q$看作平面直角三角形，并利用$\Delta{}LL'N$的四元素公式得到
 \begin{align}
-\mathrm{d}\omega&=\pi\csc i\sin\left(\Pi-\Omega\right)\mathrm{d}t,\\
-\mathrm{d}i&=-\pi\cos(\Pi-\Omega)\mathrm{d}t,\\
-\mathrm{d}\Omega&=p\mathrm{d}t-\pi\cot i\sin\left(\Pi-\Omega\right)\mathrm{d}t.
+\symup{d}\omega&=\pi\csc i\sin\left(\Pi-\Omega\right)\symup{d}t,\\
+\symup{d}i&=-\pi\cos(\Pi-\Omega)\symup{d}t,\\
+\symup{d}\Omega&=p\symup{d}t-\pi\cot i\sin\left(\Pi-\Omega\right)\symup{d}t.
 \end{align}
 
 \subsection{岁差量表达式、极图、岁差计算}
@@ -1556,7 +1556,7 @@ T=\frac{t_s-t_0}{100},t=\frac{t_D-t_s}{100},
 我们将岁差量和岁差速率表示为时间间隔的幂级数：
 \begin{align}
 X_A&=\left(x_1+x_2T+x_3T^2\right)t+\left(x_1'+x_2'T\right)t^2+x_1''t^3,\\
-x&=\frac{\mathrm{d}X_A}{\mathrm{d}t}=x_1+x_2T+x_3T^2.
+x&=\frac{\symup{d}X_A}{\symup{d}t}=x_1+x_2T+x_3T^2.
 \end{align}
 岁差量有十余种，都可以写成类似的形式，如$t_{s},t_{D}$黄道间夹角$\pi_{A}$,$t_{D}$黄道对$t_{s}$黄道升交点$N$在$t_{s}$黄道的黄经$\Pi_{A}$,赤道间夹角$\theta_{A}$,$t_{D}$赤道对$t_{s}$赤道升交点$M$在$t_{s}$赤道的赤经$\ang{90;;}-\zeta_{A}$,赤道间升交点$M$在$t_{D}$赤道的赤经$\ang{90;;}+z_{A}$.根据定义我们不难发现在$t_{s}$黄道坐标系中，变化后北黄极$K_{D}$黄道坐标是$\left(\Pi_{A}-\ang{90;;},\ang{90;;}-\pi_{A}\right)$.以及赤经岁差$m_{A}=\zeta_{A}+z_{A}$,赤纬岁差$n_{A}=\theta_{A}$.具体而言我们可以用极图来描述各岁差量，如图\ref{极图。}所示。
 
@@ -1598,10 +1598,10 @@ x&=\frac{\mathrm{d}X_A}{\mathrm{d}t}=x_1+x_2T+x_3T^2.
 
 图\ref{极图。}作图其实有误差，实际上$\angle{K_{s}P_{s}\gamma_{s}}=\angle{K_{D}P_{D}\gamma_{D}}=\ang{90;;}$.我们可以将$P_{D}$向$\gamma_{D}$运动的速度$n=\psi\sin\varepsilon_{A}$投影到平行于和垂直于$P_{s}P_{D}$,以及平行于和垂直于$K_{s}P_{D}$的方向。可以得到
 \begin{align}
-\mathrm{d}\theta_{A}&=n\mathrm{d}t\cos z_{A},\\
-\sin\theta_{A}\mathrm{d}\zeta_{A}&=n\mathrm{d}t\sin z_{A},\\
-\mathrm{d}\omega_{A}&=n\mathrm{d}t\sin\chi_{A},\\
-\sin\omega_{A}\mathrm{d}\psi_{A}&=n\mathrm{d}t\cos\chi_{A}.
+\symup{d}\theta_{A}&=n\symup{d}t\cos z_{A},\\
+\sin\theta_{A}\symup{d}\zeta_{A}&=n\symup{d}t\sin z_{A},\\
+\symup{d}\omega_{A}&=n\symup{d}t\sin\chi_{A},\\
+\sin\omega_{A}\symup{d}\psi_{A}&=n\symup{d}t\cos\chi_{A}.
 \end{align}
 
 现在我们用岁差矩阵计算岁差。
@@ -1670,8 +1670,8 @@ n_A & 0 & 1
 \cos\alpha\cos\delta&=\cos\lambda\cos\beta,\\
 \sin\delta&=\cos\varepsilon\sin\beta+\sin\varepsilon\cos\beta\sin\lambda,\\
 \cos\beta\sin\lambda&=\sin\delta\sin\varepsilon+\cos\delta\sin\alpha\cos\varepsilon,\\
-\mathrm{d}\alpha&=\left(\cos\varepsilon+\sin\varepsilon\sin\alpha\tan\delta\right)\Delta\psi-\cos\alpha\tan\delta\Delta\varepsilon,\\
-\mathrm{d}\delta&=\sin\varepsilon\cos\alpha\Delta\psi+\sin\alpha\Delta\varepsilon.
+\symup{d}\alpha&=\left(\cos\varepsilon+\sin\varepsilon\sin\alpha\tan\delta\right)\Delta\psi-\cos\alpha\tan\delta\Delta\varepsilon,\\
+\symup{d}\delta&=\sin\varepsilon\cos\alpha\Delta\psi+\sin\alpha\Delta\varepsilon.
 \end{align}
 上述依旧是一阶近似，严格公式要用矢量方法。仿照岁差矩阵我们可以列出章动矩阵以及它的一阶近似
 \begin{equation}
@@ -1718,8 +1718,8 @@ x\cos\varphi_0\cos\lambda_0-y\cos\varphi_0\sin\lambda_0+\sin\varphi_0
 
 记恒星速度为$\vec{V}$,恒星方向单位矢量$\vec{S}$,可见视向速度$\vec{V}_{r}$和切向速度$\vec{V}_{\text{T}}$满足
 \begin{align}
-\vec{V}_{r}&=\left(\vec{V}\cdot\vec{S}\right)\vec{S},V_{r}=V\sin\theta=\frac{\mathrm{d}r}{\mathrm{d}t},\\
-\vec{V}_{\text{T}}&=\left(\vec{S}\times\vec{V}\right)\times\vec{S},V_{\text{T}}=V\cos\theta=r\frac{\mathrm{d}\theta}{\mathrm{d}t}.
+\vec{V}_{r}&=\left(\vec{V}\cdot\vec{S}\right)\vec{S},V_{r}=V\sin\theta=\frac{\symup{d}r}{\symup{d}t},\\
+\vec{V}_{\text{T}}&=\left(\vec{S}\times\vec{V}\right)\times\vec{S},V_{\text{T}}=V\cos\theta=r\frac{\symup{d}\theta}{\symup{d}t}.
 \end{align}
 过太阳作恒星速度矢量的垂线，天体方向单位矢量与垂线的夹角为$\theta$,具体如图\ref{恒星速度。}所示。
 \begin{figure}[!htp]
@@ -1769,7 +1769,7 @@ V_r&=V_r'+\vec v\cdot\vec S.
 \subsection{恒星的自行}
 恒星的切向速度通过根据恒星自行和恒星距离确定。定义恒星自行
 \begin{equation}
-\mu=\frac{\mathrm{d}\theta}{\mathrm{d}t}.
+\mu=\frac{\symup{d}\theta}{\symup{d}t}.
 \end{equation}
 恒星距离$r$可用恒星视差$\pi$表示，
 \begin{equation}
@@ -1784,10 +1784,10 @@ V_{\text{T}}=\qty{1}{AU}\cdot\frac{\mu}{\pi},
 V_{\text{T}}=4.74\frac{\mu}{\pi}.
 \end{equation}
 
-时间单位用年表示的恒星自行被称为恒星的周年自行，也称总自行。它沿赤经和赤纬方向分解为赤经周年自行$\mu_\alpha$和赤纬周年自行$\mu_\delta$.考虑天极$P$,位移前的恒星$\sigma$,位移后的恒星$\sigma'$,记$\angle{P\sigma\sigma'}$为位置角$\varphi$,自行是个小量，可认为赤经方向运动了$\mu\mathrm{d}t\sin\varphi$,赤纬方向运动了$\mu\mathrm{d}t\cos\varphi$.由于赤经方向的变化位于小圆上，而小圆的半径是$\cos\delta{}$而非大圆的单位一，因此赤经变化和赤经方向实际的角度变化有偏差，
+时间单位用年表示的恒星自行被称为恒星的周年自行，也称总自行。它沿赤经和赤纬方向分解为赤经周年自行$\mu_\alpha$和赤纬周年自行$\mu_\delta$.考虑天极$P$,位移前的恒星$\sigma$,位移后的恒星$\sigma'$,记$\angle{P\sigma\sigma'}$为位置角$\varphi$,自行是个小量，可认为赤经方向运动了$\mu\symup{d}t\sin\varphi$,赤纬方向运动了$\mu\symup{d}t\cos\varphi$.由于赤经方向的变化位于小圆上，而小圆的半径是$\cos\delta{}$而非大圆的单位一，因此赤经变化和赤经方向实际的角度变化有偏差，
 \begin{align}
-\mu_{\alpha}&=\frac{\mathrm{d}\alpha}{\mathrm{d}t}=\mu\sin\varphi\sec\delta{},\label{6.1.4}\\
-\mu_{\delta{}}&=\frac{\mathrm{d}\delta{}}{\mathrm{d}t}=\mu\cos\varphi.\label{6.1.5}
+\mu_{\alpha}&=\frac{\symup{d}\alpha}{\symup{d}t}=\mu\sin\varphi\sec\delta{},\label{6.1.4}\\
+\mu_{\delta{}}&=\frac{\symup{d}\delta{}}{\symup{d}t}=\mu\cos\varphi.\label{6.1.5}
 \end{align}
 
 研究银河系恒星运动时常选择银道坐标系，自行可沿银经银纬方向分解：
@@ -1816,13 +1816,13 @@ V_r\sin b+V_b\cos b
 
 恒星位置随位置历元$t$的变换可以表示为泰勒级数
 \begin{align}
-\alpha&=\alpha_0+\frac{\mathrm{d}\alpha}{\mathrm{d}t}\left(t-t_0\right)+\frac12\frac{\mathrm{d}^2\alpha}{\mathrm{d}t^2}\left(t-t_0\right)^2+\cdots\\
-\delta&=\delta_0+\frac{\mathrm{d}\delta}{\mathrm{d}t}\left(t-t_0\right)+\frac12\frac{\mathrm{d}^2\delta}{\mathrm{d}t^2}\left(t-t_0\right)^2+\cdots
+\alpha&=\alpha_0+\frac{\symup{d}\alpha}{\symup{d}t}\left(t-t_0\right)+\frac12\frac{\symup{d}^2\alpha}{\symup{d}t^2}\left(t-t_0\right)^2+\cdots\\
+\delta&=\delta_0+\frac{\symup{d}\delta}{\symup{d}t}\left(t-t_0\right)+\frac12\frac{\symup{d}^2\delta}{\symup{d}t^2}\left(t-t_0\right)^2+\cdots
 \end{align}
 很明显恒星坐标一阶导数就是自行，二阶导数则是自行的固有变化。微分 (\ref{6.1.4})(\ref{6.1.5}) 式得到
 \begin{align}
-\frac{\mathrm{d}\mu_\alpha}{\mathrm{d}t}&=\sin\varphi\sec\delta\frac{\mathrm{d}\mu}{\mathrm{d}t}+\mu\cos\varphi\sec\delta\frac{\mathrm{d}\varphi}{\mathrm{d}t}+\mu\sin\varphi\frac{\sin\delta}{\cos^2\delta}\frac{\mathrm{d}\delta}{\mathrm{d}t},\label{6.1.12}\\
-\frac{\mathrm{d}\mu_\delta}{\mathrm{d}t}&=\cos\varphi\frac{\mathrm{d}\mu}{\mathrm{d}t}-\mu\sin\varphi\frac{\mathrm{d}\varphi}{\mathrm{d}t}.\label{6.1.13}
+\frac{\symup{d}\mu_\alpha}{\symup{d}t}&=\sin\varphi\sec\delta\frac{\symup{d}\mu}{\symup{d}t}+\mu\cos\varphi\sec\delta\frac{\symup{d}\varphi}{\symup{d}t}+\mu\sin\varphi\frac{\sin\delta}{\cos^2\delta}\frac{\symup{d}\delta}{\symup{d}t},\label{6.1.12}\\
+\frac{\symup{d}\mu_\delta}{\symup{d}t}&=\cos\varphi\frac{\symup{d}\mu}{\symup{d}t}-\mu\sin\varphi\frac{\symup{d}\varphi}{\symup{d}t}.\label{6.1.13}
 \end{align}
 球面三角$\Delta{}P\sigma\sigma'$是个小三角形，运用正弦公式发现
 \begin{equation}
@@ -1830,30 +1830,30 @@ V_r\sin b+V_b\cos b
 \end{equation}
 因此
 \begin{align}
-&\cos\varphi\cos\delta\frac{\mathrm{d}\varphi}{\mathrm{d}t}-\sin\varphi\sin\delta\frac{\mathrm{d}\delta}{\mathrm{d}t}=0,\notag\\
-&\frac{\mathrm{d}\varphi}{\mathrm{d}t}=\tan\varphi\tan\delta\frac{\mathrm{d}\delta}{\mathrm{d}t}=\mu\sin\varphi\tan\delta=\mu_\alpha\sin\delta.
+&\cos\varphi\cos\delta\frac{\symup{d}\varphi}{\symup{d}t}-\sin\varphi\sin\delta\frac{\symup{d}\delta}{\symup{d}t}=0,\notag\\
+&\frac{\symup{d}\varphi}{\symup{d}t}=\tan\varphi\tan\delta\frac{\symup{d}\delta}{\symup{d}t}=\mu\sin\varphi\tan\delta=\mu_\alpha\sin\delta.
 \end{align}
 
 再根据自行定义（$V$可被视作常数）
 \begin{equation}
-V\cos\theta=r\frac{\mathrm{d}\theta}{\mathrm{d}t},
+V\cos\theta=r\frac{\symup{d}\theta}{\symup{d}t},
 \end{equation}
 有
 \begin{align}
--V\sin\theta\frac{\mathrm{d}\theta}{\mathrm{d}t}&=\frac{\mathrm{d}r}{\mathrm{d}t}\frac{\mathrm{d}\theta}{\mathrm{d}t}+r\frac{\mathrm{d}\mu}{\mathrm{d}t},\notag\\
-r\frac{\mathrm{d}\mu}{\mathrm{d}t}&=-2V\sin\theta\mu,\notag\\
-\frac{\mathrm{d}\mu}{\mathrm{d}t}&=-\frac{2V_r\mu\pi}{\qty{1}{AU}}.
+-V\sin\theta\frac{\symup{d}\theta}{\symup{d}t}&=\frac{\symup{d}r}{\symup{d}t}\frac{\symup{d}\theta}{\symup{d}t}+r\frac{\symup{d}\mu}{\symup{d}t},\notag\\
+r\frac{\symup{d}\mu}{\symup{d}t}&=-2V\sin\theta\mu,\notag\\
+\frac{\symup{d}\mu}{\symup{d}t}&=-\frac{2V_r\mu\pi}{\qty{1}{AU}}.
 \end{align}
 因此 (\ref{6.1.12})(\ref{6.1.13}) 可写作
 \begin{align}
-\frac{\mathrm{d}\mu_\alpha}{\mathrm{d}t}&=2\mu_\alpha\mu_\delta\tan\delta-\frac{2V_r\mu_\alpha\pi}{\qty{1}{AU}},\\
-\frac{\mathrm{d}\mu_\delta}{\mathrm{d}t}&=-\mu_\alpha^2\sin\delta\cos\delta-\frac{2V_r\mu_\delta\pi}{\qty{1}{AU}},
+\frac{\symup{d}\mu_\alpha}{\symup{d}t}&=2\mu_\alpha\mu_\delta\tan\delta-\frac{2V_r\mu_\alpha\pi}{\qty{1}{AU}},\\
+\frac{\symup{d}\mu_\delta}{\symup{d}t}&=-\mu_\alpha^2\sin\delta\cos\delta-\frac{2V_r\mu_\delta\pi}{\qty{1}{AU}},
 \end{align}
 取$\mu_\alpha$单位为$\unit{s\cdot yr^{-1}}$,$\mu_\delta$单位为$\unit{arcsec\cdot yr^{-1}}$,$\pi$单位为$^{\prime\prime}$,$V_r$单位为$\unit{km\cdot{}s^{-1}}$,则数值上写作
 \begin{align}
-\frac{\mathrm{d}\mu_\alpha}{\mathrm{d}t}&=2\mu_\alpha\mu_\delta\tan\delta-\frac{2V_r\mu_\alpha\pi}{1.496\times10^8\left(\unit{km}\right)}\times\frac{3.156\times10^7\left(\unit{s}\right)}{1\left(\unit{yr}\right)}\\
+\frac{\symup{d}\mu_\alpha}{\symup{d}t}&=2\mu_\alpha\mu_\delta\tan\delta-\frac{2V_r\mu_\alpha\pi}{1.496\times10^8\left(\unit{km}\right)}\times\frac{3.156\times10^7\left(\unit{s}\right)}{1\left(\unit{yr}\right)}\\
 &=2\mu_\alpha\mu_\delta\tan\delta-0.422V_{r}\mu_\alpha\pi\quad\left(\unit{s\cdot arcsec\cdot yr^{-2}}\right),\\
-\frac{\mathrm{d}\mu_\delta}{\mathrm{d}t}&=-225\mu_\alpha^2\sin\delta\cos\delta-0.422V_r\mu_\delta\pi\quad\left(\unit{arcsec^{2}\cdot yr^{-2}}\right).\label{6.2.23}
+\frac{\symup{d}\mu_\delta}{\symup{d}t}&=-225\mu_\alpha^2\sin\delta\cos\delta-0.422V_r\mu_\delta\pi\quad\left(\unit{arcsec^{2}\cdot yr^{-2}}\right).\label{6.2.23}
 \end{align}
 请注意角秒与时秒的区别，如此 (\ref{6.2.23}) 第一项才会因$\mu_{\alpha}^{2}$单位转换出现$15^{2}$这个因子。
 
@@ -1868,10 +1868,10 @@ M&=R_Z\left(-\alpha_0\right)R_Y\left(\delta_0-\ang{90;;}\right)R_Z\left(\varphi_
 
 现在考虑定向历元$T$对自行的影响。参考系变换导致恒星自行在赤经圈和赤纬圈上的分量不断重新分配：
 \begin{align}
-\frac{\mathrm{d}\mu_\alpha}{\mathrm{d}T}&=\sin\varphi\sec\delta\frac{\mathrm{d}\mu}{\mathrm{d}T}+\mu\cos\varphi\sec\delta\frac{\mathrm{d}\varphi}{\mathrm{d}T}+\mu\sin\varphi\frac{\sin\delta}{\cos^2\delta}\frac{\mathrm{d}\delta}{\mathrm{d}T},\\
-\frac{\mathrm{d}\mu_\delta}{\mathrm{d}T}&=\cos\varphi\frac{\mathrm{d}\mu}{\mathrm{d}T}-\mu\sin\varphi\frac{\mathrm{d}\varphi}{\mathrm{d}T}.
+\frac{\symup{d}\mu_\alpha}{\symup{d}T}&=\sin\varphi\sec\delta\frac{\symup{d}\mu}{\symup{d}T}+\mu\cos\varphi\sec\delta\frac{\symup{d}\varphi}{\symup{d}T}+\mu\sin\varphi\frac{\sin\delta}{\cos^2\delta}\frac{\symup{d}\delta}{\symup{d}T},\\
+\frac{\symup{d}\mu_\delta}{\symup{d}T}&=\cos\varphi\frac{\symup{d}\mu}{\symup{d}T}-\mu\sin\varphi\frac{\symup{d}\varphi}{\symup{d}T}.
 \end{align}
-因为行星岁差不影响赤纬和方向位置角，我们仅考虑日月岁差。日月岁差不改变自行大小，$\dfrac{\mathrm{d}\mu}{\mathrm{d}T}=0$,只引起赤纬方向的变化$\dfrac{\mathrm{d}\delta{}}{\mathrm{d}t}=n\cos\alpha=\psi\sin\varepsilon\mathrm{d}t$和位置方向角$\varphi$的变化。因此我们只需再得知$\dfrac{\mathrm{d}\varphi}{\mathrm{d}t}$就可了解定向历元对自行的影响。
+因为行星岁差不影响赤纬和方向位置角，我们仅考虑日月岁差。日月岁差不改变自行大小，$\dfrac{\symup{d}\mu}{\symup{d}T}=0$,只引起赤纬方向的变化$\dfrac{\symup{d}\delta{}}{\symup{d}t}=n\cos\alpha=\psi\sin\varepsilon\symup{d}t$和位置方向角$\varphi$的变化。因此我们只需再得知$\dfrac{\symup{d}\varphi}{\symup{d}t}$就可了解定向历元对自行的影响。
 
 \begin{figure}[!htp]
 \centering
@@ -1895,7 +1895,7 @@ M&=R_Z\left(-\alpha_0\right)R_Y\left(\delta_0-\ang{90;;}\right)R_Z\left(\varphi_
 \draw (80,0) node {$\sigma$};
 \draw (200,80) node {$\sigma'$};
 \draw (130,100) node {$\varphi$};
-\draw (0,100) node {$\mathrm{d}\varphi$};
+\draw (0,100) node {$\symup{d}\varphi$};
 \draw (15,220) node {$\alpha$};
 \end{tikzpicture}
 \captionsetup{justification=raggedright, singlelinecheck=false}
@@ -1903,19 +1903,19 @@ M&=R_Z\left(-\alpha_0\right)R_Y\left(\delta_0-\ang{90;;}\right)R_Z\left(\varphi_
 \label{定向历元对位置角的影响。}
 \end{figure}
 
-图\ref{定向历元对位置角的影响。}中，严格来讲$\overset{\frown}{PP'}$是小圆弧，但在极短时间内，我们认为它是大圆弧。$\mathrm{d}T$时间内天极运动了$n\mathrm{d}T$,运用正弦公式得到
+图\ref{定向历元对位置角的影响。}中，严格来讲$\overset{\frown}{PP'}$是小圆弧，但在极短时间内，我们认为它是大圆弧。$\symup{d}T$时间内天极运动了$n\symup{d}T$,运用正弦公式得到
 \begin{equation}
-\frac{\mathrm{d}\varphi}{\sin\left(n\mathrm{d}T\right)}=\frac{\sin\alpha}{\sin\left(\ang{90;;}-\delta{}\right)},
+\frac{\symup{d}\varphi}{\sin\left(n\symup{d}T\right)}=\frac{\sin\alpha}{\sin\left(\ang{90;;}-\delta{}\right)},
 \end{equation}
 小量近似
 \begin{equation}
-\frac{\mathrm{d}\varphi}{\mathrm{d}T}=n\sin\alpha\sec\delta{}.
+\frac{\symup{d}\varphi}{\symup{d}T}=n\sin\alpha\sec\delta{}.
 \end{equation}
 因此自行随定向历元的变化为
 \begin{align}
-\frac{\mathrm{d}\mu_\alpha}{\mathrm{d}T}&=\mu\cos\varphi\sec\delta n\sin\alpha\sec\delta{}+\mu\sin\varphi\frac{\sin\delta}{\cos^2\delta}n\cos\alpha\notag\\
+\frac{\symup{d}\mu_\alpha}{\symup{d}T}&=\mu\cos\varphi\sec\delta n\sin\alpha\sec\delta{}+\mu\sin\varphi\frac{\sin\delta}{\cos^2\delta}n\cos\alpha\notag\\
 &=n\mu_{\delta{}}\sin\alpha\sec^{2}\delta{}+n\mu_{\alpha}\tan\delta{}\cos\alpha.\\
-\frac{\mathrm{d}\mu_\delta}{\mathrm{d}T}&=-\mu\sin\varphi n\sin\alpha\sec\delta{}\notag\\
+\frac{\symup{d}\mu_\delta}{\symup{d}T}&=-\mu\sin\varphi n\sin\alpha\sec\delta{}\notag\\
 &=-n\mu_{\alpha}\sin\alpha.
 \end{align}
 这两式又被称作自行的岁差变化。
@@ -2025,11 +2025,11 @@ v_r=\vec v\cdot\vec S=R_0\left(\omega-\omega_0\right)\cos b\sin l.
 \end{equation}
 $r\ll R_{0}$时，有近似表达式
 \begin{equation}
-\omega-\omega_{0}=\left(\frac{\mathrm{d}\omega}{\mathrm{d}R}\right)_{0}\left(R-R_{0}\right).
+\omega-\omega_{0}=\left(\frac{\symup{d}\omega}{\symup{d}R}\right)_{0}\left(R-R_{0}\right).
 \end{equation}
 定义奥尔特常数，用$\unit{km\cdot{}s^{-1}\cdot kpc^{-1}}$作为单位
 \begin{align}
-A&=-\frac12R_0\left(\frac{\mathrm{d}\omega}{\mathrm{d}R}\right)_0,\\
+A&=-\frac12R_0\left(\frac{\symup{d}\omega}{\symup{d}R}\right)_0,\\
 B&=A-\omega_0.
 \end{align}
 结合$R-R_{0}=-r\cos b\cos l$可得

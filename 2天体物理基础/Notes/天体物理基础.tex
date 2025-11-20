@@ -1,77 +1,69 @@
-% !TEX encoding = UTF-8 Unicode
-\documentclass[11pt, a4paper, oneside, onecolumn]{ctexart}
-\usepackage[utf8]{inputenc}
+\documentclass[UTF8, 12pt, a4paper, oneside, onecolumn, fontset=none]{ctexart}
 \usepackage{geometry}
-\geometry{left=1.5cm,right=1.5cm,top=2cm,bottom=1cm}
-\usepackage{ctex}
-\usepackage{CJK}
-\usepackage{xcolor}
+\geometry{left=1.5cm,right=1.5cm,top=1.8cm,bottom=0.9cm}
 
-\usepackage{amsmath, amsthm, amssymb, graphicx, mathrsfs, siunitx, mhchem}
-\usepackage{tikz}
-\usepackage{subfigure}
-\usepackage{caption}
-\usepackage{subcaption}
+\usepackage{unicode-math, mathrsfs, xcolor, inputenc}
+\setCJKmainfont[AutoFakeBold, AutoFakeSlant]{LXGW WenKai}
+\setmainfont[AutoFakeBold, AutoFakeSlant]{LXGW WenKai}
+\setmathfont{Latin Modern Math}
+\setmathrm{Latin Modern Math}
+
+\usepackage{amsmath, amsthm, cases, graphicx, subfigure, tikz, caption, subcaption, siunitx, keyval, physics2}
+\DeclareSIUnit\angstrom{Å}
+\usephysicsmodule{ab,ab.braket}
+\usepackage[version=4]{mhchem}
 \usepackage[flushleft]{threeparttable}
-\usepackage{cases}
+\usepackage{hyperref, bookmark}
+\hypersetup{colorlinks=true, urlcolor=yellow, filecolor=green, linkcolor=red}
+\usepackage[backend=biber,sorting=none]{biblatex}
+\addbibresource{/Users/Linyan/Zotero/MyBibTeX.bib}
 
-\ctexset{section={format=\bfseries\zihao{4}\flushleft}}
+\ctexset{section={format=\bfseries \zihao{4} \flushleft}}
 \renewcommand\thesubsection{\thesection.\arabic{subsection}}
 \numberwithin{equation}{subsection}
 \renewcommand\theequation{\thesubsection.\arabic{equation}}
 \makeatletter
 \renewcommand{\maketag@@@}[1]{\hbox{\m@th\normalsize\normalfont#1}}%
 \makeatother
-
-\usepackage{bookmark}
-\usepackage{hyperref}
-\hypersetup{colorlinks=true, urlcolor=yellow, filecolor=green, linkcolor=red}
 \usepackage{indentfirst}
-\usepackage{inconsolata}
 
 \usepackage{listings}
 \lstset{
-     basicstyle      =   \zihao{-5}\ttfamily,
-     numberstyle     =   \zihao{-5}\ttfamily,
-     keywordstyle    =   \color{blue},
-     keywordstyle    =   [2] \color{teal},
-     stringstyle     =   \color{magenta},
-     commentstyle    =   \color{red}\ttfamily,
-     breaklines      =   true,   % 自动换行，建议不要写太长的行
-     columns         =   fixed,  % 如果不加这一句，字间距就不固定
-     flexiblecolumns,                % 别问为什么，加上这个
-     numbers             =   left,   % 行号的位置在左边
-     showspaces          =   false,  % 是否显示空格，显示了有点乱
-     numberstyle         =   \zihao{-5}\ttfamily,    % 行号的样式，小五号，tt 等宽字体
-     showstringspaces    =   false,
-     captionpos          =   t,      % 这段代码的名字所呈现的位置，t 指的是 top 上面
-     frame               =   lrtb,   % 显示边框
+      basicstyle      =    \zihao{-5}\ttfamily,
+      numberstyle     =    \zihao{-5}\ttfamily,
+      keywordstyle    =    \color{blue},
+      keywordstyle    =    [2]\color{teal},
+      stringstyle     =    \color{magenta},
+      commentstyle    =    \color{red}\ttfamily,
+      breaklines=true,     % 自动换行
+      columns=fixed,       % 固定字间距
+      flexiblecolumns,     % 别问为什么，加上这个
+      numbers         =    left,% 行号的位置在左边
+      showspaces      =    false,% 是否显示空格
+      numberstyle     =    \zihao{-5}\ttfamily,% 行号的样式，小五号，tt 等宽字体
+      showstringspaces=    false,
+      captionpos      =    t,%这段代码的名字所呈现的位置，t 指的是 top 上面
+      frame           =    lrtb,% 显示边框
 }
 
 \lstdefinestyle{Python}{
-     language        =   Python,
-     basicstyle      =   \zihao{-5}\ttfamily,
-     numberstyle     =   \zihao{-5}\ttfamily,
-     keywordstyle    =   \color{blue},
-     keywordstyle    =   [2] \color{teal},
-     stringstyle     =   \color{magenta},
-     commentstyle    =   \color{red}\ttfamily,
-     breaklines      =   true,   % 自动换行，建议不要写太长的行
-     columns         =   fixed,  % 如果不加这一句，字间距就不固定
-basewidth       =   0.5em,
+      language=Python,     
+      basicstyle      =    \zihao{-5}\ttfamily,
+      numberstyle     =    \zihao{-5}\ttfamily,
+      keywordstyle    =    \color{blue},
+      keywordstyle    =    [2] \color{teal},
+      stringstyle     =    \color{magenta},
+      commentstyle    =    \color{red}\ttfamily,
+      breaklines      =    true,   % 自动换行，建议不要写太长的行
+      columns         =    fixed,  % 如果不加这一句，字间距就不固定
+      basewidth       =    0.5em,
 }
-
-% \usepackage{physics} % 物理百宝箱
-% \usepackage[version=4]{mhchem} % 绘制分子式
-% \usepackage{algorithm,algorithmic} % 展示算法伪代码
-\usepackage[backend=biber,sorting=none]{biblatex}
-\addbibresource{/Users/Linyan/Zotero/MyBibTeX.bib}
 
 \title{天体物理基础}
 \author{林衍}
 \date{\today}
 
-\usepackage[notitle]{subfiles}
+\usepackage{subfiles}
 
 \begin{document}
 \maketitle

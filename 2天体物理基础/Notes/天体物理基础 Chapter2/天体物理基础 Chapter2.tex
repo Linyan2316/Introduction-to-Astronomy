@@ -1,4 +1,3 @@
-% !TEX encoding = UTF-8 Unicode
 \documentclass[../天体物理基础.tex]{subfiles}
 \usepackage{xr}
 \externaldocument{../天体物理基础}
@@ -10,24 +9,24 @@
 \subsection{恒星的结构}
 本节中我们将会建立简单的恒星模型。在球对称的前提下，给定恒星的初始质量，化学组成和边界条件，在某一特定半径的球壳处求解一些方程便可大致确定恒星的性质。这些方程包括质量连续性方程、流体静力学平衡方程、能量守恒方程、能量传输方程、物态方程、产能率公式和不透明度公式。我们会在各个小节的叙述中了解恒星的性质并补完这些方程。其中质量连续性方程
 \begin{equation}
-\mathrm{d}M_{r}=4\pi r^{2}\rho\left(r\right)\mathrm{d}r
+\symup{d}M_{r}=4\pi r^{2}\rho\left(r\right)\symup{d}r
 \end{equation}
 和流体静力学方程
 \begin{equation}
-\frac{\mathrm{d}P}{\mathrm{d}r}=-\frac{\mathrm{G}M_{r}\rho\left(r\right)}{r^{2}}\label{2.1.2}
+\frac{\symup{d}P}{\symup{d}r}=-\frac{\symup{G}M_{r}\rho\left(r\right)}{r^{2}}\label{2.1.2}
 \end{equation}
 就不赘述了。
 
 \subsubsection{恒星的能量来源}
 太阳为地球提供了大量的光和热，一个很自然的问题便出现在科学家们的脑海中：恒星的能量来源是什么？有人 (Herschel, 1837) 认为来自氢氧合成水过程中所释放的化学能，有人 (Mayer, 1846) 认为来自小行星撞击恒星所提供的能量。一个看起来比较靠谱的猜想是引力能的释放 (Waterson, Helmholtz, Kelvin, 1850), 恒星不断向外辐射能量，内能降低导致压强下降，此时为了平衡引力恒星就会收缩，引力能在此过程中转化为内能。那么这个过程足以维持数亿年的辐射吗？假设恒星密度均匀，恒星的引力能为
 \begin{align}
-\mathrm{d}U_{\text{g},i}&=-\mathrm{G}\frac{M_{r}\mathrm{d}m_{i}}{r},\notag\\
-U_{\text{g}}&=-\mathrm{G}\int_{0}^{R}\frac{4}{3}\pi r^{3}\rho \frac{4\pi r^{2}\rho\mathrm{d}r}{r}\notag\\
-&=-\mathrm{G}\int_{0}^{R}\frac{16}{3}\pi^{2}r^{4}\rho^{2}\mathrm{d}r=-\frac{16}{15}\pi^{2}\mathrm{G}\rho^{2}R^{5}=-\frac{3}{5}\frac{\mathrm{G}M^{2}}{R}.
+\symup{d}U_{\text{g},i}&=-\symup{G}\frac{M_{r}\symup{d}m_{i}}{r},\notag\\
+U_{\text{g}}&=-\symup{G}\int_{0}^{R}\frac{4}{3}\pi r^{3}\rho \frac{4\pi r^{2}\rho\symup{d}r}{r}\notag\\
+&=-\symup{G}\int_{0}^{R}\frac{16}{3}\pi^{2}r^{4}\rho^{2}\symup{d}r=-\frac{16}{15}\pi^{2}\symup{G}\rho^{2}R^{5}=-\frac{3}{5}\frac{\symup{G}M^{2}}{R}.
 \end{align}
 以太阳为例，假设引力能全部转换为辐射能，所维持的时间也不过
 \begin{equation}
-\tau\sim\frac{\mathrm{G}M_{\odot}^{2}}{R_{\odot}L_{\odot}}\sim\qty{e7}{yr}.
+\tau\sim\frac{\symup{G}M_{\odot}^{2}}{R_{\odot}L_{\odot}}\sim\qty{e7}{yr}.
 \end{equation}
 而地质鉴定告诉我们地球已有 46 亿年的历史，因此人们还需寻找其他类型的能源。
 
@@ -44,7 +43,7 @@ T_{\text{quantum}}&=\frac{Z_{1}^{2}Z_{2}^{2}{\color{blue}{\ce{e}}}^{4}m_{\ce{H}}
 \end{align}
 这个温度就比较容易达到了。我们可以来估计一下太阳内部的压力和温度。根据 (\ref{2.1.2}) 式可知，
 \begin{equation}
-P=\int_{0}^{P}\mathrm{d}P=\int_{R}^{0}-\frac{\mathrm{G}M_{r}\rho}{r^{2}}\mathrm{d}r=\int_{R}^{0}-\frac{\mathrm{G}4\pi{}r^{3}\rho^{2}}{3r^{2}}\mathrm{d}r=\frac{2\pi{}}{3}\rho^{2}\mathrm{G}R^{2},\overline{P}\sim\qty{e14}{Pa},
+P=\int_{0}^{P}\symup{d}P=\int_{R}^{0}-\frac{\symup{G}M_{r}\rho}{r^{2}}\symup{d}r=\int_{R}^{0}-\frac{\symup{G}4\pi{}r^{3}\rho^{2}}{3r^{2}}\symup{d}r=\frac{2\pi{}}{3}\rho^{2}\symup{G}R^{2},\overline{P}\sim\qty{e14}{Pa},
 \end{equation}
 因此太阳平均温度可达$T=\dfrac{\mu m_{\ce{H}}\overline{P}}{k_{\text{B}}\rho}\sim\qty{5e6}{K}$,核心温度可达$\qty{1.5e7}{K}$,足以进行氢的热核反应。
 
@@ -54,7 +53,7 @@ P=\int_{0}^{P}\mathrm{d}P=\int_{R}^{0}-\frac{\mathrm{G}M_{r}\rho}{r^{2}}\mathrm{
 \begin{equation}
 \ce{4{}^{1}H ->{}^{4}He +2e^{+}}+2\nu_{\ce{e}}+\text{energy}.
 \end{equation}
-其中$\nu_{\ce{e}}$是电子中微子。此过程中释放的能量为$E=\left(4m_{\ce{H}}-m_{\ce{He}}\right)\mathrm{c}^{2}=\qty{4e-5}{erg}$,燃烧效率为$0.7\%$,即以质量计有$0.7\%$的初始燃料完全转化为能量。
+其中$\nu_{\ce{e}}$是电子中微子。此过程中释放的能量为$E=\left(4m_{\ce{H}}-m_{\ce{He}}\right)\symup{c}^{2}=\qty{4e-5}{erg}$,燃烧效率为$0.7\%$,即以质量计有$0.7\%$的初始燃料完全转化为能量。
 
 氢燃烧的方式有两种，一是质子{}-{}质子链 (proton-proton chain, pp chain),二是碳氮氧循环。pp chain 的速率$\propto T^{4}$, CNO 循环的速率$\propto{}T^{20}$,温度高于$\qty{1.5e7}{K}$时 CNO 效率更高。因此前者主要发生在质量$M<\qty{1.1}{M_{\odot}}$的恒星中，后者发生在$M>\qty{1.1}{M_{\odot}}$的恒星中。
 
@@ -117,25 +116,25 @@ P=\int_{0}^{P}\mathrm{d}P=\int_{R}^{0}-\frac{\mathrm{G}M_{r}\rho}{r^{2}}\mathrm{
 \end{figure}
 
 \subsubsection{能量传输和恒星振荡}
-接下来我们研究能量在恒星内部的传输。首先建立能量守恒方程。记单位时间内通过半径为$r$的球面的能量为$L\left(r\right)$,单位物质在单位时间产生的能量（来自核反应和引力势能转换）为$\varepsilon\left(r\right)$,那么半径为$r$,厚度为$\mathrm{d}r$的球壳两侧的能量差为
+接下来我们研究能量在恒星内部的传输。首先建立能量守恒方程。记单位时间内通过半径为$r$的球面的能量为$L\left(r\right)$,单位物质在单位时间产生的能量（来自核反应和引力势能转换）为$\varepsilon\left(r\right)$,那么半径为$r$,厚度为$\symup{d}r$的球壳两侧的能量差为
 \begin{equation}
-\mathrm{d}L_{r}=L\left(r+\mathrm{d}r\right)-L\left(r\right)=\varepsilon\mathrm{d}M_{r}=4\pi{}r^{2}\rho\varepsilon\mathrm{d}r.
+\symup{d}L_{r}=L\left(r+\symup{d}r\right)-L\left(r\right)=\varepsilon\symup{d}M_{r}=4\pi{}r^{2}\rho\varepsilon\symup{d}r.
 \end{equation}
 
 恒星内部任意一点必须维持流体静力学平衡，而恒星内部核反应速率$\varepsilon$对温度十分敏感。温度上升势必导致反应速率上升，进而导致压强上升，强过小体元所受的引力，恒星核心区膨胀导致温度下降，形成负反馈，产生$\varepsilon$机制振荡。
 
 能量传输有三种形式：辐射、传导和对流。太阳核心产生的能量主要通过辐射与对流 (convection) 向外传递。习惯上，我们用温度梯度来描述二者的贡献：
 \begin{equation}
-\frac{\mathrm{d}T}{\mathrm{d}r}=\left.\frac{\mathrm{d}T}{\mathrm{d}r}\right\vert{}_{\text{rad}}+\left.\frac{\mathrm{d}T}{\mathrm{d}r}\right\vert{}_{\text{conv}}.
+\frac{\symup{d}T}{\symup{d}r}=\left.\frac{\symup{d}T}{\symup{d}r}\right\vert{}_{\text{rad}}+\left.\frac{\symup{d}T}{\symup{d}r}\right\vert{}_{\text{conv}}.
 \end{equation}
 
 首先考虑辐射部分。其实我们已经推导过了，在介绍 Eddington 光度时就考虑过辐射压和引力的平衡，在推导质光关系时将其扩展得到
 \begin{equation}
-\frac{\mathrm{G}M}{r^{2}}=\frac{1}{\rho}\frac{\mathrm{d}P}{\mathrm{d}r}=\frac{1}{\mathrm{c}}\kappa\frac{L}{4\pi r^{2}}=\frac{1}{\rho}\frac{4}{3}a_{\text{B}}T^{3}\frac{\mathrm{d}T}{\mathrm{d}r},\tag{\ref{1.4.11}}
+\frac{\symup{G}M}{r^{2}}=\frac{1}{\rho}\frac{\symup{d}P}{\symup{d}r}=\frac{1}{\symup{c}}\kappa\frac{L}{4\pi r^{2}}=\frac{1}{\rho}\frac{4}{3}a_{\text{B}}T^{3}\frac{\symup{d}T}{\symup{d}r},\tag{\ref{1.4.11}}
 \end{equation}
 稍作整理并修正下正负号便是所需要的方程
 \begin{equation}
-\frac{\mathrm{d}T}{\mathrm{d}r}=-\frac{3}{4a_{\text{B}}\mathrm{c}}\frac{\kappa\rho}{T^{3}}\frac{L_{r}}{4\pi r^{2}}.
+\frac{\symup{d}T}{\symup{d}r}=-\frac{3}{4a_{\text{B}}\symup{c}}\frac{\kappa\rho}{T^{3}}\frac{L_{r}}{4\pi r^{2}}.
 \end{equation}
 可见不透明度$\kappa$会影响辐射能传输的效率。不透明度下降，散逸的能量增多，导致核心区温度下降，压强下降，恒星收缩，密度上升，进而导致不透明度上升，产生$\kappa$机制振荡。
 
@@ -153,11 +152,11 @@ P=K\rho^{\gamma}
 \end{equation}
 可知
 \begin{align}
-\frac{\mathrm{d}P}{\mathrm{d}r}&=-\frac{P}{\mu}\frac{\mathrm{d}\mu}{\mathrm{d}r}+\frac{P}{\rho}\frac{\mathrm{d}\rho}{\mathrm{d}r}+\frac{P}{T}\frac{\mathrm{d}T}{\mathrm{d}r},\notag\\
-\frac{\mathrm{d}P}{\mathrm{d}r}&=\gamma\frac{P}{\rho}\frac{\mathrm{d}\rho}{\mathrm{d}r},\notag\\
-\left.\frac{\mathrm{d}T}{\mathrm{d}r}\right\vert{}_{\text{ad}}&=\left(1-\frac{1}{\gamma}\right)\frac{T}{P}\frac{\mathrm{d}P}{\mathrm{d}r}=-\left(1-\frac{1}{\gamma}\right)\frac{\mu m_{\ce{H}}}{k_{\text{B}}}\frac{\mathrm{G}M_{r}}{r^{2}}.
+\frac{\symup{d}P}{\symup{d}r}&=-\frac{P}{\mu}\frac{\symup{d}\mu}{\symup{d}r}+\frac{P}{\rho}\frac{\symup{d}\rho}{\symup{d}r}+\frac{P}{T}\frac{\symup{d}T}{\symup{d}r},\notag\\
+\frac{\symup{d}P}{\symup{d}r}&=\gamma\frac{P}{\rho}\frac{\symup{d}\rho}{\symup{d}r},\notag\\
+\left.\frac{\symup{d}T}{\symup{d}r}\right\vert{}_{\text{ad}}&=\left(1-\frac{1}{\gamma}\right)\frac{T}{P}\frac{\symup{d}P}{\symup{d}r}=-\left(1-\frac{1}{\gamma}\right)\frac{\mu m_{\ce{H}}}{k_{\text{B}}}\frac{\symup{G}M_{r}}{r^{2}}.
 \end{align}
-我们认为$\left\vert{}\dfrac{\mathrm{d}T}{\mathrm{d}r}\right\vert{}_{\text{actual}}<\left\vert{}\dfrac{\mathrm{d}T}{\mathrm{d}r}\right\vert{}_{\text{ad}}$的是辐射区，反之是对流区。
+我们认为$\left\vert{}\dfrac{\symup{d}T}{\symup{d}r}\right\vert{}_{\text{actual}}<\left\vert{}\dfrac{\symup{d}T}{\symup{d}r}\right\vert{}_{\text{ad}}$的是辐射区，反之是对流区。
 
 $M>1.5\text{\textendash}\qty{2}{M_{\odot}}$的恒星，拥有对流核区和辐射包层，核区发生$\ce{CNO}$循环核反应，产生能量的内核很小。
 
@@ -214,10 +213,10 @@ P_{\text{g}}&=\rho k_{\text{B}}T\frac{X+\dfrac{1}{4}Y}{m_{\ce{H}}}.
 
 恒星的多方球模型 (Polytropic Model).首先我们假设恒星是球对称结构，各物理量只与半径有关。其次，主序星处于完全流体静力学平衡，压强（来自气压和辐射压）梯度与引力平衡，得到
 \begin{align}
-\frac{\mathrm{G}M_{r}\rho\mathrm{d}A\mathrm{d}r}{r^{2}}&=\left(P\left(r\right)-P\left(r+\mathrm{d}r\right)\right)\mathrm{d}A=-\mathrm{d}P\left(r\right)\mathrm{d}A,\\
-\frac{\mathrm{d}P}{\mathrm{d}r}&=-\frac{\mathrm{G}M_{r}\rho}{r^{2}}.\\
-\frac{\mathrm{d}}{\mathrm{d}r}\left(\frac{r^{2}}{\rho}\frac{\mathrm{d}P}{\mathrm{d}r}\right)&=-\mathrm{G}\frac{\mathrm{d}M_{r}}{\mathrm{d}r}=-\mathrm{G}\left(4\pi r^{2}\rho\right).\\
-\frac{1}{r^{2}}\frac{\mathrm{d}}{\mathrm{d}r}\left(\frac{r^{2}}{\rho}\frac{\mathrm{d}P}{\mathrm{d}r}\right)&=-4\pi{}\mathrm{G}\rho.
+\frac{\symup{G}M_{r}\rho\symup{d}A\symup{d}r}{r^{2}}&=\left(P\left(r\right)-P\left(r+\symup{d}r\right)\right)\symup{d}A=-\symup{d}P\left(r\right)\symup{d}A,\\
+\frac{\symup{d}P}{\symup{d}r}&=-\frac{\symup{G}M_{r}\rho}{r^{2}}.\\
+\frac{\symup{d}}{\symup{d}r}\left(\frac{r^{2}}{\rho}\frac{\symup{d}P}{\symup{d}r}\right)&=-\symup{G}\frac{\symup{d}M_{r}}{\symup{d}r}=-\symup{G}\left(4\pi r^{2}\rho\right).\\
+\frac{1}{r^{2}}\frac{\symup{d}}{\symup{d}r}\left(\frac{r^{2}}{\rho}\frac{\symup{d}P}{\symup{d}r}\right)&=-4\pi{}\symup{G}\rho.
 \end{align}
 进一步假设恒星内部气体热量传输符合多方过程，即满足
 \begin{equation}
@@ -225,17 +224,17 @@ P=K\rho^{1+\frac{1}{n}}=K\rho^{\gamma},
 \end{equation}
 如此一来压力引力平衡方程可以改写为
 \begin{equation}
-\left(\frac{n+1}{n}\right)\frac{K}{r^{2}}\frac{\mathrm{d}}{\mathrm{d}r}\left(r^{2}\rho^{\frac{1}{n}-1}\frac{\mathrm{d}\rho}{\mathrm{d}r}\right)=-4\pi\mathrm{G}\rho.\label{2.1.33}
+\left(\frac{n+1}{n}\right)\frac{K}{r^{2}}\frac{\symup{d}}{\symup{d}r}\left(r^{2}\rho^{\frac{1}{n}-1}\frac{\symup{d}\rho}{\symup{d}r}\right)=-4\pi\symup{G}\rho.\label{2.1.33}
 \end{equation}
 接着作代换
 \begin{align}
 \rho\left(r\right)&=\rho_{\text{c}}\left[\theta_{n}\left(r\right)\right]^{n},\\
 r&=a_{n}\xi\left(r\right),\\
-a_{n}&=\left[\frac{\left(n+1\right)K}{4\pi\mathrm{G}}\rho_{\text{c}}^{\frac{1}{n}-1}\right]^{\frac{1}{2}},
+a_{n}&=\left[\frac{\left(n+1\right)K}{4\pi\symup{G}}\rho_{\text{c}}^{\frac{1}{n}-1}\right]^{\frac{1}{2}},
 \end{align}
 其中$\rho_{\text{c}}$代表恒星中心的密度，如此一来 (\ref{2.1.33}) 式可以改写为 Lane-Emden 方程的形式：
 \begin{equation}
-\frac{1}{\xi^{2}}\frac{\mathrm{d}}{\mathrm{d}\xi}\left(\xi^{2}\frac{\mathrm{d}\theta_{n}}{\mathrm{d}\xi}\right)=-\theta_{n}^{n}.
+\frac{1}{\xi^{2}}\frac{\symup{d}}{\symup{d}\xi}\left(\xi^{2}\frac{\symup{d}\theta_{n}}{\symup{d}\xi}\right)=-\theta_{n}^{n}.
 \end{equation}
 上式仅在$n=0,1,5$时有解析解：
 \begin{align}
@@ -273,7 +272,7 @@ a_{n}&=\left[\frac{\left(n+1\right)K}{4\pi\mathrm{G}}\rho_{\text{c}}^{\frac{1}{n
 2001 年加拿大萨德伯里探测器测量到三种中微子，其中 35\%是电子中微子。
 
 \subsection{恒星的演化}
-恒星通过核反应产生能量，维持热平衡和流体静力学平衡。在此过程中恒星内部的化学组成发生变化。将新的化学组成作为初始条件重新代入方程组求解，得到恒星在时间$\mathrm{d}t$后的结构。依次类推，可以求得恒星的结构随时间的变化，即恒星的演化。
+恒星通过核反应产生能量，维持热平衡和流体静力学平衡。在此过程中恒星内部的化学组成发生变化。将新的化学组成作为初始条件重新代入方程组求解，得到恒星在时间$\symup{d}t$后的结构。依次类推，可以求得恒星的结构随时间的变化，即恒星的演化。
 
 Russell-Vogt 原理：如果恒星处于流体静力学平衡和热平衡，而且它的能量来自内部的核反应，它们的结构和演化就完全唯一地由初始质量和化学丰度决定。
 
@@ -283,27 +282,27 @@ Russell-Vogt 原理：如果恒星处于流体静力学平衡和热平衡，而�
 
 核时标，恒星核心区（约占总质量的$10\%$）核燃料消耗殆尽所需的时间
 \begin{equation}
-t_{n}=\frac{E}{L}=\frac{\eta\Delta{}M\mathrm{c}^{2}}{L}\approx0.7\%\times\frac{0.1\,M_{\odot}\mathrm{c}^{2}}{L}\approx\qty{e10}{yr}\frac{M}{\unit{M_{\odot}}}\left(\frac{L}{\unit{L_{\odot}}}\right)^{-1}.
+t_{n}=\frac{E}{L}=\frac{\eta\Delta{}M\symup{c}^{2}}{L}\approx0.7\%\times\frac{0.1\,M_{\odot}\symup{c}^{2}}{L}\approx\qty{e10}{yr}\frac{M}{\unit{M_{\odot}}}\left(\frac{L}{\unit{L_{\odot}}}\right)^{-1}.
 \end{equation}
 
 热时标，恒星辐射完自身内能所需的时间，或者光子从恒星内部到达表面的时间（根据位力定理，内能是引力能的$\dfrac{1}{2}$）
 \begin{equation}
-t_{\text{the}}=0.5\frac{\mathrm{G}M^{2}}{RL}\approx\qty{2e7}{yr}\left(\frac{M}{\unit{M_{\odot}}}\right)^{2}\left(\frac{R}{\unit{R_{\odot}}}\right)^{-1}\left(\frac{L}{\unit{L_{\odot}}}\right)^{-1}.
+t_{\text{the}}=0.5\frac{\symup{G}M^{2}}{RL}\approx\qty{2e7}{yr}\left(\frac{M}{\unit{M_{\odot}}}\right)^{2}\left(\frac{R}{\unit{R_{\odot}}}\right)^{-1}\left(\frac{L}{\unit{L_{\odot}}}\right)^{-1}.
 \end{equation}
 
 动力学时标，如果恒星内部压力突然消失，引力作用下恒星坍缩的时间
 \begin{equation}
-t_{\text{dyn}}=\frac{R}{V}\approx\sqrt\frac{R^{3}}{\mathrm{G}M}\approx\qty{27}{min}\left(\frac{R}{\unit{R_{\odot}}}\right)^{\frac{3}{2}}\left(\frac{M}{\unit{M_{\odot}}}\right)^{-\frac{1}{2}}.
+t_{\text{dyn}}=\frac{R}{V}\approx\sqrt\frac{R^{3}}{\symup{G}M}\approx\qty{27}{min}\left(\frac{R}{\unit{R_{\odot}}}\right)^{\frac{3}{2}}\left(\frac{M}{\unit{M_{\odot}}}\right)^{-\frac{1}{2}}.
 \end{equation}
 
 \subsubsection{Jeans 质量}
 流体静力学色散关系：
 \begin{equation}
-\omega^{2}=k^{2}v_{\text{s}}^{2}-4\pi\mathrm{G}\rho_{0},
+\omega^{2}=k^{2}v_{\text{s}}^{2}-4\pi\symup{G}\rho_{0},
 \end{equation}
 其中$v_{\text{s}}$是声速。要让波发生演化而不是形成驻波，需要$\omega$是复数。于是我们引入金斯波长
 \begin{equation}
-\lambda_{\text{J}}=\frac{h}{p_{\text{J}}}=\frac{2\pi}{k_{\text{J}}}=\sqrt{\frac{\pi v_{\text{s}}^{2}}{\mathrm{G}\rho_{0}}},
+\lambda_{\text{J}}=\frac{h}{p_{\text{J}}}=\frac{2\pi}{k_{\text{J}}}=\sqrt{\frac{\pi v_{\text{s}}^{2}}{\symup{G}\rho_{0}}},
 \end{equation}
 同时有金斯质量：
 \begin{equation}
@@ -312,20 +311,20 @@ M_{\text{J}}=\frac{4\pi}{3}\rho\lambda_{\text{J}}^{3}\sim 2M_{\odot}\cdot\left(\
 
 氢原子玻尔半径
 \begin{equation}
-\alpha_{0}=\frac{4\pi\varepsilon_{0}\hbar^{2}}{m_{0}{\color{blue}{\ce{e}}}^{2}}=\frac{\hbar}{m_{0}\mathrm{c}\alpha}.
+\alpha_{0}=\frac{4\pi\varepsilon_{0}\hbar^{2}}{m_{0}{\color{blue}{\ce{e}}}^{2}}=\frac{\hbar}{m_{0}\symup{c}\alpha}.
 \end{equation}
 
 想象有一大堆聚集在一起的气体，其引力势能为
 \begin{equation}
-E_{\text{gravity}}\sim\frac{\mathrm{G}M^{2}}{R}\sim\frac{\mathrm{G}N^{2}m_{\ce{p}}^{2}}{R},
+E_{\text{gravity}}\sim\frac{\symup{G}M^{2}}{R}\sim\frac{\symup{G}N^{2}m_{\ce{p}}^{2}}{R},
 \end{equation}
 分子间的结合能为
 \begin{equation}
-E_{0}\sim N\alpha^{2}m_{0}\mathrm{c}^{2},
+E_{0}\sim N\alpha^{2}m_{0}\symup{c}^{2},
 \end{equation}
 令二者相等，得到
 \begin{align}
-N=\left(\frac{\alpha\mathrm{c}\hbar}{\mathrm{G}m_{\ce{p}}^{2}}\right)^{\frac{3}{2}}\sim10^{54},\\
+N=\left(\frac{\alpha\symup{c}\hbar}{\symup{G}m_{\ce{p}}^{2}}\right)^{\frac{3}{2}}\sim10^{54},\\
 M_{\text{c}}=Nm_{\ce{p}}\sim\qty{e30}{g}.
 \end{align}
 $M<M_{\text{c}}$，结合能胜利，固态行星，否则分子间电磁力无法抗衡引力，固态结构无法维持，将会转化为等离子体。
@@ -386,7 +385,7 @@ $\ce{^{26}Al}$只产生于核坍缩超新星爆发，它的半衰期只有$\qty{
 >20 & 超新星$\to$黑洞\\
 \hline
 \end{tabular}
-\label{}
+\label{不同质量恒星演化结局。}
 \end{table}
 
 \subsubsection{\texorpdfstring{$M\sim\qty{1}{M_{\odot}}$}{}恒星的主序后演化}
@@ -418,25 +417,25 @@ $\ce{^{26}Al}$只产生于核坍缩超新星爆发，它的半衰期只有$\qty{
 水平支 & 氦核燃烧，核心区半径上升，温度下降 & 向左下方移动至水平支\\
 (horizontal branch, HB) & 壳层氢燃烧，壳层半径下降，温度上升 & \\
 \cline{1-3}
-渐近巨星支 & 氦核燃烧殆尽，留下$\mathrm{CO}$核，$R_{\text{c}}\downarrow,T_{\text{c}}\uparrow$ & 再次向右上方攀升\\
+渐近巨星支 & 氦核燃烧殆尽，留下$\symup{CO}$核，$R_{\text{c}}\downarrow,T_{\text{c}}\uparrow$ & 再次向右上方攀升\\
 (asymptotic giant branch, AGB) & 壳层氢氦燃烧，壳层半径上升，温度下降 & 成为红超巨星\\
 \cline{1-3}
 热脉冲 & 壳层氦闪（不稳定燃烧），导致恒星脉动 & 移动到渐进巨星支顶端\\
 (thermal pulse) & 红巨星包层物质抛射 ($25\text{\textendash}60\%$恒星质量) & \\
- & 形成行星状星云和高温简并$\mathrm{CO}$核 & \\
+ & 形成行星状星云和高温简并$\symup{CO}$核 & \\
 \cline{1-3}
-白矮星 & 恒星外包层完全抛射，留下高温简并$\mathrm{CO}$核 & 向左下方移动至白矮星区\\
+白矮星 & 恒星外包层完全抛射，留下高温简并$\symup{CO}$核 & 向左下方移动至白矮星区\\
 (white dwarf, WD) & 失去核反应，核心收缩，温度上升，靠简并压支撑 & \\
 \hline
 \end{tabular}
-\label{}
+\label{类太阳恒星的主序后演化过程。}
 \end{table}
 
 行星状星云：低质量恒星在死亡时抛出的气体包层，受到中心高温白矮星的辐射电离而发光。通常为环形，年龄不超过五万年。
 
 \subsubsection{\texorpdfstring{$M>\qty{2}{M_{\odot}}$}{}恒星的主序后演化}
 
-恒星内部的$\ce{H}$燃烧通过$\mathrm{CNO}$循环进行，内部温度更高，辐射压对维持恒星的力学平衡起更大的作用，主序寿命更短。氦核不再简并。更重元素的燃烧可以平稳进行。核心区产生的能量主要以对流的方式向外传递。
+恒星内部的$\ce{H}$燃烧通过$\symup{CNO}$循环进行，内部温度更高，辐射压对维持恒星的力学平衡起更大的作用，主序寿命更短。氦核不再简并。更重元素的燃烧可以平稳进行。核心区产生的能量主要以对流的方式向外传递。
 
 \subsubsection{\texorpdfstring{$M>\qty{5}{M_{\odot}}$}{}恒星的主序后演化}
 
@@ -445,7 +444,7 @@ $\ce{^{26}Al}$只产生于核坍缩超新星爆发，它的半衰期只有$\qty{
 \includegraphics[width=10cm]{figures/figure2_6.png}
 \captionsetup{justification=raggedright, singlelinecheck=false}
 \caption{}
-\label{}
+\label{5M 恒星演化轨迹。}
 \end{figure}
 
 \subsubsection{\texorpdfstring{$M>\qty{8}{M_{\odot}}$}{}恒星的主序后演化}
@@ -472,7 +471,7 @@ $\ce{O}$型星$\to$蓝超巨星$\to$红超巨星$\to$ WR 星$\to$ \uppercase\exp
 
 按谱线有无氢线可将超新星爆发分为\uppercase\expandafter{\romannumeral1}型和\uppercase\expandafter{\romannumeral2}型。但同样是\uppercase\expandafter{\romannumeral1}型超新星，其没有氢线的原因也是不同的。
 
-\uppercase\expandafter{\romannumeral1}a 型超新星源自双星系统中$\mathrm{CO}$白矮星吸积导致热核爆发，因此没有氢氦吸收线，有硅吸收线。爆发光变曲线陡峭，极大星等可达$-19$等。而\uppercase\expandafter{\romannumeral1}b 和\uppercase\expandafter{\romannumeral1}c 型超新星源自 WR 星的核坍缩，其中\uppercase\expandafter{\romannumeral 1}b 没有氢层有氦层，后者氢氦层都被剥离，因此\uppercase\expandafter{\romannumeral 1}b 型有弱氢、强氦吸收线，\uppercase\expandafter{\romannumeral 1}c 型没有氢氦吸收线，有弱硅吸收线。
+\uppercase\expandafter{\romannumeral1}a 型超新星源自双星系统中$\symup{CO}$白矮星吸积导致热核爆发，因此没有氢氦吸收线，有硅吸收线。爆发光变曲线陡峭，极大星等可达$-19$等。而\uppercase\expandafter{\romannumeral1}b 和\uppercase\expandafter{\romannumeral1}c 型超新星源自 WR 星的核坍缩，其中\uppercase\expandafter{\romannumeral 1}b 没有氢层有氦层，后者氢氦层都被剥离，因此\uppercase\expandafter{\romannumeral 1}b 型有弱氢、强氦吸收线，\uppercase\expandafter{\romannumeral 1}c 型没有氢氦吸收线，有弱硅吸收线。
 
 \uppercase\expandafter{\romannumeral2}型超新星爆发源自超巨星的核坍缩。一个主序质量大于$\qty{8}{M_{\odot}}$,演化晚期质量大于$\qty{1.44}{M_{\odot}}$的星体，最后会发生电子俘获反应，让中微子带走大部分能量，核坍缩到中子简并，包层物质下落，引力能转化成动能产生激波反弹，壳层抛射$\alpha$元素（恒星元素合成主要是氦原子和其他原子碰撞，原子序数$+2+2$地增加），有核心和周围行星状星云残留。因为氢包层还存在，因此有氢吸收线，爆发后有一个持续几个月的平台期。\uppercase\expandafter{\romannumeral1}b, \uppercase\expandafter{\romannumeral1}c, \uppercase\expandafter{\romannumeral2}型超新星极大星等可达$-17\sim-16$等。
 
@@ -508,8 +507,8 @@ $\ce{O}$型星$\to$蓝超巨星$\to$红超巨星$\to$ WR 星$\to$ \uppercase\exp
 
 在以双星公共质心为原点的共转坐标系中，任意质点的欧拉方程是：
 \begin{align}
-\frac{\partial{}\boldsymbol{v}}{\partial{}t}&+\left(\boldsymbol{v}\cdot\nabla\right)\boldsymbol{v}=-\nabla\Phi-2\boldsymbol{\omega}\times\boldsymbol{v}-\frac{1}{\rho}\nabla P,\notag\\
-\Phi\left(r\right)&=-\frac{\mathrm{G}M_{1}}{\left\vert{}\boldsymbol{r}-\boldsymbol{r}_{1}\right\vert{}}-\frac{\mathrm{G}M_{2}}{\left\vert{}\boldsymbol{r}-\boldsymbol{r}_{2}\right\vert{}}-\frac{1}{2}\left(\boldsymbol{\omega}\times\boldsymbol{r}\right)^{2}.
+\frac{\partial{}\symbf{v}}{\partial{}t}&+\left(\symbf{v}\cdot\nabla\right)\symbf{v}=-\nabla\Phi-2\symbf{\omega}\times\symbf{v}-\frac{1}{\rho}\nabla P,\notag\\
+\Phi\left(r\right)&=-\frac{\symup{G}M_{1}}{\left\vert{}\symbf{r}-\symbf{r}_{1}\right\vert{}}-\frac{\symup{G}M_{2}}{\left\vert{}\symbf{r}-\symbf{r}_{2}\right\vert{}}-\frac{1}{2}\left(\symbf{\omega}\times\symbf{r}\right)^{2}.
 \end{align}
 
 临界等势面：同时包络两颗子星并且相接于其间一点 (L1) 的等势面。
@@ -562,7 +561,7 @@ $\ce{O}$型星$\to$蓝超巨星$\to$红超巨星$\to$ WR 星$\to$ \uppercase\exp
 核能 & 表面热核反应 & 新星爆发（白矮星）、\uppercase\expandafter{\romannumeral1}型 X 射线爆发（中子星）\\
 \hline
 \end{tabular}
-\label{}
+\label{致密星能源与辐射。}
 \end{table}
 
 
@@ -572,9 +571,9 @@ $\ce{O}$型星$\to$蓝超巨星$\to$红超巨星$\to$ WR 星$\to$ \uppercase\exp
 白矮星基本参数：
 质量$\sim0.2\text{\textendash}\qty{1.3}{M_{\odot}}$, 半径$\sim5\times10^{8}\text{\textendash}\qty{e9}{cm}$, 密度$\sim10^{5}\text{\textendash}\qty{e7}{g\cdot cm^{-3}}$, 绝对星等$M_{\text{V}}\sim8\text{\textendash}16$, 有效温度$\sim5\times10^{3}\text{\textendash}\qty{4e4}{K}$,自转周期$\ge\qty{10}{s}$. 外层包裹着厚度约$\qty{50}{km}$，主要由氢组成的大气。
 
-对于非相对论性 ($v_{{\color{blue}{\ce{e}}}}\ll\mathrm{c}$) 电子，$P_{{\color{blue}{\ce{e}}}}\propto\rho^{\frac{5}{3}}$,对于相对论性电子，$P_{{\color{blue}{\ce{e}}}}\propto\rho^{\frac{4}{3}}$.
+对于非相对论性 ($v_{{\color{blue}{\ce{e}}}}\ll\symup{c}$) 电子，$P_{{\color{blue}{\ce{e}}}}\propto\rho^{\frac{5}{3}}$,对于相对论性电子，$P_{{\color{blue}{\ce{e}}}}\propto\rho^{\frac{4}{3}}$.
 
-随着白矮星质量增大，白矮星质量增大，简并气体运动变成相对论性。此时引力$\dfrac{\mathrm{G}\rho{}M}{R^{2}}\propto{}\dfrac{M^{2}}{R^{5}}$比压力$\dfrac{\mathrm{d}P}{\mathrm{d}R}\propto{}\dfrac{\rho^{\frac{4}{3}}}{R}\propto{}\dfrac{M^{\frac{4}{3}}}{R^{5}}$增长得更快，因此白矮星有质量上限。
+随着白矮星质量增大，白矮星质量增大，简并气体运动变成相对论性。此时引力$\dfrac{\symup{G}\rho{}M}{R^{2}}\propto{}\dfrac{M^{2}}{R^{5}}$比压力$\dfrac{\symup{d}P}{\symup{d}R}\propto{}\dfrac{\rho^{\frac{4}{3}}}{R}\propto{}\dfrac{M^{\frac{4}{3}}}{R^{5}}$增长得更快，因此白矮星有质量上限。
 
 白矮星冷却产生光学、紫外辐射。由于热传导的效率很高，白矮星内部几乎是等温的。
 
@@ -596,7 +595,7 @@ $\ce{O}$型星$\to$蓝超巨星$\to$红超巨星$\to$ WR 星$\to$ \uppercase\exp
 
 中子星的观测表现：内能表现为热辐射。转动动能表现为脉冲星。强引力场表现为 X 射线双星。强磁场表现为强磁星。
 
-中子星质量估计：考虑质子德布罗意波长和普朗克质量$m_{\text{planck}}=\sqrt{\dfrac{\hbar\mathrm{c}}{\mathrm{G}}}$,估计得到半径上限$R_{\max}\sim\dfrac{m_{\text{planck}}}{m_{\ce{p}}}\times\lambda_{n}\sim\qty{10}{km}$, 粒子数上限$N\sim\left(\dfrac{m_{\text{planck}}}{m_{\ce{p}}}\right)^{3}\sim2.2\times10^{57}$, 质量上限$M_{\max}\sim Nm_{\ce{p}}\sim M_{\odot}$,密度上限$\rho_{\max}\sim\dfrac{m_{\ce{p}}}{\lambda_{n}}\sim\qty{e18}{kg\cdot m^{-3}}$.
+中子星质量估计：考虑质子德布罗意波长和普朗克质量$m_{\text{planck}}=\sqrt{\dfrac{\hbar\symup{c}}{\symup{G}}}$,估计得到半径上限$R_{\max}\sim\dfrac{m_{\text{planck}}}{m_{\ce{p}}}\times\lambda_{n}\sim\qty{10}{km}$, 粒子数上限$N\sim\left(\dfrac{m_{\text{planck}}}{m_{\ce{p}}}\right)^{3}\sim2.2\times10^{57}$, 质量上限$M_{\max}\sim Nm_{\ce{p}}\sim M_{\odot}$,密度上限$\rho_{\max}\sim\dfrac{m_{\ce{p}}}{\lambda_{n}}\sim\qty{e18}{kg\cdot m^{-3}}$.
 
 磁星磁场能达到$\qty{1.6e10}{T}$，而人类制造的最大稳定磁场仅有$\qty{45.22}{T}$.
 
@@ -634,7 +633,7 @@ X 射线双星：吸积物质的引力势能转化为动能，进而转化为热
 光层：半径为$1.5R_{\text{s}}$的球面，在光层各向同性辐射光子中的一半可以逃逸
 
 \subsubsection{Kerr}
-对角动量为$J$的黑洞，记$m=\dfrac{\mathrm{G}M}{\mathrm{c}^{2}},a=\dfrac{J}{M\mathrm{c}}$,视界半径为
+对角动量为$J$的黑洞，记$m=\dfrac{\symup{G}M}{\symup{c}^{2}},a=\dfrac{J}{M\symup{c}}$,视界半径为
 \begin{equation}
 r_{\text{h}}=\left(\frac{R_{\text{s}}}{2}\right)\left[m+\sqrt{m^{2}-a^{2}}\right].
 \end{equation}
@@ -646,7 +645,7 @@ r_{\text{st}}=\left(\frac{R_{\text{s}}}2\right)\left[m+\sqrt{m^{2}-a^{2}\cos^{2}
 
 由于引力透镜效应，黑洞阴影的半径为
 \begin{equation}
-R_{\text{shadow}}=\frac{\sqrt{27}\mathrm{G}M}{\mathrm{c}^{2}}.
+R_{\text{shadow}}=\frac{\sqrt{27}\symup{G}M}{\symup{c}^{2}}.
 \end{equation}
 
 广义相对论预言处于转动状态的质量会拖拽周围的时空。黑洞能层内的时空必须同它一起转动。
@@ -655,11 +654,11 @@ R_{\text{shadow}}=\frac{\sqrt{27}\mathrm{G}M}{\mathrm{c}^{2}}.
 
 黑洞视界面的温度：
 \begin{equation}
-kT\sim\frac{h\mathrm{c}}{\lambda}=\frac{h\mathrm{c}}{2\mathrm{G}M/\mathrm{c}^{2}}=\frac{h\mathrm{c}^{3}}{2\mathrm{G}M},
+kT\sim\frac{h\symup{c}}{\lambda}=\frac{h\symup{c}}{2\symup{G}M/\symup{c}^{2}}=\frac{h\symup{c}^{3}}{2\symup{G}M},
 \end{equation}
 根据黑洞能损率推测黑洞寿命
 \begin{equation}
-t=\frac{E}{L}=\frac{M\mathrm{c}^{2}}{4\pi R_{\text{s}}^{2}\sigma T^{4}}\propto{}M^{3}
+t=\frac{E}{L}=\frac{M\symup{c}^{2}}{4\pi R_{\text{s}}^{2}\sigma T^{4}}\propto{}M^{3}
 \end{equation}
 
 $M=\qty{1}{M_{\odot}},T\sim\qty{e-6}{K},t\sim\qty{e67}{yr}$,
@@ -687,5 +686,5 @@ $M=\qty{e15}{g},T\sim\qty{e13}{K},t\sim\qty{e10}{yr}$.因此小黑洞已经蒸�
 \end{equation}
 可借此估计行星温度，其中$a$是反照率。
 
-\printbibliography
+%\printbibliography
 \end{document}

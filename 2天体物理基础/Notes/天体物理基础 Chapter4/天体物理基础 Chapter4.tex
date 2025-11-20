@@ -35,7 +35,7 @@
 \subsubsection{银盘}
 银河系的银盘分为薄盘加厚盘，恒星密度分布满足
 \begin{equation}
-n\left(R,z\right)\propto{}\left(\mathrm{e}^{-\left\vert{}z\right\vert{}/h_{\text{thin}}}+0.02\mathrm{e}^{-\left\vert{}z\right\vert{}/h_{\text{thick}}}\right)\mathrm{e}^{-R/h_{\text{R}}}.
+n\left(R,z\right)\propto{}\left(\symup{e}^{-\left\vert{}z\right\vert{}/h_{\text{thin}}}+0.02\symup{e}^{-\left\vert{}z\right\vert{}/h_{\text{thick}}}\right)\symup{e}^{-R/h_{\text{R}}}.
 \end{equation}
 
 薄盘包含$\qty{6e10}{M_{\odot}}$的恒星和$\qty{0.5e10}{M_{\odot}}$的气体与尘埃，B 波段光度为$\qty{2e10}{L_{\odot}}$,质光比为 3.
@@ -93,7 +93,7 @@ n\left(R,z\right)\propto{}\left(\mathrm{e}^{-\left\vert{}z\right\vert{}/h_{\text
 
 在$R=R_{0}$附近将$\omega-\omega_{0}$泰勒级数展开，
 \begin{equation}
-\omega-\omega_{0}=\left(\frac{\mathrm{d}W}{\mathrm{d}R}\right)_{R_{0}}\left(R-R_{0}\right)+\cdots\approx\frac{1}{R_{0}^{2}}\left[R_{0}\left(\frac{\mathrm{d}V}{\mathrm{d}R}\right)_{R_{0}}-V_{0}0\right]\left(R-R_{0}\right),
+\omega-\omega_{0}=\left(\frac{\symup{d}W}{\symup{d}R}\right)_{R_{0}}\left(R-R_{0}\right)+\cdots\approx\frac{1}{R_{0}^{2}}\left[R_{0}\left(\frac{\symup{d}V}{\symup{d}R}\right)_{R_{0}}-V_{0}0\right]\left(R-R_{0}\right),
 \end{equation}
 对$R\approx R_{0}\gg d,R-R_{0}\approx-d\cos l$有
 \begin{equation}
@@ -101,8 +101,8 @@ V_{\text{r}}=Ad\sin2l,V_{\text{t}}=Ad\cos2l+Bd,
 \end{equation}
 根据太阳附近恒星的视向和切向速度，可以求出奥尔特常数：
 \begin{align}
-A&=\frac{1}{2}\left[\frac{V_{0}}{R_{0}}-\left(\frac{\mathrm{d}V}{\mathrm{d}R}\right)_{R_{0}}\right]\approx\qty{15}{km\cdot{}s^{-1}\cdot kpc^{-1}}.\notag\\
-B&=-\frac{1}{2}\left[\frac{V_{0}}{R_{0}}+\left(\frac{\mathrm{d}V}{\mathrm{d}R}\right)_{R_{0}}\right]\approx\qty{-14}{km\cdot{}s^{-1}\cdot{kpc^{-1}}}.
+A&=\frac{1}{2}\left[\frac{V_{0}}{R_{0}}-\left(\frac{\symup{d}V}{\symup{d}R}\right)_{R_{0}}\right]\approx\qty{15}{km\cdot{}s^{-1}\cdot kpc^{-1}}.\notag\\
+B&=-\frac{1}{2}\left[\frac{V_{0}}{R_{0}}+\left(\frac{\symup{d}V}{\symup{d}R}\right)_{R_{0}}\right]\approx\qty{-14}{km\cdot{}s^{-1}\cdot{kpc^{-1}}}.
 \end{align}
 从而求出太阳绕银心转动角速度$\omega_{0}=A-B=29\pm\qty{1.8}{km\cdot{}s^{-1}\cdot kpc^{-1}}$，转动周期约$\qty{2.2e8}{yr}$,转动速度约$238\pm\qty{15}{km\cdot{}s^{-1}}$.上述数据是本地静止标准速度，太阳相对于该速度还有约$\qty{10}{km\cdot{}s^{-1}}$的本动速度。
 
@@ -110,13 +110,13 @@ B&=-\frac{1}{2}\left[\frac{V_{0}}{R_{0}}+\left(\frac{\mathrm{d}V}{\mathrm{d}R}\r
 
 测量方法：
 
-$R<R_{0}$时测量视线方向上$\ce{H}\,\mathrm{\uppercase\expandafter{\romannumeral1}}$谱线和$\ce{CO}$谱线的最大位移，从而测得最大视向速度，而速度满足$V_{\text{r}}=R\left(\omega-\omega_{0}\right),R=R_{0}\sin l$,进而得到$\omega\left(R\right)$和$V\left(R\right)$.
+$R<R_{0}$时测量视线方向上$\ce{H}\,\symup{\uppercase\expandafter{\romannumeral1}}$谱线和$\ce{CO}$谱线的最大位移，从而测得最大视向速度，而速度满足$V_{\text{r}}=R\left(\omega-\omega_{0}\right),R=R_{0}\sin l$,进而得到$\omega\left(R\right)$和$V\left(R\right)$.
 
-$R>R_{0}$时观察$\ce{H}\,\mathrm{\uppercase\expandafter{\romannumeral2}}$区的发射线、分子云的$\ce{CO}$分子毫米波谱线和 Maser 谱线测定视向速度，利用$V_{\text{r}}=R_{0}\left(\omega-\omega_{0}\right)\sin l$确定$\omega$,利用$\ce{H}\,\mathrm{\uppercase\expandafter{\romannumeral2}}$区内的高温恒星确定距离，进而确定$\omega\left(R\right)$.或者或者利用甚长基线干涉技术测量 Maser 的自行，如果还能确定距离，就能计算$V_{\text{t}}$和$\omega\left(R\right)$.
+$R>R_{0}$时观察$\ce{H}\,\symup{\uppercase\expandafter{\romannumeral2}}$区的发射线、分子云的$\ce{CO}$分子毫米波谱线和 Maser 谱线测定视向速度，利用$V_{\text{r}}=R_{0}\left(\omega-\omega_{0}\right)\sin l$确定$\omega$,利用$\ce{H}\,\symup{\uppercase\expandafter{\romannumeral2}}$区内的高温恒星确定距离，进而确定$\omega\left(R\right)$.或者或者利用甚长基线干涉技术测量 Maser 的自行，如果还能确定距离，就能计算$V_{\text{t}}$和$\omega\left(R\right)$.
 
 最后发现自转曲线内区刚体转动，外区较为平坦。太阳轨道内包含的质量为
 \begin{equation}
-M=\frac{R_{0}V_{0}^{2}}{\mathrm{G}}\sim\qty{e11}{M_{\odot}},
+M=\frac{R_{0}V_{0}^{2}}{\symup{G}}\sim\qty{e11}{M_{\odot}},
 \end{equation}
 银河系可见质量约$\qty{6e10}{M_{\odot}}$.约$\qty{e12}{M_{\odot}}$，最可能的解释是银晕中存在大量的暗物质。
 
@@ -124,13 +124,13 @@ M=\frac{R_{0}V_{0}^{2}}{\mathrm{G}}\sim\qty{e11}{M_{\odot}},
 
 光学观测：
 
-示踪天体：OB 型星，年轻的疏散星团、发射星云和$\ce{H}\,\mathrm{\uppercase\expandafter{\romannumeral2}}$区、经典造父变星
+示踪天体：OB 型星，年轻的疏散星团、发射星云和$\ce{H}\,\symup{\uppercase\expandafter{\romannumeral2}}$区、经典造父变星
 
 限制：星际尘埃消光
 
 射电观测：
 
-示踪天体：$\ce{H}\,\mathrm{\uppercase\expandafter{\romannumeral1}}$区、分子云
+示踪天体：$\ce{H}\,\symup{\uppercase\expandafter{\romannumeral1}}$区、分子云
 
 方法：测量$\qty{21}{cm}$谱线和分子云毫米波谱线的多普勒位移，与银河系自转曲线比较，从而得到距离、甚长基线三角视差法
 
@@ -254,7 +254,7 @@ M33 是本星系群中第三大星系，$M\sim\qty{5e10}{M_{\odot}}$,距离$\sim
 
 可以在位力平衡下根据星系团的大小和成员星系的运动速度可以得到星系团的引力质量：
 \begin{equation}
-M\sim\frac{RV^{2}}{\mathrm{G}}.
+M\sim\frac{RV^{2}}{\symup{G}}.
 \end{equation}
 
 X 射线观测发现星系团中温度达到$\qty{e7}{K}$的热气体，星系团的可见质量不足以束缚这些气体。根据引力透镜现象可以估计星系团的引力质量，发现同样远远超过星系团中所有可见物质质量。
@@ -298,6 +298,6 @@ X 射线观测发现星系团中温度达到$\qty{e7}{K}$的热气体，星系�
 大质量星系中的恒星形成更早、持续时间更短。
 
 
-\printbibliography
+%\printbibliography
 
 \end{document}
