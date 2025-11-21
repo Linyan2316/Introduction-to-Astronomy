@@ -1,4 +1,5 @@
 \documentclass[UTF8, 12pt, a4paper, oneside, onecolumn, fontset=none]{ctexart}
+\usepackage{anyfontsize}
 \usepackage{geometry}
 \geometry{left=1.5cm,right=1.5cm,top=1.8cm,bottom=0.9cm}
 
@@ -17,7 +18,7 @@
 \usepackage[backend=biber,sorting=none]{biblatex}
 \addbibresource{/Users/Linyan/Zotero/MyBibTeX.bib}
 
-\ctexset{section={format=\bfseries \zihao{4}\flushleft}}
+\ctexset{section={format=\bfseries\zihao{4}\flushleft}}
 \renewcommand\thesubsection{\thesection.\arabic{subsection}}
 \numberwithin{equation}{subsection}
 \renewcommand\theequation{\thesubsection.\arabic{equation}}
@@ -28,34 +29,34 @@
 
 \usepackage{listings}
 \lstset{
-     basicstyle=\zihao{-5}\ttfamily,
-     numberstyle=\zihao{-5}\ttfamily,
-     keywordstyle=\color{blue},
-     keywordstyle=[2]\color{teal},
-     stringstyle=\color{magenta},
-     commentstyle=\color{red}\ttfamily,
-     breaklines=true,% 自动换行
-     columns=fixed,% 固定字间距
-     flexiblecolumns,% 别问为什么，加上这个
-     numbers=left,% 行号的位置在左边
-     showspaces=false,% 是否显示空格
-     numberstyle=\zihao{-5}\ttfamily,% 行号的样式，小五号，tt 等宽字体
-     showstringspaces=false,
-     captionpos=t,% 这段代码的名字所呈现的位置，t 指的是 top 上面
-     frame=lrtb,% 显示边框
+      basicstyle      =    \zihao{-5}\ttfamily,
+      numberstyle     =    \zihao{-5}\ttfamily,
+      keywordstyle    =    \color{blue},
+      keywordstyle    =    [2]\color{teal},
+      stringstyle     =    \color{magenta},
+      commentstyle    =    \color{red}\ttfamily,
+      breaklines=true,     % 自动换行
+      columns=fixed,       % 固定字间距
+      flexiblecolumns,     % 别问为什么，加上这个
+      numbers         =    left,% 行号的位置在左边
+      showspaces      =    false,% 是否显示空格
+      numberstyle     =    \zihao{-5}\ttfamily,% 行号的样式，小五号，tt 等宽字体
+      showstringspaces=    false,
+      captionpos      =    t,%这段代码的名字所呈现的位置，t 指的是 top 上面
+      frame           =    lrtb,% 显示边框
 }
 
 \lstdefinestyle{Python}{
-     language=Python,
-     basicstyle=\zihao{-5}\ttfamily,
-     numberstyle=\zihao{-5}\ttfamily,
-     keywordstyle=\color{blue},
-     keywordstyle=[2]\color{teal},
-     stringstyle=\color{magenta},
-     commentstyle=\color{red}\ttfamily,
-     breaklines=true,
-     columns=fixed,
-     basewidth=0.5em,
+      language=Python,     
+      basicstyle      =    \zihao{-5}\ttfamily,
+      numberstyle     =    \zihao{-5}\ttfamily,
+      keywordstyle    =    \color{blue},
+      keywordstyle    =    [2]\color{teal},
+      stringstyle     =    \color{magenta},
+      commentstyle    =    \color{red}\ttfamily,
+      breaklines      =    true,% 自动换行，建议不要写太长的行
+      columns         =    fixed,% 如果不加这一句，字间距就不固定
+      basewidth       =    0.5em,
 }
 
 \title{球面天文}
@@ -424,7 +425,7 @@ A=\left(\alpha_0,\delta_0\right),\sigma=\left(\alpha,\delta\right),\sigma'=\left
 \end{equation}
 直接得到
 \begin{equation}
-\vec{b}-\vec{a}=\vec{S}'-\vec{S}=\frac{2\sin\frac{\symup{d}\theta}{2}}{\sin\theta}\left[\cos\left(\theta+\frac{\symup{d}\theta}{2}\right)\vec{S}-\cos\frac{\symup{d}\theta}{2}\vec{S}_{0}\right].
+\vec{b}-\vec{a}=\vec{S}'-\vec{S}=\frac{2\sin\dfrac{\symup{d}\theta}{2}}{\sin\theta}\left[\cos\left(\theta+\frac{\symup{d}\theta}{2}\right)\vec{S}-\cos\frac{\symup{d}\theta}{2}\vec{S}_{0}\right].
 \end{equation}
 保留到小角的一阶量，上式变为
 \begin{align}
@@ -604,11 +605,11 @@ t_{\odot}=S_{\text{平}}-\alpha_{\odot}=\left(S_{0}-\alpha_{0}\right)+\left(\ome
 \end{equation}
 这个假想的太阳连续两次上中天的时间间隔，叫做一个平太阳日。由于$\omega$和$\omega-\mu$有差别，可见恒星每天比太阳早升起$3\,\unit{m}\,56\,\unit{s}$,等太阳升起时赤经更大的恒星升起，因此恒星时比太阳大$2\,\unit{h/month}$.秋分日春分点子夜上中天，此时平太阳时和恒星时一致。
 
-特别地，我们定义格林尼治地方平太阳时为世界时 UT.由于地球自转速度和地轴指向会变化，UT 也不是均匀时间系统。为了得到均匀秒长，人类采用原子时，原子时的秒长为位于海平面上的铯原子 Cs-38 基态的两个超精细能级在零磁场中跃迁辐射振荡$9192631770$周的时间，原子时起点与世界时一致。为了兼顾原子时与地球自转的世界时，规定协调世界时$\rm UTC$,秒长与原子时一致，但是偶尔会有跳秒。
+特别地，我们定义格林尼治地方平太阳时为世界时 UT.由于地球自转速度和地轴指向会变化，UT 也不是均匀时间系统。为了得到均匀秒长，人类采用原子时，原子时的秒长为位于海平面上的铯原子 Cs-38 基态的两个超精细能级在零磁场中跃迁辐射振荡 9192631770 周的时间，原子时起点与世界时一致。为了兼顾原子时与地球自转的世界时，规定协调世界时$\rm UTC$,秒长与原子时一致，但是偶尔会有跳秒。
 
 除了地球自转外，我们还可根据地球公转进行计时，如历书时 ET、太阳系质心力学时 TDB、地心力学时 TDT 等。显然地球公转涉及到了年的概念。
 
-定义太阳连续两次经过平春分点所需要的时间为一回归年，历书时秒长是回归年长度的 $31556\\925.9747$ 分之一。接下来记$T$为 1900 年 1 月 0.5 日 ET 起算的儒略世纪数。因为春分点在后退，实际上太阳并没有转一整圈，一回归年等于$365^{\unit{d}}.24219878-0^{\unit{d}}.00000614T$.
+定义太阳连续两次经过平春分点所需要的时间为一回归年，历书时秒长是回归年长度的 31556\\925.9747 分之一。接下来记$T$为 1900 年 1 月 0.5 日 ET 起算的儒略世纪数。因为春分点在后退，实际上太阳并没有转一整圈，一回归年等于$365^{\unit{d}}.24219878-0^{\unit{d}}.00000614T$.
 
 定义恒星年为太阳连续两次通过同一遥远背景恒星的时间间隔，恒星年比回归年长一个黄经岁差，一恒星年等于$365^{\unit{d}}.25636042+0^{\unit{d}}.000000111T$.恒星年和回归年的比值为$\dfrac{366.24219878}{365.24219878}$.
 
@@ -811,7 +812,7 @@ n_{i+1}\sin\psi_{i+1}&=n_{i}\sin\chi,\\
 r_{i+1}n_{i+1}\sin\psi_{i+1}&=r_{i}n_{i}\sin\psi_{i}=r_{0}n_{0}\sin z_{\text{obs}},\\
 \tan\psi&=\frac{r_{0}n_{0}\sin z_{\text{obs}}}{\sqrt{r^{2}n^{2}-r_{0}^{2}n_{0}^{2}\sin^{2}z_{\text{obs}}}}.
 \end{align}
-微分$rn\sin\psi=\text{const}$得到
+微分$rn\sin\psi=\symup{const}$得到
 \begin{align}
 &n\sin\psi\symup{d}r+r\sin\psi\symup{d}n+rn\cos\psi\symup{d}\psi=0,\notag\\
 &\symup{d}\psi=-\frac{\tan\psi}{r}\symup{d}r-\frac{\tan\psi}{n}\symup{d}n,\notag\\
@@ -1826,7 +1827,7 @@ V_r\sin b+V_b\cos b
 \end{align}
 球面三角$\Delta{}P\sigma\sigma'$是个小三角形，运用正弦公式发现
 \begin{equation}
-\sin\varphi\cos\delta{}\approx\sin\varphi'\cos\delta{}'=\text{const},
+\sin\varphi\cos\delta{}\approx\sin\varphi'\cos\delta{}'=\symup{const},
 \end{equation}
 因此
 \begin{align}
