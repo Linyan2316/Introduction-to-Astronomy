@@ -1,4 +1,6 @@
+% TeX Live 2025 XeLaTeX
 \documentclass[UTF8, 12pt, a4paper, oneside, onecolumn, fontset=none]{ctexart}
+\usepackage{anyfontsize}
 \usepackage{geometry}
 \geometry{left=1.5cm,right=1.5cm,top=1.8cm,bottom=0.9cm}
 
@@ -9,6 +11,7 @@
 \setmathrm{Latin Modern Math}
 
 \usepackage{amsmath, amsthm, cases, graphicx, subfigure, tikz, caption, subcaption, siunitx, keyval, physics2}
+\DeclareSIUnit\angstrom{Å}
 \usephysicsmodule{ab,ab.braket}
 \usepackage[version=4]{mhchem}
 \usepackage[flushleft]{threeparttable}
@@ -17,7 +20,7 @@
 \usepackage[backend=biber,sorting=none]{biblatex}
 \addbibresource{/Users/Linyan/Zotero/MyBibTeX.bib}
 
-\ctexset{section={format=\bfseries \zihao{4} \flushleft}}
+\ctexset{section={format=\bfseries\zihao{4}\flushleft}}
 \renewcommand\thesubsection{\thesection.\arabic{subsection}}
 \numberwithin{equation}{subsection}
 \renewcommand\theequation{\thesubsection.\arabic{equation}}
@@ -28,34 +31,34 @@
 
 \usepackage{listings}
 \lstset{
-      basicstyle      =    \zihao{-5}\ttfamily,
-      numberstyle     =    \zihao{-5}\ttfamily,
-      keywordstyle    =    \color{blue},
-      keywordstyle    =    [2]\color{teal},
-      stringstyle     =    \color{magenta},
-      commentstyle    =    \color{red}\ttfamily,
-      breaklines=true,     % 自动换行
-      columns=fixed,       % 固定字间距
-      flexiblecolumns,     % 别问为什么，加上这个
-      numbers         =    left,% 行号的位置在左边
-      showspaces      =    false,% 是否显示空格
-      numberstyle     =    \zihao{-5}\ttfamily,% 行号的样式，小五号，tt 等宽字体
-      showstringspaces=    false,
-      captionpos      =    t,%这段代码的名字所呈现的位置，t 指的是 top 上面
-      frame           =    lrtb,% 显示边框
+       basicstyle      =    \zihao{-5}\ttfamily,
+       numberstyle     =    \zihao{-5}\ttfamily,
+       keywordstyle    =    \color{blue},
+       keywordstyle    =    [2]\color{teal},
+       stringstyle     =    \color{magenta},
+       commentstyle    =    \color{red}\ttfamily,
+       breaklines=true,     % 自动换行
+       columns=fixed,       % 固定字间距
+       flexiblecolumns,     % 别问为什么，加上这个
+       numbers         =    left,% 行号的位置在左边
+       showspaces      =    false,% 是否显示空格
+       numberstyle     =    \zihao{-5}\ttfamily,% 行号的样式，小五号，tt 等宽字体
+       showstringspaces=    false,
+       captionpos      =    t,%这段代码的名字所呈现的位置，t 指的是 top 上面
+       frame           =    lrtb,% 显示边框
 }
 
 \lstdefinestyle{Python}{
-      language=Python,     
-      basicstyle      =    \zihao{-5}\ttfamily,
-      numberstyle     =    \zihao{-5}\ttfamily,
-      keywordstyle    =    \color{blue},
-      keywordstyle    =    [2] \color{teal},
-      stringstyle     =    \color{magenta},
-      commentstyle    =    \color{red}\ttfamily,
-      breaklines      =    true,   % 自动换行，建议不要写太长的行
-      columns         =    fixed,  % 如果不加这一句，字间距就不固定
-      basewidth       =    0.5em,
+       language=Python,     
+       basicstyle      =    \zihao{-5}\ttfamily,
+       numberstyle     =    \zihao{-5}\ttfamily,
+       keywordstyle    =    \color{blue},
+       keywordstyle    =    [2]\color{teal},
+       stringstyle     =    \color{magenta},
+       commentstyle    =    \color{red}\ttfamily,
+       breaklines      =    true,% 自动换行，建议不要写太长的行
+       columns         =    fixed,% 如果不加这一句，字间距就不固定
+       basewidth       =    0.5em,
 }
 
 \title{实测天体物理}
@@ -152,6 +155,8 @@
 研究（特殊条件下的）恒星演化
 
 研究物质交流和吸积过程
+
+$\,\unit{\angstrom}$
 
 利用开普勒第三定律
 \begin{equation}
