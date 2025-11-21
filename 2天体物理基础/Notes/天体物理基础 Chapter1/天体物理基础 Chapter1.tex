@@ -34,7 +34,7 @@ m_{1}-m_{2}=-2.5\log_{10}\left(\frac{F_{1}}{F_{2}}\right).\label{1.1.3}
 \begin{equation}
 \symup{d}E_{\nu}=I_{\nu}\cos\theta\symup{d}A\symup{d}t\symup{d}\Omega\symup{d}\nu.
 \end{equation}
-此处解释一下立体角。我们知道球面面元面积可以用经角$\varphi$和纬角$90^{\circ}-\theta$描述：
+此处解释一下立体角。我们知道球面面元面积可以用经角$\varphi$和纬角$\ang{90;;}-\theta$描述：
 \begin{equation}
 \symup{d}A=r\symup{d}\theta\cdot r\sin\theta\symup{d}\varphi,
 \end{equation}
@@ -43,7 +43,7 @@ m_{1}-m_{2}=-2.5\log_{10}\left(\frac{F_{1}}{F_{2}}\right).\label{1.1.3}
 \symup{d}\Omega&=\frac{\symup{d}A}{r^{2}}=\sin\theta\symup{d}\theta\symup{d}\varphi,\\
 \Omega&=\int\symup{d}\Omega=\int_{0}^{2\pi}\symup{d}\varphi\int_{0}^{\pi}\sin\theta\symup{d}\theta=4\pi.
 \end{align}
-即整个球面的立体角为$4\pi$,考虑到弧度制与角度制的转换$180^{\circ}=\pi$,全天立体角大约为$4\pi\times\left(\dfrac{180^{\circ}}{\pi}\right)^{2}\approx41252.96$平方度。目前最强的望远镜分辨率可以达到毫角秒 ($\unit{mas}$) 甚至微角秒 ($\unit{\mu as}$),可见我们能分辨出的恒星确实是一个天文数字！
+即整个球面的立体角为$4\pi$,考虑到弧度制与角度制的转换$\ang{180;;}=\pi$,全天立体角大约为$4\pi\times\left(\dfrac{\ang{180;;}}{\pi}\right)^{2}\approx41252.96$平方度。目前最强的望远镜分辨率可以达到毫角秒 ($\unit{mas}$) 甚至微角秒 ($\unit{\mu as}$),可见我们能分辨出的恒星确实是一个天文数字！
 
 \begin{figure}[!htp]
 \centering
@@ -168,7 +168,7 @@ I_{\nu}=B_{\nu}\left(T\right)=\frac{2h\nu^{3}}{\symup{c}^{2}}\frac{1}{\symup{e}^
 \begin{equation}
 T=\frac{\qty{7300}{K}}{\symup{B-V}+0.6},T=\frac{\qty{7090}{K}}{\symup{B-V}+0.71},T=\frac{\qty{8450}{K}}{\symup{B-V}+0.865},
 \end{equation}
-其中 B, V 指代 B 波段和 V 波段测得的星等，一些常见波段如表\ref{常用滤光片波段。}所示。另一方面则会体现在峰值频率的移动，通过对以波长（而非频率）和温度为自变量的黑体辐射公式求导容易得出
+其中 $\symup{B,V}$ 指代 B 波段和 V 波段测得的星等，一些常见波段如表\ref{常用滤光片波段。}所示。另一方面则会体现在峰值频率的移动，通过对以波长（而非频率）和温度为自变量的黑体辐射公式求导容易得出
 \begin{equation}
 \lambda_{\max}T=\qty{2.9e6}{nm\cdot K},
 \end{equation}
@@ -176,7 +176,7 @@ T=\frac{\qty{7300}{K}}{\symup{B-V}+0.6},T=\frac{\qty{7090}{K}}{\symup{B-V}+0.71}
 
 \begin{figure}[!htbp]
 \centering
-\includegraphics[width=10cm]{figures/figure1_1.png}
+\includegraphics[width=8cm]{figures/figure1_1.png}
 \captionsetup{justification=raggedright, singlelinecheck=false}
 \caption{黑体辐射峰值随温度的变化。}
 \label{黑体辐射峰值随温度的变化。}
@@ -201,7 +201,7 @@ $\Delta{}\lambda\left(\unit{\angstrom}\right)$ & $680$ & $980$ & $890$ & $2200$ 
 
 我们注意到表\ref{常用滤光片波段。}中有一栏为$\Delta{}\lambda$,这个量又是如何定义的？首先对于滤光片，我们用带通 (Bandpass) 表征波长$\lambda$处透过光的比例，取值范围$0\le T_{\text{BP}}(\lambda)\le 1$,光可以完全透过滤光片时$T_{\text{BP}}$取 1. $\Delta\lambda$为滤光片带宽，是$T_{\text{BP}}=0.5$所对应的两个波长的差值。习惯上用宽带 ($\Delta\lambda>\qty{30}{nm}$) 滤光片进行暗弱天体测光，或者粗略测量辐射的频率分布（连续谱），用窄带 ($\Delta\lambda<\qty{10}{nm}$) 滤光片测量吸收和发射谱线轮廓，中带滤光片带宽则介于二者之间。
 
-采用不同的滤光片组合我们可以得到不同的测光系统。所谓测光，就是用辐射探测器配合望远镜测定天体的亮度。常用的有 UBVRI（紫外、蓝、可见、红、红外）五色测光系统，$m_{\text{pg}},m_{\text{pv}}$二色测光系统，uvby 四色测光系统等。我们简单介绍一下后面两者吧。在各种光电器件（使用光电效应测光的器件）还没发明的时候，人类使用照相底片拍摄天区，于是有了照相星等$m_{\text{pg}}$；另一方面则使用正色片前加黄滤光片测光得到仿视星等$m_{\text{pv}}$（类似目视星等），如此以来便得到最初的色指数。uvby 四色系统波段则如表\ref{uvby 四色测光滤光片波段。}所示。我们发现 uvby 的带宽较 UVBRI 测光系统更窄一点，主要用来测吸收线。uvby 主要使用三个参数进行分析。首先$\text{b}-\text{y}$与$\text{B}-\text{V}$相当，只与恒星温度有关。接着是$C_{1}=\left(\text{u}-\text{v}\right)-\left(\text{v}-\text{b}\right)$,与 Balmer Break（我们后续会解释这是什么）有关。最后是$m_{1}=\left(\text{v}-\text{b}\right)-\left(\text{b}-\text{y}\right)$,与恒星金属丰度有关。
+采用不同的滤光片组合我们可以得到不同的测光系统。所谓测光，就是用辐射探测器配合望远镜测定天体的亮度。常用的有 UBVRI（紫外、蓝、可见、红、红外）五色测光系统，$m_{\text{pg}},m_{\text{pv}}$二色测光系统，uvby 四色测光系统等。我们简单介绍一下后面两者吧。在各种光电器件（使用光电效应测光的器件）还没发明的时候，人类使用照相底片拍摄天区，于是有了照相星等$m_{\text{pg}}$；另一方面则使用正色片前加黄滤光片测光得到仿视星等$m_{\text{pv}}$（类似目视星等），如此以来便得到最初的色指数。uvby 四色系统波段则如表\ref{uvby 四色测光滤光片波段。}所示。我们发现 uvby 的带宽较 UVBRI 测光系统更窄一点，主要用来测吸收线。uvby 主要使用三个参数进行分析。首先$\symup{b}-\symup{y}$与$\symup{B}-\symup{V}$相当，只与恒星温度有关。接着是$C_{1}=\left(\symup{u}-\symup{v}\right)-\left(\symup{v}-\symup{b}\right)$,与 Balmer Break（我们后续会解释这是什么）有关。最后是$m_{1}=\left(\symup{v}-\symup{b}\right)-\left(\symup{b}-\symup{y}\right)$,与恒星金属丰度有关。
 
 \begin{table}[htbp]
 \centering
@@ -210,9 +210,9 @@ $\Delta{}\lambda\left(\unit{\angstrom}\right)$ & $680$ & $980$ & $890$ & $2200$ 
 \hline
  & u & v & b & y\\
 \cline{1-5}
-$\lambda\left(\unit{\angstrom}\right)$ & 3500 & 4100 & 4670 & 5470\\
+$\lambda\left(\unit{\angstrom}\right)$ & $3500$ & $4100$ & $4670$ & $5470$\\
 \cline{1-5}
-$\Delta{}\lambda\left(\unit{\angstrom}\right)$ & 300 & 190 & 180 & 230\\
+$\Delta{}\lambda\left(\unit{\angstrom}\right)$ & $300$ & $190$ & $180$ & $230$\\
 \cline{1-5}
 \end{tabular}
 \label{uvby 四色测光滤光片波段。}
@@ -220,7 +220,7 @@ $\Delta{}\lambda\left(\unit{\angstrom}\right)$ & 300 & 190 & 180 & 230\\
 
 最后我们来定义星等系统的零点。有两种常用的方式：
 
-- Vega Magnitude System: 织女星在所有滤光片中的视星等（注意，不是绝对星等）为 0.织女星不同波段的亮度肯定是不同的，因此不同波段相同星等所对应的亮度也是不同的。如果一颗恒星 V 波段星等是$5.4$等，B 波段星等是$4.2$,并不一定意味着 B 波段流量更高。
+- Vega Magnitude System: 织女星在所有滤光片中的视星等（不是绝对星等）为 0.织女星不同波段的亮度肯定是不同的，因此不同波段相同星等所对应的亮度也是不同的。如果一颗恒星 V 波段星等是 5.4 等，B 波段星等是 4.2 等，并不一定意味着 B 波段流量更高。
 
 - AB Magnitude System: 早期用 Vega 星等是因为观测中用标准星定标比较方便和准确，但后来观测精度提高，织女星流量测得更加准确，零点就发生了漂移。同时观测波段也有拓展，紫外红外波段没有合适的标准星，于是不如将各个波段所使用的流量零点统一，取流量零点为常数$\langle F_{\text{V},m=0}\rangle=\qty{3631e-23}{erg\cdot{}s^{-1}\cdot cm^{-2}\cdot Hz^{-1}}$.这个值的来源是织女星在 V 波段的流量。注意，$\langle{}F_{\text{V},m=0}\rangle$量纲最后一项是$\unit{Hz^{-1}}$,我们认为单位频率间隔和单位波长间隔满足
 \begin{align}
@@ -235,11 +235,11 @@ F_{\lambda}=F_{\nu}\left\vert{}\frac{\symup{d}\nu}{\symup{d}\lambda}\right\vert{
 
 而 AB 星等则定义为
 \begin{align}
-m_{\text{BP}}&=-2.5\log_{10}(\frac{\langle F_{\text{BP}}\rangle}{\langle F_{\text{V},m=0}\rangle}),\\
-\langle F_{\text{BP}}\rangle&=\frac{\int T_{\text{BP}}(\lambda)F_{\text{obj}}(\lambda)\symup{d}\lambda}{\int T_{\text{BP}}(\lambda)\symup{d}\lambda}.
+m_{\text{BP}}&=-2.5\log_{10}\left(\frac{\langle F_{\text{BP}}\rangle}{\langle F_{\text{V},m=0}\rangle}\right),\\
+\langle F_{\text{BP}}\rangle&=\frac{\int T_{\text{BP}}\left(\lambda\right)F_{\text{obj}}\left(\lambda\right)\symup{d}\lambda}{\int T_{\text{BP}}\left(\lambda\right)\symup{d}\lambda}.
 \end{align}
 
-滤光片测得的光度（去除距离因素后）都是某一波段内的光度，如果对全波段积分就得到了天体的总光度（或称热光度）。前文给出的$L_{\odot}$就是太阳的总光度。总光度对应的星等被称作热星等。热星等自然也是一种绝对星等。按照定义，总光度观测要求得到天体在整个电磁波段的辐射，但实际观测中，大气吸收使我们在地面上只能观测到光学、近红外、射电波段的信号，同时强度也有所减弱，全波段测量困难。因此没法通过观测确定天体的热星等。常见方法是在$M_{\text{V}}$加上一个改正值（热改正）得到“真实”的热星等。热星等也需要流量零点，定标方法为将太阳热星等定作$M_{\text{bol},\odot}=4.76$,对应的热改正$\text{BC}_{\odot}=M_{\text{V},\odot}-M_{\text{bol},\odot}=0.07$.一般来讲较热和较冷的恒星热改正大（辐射集中在 V 波段两侧），中间区间的恒星热改正小（辐射本就集中在 V 波段）。
+滤光片测得的光度（去除距离因素后）都是某一波段内的光度，如果对全波段积分就得到了天体的总光度（或称热光度）。前文给出的$L_{\odot}$就是太阳的总光度。总光度对应的星等被称作热星等。热星等自然也是一种绝对星等。按照定义，总光度观测要求得到天体在整个电磁波段的辐射，但实际观测中，大气吸收使我们在地面上只能观测到光学、近红外、射电波段的信号，同时强度也有所减弱，全波段测量困难。因此没法通过观测确定天体的热星等。常见方法是在$M_{\text{V}}$加上一个改正值（热改正）得到“真实”的热星等。热星等也需要流量零点，定标方法为将太阳热星等定作$M_{\text{bol},\odot}=4.76$,对应的热改正$\symup{BC}_{\odot}=M_{\text{V},\odot}-M_{\text{bol},\odot}=0.07$.一般来讲较热和较冷的恒星热改正大（辐射集中在 V 波段两侧），中间区间的恒星热改正小（辐射本就集中在 V 波段）。
 
 \subsubsection{描述辐射场的其他物理量}
 本小节我们将通过辐射强度构建一些描述辐射场的物理量。
@@ -339,7 +339,7 @@ I_{\nu}\left(\vec{r}+\symup{d}\vec{r},t+\symup{d}t\right)&=I_\nu\left(\vec r,t\r
 \end{equation}
 洛伦兹变换下，$t,I_{_{\nu}},j_{\nu},\alpha_{\nu}$等都可能发生变化，我们并不确定换系后辐射转移方程是否还成立，因此要逐个分析各个物理量的变化。
 
-首先确定频率、辐射方向随参考系变换的变化。依旧遵循惯例，在$x\text{\textendash}y\text{\textendash}z$直角坐标系中取经角$\varphi$,纬角$90^{\circ}-\theta$,光子运动方向为
+首先确定频率、辐射方向随参考系变换的变化。依旧遵循惯例，在$x\text{\textendash}y\text{\textendash}z$直角坐标系中取经角$\varphi$,纬角$\ang{90;;}-\theta$,光子运动方向为
 \begin{equation}
 \left(n_x,n_y,n_z\right)=\left(\cos\varphi\sin\theta,\sin\varphi\sin\theta,\cos\theta\right).
 \end{equation}
@@ -457,15 +457,15 @@ n_x,n_y,n_z,i
 \subsubsection{基本原理}
 \begin{figure}[!htbp]
 \centering
-\includegraphics[width=10cm]{figures/figure1_2.png}
+\includegraphics[width=9cm]{figures/figure1_2.png}
 \captionsetup{justification=raggedright, singlelinecheck=false}
 \caption{电磁波的电矢量。}
 \label{电磁波的电矢量。}
 \end{figure}
 
-我们知道电磁场的电矢量位于垂直于传播方向的平面上，它的指向可以取该平面内的任意一个方向。如果一束光内的电矢量振动方向都沿着某个确定的方向，不随时间变化，它被称作线偏振光。
+我们知道电磁场的电矢量位于垂直于传播方向的平面上，其指向可以取该平面内的任意一个方向。如果一束光的电矢量都沿着某个确定的方向振动，不随时间变化，它就被称作线偏振光。
 
-那么，如果一束光由两束电矢量振动方向不同的线偏振光叠加会发生什么呢？有这么一种可能，两束光的相位有所差异，一束光电矢量最大时另一束最小，反之亦然，因此合成出的电矢量指向会发生变化。因为电矢量的振动是简谐运动，合成后的电矢量会以某个确定的角速度旋转。按旋转方向可以将其分为左旋偏振光和右旋偏振光。
+那么，如果一束光由两束电矢量振动方向不同的线偏振光叠加而成会发生什么呢？有这么一种可能，两束光的相位有所差异，一束光电矢量最大时另一束最小，反之亦然，因此合成出的电矢量指向会发生变化。因为电矢量的振动是简谐运动，合成后的电矢量会以某个确定的角速度旋转。按旋转方向可以将其分为左旋偏振光和右旋偏振光。
 \begin{figure}[!htbp]
 \centering
 \includegraphics[width=17cm]{figures/figure1_3.png}
@@ -476,7 +476,7 @@ n_x,n_y,n_z,i
 
 介绍一下如何判断左旋和右旋。如图$\ref{右旋偏振光示意图。}$所示，光朝$z$轴正方向传播，传播路径上放置一个$x\text{\textendash}y$平面。以右旋偏振光为例，随着光线向前推进，电矢量在$x\text{\textendash}y$平面上顺时针转动，右手四指沿着转动方向绕转，大拇指指向传播方向，故称其为右旋。
 
-我们容易发现，如果两束线偏振光振幅相同，相位刚好相差$90^{\circ}$,那么电矢量末端在$x\text{\textendash}y$平面上一定时间内绘制出的轨迹恰好是一个圆，并且旋转角速度固定。称为圆偏振光。而如果振幅不同，或者相位差取其他值，则会绘制出一个椭圆，称为椭圆偏振光。
+我们容易发现，如果两束线偏振光振幅相同，相位刚好相差$\ang{90;;}$,那么电矢量末端在$x\text{\textendash}y$平面上一定时间内绘制出的轨迹恰好是一个圆，并且旋转角速度固定。称为圆偏振光。而如果振幅不同，或者相位差取其他值，则会绘制出一个椭圆，称为椭圆偏振光。
 
 自然界中的辐射肯定不是单纯的两束线偏振光的集合。如太阳辐射到地球的自然光，电矢量在各个方向振动几率相等、平均振幅相等，称其为非偏振光。有时，电矢量在某个方向上占优，与之垂直的方向上强度最小，可看作是非偏振光和偏振光的叠加，称其为部分偏振光。实际观测中大部分电磁辐射都是部分偏振光。
 
@@ -568,7 +568,7 @@ V&=2\xi_l^{\left(0\right)}\xi_r^{\left(0\right)}\sin\left(\varepsilon_l-\varepsi
 I&=\overline{\left[\xi_l^{\left(0\right)}\right]^2}+\overline{\left[\xi_r^{\left(0\right)}\right]^2},Q=\overline{\left[\xi_l^{\left(0\right)}\right]^2}-\overline{\left[\xi_r^{\left(0\right)}\right]^2},\notag\\
 U&=2\overline{\left[\xi_l^{\left(0\right)}\xi_r^{\left(0\right)}\right]}\cos\delta,V=2\overline{\left[\xi_l^{\left(0\right)}\xi_r^{\left(0\right)}\right]}\sin\delta.\notag
 \end{align}
-那么它们有什么物理意义呢？观察$I$的表达式我们发现，它是$l,r$两个方向的电矢量强度平方和，其实就表征了光强。而$Q$则表示了两个方向线偏振强度之差，可记作$I\left(0^{\circ}\right)-I\left(90^{\circ}\right)$.同理$U=I\left(45^{\circ}\right)-I\left(135^{\circ}\right)$,可以在观测平面上沿$45^{\circ}$和$135^{\circ}$摆放偏振片测量该参数。而$V=I\left(\text{RCP}\right)-I\left(\text{LCP}\right)$,表示右旋圆偏振成分减去左旋圆偏振成分。如果它为$0$,自然就是线偏振光了。同理，如果$Q=U=0$,该偏振就是圆偏振。
+那么它们有什么物理意义呢？观察$I$的表达式我们发现，它是$l,r$两个方向的电矢量强度平方和，其实就表征了光强。而$Q$则表示了两个方向线偏振强度之差，可记作$I\left(\ang{0;;}\right)-I\left(\ang{90;;}\right)$.同理$U=I\left(\ang{45;;}\right)-I\left(\ang{135;;}\right)$,可以在观测平面上沿$\ang{45;;}$和$\ang{135;;}$摆放偏振片测量该参数。而$V=I\left(\text{RCP}\right)-I\left(\text{LCP}\right)$,表示右旋圆偏振成分减去左旋圆偏振成分。如果它为 0，自然就是线偏振光了。同理，如果$Q=U=0$,该偏振就是圆偏振。
 
 注意到，对于椭圆偏振光满足
 \begin{equation}
@@ -589,17 +589,15 @@ I_{\varphi+\frac\pi2}&=I_l\sin^2\varphi+I_r\cos^2\varphi-\frac12U\sin2\varphi,
 \end{align}
 
 最终可以表示为
-\begin{equation}
-L(\varphi)=\begin{pmatrix}
+\begin{align}
+L(\varphi)&=\begin{pmatrix}
 \cos^2\varphi &\sin^2\varphi &\dfrac12\sin2\varphi & 0\\
 \sin^2\varphi &\cos^2\varphi & -\dfrac12\sin2\varphi & 0\\
 -\sin2\varphi &\sin2\varphi &\cos2\varphi & 0\\
 0 & 0 & 0 & 1
-\end{pmatrix},
-\end{equation}
-\begin{equation}
-\symbf{I}'=L\left(\varphi\right)\symbf{I}.
-\end{equation}
+\end{pmatrix},\\
+\symbf{I}'&=L\left(\varphi\right)\symbf{I}.
+\end{align}
 
 \subsubsection{实际观测中的瞬时强度}
 实际观测的辐射并不是完全偏振光，因此$\dfrac{\xi_l^{\left(0\right)}}{\xi_r^{\left(0\right)}},\delta=\varepsilon_l-\varepsilon_r$也不恒定，同样要用平均量表示
@@ -679,7 +677,6 @@ R=\frac{{\color{blue}{\ce{e}}}^{3}}{2\pi m^{2}\symup{c}^{4}}\int_{0}^{r}N_{{\col
 \end{equation}
 距离取$\unit{pc}$,电子数密度$\unit{cm^{-3}}$,磁场取$\unit{\mu G}$时，$R=0.81\int_{0}^{r}nB\cos\theta\symup{d}r$.可见通过测量不同频率线偏振波偏振面的旋转角度可以确定$R$的值。
 
-\newpage
 下一个问题是，$R$中电子数密度和磁场是耦合在一起的，能不能将它们区分开呢？答案是可以的，要用到本小节开头提及的相速度。无磁场等离子体中射电波的相速度为
 \begin{equation}
 v_{\text{p}}=\frac{\omega}{k}=\frac{\symup{c}}{n}=\frac{\symup{c}}{\sqrt{1-\dfrac{\omega_{\text{p}}^{2}}{\omega^{2}}}},
@@ -706,6 +703,7 @@ D=\int_{0}^{r}n\symup{d}r.
 \end{equation}
 实际观测中，脉冲星和活动星系核 (Active Galactic Nuclei, AGN, 指星系中心正在吸积物质的超大质量黑洞) 可以产生强烈的射电偏振信号，可用来测量银河系磁场。其辐射机制我们将在下节阐述。
 
+\newpage
 \subsection{光谱和辐射机制}
 \begin{table}[!htbp]
 \centering
@@ -755,7 +753,7 @@ S_{\nu}=B_{\nu}\left(T\right).
 \begin{equation}
 \frac{N_{r,k}}{N_{r,i}}=\frac{g_{r,k}}{g_{r,i}}\symup{e}^{-\frac{\varepsilon_{r,k}-\varepsilon_{r,i}}{k_{\text{B}}T}},\label{1.3.2}
 \end{equation}
-$r$表示该原子已经被电离了$r$个电子，表征电离级；$k,i$是第$r+1$个电子所处的能级，表征激发态，基态时$k=1$, $g$是统计权重；$\varepsilon$是从基态电离到该能级所需要的能量；$k_{\text{B}}$是玻尔兹曼常数。根据上式，热平衡状态时高能级原子数小于低能级原子数。但如果有某种外界能量输入使高能级原子数大于低能级原子数（称其为布居反转 (population invertion)），那么此时体系的“温度”小于$0$,称作负温度。负温度只是形式上的温度，此时系统并不处于热平衡状态。
+$r$表示该原子已经被电离了$r$个电子，表征电离级；$k,i$是第$r+1$个电子所处的能级，表征激发态，基态时$k=1$, $g$是统计权重；$\varepsilon$是从基态电离到该能级所需要的能量；$k_{\text{B}}$是玻尔兹曼常数。根据上式，热平衡状态时高能级原子数小于低能级原子数。但如果有某种外界能量输入使高能级原子数大于低能级原子数（称其为布居反转 (population invertion)），那么此时体系的“温度”小于 0，称作负温度。负温度只是形式上的温度，此时系统并不处于热平衡状态。
 
 根据 (\ref{1.3.2}) 式，同一电离级原子总数为
 \begin{equation}
@@ -787,12 +785,12 @@ N_k(A_{ki}+B_{ki}I_\nu)=N_iB_{ik}I_\nu.
 同时粒子数分布满足玻尔兹曼公式，得到
 \begin{align}
 A_{ki}+B_{ki}I_\nu&=\frac{g_i}{g_k}\symup{e}^{-\frac{\varepsilon_i-\varepsilon_k}{k_{\text{B}}T}}B_{ik}I_\nu,\\
-I_\nu&=\frac{\frac{A_{ki}}{B_{ki}}}{\frac{g_iB_{ik}}{g_kB_{ki}}\symup{e}^\frac{h\nu_{ki}}{k_{\text{B}}T}-1}.
+I_{\nu}&=\frac{\dfrac{A_{ki}}{B_{ki}}}{\dfrac{g_{i}B_{ik}}{g_{k}B_{ki}}\symup{e}^\frac{h\nu_{ki}}{k_{\text{B}}T}-1}.
 \end{align}
 前文提到热动平衡下辐射强度等于$B_\nu(T)$,对比形式得到
 \begin{align}
-g_iB_{ik}&=g_kB_{ki},\\
-A_{ki}&=\frac{2h\nu_{ki}^3}{\symup{c}^{2}}B_{ki}.
+g_{i}B_{ik}&=g_{k}B_{ki},\\
+A_{ki}&=\frac{2h\nu_{ki}^{3}}{\symup{c}^{2}}B_{ki}.
 \end{align}
 
 因为受激发射和受激吸收都涉及到辐射场，一般将二者合在一起考虑。如图\ref{三种光谱。}所示，线谱一般并非一条无限细的线，而是有一定的轮廓。定义自发发射轮廓$\psi_\nu$,受激吸收和受激发射轮廓$\varphi_\nu$.物质发射系数可记作
@@ -805,9 +803,8 @@ j_\nu=\frac{h\nu}{4\pi}A_{ki}N_k\psi_\nu,
 \end{equation}
 源函数
 \begin{equation}
-S_\nu=\frac{j_\nu}{\alpha_\nu}=\frac{A_{ki}}{B_{ki}}\frac{1}{\frac{g_k}{g_i}\frac{N_i}{N_k}-1}\frac{\psi_\nu}{\varphi
-_\nu}=\frac{2h\nu^3}{\symup{c}^{2}}\frac{1}{\frac{g_k}{g_i}\frac{N_i}{N_k}-1}\frac{\psi_\nu}{\varphi
-_\nu}.
+S_\nu=\frac{j_\nu}{\alpha_\nu}=\frac{A_{ki}}{B_{ki}}\frac{1}{\dfrac{g_{k}}{g_{i}}\dfrac{N_{i}}{N_{k}}-1}\frac{\psi_\nu}{\varphi
+_\nu}=\frac{2h\nu^3}{\symup{c}^{2}}\frac{1}{\dfrac{g_{k}}{g_{i}}\dfrac{N_{i}}{N_{k}}-1}\frac{\psi_{\nu}}{\varphi_{\nu}}.
 \end{equation}
 即当$\psi_\nu=\varphi_\nu$,且原子分布满足玻尔兹曼分布时，源函数才转化为普朗克函数。
 
@@ -824,7 +821,7 @@ _\nu}.
 一般情况下原子数目按能级分布会偏离玻尔兹曼分布：
 \begin{align}
 \frac{N_k}{N_i}&=\frac{b_k}{b_i}\frac{g_k}{g_i}\symup{e}^{-\frac{\varepsilon_i-\varepsilon_k}{k_{\text{B}}T}},\\
-S_\nu&=\frac{2h\nu^3}{\symup{c}^{2}}\frac{1}{\frac{b_i}{b_k}\symup{e}^{\frac{h\nu}{k_{\text{B}}T}}-1}\frac{\psi_\nu}{\varphi_\nu}.
+S_\nu&=\frac{2h\nu^3}{\symup{c}^{2}}\frac{1}{\dfrac{b_{i}}{b_{k}}\symup{e}^{\frac{h\nu}{k_{\text{B}}T}}-1}\frac{\psi_\nu}{\varphi_\nu}.
 \end{align}
 
 观察 (\ref{1.3.14}) 式发现，如果$B_{ik}N_{i}<B_{ki}N_{k}$,那么吸收系数为负，相当于辐射沿着路径不断增强。此时高能级粒子跃迁到低能级时，释放的辐射被邻近粒子吸收，邻近粒子受激辐射，短时间内连续发生向低能级迁移，整体将形成强有力的放射。当放射波长为可见光到红外波段时称为激光 (Laser),射电的情形则称为微波受激辐射放大 (Microwave Amplification by Stimulated Emission of Radiation, Maser),又称脉泽。
@@ -933,9 +930,9 @@ S_{\nu}\left(t_{\nu}\right)=S_{0}+S_{1}t_{\nu},
 \begin{equation}
 I_\nu(\theta,0)=S_{0}+S_{1}\cos\theta.
 \end{equation}
-观察这个结果我们发现，观测量实际上为$\tau_{\nu}=\cos\theta$处的源函数。而光实际上走过的光深为$\tau_{\nu}\sec\theta$,因此我们所见的恒星其实是光深为$1$处的恒星。也正因如此，光深为$1$在天文研究中是个有意义的参量。我们所见到的天体的“表面”都可以看作是光深为$1$处的表面。
+观察这个结果我们发现，观测量实际上为$\tau_{\nu}=\cos\theta$处的源函数。而光实际上走过的光深为$\tau_{\nu}\sec\theta$,因此我们所见的恒星其实是光深为 1 处的恒星。也正因如此，光深为 1 在天文研究中是个有意义的参量。我们所见到的天体的“表面”都可以看作是光深为 1 处的表面。
 
-值得注意的是，恒星不同元素含量不同，原子能级结构也不同，因此对不同的单色辐射来讲，相同半径处$\alpha_{\nu}$也不同。换句话讲，即使光深都为$1$,随频率变化所对应的半径也是不同的，因此恒星圆面一小部分区域的黑体谱也是不同半径处黑体谱的拼接。可能在 B 波段所“采用”的是$r_{1}$的一段黑体谱，在 V 波段是$r_{2}$处的一段黑体谱。因此“恒星光谱近似黑体光谱”还有这层含义。在不同滤光片中所见到的恒星可如图\ref{不同波段所见到的光深为 1 处的恒星。}蓝色和红色线条所示。不过实际多半不会这么圆滑，取决于$\alpha_{\nu}$和半径的具体关系。
+值得注意的是，恒星不同元素含量不同，原子能级结构也不同，因此对不同的单色辐射来讲，相同半径处$\alpha_{\nu}$也不同。换句话讲，即使光深都为 1，随频率变化所对应的半径也是不同的，因此恒星圆面一小部分区域的黑体谱也是不同半径处黑体谱的拼接。可能在 B 波段所“采用”的是$r_{1}$的一段黑体谱，在 V 波段是$r_{2}$处的一段黑体谱。因此“恒星光谱近似黑体光谱”还有这层含义。在不同滤光片中所见到的恒星可如图\ref{不同波段所见到的光深为 1 处的恒星。}蓝色和红色线条所示。不过实际多半不会这么圆滑，取决于$\alpha_{\nu}$和半径的具体关系。
 
 \begin{figure}[!htp]
 \centering
@@ -1033,7 +1030,7 @@ t'=t-\frac{r\left(t'\right)}{\symup{c}},
 
 而对相对论性粒子的辐射我们先来作一些定性分析。根据 (\ref{1.3.46}) 式不难看出相对论速度对角分布有所影响，因为分子含$\beta^{2}$项而分母含$\beta^{5}$项。由于$K=1-\symbf{n}\cdot\symbf{\beta}$,当$\beta\to1$时，如果$\symbf{n}$指向$\symbf{\beta}$的方向，$K\to0$,此时$\dfrac{\symup{d}P\left(t'\right)}{\symup{d}\Omega}\to\infty$,即辐射能量极大地集中在粒子运动的方向上，这被称作集束效应 (beaming effect).
 
-进一步地，我们认为辐射集中以粒子运动方向为中心线，张角为$\theta=\dfrac{1}{\gamma}=\sqrt{1-\dfrac{v^{2}}{\symup{c}^{2}}}=\sqrt{1-\beta^{2}}$的圆锥范围内。$\theta=\sqrt{1-\beta^{2}}$时认为此时$K$大约是极大值的$\dfrac{1}{2}$,辐射也相对极大方向下降到$\dfrac{1}{2^{5}}$.电子速度可以达到$\gamma\sim10^{6}$,对应$\theta\sim0.2^{\prime\prime}$,因此相对论性粒子辐射十分集中。
+进一步地，我们认为辐射集中以粒子运动方向为中心线，张角为$\theta=\dfrac{1}{\gamma}=\sqrt{1-\dfrac{v^{2}}{\symup{c}^{2}}}=\sqrt{1-\beta^{2}}$的圆锥范围内。$\theta=\sqrt{1-\beta^{2}}$时认为此时$K$大约是极大值的$\dfrac{1}{2}$,辐射也相对极大方向下降到$\dfrac{1}{2^{5}}$.电子速度可以达到$\gamma\sim10^{6}$,对应$\theta\sim\ang{;;0.2}$,因此相对论性粒子辐射十分集中。
 
 进一步，为了定量说明相对论粒子辐射角分布具体图形，考虑速度与加速度方向相互平行和相互垂直两种情况。先考虑平行情况，此时辐射角分布为
 \begin{equation}
@@ -1151,7 +1148,7 @@ T_{\frac{1}{2}}=\frac{1}{bE_{0}}&=\frac{3m_{0}^{3}\symup{c}^{7}}{2{\color{blue}{
 
 上述结论适用于单个电子的辐射谱。而实际过程中肯定有很多电子在磁场中运动。对于数密度随能量分布为$E^{-\mu}$的电子集体，同步加速辐射谱满足
 \begin{align}
-\langle I_{\nu}\rangle&=\frac{2^{\frac{\mu-1}{2}}\sqrt3\Gamma\left(\frac{\mu+5}{4}\right)\Gamma\left(\frac{3\mu-1}{12}\right)\Gamma\left(\frac{3\mu+19}{12}\right)}{8\sqrt\pi\left(\mu+1\right)\Gamma\left(\frac{\mu+7}{4}\right)}\frac{{\color{blue}{\ce{e}}}^{3}}{m_{0}\symup{c}^{2}}\left(\frac{3{\color{blue}{\ce{e}}}}{4\pi m_{0}^{3}\symup{c}^{5}}\right)^{\frac{\mu-1}2}B^{\frac{\mu+1}{2}}\nu^{-\frac{\mu-1}{2}}LN_{0}\notag\\
+\langle I_{\nu}\rangle&=\frac{2^{\frac{\mu-1}{2}}\sqrt3\Gamma\left(\dfrac{\mu+5}{4}\right)\Gamma\left(\dfrac{3\mu-1}{12}\right)\Gamma\left(\dfrac{3\mu+19}{12}\right)}{8\sqrt\pi\left(\mu+1\right)\Gamma\left(\dfrac{\mu+7}{4}\right)}\frac{{\color{blue}{\ce{e}}}^{3}}{m_{0}\symup{c}^{2}}\left(\frac{3{\color{blue}{\ce{e}}}}{4\pi m_{0}^{3}\symup{c}^{5}}\right)^{\frac{\mu-1}2}B^{\frac{\mu+1}{2}}\nu^{-\frac{\mu-1}{2}}LN_{0}\notag\\
 &=a\left(\mu\right)\frac{{\color{blue}{\ce{e}}}^{3}}{m_{0}\symup{c}^{2}}\left(\frac{3{\color{blue}{\ce{e}}}}{4\pi m_{0}^{3}\symup{c}^{5}}\right)^{\frac{\mu-1}2}B^{\frac{\mu+1}{2}}\nu^{-\frac{\mu-1}{2}}LN_{0},\label{1.3.68}
 \end{align}
 其中$L$是沿视线方向辐射区域长度，$N_{0}$量纲$\unit{cm^{-3}\cdot erg^{\mu-1}}$,表征了数密度。根据上式可见辐射强度$\propto{}\nu^{-\frac{\mu-1}{2}}$,谱指数反映了电子能量分布。在典型 AGN 吸积活动中，$\mu=2.5$,可以发现辐射强度谱指数为$-0.75$.
@@ -1165,11 +1162,11 @@ T_{\frac{1}{2}}=\frac{1}{bE_{0}}&=\frac{3m_{0}^{3}\symup{c}^{7}}{2{\color{blue}{
 \begin{equation}
 S_{\nu}\propto{}\nu^{2.5}.
 \end{equation}
-因此低频波段的谱指数为$2.5$.
+因此低频波段的谱指数为 2.5.
 
 最后，同步加速辐射还有显著的偏振特征，单电子同步加速辐射为椭圆偏振光，偏振度为
 \begin{equation}
-\Pi=\frac{K_{\frac{2}{3}}\left(\frac{\nu}{\nu_{\symup{c}}}\right)}{\int_{\frac{\nu}{\nu_{\symup{c}}}}^{\infty}K_{\frac{5}{3}}\left(t\right)\symup{d}t}.
+\Pi=\frac{K_{\frac{2}{3}}\left(\dfrac{\nu}{\nu_{\symup{c}}}\right)}{\int_{\frac{\nu}{\nu_{\symup{c}}}}^{\infty}K_{\frac{5}{3}}\left(t\right)\symup{d}t}.
 \end{equation}
 对于电子集体，由于速度各向同性，最后呈现出的偏振为垂直磁场方向的线偏振。对于电子能量分布为$E^{-\mu}$的电子集体，偏振度为
 \begin{equation}
@@ -1339,7 +1336,7 @@ $n=1,2,3,4$所对应的线系分别为 Lyman, Balmer, Paschen, Brackett 线系�
 
 前文曾提到热辐射源自粒子能量通过电磁相互作用的量子化释放。实际上，研究这种能级跃迁我们需要研究粒子哈密顿量 (Hamiltonian) 在电磁场下的含时演化，最终计算得到的跃迁概率，其一阶展开可看作是原子电偶极矩与外界电场相互作用的结果，被称作电偶极辐射，也就是上述由主量子数$n$所定的原子谱线。电偶极辐射只涉及到电子的轨道运动，因此仅由主量子数决定，服从选择定则，要求轨道量子数和磁量子数变化满足$\Delta{}l=\pm1,\Delta{}m_{l}=0,\pm1$.
 
-而其他高阶项展开可以得到磁偶极矩和电四极矩辐射。这些类型的辐射被称作禁戒跃迁，意为跃迁概率很小。禁戒跃迁不服从电偶极辐射的选择定则，只能发生于密度非常低的环境。地球上禁线不可能出现，一是禁线$A_{ik}$太小，自发辐射时标$>\qty{1}{s}$,太长了，与之相比电偶极辐射对应的原子能级寿命往往小于$\qty{e-8}{s}$.二是人类的真空科技点太低，实验室制造的真空气体密度远高于宇宙的超真空 (<$\qty{1}{atom\cdot cm^{-3}}$).禁线强度非常强烈地依赖于发射禁线气体的密度和温度，因此可用来确定星系发射线区的密度和温度。一般用方括号包裹元素符号来标记禁线。如$\lambda=\qty{5007}{\angstrom}$的$\left[\ce{O}\,\symup{\uppercase\expandafter{\romannumeral3}}\right]$线。值得注意的是，\uppercase\expandafter{\romannumeral3}表示失去了两个电子，因此类似$\ce{H}\,\symup{\uppercase\expandafter{\romannumeral1}}$的符号其实表示的是中性原子。后续会反复用到这种表示法。
+而其他高阶项展开可以得到磁偶极矩和电四极矩辐射。这些类型的辐射被称作禁戒跃迁，意为跃迁概率很小。禁戒跃迁不服从电偶极辐射的选择定则，只能发生于密度非常低的环境。地球上禁线不可能出现，一是禁线$A_{ik}$太小，自发辐射时标$>\qty{1}{s}$,太长了，与之相比电偶极辐射对应的原子能级寿命往往小于$\qty{e-8}{s}$.二是人类的真空科技点太低，实验室制造的真空气体密度远高于宇宙的超真空 (<$\qty{1}{atom\cdot cm^{-3}}$).禁线强度非常强烈地依赖于发射禁线气体的密度和温度，因此可用来确定星系发射线区的密度和温度。一般用方括号包裹元素符号来标记禁线。如$\lambda=\qty{5007}{\angstrom}$的$\left[\ce{O}\,\symup{\uppercase\expandafter{\romannumeral3}}\right]$线。值得注意的是，$\symup{\uppercase\expandafter{\romannumeral3}}$表示失去了两个电子，因此类似$\ce{H}\,\symup{\uppercase\expandafter{\romannumeral1}}$的符号其实表示的是中性原子。后续会反复用到这种表示法。
 
 源自原子精细结构和超精细结构的辐射属于禁戒跃迁。精细结构来自电子自旋和轨道角动量产生的磁矩之间的相互作用。对应能量差只有主能级能量差的$\dfrac{1}{137^{2}}$,辐射集中在远红外区域。超精细结构是核自旋和轨道电子自旋产生的磁场之间的耦合结果。能级分类比精细结构谱线还要小 2000 倍。辐射甚至来到射电的厘米波段。如$\qty{21}{cm}$谱线来自氢原子中电子自旋和原子核自旋处于平行状态（能量更高）向反平行状态的禁戒跃迁，时标$\qty{e7}{yr}$.尽管单个氢原子的跃迁概率极低，但由于星际空间中的中性氢非常丰富，其产生的$\qty{21}{cm}$谱线仍然能够观测到。由于射电波段受尘埃的影响小，因此$\qty{21}{cm}$谱线是研究星系结构的重要手段。
 
@@ -1412,7 +1409,7 @@ $W_{\lambda}$也被称作等值宽度 (equivalent width, EW),即与吸收（或�
 
 3. 按相对太阳的元素丰度
 \begin{equation}
-\left[\ce{A}/\ce{B}\right]=\lg\left[\frac{\left(\textrm{number\,of\,A\,atoms/number\,of\,B\,atoms}\right)_{\text{star}}}{\left(\textrm{number\,of\,A\,atoms/number\,of\,B\,atoms}\right)_{\odot}}\right],
+\left[\ce{A}/\ce{B}\right]=\lg\left[\frac{\left(\text{number of $A$ atoms/number of $B$ atoms}\right)_{\text{star}}}{\left(\text{number of $A$ atoms/number of $B$ atoms}\right)_{\odot}}\right],
 \end{equation}
 因此$\left[\ce{Fe/H}\right]=-2$的恒星，其铁丰度就是太阳的$1\%$.一般来讲$\left[\ce{Fe/H}\right]$等价于一颗恒星相对于太阳的平均重元素丰度。
 
@@ -1531,8 +1528,8 @@ L\sim R^{2}\frac{1}{\rho}\frac{T^{4}}{R}\sim R^{2}\frac{R^{3}}{M}\frac{M^{4}}{R^
 
 此外，基于主序星物理量之间的关系容易证明，质量不同的主序星表面重力加速度相差无几，因此主序星表面的压力对谱线宽度的影响较为一致，这也是 MK 分类中将主序星划分为一类的依据之一。
 
-\subsubsection{\texorpdfstring{\uppercase\expandafter{\romannumeral1}}{}a 型超新星}
-接下来简要说明一下\uppercase\expandafter{\romannumeral1}a 型超新星的图景。热核反应不断将恒星内部的轻元素转变为重元素，随着原子序数提高，库仑力会不断增强，需要更高的压力和温度以进行核反应。因此要点燃的元素越重，恒星所需的初始质量就越大。如果恒星质量不高，在初始氢燃料燃烧完毕留下一个高温的碳氧核心后核反应就停止了。不过，即使恒星初始质量极高，核反应也不能无限进行下去。根据质能关系可知原子核的结合能为$Q=\left[Zm_{\text{p}}+Nm_{\text{n}}-m_{Z,n}\right]\symup{c}^{2}$,其中$Z$是质子数，$N$是中子数，$m_{Z,n}$是原子核质量。记原子量为$A=Z+N$,可以定义比结合能$Q/A$.铁元素拥有最大的比结合能，因此核聚变形成比铁元素重的元素时反而要消耗能量，核反应终究会停止。如此一来气压和辐射压不足以平衡引力，要维持恒星结构，必须由电子简并压抗衡引力，我们称这样的星体为白矮星。但电子简并压也不是无上限的，如果白矮星质量超过一定限度（称其为钱德拉塞卡极限），星体会进一步坍缩为中子星或黑洞。
+\subsubsection{\texorpdfstring{\uppercase\expandafter{\romannumeral1}a}{} 型超新星}
+接下来简要说明一下\uppercase\expandafter{\romannumeral1}a 型超新星的图景。热核反应不断将恒星内部的轻元素转变为重元素，随着原子序数提高，库仑力会不断增强，需要更高的压力和温度以进行核反应。因此要点燃的元素越重，恒星所需的初始质量就越大。如果恒星质量不高，在初始氢燃料燃烧完毕留下一个高温的碳氧核心后核反应就停止了。不过，即使恒星初始质量极高，核反应也不能无限进行下去。根据质能关系可知原子核的结合能为$Q=\left[Zm_{\ce{p}}+Nm_{\ce{n}}-m_{Z,n}\right]\symup{c}^{2}$,其中$Z$是质子数，$N$是中子数，$m_{Z,n}$是原子核质量。记原子量为$A=Z+N$,可以定义比结合能$Q/A$.铁元素拥有最大的比结合能，因此核聚变形成比铁元素重的元素时反而要消耗能量，核反应终究会停止。如此一来气压和辐射压不足以平衡引力，要维持恒星结构，必须由电子简并压抗衡引力，我们称这样的星体为白矮星。但电子简并压也不是无上限的，如果白矮星质量超过一定限度（称其为钱德拉塞卡极限），星体会进一步坍缩为中子星或黑洞。
 
 于是我们可以考虑这样一种情形，在白矮星{}-{}恒星双星系统中，白矮星不断吸积伴星的物质，质量不断提高，直到超过钱德拉塞卡极限。此时星体会发生爆轰，整个星体彻底瓦解，什么也不剩下。我们称这样的星体为\uppercase\expandafter{\romannumeral1}a 型超新星。由于发生爆轰的 CO 核质量都差不多，因此峰值绝对星等都一致，大约$-19.5$等。因此可以用\uppercase\expandafter{\romannumeral1}a 型超新星测距。
 
@@ -1550,7 +1547,7 @@ L\sim R^{2}\frac{1}{\rho}\frac{T^{4}}{R}\sim R^{2}\frac{R^{3}}{M}\frac{M^{4}}{R^
 
 \subsection{星系简介}
 \subsubsection{星系的哈勃分类、星系团、星系群}
-星系是由恒星、气体、尘埃和暗物质组成的受到引力束缚的系统，典型星系内有$10^{10}$个恒星。星系是观测宇宙学的基石，是我们了解宇宙组成（暗物质、暗能量）、研究宇宙如何随时间演化的直接观测对象。本小节我们将对宇宙中的星系作一些初步认识，介绍星系的哈勃分类，和面亮度的描述方法。
+星系是由恒星、气体、尘埃和暗物质组成的受到引力束缚的系统，典型星系内有$10^{10}$个恒星。星系是观测宇宙学的基石，是我们了解宇宙组成、研究宇宙如何随时间演化的直接观测对象。本小节我们将对宇宙中的星系作一些初步认识，介绍星系的哈勃分类，和面亮度的描述方法。
 
 正如恒星可大致分为主序星、白矮星、巨星三种，星系可大致分为椭圆星系 (E)、盘星系和不规则星系 (Irr).椭圆星系实际上是个三维椭球，恒星绕星系核心作无规则轨道运动，而盘星系中，大部分恒星绕核心作圆轨道运动，轨道大致组成一个平面。盘星系可进一步分为漩涡星系 (S) 和棒旋星系 (SB),看星系核心是否有棒状结构来区分。不规则星系则比较自由，没有旋涡结构也没有椭圆形态。
 
@@ -1652,7 +1649,7 @@ I\left(x\right)=\frac{F}{\theta^{2}}=\dfrac{\dfrac{L}{4\pi{}d^{2}}}{\dfrac{D^{2}
 \begin{align}
 m-M_{\odot}&=-2.5\log_{10}\left(\frac{\dfrac{L}{4\pi\left(d\,\unit{pc}\right)^{2}}}{\dfrac{L_{\odot}}{4\pi\left(\qty{10}{pc}\right)^{2}}}\right),\notag\\
 L&=L_{\odot}\times10^{-\frac{m-M_{\odot}}{2.5}-2}\times d^{2},\notag\\
-I\left(R\right)&=\frac{L}{\left(d\,\unit{pc}\times1^{\prime\prime}\right)^{2}}=\left(\frac{64800}{\pi}\right)^{2}\frac{L}{\left(d\,\unit{pc}\right)^{2}}=\left(\frac{64800}{\pi}\right)^{2}\times10^{-\frac{m-M_{\odot}}{2.5}-2}\,\unit{L_{\odot}pc^{-2}}.
+I\left(R\right)&=\frac{L}{\left(d\,\unit{pc}\times\ang{;;1}\right)^{2}}=\left(\frac{64800}{\pi}\right)^{2}\frac{L}{\left(d\,\unit{pc}\right)^{2}}=\left(\frac{64800}{\pi}\right)^{2}\times10^{-\frac{m-M_{\odot}}{2.5}-2}\,\unit{L_{\odot}pc^{-2}}.
 \end{align}
 
 确立了描述光度的方法，就可以确定边界了。首先定义等照度线，它是星系图像上面亮度相等的像源的连线。通常取 B 波段$I_{\text{B}}(x)=\qty{25}{mag\cdot{}arcsec^{-2}}$的等照度线作为星系边界，对应的半径记为$R_{25}$.或者取霍姆伯格半径$I_{\text{B}}(x)=\qty{26.5}{mag\cdot{}arcsec^{-2}}$.
@@ -1908,7 +1905,7 @@ I(x)=\frac{F}{\theta^{2}}=\frac{L/(4\pi d_{L}^{2})}{D^{2}/d_{\theta}^{2}}=\frac{
 \label{距离阶梯。}
 \end{figure}
 
-不同的测距方法适用于不同的距离。最基本的三角视差法原理我们在《球面天文》已经介绍过了，通常只适用于$30\text{\textendash}\qty{500}{pc}$范围内的恒星。它比较依赖望远镜的分辨率。一般来讲，地面望远镜单镜分辨率$\sim\qty{10}{mas}$,地面光学/近红外干涉$\sim\qty{1}{mas}$,甚长基线干涉$\sim\qty{0.1}{mas}$,空间天体测量卫星 Hipparcos 可达$\qty{1}{mas}$, 天体测量卫星 Gaia 可达$\qty{0.04}{mas}$.有关 Gaia 卫星的原理我们可以在这里提一下，它沿用了 Hipparcos 的扫描空间天体测量原理 (the principle of scanning space astrometry).考虑距离太阳一个天文单位的观测者，恒星视差$\varpi$会造成恒星在天球上的位移，具体形式为$\varpi\sin\theta$,其中$\theta$是天体方向单位矢量与太阳方向单位矢量的夹角。令卫星缓慢自转，当恒星通过卫星搭载的望远镜的视场时，恒星位移垂直自转轴的部分会影响到恒星通过焦平面的时间，因此可将视差测定转换成时间测定。同一视场内$\theta$角差异极小，时间的差值难以测量，因此需要在垂直自转轴的平面上放置两个指向呈一定大角度$\Gamma$的望远镜，比较两个视场内的天体。利用该方法不仅可以实现相对视差测量，还可在不依赖背景天体的情况下实现绝对视差测量。如图\ref{absolute_parallax}左所示，指向 P 点的望远镜测得的沿扫描方向视差位移 (along-scan shift, 简称 AL shift) 等于$0$时，指向 F 点的望远镜测得的沿扫描方向视差位移为$\varpi_{F}\sin\theta\sin\psi=\varpi_{F}\sin\xi\sin\Gamma$,其中$\xi$是太阳方向单位矢量与自转轴的夹角。如此绝对视差测量就变得可行。
+不同的测距方法适用于不同的距离。最基本的三角视差法原理我们在《球面天文》已经介绍过了，通常只适用于$30\text{\textendash}\qty{500}{pc}$范围内的恒星。它比较依赖望远镜的分辨率。一般来讲，地面望远镜单镜分辨率$\sim\qty{10}{mas}$,地面光学/近红外干涉$\sim\qty{1}{mas}$,甚长基线干涉$\sim\qty{0.1}{mas}$,空间天体测量卫星 Hipparcos 可达$\qty{1}{mas}$, 天体测量卫星 Gaia 可达$\qty{0.04}{mas}$.有关 Gaia 卫星的原理我们可以在这里提一下，它沿用了 Hipparcos 的扫描空间天体测量原理 (the principle of scanning space astrometry).考虑距离太阳一个天文单位的观测者，恒星视差$\varpi$会造成恒星在天球上的位移，具体形式为$\varpi\sin\theta$,其中$\theta$是天体方向单位矢量与太阳方向单位矢量的夹角。令卫星缓慢自转，当恒星通过卫星搭载的望远镜的视场时，恒星位移垂直自转轴的部分会影响到恒星通过焦平面的时间，因此可将视差测定转换成时间测定。同一视场内$\theta$角差异极小，时间的差值难以测量，因此需要在垂直自转轴的平面上放置两个指向呈一定大角度$\Gamma$的望远镜，比较两个视场内的天体。利用该方法不仅可以实现相对视差测量，还可在不依赖背景天体的情况下实现绝对视差测量。如图\ref{absolute_parallax}左所示，指向 P 点的望远镜测得的沿扫描方向视差位移 (along-scan shift, 简称 AL shift) 等于 0 时，指向 F 点的望远镜测得的沿扫描方向视差位移为$\varpi_{F}\sin\theta\sin\psi=\varpi_{F}\sin\xi\sin\Gamma$,其中$\xi$是太阳方向单位矢量与自转轴的夹角。如此绝对视差测量就变得可行。
 \begin{figure}[!htp]
 \centering
 \includegraphics[width=0.9\textwidth]{figures/figure1_19.png}
@@ -1921,7 +1918,7 @@ I(x)=\frac{F}{\theta^{2}}=\frac{L/(4\pi d_{L}^{2})}{D^{2}/d_{\theta}^{2}}=\frac{
 \begin{equation}
 M=\frac{V_{\max}^{2}R}{\symup{G}},
 \end{equation}
-假设不同漩涡星系的质光比都相同，那么$L\propto{}M\propto{}V_{\text{max}}^{2}R$.再假设漩涡星系中心面亮度是常数，那么$L\propto{}R^{2}$,因此$L^{2}\propto{}V_{\max}^{4}R^{2}\propto{}V_{\max}^{4}L,L\propto{}V_{\max}^{4}$.通过光谱红移确定自转速度就可确定光度进而测距。
+假设不同漩涡星系的质光比都相同，那么$L\propto{}M\propto{}V_{\max}^{2}R$.再假设漩涡星系中心面亮度是常数，那么$L\propto{}R^{2}$,因此$L^{2}\propto{}V_{\max}^{4}R^{2}\propto{}V_{\max}^{4}L,L\propto{}V_{\max}^{4}$.通过光谱红移确定自转速度就可确定光度进而测距。
 
 哈勃定律测距需要注意的是，星系的视向速度不仅来自空间膨胀，还来自局域引力作用（别的天体拖拽）下星系相对空间本身的运动速度（本动速度）。即
 \begin{equation}

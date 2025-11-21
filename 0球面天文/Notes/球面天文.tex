@@ -5,6 +5,8 @@
 \geometry{left=1.5cm,right=1.5cm,top=1.8cm,bottom=0.9cm}
 
 \usepackage{unicode-math, mathrsfs, xcolor, inputenc}
+\definecolor{pagecolor}{HTML}{C7EDCC}
+\pagecolor{pagecolor}
 \setCJKmainfont[AutoFakeBold, AutoFakeSlant]{LXGW WenKai}
 \setmainfont[AutoFakeBold, AutoFakeSlant]{LXGW WenKai}
 \setmathfont{Latin Modern Math}
@@ -16,7 +18,7 @@
 \usepackage[version=4]{mhchem}
 \usepackage[flushleft]{threeparttable}
 \usepackage{hyperref, bookmark}
-\hypersetup{colorlinks=true, urlcolor=yellow, filecolor=green, linkcolor=red}
+\hypersetup{colorlinks=true, urlcolor=blue, filecolor=blue, linkcolor=blue}
 \usepackage[backend=biber,sorting=none]{biblatex}
 \addbibresource{/Users/Linyan/Zotero/MyBibTeX.bib}
 
@@ -624,7 +626,7 @@ t_{\odot}=S_{\text{平}}-\alpha_{\odot}=\left(S_{0}-\alpha_{0}\right)+\left(\ome
 
 儒略日：Julian Day 起点是公元前 4713 年 1 月 1 日格林威治平正午（12 时），以天为单位，连续不断。约化儒略日 MJD 相应的起点是 1858 年 11 月 17 日世界时 0 时：
 \begin{equation}
-\text{MJD}=\text{JD}-2400000.5.
+\symup{MJD}=\symup{JD}-2400000.5.
 \end{equation}
 BJD 是 JD 经过校正以考虑地球相对于太阳系质心的位置差异。由于光速有限，观察到天文事件的时间取决于观察者在太阳系中位置的变化。BJD 和 JD 最大相差 8.3 分钟。
 
