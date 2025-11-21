@@ -1,4 +1,5 @@
 \documentclass[UTF8, 12pt, a4paper, oneside, onecolumn, fontset=none]{ctexart}
+\usepackage{anyfontsize}
 \usepackage{geometry}
 \geometry{left=1.5cm,right=1.5cm,top=1.8cm,bottom=0.9cm}
 
@@ -17,7 +18,7 @@
 \usepackage[backend=biber,sorting=none]{biblatex}
 \addbibresource{/Users/Linyan/Zotero/MyBibTeX.bib}
 
-\ctexset{section={format=\bfseries \zihao{4} \flushleft}}
+\ctexset{section={format=\bfseries\zihao{4}\flushleft}}
 \renewcommand\thesubsection{\thesection.\arabic{subsection}}
 \numberwithin{equation}{subsection}
 \renewcommand\theequation{\thesubsection.\arabic{equation}}
@@ -28,34 +29,34 @@
 
 \usepackage{listings}
 \lstset{
-     basicstyle      =    \zihao{-5}\ttfamily,
-     numberstyle     =    \zihao{-5}\ttfamily,
-     keywordstyle    =    \color{blue},
-     keywordstyle    =    [2]\color{teal},
-     stringstyle     =    \color{magenta},
-     commentstyle    =    \color{red}\ttfamily,
-     breaklines=true,     % 自动换行
-     columns=fixed,       % 固定字间距
-     flexiblecolumns,     % 别问为什么，加上这个
-     numbers         =    left,% 行号的位置在左边
-     showspaces      =    false,% 是否显示空格
-     numberstyle     =    \zihao{-5}\ttfamily,% 行号的样式，小五号，tt 等宽字体
-     showstringspaces=    false,
-     captionpos      =    t,%这段代码的名字所呈现的位置，t 指的是 top 上面
-     frame           =    lrtb,% 显示边框
+      basicstyle      =    \zihao{-5}\ttfamily,
+      numberstyle     =    \zihao{-5}\ttfamily,
+      keywordstyle    =    \color{blue},
+      keywordstyle    =    [2]\color{teal},
+      stringstyle     =    \color{magenta},
+      commentstyle    =    \color{red}\ttfamily,
+      breaklines=true,     % 自动换行
+      columns=fixed,       % 固定字间距
+      flexiblecolumns,     % 别问为什么，加上这个
+      numbers         =    left,% 行号的位置在左边
+      showspaces      =    false,% 是否显示空格
+      numberstyle     =    \zihao{-5}\ttfamily,% 行号的样式，小五号，tt 等宽字体
+      showstringspaces=    false,
+      captionpos      =    t,%这段代码的名字所呈现的位置，t 指的是 top 上面
+      frame           =    lrtb,% 显示边框
 }
 
 \lstdefinestyle{Python}{
-     language=Python,     
-     basicstyle      =    \zihao{-5}\ttfamily,
-     numberstyle     =    \zihao{-5}\ttfamily,
-     keywordstyle    =    \color{blue},
-     keywordstyle    =    [2] \color{teal},
-     stringstyle     =    \color{magenta},
-     commentstyle    =    \color{red}\ttfamily,
-     breaklines      =    true,   % 自动换行，建议不要写太长的行
-     columns         =    fixed,  % 如果不加这一句，字间距就不固定
-     basewidth       =    0.5em,
+      language=Python,     
+      basicstyle      =    \zihao{-5}\ttfamily,
+      numberstyle     =    \zihao{-5}\ttfamily,
+      keywordstyle    =    \color{blue},
+      keywordstyle    =    [2]\color{teal},
+      stringstyle     =    \color{magenta},
+      commentstyle    =    \color{red}\ttfamily,
+      breaklines      =    true,% 自动换行，建议不要写太长的行
+      columns         =    fixed,% 如果不加这一句，字间距就不固定
+      basewidth       =    0.5em,
 }
 
 \title{广义相对论基础}
@@ -181,7 +182,7 @@ $\Gamma_{\mu\nu}^{\lambda}\left(P\right)$被称作$P$点的仿射联络，简称
 \begin{equation}
 \widetilde{\Gamma}_{\mu\nu}^{\lambda}\cdot\frac{\partial{}x^{\rho}}{\partial{}\widetilde{x}^{\lambda}}\cdot\frac{\partial{}\widetilde{x}^{\nu}}{\partial{}x^{\sigma}}=\Gamma_{\alpha\sigma}^{\rho}\cdot\frac{\partial{}x^{\alpha}}{\partial{}\widetilde{x}^{\mu}}+\frac{\partial{}^{2}x^{\rho}}{\partial{}\widetilde{x}^{\nu}\partial{}\widetilde{x}^{\mu}}\frac{\partial{}\widetilde{x}^{\nu}}{\partial{}x^{\sigma}}.\notag
 \end{equation}
-两边同乘$\dfrac{\partial{}\widetilde{x}^{\tau}}{\partial{}x^{\rho}}\dfrac{\partial{}x^{\sigma}}{\partial{}\widetilde{x}^{\gamma}}$,重复指标求和，注意到克罗内克符号，得到不同坐标系中仿射联络变换公式
+两边同乘$\dfrac{\partial{}\widetilde{x}^{\tau}}{\partial{}x^{\rho}}\dfrac{\partial{}x^{\sigma}}{\partial{}\widetilde{x}^{\gamma}}$,重复指标求和，注意到 Kroneker 符号，得到不同坐标系中仿射联络变换公式
 \begin{equation}
 \widetilde{\Gamma}_{\mu\nu}^{\tau}=\Gamma_{\alpha\sigma}^{\rho}\frac{\partial{}x^{\alpha}}{\partial{}\widetilde{x}^{\mu}}\frac{\partial{}x^{\sigma}}{\partial{}\widetilde{x}^{\gamma}}\frac{\partial{}\widetilde{x}^{\tau}}{\partial{}x^{\rho}}+\frac{\partial{}^{2}x^{\rho}}{\partial{}\widetilde{x}^{\mu}\partial\widetilde{x}^{\gamma}}\frac{\partial{}\widetilde{x}^{\tau}}{\partial{}x^{\rho}}.
 \end{equation}
@@ -353,7 +354,7 @@ A_{\lambda;\mu;\nu}-A_{\lambda;\nu;\mu}&=\left(\Gamma_{\lambda\nu,\mu}^{\rho}-\G
 \draw (250,0) -- (300,150) ;
 \draw [shift={(300,150)},rotate=-109][line width=0.75](10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29); 
 %Text
-\draw (0,180) node [anchor=north west][inner sep=0.75pt]   [align=left] {$Q'$};
+\draw (-10,190) node [anchor=north west][inner sep=0.75pt]   [align=left] {$Q'$};
 \draw (-30,0) node [anchor=north west][inner sep=0.75pt]   [align=left] {$O$};
 \draw (250,0) node [anchor=north west][inner sep=0.75pt]   [align=left] {$Q$};
 \draw (300,150) node [anchor=north west][inner sep=0.75pt]   [align=left] {$P$};
@@ -592,7 +593,7 @@ R=g^{\mu\nu}R_{\mu\nu}.
 \begin{equation}
 G_{\mu\nu}=R_{\mu\nu}-\frac12g_{\mu\nu}R.
 \end{equation}
-在$4$维空间中，$R_{\mu\nu}$有$4^{2}$个分量，由于它是对称张量，因此独立分量个数为$4+\dfrac{16-4}{2}=10$个。可见爱因斯坦张量独立分量也有 10 个。
+在 4 维空间中，$R_{\mu\nu}$有$4^{2}$个分量，由于它是对称张量，因此独立分量个数为$4+\dfrac{16-4}{2}=10$个。可见爱因斯坦张量独立分量也有 10 个。
 
 广义相对论所用的黎曼空间是无挠的。如果在一定时空范围内曲率张量也为零，则一定可以找到一个坐标系使该时空范围内联络所有分量都为零（与等效原理不同，此时不局限于一点邻域），前文提到过这意味着空间是平坦的。因此
 \begin{equation}
@@ -766,13 +767,13 @@ Killing 矢量的作用是刻画时空结构的对称性。黎曼空间某方向
 \begin{equation}
 \symup{d}s^{2}=-\symup{c}^{2}\symup{d}t^{2}+\symup{d}x^{2}+\symup{d}y^{2}+\symup{d}z^{2}=-\symup{c}^{2}\symup{d}t^{2}+0=-\symup{c}^{2}\symup{d}\tau^{2}.
 \end{equation}
-可见固有时间$\symup{d}\tau$正比于世界线（即观测者在四维时空走过的曲线）长度，而后者正是个标量。广义相对论中也可这么考虑。尽管时空处处有引力存在，但黎曼时空中总可以找到一个沿测地线（即引力场中自由下落）无转动的无穷小坐标系作为局部惯性系。微分几何告诉我们，在一点的邻域，曲线的线元与其切线的线元相等。因此，我们可以沿观测者的世界线逐点建立无数相对观测者静止的局部惯性系，将它们各自记录的固有时间加起来作为观测者的固有时间。按这种定义，观测者的固有时间依旧正比于观测者的世界线长度。我们称观测者携带的钟为标准钟，记录的是观测者的固有时间。
+可见固有时间$\symup{d}\tau$正比于世界线（即观测者在四维时空走过的曲线）长度，而后者正是个标量。广义相对论中也可这么考虑。黎曼时空中总可以找到一个沿测地线（即引力场中自由下落）无转动的无穷小坐标系作为局部惯性系。微分几何告诉我们，在一点的邻域，曲线的线元与其切线的线元相等。因此，我们可以沿观测者的世界线逐点建立无数相对观测者静止的局部惯性系，将它们各自记录的固有时间加起来作为观测者的固有时间。按这种定义，观测者的固有时间依旧正比于观测者的世界线长度。我们称观测者携带的钟为标准钟，记录的是观测者的固有时间。
 
 现在考虑固有时间和坐标时间的联系。还是任意定义某个坐标系，然后认为观测者相对该坐标系静止，有
 \begin{equation}
 \symup{d}\tau=\sqrt{-\frac{\symup{d}s^{2}}{\symup{c}^{2}}}=\frac{1}{\symup{c}}\sqrt{-g_{\mu\nu}\symup{d}x^{\mu}\symup{d}x^{\nu}}=\frac{1}{\symup{c}}\sqrt{-g_{00}}\symup{d}x^{0}=\sqrt{-g_{00}}\symup{d}t.\label{2.1.2}
 \end{equation}
-$g_{00}$是时空坐标的函数，因此每个时空点都不同，故固有时间计时一般只能在观测者邻域使用，要做大范围时空计算必须用到坐标时间。但要注意坐标时间是计算用虚构量，实验仪器只能测量固有时间。最后，固有时间依赖质点的世界线，但不依赖坐标系的选择；坐标时间依赖坐标系的选择，但不依赖质点的世界线。
+$g_{00}$是时空坐标的函数，因此每个时空点都不同，故固有时间计时一般只能在观测者邻域使用，要做大范围时空计算必须用到坐标时间。但要注意坐标时间是计算用虚构量，实验仪器只能测量固有时间。此外，固有时间依赖质点的世界线，但不依赖坐标系的选择；坐标时间依赖坐标系的选择，但不依赖质点的世界线。
 
 本节讨论的观测对象是事件的时空间隔。观测者可以将相对于他静止的局部惯性系时间轴指向观测者世界线的切向，然后考虑事件间隔$\symup{d}x^{\mu}$在其时间轴上的投影，这样就得到观测者的测量值。我们曾在测地线一节介绍过切矢量的定义。取标量性质参量为固有时间，世界线的切矢量就等于观测者的四维速度，简称四速。四速$U^{\mu}$定义如下：
 \begin{equation}
@@ -851,7 +852,7 @@ A^{\mu}_{\parallel}=\pi^{\mu}_{\nu}A^{\nu}=-u_{\nu}A^{\nu}u^{\mu}.
 \end{equation}
 立刻得到
 \begin{equation}
-\Delta{}l^{2}=\left(\frac{\symup{d}x^{1}-v\symup{d}t}{\sqrt{1-\frac{v^{2}}{\symup{c}^{2}}}}\right)^{2}+\left(\symup{d}x^{2}\right)^{2}+\left(\symup{d}x^{3}\right)^{2}.
+\Delta{}l^{2}=\left(\frac{\symup{d}x^{1}-v\symup{d}t}{\sqrt{1-\dfrac{v^{2}}{\symup{c}^{2}}}}\right)^{2}+\left(\symup{d}x^{2}\right)^{2}+\left(\symup{d}x^{3}\right)^{2}.
 \end{equation}
 
 (\ref{2.1.11}) 式暗示$\gamma_{\alpha\beta}$扮演了空间度规的角色。我们可以验证一下。对于一个观测者，他应该会倾向于采用相对于他静止的坐标系进行观测。反过来讲，给定一个坐标系，考虑一个相对坐标系随动的观测者。该观测者随身携带的钟走时与坐标时间的关系其实就是 (\ref{2.1.2}) 式。这给出了该观测者的四速
@@ -1286,9 +1287,9 @@ A^{\mu}_{\parallel}=\pi^{\mu}_{\nu}\delta{}x^{\nu}=-u^{\mu}u_{\nu}\delta{}x^{\nu
 \begin{equation}
 \varepsilon^{abc}=
 \begin{cases}
-1,&\quad \text{a,b,c 是 1,2,3 的偶置换，}\\
-0,&\quad \text{a,b,c 至少有两个相等，}\\
--1,&\quad \text{a,b,c 是 1,2,3 的奇置换。}
+1,&\quad \text{$a,b,c$ 是 $1,2,3$ 的偶置换，}\\
+0,&\quad \text{$a,b,c$ 至少有两个相等，}\\
+-1,&\quad \text{$a,b,c$ 是 $1,2,3$ 的奇置换。}
 \end{cases}
 \end{equation}
 空间轴不转动的参考系被称作费米平动参考系。沿测地线运动的费米平动参考系才是局部惯性系。
@@ -1586,15 +1587,15 @@ h_{00,i,i}=-\symup{c}^{2}\kappa\rho.
 \subsection{广义相对论中的力学与电磁学方程}
 四维动量可以用四维速度定义
 \begin{equation}
-P^{\mu}=m_{0}U^{\mu}=\left(\frac{E}{\symup{c}},\symbf{p}\right)=\left(\frac{m_{0}\symup{c}}{\sqrt{1-\frac{v^{2}}{\symup{c}^{2}}}},\frac{m_{0}\symbf{v}}{\sqrt{1-\frac{v^{2}}{\symup{c}^{2}}}}\right).
+P^{\mu}=m_{0}U^{\mu}=\left(\frac{E}{\symup{c}},\symbf{p}\right)=\left(\frac{m_{0}\symup{c}}{\sqrt{1-\dfrac{v^{2}}{\symup{c}^{2}}}},\frac{m_{0}\symbf{v}}{\sqrt{1-\dfrac{v^{2}}{\symup{c}^{2}}}}\right).
 \end{equation}
 四维力为
 \begin{equation}
-\frac{\symup{d}P^{\mu}}{\symup{d}\tau}=F^{\mu}=\left(\frac{\symbf{f}\cdot\symbf{v}/\symup{c}}{\sqrt{1-\frac{v^{2}}{\symup{c}^{2}}}},\frac{\symbf{f}}{\sqrt{1-\frac{v^{2}}{\symup{c}^{2}}}}\right).
+\frac{\symup{d}P^{\mu}}{\symup{d}\tau}=F^{\mu}=\left(\frac{\symbf{f}\cdot\symbf{v}/\symup{c}}{\sqrt{1-\dfrac{v^{2}}{\symup{c}^{2}}}},\frac{\symbf{f}}{\sqrt{1-\dfrac{v^{2}}{\symup{c}^{2}}}}\right).
 \end{equation}
 号差 +2 时，$G_{00}=G^{00}=-1,U_{0}=-U^{0},P_{0}=-P^{0},F_{0}=-F^{0},U_{i}=U^{i},P_{i}=P^{i},F_{i}=F^{i}$.此外方程全部改成广义协变形式，将普通微商改成协变微商，普通导数改成协变导数，另外可记
 \begin{equation}
-\frac{1}{\sqrt{1-\frac{v^{2}}{\symup{c}^{2}}}}\to\frac{\symup{d}t}{\symup{d}\tau}.
+\frac{1}{\sqrt{1-\dfrac{v^{2}}{\symup{c}^{2}}}}\to\frac{\symup{d}t}{\symup{d}\tau}.
 \end{equation}
 动力学方程可以改为
 \begin{equation}
@@ -1637,7 +1638,7 @@ F_{\mu\nu}=A_{\nu,\mu}-A_{\mu,\nu}.
 \end{align}
 其中四维电流密度为
 \begin{align}
-J^{\mu}=\rho_{0}u^{\mu}=\left(\symup{c}\rho,\symbf{j}\right)=\left(\frac{\symup{c}\rho_{0}}{\sqrt{1-\frac{v^{2}}{\symup{c}^{2}}}},\rho\symbf{v}\right),
+J^{\mu}=\rho_{0}u^{\mu}=\left(\symup{c}\rho,\symbf{j}\right)=\left(\frac{\symup{c}\rho_{0}}{\sqrt{1-\dfrac{v^{2}}{\symup{c}^{2}}}},\rho\symbf{v}\right),
 \end{align}
 其中$\rho_{0}$为静止粒子的电荷密度，$\symbf{j}$是三维电流密度。
 
@@ -1792,9 +1793,9 @@ g_{\mu\nu}=\eta_{\mu\nu}+h_{\mu\nu}=\eta_{\mu\nu}+\overline{h}_{\mu\nu}-\frac12\
 \end{equation}
 实际上通过计算可得
 \begin{equation}
-\overline{h}_{\mu\nu}\left(\symbf{r},t\right)=\frac{\kappa}{2\pi}\int\frac{T_{\mu\nu}\left(\symbf{r},t-\frac{r}{\symup{c}}\right)}{r}\symup{d}V',
+\overline{h}_{\mu\nu}\left(\symbf{r},t\right)=\frac{\kappa}{2\pi}\int\frac{T_{\mu\nu}\left(\symbf{r},t-\dfrac{r}{\symup{c}}\right)}{r}\symup{d}V',
 \end{equation}
-其中$\symup{d}V'$是体积元，而$r=\left[\left(x^{i}-x'^{i}\right)\cdot\left(x^{i}-x'^{i}\right)\right]^{\frac12}$.该解是推迟解，表明时刻$t$距离引力源$r$的引力势是$t-\frac{r}{\symup{c}}$时刻物质分布和运动状态决定的，这意味着引力场以光速传播。如果引力源局限于一个很小的区域，观测者又远离引力源，推迟解可简化为
+其中$\symup{d}V'$是体积元，而$r=\left[\left(x^{i}-x'^{i}\right)\cdot\left(x^{i}-x'^{i}\right)\right]^{\frac12}$.该解是推迟解，表明时刻$t$距离引力源$r$的引力势是$t-\dfrac{r}{\symup{c}}$时刻物质分布和运动状态决定的，这意味着引力场以光速传播。如果引力源局限于一个很小的区域，观测者又远离引力源，推迟解可简化为
 \begin{equation}
 \overline{h}_{\mu\nu}=\frac{\kappa}{2\pi r_{0}}\int T_{\mu\nu}^{*}\symup{d}V'.
 \end{equation}
@@ -2199,7 +2200,7 @@ U=2\Phi_{\text{eff}}\left(r\right)=\left(\symup{c}^{2}-\frac{2\symup{G}M}{r}\rig
 \end{equation}
 等式左边正定，运动只能发生在$\left(\dfrac{E}{\symup{c}}\right)^{2}>U$的地方。和牛顿等效势比起来，可以发现$U$多了一项$\symup{c}^{2}$和$-\dfrac{2\symup{G}M\widetilde{L}^{2}}{\symup{c}^{2}r^{3}}$. $\symup{c}^{2}$不是实质性的，因为相对论性的能量不再是单纯的动能，无穷远处静止质点$E\to \symup{c}^{2}$,减去这种静能的话和$\symup{c}^{2}$“相消”。而第二项在$r$很小的时候起决定作用，根本改变了运动情况。
 
-这么多$\symup{c}^{2}$还是太麻烦了，我们不妨采用$\symup{c}=\symup{G}=1,\eta=1$,中心天体质量$M$也为$1$,据此先将粒子可能的运动分成三类：
+这么多$\symup{c}^{2}$还是太麻烦了，我们不妨采用$\symup{c}=\symup{G}=1,\eta=1$,中心天体质量$M$也为 1，据此先将粒子可能的运动分成三类：
 
 \quad-\quad $E^{2}<1,$束缚态；
 
@@ -2248,7 +2249,7 @@ U=1-\frac{2}{r}+\frac{\widetilde{L}^{2}}{r^{2}}-\frac{2\widetilde{L}^{2}}{r^{3}}
 \label{等效势阱。}
 \end{figure}
 
-在$r$较小的地方，$\widetilde{L}>4$的时候有一峰值大于 1 的势垒，在$r$较大的地方有一势阱（图\ref{等效势阱。}并未绘制出，但随着$r$的增大，$U$会回升至趋向于 1 的情形），此时三类运动都是可能发生的。随着$\widetilde{L}$减小，势垒也在下降，$\widetilde{L}\le4$时，势垒降到$1$以下，散射态消失了。$\widetilde{L}<2\sqrt{3}$时，势垒也消失了，此时也没有势阱的概念了，粒子有很大可能向引力源坠落。实际上，牛顿引力论可以实现半径任意小的圆轨道，但是根据相对论的等效势不可能实现。对于
+在$r$较小的地方，$\widetilde{L}>4$的时候有一峰值大于 1 的势垒，在$r$较大的地方有一势阱（图\ref{等效势阱。}并未绘制出，但随着$r$的增大，$U$会回升至趋向于 1 的情形），此时三类运动都是可能发生的。随着$\widetilde{L}$减小，势垒也在下降，$\widetilde{L}\le4$时，势垒降到 1 以下，散射态消失了。$\widetilde{L}<2\sqrt{3}$时，势垒也消失了，此时也没有势阱的概念了，粒子有很大可能向引力源坠落。实际上，牛顿引力论可以实现半径任意小的圆轨道，但是根据相对论的等效势不可能实现。对于
 \begin{equation}
 \Phi_{\text{eff}}(r)=\frac{\widetilde{L}^{2}}{2r^{2}}-\frac{\symup{G}M\widetilde{L}^{2}}{\symup{c}^{2}r^{3}}-\frac{\symup{G}M}{r}+\frac12\symup{c}^{2},
 \end{equation}
