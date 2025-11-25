@@ -25,7 +25,7 @@
 \cline{1-3}
 温度 & $\qty{20}{K},\qty{100}{K},\qty{e4}{K},\ce{H2},\ce{H}\,\symup{\uppercase\expandafter{\romannumeral1}},\ce{H}\,\symup{\uppercase\expandafter{\romannumeral2}}$ & $10\text{\textendash}\qty{20}{K}$\\
 \cline{1-3}
-研究手段 & 星际吸收线、氢 21 厘米谱线，分子谱线 & 星际消光和红化、星际极化、红外热辐射\\
+研究手段 & 星际吸收线、$\qty{21}{cm}$谱线，分子谱线 & 星际消光和红化、星际偏振、红外热辐射\\
 \hline
 \end{tabular}
 \label{星际气体和星际尘埃的基本成分}
@@ -40,7 +40,7 @@
 \hline
 成分 & 观测证据 & 温度 $\left(\unit{K}\right)$ & 数密度$\left(\symup{cm^{-3}}\right)$ & 质量百分比\\
 \cline{1-5}
-分子云 & 红外辐射、紫外吸收线、$\ce{CO}$射电和红外辐射 & $10\text{\textendash}50$ & $10^{2}\text{\textendash}10^{9}$ & $40\%$\\
+分子云 & 红外辐射、紫外吸收线、$\ce{CO}$谱线 & $10\text{\textendash}50$ & $10^{2}\text{\textendash}10^{9}$ & $40\%$\\
 \cline{1-5}
 $\ce{H}\,\symup{\uppercase\expandafter{\romannumeral1}}$区 & 21 厘米谱线，紫外吸收线 & $50\text{\textendash}100$ & $1\text{\textendash}50$ & $40\%$\\
 \cline{1-5}
@@ -54,9 +54,11 @@ $\ce{H}\,\symup{\uppercase\expandafter{\romannumeral2}}$区 & 光学和红外发
 \label{不同成分的星际介质}
 \end{table}
 
+星际介质$n\in\left(10^{-3},10^{3}\right)\,\unit{cm^{-3}},T\in\left(10,10^{7}\right)\,\unit{K}$，因此星际气体的压强基本上是相同的。
+
 \begin{figure}[!htbp]
 \centering
-\includegraphics[width=11cm]{figures/figure3_1.png}
+\includegraphics[width=14cm]{figures/figure3_1.png}
 \captionsetup{justification=raggedright, singlelinecheck=false}
 \caption{星际气体的物理状态和物质循环。}
 \label{星际气体的物理状态和物质循环。}
@@ -97,15 +99,18 @@ $\ce{H}\,\symup{\uppercase\expandafter{\romannumeral2}}$区 & 光学和红外发
 \end{align}
 因此尘埃对蓝光吸收和散射较多而对红光散射较少，导致星际消光和红化。
 
-成分为硅或石墨颗粒，外面被冰或二氧化碳包裹
+尘埃尺寸$0.001\text{\textendash}\qty{1}{\mu m}$，星系介质一半的金属在尘埃中。尘埃在 RGB、AGB 包层和超新星中形成，在激波和高热环境中被摧毁。尘埃通过吸收和瑞利散射引发消光，剩下的星光大致满足
+\begin{equation}
+\log E(\lambda)\sim\frac{1}{\lambda}.
+\end{equation}
+
+尘埃主要成分为硅或石墨颗粒，外面被冰或二氧化碳包裹
 
 星光偏振现象$\to$尘埃呈长条形（？）
 
 部分形成于红巨星的外层大气，在恒星演化晚期被吹向星际空间
 
-星际尘埃提供了原子聚集形成分子的场所，并屏蔽了星光中的紫外线使分子免遭瓦解。
-
-还有催化剂的作用
+星际尘埃提供了原子聚集形成分子的场所，并屏蔽了星光中的紫外线使分子免遭瓦解。尘埃还有催化剂的作用。
 
 星际尘埃的观测：
 
@@ -116,6 +121,44 @@ $\ce{H}\,\symup{\uppercase\expandafter{\romannumeral2}}$区 & 光学和红外发
 暗星云：大量尘埃阻挡了星云内部或恒星后面的星光
 
 红外观测：尘埃的热辐射。尘埃粒子受宇宙线和附近热星辐射的加热，温度可以达到$\qty{100}{K}$,产生红外热辐射。
+
+\subsubsection{Heating and Cooling}
+Heating 的关键在于给粒子提供动能。主要有超新星爆发（热气体、激波、包层碰撞）、辐射（紫外光子、来自尘埃的电子）、宇宙线。
+
+Cooling 的关键则是通过辐射转移动能，因此需要满足三点：系统在某些波段光学薄，非常依赖特定的温度，数密度越高越好 ($\propto{}n^{2}$).主要有轫致辐射 ($>\unit{keV}$)、重元素内层电子 ($>\qty{100}{eV}$)、电子能级 ($\sim\unit{eV}$)、分子转动能级 ($\unit{meV}$).
+
+加热效率$\Gamma$主要和位置、电离能级、尘埃组分有关，冷却效率主要和温度和数密度有关。光学薄系统中，平衡满足
+\begin{equation}
+\mathcal{L}=\Lambda-\Gamma=0.
+\end{equation}
+
+\begin{figure}[!htp]
+\centering
+\tikzset{every picture/.style={line width=0.75pt}}
+\begin{tikzpicture}[x=0.5pt,y=0.5pt,yscale=1,xscale=1]
+\draw (0,0) -- (0,250) ;
+\draw [shift={(0,250)},rotate=270][line width=0.75](10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29); 
+\draw (0,0) -- (350,0) ;
+\draw [shift={(350,0)},rotate=180][line width=0.75](10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29); 
+\draw (20,220) -- (60,180) ;
+\draw (60,180) -- (120,180) ;
+\draw (120,180) -- (130,120) ;
+\draw (130,120) -- (190,120) ;
+\draw (190,120) -- (200,60) ;
+\draw (200,60) -- (290,40) ;
+%Text
+\draw (-20,300) node [anchor=north west][inner sep=0.75pt]   [align=left] {$\log T$};
+\draw (350,-20) node [anchor=north west][inner sep=0.75pt]   [align=left] {$\log n$};
+\draw (20,60) node [anchor=north west][inner sep=0.75pt]   [align=left] {Heating,$\mathcal{L}<0$};
+\draw (20,260) node [anchor=north west][inner sep=0.75pt]   [align=left] {轫致辐射};
+\draw (140,200) node [anchor=north west][inner sep=0.75pt]   [align=left] {重离子};
+\draw (200,140) node [anchor=north west][inner sep=0.75pt]   [align=left] {电子能级};
+\draw (290,40) node [anchor=north west][inner sep=0.75pt]   [align=left] {分子振动};
+\end{tikzpicture}
+\captionsetup{justification=raggedright, singlelinecheck=false}
+\caption{加热冷却图。水平平台和能级有关，因为 cooling 只在特定能级发生，在这些能级处温度变化一点，要维持冷却效率不变，就要引起数密度巨大的变化。同时水平平台稳定平衡，竖直平台不稳定平衡。}
+\label{加热冷却图。}
+\end{figure}
 
 \subsection{恒星形成}
 
