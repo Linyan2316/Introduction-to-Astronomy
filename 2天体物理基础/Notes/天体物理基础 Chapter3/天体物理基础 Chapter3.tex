@@ -31,7 +31,7 @@
 \label{星际气体和星际尘埃的基本成分}
 \end{table}
 
-\subsubsection{星际气体}
+\subsubsection{星际气体概览}
 星际气体的组成元素主要是氢元素。星际气体的空间分布不均匀，不同环境下 H 的存在方式不一样。
 \begin{table}[!htbp]
 \centering
@@ -159,6 +159,35 @@ Cooling 的关键则是通过辐射转移动能，因此需要满足三点：系
 \caption{加热冷却图。水平平台和能级有关，因为 cooling 只在特定能级发生，在这些能级处温度变化一点，要维持冷却效率不变，就要引起数密度巨大的变化。同时水平平台稳定平衡，竖直平台不稳定平衡。}
 \label{加热冷却图。}
 \end{figure}
+
+\subsubsection{单区瞬时演化模型}
+我们已经知晓，恒星的形成与演化会不断将 $\ce{H},\ce{^{}He}$ 元素转化为金属元素，如果我们通过观测大致获得星系产生重元素的平均速率，那么就可以通过建立星际介质中金属丰度和时间的函数关系。
+
+为简化模型，我们假设星系气体总是充分混合，恒星聚变产物瞬时返回星际介质，没有任何气体从星系逃离也没有任何气体流入。记时刻$t$的气体质量为$M_{\text{g}}\left(t\right)$，金属丰度为$Z\left(t\right)$, 低质量恒星（寿命太长，产物在可预见的时标内不会返回到星际空间中）和大质量恒星遗迹（中子星、黑洞等，重元素被“锁”在其中也无法返回星际介质）的质量为$M_{*}\left(t\right)$,从恒星中返回星际介质的气体金属丰度为$p$.
+
+现在有$\Delta{}M_{\text{g}}'\left(t\right)$的气体形成恒星，同时有$\Delta{}M_{\text{g}}''\left(t\right)$的气体返回星际介质，因此$\Delta{}M_{\text{g}}\left(t\right)=\Delta{}M_{\text{g}}''\left(t\right)-\Delta{}M_{\text{g}}'\left(t\right)$,同时$\Delta{}M_{*}\left(t\right)=-\Delta{}M_{\text{g}}\left(t\right)$的气体留在恒星遗迹中。星际介质金属丰度的变化为
+\begin{equation}
+\Delta{}Z=Z'-Z\approx\frac{ZM_{\text{g}}-Z\Delta{}M_{\text{g}}'+p\Delta{}M_{\text{g}}''}{M_{\text{g}}}-Z=\frac{p\Delta{}M_{\text{g}}}{M_{\text{g}}}.
+\end{equation}
+
+如果$p$不依赖于金属丰度，那么
+\begin{equation}
+\frac{\Delta{}Z}{p}=-\frac{\Delta{}M_{\text{g}}}{M_{\text{g}}}.
+\end{equation}
+因此气体金属丰度随时间增加
+\begin{equation}
+Z\left(t\right)=Z_{0}+p\ln\left[\frac{M_{\text{g0}}}{M_{\text{g}}}\right].
+\end{equation}
+$M_{\text{g}0}-M_{\text{g}}$是已经转化成恒星的气体质量，因此金属丰度小于一定值$Z$的恒星质量为
+\begin{equation}
+M\left(<Z\right)=M_{\text{g0}}\left(1-\symup{e}^{-\frac{Z-Z_{0}}{p}}\right).
+\end{equation}
+金属丰度在$Z$和$Z+\Delta{}Z$之间恒星的质量为
+\begin{equation}
+\frac{\symup{d}M_{*}}{\symup{d}Z}\Delta{}Z\propto{}\exp\left\{-\left[Z-Z_{0}/p\right]\Delta{}Z\right\}.
+\end{equation}
+
+银河系核球区域，核球引力可能成功地留住了所有气体，并完全将其变成了恒星，所以观测结果能够与单区瞬时循环模型预言复合较好。太阳附近模型检验则有一些问题。模型给出贫金属星$Z<\qty{0.25}{Z_{\odot}}$比例约 40\%，实际上仅有$25\%$.可能出于以前恒星形成所导致的重元素预增丰，或者闭合假定和瞬时混合假定不成立，气体内流外流影响了重元素丰度。
 
 \subsection{恒星形成}
 
