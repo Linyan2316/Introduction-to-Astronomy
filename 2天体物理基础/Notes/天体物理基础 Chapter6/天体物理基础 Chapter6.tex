@@ -74,7 +74,7 @@ Y=2\frac{\ce{n}/\ce{p}}{1+\ce{n}/\ce{p}}\sim0.36.
 
 扣除银河系尘埃辐射和偶极不对称性有十几万分之几$\unit{K}$变化，表明宇宙演化早期有微小的不均匀性，导致星系形成。
 
-Sunyaev-Zel'dovich 效应：背景辐射穿过星系团部分光子被星际中气体的高能电子散射到高频波段，导致 CMB 能谱改变。如果星系团相对于 CMB 静止参考系存在一个本动速度，也会导致 CMB 辐射强度的变化。运动学 S-Z 效应比热 S-Z 效应弱。
+Sunyaev-Zel'dovich 效应：CMB 光子被星系团热气体中高能电子散射到高频波段，导致 CMB 能谱改变。如果星系团相对于 CMB 静止参考系存在一个本动速度，也会导致 CMB 辐射强度的变化。运动学 S-Z 效应比热 S-Z 效应弱。
 
 结合 X 射线观测确定 Hubble 常数和利用星系团的 S-Z 效应计数可以确定角直径距离、限制宇宙学基本参量、研究星系团的演化。从而最终限制宇宙学模型。
 
@@ -87,11 +87,10 @@ Sunyaev-Zel'dovich 效应：背景辐射穿过星系团部分光子被星际中�
 \chi\left(z\right)=\qty{3.4e-3}{}\frac{\left(\Omega_{\text{m}}h_{70}^{2}\right)^{\frac{1}{2}}}{\Omega_{\text{b}}h_{70}^{2}}\left(\frac{z}{1000}\right)^{12.75}=0.04\left(\frac{z}{1000}\right)^{12.75},
 \end{equation}
 计算光深
-\begin{align}
-\symup{d}\tau&=n_{{\color{blue}{\ce{e}}}}\left(z\right)\chi\left(z\right)\sigma_{\text{T}}\frac{\symup{d}l}{\symup{d}z}\symup{d}z.\\
-\tau\left(z\right)&=\int_{0}^{z}n_{{\color{blue}{\ce{e}}}}\left(z\right)\chi\left(z\right)\sigma_{\text{T}}\frac{\symup{d}l}{\symup{d}z}\symup{d}z.
-\end{align}
-$n_{{\color{blue}{\ce{e}}}}$和$\dfrac{\symup{d}l}{\symup{d}z}$都依赖于$\Omega_{\text{m}}$和$h_{70}^{2}$，因此积分结果最后只和$z$有关
+\begin{equation}
+\tau\left(z\right)=\int_{0}^{z}n_{{\color{blue}{\ce{e}}}}\left(z\right)\chi\left(z\right)\sigma_{\text{T}}\frac{\symup{d}l}{\symup{d}z}\symup{d}z.
+\end{equation}
+$n_{{\color{blue}{\ce{e}}}}$和$\dfrac{\symup{d}l}{\symup{d}z}$依赖于$\Omega_{\text{b}},\Omega_{\text{m}}$和$h_{70}^{2}$,因此积分结果最后只和$z$有关
 \begin{equation}
 \tau\left(z\right)=0.37\left(\frac{z}{1000}\right)^{14.25}.
 \end{equation}

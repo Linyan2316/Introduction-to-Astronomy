@@ -18,7 +18,7 @@
 就不赘述了。
 
 \subsubsection{恒星的能量来源}
-太阳为地球提供了大量的光和热，一个很自然的问题便出现在科学家们的脑海中：恒星的能量来源是什么？有人 (Herschel, 1837) 认为来自氢氧合成水过程中所释放的化学能，有人 (Mayer, 1846) 认为来自小行星撞击恒星所提供的能量。一个看起来比较靠谱的猜想是引力能的释放 (Waterson, Helmholtz, Kelvin, 1850), 恒星不断向外辐射能量，内能降低导致压强下降，此时为了平衡引力恒星就会收缩，引力能在此过程中转化为内能。那么这个过程足以维持数亿年的辐射吗？假设恒星密度均匀，恒星的引力能为
+太阳为地球提供了大量的光和热，一个很自然的问题便出现在科学家们的脑海中：恒星的能量来源是什么？有人 (Herschel, 1837) 认为来自氢氧合成水过程中所释放的化学能，有人 (Mayer, 1846) 认为来自小行星撞击恒星所提供的能量。一个看起来比较靠谱的猜想是引力能的释放 (Waterson, Helmholtz, Kelvin, 1850), 恒星不断向外辐射能量，内能降低导致压强下降，此时为了平衡引力恒星就会收缩，引力能在此过程中转化为内能。这看起来是个靠谱的答案，但此过程中所释放的能量足以维持数亿年的辐射吗？假设恒星密度均匀，恒星的引力能为
 \begin{align}
 \symup{d}U_{\text{g},i}&=-\symup{G}\frac{M_{r}\symup{d}m_{i}}{r},\notag\\
 U_{\text{g}}&=-\symup{G}\int_{0}^{R}\frac{4}{3}\pi r^{3}\rho \frac{4\pi r^{2}\rho\symup{d}r}{r}\notag\\
@@ -30,7 +30,7 @@ U_{\text{g}}&=-\symup{G}\int_{0}^{R}\frac{4}{3}\pi r^{3}\rho \frac{4\pi r^{2}\rh
 \end{equation}
 而地质鉴定告诉我们地球已有 46 亿年的历史，因此人们还需寻找其他类型的能源。
 
-到了 1920 年代，卢瑟福等人已经测定了原子核的质量，同时相对论质能方程的提出让人们意识到恒星的能量可能来自于热核反应。那么，恒星内部的环境满足进行核聚变的条件吗？我们先估计一下电荷数最小的氢原子聚变所需克服的经典库仑势垒。取质子直径$r\sim\qty{e-15}{m}$,所需的温度为
+到了 1920 年代，卢瑟福等人已经测定了原子核的质量，同时相对论质能方程的提出让人们意识到恒星的能量可能来自于热核反应。那么恒星内部环境支持核聚变发生吗？我们先估计一下电荷数最小的氢原子聚变所需克服的经典库仑势垒。取质子直径$r\sim\qty{e-15}{m}$,所需的温度为
 \begin{align}
 \frac{1}{2}m_{\ce{H}}v^{2}&=\frac{3}{2}k_{\text{B}}T_{\text{classical}}=\frac{1}{4\pi\varepsilon_{0}}\frac{Z_{1}Z_{2}{\color{blue}{\ce{e}}}^{2}}{r},\\
 T_{\text{classical}}&=\frac{Z_{1}Z_{2}{\color{blue}{\ce{e}}}^{2}}{6\pi\varepsilon_{0}k_{\text{B}}r}\sim\qty{e10}{K}.
@@ -45,7 +45,7 @@ T_{\text{quantum}}&=\frac{Z_{1}^{2}Z_{2}^{2}{\color{blue}{\ce{e}}}^{4}m_{\ce{H}}
 \begin{equation}
 P=\int_{0}^{P}\symup{d}P=\int_{R}^{0}-\frac{\symup{G}M_{r}\rho}{r^{2}}\symup{d}r=\int_{R}^{0}-\frac{\symup{G}4\pi{}r^{3}\rho^{2}}{3r^{2}}\symup{d}r=\frac{2\pi{}}{3}\rho^{2}\symup{G}R^{2},\overline{P}\sim\qty{e14}{Pa},
 \end{equation}
-因此太阳平均温度可达$T=\dfrac{\mu m_{\ce{H}}\overline{P}}{k_{\text{B}}\rho}\sim\qty{5e6}{K}$,核心温度可达$\qty{1.5e7}{K}$,仅凭借引力能达到的高温就足以支持氢的热核反应。
+因此太阳平均温度可达$T=\dfrac{\mu m_{\ce{H}}\overline{P}}{k_{\text{B}}\rho}\sim\qty{5e6}{K}$,核心温度可达$\qty{1.5e7}{K}$,因此仅凭借云团坍缩过程中所释放的引力能就足以达到支持热核反应所需要的高温。
 
 热核反应的速率取决于粒子速度分布和反应截面（沿用了散射截面的概念，表征具有某速度的粒子穿越库仑势垒的概率）。粒子速度越高反应截面越大，但由于粒子分布大多满足 Maxwell 速度分布，速度越高粒子数越少，反应速率降低，因此只有速度在一定区间内的粒子才能进行有效的反应，这个区间也被称作 Gamov 窗口。
 
@@ -63,13 +63,12 @@ P\propto{}\exp\left[-\frac{1}{2\varepsilon_{0}\hbar}\left(\frac{m}{2}\right)^{\f
 \sigma\left(E\right)&=\frac{S\left(E\right)}{E}\exp\left[-\frac{E_{\text{G}}^{\frac{1}{2}}}{E^{\frac{1}{2}}}\right],\\
 E_{\text{G}}&=\left[\frac{1}{2\varepsilon_{0}\hbar}\left(\frac{m}{2}\right)^{\frac{1}{2}}Z_{1}Z_{2}{\color{blue}{\ce{e}}}^{2}\right]^{2},
 \end{align}
-结合 Maxwell 速度分布得到反应速率
+结合 Maxwell 速度分布就能得到反应速率：
 \begin{align}
 r&=n_{1}n_{2}\int_{0}^{\infty}\sigma\left(E\right)vf\left(E\right)\symup{d}E\notag\\
 &=n_{1}n_{2}\frac{2^{\frac{3}{2}}}{\left(\pi m\right)^{\frac{1}{2}}}\frac{1}{\left(k_{\text{B}}T\right)^{\frac{3}{2}}}\int_{0}^{\infty}S\left(E\right)\exp\left(-\frac{E_{\text{G}}^{\frac{1}{2}}}{E^{\frac{1}{2}}}\right)\exp\left(-\frac{E}{k_{\text{B}}T}\right)\symup{d}E.
 \end{align}
-
-观察分布可知在某个能量处核反应速率最大，也就是 Gamow Peak:
+观察上式可知在某个能量处反应速率最大，也就是 Gamow Peak:
 \begin{equation}
 E_{0}=\left[\left(\frac{m}{2}\right)^{\frac{1}{2}}\frac{Z_{1}Z_{2}{\color{blue}{\ce{e}}}^{2}k_{\text{B}}T}{4\varepsilon_{0}\hbar}\right]^{\frac{2}{3}}=\left(\frac{E_{\text{G}}^{\frac{1}{2}}k_{\text{B}}T}{2}\right)^{\frac{2}{3}}.
 \end{equation}
@@ -89,7 +88,6 @@ r\propto{}n_{1}n_{2}\frac{S\left(E_{0}\right)}{T^{\frac{2}{3}}}\exp\left[-3\left
 r\Delta\varepsilon&=\rho\varepsilon.\\
 &\varepsilon=C\rho X_{1}X_{2}\frac{1}{T^{\frac{2}{3}}}\exp\left[-3\left(\frac{{\color{blue}{\ce{e}}}^{4}}{32\varepsilon_{0}^{2}k_{\text{B}}\hbar^{2}}\frac{mZ_{1}^{2}Z_{2}^{2}}{T}\right)^{\frac{1}{3}}\right].
 \end{align}
-其中$X_{i}$是该元素的质量百分比。
 
 \subsubsection{恒星中的聚变过程}
 氢核聚变是最为常见的热核反应，其核反应方程式为
@@ -129,7 +127,7 @@ r\Delta\varepsilon&=\rho\varepsilon.\\
 \begin{equation}
 \ce{^{1}H +^{1}H +{\color{blue}{\ce{e}}}^{-} ->^{2}H}+\nu.
 \end{equation}
-三体碰撞各粒子各自能具有的动能有更多的自由度。
+三体碰撞各粒子碰撞所需的动能分配有更多的自由度。
 
 温度高于$\qty{e8}{K}$，将会进行氦燃烧：
 \begin{align*}
@@ -306,6 +304,7 @@ P=\frac{8\pi}{15h^{3}m_{{\color{blue}{\ce{e}}}}}p_{\text{F}}^{5}=\frac{3^{\frac{
 \begin{equation}
 P=\frac{2\pi\symup{c}}{3h^{3}}p_{\text{F}}^{4}=\frac{3^{\frac{1}{3}}}{8\pi^{\frac{1}{3}}}h\symup{c}n_{{\color{blue}{\ce{e}}}}^{\frac{4}{3}}.
 \end{equation}
+因此压强只与密度有关，和温度无关，简并时负反馈失效。
 
 现在我们总结一下物质的形态以及不同密度温度下对抗引力的主要力量：
 \begin{figure}[!htp]
@@ -397,7 +396,7 @@ I\left(0,\mu\right)&=\frac{3F}{4\pi}\left(\mu+\frac{2}{3}\right).
 \begin{equation}
 \frac{\symup{d}T}{\symup{d}r}=-\frac{3}{4a_{\text{B}}\symup{c}}\frac{\kappa\rho}{T^{3}}\frac{L_{r}}{4\pi r^{2}}.\label{2.1.68}
 \end{equation}
-可见不透明度$\kappa$会影响辐射能传输的效率。不透明度下降，散逸的能量增多，导致核心区温度下降，压强下降，恒星收缩，密度上升，进而导致不透明度上升，产生$\kappa$机制振荡。此处有个题外的知识点，太阳光球层温度仅有$\qty{6000}{K}$，氢原子难以激发，何来不透明度？原因在于氢负离子的电子容易被激发。 
+可见不透明度$\kappa$会影响辐射能传输的效率。不透明度下降，散逸的能量增多，导致核心区温度下降，压强下降，恒星收缩，密度上升，进而导致不透明度上升，产生$\kappa$机制振荡。此处有个题外的知识点，太阳光球层温度仅有$\qty{6000}{K}$，氢原子难以激发，何来不透明度？原因在于氢负离子的电子容易被激发。
 
 (\ref{2.1.68}) 式还有另一种推导方式，根据 (\ref{2.1.57}) 式，可以得到
 \begin{equation}
@@ -449,9 +448,7 @@ $\qty{0.8}{M_{\odot}}<M<1.5\text{\textendash}\qty{2}{M_{\odot}}$的恒星，拥�
 $\qty{0.1}{M_{\odot}}<M<\qty{0.8}{M_{\odot}}$的主序星，低温，整体对流。
 
 \subsubsection{多方球模型}
-结合边界条件：$r=0$时，$M\left(r\right)=0,L=0$; $r=R$时，$M\left(r\right)=M,T\left(r\right)=0,P\left(R\right)=0$.
-
-恒星的多方球模型 (Polytropic Model).首先我们假设恒星是球对称结构，各物理量只与半径有关。其次，主序星处于完全流体静力学平衡，压强（来自气压和辐射压）梯度与引力平衡，得到
+有了上述的方程，我们可以给出恒星的多方球模型 (Polytropic Model).首先考虑边界条件：$r=0$时，$M\left(r\right)=0,L=0$; $r=R$时，$M\left(r\right)=M,T\left(r\right)=0,P\left(R\right)=0$.接着我们假设恒星是球对称结构，各物理量只与半径有关。其次，主序星处于完全流体静力学平衡，压强（来自气压和辐射压）梯度与引力平衡，得到
 \begin{align}
 \frac{\symup{G}M_{r}\rho\symup{d}A\symup{d}r}{r^{2}}&=\left(P\left(r\right)-P\left(r+\symup{d}r\right)\right)\symup{d}A=-\symup{d}P\left(r\right)\symup{d}A,\\
 \frac{\symup{d}P}{\symup{d}r}&=-\frac{\symup{G}M_{r}\rho}{r^{2}}.\\
@@ -491,38 +488,20 @@ M=\int_{0}^{R}4\pi{}r^{2}\rho\symup{d}r=4\pi{}a^{3}\rho_{\text{c}}\int_{0}^{\xi_
 因此对于给定的$n$, $M\propto{}a^{3}\rho_{\text{c}}\propto{}\rho_{\text{c}}^{\frac{3-n}{2n}}$. 因此可得$R\propto{}M^{\frac{1-n}{3-n}}$.非相对论情况，$n=\dfrac{3}{2},R\propto{}M^{-\frac{1}{3}}$，白矮星吸积物质，质量逐渐增大，反而逐渐收缩，然后升温。一直到相对论情况，$n=3,R\propto{}M^{-\infty}$，直接坍缩。
 
 \subsubsection{观测检验}
-太阳对流区内的扰动在太阳内部产生各种形式的波动（日震波），表现为在太阳表面气体的起伏振荡（特征速度为几厘米/秒，周期约 5 分钟）和亮度变化。这种振荡可以通过太阳表面谱线的多普勒位移来测定。
+我们可以通过观测检验恒星模型与现实的差距。首先，太阳对流区内的扰动会在太阳内部产生各种形式的波动（日震波），观测上表现为在太阳表面气体的起伏振荡（特征速度为几厘米/秒，周期约 5 分钟）和亮度变化。这种振荡可以通过太阳表面谱线的多普勒位移来测定。由于振动频率可以精确测定，且频率依赖于恒星内部结构，恒星内部不同区域振荡模式不同，我们可以利用太阳的振荡现象研究太阳的内部结构。
 
-由于振动频率可以精确测定，且频率依赖于恒星内部结构，恒星内部不同区域振荡模式不同，我们可以利用太阳的振荡现象研究太阳的内部结构。
+其次，我们可以使用中微子进行观测。由于太阳内部光深极高，近似局域热动平衡，因此光子很难传递出来，我们所接收到的太阳辐射等效于产生自$10^{5}\text{\textendash}10^{7}$年前的太阳内部。而中微子是一种不带电、质量极小的亚原子粒子，几乎不与任何物质相互作用，因此我们所观测到的中微子近似产生于当下。太阳内部核聚变释放能量的大约有$5\%$被中微子携带向外传输。
 
-中微子是一种不带电、质量极小的亚原子粒子，几乎不与任何物质相互作用。
-
-太阳内部核聚变释放能量的$5\%$被中微子携带向外传输。
-
-目前接收到的太阳的辐射实际上产生于$10^{5}\text{\textendash}10^{7}$年前的太阳内部，而中微子几乎产生于现在。
-
-中微子会和四氯乙烯相互作用，生成半衰期$35$天的$\ce{Ar}$:
+我们可以用四氯乙烯和纯水探测中微子。中微子会和四氯乙烯相互作用，生成半衰期$35$天的$\ce{Ar}$:
 \begin{equation}
 \ce{^{37}Cl}+\nu_{\ce{e}}\ce{->^{37}Ar +e-}.\\
 \end{equation}
-要进行反应$\nu_{\ce{e}}$能量最低达到$\qty{0.814}{MeV}$, 而$\ce{^{37}Ar}$的半衰期为 35 天。
+要进行反应$\nu_{\ce{e}}$能量最低达到$\qty{0.814}{MeV}$, 而$\ce{^{37}Ar}$的半衰期为 35 天。而在纯水中，中微子撞击电子将能量传递给电子后高速电子会产生切伦科夫辐射。
 
-也可以用纯水进行探测，中微子撞击电子将能量传递给电子后高速电子会产生切伦科夫辐射。
-
-实际测量到的太阳中微子数目只有理论计算值的$\dfrac{1}{3}\text{\textendash}\dfrac{2}{3}$.
-
-中微子在传播过程中发生了转换。太阳内部核反应只产生电子中微子，途中会产生$\mu$中微子和$\tau$中微子。表现为探测器白天黑夜得到的结果不一致（夜晚中微子穿过地球走的距离更长，转换得更多）。
-
-1998 年日本超级神冈探测器通过测量大气中的$\mu$中微子变化，发现中微子振荡现象。
-
-2001 年加拿大萨德伯里探测器测量到三种中微子，其中 35\%是电子中微子。
+中微子观测上天文学家曾遇到过一个问题，那就是实际测量到的太阳中微子数目只有理论计算值的$\dfrac{1}{3}\text{\textendash}\dfrac{2}{3}$.原因在于中微子在传播过程中发生了转换。太阳内部核反应只产生电子中微子，途中会产生$\mu$中微子和$\tau$中微子。表现为探测器白天黑夜得到的结果不一致（夜晚中微子穿过地球走的距离更长，转换得更多）。
 
 \subsection{恒星的演化}
-恒星通过核反应产生能量，维持热平衡和流体静力学平衡。在此过程中恒星内部的化学组成发生变化。将新的化学组成作为初始条件重新代入方程组求解，得到恒星在时间$\symup{d}t$后的结构。依次类推，可以求得恒星的结构随时间的变化，即恒星的演化。
-
-Russell-Vogt 原理：如果恒星处于流体静力学平衡和热平衡，而且它的能量来自内部的核反应，它们的结构和演化就完全唯一地由初始质量和化学丰度决定。
-
-恒星的一生是与引力斗争的一生。
+恒星通过核反应产生能量，维持热平衡和流体静力学平衡。在此过程中恒星内部的化学组成发生变化。将新的化学组成作为初始条件重新代入方程组求解，得到恒星在时间$\symup{d}t$后的结构。依次类推，可以求得恒星的结构随时间的变化，即恒星的演化。实际上，恒星的一生是与引力斗争的一生。无论化学组分如何改变，压力来源如何变化，其最终都要试图与引力抗衡。
 
 天文学中常用时标来估计某种物理过程的重要性，此处给出一些恒星演化中涉及的时标：
 
@@ -541,7 +520,11 @@ t_{\text{the}}=0.5\frac{\symup{G}M^{2}}{RL}\approx\qty{2e7}{yr}\left(\frac{M}{\u
 t_{\text{dyn}}=\frac{R}{V}\approx\sqrt\frac{R^{3}}{\symup{G}M}\approx\qty{27}{min}\left(\frac{R}{\unit{R_{\odot}}}\right)^{\frac{3}{2}}\left(\frac{M}{\unit{M_{\odot}}}\right)^{-\frac{1}{2}}.
 \end{equation}
 
-\subsubsection{Jeans 质量与恒星形成}
+\subsubsection{Jeans 质量、恒星与行星的形成}
+要讲恒星的演化，我们最好从恒星形成讲起。
+
+恒星诞生自星际空间的巨分子云，在足够冷足够密的气体中形成。路过恒星的引力作用或超新星爆炸产生的激波会增加分子云某些区域的密度，推动恒星诞生。云团在引力作用下坍缩、分裂，引力势能转化为热能，生成原恒星，最后转变为零龄主序星。
+
 流体静力学方程组
 \begin{align}
 &\frac{\partial{}\rho}{\partial{}t}+\nabla\cdot\left(\rho\symbf{v}\right)=0.\\
@@ -559,21 +542,18 @@ t_{\text{dyn}}=\frac{R}{V}\approx\sqrt\frac{R^{3}}{\symup{G}M}\approx\qty{27}{mi
 \end{equation}
 欧拉方程变为
 \begin{equation}
-\left(\rho_{0}+\rho_{1}\right)\left[\frac{\partial\symbf{v}_{1}}{\partial t}+\left(\symbf{v}_{1}\cdot\nabla\right)\symbf{v}_{1}\right]=-\nabla\left(P_{0}+P_{1}\right)+\left(\rho_{0}+\rho_{1}\right)\nabla\left(\Phi_{0}
-+\Phi_{1}\right).\label{2.2.11}
+\left(\rho_{0}+\rho_{1}\right)\left[\frac{\partial\symbf{v}_{1}}{\partial t}+\left(\symbf{v}_{1}\cdot\nabla\right)\symbf{v}_{1}\right]=-\nabla\left(P_{0}+P_{1}\right)+\left(\rho_{0}+\rho_{1}\right)\nabla\left(\Phi_{0}+\Phi_{1}\right).
 \end{equation}
 解得
 \begin{align}
 &\rho_{0}\frac{\partial\symbf{v}_{1}}{\partial t}=-c_{\text{s}}^{2}\nabla\rho_{1}-\rho_{0}\nabla\Phi_{1}.\\
 &\left(\frac{\partial{}^{2}}{\partial{}t^{2}}-c_{\text{s}}^{2}\nabla^{2}-4\pi\symup{G}\rho_{0}\right)\rho_{1}=0.
 \end{align}
-上式中，如果引力可被忽略，就是声波方程。如果压力可被忽略，$\rho_{1}\propto{}\exp\left[\sqrt{4\pi\symup{G}\rho_{0}}t\right]$.通过三维傅立叶变换可以看出波数和密度分布。
-
-(\ref{2.2.11}) 式又称流体静力学色散关系：
+上式中，如果引力可被忽略，就是声波方程。如果压力可被忽略，$\rho_{1}\propto{}\exp\left[\sqrt{4\pi\symup{G}\rho_{0}}t\right]$.通过三维傅立叶变换可以看出波数和密度分布。引入流体静力学色散关系：
 \begin{equation}
 \omega^{2}=k^{2}c_{\text{s}}^{2}-4\pi\symup{G}\rho_{0},
 \end{equation}
-其中$c_{\text{s}}$是声速。要让波发生演化而不是形成驻波，需要$\omega$是复数。于是我们引入金斯波长
+要让波发生演化而不是形成驻波，要求$\omega$是复数。于是我们引入金斯波长
 \begin{equation}
 \lambda_{\text{J}}=\frac{h}{p_{\text{J}}}=\frac{2\pi}{k_{\text{J}}}=\sqrt{\frac{\pi c_{\text{s}}^{2}}{\symup{G}\rho_{0}}},
 \end{equation}
@@ -595,14 +575,17 @@ Q=\frac{c_{\text{s}}\Omega}{\pi\symup{G}\Sigma}<1
 \end{equation}
 时才会坍缩。
 
-定义氢原子玻尔半径
+但是坍缩的团块不一定会形成恒星，比如像地球这样的行星是固态行星，并不是和太阳一致的等离子体。一个原因在于，地球的质量太低，引力不足以克服分子间的电磁力。我们可以估算一下团块要多重才能在自引力作用下转变为等离子体。首先定义氢原子玻尔半径
 \begin{equation}
-\alpha_{0}=\frac{4\pi\varepsilon_{0}\hbar^{2}}{m_{0}{\color{blue}{\ce{e}}}^{2}}=\frac{\hbar}{m_{0}\symup{c}\alpha}.
+\alpha_{0}=\frac{4\pi\varepsilon_{0}\hbar^{2}}{m_{0}{\color{blue}{\ce{e}}}^{2}}=\frac{\hbar}{m_{0}\symup{c}\alpha},
 \end{equation}
-
+其中$\alpha$是精细结构常数，结合能为
+\begin{equation}
+E_{\text{bind}}=\frac{1}{4\pi\varepsilon_{0}}\frac{{\color{blue}{\ce{e}}}^{2}}{\alpha_{0}}=\alpha^{2}m_{0}\symup{c}^{2}.
+\end{equation}
 想象有一大堆聚集在一起的气体，其引力势能为
 \begin{equation}
-E_{\text{gravity}}\sim\frac{\symup{G}M^{2}}{R}\sim\frac{\symup{G}N^{2}m_{\ce{p}}^{2}}{R},
+E_{\text{gravity}}\sim\frac{\symup{G}M^{2}}{R}\sim\frac{\symup{G}N^{2}m_{\ce{p}}^{2}}{R},R\sim N^{\frac{1}{3}}\alpha_{0},
 \end{equation}
 分子间的结合能为
 \begin{equation}
@@ -613,62 +596,50 @@ E_{0}\sim N\alpha^{2}m_{0}\symup{c}^{2},
 N=\left(\frac{\alpha\symup{c}\hbar}{\symup{G}m_{\ce{p}}^{2}}\right)^{\frac{3}{2}}\sim10^{54},\\
 M_{\text{c}}=Nm_{\ce{p}}\sim\qty{e30}{g}.
 \end{align}
-$M<M_{\text{c}}$，结合能胜利，固态行星，否则分子间电磁力无法抗衡引力，固态结构无法维持，将会转化为等离子体。
+$M<M_{\text{c}}$，则结合能胜利，成为固态行星，否则分子间电磁力无法抗衡引力，云团将以等离子体形式存在。
 
-亥姆霍兹开尔文时标约一千万年，恒星需要快速丢失引力势能。可能在原恒星外围有尘埃包络，吸收光学厚高能光子转化成光学薄红外光子辐射出去。
-
-太阳仅保留了$10^{-5}$的初始角动量，可能是依靠粘滞力矩将角动量往外运，将质量往里运。
-
-磁场提供磁压力，阻碍坍缩。中性材料的两极扩散带走磁性物质转移磁场。
-
-观测表明，$\qty{e-3}{M_{\odot}}$行星数量较多，随后逐渐下降，$\qty{e-2}{M_{\odot}}$逐渐观测不到，然后$\qty{e-1}{M_{\odot}}$大小的行星又开始出现。表明行星形成有两种机制。一种是大质量坍缩（所以小质量少因为不足以坍缩），一种是从尘埃开始成长（所以小质量多）。
-
-尘埃加气体盘的组合只有数百万年的寿命。
-
-类地行星更重，靠近太阳，多为硅、铁、镍、氧。类木行星易挥发成分更多，如氢、冰、氦。
-
-太阳系行星形成三步走：
-
-1. 尘埃生长$\unit{\mu m}\to\unit{cm}$,
-
-2. 行星胚胎$\unit{cm}\to\unit{km}$,
-
-3. 大质量恒星$\unit{km}\to\qty{e4}{km}$.
-
-首先，不同物质会在不同温度凝结到尘埃表面。一般当$T<\dfrac{\lambda}{R}$才会发生。当尘埃越来越重，声速逐渐降低，开始主要受旋转和引力影响，有个最大质量
-\begin{align}
-\omega^{2}=\Omega^{2}-2\pi\symup{G}\Sigma k,\lambda<4\pi^{2}\symup{G}\Sigma\Omega^{-2}.\\
-M_{\max}\sim\Sigma\lambda_{\max}^{2}\sim16\pi^{4}\symup{G}^{2}\Sigma^{3}\Omega^{-4}.
-\end{align}
-
-如果声速不可忽略不计，那么主要在大尺度发挥作用
+当然，成为等离子体也不等于成为恒星，比如木星就是一颗气态行星，但它并没有进行氢核聚变。原因在于木星质量还不够大，引力能转化为内能后所达到的温度还不够高。我们可以估算一下达到点火温度所需要的质量。首先，根据恒星的 Virial theorem, 我们知道
 \begin{equation}
-\lambda>\frac{c_{\text{s}}^{2}}{\symup{G}\Sigma}\sim\qty{e7}{AU}.
+U_{\text{g}}=\frac{\symup{G}M^{2}}{R}\sim U_{\text{k}}=Nk_{\text{B}}T,
 \end{equation}
-还可以刻画阈值声速
+记粒子间的距离为$d,d=R\times N^{-\frac{1}{3}}$,因此
 \begin{equation}
-k^{2}c_{\text{s}}^{2}\sim\Omega^{2}.
+T_{\text{vir}}\sim N^{\frac{2}{3}}\frac{\symup{G}m_{\ce{p}}^{2}}{d},
 \end{equation}
-声速受到速度和温度限制
+但值得注意的是，当质量足够高时，简并效应开始发挥作用，因此上式需要添加修正项，转为
 \begin{equation}
-c_{\text{s}}\sim\left(\frac{3k_{\text{B}}T}{m}\right)^{\frac{1}{2}},
+T\sim N^{\frac{2}{3}}\frac{\symup{G}m_{\ce{p}^{2}}}{d}-\frac{1}{m_{0}d^{2}},
 \end{equation}
-因此由缓慢移动的大量粒子组成的气体将比原子/分子盘更易受重力不稳定影响。对于$\lambda\sim\qty{e4}{km},\\c_{\text{s}}\sim\qty{e-7}{km\cdot{}s^{-1}}$，引力坍缩时标大概一百万年。
+对给定粒子数，$d$取$2N^{-\frac{2}{3}}\left(m_{0}\alpha_{\text{G}}\right)^{-1}$时$T$有最大值，其中$\alpha_{\text{G}}=\dfrac{\symup{G}m_{\ce{p}}^{2}}{\hbar\symup{c}}$:
+\begin{equation}
+T=N^{\frac{4}{3}}\alpha_{\text{G}}^{2}m_{0}.
+\end{equation}
+而进行热核反应所需的温度为
+\begin{equation}
+T_{\text{nuc}}=\eta\alpha^{2}m_{\ce{p}},
+\end{equation}
+可以得到临界粒子数密度为
+\begin{equation}
+N=\eta^{\frac{3}{4}}\left(\dfrac{m_{\ce{p}}}{m_{0}}\right)^{\frac{3}{4}}\left(\frac{\alpha}{\alpha_{\text{G}}}\right)^{\frac{3}{2}},
+\end{equation}
+假定$\eta=0.1$,临界质量为
+\begin{equation}
+M_{*}=Nm_{\ce{p}}\sim\qty{e32}{g}\sim\qty{0.05}{M_{\odot}}.
+\end{equation}
+精确计算要求云团质量达到$\qty{0.08}{M_{\odot}}$才能点火，否则简并效应就支持恒星结构，变成褐矮星。
 
-最后一步，$\unit{km}$级别行星胚胎碰撞成大质量行星。类地行星的大气是由来自“雪线”之外的富含挥发性物质的行星胚胎撞击形成的。大于五倍地球质量的行星还能吸积大量的氢和氦气体。
+关于恒星形成还有其他一些问题。云团坍缩时会慢慢形成盘状结构，观测上此结构大约只维持数百万年，因此恒星需要在短时间内快速丢失多余的引力势能和质量。引力势能可通过辐射释放，在原恒星周围可以有尘埃包络，它们会吸收高能光子，转化成红外光子辐射出去。而角动量则通过吸积盘的粘滞力矩转移出去。关于吸积盘更具体的细节我们打算在 AGN 部分再做详细阐述。
 
-大质量行星清空空隙导致旋臂密度变化，产生扭矩，大质量行星能迁移到离太阳更近的地方。
+观测表明，$\qty{e-3}{M_{\odot}}$质量对行星数量较多，随后逐渐下降，$\qty{e-2}{M_{\odot}}$逐渐观测不到，然后$\qty{e-1}{M_{\odot}}$大小的行星又开始出现。表明行星质量的云团形成有两种机制，一种是从大质量的云团中坍缩分裂出来，由于分裂出小质量的概率低因此数量少；一种是从尘埃开始逐渐生长，因此小质量云团数量多。我们认为后一种模式大概分成三步，其一是尘埃生长，由$\unit{\mu m}$团块生长为$\unit{cm}$团块，第二步逐渐生长为$\unit{km}$大小的行星胚胎，最后一步成长为$\qty{e4}{km}$尺度的大质量恒星。
 
 \subsubsection{主序星演化}
-随着核反应的进行，核心区的$\ce{H}$元素越来越少，直至枯竭，全部转变成$\ce{He}$.
+Russell-Vogt 原理：如果恒星处于流体静力学平衡和热平衡，而且它的能量来自内部的核反应，它们的结构和演化就完全唯一地由初始质量和化学丰度决定。
 
 主序带：主序星从核心$\ce{H}$燃烧开始到结束在赫罗图上占据的带状区域。
 
 核反应$4\ce{^{1}H}\to\ce{^{4}He}$, 导致核心区粒子数下降，压强下降，核心收缩，温度上升，核反应产能率上升，光度上升，包层压力上升，恒星半径上升。
 
-Schonberg-Chandrasekhar 质量极限：主序结束后在恒星核心形成一个等温氦核。氦核的内部压强必须能够支撑其上部包层物质的质量。
-
-当恒星核心区的氢完全耗尽，恒星开始脱离主序。小质量、中等质量和大质量恒星主序后的演化路径差别很大。
+随着核反应的进行，核心区的$\ce{H}$元素越来越少，直至枯竭，全部转变成$\ce{He}$.当恒星核心区的氢完全耗尽，恒星开始脱离主序。小质量、中等质量和大质量恒星主序后的演化路径差别很大。
 
 大部分的$\ce{H,He}$和少部分的$\ce{Li,B,Be}$形成于宇宙大爆炸初期。
 
@@ -681,9 +652,9 @@ Schonberg-Chandrasekhar 质量极限：主序结束后在恒星核心形成一�
 
 $\ce{^{26}Al}$只产生于核坍缩超新星爆发，它的半衰期只有$\qty{7e5}{yr}$.
 
-中小质量恒星演化产生$\ce{C,N}$
-大质量恒星演化产生$\ce{O}$
-白矮星双星演化出$\ce{Fe}$
+中小质量恒星演化产生$\ce{C,N}$,大质量恒星演化产生$\ce{O}$,白矮星双星演化出$\ce{Fe}$.
+
+Schonberg-Chandrasekhar 质量极限：主序结束后在恒星核心形成一个等温氦核。氦核的内部压强必须能够支撑其上部包层物质的质量。
 
 不同质量恒星演化主要区别：
 
@@ -723,31 +694,6 @@ $\ce{^{26}Al}$只产生于核坍缩超新星爆发，它的半衰期只有$\qty{
 
 镜像原理：恒星处于壳层燃烧阶段时，恒星的核与包层相对该壳层作径向运动。即核收缩，包层扩张，核扩张，包层收缩。
 
-随着表面温度的降低，$\ce{H-}$导致的不透明度增大，恒星对流区延伸到恒核心。林忠四郎线反映了（流体静力学）稳定的恒星在赫罗图上的边界。林忠四郎线左侧，对流和辐射可以有效传输能量。林忠四郎线右侧，没有任何机制可以有效传输能量。
-
-\subsubsection{\texorpdfstring{$M>\qty{2}{M_{\odot}}$}{}恒星的主序后演化}
-
-恒星内部的$\ce{H}$燃烧通过$\symup{CNO}$循环进行，内部温度更高，辐射压对维持恒星的力学平衡起更大的作用，主序寿命更短。氦核不再简并。更重元素的燃烧可以平稳进行。核心区产生的能量主要以对流的方式向外传递。
-
-\subsubsection{\texorpdfstring{$M>\qty{5}{M_{\odot}}$}{}恒星的主序后演化}
-\begin{figure}[!htbp]
-\centering
-\includegraphics[width=10cm]{figures/figure2_6.png}
-\captionsetup{justification=raggedright, singlelinecheck=false}
-\caption{}
-\label{5M 恒星演化轨迹。}
-\end{figure}
-
-\subsubsection{\texorpdfstring{$M>\qty{8}{M_{\odot}}$}{}恒星的主序后演化}
-
-观测表现为$\rm O$型星$\to$蓝超巨星$\to$黄超巨星$\to$红超巨星$\to$超新星。
-
-\subsubsection{\texorpdfstring{$M>\qty{25}{M_{\odot}}$}{}恒星的主序后演化}
-
-$\ce{O}$型星$\to$蓝超巨星$\to$红超巨星$\to$ WR 星$\to$ \uppercase\expandafter{\romannumeral1}b/\uppercase\expandafter{\romannumeral1}c 型超新星$\to$中子星/黑洞
-
-高光度恒星通常有很强的星风（损失率$\sim10^{-6}\text{\textendash}\qty{e-4}{M_{\odot}yr^{-1}}$），可以剥离恒星包层使氦核裸露。这类天体被称作沃尔夫{}-{}拉叶 (Wolf-Rayet, WR) 星。
-
 \begin{table}[!htbp]
 \centering
 \caption{类太阳恒星的主序后演化过程。}
@@ -769,7 +715,7 @@ branch, RGB) & 壳层氢燃烧产能率上升，半径上升， & 攀升成为�
  & 温度上升至氦爆燃，电子简并解除 & \\
 \cline{1-3}
 水平支 & 氦核燃烧，核心区半径上升，温度下降 & 向左下方移动至水平支\\
-(horizontal branch) & 壳层氢燃烧，壳层半径下降，温度上升 & \\
+(horizontal branch) & 壳层氢燃烧，壳层半径下降，温度上升 & 似乎有回到主序的倾向\\
 (HB) & & \\
 \cline{1-3}
 渐近巨星支 & 氦核燃烧殆尽，留下$\symup{CO}$核，$R_{\text{c}}\downarrow,T_{\text{c}}\uparrow$ & 再次向右上方攀升\\
@@ -785,7 +731,38 @@ branch, AGB) & & \\
 \hline
 \end{tabular}
 \label{类太阳恒星的主序后演化过程。}
-\end{table}
+\end{table} 
+
+随着表面温度的降低，$\ce{H-}$导致的不透明度增大，恒星对流区延伸到恒核心。林忠四郎线反映了（流体静力学）稳定的恒星在赫罗图上的边界。林忠四郎线左侧，对流和辐射可以有效传输能量。林忠四郎线右侧，没有任何机制可以有效传输能量。
+
+行星状星云是低质量恒星在死亡时抛出的气体包层，受到中心高温白矮星的辐射电离而发光。通常为环形，年龄不超过五万年。
+
+\subsubsection{\texorpdfstring{$M>\qty{2}{M_{\odot}}$}{}恒星的主序后演化}
+
+恒星内部的$\ce{H}$燃烧通过$\ce{CNO}$循环进行，内部温度更高，辐射压对维持恒星的力学平衡起更大的作用，主序寿命更短。在核心简并之前就会触发氦聚变，不经历氦闪，更重元素的燃烧可以平稳进行。核心区产生的能量主要以对流的方式向外传递。
+
+我们知道类太阳恒星的主序后演化阶段，水平支恒星会往主序跑，意味着温度提高，温度高就会变蓝。中等质量恒星类似过程中也会变蓝，但因为它们的核心质量不同，因此与水平支恒星的亮度不同。我们称这个过程为 blue loop，与水平支区分开来。blue loop 可以出现在红超巨星、红巨星分支星或渐近巨星分支星上。一些恒星可能经历多次 blue loop，如许多脉动变星、造父变星。
+
+\subsubsection{\texorpdfstring{$M>\qty{5}{M_{\odot}}$}{}恒星的主序后演化}
+\begin{figure}[!htbp]
+\centering
+\includegraphics[width=10cm]{figures/figure2_6.png}
+\captionsetup{justification=raggedright, singlelinecheck=false}
+\caption{$M>\qty{5}{M_{\odot}}$恒星的演化轨迹。}
+\label{5M 恒星的演化轨迹。}
+\end{figure}
+
+最初流程是类似的，核心$\ce{H}$枯竭，产生$\ce{He}$核，壳层$\ce{H}$燃烧，但它们没有亚巨星支，直接就往红超巨星跑。
+
+\subsubsection{\texorpdfstring{$M>\qty{8}{M_{\odot}}$}{}恒星的主序后演化}
+
+观测表现为$\rm O$型星$\to$脱离主序的蓝超巨星$\to$黄超巨星$\to$红超巨星（前面是个一路降温的过程）$\to$超新星。
+
+\subsubsection{\texorpdfstring{$M>\qty{25}{M_{\odot}}$}{}恒星的主序后演化}
+
+$\ce{O}$型星$\to$蓝超巨星$\to$红超巨星$\to$ WR 星$\to$ \uppercase\expandafter{\romannumeral1}b/\uppercase\expandafter{\romannumeral1}c 型超新星$\to$中子星/黑洞
+
+高光度恒星通常有很强的星风（损失率$\sim10^{-6}\text{\textendash}\qty{e-4}{M_{\odot}yr^{-1}}$），可以剥离恒星包层使氦核裸露。这类天体被称作沃尔夫{}-{}拉叶 (Wolf-Rayet, WR) 星。
 
 \subsubsection{超新星爆发}
 
@@ -803,7 +780,7 @@ branch, AGB) & & \\
 
 \uppercase\expandafter{\romannumeral1}a 型超新星源自双星系统中$\symup{CO}$白矮星吸积导致热核爆发，因此没有氢氦吸收线，有硅吸收线。爆发光变曲线陡峭，极大星等可达$-19$等。而\uppercase\expandafter{\romannumeral1}b 和\uppercase\expandafter{\romannumeral1}c 型超新星源自 WR 星的核坍缩，其中\uppercase\expandafter{\romannumeral 1}b 没有氢层有氦层，后者氢氦层都被剥离，因此\uppercase\expandafter{\romannumeral 1}b 型有弱氢、强氦吸收线，\uppercase\expandafter{\romannumeral 1}c 型没有氢氦吸收线，有弱硅吸收线。
 
-\uppercase\expandafter{\romannumeral2}型超新星爆发源自超巨星的核坍缩。一个主序质量大于$\qty{8}{M_{\odot}}$,演化晚期质量大于$\qty{1.44}{M_{\odot}}$的星体，最后会发生电子俘获反应，让中微子带走大部分能量，核坍缩到中子简并，包层物质下落，引力能转化成动能产生激波反弹，壳层抛射$\alpha$元素（恒星元素合成主要是氦原子和其他原子碰撞，原子序数$+2+2$地增加），有核心和周围行星状星云残留。因为氢包层还存在，因此有氢吸收线，爆发后有一个持续几个月的平台期，来自重元素同位素的衰变。\uppercase\expandafter{\romannumeral1}b, \uppercase\expandafter{\romannumeral1}c, \uppercase\expandafter{\romannumeral2}型超新星极大星等可达$-17\sim-16$等。它们比\uppercase\expandafter{\romannumeral1}a 型超新星暗是因为中微子带走大量动能。
+\uppercase\expandafter{\romannumeral2}型超新星爆发源自超巨星的核坍缩。一个主序质量大于$\qty{8}{M_{\odot}}$,演化晚期质量大于$\qty{1.44}{M_{\odot}}$的星体，最后会发生电子俘获反应，让中微子带走大部分能量，核坍缩到中子简并，包层物质下落，引力能转化成动能产生激波反弹，壳层抛射$\alpha$元素（恒星元素合成主要是氦原子和其他原子碰撞，原子序数$+2+2$地增加），有核心和周围行星状星云残留。因为氢包层还存在，因此有氢吸收线，爆发后有一个持续几个月的平台期，来自重元素同位素的衰变。\uppercase\expandafter{\romannumeral1}b, \uppercase\expandafter{\romannumeral1}c, \uppercase\expandafter{\romannumeral2}型超新星极大星等可达$-17\sim-16$等。它们比\uppercase\expandafter{\romannumeral1}a 型超新星暗是因为中微子带走 99\% 的能量。
 
 \uppercase\expandafter{\romannumeral 1}型超新星爆轰后什么也不会剩下，重金属元素会返还到星际介质中。而其他三种超新星有致密产物，如中子星或黑洞，重元素被锁在致密产物中。
 
@@ -823,40 +800,61 @@ branch, AGB) & & \\
 经典造父变星的脉动周期越长，光度越高。质量$3\text{\textendash}\qty{10}{M_{\odot}}$的 F\text{\textendash}K 巨星，处于氦核燃烧阶段位于赫罗图主序上方的造父不稳定带。其光变主要来自表面温度的变化，半径越低，温度越高，光度又高。恒星演化到一定阶段，内部出现不稳定性，引力和压力失去平衡。维持脉动要求恒星在收缩时内部压力增大，在膨胀时内部压力减小。$\varepsilon$机制属于核心的核反应率变化。脉动主要是包层的周期性膨胀和收缩，不涉及恒星的核心。$\kappa$机制——包层不透明度的变化（阀门机制）。$\kappa\propto{}\rho{}T^{-3.5}$,一般情况下半径下降，导致温度上升，密度上升，$\kappa$减小，辐射更容易通过，包层失去能量，压力下降，半径进一步下降。但如果包层中有部分电离的元素（$\ce{He+},\ce{He++}$），恒星收缩时部分对气体做的功会被用来进一步电离气体而不是提高温度，此时温度不变而密度上升，$\kappa$增大，辐射不易通过，包层吸收能量，压力上升，半径膨胀，形成负反馈。因此脉动的显著性（参与脉动的物质量、脉动振幅）等与部分电离区的位置有关。
 
 \subsubsection{密近双星的演化}
-1864 年，法国数学家$\rm E. Roche$首先提出计算密近双星系统引力势的简化模型。
+双星非常接近，会有物质交流，影响恒星演化。我们可以考虑一个检验质点在相互绕转的天体引力势中的运动来研究密近双星系统。1864 年，法国数学家$\rm E. Roche$首先提出计算密近双星系统引力势的简化模型。其基本假设有：
 
-方法：考虑在两个互相绕转的天体的引力势中一个检验粒子的运动
+1. 每个子星的内部密度分布是球对称的，在动力学上可以认为是质点。
 
-基本假设：
-
-1. 每个子星的内部密度分布是球对称的，在动力学上可以认为是质点
-
-2. 两子星以圆轨道绕公共质心运动
+2. 两子星以圆轨道绕公共质心运动。
 
 3. 两子星的自转和公转一致。
 
 在以双星公共质心为原点的共转坐标系中，任意质点的欧拉方程是：
 \begin{align}
 \frac{\partial{}\symbf{v}}{\partial{}t}&+\left(\symbf{v}\cdot\nabla\right)\symbf{v}=-\nabla\Phi-2\symbf{\omega}\times\symbf{v}-\frac{1}{\rho}\nabla P,\notag\\
-\Phi\left(r\right)&=-\frac{\symup{G}M_{1}}{\left\vert{}\symbf{r}-\symbf{r}_{1}\right\vert{}}-\frac{\symup{G}M_{2}}{\left\vert{}\symbf{r}-\symbf{r}_{2}\right\vert{}}-\frac{1}{2}\left(\symbf{\omega}\times\symbf{r}\right)^{2}.
+\text{Roche 势}\,\Phi\left(r\right)&=-\frac{\symup{G}M_{1}}{\left\vert{}\symbf{r}-\symbf{r}_{1}\right\vert{}}-\frac{\symup{G}M_{2}}{\left\vert{}\symbf{r}-\symbf{r}_{2}\right\vert{}}-\frac{1}{2}\left(\symbf{\omega}\times\symbf{r}\right)^{2}.
 \end{align}
+如果我们考虑椭圆轨道表达式
+\begin{equation}
+r=\frac{a\left(1-e^{2}\right)}{1+e\cos\left(\theta-\omega\right)},
+\end{equation}
+并假设偏心率$e=0$,两天体质量比$q$,那么
+\begin{align}
+\symbf{r}_{1}&=\left(-\frac{q}{1+q}a,0,0\right),\symbf{r}_{2}=\left(\frac{1}{1+q}a,0,0\right),\\
+\symbf{\Phi}&=-\frac{1}{1+q}\frac{\symup{G}M_{\text{total}}}{\left\vert{}\symbf{r}-\left(-\dfrac{q}{1+q}a,0,0\right)\right\vert{}}-\frac{q}{1+q}\frac{\symup{G}M_{\text{total}}}{\left\vert{}\symbf{r}-\left(\dfrac{1}{1+q}a,0,0\right)\right\vert{}}-\frac{1}{2}\frac{\symup{G}M_{\text{total}}}{a^{3}}r^{2}.
+\end{align}
+
+\begin{figure}[!htbp]
+\centering
+\includegraphics[width=12cm]{figures/figure2_9.png}
+\captionsetup{justification=raggedright, singlelinecheck=false}
+\caption{Roche 势示意图。可以发现图片右侧中标记了五个拉格朗日点。}
+\label{Roche 势示意图。}
+\end{figure}
 
 临界等势面：同时包络两颗子星并且相接于其间一点 (L1) 的等势面。
 
-
 洛希瓣：由临界等势面包围的空间。
 
-在$\rm L_1$点，两颗子星对物质产生的作用力正好相等，$\rm Roche$势达极大值
+在 L1 点，两颗子星对物质产生的作用力正好相等，Roche 势达极大值。
+
+在 L3, L4, L5 等处星际物质也会聚集在，一起，比如木星的引力束缚了很多小行星。
+\begin{figure}[!htbp]
+\centering
+\includegraphics[width=12cm]{figures/figure2_10.png}
+\captionsetup{justification=raggedright, singlelinecheck=false}
+\caption{木星轨道上拉格朗日点处的小行星群。}
+\label{木星轨道上拉格朗日点处的小行星群。}
+\end{figure}
 
 当子星充满洛希瓣后，在内拉格朗日附近的物质处于不稳定状态，受到小扰动就会流向伴星，产生物质交流。
 
+根据双星中的一颗或两颗子星是否充满洛希瓣，可以将双星分为：
 
-根据双星中的一颗或两颗子星是否充满洛希瓣，可以将双星分为
+1. 不相接双星 (detached binaries): 两颗子星均未充满洛希瓣。
 
-不相接双星 (detached binaries): 两颗子星均未充满洛希瓣。
-半相接双星 (semidetached binaries)：一颗子星充满洛希瓣，如天琴座β。
+2. 半相接双星 (semidetached binaries)：一颗子星充满洛希瓣，如天琴座$\beta$.
 
-相接双星 (contact binaries)：两颗子星均充满洛希瓣，如大熊座 W。
+3. 相接双星 (contact binaries)：两颗子星均充满洛希瓣，如大熊座 W.
 
 双星间的物质传输：
 
@@ -864,15 +862,20 @@ branch, AGB) & & \\
 
 2. 洛希瓣渗溢（半相接、相接）：充满洛希瓣的恒星的大气通过 L1 流向伴星，并在其周围生成吸积盘。
 
+不相接、半相接可以依靠大质量恒星在演化过程中的星风传输物质。半相接、相接往往会产生洛希瓣渗溢，形成吸积盘。
+
 大陵佯谬：大陵五主星是一颗质量$\qty{3.7}{M_{\odot}}$的主序星，伴星是一颗质量$\qty{0.8}{M_{\odot}}$的亚巨星。为什么质量小的恒星反而演化得快？
 
+解释：原本亚巨星才是质量较大的主序星，它先演化充满洛希瓣，物质传输使质量发生逆转。物质传输初始较快，子星质量相等后缓慢进行。
 
+类似系统：白矮星天狼星 B 只有$\qty{1.5}{M_{\odot}}$，按理说它演化成白矮星需要经历非常长的时间，因此比质量为$\qty{2.15}{M_{\odot}}$的天狼星老得多，无法组成双星才对。答案是它原本质量较大，膨胀过程中转移了质量。
 
-行星状星云的形成：双星轨道运动改变星云形态。吸积/抛射过程产生双极结构。
+双星轨道运动会改变行星状星云形态，吸积/抛射过程会产生双极结构。
 
 蓝离散星 (Blue Stragglers) 的形成：星团中比脱离主序点处的恒星更蓝、更亮的恒星。形成机制：双星的碰撞并合、物质传输。
 
-
+\subsection{致密星}
+接下来我们会开始介绍致密星。首先列出致密星的能量来源和观测表现：
 \begin{table}[!htbp]
 \centering
 \caption{致密星能源与辐射}
@@ -894,30 +897,29 @@ branch, AGB) & & \\
 \label{致密星能源与辐射。}
 \end{table}
 
-
-\subsection{白矮星}
-白矮星内部高温高密，高温使原子电离产生大量自由电子，高密使电子简并产生电子简并压。
+\subsubsection{白矮星}
+初始质量小于$8M_{\odot}$的恒星演化到红巨星阶段，热脉冲抛射包层成为行星状星云，核心是 CO 白矮星。
 
 白矮星基本参数：
 质量$\sim0.2\text{\textendash}\qty{1.3}{M_{\odot}}$, 半径$\sim5\times10^{8}\text{\textendash}\qty{e9}{cm}$, 密度$\sim10^{5}\text{\textendash}\qty{e7}{g\cdot cm^{-3}}$, 绝对星等$M_{\symup{V}}\sim8\text{\textendash}16$, 有效温度$\sim5\times10^{3}\text{\textendash}\qty{4e4}{K}$,自转周期$\ge\qty{10}{s}$. 外层包裹着厚度约$\qty{50}{km}$，主要由氢组成的大气。
 
-对于非相对论性 ($v_{{\color{blue}{\ce{e}}}}\ll\symup{c}$) 电子，$P_{{\color{blue}{\ce{e}}}}\propto\rho^{\frac{5}{3}}$,对于相对论性电子，$P_{{\color{blue}{\ce{e}}}}\propto\rho^{\frac{4}{3}}$.
+白矮星内部高温高密，高温使原子电离产生大量自由电子，高密使电子简并产生电子简并压。对于非相对论性 ($v_{{\color{blue}{\ce{e}}}}\ll\symup{c}$) 电子，$P_{{\color{blue}{\ce{e}}}}\propto\rho^{\frac{5}{3}}$,对于相对论性电子，$P_{{\color{blue}{\ce{e}}}}\propto\rho^{\frac{4}{3}}$.
 
 随着白矮星质量增大，白矮星质量增大，简并气体运动变成相对论性。此时引力$\dfrac{\symup{G}\rho{}M}{R^{2}}\propto{}\dfrac{M^{2}}{R^{5}}$比压力$\dfrac{\symup{d}P}{\symup{d}R}\propto{}\dfrac{\rho^{\frac{4}{3}}}{R}\propto{}\dfrac{M^{\frac{4}{3}}}{R^{5}}$增长得更快，因此白矮星有质量上限。
 
 白矮星冷却产生光学、紫外辐射。由于热传导的效率很高，白矮星内部几乎是等温的。
 
-激变变星是白矮星与低质量恒星构成的半相接双星，白矮星吸积伴星物质，表面发生失控的热核反应，产生光学、紫外、X 射线辐射和爆发，同时抛射吸积物质。激变变星有新星、再发新星等分类。
+激变变星是白矮星与低质量恒星构成的半相接双星，白矮星吸积伴星物质，表面发生失控的热核反应，产生光学、紫外、X 射线辐射和爆发，同时抛射吸积物质，辐射温度约$\qty{e8}{K}$。激变变星有新星、再发新星等分类。
 
-新星的观测特征为在数天至数星期内亮度增加$7\text{\textendash}16$等，然后缓慢下降，经几个月或几年回复到原先的状态。辐射主要在光学和紫外波段，爆发时的能量释放率$\sim10^{45}\text{\textendash}\qty{e46}{erg\cdot{}s^{-1}}$,抛射约$10^{-5}\text{\textendash}\qty{e-3}{M_{\odot}}$的物质。
+新星的观测特征为在数天至数星期内亮度增加$7\text{\textendash}16$等，然后缓慢下降，经几个月或几年回复到原先的状态。辐射主要在光学和紫外波段，爆发时的能量释放率$\sim10^{45}\text{\textendash}\qty{e46}{erg\cdot{}s^{-1}}$,抛射约$10^{-5}\text{\textendash}\qty{e-3}{M_{\odot}}$的物质。(pass 能量释放率不一定是这个数值，查下资料。)
 
-物质传输会导致新星反复爆发，表现为再发新星，爆发间隔约$10\text{\textendash}100$年。
+新星爆发源自白矮星表面吸积物质爆炸性核燃烧。物质传输会导致新星反复爆发，表现为再发新星，爆发间隔约$10\text{\textendash}100$年。
 
-等总质量达到钱德拉塞卡质量极限时转变为\uppercase\expandafter{\romannumeral1}a 型超新星，光变在爆发后 20 天达到峰值，接着在一个月左右的时间内快速下降$\ce{^{56}Ni}$衰变，然后缓慢下降$\ce{^{56}Co}$衰变。
+等总质量达到钱德拉塞卡质量极限时转变为\uppercase\expandafter{\romannumeral1}a 型超新星，$\ce{CO}$核爆燃产生$\ce{^{56}Ni}$,光变在爆发后 20 天达到峰值，接着在一个月左右的时间内快速下降（$\ce{^{56}Ni}$衰变），然后缓慢下降（$\ce{^{56}Co}$衰变）。
 
 菲利普发现 B 波段峰值星等与峰值后 15 天星等的衰减量有很好的相关性。光度衰减得越快，峰值光度越低。利用该关系将光变曲线归一化后，\uppercase\expandafter{\romannumeral1}a 型超新星几乎具有相同的峰值光度，是已知最好的标准烛光源。
 
-\subsection{中子星}
+\subsubsection{中子星}
 
 白矮星质量超过钱德拉塞卡极限时，电子简并压不足以抵抗引力。原子核开始瓦解，依靠中子简并压抵抗引力。中子星可以看作是一个巨型原子核，由$\sim10^{57}$个中子构成。
 
