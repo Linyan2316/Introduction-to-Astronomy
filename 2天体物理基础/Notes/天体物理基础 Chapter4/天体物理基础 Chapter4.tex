@@ -20,9 +20,9 @@
 \subsubsection{银河系的整体结构}
 银河是天空中的一个环带，在人马座附近最亮、最宽，它的中心线近似为天球上的一个大圆。
 
-银河系是一个直径约$20$万光年，包含约$1\text{\textendash}\qty{4e11}{}$颗恒星，是具有漩涡结构的盘状星系。
+银河系是一个直径约$20$万光年，包含约$1\text{\textendash}\qty{4e11}{}$颗恒星，是具有漩涡结构的盘状星系。银河系物质总量约$\qty{e12}{M_{\odot}}$（包含了暗物质），具有约$10^{11}$颗恒星，直径约$\qty{30}{kpc}$.
 
-银河系可分为四个组成部分，分别是银盘 (disk),旋臂 (spiral arm), 核球 (bulge) 和银晕 (halo).
+银河系可分为四个组成部分，分别是银盘 (disk),旋臂 (spiral arm), 核球 (bulge) 和银晕 (halo).盘物质总量$\qty{5e10}{M_{\odot}}$，核球$\qty{1e10}{M_{\odot}}$，晕$\qty{e9}{M_{\odot}}$,这些是可见物质，暗物质晕质量大得多。
 
 银盘呈扁盘状，包含年轻年老恒星、气体与尘埃，存在恒星形成，天体作圆轨道运动。核球呈花生状，位于银盘中心，包含年轻年老恒星、气体与尘埃，恒星整体无规则轨道运动，也有绕银心的轨道运动。银盘与核球存在恒星形成。银晕近似包裹住银盘的球形，只有年老恒星，无气体与尘埃，恒星形成已经停止了，恒星作无规则轨道运动。
 
@@ -39,11 +39,16 @@ n\left(R,z\right)\propto{}\left(\symup{e}^{-\left\vert{}z\right\vert{}/h_{\text{
 \end{equation}
 银盘标长$\qty{2.5}{kpc}$，对年老恒星而言标高$\qty{0.4}{kpc}$，对气体和年轻恒星而言$\qty{0.13}{kpc}$。太阳轨道半径$\qty{8.3}{kpc}$，公转周期$2$亿年。银盘质量$\qty{5e10}{M_{\odot}}$,总质量中十分之一在星际介质中。
 
-薄盘包含$\qty{6e10}{M_{\odot}}$的恒星和$\qty{0.5e10}{M_{\odot}}$的气体与尘埃，B 波段光度为$\qty{2e10}{L_{\odot}}$,质光比为 3.
+薄盘包含$\qty{6e10}{M_{\odot}}$的恒星和$\qty{0.5e10}{M_{\odot}}$的气体与尘埃，B 波段光度为$\qty{2e10}{L_{\odot}}$,质光比为 3.恒星金属丰度高，$\qty{0.5}{Z_{\odot}}<Z<\unit{Z_{\odot}}$.含有大量气体物质，是恒星形成的主要区域。
 
-厚盘恒星质量约$\qty{3e9}{M_{\odot}}$,B 波段光度$\qty{2e8}{L_{\odot}}$,质光比为 15.
+厚盘恒星质量约$\qty{3e9}{M_{\odot}}$, B 波段光度$\qty{2e8}{L_{\odot}}$,质光比为 15.恒星金属丰度低，$\qty{0.1}{Z_{\odot}}<Z<\qty{0.5}{Z_{\odot}}$，这些恒星可能是早期薄盘的遗迹：与伴星系的相互作用能量会变为恒星随机运动的动能，维持厚盘结构，但是气体会逐渐落入盘的中平面形成薄盘。
 
-通过测量太阳附近的恒星和气体云的视向速度和自行随银经的变化来判断恒星的轨道运动方式（如刚体转动还是较差转动）。在太阳周围$\ang{360;;}$的范围内，恒星的谱线位移表现出周期性的蓝移和红移。在太阳附近，距离银心越远，转动速度越小。
+我们通过测量太阳附近的恒星和气体云的视向速度和自行随银经的变化来判断恒星的轨道运动方式（如刚体转动还是较差转动）。在太阳周围$\ang{360;;}$的范围内，恒星的谱线位移表现出周期性的蓝移和红移。在太阳附近，距离银心越远，转动速度越小。
+
+为了定量描述，我们先来确定太阳的移动方式。晕中的球状星团绕银心旋转的轨道是无规的，可以认为它们作为一个整体，相对于银心是不动的。利用星团内天琴 RR 型星测定星团的距离，就可以定出太阳到银心的距离，并确定太阳绕银心的转动速度。太阳轨道半径和公转速度为
+\begin{equation}
+R_{0}=\qty{8.5}{kpc},V_{0}=\qty{220}{km\cdot{}s^{-1}}.
+\end{equation}
 
 \begin{figure}[!htp]
 \centering
@@ -88,13 +93,9 @@ n\left(R,z\right)\propto{}\left(\symup{e}^{-\left\vert{}z\right\vert{}/h_{\text{
 \label{Oort 公式图示。}
 \end{figure}
 
-设银经为$l$的恒星和太阳的转动角速度分别为$\omega=\dfrac{V}{R}$和$\omega_{0}=\dfrac{V_{0}}{R_{0}}$,恒星相对于太阳的视向速度为$V_{\text{r}}=V\cos\alpha-V_{0}\sin l$.几何关系$\cos\alpha=\dfrac{R_{0}\sin l}{R}$.
-
-那么视向速度为$V_{\text{r}}=R_{0}\left(\omega-\omega_{0}\right)\sin l$,切向速度为$V_{\text{t}}=R\omega\sin\alpha-R_{0}\omega_{0}\cos l$,几何关系$R\sin\alpha=R_{0}\cos l-d,d$为恒星到太阳的距离，那么切向速度为$V_{\text{t}}=R_{0}\left(\omega-\omega_{0}\right)\cos l-\omega d$
-
-在$R=R_{0}$附近将$\omega-\omega_{0}$泰勒级数展开，
+我们也可通过观测太阳附近恒星的运动来确定太阳的运动。如图\ref{Oort 公式图示。}所示，太阳附近银经为$l$的恒星$P$和太阳$S$的转动角速度分别为$\omega=\dfrac{V}{R}$和$\omega_{0}=\dfrac{V_{0}}{R_{0}}$,恒星相对于太阳的视向速度为$V_{\text{r}}=V\cos\alpha-V_{0}\sin l$.根据几何关系$\cos\alpha=\dfrac{R_{0}\sin l}{R}$视向速度可写作$V_{\text{r}}=R_{0}\left(\omega-\omega_{0}\right)\sin l$,切向速度为$V_{\text{t}}=R\omega\sin\alpha-R_{0}\omega_{0}\cos l$,根据几何关系$R\sin\alpha=R_{0}\cos l-d$可知切向速度为$V_{\text{t}}=R_{0}\left(\omega-\omega_{0}\right)\cos l-\omega d$.在$R=R_{0}$附近将$\omega-\omega_{0}$泰勒级数展开，
 \begin{equation}
-\omega-\omega_{0}=\left(\frac{\symup{d}W}{\symup{d}R}\right)_{R_{0}}\left(R-R_{0}\right)+\cdots\approx\frac{1}{R_{0}^{2}}\left[R_{0}\left(\frac{\symup{d}V}{\symup{d}R}\right)_{R_{0}}-V_{0}0\right]\left(R-R_{0}\right),
+\omega-\omega_{0}=\left(\frac{\symup{d}W}{\symup{d}R}\right)_{R_{0}}\left(R-R_{0}\right)+\cdots\approx\frac{1}{R_{0}^{2}}\left[R_{0}\left(\frac{\symup{d}V}{\symup{d}R}\right)_{R_{0}}-V_{0}\right]\left(R-R_{0}\right),
 \end{equation}
 对$R\approx R_{0}\gg d,R-R_{0}\approx-d\cos l$有
 \begin{equation}
@@ -107,19 +108,30 @@ B&=-\frac{1}{2}\left[\frac{V_{0}}{R_{0}}+\left(\frac{\symup{d}V}{\symup{d}R}\rig
 \end{align}
 从而求出太阳绕银心转动角速度$\omega_{0}=A-B=29\pm\qty{1.8}{km\cdot{}s^{-1}\cdot kpc^{-1}}$，转动周期约$\qty{2.2e8}{yr}$,转动速度约$238\pm\qty{15}{km\cdot{}s^{-1}}$.上述数据是本地静止标准速度，太阳相对于该速度还有约$\qty{10}{km\cdot{}s^{-1}}$的本动速度。
 
-银河系自转曲线和质量分布
+接着我们来确定整个银河系不同半径处天体的自转速度，从而绘制出银河系自转曲线，进而确定银河系质量分布。$R<R_{0}$的区域，我们测量视线方向上$\ce{H}\,\symup{\uppercase\expandafter{\romannumeral1}}$的$\qty{21}{cm}$谱线和$\ce{CO}$谱线的最大多普勒位移。为什么要确定“最大值”呢？在给定银经方向上，我们可以看到不同半径处的云团所发出的辐射，我们无法直接建立半径和视向速度的关系。但通过简单计算我们发现，在第一象限$l\in(0,90^{\circ})$中，中性氢所处轨道半径$R=R_{0}\sin l$时视向速度最大，因此我们可以确定该点的轨道半径和视向速度。而速度满足$V_{\text{r}}=R_{0}\left(\omega-\omega_{0}\right)\sin l$,进而可以得到$\omega\left(R\right)$和$V\left(R\right)$. 这种方法被称作切点法。
 
-测量方法：
-
-$R<R_{0}$时测量视线方向上$\ce{H}\,\symup{\uppercase\expandafter{\romannumeral1}}$谱线和$\ce{CO}$谱线的最大位移，从而测得最大视向速度，而速度满足$V_{\text{r}}=R\left(\omega-\omega_{0}\right),R=R_{0}\sin l$,进而得到$\omega\left(R\right)$和$V\left(R\right)$.
-
-$R>R_{0}$时观察$\ce{H}\,\symup{\uppercase\expandafter{\romannumeral2}}$区的发射线、分子云的$\ce{CO}$分子毫米波谱线和 Maser 谱线测定视向速度，利用$V_{\text{r}}=R_{0}\left(\omega-\omega_{0}\right)\sin l$确定$\omega$,利用$\ce{H}\,\symup{\uppercase\expandafter{\romannumeral2}}$区内的高温恒星确定距离，进而确定$\omega\left(R\right)$.或者或者利用甚长基线干涉技术测量 Maser 的自行，如果还能确定距离，就能计算$V_{\text{t}}$和$\omega\left(R\right)$.
+而$R>R_{0}$的区域主要靠$\ce{H}\,\symup{\uppercase\expandafter{\romannumeral2}}$区的发射线、分子云的$\ce{CO}$分子毫米波谱线和 Maser 谱线来确定视向速度。视向速度指向我们时记为负。最后我们可以绘制出视向速度和银经的关系：
+\begin{figure}[!htbp]
+\centering
+\includegraphics[width=10cm]{figures/figure4_1.png}
+\captionsetup{justification=raggedright, singlelinecheck=false}
+\caption{视向速度和银经。}
+\label{视向速度和银经。}
+\end{figure}
 
 最后发现自转曲线内区刚体转动，外区较为平坦。太阳轨道内包含的质量为
 \begin{equation}
 M=\frac{R_{0}V_{0}^{2}}{\symup{G}}\sim\qty{e11}{M_{\odot}},
 \end{equation}
 银河系可见质量约$\qty{6e10}{M_{\odot}}$.约$\qty{e12}{M_{\odot}}$，最可能的解释是银晕中存在大量的暗物质。
+
+\begin{figure}[!htbp]
+\centering
+\includegraphics[width=10cm]{figures/figure4_2.png}
+\captionsetup{justification=raggedright, singlelinecheck=false}
+\caption{}
+\label{}
+\end{figure}
 
 \subsubsection{旋臂}
 银河系旋臂的证认
@@ -187,10 +199,6 @@ pdf84 ©C. Chiappini 有两幅图描绘星系图景，可以抄一下。
 
 Conroy et al. arViv:2204.02989 有一副晕、厚盘、薄盘元素丰度的图
 
-中小质量恒星演化产生$\ce{C,N}$, 产生行星状星云。大质量恒星演化产生\uppercase\expandafter{\romannumeral1}b, \uppercase\expandafter{\romannumeral1}c, \uppercase\expandafter{\romannumeral2}型超新星，产生$\ce{O}$,白矮星双星演化产生\uppercase\expandafter{\romannumeral1}a 型超新星，产生$\ce{Fe}$.
-
-记得把这段移到恒星中 pass
-
 整体坍缩模型：银河系起源于一个几百万光年大小的原初气体云。气体云沿转动轴方向坍缩，通过耗散过程形成扁平盘，在大约 2 亿年内形成致密核球和转动的气体薄盘。与此同时，气体在坍缩过程中形成球状星团和第一代恒星。这些天体继承了坍缩云块的运动特征，表现为晕星的无规则运动。大质量恒星发生超新星爆发，气体中重元素增丰。第二代恒星开始在盘上形成，具有规则的圆轨道特征。后面形成的恒星有越来越高的金属丰度。
 
 问题：
@@ -204,6 +212,12 @@ Conroy et al. arViv:2204.02989 有一副晕、厚盘、薄盘元素丰度的图
 并合和吸积模型：银河系由许多小星系并合而成。原初的小团块已经经历了不同程度的恒星形成和演化过程，因此具有不同的金属丰度。星系盘是通过持续的并合和吸积过程形成的——当吸积气体向内运动时，径向运动的耗散和环向运动的加速导致气体盘的形成。
 
 近年来巡天观测发现，银河系厚盘形成于 130 亿年前。110 亿年前，银河系与一矮星系并合，形成了内晕。接下来的五六十亿年中，银河系经历持续的金属元素富集。形成厚盘的气体在 80 亿年前耗尽，新的气体开始从银河系周围聚集，银河系薄盘恒星开始形成并持续至今。
+
+星云整体耗散塌缩模型 (top-down)：早型星系形成于宇宙早期的快速坍缩，早期恒星形成快速，持续时标短，后来没有恒星形成。数值模拟显示，形成椭球状天体需要：初始云块必须 very clumpy, 云块中的气体可以在云块并合之前，冷却形成恒星；初始云块角动量必须很小或没有，否则角动量将阻止气体快速耗散，形成恒星。如果这两个条件不满足，容易形成盘星系。
+
+等级并合形成模型 (bottom-up)：小质量星系多次并合。干并合：没有气体。湿并合：丰富星系的并合，触发剧烈的恒星形成。
+
+宇宙密度涨落，引力导致气体云收缩，形成极大质量恒星、大质量恒星形成星团和原初星系。原初星系多次相互作用和并合，形成更大质量星系，高密度区域星系相互作用和并合，触发剧烈的恒星形成，快速消耗完其内部气体。而相对孤立的星系，相互作用概率低，恒星形成缓慢，星系内部还有气体，形成现在的旋涡星系。
 
 \subsubsection{恒星轨道变化}
 Virial theorem
@@ -261,6 +275,11 @@ n\sim\frac{1}{8\pi}\frac{N}{\ln N}.
 I\left(R\right)=I_{0}\exp\left[-7.67\left(\frac{R}{R_{\text{e}}}\right)^{\frac14}\right],
 \end{equation}
 
+椭圆星系有四个基本参数（其中三个是独立的）：星系光度，有效半径，平均面亮度，速度弥散。基本上，椭圆星系分布在有效半径、表面亮度和中心速度弥散组成的三维空间的平面附近：
+\begin{equation}
+\log R_{\text{e}}=a\log\sigma_{0}+b\log\langle{}\mu\rangle+\text{const}.
+\end{equation}
+
 \paragraph{漩涡星系}~{}
 
 中心是球状或椭球状的核球。外面是扁平的星系盘，从核球两端延伸出两条或以上的螺旋状旋臂。盘外面是球状的星系晕。星系盘，特别是旋臂上主要是星族\uppercase\expandafter{\romannumeral1}恒星及气体和尘埃。核球和星系晕主要由星族\uppercase\expandafter{\romannumeral2}恒星构成，气体和尘埃很少。星系盘颜色偏蓝，星系晕和核偏红。盘中恒星和气体作圆轨道运动，晕中恒星作无规则轨道运动。旋臂中有恒星形成。
@@ -286,23 +305,22 @@ Faber-Jackson 关系
 
 \subsubsection{本星系群}
 
-大小约$\qty{3}{Mpc}$，包含至少 54 个成员星系，其中 3 个是漩涡星系，其他是不规则星系和矮椭圆星系。银河系和仙女座星系 M31 是最大的两个星系，大部分小星系被引力束缚在它们周围。
+大小约$\qty{3}{Mpc}$，包含至少 54 个成员星系，其中 3 个 (M31, Milky Way, M33) 是漩涡星系，其他是不规则星系和矮椭圆星系。银河系和仙女座星系 M31 是最大的两个星系，以二者引力为重心，大部分小星系被引力束缚在它们周围。M31 比银河系亮约 50\%，第三亮的是 M33，三者贡献了超过 90\%的光度。
 
-大麦哲伦云$D=\qty{50}{kpc},M=\qty{2e10}{M_{\odot}},d=\qty{10}{kpc}$. SMC: $D=\qty{60}{kpc},M=\qty{4e9}{M_{\odot}},d=\qty{6}{kpc}$.均为不规则星系，绕银河系转动，富含年轻恒星和中性气体。
+大麦哲伦云距离$D=\qty{50}{kpc},M=\qty{2e10}{M_{\odot}},d=\qty{10}{kpc}$. SMC: 距离$D=\qty{60}{kpc},M=\qty{4e9}{M_{\odot}},d=\qty{6}{kpc}$.均为不规则星系，绕银河系转动，富含年轻恒星和中性气体。
 
 麦哲伦流：跨越天空$\ang{180;;}$,连接银河系和麦哲伦云的高速 ($\qty{400}{km\cdot{}s^{-1}}$) 气体流，产生于银河系与麦哲伦云之间的潮汐作用。
 
-M31 是本星系群中最大的星系，$M\sim\qty{1.5e12}{M_{\odot}}$,距离$\sim\qty{770}{kpc}$,直径$\sim\qty{60}{kpc}$, Sb 型漩涡星系，正在接近银河系。
+M31 是本星系群中最大的星系，$M\sim\qty{1.5e12}{M_{\odot}}$,距离$\sim\qty{770}{kpc}$,直径$\sim\qty{60}{kpc}$, Sb 型漩涡星系，正在接近银河系，视向速度约$\qty{200}{km\cdot{}s^{-1}}$.预计 70 亿年内二者将会合并。
 
 M33 是本星系群中第三大星系，$M\sim\qty{5e10}{M_{\odot}}$,距离$\sim\qty{720}{kpc}$,直径$\sim\qty{18}{kpc}$, Sc 型漩涡星系，拥有大量星族\uppercase\expandafter{\romannumeral1}天体和恒星形成区。
 
-星系团
+\subsubsection{星系团}
+包含至少$50$个明亮星系的集团。富星系团至少上千。星系团中有大量热气体，$10^{7}\text{\textendash}\qty{e8}{K}$，贫星系团中气体和恒星质量差不多，富星系团中气体质量可达恒星的 10 倍。
 
-包含至少$50$个明亮星系的集团。富星系团至少上千。
+不规则星系团：形态松散，主要由漩涡星系组成。如室女星系团，它是距离最近的星系团，距离$D\sim\qty{16.5}{Mpc}$,直径$\sim\qty{4}{Mpc}$,包含至少 2500 个星系。致密核区由早型星系主导，周围是延展分布的旋涡星系。
 
-室女星系团是距离最近的星系团，$D\sim\qty{16.5}{Mpc}$,直径$\sim\qty{4}{Mpc}$,包含至少 2500 个星系。致密核区由早型星系主导，周围是延展分布的旋涡星系。
-
-后发星系团距离$\sim\qty{100}{Mpc}$,直径$\sim\qty{3}{Mpc}$,包含约 6700 个成员星系，其中绝大部分是漩涡星系，其他为椭圆星系。
+规则星系团：球对称分布，结构致密，主要由椭圆星系和透镜状星系组成。如后发星系团。它距离$\sim\qty{100}{Mpc}$,直径$\sim\qty{3}{Mpc}$,包含约 6700 个成员星系，其中绝大部分是椭圆星系，其他为透镜星系。一般情况下 E 在星系团中心，S 在外围。
 
 可以在位力平衡下根据星系团的大小和成员星系的运动速度可以得到星系团的引力质量：
 \begin{equation}
@@ -315,15 +333,22 @@ X 射线观测发现星系团中温度达到$\qty{e7}{K}$的热气体，星系�
 
 星系之间的相互作用为扰动和并合，会影响漩涡结构、尘埃带和恒星的形成。影响相互作用强度的因素包括：星系的质量比、星系的相对运动速度、星系间的距离。根据星系大小，并合可分为主并合和次并合。根据气体含量，并合可分为干并合和湿并合。
 
+星系间发生相互碰撞概率很大。潮汐力拉扯会产生尘埃带。碰撞导致气体压缩，使大量恒星形成，产生星暴星系。星系并合还会形成巨椭圆星系 cD。
+
 观测证据？
 
-超星系团
-
+\subsubsection{超星系团}
 由几十到几百个星系团组成，典型尺度为$\qty{100}{Mpc}$，质量$\qty{e16}{M_{\odot}}$.
 
 由于宇宙膨胀和星系团相互间较弱的引力，处于膨胀或松散束缚状态，在宇宙空间呈网状相互连接。
 
-宇宙大尺度结构
+本超星系团中心在室女座星系团附近，直径$\qty{60}{Mpc}$，质量$\qty{e15}{M_{\odot}}$，本星系群以$250\text{\textendash}\qty{350}{km\cdot{}s^{-1}}$的速度向中心运动。
+
+夜天亮度：紫外到红外波段的平均天光面亮度。天空比星系的大部分区域亮，因此星系该波段测光观测须在无月夜进行。
+
+天空背景主要由相隔很近的发射线组成。包括遥远、暗弱河外星系漫射光；银河系内暗弱、未分辨的恒星星光；黄道光（太阳系中的颗粒散射太阳光）；大气辐射产生的红外谱线。
+
+\subsubsection{宇宙大尺度结构}
 
 在$>\qty{100}{Mpc}$的尺度上进行星系红移巡天，同时观测上千个星系的光谱以测量它们的距离，发现宇宙中的物质分布呈现一种泡沫网状结构：几乎所有的星系都分布在狭窄的纤维带上，只占据$1\text{\textendash}2\%$的空间，在它们之间是巨大的空洞，典型尺度为$50\text{\textendash}100$万光年，其中的星系极少。
 

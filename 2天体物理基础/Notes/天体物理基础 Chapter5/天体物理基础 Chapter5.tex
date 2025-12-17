@@ -1,15 +1,40 @@
 % !TEX encoding = UTF-8 Unicode
 \documentclass[../天体物理基础.tex]{subfiles}
 \begin{document}
-\section{AGN}
+\section{活动星系核 Active Galactic Nucleus}
 
-$\left[\ce{O}\,\symup{\uppercase\expandafter{\romannumeral3}}\right]$禁线可作为 AGN 吸积过程中，产生的 outflow 的示踪谱线。
+\subsection{磁流体力学}
+在讲这部分内容前，我们可以先了解一下磁流体力学的基本知识。首先磁流体的运动方程满足
+\begin{equation}
+\rho\frac{\symup{d}\symbf{v}}{\symup{d}t}+\rho\nabla\symbf{\Phi}=-\nabla\symbf{P}+\frac{1}{4\pi}\left(\nabla\times\symbf{B}\right)\times\symbf{B}+\rho\symbf{F}_{\text{rad}}.
+\end{equation}
+其中$\symbf{\Phi}$是引力势，$\symbf{P}$是压力张量，$\symbf{F}$是外力，这里主要是辐射压，中间则是洛伦兹力。此方程并未考虑流体的粘度，是完全理想流体。
 
-铁的 K 层的电子占据的两条轨道中，其中一条有空位时，L 层的电子跃迁至 K 层会放出发射线。$\symup{K\alpha}$线大致分为铁原子整体为中性的情况（中性铁$\symup{K\alpha}$线）和 26 个电子几乎全部电离的情况（高电离化态铁$\symup{K\alpha}$线）。
+星际流体尺度较大，一般都是大雷诺数，也就是说主要是磁流体的运动在影响磁场，此时
+\begin{equation}
+\frac{\partial{}\symbf{B}}{\partial{}t}=\nabla\times\left(\nabla\times\symbf{B}\right),
+\end{equation}
+这个方程和该式与理想不可压流体中涡旋所满足的方程形式一样。涡旋黏附在流体质点上运动，因此磁力线也黏附在流体质点上一起运动，此即磁场冻结效应。起初位于某根磁力线上的流体质点以后将一直位于该磁力线上。一个贴切的比喻是，磁力线好比琴弦，上面串了一串珍珠。琴弦有张力，沿磁力线方向也有张力，而垂直于磁场方向则有压力，这两种力支撑了磁流体结构。
 
+辐射驱动的星风，往往贴着盘面。但对喷流模式的星风来讲并不是这样，星风或者说 outflow，往往与盘面呈$30^{\circ}$到$60^{\circ}$夹角。此时这正是磁场的作用。带电粒子的吸积产生磁场，磁力线穿过盘面，有序且大尺度分布。伴随吸积盘自转，磁冻结在磁力线上的物质被离心力向上加速而远离吸积盘。当这些云团离开盘面一定距离后，受到来自中心的紫外辐射的电离。有点类似我们拿着琴弦乱甩，那么珍珠自然会飞出去，这正是磁张力主导的磁离心风机制。
+
+两极的喷流，或者说 jet，产生机制则是磁压力主导洛仑兹力的磁压驱动风机制。磁力线在绕转中形成磁场梯度，在两极将物质打出去，准直，高速。一些观测证据表明在喷流中发现了偏振度很高的同步加速辐射，天体物理辐射机制告诉我们，这肯定和磁场有关。
+
+举一个例子，在 AGN 源 XID2028 中我们发现了这么一种结构：
+\begin{figure}[!htbp]
+\centering
+\includegraphics[width=10cm]{figures/figure5_4.png}
+\captionsetup{justification=raggedright, singlelinecheck=false}
+\caption{XID2028}
+\label{XID2028}
+\end{figure}
+
+张角较大的 outflow 和射电瓣中的等离子体在星际介质中排开热气体，形成 X 射线空洞和激波，产生了一个 bubble。而喷流因为更准直更高速，能刺破这个 bubble。bubble 中含有大量等离子体，观测中表现为射电瓣。
+
+\subsection{常见的 AGN}
 正常星系辐射来自恒星的累积辐射，观测上表现为黑体辐射，峰值能量位于光学波段。
 
-活动星系光度高，连续谱为热辐射和非热辐射，峰值能量位于远红外波段；强发射线 + 偏振辐射；短时间内大幅光变，说明中心能源源大小不超过一光年；往往有着特殊形态，包括亮核、喷流、不规则形态。
+活动星系光度高，连续谱为热辐射和非热辐射，峰值能量位于远红外波段，包含从射电到伽马各种波段辐射现象。具有强发射线 + 偏振辐射；短时间内大幅光变，说明中心能源源大小不超过一光年；往往有着特殊形态，包括亮核、喷流、不规则形态。
 
 AGN 能产生 X 射线（逆康普顿散射），紫外光子（为主，来源于吸积盘落入黑洞），尘埃红外热辐射，和射电（强大的喷流）。总光度可达$10^{44}\text{\textendash}\qty{e47}{erg\cdot{}s^{-1}}$，但发光范围仅有十余个天文单位。
 
@@ -17,7 +42,6 @@ AGN 能产生 X 射线（逆康普顿散射），紫外光子（为主，来源�
 
 距离我们越远，星系活动性越频繁。活动星系高光度表明它们的演化时标很短，只是星系演化中的一个阶段。大约 1\% 的星系有明显的活动星系核。可能所有星系都经历过 AGN 阶段。
 
-\subsection{常见的 AGN}
 \subsubsection{Seyfert Galaxies}
 几乎都是漩涡星系。具有亮核和宽发射线。
 
@@ -64,6 +88,30 @@ AGN 能产生 X 射线（逆康普顿散射），紫外光子（为主，来源�
 一般认为赛弗特星系的允许线产生于离星系核较近的致密气体（宽线区，broad line region, BLR），禁戒线产生于相对较远的稀薄气体（窄线区，narrow line region, NLR）
 
 统一模型示意图：Beckmann \& Shrader (2012)
+\begin{figure}[!htbp]
+\centering
+\includegraphics[width=10cm]{figures/figure5_5.jpg}
+\captionsetup{justification=raggedright, singlelinecheck=false}
+\caption{AGN 基本结构。}
+\label{AGN 基本结构。}
+\end{figure}
+
+Blazar 的 jet 正对着我们，Quasar 我们从侧面观察喷流，射电侧的角度更大一点。这些 AGN 也被称为射电噪 AGN。
+
+\begin{figure}[!htbp]
+\centering
+\begin{minipage}[t]{0.45\textwidth}
+\includegraphics [width=7cm]{figures/figure5_6.png}
+\end{minipage}
+\begin{minipage}[t]{0.45\textwidth}
+\includegraphics [width=7cm]{figures/figure5_7.png}
+\end{minipage}
+\end{figure}
+图中小圆圈尘埃环是吸积盘方向。
+
+我更愿意将 AGN 分为辐射 AGN 和喷流 AGN 两种（这个分类是我自取的）。前者黑洞吸积物质效率很高，可以产生大量辐射，辐射压可以吹动气体，产生星风。后者辐射没有那么强了，主要依靠磁场驱动喷流。
+
+两者有个很有趣的分类。前者集中在$z=2$区域，后者集中在$z=1$区域。
 
 \begin{equation}
 L_{\nu}=\int_{\nu_{1}}^{\nu_{2}}F_{\nu}\symup{d}\nu=\int_{\nu_{1}}^{\nu_{2}}\nu F_{\nu}\frac{\symup{d}\nu}{\nu}=\int_{\nu_{1}}^{\nu_{2}}\nu F_{\nu}\symup{d}\ln\nu,
@@ -150,6 +198,11 @@ Eddington 光度$L=\dfrac{4\pi\symup{c}\symup{G}Mm_{\ce{p}}}{\sigma_{\text{T}}}$
 \begin{equation}
 \tau_{\text{s}}=\varepsilon_{\text{L}}\frac{\sigma_{\text{T}}\symup{c}^{2}}{4\pi\symup{c}\symup{G}m_{\ce{p}}}.
 \end{equation}
+
+\subsection{谱线}
+$\left[\ce{O}\,\symup{\uppercase\expandafter{\romannumeral3}}\right]$禁线可作为 AGN 吸积过程中，产生的 outflow 的示踪谱线。
+
+铁的 K 层的电子占据的两条轨道中，其中一条有空位时，L 层的电子跃迁至 K 层会放出发射线。$\symup{K\alpha}$线大致分为铁原子整体为中性的情况（中性铁$\symup{K\alpha}$线）和 26 个电子几乎全部电离的情况（高电离化态铁$\symup{K\alpha}$线）。
 
 %\printbibliography
 

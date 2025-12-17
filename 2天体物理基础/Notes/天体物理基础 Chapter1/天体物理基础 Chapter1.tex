@@ -1553,11 +1553,11 @@ L\sim R^{2}\frac{1}{\rho}\frac{T^{4}}{R}\sim R^{2}\frac{R^{3}}{M}\frac{M^{4}}{R^
 
 Edwin Hubble 基于星系的形状和形态特征进行星系分类，主要根据核球（星系中心恒星分布致密的区域，形态上表现为图\ref{哈勃音叉图。}中盘星系中心的亮核）大小、旋臂缠绕程度等特征进行分类，这种分类方案通常表示为音叉图。最初的想法是用来研究星系演化，并且称音叉图左侧为早型星系，右侧为晚型星系，后来发现并不是这么回事，不过叫法还是保留了下来。
 
-不规则星系并没有列在图\ref{哈勃音叉图。}中，取而代之的是透镜星系。透镜星系是无旋臂的盘星系，形态上介于椭圆星系和漩涡星系之间，外形像侧视的透镜而得名，根据核心是否有棒状结构，记作 S0 或 SB0.透镜星系多处于星系密度较高的空间区域。主要由年老恒星组成，气体少。
+透镜星系是无旋臂的盘星系，形态上介于椭圆星系和漩涡星系之间，外形像侧视的透镜而得名，根据核心是否有棒状结构，记作 S0 或 SB0.透镜星系多处于星系密度较高的空间区域。主要由年老恒星组成，气体少。
 
 \begin{figure}[!htbp]
 \centering
-\includegraphics[width=12cm]{figures/figure1_15.jpg}
+\includegraphics[width=12cm]{figures/figure1_15.png}
 \captionsetup{justification=raggedright, singlelinecheck=false}
 \caption{哈勃音叉图 (Hubble Tuning Fork Scheme).}
 \label{哈勃音叉图。}
@@ -1931,6 +1931,15 @@ I(x)=\frac{F}{\theta^{2}}=\frac{L/(4\pi d_{L}^{2})}{D^{2}/d_{\theta}^{2}}=\frac{
 M=\frac{V_{\max}^{2}R}{\symup{G}},
 \end{equation}
 假设不同漩涡星系的质光比都相同，那么$L\propto{}M\propto{}V_{\max}^{2}R$.再假设漩涡星系中心面亮度是常数，那么$L\propto{}R^{2}$,因此$L^{2}\propto{}V_{\max}^{4}R^{2}\propto{}V_{\max}^{4}L,L\propto{}V_{\max}^{4}$.通过光谱红移确定自转速度就可确定光度进而测距。
+\begin{equation}
+\frac{L_{\text{I}}}{\qty{4e10}{L_{\text{I},\odot}}}=\left(\frac{V_{\max}}{\qty{200}{km\cdot{}s^{-1}}}\right)^{4}.
+\end{equation}
+不同波段指数不一样，B 波段约 3, H 波段大于 4, 一般长波指数更高。
+
+椭圆星系也有类似的关系，不过椭圆星系有序转动不显著，所采用的速度是恒星的速度弥散。光度和速度弥散满足 Faber-Jackson 关系：
+\begin{equation}
+\frac{L_{\text{V}}}{\qty{2e10}{L_{\odot}}}\approx\left(\frac{\sigma}{\qty{200}{km\cdot{}s^{-1}}}\right)^{4}.
+\end{equation}
 
 哈勃定律测距需要注意的是，星系的视向速度不仅来自空间膨胀，还来自局域引力作用（别的天体拖拽）下星系相对空间本身的运动速度（本动速度）。即
 \begin{equation}

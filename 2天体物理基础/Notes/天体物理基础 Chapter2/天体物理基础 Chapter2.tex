@@ -652,7 +652,7 @@ Russell-Vogt 原理：如果恒星处于流体静力学平衡和热平衡，而�
 
 $\ce{^{26}Al}$只产生于核坍缩超新星爆发，它的半衰期只有$\qty{7e5}{yr}$.
 
-中小质量恒星演化产生$\ce{C,N}$,大质量恒星演化产生$\ce{O}$,白矮星双星演化出$\ce{Fe}$.
+中小质量恒星演化产生$\ce{C,N}$, 产生行星状星云。大质量恒星演化产生\uppercase\expandafter{\romannumeral1}b, \uppercase\expandafter{\romannumeral1}c, \uppercase\expandafter{\romannumeral2}型超新星，产生$\ce{O}$,白矮星双星演化产生\uppercase\expandafter{\romannumeral1}a 型超新星，产生$\ce{Fe}$.
 
 Schonberg-Chandrasekhar 质量极限：主序结束后在恒星核心形成一个等温氦核。氦核的内部压强必须能够支撑其上部包层物质的质量。
 
@@ -920,7 +920,6 @@ r=\frac{a\left(1-e^{2}\right)}{1+e\cos\left(\theta-\omega\right)},
 菲利普发现 B 波段峰值星等与峰值后 15 天星等的衰减量有很好的相关性。光度衰减得越快，峰值光度越低。利用该关系将光变曲线归一化后，\uppercase\expandafter{\romannumeral1}a 型超新星几乎具有相同的峰值光度，是已知最好的标准烛光源。
 
 \subsubsection{中子星}
-
 白矮星质量超过钱德拉塞卡极限时，电子简并压不足以抵抗引力。原子核开始瓦解，依靠中子简并压抵抗引力。中子星可以看作是一个巨型原子核，由$\sim10^{57}$个中子构成。
 
 随着费米动量越来越高，$E_{F}=\sqrt{p_{\text{F}}^{2}\symup{c}^{2}+m_{{\color{blue}{\ce{e}}}}^{2}\symup{c}^{4}}>\left(m_{\ce{n}}-m_{\ce{p}}-m_{{\color{blue}{\ce{e}}}}\right)\symup{c}^{2}$，从而生成中子。临界动量和密度为
@@ -930,11 +929,31 @@ p_{\text{F}}&=m_{{\color{blue}{\ce{e}}}}\symup{c}\left[\left(\frac{m_{\ce{n}}-m_
 \end{align}
 等密度达到$\qty{e18}{kg\cdot m^{-3}}$的量级，最终产生半径$\qty{10}{km}$的中子星。中子星的特征质量为$\qty{1.4}{M_{\odot}}$.
 
-中子星的观测表现：内能表现为热辐射。转动动能表现为脉冲星。强引力场表现为 X 射线双星。强磁场表现为强磁星。
-
 中子星质量估计：考虑质子德布罗意波长和普朗克质量$m_{\text{planck}}=\sqrt{\dfrac{\hbar\symup{c}}{\symup{G}}}$,估计得到半径上限$R_{\max}\sim\dfrac{m_{\text{planck}}}{m_{\ce{p}}}\times\lambda_{n}\sim\qty{10}{km}$, 粒子数上限$N\sim\left(\dfrac{m_{\text{planck}}}{m_{\ce{p}}}\right)^{3}\sim2.2\times10^{57}$, 质量上限$M_{\max}\sim Nm_{\ce{p}}\sim M_{\odot}$,密度上限$\rho_{\max}\sim\dfrac{m_{\ce{p}}}{\lambda_{n}}\sim\qty{e18}{kg\cdot m^{-3}}$.
 
-磁星磁场能达到$\qty{1.6e10}{T}$，而人类制造的最大稳定磁场仅有$\qty{45.22}{T}$.
+中子星的观测表现：内能表现为热辐射。转动动能表现为脉冲星。强引力场表现为 X 射线双星。强磁场表现为强磁星。磁星磁场能达到$\qty{1.6e10}{T}$，而人类制造的最大稳定磁场仅有$\qty{45.22}{T}$.
+
+我们可以估计一些中子星的能量量级。首先是引力能
+\begin{equation}
+U_{\text{g}}\sim\frac{\symup{G}M^{2}}{R}=2.7\times10^{53}\,\unit{erg}\left(\frac{M}{\unit{M_{\odot}}}\right)^{2}\left(\frac{R}{\qty{10}{km}}\right)^{-1},
+\end{equation}
+然后是转动动能
+\begin{align}
+U_{\text{rot}}&\sim M\Omega^{2}R^{2}\sim7.9\times10^{52}\,\unit{erg}\left(\frac{M}{\unit{M_{\odot}}}\right)\left(\frac{R}{\qty{10}{km}}\right)^{2}\left(\frac{\nu}{\qty{1000}{Hz}}\right)^{2}.\\
+\frac{U_{\text{rot}}}{U_{\text{g}}}&=0.3\left(\frac{M}{\unit{M_{\odot}}}\right)^{-1}\left(\frac{R}{\qty{10}{km}}\right)^{3}\left(\frac{\nu}{\qty{1000}{Hz}}\right)^{2}.
+\end{align}
+接着是磁能
+\begin{align}
+B&\sim1.8\times10^{18}\,\unit{G}\left(\frac{M}{\qty{1.4}{M_{\odot}}}\right)\left(\frac{R}{\qty{10}{km}}\right)^{-2},\\
+U_{\text{B}}&=\frac{4}{3}\pi{}R^{3}\frac{B^{2}}{8\pi},\notag\\
+\frac{U_{\text{B}}}{U_{\text{g}}}&\sim3\times10^{-13}\left(\frac{M}{\qty{1.4}{M_{\odot}}}\right)^{-2}\left(\frac{R}{\qty{10}{km}}\right)^{4}\left(\frac{B}{\qty{e12}{G}}\right)^{2}.
+\end{align}
+
+与通常恒星相比中子星的温度很高，但相对于中子星物质的高密度而言，它可以非常好地用零温近似描述，因此费米能为
+\begin{align}
+\varepsilon_{\text{Feimi}}&=\frac{P_{\text{F}}^{2}}{2m_{\ce{n}}}=\frac{h^{2}}{2m_{\ce{n}}}\left(\frac{3n}{8\pi}\right)^{\frac23}=\qty{30}{MeV}\left(\frac{\rho}{\qty{e14}{g\cdot cm^{-3}}}\right)^{\frac{2}{3}}\gg k_{\text{B}}T.\\
+E_{\text{F}}&=\qty{1.64e53}{erg}\left(\frac{M}{\unit{M_{\odot}}}\right)^{\frac{5}{3}}\left(\frac{R}{\qty{10}{km}}\right)^{-2}.
+\end{align}
 
 为什么脉冲星是中子星？
 
@@ -944,6 +963,11 @@ p_{\text{F}}&=m_{{\color{blue}{\ce{e}}}}\symup{c}\left[\left(\frac{m_{\ce{n}}-m_
 
 脉冲星的能量来源和辐射机制是什么？
 
+脉冲高度偏振，意味着强磁场。
+
+辐射机制：快速自转加强磁场产生强电场加速带电粒子沿粒子线向外运动，产生高能光子，高能光子会变成两个电子，电子湮灭产生次级光子，如此往复知道辐射变成射电辐射。
+
+强磁场约束辐射使其成束状，集中在磁极方向。磁极和自转轴不重合，因此辐射会周期性扫过天区。
 
 X 射线双星：吸积物质的引力势能转化为动能，进而转化为热能，温度高达$\qty{e7}{K}$,表现为 X 射线辐射。根据伴星质量不同分为两类。高质量 ($M>\qty{10}{M_{\odot}}$) X 射线双星，伴星早型，质量大，年轻$<\qty{e7}{yr}$,分布在银盘附近，中子星具有强磁场，物质来自星风。低质量 ($M\le\qty{1}{M_{\odot}}$) X 射线双星，伴星晚型，低质量，年老$>\qty{5e9}{yr}$,物质来自洛希瓣渗溢，分布在银心和球状星团中，中子星具有弱磁场。
 
@@ -954,7 +978,7 @@ X 射线双星：吸积物质的引力势能转化为动能，进而转化为热
 \subsection{黑洞}
 描述黑洞的物理参数只有质量、角动量和电荷。
 
-黑洞的分类
+黑洞的分类：
 
 只由质量来表征的球对称、静态的史瓦西黑洞；
 
@@ -964,7 +988,23 @@ X 射线双星：吸积物质的引力势能转化为动能，进而转化为热
 
 转动且带电的克尔{}-{}纽曼黑洞。
 
+按质量大小划分可分为：
+
+1. 原初黑洞，宇宙大爆炸产生，$\qty{e12}{kg}$.
+
+2. 恒星级黑洞，大质量恒星死亡产物，$\qty{e31}{kg}$
+
+3. 中等质量黑洞，星团内部大质量恒星死亡产物，$\qty{e33}{kg}$
+
+4. 超大质量黑洞，星系中心，$\qty{e39}{kg}$.
+
+黑洞寿命与质量成三次方，因此原初黑洞寿命约$\qty{e10}{yr}$,正在蒸发。
+
 \subsubsection{Schwarzschild}
+\begin{equation}
+\symup{d}s^{2}=\left(-1+\frac{2\symup{G}M}{r\symup{c}^{2}}\right)\symup{c}^{2}\symup{d}t^{2}+\frac{1}{1-\dfrac{2\symup{G}M}{r\symup{c}^{2}}}\symup{d}r^{2}+r^{2}\left(\symup{d}\theta^{2}-\sin^{2}\theta\symup{d}\phi^{2}\right).
+\end{equation}
+
 视界：半径为史瓦西半径$R_{\text{s}}$的球面，在视界内的任何信息都无法向外传递
 
 光层：半径为$1.5R_{\text{s}}$的球面，在光层各向同性辐射光子中的一半可以逃逸
@@ -1007,14 +1047,15 @@ $M=\qty{e15}{g},T\sim\qty{e13}{K},t\sim\qty{e10}{yr}$.因此小黑洞已经蒸�
 
 黑洞附近的光线偏折和红移；
 
-黑洞的物质吸积过程；
+黑洞的物质吸积过程会在两极产生喷流；
 
-黑洞并合产生的引力波。
+周围恒星的运动（银河系中心黑洞就以这种方法确定位置和质量）;
 
-恒星级吸积黑洞靠黑洞 X 射线双星，搜寻质量超过中子星质量上限的致密天体，确定其性质（X 射线辐射、时变）、轨道运动和质量。
+黑洞并合产生的引力波;
 
-微类星体 (microquasars)：具有相对论性喷流的黑洞 X 射线双星。
+恒星级吸积黑洞靠黑洞 X 射线双星，搜寻质量超过中子星质量上限的致密天体，确定其性质（X 射线辐射、时变）、轨道运动和质量;
 
+黑洞高速自转，多普勒效应和 beaming effect 结合使 Fe 轮廓不对称。
 
 \subsection{行星}
 \subsubsection{行星光谱和温度}
@@ -1045,7 +1086,7 @@ M_{\text{p}}\ll M_{1},M_{\text{p}}=v_{1}M_{1}^{\frac{2}{3}}\left(\frac{T}{2\pi\s
 \begin{equation}
 M_{\text{p}}\sin i=v_{1,\text{obs}}M_{1}^{\frac{2}{3}}\left(\frac{T}{2\pi\symup{G}}\right)^{\frac{1}{3}}.
 \end{equation}
-轨道倾角$i$似乎并非随机分布。考虑立体角积分方式，实际上是正弦分布。
+轨道倾角$i$并非随机分布。考虑立体角积分方式，实际上是正弦分布。
 
 此外还要考虑选择效应：
 \begin{equation}
@@ -1123,6 +1164,13 @@ a_{\text{total}}=a_{+}+a_{-}=\frac{u^{2}+2}{u\left(u^{2}+4\right)^{\frac{1}{2}}}
 
 自转和轨道半径的变化会加热天体。木星土星卫星的冰层下可能会有液态水。
 
+\subsection{双星}
+目视双星：望远镜能分辨。
 
+天体测量双星：一颗较暗难以观测，通过亮星的自行确定存在，如天狼星的白矮伴星。
+
+分光双星：通过谱线进行区分。
+
+食双星：互相掩盖（交食）导致亮度变化。可借光变曲线确定温度比、轨道倾角、恒星大小。
 %\printbibliography
 \end{document}
