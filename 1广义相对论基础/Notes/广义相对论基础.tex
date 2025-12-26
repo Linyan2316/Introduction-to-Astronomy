@@ -2,7 +2,7 @@
 \documentclass[UTF8, 12pt, a4paper, oneside, onecolumn, fontset=none]{ctexart}
 \usepackage{anyfontsize}
 \usepackage{geometry}
-\geometry{left=1.5cm,right=1.5cm,top=1.8cm,bottom=0.9cm}
+\geometry{left=1.5cm, right=1.5cm, top=1.8cm, bottom=0.9cm}
 
 \usepackage{unicode-math, mathrsfs, xcolor, inputenc}
 \definecolor{pagecolor}{HTML}{C7EDCC}
@@ -14,12 +14,12 @@
 
 \usepackage{amsmath, amsthm, cases, graphicx, subfigure, tikz, caption, subcaption, siunitx, keyval, physics2}
 \DeclareSIUnit\angstrom{Å}
-\usephysicsmodule{ab,ab.braket}
+\usephysicsmodule{ab, ab.braket}
 \usepackage[version=4]{mhchem}
 \usepackage[flushleft]{threeparttable}
 \usepackage{hyperref, bookmark}
 \hypersetup{colorlinks=true, urlcolor=blue, filecolor=blue, linkcolor=blue}
-\usepackage[backend=biber,sorting=none]{biblatex}
+\usepackage[backend=biber, sorting=none]{biblatex}
 \addbibresource{/Users/Linyan/Zotero/MyBibTeX.bib}
 
 \ctexset{section={format=\bfseries\zihao{4}\flushleft}}
@@ -88,17 +88,17 @@
 \subsection{张量}
 一般来讲，观测得到的物理量使用一组数来表示的。而这组数与观测者选定的坐标系相关，比如说火车参考系和地面参考系测得的火车速度不同。然而，尽管同一时空点测量的物理量在不同坐标系会用不同的数组表示，它们本质上描述的是同一个物理量，因此数组的变化应该与坐标变换（即同一时空点在不同坐标系中坐标间的联系）有密切联系。由此可以引出张量的概念。
 
-零阶张量，又被称作标量，是时空坐标的函数。$\widetilde{\symbf{x}}$和$\symbf{x}$是同一时空点在不同坐标系的坐标，但在同一点上测得的物理量应该是一样的，所以标量的值不随广义坐标变换而改变：
+零阶张量，又被称作标量，是时空坐标的函数。$\widetilde{\symbf{x}}$ 和 $\symbf{x}$ 是同一时空点在不同坐标系的坐标，但在同一点上测得的物理量应该是一样的，所以标量的值不随广义坐标变换而改变：
 \begin{equation}
 \widetilde{U}\left(\widetilde{\symbf{x}}\right)=U\left(\symbf{x}\right).
 \end{equation}
 
-一阶张量，又被称作向量，可分为逆变向量和协变向量。$n$维空间向量有$n$个分量，每个分量都是时空坐标的函数。向量随坐标变换而变化的规律分别为
+一阶张量，又被称作向量，可分为逆变向量和协变向量。$n$ 维空间向量有 $n$ 个分量，每个分量都是时空坐标的函数。向量随坐标变换而变化的规律分别为
 \begin{align}
 \widetilde{U}^{\mu}&=\frac{\partial{}\widetilde{x}^{\mu}}{\partial{}x^{\nu}}U^{\nu},\\
 \widetilde{V}_{\mu}&=\frac{\partial{}{x}^{\nu}}{\partial{}\widetilde{x}^{\mu}}V_{\nu}.
 \end{align}
-式中已经用到了爱因斯坦求和约定，重复的上下指标需要求和，即$\nu$分别取$0,1,2\cdots$得到的项全部求和。重复指标又称傀儡指标、傀标。逆变向量的指标永远在右上角，协变向量的指标永远在右下角。由于计算可写成矩阵乘法的形式，故$\dfrac{\partial{}\widetilde{x}^{\mu}}{\partial{}x^{\nu}},\dfrac{\partial{}x^{\mu}}{\partial{}\widetilde{x}^{\nu}}$可以看作坐标变换矩阵。每一个时空点都有各自的坐标变换矩阵。我们可以定义 Kroneker 符号$\delta{}^{\mu}_{\nu}$来给出坐标变换矩阵应该满足的关系：
+式中已经用到了爱因斯坦求和约定，重复的上下指标需要求和，即 $\nu$ 分别取 $0, 1, 2\cdots$ 得到的项全部求和。重复指标又称傀儡指标、傀标。逆变向量的指标永远在右上角，协变向量的指标永远在右下角。由于计算可写成矩阵乘法的形式，故 $\dfrac{\partial{}\widetilde{x}^{\mu}}{\partial{}x^{\nu}},\dfrac{\partial{}x^{\mu}}{\partial{}\widetilde{x}^{\nu}}$ 可以看作坐标变换矩阵。每一个时空点都有各自的坐标变换矩阵。我们可以定义 Kroneker 符号 $\delta{}^{\mu}_{\nu}$ 来给出坐标变换矩阵应该满足的关系：
 \begin{equation}
 \frac{\partial{}\widetilde{x}^{\mu}}{\partial{}x^{\alpha}}\cdot\frac{\partial{}x^{\alpha}}{\partial{}\widetilde{x}^{\nu}}=\delta{}_{\nu}^{\mu}=
 \begin{cases}
@@ -107,23 +107,23 @@
 \end{cases}\label{1.1.4}
 \end{equation}
 
-一个二阶张量有$n^{2}$个坐标分量，可分为逆变、混合、协变张量，它们随坐标变换而变化，规律分别为
+一个二阶张量有 $n^{2}$ 个坐标分量，可分为逆变、混合、协变张量，它们随坐标变换而变化，规律分别为
 \begin{align}
 \widetilde{W}^{\mu\nu}&=\frac{\partial{}\widetilde{x}^{\mu}}{\partial{}x^{\alpha}}\frac{\partial{}\widetilde{x}^{\nu}}{\partial{}x^{\beta}}W^{\alpha\beta},\\
 \widetilde{W}^{\mu}_{\nu}&=\frac{\partial{}\widetilde{x}^{\mu}}{\partial{}x^{\alpha}}\frac{\partial{}{x}^{\beta}}{\partial{}\widetilde{x}^{\nu}}W^{\alpha}_{\beta},\\
 \widetilde{W}_{\mu\nu}&=\frac{\partial{}{x}^{\alpha}}{\partial{}\widetilde{x}^{\mu}}\frac{\partial{}{x}^{\beta}}{\partial{}\widetilde{x}^{\nu}}W_{\alpha\beta}.
 \end{align}
-二阶张量的概念可以推广到高阶。拥有$p$个逆变指标和$q$个协变指标的张量称为$\left(p+q\right)$阶混合张量。利用混合张量随坐标变换关系容易证明 Kroneker 符号是个 (1,1) 阶张量，任意坐标系下其形式都为 (\ref{1.1.4}) 式。
+二阶张量的概念可以推广到高阶。拥有 $p$ 个逆变指标和 $q$ 个协变指标的张量称为 $\left(p+q\right)$ 阶混合张量。利用混合张量随坐标变换关系容易证明 Kroneker 符号是个 (1, 1) 阶张量，任意坐标系下其形式都为 (\ref{1.1.4}) 式。
 
 多数情况需要研究对称张量。如果高阶张量对一对上标满足
 \begin{equation}
 T^{\mu\nu\sigma}_{\alpha\beta\gamma\delta{}}=T^{\mu\sigma\nu}_{\alpha\beta\gamma\delta{}},
 \end{equation}
-则称其对上标$\nu\,\sigma$是对称的。如果
+则称其对上标 $\nu\,\sigma$ 是对称的。如果
 \begin{equation}
 T^{\mu\nu\sigma}_{\alpha\beta\gamma\delta{}}=-T^{\mu\sigma\nu}_{\alpha\beta\gamma\delta{}},
 \end{equation}
-则称其对上标$\nu\,\sigma$是反称的。容易发现两个反称指标取同样值时该分量为 0，比如
+则称其对上标 $\nu\,\sigma$ 是反称的。容易发现两个反称指标取同样值时该分量为 0, 比如
 \begin{equation}
 T^{\mu11}_{\alpha\beta\gamma\delta{}}=-T^{\mu11}_{\alpha\beta\gamma\delta{}}=0,
 \end{equation}
@@ -138,11 +138,11 @@ T_{ij}=\frac{1}{2}\left(T_{ij}+T_{ji}\right)+\frac{1}{2}\left(T_{ij}-T_{ji}\righ
 
 张量加减定义为对应分量的加减，因此作加减运算的张量必须同阶。
 
-张量的乘法叫外乘，作外乘运算的张量不一定要同阶。外乘使张量的阶数升高，如$C_{\alpha\beta\gamma}^{\mu\nu}=A_{\alpha\beta}^{\mu}\cdot B_{\gamma}^{\nu}$.一个$\left(p_{1},q_{1}\right)$阶张量和一个$\left(p_{2},q_{2}\right)$张量相乘，结果是一个$\left(p_{1}+p_{2},q_{1}+q_{2}\right)$阶张量。
+张量的乘法叫外乘，作外乘运算的张量不一定要同阶。外乘使张量的阶数升高，如 $C_{\alpha\beta\gamma}^{\mu\nu}=A_{\alpha\beta}^{\mu}\cdot B_{\gamma}^{\nu}$. 一个 $\left(p_{1}, q_{1}\right)$ 阶张量和一个 $\left(p_{2}, q_{2}\right)$ 张量相乘，结果是一个 $\left(p_{1}+p_{2}, q_{1}+q_{2}\right)$ 阶张量。
 
-混合张量有一种特殊的运算叫作缩并。它让混合张量的⼀对上下标成为重复指标并求和。容易验证，缩并使张量的阶降低。缩并只能在上下标间进行，一个$\left(p,q\right)$阶张量通过缩并变成$\left(p-1,q-1\right)$阶张量。
+混合张量有一种特殊的运算叫作缩并。它让混合张量的⼀对上下标成为重复指标并求和。容易验证，缩并使张量的阶降低。缩并只能在上下标间进行，一个 $\left(p, q\right)$ 阶张量通过缩并变成 $\left(p-1, q-1\right)$ 阶张量。
 
-一个逆变向量和一个协变向量间可以进行内积运算，它的定义是它们外乘后再缩并。以$\left(1,1\right)$阶张量缩并为例，容易发现缩并后变成了标量。
+一个逆变向量和一个协变向量间可以进行内积运算，它的定义是它们外乘后再缩并。以 $\left(1, 1\right)$ 阶张量缩并为例，容易发现缩并后变成了标量。
 \begin{equation}
 C=A^{\mu}B_{\mu}.
 \end{equation}
@@ -150,13 +150,13 @@ C=A^{\mu}B_{\mu}.
 \subsection{平移和联络}
 每个时空点的坐标变换都不同，张量分量本身也是时空坐标的函数，因此张量是逐点定义的。两个不同点上的张量直接相减，其差将会失去张量的变换性质，不再是张量。然⽽，研究张量场的微分，又必须⽤到相邻两点的张量之差。为了使微分运算不破坏张量性质，必须⽤⼀种特殊的⽅式来定义相邻两点的张量之差，使新定义的“差”保持张量的变换性质。为此，我们引⼊“⽮量平移”和“仿射联络”两个新概念。
 
-先来研究协变矢量的平移。记矢量场$A_{\mu}$在$P$点的值为$A_{\mu}\left(P\right)$,将其平移到相邻的$Q$点，得到的新矢量记作$A_{\mu}\left(P\to Q\right)$. $A_{\mu}\left(P\right)$在$Q$点无法进行协变变换，但$A_{\mu}\left(P\to Q\right)$可以，因此后者相对前者会多一个增量。这个增量正比于矢量本身和位移$\symup{d}x^{\mu}$,满足
+先来研究协变矢量的平移。记矢量场 $A_{\mu}$ 在 $P$ 点的值为 $A_{\mu}\left(P\right)$, 将其平移到相邻的 $Q$ 点，得到的新矢量记作 $A_{\mu}\left(P\to Q\right)$. $A_{\mu}\left(P\right)$ 在 $Q$ 点无法进行协变变换，但 $A_{\mu}\left(P\to Q\right)$ 可以，因此后者相对前者会多一个增量。这个增量正比于矢量本身和位移 $\symup{d}x^{\mu}$, 满足
 \begin{equation}
 \delta{}A_{\mu}\left(P\right)=A_{\mu}\left(P\to Q\right)-A_{\mu}\left(P\right)=\Gamma_{\mu\nu}^{\lambda}\left(P\right)\cdot A_{\lambda}\left(P\right)\cdot \symup{d}x^{\nu}.\label{1.2.1}
 \end{equation}
-$\Gamma_{\mu\nu}^{\lambda}\left(P\right)$被称作$P$点的仿射联络，简称联络。根据指标发现四维空间的联络有$4^{3}$个分量。
+$\Gamma_{\mu\nu}^{\lambda}\left(P\right)$ 被称作 $P$ 点的仿射联络，简称联络。根据指标发现四维空间的联络有 $4^{3}$ 个分量。
 
-联络不是张量，我们需要求解联络在坐标变换下的性质。首先从$P$点平移到$Q$的矢量必须是$Q$点处的协变张量
+联络不是张量，我们需要求解联络在坐标变换下的性质。首先从 $P$ 点平移到 $Q$ 的矢量必须是 $Q$ 点处的协变张量
 \begin{equation}
 \widetilde{A}_{\mu}\left(P\to Q\right)=\left(\frac{\partial{}x^{\alpha}}{\partial{}\widetilde{x}^{\mu}}\right)_{Q}A_{\alpha}\left(P\to Q\right).\label{1.2.2}
 \end{equation}
@@ -169,11 +169,11 @@ $\Gamma_{\mu\nu}^{\lambda}\left(P\right)$被称作$P$点的仿射联络，简称
 \begin{equation}
 \widetilde{A}_{\mu}+\widetilde{\Gamma}_{\mu\nu}^{\lambda}\cdot\widetilde{A}_{\lambda}\cdot\symup{d}\widetilde{x}^{\nu}=\left(\frac{\partial{}x^{\alpha}}{\partial{}\widetilde{x}^{\mu}}+\frac{\partial{}^{2}x^{\alpha}}{\partial{}\widetilde{x}^{\nu}\partial{}\widetilde{x}^{\mu}}\frac{\partial{}\widetilde{x}^{\nu}}{\partial{}x^{\sigma}}\symup{d}x^{\sigma}\right)\cdot\left(A_{\alpha}+\Gamma_{\alpha\gamma}^{\beta}\cdot A_{\beta}\cdot\symup{d}x^{\gamma}\right).
 \end{equation}
-这些量都是在$P$点处定义的量，所以省略了记号${}_{P}$.而在$P$点处满足
+这些量都是在 $P$ 点处定义的量，所以省略了记号 ${}_{P}$. 而在 $P$ 点处满足
 \begin{equation}
 \widetilde{A}_{\mu}=\frac{\partial{}x^{\alpha}}{\partial{}\widetilde{x}^{\mu}}A_{\alpha},\symup{d}\widetilde{x}^{\nu}=\frac{\partial{}\widetilde{x}^{\nu}}{\partial{}x^{\sigma}}\symup{d}x^{\sigma},
 \end{equation}
-代入上式，略去坐标微分$\symup{d}x^{\alpha}$二阶以上小量，
+代入上式，略去坐标微分 $\symup{d}x^{\alpha}$ 二阶以上小量，
 \begin{align}
 \frac{\partial{}x^{\alpha}}{\partial{}\widetilde{x}^{\mu}}A_{\alpha}+\widetilde{\Gamma}_{\mu\nu}^{\lambda}\cdot\frac{\partial{}x^{\rho}}{\partial{}\widetilde{x}^{\lambda}}A_{\rho}\cdot\frac{\partial{}\widetilde{x}^{\nu}}{\partial{}x^{\sigma}}\symup{d}x^{\sigma}&=\left(\frac{\partial{}x^{\alpha}}{\partial{}\widetilde{x}^{\mu}}+\frac{\partial{}^{2}x^{\alpha}}{\partial{}\widetilde{x}^{\nu}\partial{}\widetilde{x}^{\mu}}\frac{\partial{}\widetilde{x}^{\nu}}{\partial{}x^{\sigma}}\symup{d}x^{\sigma}\right)\cdot\left(A_{\alpha}+\Gamma_{\alpha\gamma}^{\beta}\cdot A_{\beta}\cdot\symup{d}x^{\gamma}\right).\notag\\
 \widetilde{\Gamma}_{\mu\nu}^{\lambda}\cdot\frac{\partial{}x^{\rho}}{\partial{}\widetilde{x}^{\lambda}}A_{\rho}\cdot\frac{\partial{}\widetilde{x}^{\nu}}{\partial{}x^{\sigma}}\symup{d}x^{\sigma}&=\Gamma_{\alpha\gamma}^{\beta}\cdot\frac{\partial{}x^{\alpha}}{\partial{}\widetilde{x}^{\mu}}A_{\beta}\cdot\symup{d}x^{\gamma}+\frac{\partial{}^{2}x^{\alpha}}{\partial{}\widetilde{x}^{\nu}\partial{}\widetilde{x}^{\mu}}\frac{\partial{}\widetilde{x}^{\nu}}{\partial{}x^{\sigma}}A_{\alpha}\symup{d}x^{\sigma}.\notag
@@ -186,7 +186,7 @@ $\Gamma_{\mu\nu}^{\lambda}\left(P\right)$被称作$P$点的仿射联络，简称
 \begin{equation}
 \widetilde{\Gamma}_{\mu\nu}^{\lambda}\cdot\frac{\partial{}x^{\rho}}{\partial{}\widetilde{x}^{\lambda}}\cdot\frac{\partial{}\widetilde{x}^{\nu}}{\partial{}x^{\sigma}}=\Gamma_{\alpha\sigma}^{\rho}\cdot\frac{\partial{}x^{\alpha}}{\partial{}\widetilde{x}^{\mu}}+\frac{\partial{}^{2}x^{\rho}}{\partial{}\widetilde{x}^{\nu}\partial{}\widetilde{x}^{\mu}}\frac{\partial{}\widetilde{x}^{\nu}}{\partial{}x^{\sigma}}.\notag
 \end{equation}
-两边同乘$\dfrac{\partial{}\widetilde{x}^{\tau}}{\partial{}x^{\rho}}\dfrac{\partial{}x^{\sigma}}{\partial{}\widetilde{x}^{\gamma}}$,重复指标求和，注意到 Kroneker 符号，得到不同坐标系中仿射联络变换公式
+两边同乘 $\dfrac{\partial{}\widetilde{x}^{\tau}}{\partial{}x^{\rho}}\dfrac{\partial{}x^{\sigma}}{\partial{}\widetilde{x}^{\gamma}}$, 重复指标求和，注意到 Kroneker 符号，得到不同坐标系中仿射联络变换公式
 \begin{equation}
 \widetilde{\Gamma}_{\mu\nu}^{\tau}=\Gamma_{\alpha\sigma}^{\rho}\frac{\partial{}x^{\alpha}}{\partial{}\widetilde{x}^{\mu}}\frac{\partial{}x^{\sigma}}{\partial{}\widetilde{x}^{\gamma}}\frac{\partial{}\widetilde{x}^{\tau}}{\partial{}x^{\rho}}+\frac{\partial{}^{2}x^{\rho}}{\partial{}\widetilde{x}^{\mu}\partial\widetilde{x}^{\gamma}}\frac{\partial{}\widetilde{x}^{\tau}}{\partial{}x^{\rho}}.
 \end{equation}
@@ -208,7 +208,7 @@ $\Gamma_{\mu\nu}^{\lambda}\left(P\right)$被称作$P$点的仿射联络，简称
 是张量，叫挠率张量。
 
 \subsection{协变微商}
-有了矢量平移和仿射联络，我们就可以定义张量场的微商运算。这种运算叫协变微商，能保证微商后的量仍是张量。本节需要区分普通微商和协变微商。对于标量场，普通微商用$U_{,\mu}$来表示
+有了矢量平移和仿射联络，我们就可以定义张量场的微商运算。这种运算叫协变微商，能保证微商后的量仍是张量。本节需要区分普通微商和协变微商。对于标量场，普通微商用 $U_{,\mu}$ 来表示
 \begin{equation}
 U_{,\mu}=\frac{\partial{}U\left(\symbf{x}\right)}{\partial{}x^{\mu}}.
 \end{equation}
@@ -216,7 +216,7 @@ U_{,\mu}=\frac{\partial{}U\left(\symbf{x}\right)}{\partial{}x^{\mu}}.
 \begin{equation}
 \widetilde{U}_{,\mu}=\frac{\partial{}\widetilde{U}\left(\widetilde{\symbf{x}}\right)}{\partial{}\widetilde{x}^{\mu}}=\frac{\partial{}\widetilde{U}\left(\widetilde{\symbf{x}}\right)}{\partial{}x^{\alpha}}\frac{\partial{}x^{\alpha}}{\partial{}\widetilde{x}^{\mu}}=\frac{\partial{}U\left(\symbf{x}\right)}{\partial{}x^{\alpha}}\frac{\partial{}x^{\alpha}}{\partial{}\widetilde{x}^{\mu}}=U_{,\alpha}\frac{\partial{}x^{\alpha}}{\partial{}\widetilde{x}^{\mu}}.
 \end{equation}
-可见$U_{,\mu}$是协变矢量。标量场的普通微商就是它的协变微商：
+可见 $U_{,\mu}$ 是协变矢量。标量场的普通微商就是它的协变微商：
 \begin{equation}
 U_{;\mu}=U_{,\mu}.
 \end{equation}
@@ -225,11 +225,11 @@ U_{;\mu}=U_{,\mu}.
 \begin{equation}
 A_{\mu,\nu}=\frac{\partial{}A_{\mu}}{\partial{}x^{\nu}}=\lim_{Q\to P}\frac{A_{\mu}\left(Q\right)-A_{\mu}\left(P\right)}{\symup{d}x^{\nu}}.
 \end{equation}
-如前文所言，$A_{\mu}\left(Q\right)-A_{\mu}\left(P\right)$不是张量，协变矢量的协变微商要用平移来定义：
+如前文所言，$A_{\mu}\left(Q\right)-A_{\mu}\left(P\right)$ 不是张量，协变矢量的协变微商要用平移来定义：
 \begin{equation}
 A_{\mu;\nu}=\lim_{Q\to P}\frac{A_{\mu}\left(Q\right)-A_{\mu}\left(P\to Q\right)}{\symup{d}x^{\nu}}=A_{\mu,\nu}-\Gamma_{\mu\nu}^{\lambda}A_{\lambda}.
 \end{equation}
-可见$A_{\mu;\nu}$是二阶协变张量。
+可见 $A_{\mu;\nu}$ 是二阶协变张量。
 
 为了唯一确定其他阶张量的协变微商，规定协变微商满足莱布尼茨法则
 \begin{equation}
@@ -244,7 +244,7 @@ A_{;\lambda}^{\mu}B_{\mu}+A^{\mu}B_{\mu;\lambda}&=A_{,\lambda}^{\mu}B_{\mu}+A^{\
 \begin{equation}
 A_{;\lambda}^{\mu}B_{\mu}=A_{,\lambda}^{\mu}B_{\mu}+A^{\mu}\Gamma_{\mu\lambda}^{\nu}B_{\nu}=A^{\mu}_{,\lambda}B_{\mu}+\Gamma_{\alpha\lambda}^{\mu}A^{\alpha}B_{\mu}.\notag
 \end{equation}
-由于矢量场$B_{\mu}$任取，可得逆变矢量的协变微商
+由于矢量场 $B_{\mu}$ 任取，可得逆变矢量的协变微商
 \begin{equation}
 A_{;\nu}^{\mu}=A_{,\nu}^{\mu}+\Gamma_{\lambda\nu}^{\mu}A^{\lambda}.
 \end{equation}
@@ -267,21 +267,21 @@ T_{\nu;\lambda}^{\mu}&=T_{\nu,\lambda}^{\mu}+\Gamma_{\rho\lambda}^{\mu}T_{\nu}^{
 \begin{equation}
 x^{\mu}=x^{\mu}\left(\lambda\right).
 \end{equation}
-其中$\lambda$是一个标量性质的参量。
+其中 $\lambda$ 是一个标量性质的参量。
 
 曲线上任意一点切矢量定义为
 \begin{equation}
 A^{\mu}=\frac{\symup{d}x^{\mu}}{\symup{d}\lambda}.
 \end{equation}
-这是一个逆变矢量。设曲线上两邻点$P$和$Q$的坐标分别为$x^{\mu}$和$x^{\mu}+\symup{d}x^{\mu}$.为了比较两点的切矢量，必须利用平移操作，将$P$点的切矢量$A^{\mu}\left(P\right)$平移到$Q$点。二者平行意味着
+这是一个逆变矢量。设曲线上两邻点 $P$ 和 $Q$ 的坐标分别为 $x^{\mu}$ 和 $x^{\mu}+\symup{d}x^{\mu}$. 为了比较两点的切矢量，必须利用平移操作，将 $P$ 点的切矢量 $A^{\mu}\left(P\right)$ 平移到 $Q$ 点。二者平行意味着
 \begin{equation}
 \frac{A^{1}\left(Q\right)}{A^{1}\left(P\to Q\right)}=\frac{A^{2}\left(Q\right)}{A^{2}\left(P\to Q\right)}=\frac{A^{3}\left(Q\right)}{A^{3}\left(P\to Q\right)}=\frac{A^{4}\left(Q\right)}{A^{4}\left(P\to Q\right)}=F\left(\lambda+\symup{d}\lambda\right).
 \end{equation}
-其中$F$是参量$\lambda$的函数，$P$点的是$F\left(\lambda\right),Q$点的是$F\left(\lambda+\symup{d}\lambda\right)$,容易发现
+其中 $F$ 是参量 $\lambda$ 的函数，$P$ 点的是 $F\left(\lambda\right), Q$ 点的是 $F\left(\lambda+\symup{d}\lambda\right)$, 容易发现
 \begin{equation}
 F\left(\lambda+\symup{d}\lambda\right)=F\left(\lambda\right)+\frac{\symup{d}F}{\symup{d}\lambda}\symup{d}\lambda=1+\frac{\symup{d}F}{\symup{d}\lambda}\symup{d}\lambda,
 \end{equation}
-于是记$f\left(\lambda\right)=\dfrac{\symup{d}F}{\symup{d}\lambda}$,自平行线（测地线）即满足
+于是记 $f\left(\lambda\right)=\dfrac{\symup{d}F}{\symup{d}\lambda}$, 自平行线（测地线）即满足
 \begin{equation}
 A^{\mu}\left(Q\right)=\left[1+f\left(\lambda\right)\symup{d}\lambda\right]\cdot A^{\mu}\left(P\to Q\right).
 \end{equation}
@@ -290,11 +290,11 @@ A^{\mu}\left(Q\right)=\left[1+f\left(\lambda\right)\symup{d}\lambda\right]\cdot 
 A^{\mu}\left(P\to Q\right)&=A^{\mu}\left(P\right)-\Gamma_{\alpha\beta}^{\mu}\left(P\right)\cdot A^{\alpha}\left(P\right)\symup{d}x^{\beta}=\frac{\symup{d}x^{\mu}}{\symup{d}\lambda}-\Gamma_{\alpha\beta}^{\mu}\frac{\symup{d}x^{\alpha}}{\symup{d}\lambda}\frac{\symup{d}x^{\beta}}{\symup{d}\lambda}\symup{d}\lambda,\\
 A^{\mu}\left(Q\right)&=A^{\mu}\left(P\right)+\symup{d}A^{\mu}\left(P\right)=\frac{\symup{d}x^{\mu}}{\symup{d}\lambda}+\frac{\symup{d}^{2}x^{\mu}}{\symup{d}\lambda^{2}}\symup{d}\lambda,
 \end{align}
-自平行条件保留到$\symup{d}\lambda$的一阶小量可写作
+自平行条件保留到 $\symup{d}\lambda$ 的一阶小量可写作
 \begin{equation}
 \frac{\symup{d}^{2}x^{\mu}}{\symup{d}\lambda^{2}}+\Gamma_{\alpha\beta}^{\mu}\frac{\symup{d}x^{\alpha}}{\symup{d}\lambda}\frac{\symup{d}x^{\beta}}{\symup{d}\lambda}=f\left(\lambda\right)\frac{\symup{d}x^{\mu}}{\symup{d}\lambda}.
 \end{equation}
-这就是测地线应该满足的微分方程。如果标量参量$\lambda$选得足够好，该方程还能得到简化。引入$\lambda=\lambda\left(\sigma\right)$,利用
+这就是测地线应该满足的微分方程。如果标量参量 $\lambda$ 选得足够好，该方程还能得到简化。引入 $\lambda=\lambda\left(\sigma\right)$, 利用
 \begin{align}
 \frac{\symup{d}x^{\mu}}{\symup{d}\lambda}&=\frac{\symup{d}x^{\mu}}{\symup{d}\sigma}\cdot\frac{\symup{d}\sigma}{\symup{d}\lambda},\\
 \frac{\symup{d}^{2}x^{\mu}}{\symup{d}\lambda^{2}}&=\frac{\symup{d}^{2}x^{\mu}}{\symup{d}\sigma^{2}}\cdot\left(\frac{\symup{d}\sigma}{\symup{d}\lambda}\right)^{2}+\frac{\symup{d}x^{\mu}}{\symup{d}\sigma}\cdot\frac{\symup{d}^{2}\sigma}{\symup{d}\lambda^{2}}.
@@ -303,7 +303,7 @@ A^{\mu}\left(Q\right)&=A^{\mu}\left(P\right)+\symup{d}A^{\mu}\left(P\right)=\fra
 \begin{equation}
 \left(\frac{\symup{d}^{2}x^{\mu}}{\symup{d}\sigma^{2}}+\Gamma_{\alpha\beta}^{\mu}\frac{\symup{d}x^{\alpha}}{\symup{d}\sigma}\frac{\symup{d}x^{\beta}}{\symup{d}\sigma}\right)\cdot\left(\frac{\symup{d}\sigma}{\symup{d}\lambda}\right)^{2}=\frac{\symup{d}x^{\mu}}{\symup{d}\sigma}\cdot\left[f\left(\lambda\right)\frac{\symup{d}\sigma}{\symup{d}\lambda}-\frac{\symup{d}^{2}\sigma}{\symup{d}\lambda^{2}}\right].
 \end{equation}
-如果标量参量$\sigma$满足
+如果标量参量 $\sigma$ 满足
 \begin{equation}
 f\left(\lambda\right)\frac{\symup{d}\sigma}{\symup{d}\lambda}=\frac{\symup{d}^{2}\sigma}{\symup{d}\lambda^{2}},\label{1.4.12}
 \end{equation}
@@ -311,26 +311,26 @@ f\left(\lambda\right)\frac{\symup{d}\sigma}{\symup{d}\lambda}=\frac{\symup{d}^{2
 \begin{equation}
 \frac{\symup{d}^{2}x^{\mu}}{\symup{d}\sigma^{2}}+\Gamma_{\alpha\beta}^{\mu}\frac{\symup{d}x^{\alpha}}{\symup{d}\sigma}\frac{\symup{d}x^{\beta}}{\symup{d}\sigma}=0.
 \end{equation}
-我们称这样的标量参量$\sigma$为仿射参量。
+我们称这样的标量参量 $\sigma$ 为仿射参量。
 
-比较化简前后的测地线方程右端，可以发现当采用仿射参量时，$f\left(\sigma\right)=0$,因此自平行条件简化成
+比较化简前后的测地线方程右端，可以发现当采用仿射参量时，$f\left(\sigma\right)=0$, 因此自平行条件简化成
 \begin{equation}
 A^{\mu}\left(Q\right)=A^{\mu}\left(P\to Q\right),
 \end{equation}
-即沿着这条曲线，从$P$点处平移到$Q$点的曲线切矢量恰等于$Q$点处的曲线切矢量。
+即沿着这条曲线，从 $P$ 点处平移到 $Q$ 点的曲线切矢量恰等于 $Q$ 点处的曲线切矢量。
 
-值得注意的是，只需满足 (\ref{1.4.12}) 式的参量都是仿射参量，因此仿射参量作线性变换后的参量$a\sigma+b$也是仿射参量。其中$a,b$是常数。
+值得注意的是，只需满足 (\ref{1.4.12}) 式的参量都是仿射参量，因此仿射参量作线性变换后的参量 $a\sigma+b$ 也是仿射参量。其中 $a, b$ 是常数。
 
 \subsection{曲率和挠率}
 联络的反称部分是个张量。由联络出发还可定义另一个张量，即曲率张量。
 
-对一个给定的协变矢量$A_{\lambda}\left(\symbf{x}\right)$求两次协变微商得到
+对一个给定的协变矢量 $A_{\lambda}\left(\symbf{x}\right)$ 求两次协变微商得到
 \begin{align}
 A_{\lambda;\mu;\nu}&=\left(A_{\lambda,\mu}-\Gamma_{\lambda\mu}^{\rho}A_{\rho}\right)_{;\nu}\notag\\
 &=\left(A_{\lambda,\mu}-\Gamma_{\lambda\mu}^{\rho}A_{\rho}\right)_{,\nu}-\Gamma_{\lambda\nu}^{\sigma}\left(A_{\sigma,\mu}-\Gamma_{\sigma\mu}^{\rho}A_{\rho}\right)-\Gamma_{\mu\nu}^{\sigma}\left(A_{\lambda,\sigma}-\Gamma_{\lambda\sigma}^{\rho}A_{\rho}\right)\notag\\
 &=\left(A_{\lambda,\mu,\nu}-\Gamma_{\lambda\mu,\nu}^{\rho}A_{\rho}-\Gamma_{\lambda\mu}^{\rho}A_{\rho,\nu}\right)-\Gamma_{\lambda\nu}^{\sigma}A_{\sigma,\mu}+\Gamma_{\lambda\nu}^{\sigma}\Gamma_{\sigma\mu}^{\rho}A_{\rho}-\Gamma_{\mu\nu}^{\sigma}\left(A_{\lambda,\sigma}-\Gamma_{\lambda\sigma}^{\rho}A_{\rho}\right).
 \end{align}
-傀标可以随意改变，且注意到最后一项括号中$A_{\lambda,\sigma}-\Gamma_{\lambda\sigma}^{\rho}A_{\rho}=A_{\lambda;\sigma}$,上式可写作
+傀标可以随意改变，且注意到最后一项括号中 $A_{\lambda,\sigma}-\Gamma_{\lambda\sigma}^{\rho}A_{\rho}=A_{\lambda;\sigma}$, 上式可写作
 \begin{align}
 A_{\lambda;\mu;\nu}&=\left(A_{\lambda,\mu,\nu}-\Gamma_{\lambda\mu,\nu}^{\rho}A_{\rho}-\Gamma_{\lambda\mu}^{\rho}A_{\rho,\nu}\right)-\Gamma_{\lambda\nu}^{\sigma}A_{\sigma,\mu}+\Gamma_{\lambda\nu}^{\sigma}\Gamma_{\sigma\mu}^{\rho}A_{\rho}-\Gamma_{\mu\nu}^{\sigma}A_{\lambda;\sigma}\notag\\
 &=\left(A_{\lambda,\mu,\nu}-\Gamma_{\lambda\mu,\nu}^{\rho}A_{\rho}-\Gamma_{\lambda\mu}^{\rho}A_{\rho,\nu}\right)-\Gamma_{\lambda\nu}^{\rho}A_{\rho,\mu}+\Gamma_{\lambda\nu}^{\sigma}\Gamma_{\sigma\mu}^{\rho}A_{\rho}-\Gamma_{\mu\nu}^{\rho}A_{\lambda;\rho}.
@@ -345,39 +345,39 @@ A_{\lambda;\nu;\mu}=\left(A_{\lambda,\nu,\mu}-\Gamma_{\lambda\nu,\mu}^{\rho}A_{\
 A_{\lambda;\mu;\nu}-A_{\lambda;\nu;\mu}&=\left(\Gamma_{\lambda\nu,\mu}^{\rho}-\Gamma_{\lambda\mu,\nu}^{\rho}+\Gamma_{\lambda\nu}^{\sigma}\Gamma_{\sigma\mu}^{\rho}-\Gamma_{\lambda\mu}^{\sigma}\Gamma_{\sigma\nu}^{\rho}\right)A_{\rho}+\left(\Gamma_{\nu\mu}^{\rho}-\Gamma_{\mu\nu}^{\rho}\right)A_{\lambda;\rho}\notag\\
 &=R_{\lambda\mu\nu}^{\rho}A_{\rho}-2\Gamma^{\rho}_{\left[\mu\nu\right]}A_{\lambda;\rho}.\label{1.5.4}
 \end{align}
-该式左侧是张量，右侧与挠率张量$\Gamma^{\rho}_{\left[\mu\nu\right]}$有关的那一项也是张量，因此$R_{\lambda\mu\nu}^{\rho}$也必然是张量，我们称其为曲率张量。观察 (\ref{1.5.4}) 式发现曲率张量后一对指标反称，因此只有一二、一三两种独立缩并。
+该式左侧是张量，右侧与挠率张量 $\Gamma^{\rho}_{\left[\mu\nu\right]}$ 有关的那一项也是张量，因此 $R_{\lambda\mu\nu}^{\rho}$ 也必然是张量，我们称其为曲率张量。观察 (\ref{1.5.4}) 式发现曲率张量后一对指标反称，因此只有一二、一三两种独立缩并。
 
 \begin{figure}[!htp]
 \centering
 \tikzset{every picture/.style={line width=0.75pt}}
-\begin{tikzpicture}[x=0.5pt,y=0.5pt,yscale=0.6,xscale=0.6]
-\draw (0,0) -- (30,150) ;
-\draw (30,150) -- (200,200) ;
-\draw [shift={(200,200)},rotate=-160][line width=0.75](10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29); 
-\draw (0,0) -- (250,0) ;
-\draw (250,0) -- (300,150) ;
-\draw [shift={(300,150)},rotate=-109][line width=0.75](10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29); 
+\begin{tikzpicture}[x=0.5pt, y=0.5pt, yscale=0.6, xscale=0.6]
+\draw (0, 0) -- (30, 150) ;
+\draw (30, 150) -- (200, 200) ;
+\draw [shift={(200, 200)}, rotate=-160][line width=0.75](10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0, 0) .. controls (3.31, 0.3) and (6.95, 1.4) .. (10.93, 3.29); 
+\draw (0, 0) -- (250, 0) ;
+\draw (250, 0) -- (300, 150) ;
+\draw [shift={(300, 150)}, rotate=-109][line width=0.75](10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0, 0) .. controls (3.31, 0.3) and (6.95, 1.4) .. (10.93, 3.29); 
 %Text
-\draw (-10,190) node [anchor=north west][inner sep=0.75pt]   [align=left] {$Q'$};
-\draw (-30,0) node [anchor=north west][inner sep=0.75pt]   [align=left] {$O$};
-\draw (250,0) node [anchor=north west][inner sep=0.75pt]   [align=left] {$Q$};
-\draw (300,150) node [anchor=north west][inner sep=0.75pt]   [align=left] {$P$};
-\draw (200,200) node [anchor=north west][inner sep=0.75pt]   [align=left] {$P'$};
+\draw (-10, 190) node [anchor=north west][inner sep=0.75pt]   [align=left] {$Q'$};
+\draw (-30, 0) node [anchor=north west][inner sep=0.75pt]   [align=left] {$O$};
+\draw (250, 0) node [anchor=north west][inner sep=0.75pt]   [align=left] {$Q$};
+\draw (300, 150) node [anchor=north west][inner sep=0.75pt]   [align=left] {$P$};
+\draw (200, 200) node [anchor=north west][inner sep=0.75pt]   [align=left] {$P'$};
 \end{tikzpicture}
 \captionsetup{justification=raggedright, singlelinecheck=false}
 \caption{挠率的几何意义。}
 \label{挠率的几何意义。}
 \end{figure}
 
-挠率的几何意义是什么呢？考虑自$O$点出发有两个小位移$OQ$和$OQ'$,将$OQ$平移到$Q'P',OQ'$平移到$QP$,如图\ref{挠率的几何意义。}所示。简单计算平移可得
+挠率的几何意义是什么呢？考虑自 $O$ 点出发有两个小位移 $OQ$ 和 $OQ'$, 将 $OQ$ 平移到 $Q'P', OQ'$ 平移到 $QP$, 如图\ref{挠率的几何意义。}所示。简单计算平移可得
 \begin{align}
-OQ&=\symup{d}x^{\mu},Q'P'=\symup{d}x^{\mu}-\Gamma_{\lambda\nu}^{\mu}\symup{d}x^{\lambda}\delta{}x^{\nu},\\
-OQ'&=\delta{}x^{\mu},QP=\delta{}x^{\mu}-\Gamma_{\nu\lambda}^{\mu}\delta{}x^{\nu}\symup{d}x^{\lambda},\\
+OQ&=\symup{d}x^{\mu}, Q'P'=\symup{d}x^{\mu}-\Gamma_{\lambda\nu}^{\mu}\symup{d}x^{\lambda}\delta{}x^{\nu},\\
+OQ'&=\delta{}x^{\mu}, QP=\delta{}x^{\mu}-\Gamma_{\nu\lambda}^{\mu}\delta{}x^{\nu}\symup{d}x^{\lambda},\\
 PP'&=OQ'+QP'-OQ-QP=\left(\Gamma_{\nu\lambda}^{\mu}-\Gamma_{\lambda\nu}^{\mu}\right)\symup{d}x^{\lambda}\delta{}x^{\nu}=2\Gamma^{\mu}_{\left[\nu\lambda\right]}\symup{d}x^{\lambda}\delta{}x^{\nu}.
 \end{align}
 可见挠率为零时才构成封闭的四边形。我们称有挠空间是扭曲的。
 
-假设空间无挠，四边形闭合，同样可通过这种平移研究曲率的几何意义。让某个矢量$A^{\mu}$自$O$点开始，平移$\symup{d}x^{\mu}$到$Q$点，然后平移$\delta{}x^{\mu}-\Gamma_{\nu\lambda}^{\mu}\delta{}x^{\nu}\symup{d}x^{\lambda}$到$P$点，然后平移$-\left(\symup{d}x^{\mu}-\Gamma_{\lambda\nu}^{\mu}\symup{d}x^{\lambda}\delta{}x^{\nu}\right)$到$Q'$点，最后平移$-\delta{}x^{\mu}$回到$O$点。在无挠空间中，最后平移得到的结果和原矢量也不一定重合，逐步计算平移可以得到差额，注意计算中要考虑联络随位移的变化。最后（注意无挠空间要求联络对称）结果为
+假设空间无挠，四边形闭合，同样可通过这种平移研究曲率的几何意义。让某个矢量 $A^{\mu}$ 自 $O$ 点开始，平移 $\symup{d}x^{\mu}$ 到 $Q$ 点，然后平移 $\delta{}x^{\mu}-\Gamma_{\nu\lambda}^{\mu}\delta{}x^{\nu}\symup{d}x^{\lambda}$ 到 $P$ 点，然后平移 $-\left(\symup{d}x^{\mu}-\Gamma_{\lambda\nu}^{\mu}\symup{d}x^{\lambda}\delta{}x^{\nu}\right)$ 到 $Q'$ 点，最后平移 $-\delta{}x^{\mu}$ 回到 $O$ 点。在无挠空间中，最后平移得到的结果和原矢量也不一定重合，逐步计算平移可以得到差额，注意计算中要考虑联络随位移的变化。最后（注意无挠空间要求联络对称）结果为
 \begin{equation}
 \delta{}A^{\mu}=R^{\mu}_{\lambda\nu\gamma}A^{\lambda}\delta{}x^{\nu}\symup{d}x^{\gamma}.
 \end{equation}
@@ -386,16 +386,16 @@ PP'&=OQ'+QP'-OQ-QP=\left(\Gamma_{\nu\lambda}^{\mu}-\Gamma_{\lambda\nu}^{\mu}\rig
 挠率和曲率都是张量，如果某个参考系中它们所有分量都为零，那么在所有参考系中它们所有分量也都为零，此时称空间是平直的。而联络不是张量，我们可以证明在平直空间中一定可以找到一个坐标系，联络在其中的所有分量都为零，但不能说明联络分量在所有坐标系中都为零。即联络可以“无中生有”，但挠率和曲率不行。
 
 \subsection{度规张量}
-为了在仿射空间中引入度量，即定义向量的长度、向量间的夹角，需要引入度规张量$g_{\mu\nu}$,之后仿射空间成为广义黎曼空间。黎曼空间中的线元$\symup{d}s$可以表示为
+为了在仿射空间中引入度量，即定义向量的长度、向量间的夹角，需要引入度规张量 $g_{\mu\nu}$, 之后仿射空间成为广义黎曼空间。黎曼空间中的线元 $\symup{d}s$ 可以表示为
 \begin{equation}
 \symup{d}s^{2}=g_{\mu\nu}\symup{d}x^{\mu}\symup{d}x^{\nu}.
 \end{equation}
-要求$\symup{d}s^{2}$是标量，即与坐标系选取无关。再加上$\symup{d}x^{\mu}$是一阶逆变张量，因此$g_{\mu\nu}$是个二阶协变张量。由于$\symup{d}x^{\mu}\symup{d}x^{\nu}$对称，因此度规张量必定是对称张量，满足
+要求 $\symup{d}s^{2}$ 是标量，即与坐标系选取无关。再加上 $\symup{d}x^{\mu}$ 是一阶逆变张量，因此 $g_{\mu\nu}$ 是个二阶协变张量。由于 $\symup{d}x^{\mu}\symup{d}x^{\nu}$ 对称，因此度规张量必定是对称张量，满足
 \begin{equation}
 g_{\mu\nu}=g_{\nu\mu}.
 \end{equation}
 
-一般来说，黎曼空间中的度规分量不是常数 ($g_{\mu\nu,\lambda}\ne0$),如果是，且度规矩阵行列式不为零，根据线性代数知识，一定可以找到一个坐标变换，将二次型$\symup{d}s^{2}=g_{\mu\nu}\symup{d}x^{\mu}\symup{d}x^{\nu}$化成坐标微分的平方和差形式，使度规在该坐标系下分量为
+一般来说，黎曼空间中的度规分量不是常数 ($g_{\mu\nu,\lambda}\ne0$), 如果是，且度规矩阵行列式不为零，根据线性代数知识，一定可以找到一个坐标变换，将二次型 $\symup{d}s^{2}=g_{\mu\nu}\symup{d}x^{\mu}\symup{d}x^{\nu}$ 化成坐标微分的平方和差形式，使度规在该坐标系下分量为
 \begin{equation}
 g_{\mu\nu}=
 \begin{cases}
@@ -416,7 +416,7 @@ g_{\mu\nu}=
 
 若度规张量非对角元都为零，对角元都为正，称其为正定度规。若非对角元都为零，对角元有正有负，称其为不定度规。定义正则形式下，度规分量对角元之和为度规的号差。可见闵可夫斯基空间的号差为 2.
 
-度规张量的所有坐标分量可以组成一个$4\times4$的对称矩阵，它的逆矩阵对应一个二阶逆变张量$g^{\mu\nu}$,应满足
+度规张量的所有坐标分量可以组成一个 $4\times4$ 的对称矩阵，它的逆矩阵对应一个二阶逆变张量 $g^{\mu\nu}$, 应满足
 \begin{equation}
 g_{\mu\alpha}g^{\alpha\nu}=g^{\nu}_{\mu}=\delta{}_{\mu}^{\nu}=
 \begin{cases}
@@ -424,9 +424,9 @@ g_{\mu\alpha}g^{\alpha\nu}=g^{\nu}_{\mu}=\delta{}_{\mu}^{\nu}=
 0,\mu\ne\nu.
 \end{cases}
 \end{equation}
-利用度规和逆变度规张量可建立逆变和协变向量间的一一对应。记与$U^{\mu}$对应的向量为$U_{\mu}$,其对应关系为
+利用度规和逆变度规张量可建立逆变和协变向量间的一一对应。记与 $U^{\mu}$ 对应的向量为 $U_{\mu}$, 其对应关系为
 \begin{equation}
-U_{\mu}=g_{\mu\nu}U^{\nu},U^{\mu}=g^{\mu\nu}U_{\nu},
+U_{\mu}=g_{\mu\nu}U^{\nu}, U^{\mu}=g^{\mu\nu}U_{\nu},
 \end{equation}
 即度规张量分量和逆变度规张量可实现指标的升降，这是张量新的性质。联系内积运算，可见通过度规任意一个矢量都可以构造出一个标量，该标量定义为矢量长度的平方，如
 \begin{equation}
@@ -434,17 +434,17 @@ g_{\alpha\beta}A^{\alpha}A^{\beta}=A^{\alpha}A_{\alpha}=g^{\alpha\beta}A_{\alpha
 \end{equation}
 对于二阶张量同样有升降
 \begin{equation}
-U_{\nu}^{\mu}=g_{\nu\alpha}U^{\alpha\mu},U_{\nu}^{\mu}=g^{\mu\alpha}U_{\alpha\nu}.
+U_{\nu}^{\mu}=g_{\nu\alpha}U^{\alpha\mu}, U_{\nu}^{\mu}=g^{\mu\alpha}U_{\alpha\nu}.
 \end{equation}
 
-值得一提的是，广义相对论中习惯上取$x^{0}$为时间坐标，即
+值得一提的是，广义相对论中习惯上取 $x^{0}$ 为时间坐标，即
 \begin{equation}
-x^{\mu}=\left(\symup{c}t,x,y,z\right).
+x^{\mu}=\left(\symup{c}t, x, y, z\right).
 \end{equation}
-计算中时常会将空间部分单独提出来讨论，习惯上用$i,j$作为空间指标，如$g_{ij}$指代的就是空间部分的度规。
+计算中时常会将空间部分单独提出来讨论，习惯上用 $i, j$ 作为空间指标，如 $g_{ij}$ 指代的就是空间部分的度规。
 
 \subsection{Christoffel 符号}
-引入度量后我们希望矢量长度在平移下保持不变。如果条件再严格一点，采用对称联络（无挠空间），矢量长度平移不变性将唯一确定对称联络和度规张量的关系。首先将$P$点的逆变矢量$A^{\mu}\left(P\right)$平移到邻近点$Q$,可知
+引入度量后我们希望矢量长度在平移下保持不变。如果条件再严格一点，采用对称联络（无挠空间），矢量长度平移不变性将唯一确定对称联络和度规张量的关系。首先将 $P$ 点的逆变矢量 $A^{\mu}\left(P\right)$ 平移到邻近点 $Q$, 可知
 \begin{equation}
 A^{\mu}\left(P\to Q\right)=A^{\mu}\left(P\right)-\Gamma_{\nu\lambda}^{\mu}\left(P\right)A^{\nu}\left(P\right)\symup{d}x^{\lambda}.\label{1.7.1}
 \end{equation}
@@ -458,11 +458,11 @@ g_{\mu\nu}\left(Q\right)=g_{\mu\nu}\left(P\right)+g_{\mu\nu,\lambda}\left(P\righ
 g_{\mu\nu}\left(Q\right)A^{\mu}\left(P\to Q\right)A^{\nu}\left(P\to Q\right)=g_{\mu\nu}\left(P\right)A^{\mu}\left(P\right)A^{\nu}\left(P\right).\label{1.7.3}
 \end{equation}
 
-将 (\ref{1.7.1})(\ref{1.7.2}) 式代入 (\ref{1.7.3}) 式，并略去$\symup{d}x^{\mu}$二阶以上小量，可得
+将 (\ref{1.7.1})(\ref{1.7.2}) 式代入 (\ref{1.7.3}) 式，并略去 $\symup{d}x^{\mu}$ 二阶以上小量，可得
 \begin{equation}
 \left(g_{\mu\nu,\lambda}-g_{\alpha\nu}\Gamma_{\mu\lambda}^{\alpha}-g_{\mu\alpha}\Gamma_{\nu\lambda}^{\alpha}\right)A^{\mu}A^{\nu}\symup{d}x^{\lambda}=0.
 \end{equation}
-注意到$A^{\mu}$是任意矢量，$\symup{d}x^{\lambda}$是任意位移，括号内为零。轮换指标可得
+注意到 $A^{\mu}$ 是任意矢量，$\symup{d}x^{\lambda}$ 是任意位移，括号内为零。轮换指标可得
 \begin{align}
 g_{\mu\nu,\lambda}-g_{\alpha\nu}\Gamma_{\mu\lambda}^{\alpha}-g_{\mu\alpha}\Gamma_{\nu\lambda}^{\alpha}=0,\label{1.7.5}\\
 g_{\nu\lambda,\mu}-g_{\alpha\lambda}\Gamma_{\nu\mu}^{\alpha}-g_{\nu\alpha}\Gamma_{\lambda\mu}^{\alpha}=0.\label{1.7.6}\\
@@ -480,11 +480,11 @@ g_{\lambda\mu,\nu}-g_{\alpha\mu}\Gamma_{\lambda\nu}^{\alpha}-g_{\alpha\alpha}\Ga
 g_{\mu\nu;\lambda}=g^{\mu\nu}_{;\lambda}=0.
 \end{align}
 
-广义相对论所用的时空是无挠的黎曼时空。前文曾提过无挠的黎曼时空对其中任意一点，都可以找到一个坐标变换，将那点的克氏符的所有分量都变到零。此处可以给出证明。令坐标$x^{\mu}$下$P$点坐标为$x^{\mu}_{P},P$点的联络为$\left(\Gamma^{\lambda}_{\mu\nu}\right)_{P}$,找到坐标变换$x^{\mu}\to\widetilde{x}^{\mu}$,让$P$点在新坐标系中的坐标$\widetilde{x}^{\mu}_{P}=0$,且坐标变换满足
+广义相对论所用的时空是无挠的黎曼时空。前文曾提过无挠的黎曼时空对其中任意一点，都可以找到一个坐标变换，将那点的克氏符的所有分量都变到零。此处可以给出证明。令坐标 $x^{\mu}$ 下 $P$ 点坐标为 $x^{\mu}_{P}, P$ 点的联络为 $\left(\Gamma^{\lambda}_{\mu\nu}\right)_{P}$, 找到坐标变换 $x^{\mu}\to\widetilde{x}^{\mu}$, 让 $P$ 点在新坐标系中的坐标 $\widetilde{x}^{\mu}_{P}=0$, 且坐标变换满足
 \begin{equation}
 x^{\mu}-x^{\mu}_{P}=\widetilde{x}^{\mu}+\frac{1}{2}C_{\alpha\beta}^{\mu}\widetilde{x}^{\alpha}\widetilde{x}^{\beta},
 \end{equation}
-其中$C_{\alpha\beta}^{\mu}=C_{\beta\alpha}^{\mu}$,分量都是常数。根据上式得到$P$点坐标变换矩阵满足
+其中 $C_{\alpha\beta}^{\mu}=C_{\beta\alpha}^{\mu}$, 分量都是常数。根据上式得到 $P$ 点坐标变换矩阵满足
 \begin{equation}
 \left(\frac{\partial{}x^{\mu}}{\partial{}\widetilde{x}^{\lambda}}\right)_{P}=\delta{}^{\mu}_{\nu},\left(\frac{\partial{}\widetilde{x}^{\mu}}{\partial{}x^{\lambda}}\right)_{P}=\delta{}^{\mu}_{\lambda},\left(\frac{\partial{}^{2}x^{\mu}}{\partial{}\widetilde{x}^{\lambda}\partial{}\widetilde{x}^{\nu}}\right)_{P}=C_{\lambda\nu}^{\mu},
 \end{equation}
@@ -492,7 +492,7 @@ x^{\mu}-x^{\mu}_{P}=\widetilde{x}^{\mu}+\frac{1}{2}C_{\alpha\beta}^{\mu}\widetil
 \begin{equation}
 \left(\widetilde{\Gamma}^{\lambda}_{\mu\nu}\right)_{P}=\left(\Gamma^{\lambda}_{\mu\nu}\right)_{P}+C_{\mu\nu}^{\lambda}.
 \end{equation}
-因此适当地选取$C_{\mu\nu}^{\lambda}$就可让新坐标系中$P$点联络为零。利用 (\ref{1.7.5}) 式可以看出此时$g_{\mu\nu,\lambda}=0$,即度规在局域内是常数。我们已经知道这意味着可以将度规分量写作正则形式，时空是局域平直的。通过测地线方程很容易看出平直性。我们知道采用仿射参量时测地线方程可以写作
+因此适当地选取 $C_{\mu\nu}^{\lambda}$ 就可让新坐标系中 $P$ 点联络为零。利用 (\ref{1.7.5}) 式可以看出此时 $g_{\mu\nu,\lambda}=0$, 即度规在局域内是常数。我们已经知道这意味着可以将度规分量写作正则形式，时空是局域平直的。通过测地线方程很容易看出平直性。我们知道采用仿射参量时测地线方程可以写作
 \begin{equation}
 \frac{\symup{d}^{2}x^{\mu}}{\symup{d}\sigma^{2}}+\Gamma_{\alpha\beta}^{\mu}\frac{\symup{d}x^{\alpha}}{\symup{d}\sigma}\frac{\symup{d}x^{\beta}}{\symup{d}\sigma}=0,\tag{1.4.13}
 \end{equation}
@@ -509,7 +509,7 @@ x^{\mu}-x^{\mu}_{P}=\widetilde{x}^{\mu}+\frac{1}{2}C_{\alpha\beta}^{\mu}\widetil
 \begin{equation}
 S=\int_{A}^{B}\symup{d}s,
 \end{equation}
-积分可沿通过$A,B$的任意曲线来作，$\symup{d}s$为线元，则$S$为曲线的“长度”。短程线必须满足
+积分可沿通过 $A, B$ 的任意曲线来作，$\symup{d}s$ 为线元，则 $S$ 为曲线的“长度”。短程线必须满足
 \begin{equation}
 \delta{}S=\delta{}\int_{A}^{B}\symup{d}s=0.\label{1.8.2}
 \end{equation}
@@ -518,7 +518,7 @@ S=\int_{A}^{B}\symup{d}s,
 \symup{d}s&=\left(g_{\alpha\beta}\symup{d}x^{\alpha}\symup{d}x^{\beta}\right)^{\frac12}=\left(g_{\alpha\beta}\frac{\symup{d}x^{\alpha}}{\symup{d}\lambda}\frac{\symup{d}x^{\beta}}{\symup{d}\lambda}\right)^{\frac12}\symup{d}\lambda\notag\\
 &=\left(g_{\alpha\beta}\dot{x}^{\alpha}\dot{x}^{\beta}\right)^{\frac12}\symup{d}\lambda=L\symup{d}\lambda.
 \end{align}
-其中$L$是拉格朗日函数。(\ref{1.8.2}) 式改写为
+其中 $L$ 是拉格朗日函数。(\ref{1.8.2}) 式改写为
 \begin{equation}
 \delta{}\int_{A}^{B}L\symup{d}\lambda=0.
 \end{equation}
@@ -527,7 +527,7 @@ S=\int_{A}^{B}\symup{d}s,
 \frac{\partial{}L}{\partial{}x^{\mu}}&-\frac{\symup{d}}{\symup{d}\lambda}\frac{\partial{}L}{\partial{}\dot{x}^{\nu}}=0.\\
 \frac{1}{\left(g_{\alpha\beta}\dot{x}^{\alpha}\dot{x}^{\beta}\right)^{\frac12}}\frac{\partial{}g_{\alpha\beta}}{\partial{}x^{\nu}}\dot{x}^{\alpha}\dot{x}^{\beta}&-\frac{\symup{d}}{\symup{d}\lambda}\frac{g_{\alpha\nu}\dot{x}^{\alpha}+g_{\beta\nu}\dot{x}^{\beta}}{\left(g_{\alpha\beta}\dot{x}^{\alpha}\dot{x}^{\beta}\right)^{\frac12}}=0.\label{1.8.6}
 \end{align}
-如果标量参量$\lambda$为线长$\symup{d}s$,则有
+如果标量参量 $\lambda$ 为线长 $\symup{d}s$, 则有
 \begin{equation}
 \left(g_{\alpha\beta}\dot{x}^{\alpha}\dot{x}^{\beta}\right)^{\frac12}=g_{\alpha\beta}\frac{\symup{d}x^{\alpha}}{\symup{d}\lambda}\frac{\symup{d}x^{\beta}}{\symup{d}\lambda}=g_{\alpha\beta}\frac{\symup{d}x^{\alpha}}{\symup{d}s}\frac{\symup{d}x^{\beta}}{\symup{d}s}=1,
 \end{equation}
@@ -557,13 +557,13 @@ g_{\mu\nu}\frac{\symup{d}^{2}x^{\mu}}{\symup{d}s^{2}}+\frac12\left[g_{\alpha\nu,
 \begin{equation}
 R_{\lambda\mu\nu}^{\rho}=\Gamma_{\lambda\nu,\mu}^{\rho}-\Gamma_{\lambda\mu,\nu}^{\rho}+\Gamma_{\lambda\nu}^{\sigma}\Gamma_{\sigma\mu}^{\rho}-\Gamma_{\lambda\mu}^{\sigma}\Gamma_{\sigma\nu}^{\rho}.\label{1.9.1}
 \end{equation}
-此为曲率张量的$(1,3)$型表示，为了进一步研究它的对称性，引入$\left(0,4\right)$型表示
+此为曲率张量的 $(1, 3)$ 型表示，为了进一步研究它的对称性，引入 $\left(0, 4\right)$ 型表示
 \begin{equation}
 R_{\rho\lambda\mu\nu}=g_{\rho\sigma}R^{\sigma}_{\lambda\mu\nu}.\label{1.9.2}
 \end{equation}
 根据 (\ref{1.9.1}) 式表示容易看出后一对指标是反对称的
 \begin{equation}
-R_{\lambda\mu\nu}^{\rho}=-R_{\lambda\nu\mu}^{\rho},R_{\rho\lambda\mu\nu}=-R_{\rho\lambda\nu\mu}.\label{1.9.3}
+R_{\lambda\mu\nu}^{\rho}=-R_{\lambda\nu\mu}^{\rho}, R_{\rho\lambda\mu\nu}=-R_{\rho\lambda\nu\mu}.\label{1.9.3}
 \end{equation}
 将 (\ref{1.9.2}) 式联络的微分展开成度规的二阶微分可知前一对指标和后一对指标是对称的
 \begin{equation}
@@ -575,7 +575,7 @@ R_{\rho\lambda\mu\nu}=-R_{\lambda\rho\mu\nu}.
 \end{equation}
 根据 (\ref{1.9.1})(\ref{1.9.2}) 式可以得到 Ricci 恒等式
 \begin{equation}
-R_{\lambda\mu\nu}^{\rho}+R_{\mu\nu\lambda}^{\rho}+R_{\nu\lambda\mu}^{\rho}=0,R_{\rho\lambda\mu\nu}+R_{\rho\mu\nu\lambda}+R_{\rho\nu\lambda\mu}=0.
+R_{\lambda\mu\nu}^{\rho}+R_{\mu\nu\lambda}^{\rho}+R_{\nu\lambda\mu}^{\rho}=0, R_{\rho\lambda\mu\nu}+R_{\rho\mu\nu\lambda}+R_{\rho\nu\lambda\mu}=0.
 \end{equation}
 如上四种对称性要求曲率张量只有 20 个独立分量。
 
@@ -597,7 +597,7 @@ R=g^{\mu\nu}R_{\mu\nu}.
 \begin{equation}
 G_{\mu\nu}=R_{\mu\nu}-\frac12g_{\mu\nu}R.
 \end{equation}
-在 4 维空间中，$R_{\mu\nu}$有$4^{2}$个分量，由于它是对称张量，因此独立分量个数为$4+\dfrac{16-4}{2}=10$个。可见爱因斯坦张量独立分量也有 10 个。
+在 4 维空间中，$R_{\mu\nu}$ 有 $4^{2}$ 个分量，由于它是对称张量，因此独立分量个数为 $4+\dfrac{16-4}{2}=10$ 个。可见爱因斯坦张量独立分量也有 10 个。
 
 广义相对论所用的黎曼空间是无挠的。如果在一定时空范围内曲率张量也为零，则一定可以找到一个坐标系使该时空范围内联络所有分量都为零（与等效原理不同，此时不局限于一点邻域），前文提到过这意味着空间是平坦的。因此
 \begin{equation}
@@ -615,11 +615,11 @@ R^{\rho}_{\lambda\sigma\mu;\nu}=\left(\Gamma^{\rho}_{\lambda\mu,\sigma}-\Gamma_{
 \begin{equation}
 R^{\rho}_{\lambda\mu\nu;\sigma}+R^{\rho}_{\lambda\nu\sigma;\mu}+R^{\rho}_{\lambda\sigma\mu;\nu}=0.
 \end{equation}
-缩并指标$\rho,\sigma$,注意到反称性，得到
+缩并指标 $\rho,\sigma$, 注意到反称性，得到
 \begin{equation}
 R^{\sigma}_{\lambda\mu\nu;\sigma}-R_{\lambda\nu;\mu}+R_{\lambda\mu;\nu}=0.
 \end{equation}
-乘以$g^{\nu\lambda}$,并注意到$g^{\nu\lambda}_{;\alpha}=0$,得到
+乘以 $g^{\nu\lambda}$, 并注意到 $g^{\nu\lambda}_{;\alpha}=0$, 得到
 \begin{equation}
 R^{\sigma}_{\mu;\sigma}-R_{;\mu}+R^{\nu}_{\mu;\nu}=0.
 \end{equation}
@@ -637,7 +637,7 @@ G_{\mu;\nu}^{\nu}=G_{\mu\nu}^{;\nu}=G^{\mu\nu}_{;\nu}=0.
 \end{equation}
 
 \subsection{几个重要的运算}
-首先是度规的微分。记$g$为协变度规张量的行列式，$\Delta{}^{\mu\nu}$为对应的代数余子式，度规张量满足
+首先是度规的微分。记 $g$ 为协变度规张量的行列式，$\Delta{}^{\mu\nu}$ 为对应的代数余子式，度规张量满足
 \begin{align}
 g^{\mu\nu}&=\frac{\Delta{}^{\mu\nu}}{g}.\\
 g\times\delta{}_{\alpha}^{\nu}&=g_{\alpha\rho}\Delta{}^{\nu\rho},\\
@@ -672,35 +672,35 @@ C^{\mu\nu}_{;\nu}=\frac{1}{\sqrt{-g}}\frac{\partial{}}{\partial{}x^{\nu}}\left(C
 \begin{equation}
 T^{\mu\nu}=\frac{\alpha}{\left\vert{}\alpha\right\vert{}}\frac{\partial{}x^{\mu}}{\partial{}\widetilde{x}^{\rho}}\frac{\partial{}x^{\nu}}{\partial{}\widetilde{x}^{\sigma}}\widetilde{T}^{\rho\sigma}.
 \end{equation}
-其中$\alpha$是坐标变换矩阵的行列式。对于反射变换，$\dfrac{\alpha}{\left\vert{}\alpha\right\vert{}}=-1$,赝张量比张量多出一个符号。体元$\sqrt{-g}\symup{d}^{4}x$是赝标量：
+其中 $\alpha$ 是坐标变换矩阵的行列式。对于反射变换，$\dfrac{\alpha}{\left\vert{}\alpha\right\vert{}}=-1$, 赝张量比张量多出一个符号。体元 $\sqrt{-g}\symup{d}^{4}x$ 是赝标量：
 \begin{equation}
 \sqrt{-g}\symup{d}^{4}x=\frac{\alpha}{\left\vert{}\alpha\right\vert{}}\sqrt{-\widetilde{g}}\symup{d}^{4}\widetilde{x}.
 \end{equation}
 
 \subsection{Lie 微商}
-我们知道坐标变换式$\widetilde{x}^{\mu}=\widetilde{x}^{\mu}\left(x^{\mu}\right)$描述的是同一空间点在新旧坐标系中坐标的关系。但这个式子本身也可以承载另一种含义，指同一坐标系下不同空间点之间的映射。
+我们知道坐标变换式 $\widetilde{x}^{\mu}=\widetilde{x}^{\mu}\left(x^{\mu}\right)$ 描述的是同一空间点在新旧坐标系中坐标的关系。但这个式子本身也可以承载另一种含义，指同一坐标系下不同空间点之间的映射。
 
 我们将讨论无穷小映射，即坐标差是无穷小量：
 \begin{equation}
 \widetilde{x}^{\mu}=x^{\mu}+\varepsilon\xi^{\mu}\left(x^{\mu}\right).
 \end{equation}
-$\xi^{\mu}$被称为无穷小映射的生成元，因为它完全决定了一个无穷小映射。我们同样要将映射前后两点张量作差以定义一种微商，同时要保证该微商是张量，因此同样要引入映射下张量的移动（注意这不同于先前的平移操作）。
+$\xi^{\mu}$ 被称为无穷小映射的生成元，因为它完全决定了一个无穷小映射。我们同样要将映射前后两点张量作差以定义一种微商，同时要保证该微商是张量，因此同样要引入映射下张量的移动（注意这不同于先前的平移操作）。
 
 对于标量场，我们直接定义
 \begin{equation}
 \varphi\left(P\to P'\right)=\varphi\left(P\right),
 \end{equation}
-标量场的 Lie 微商可以表示为（注意$P',P$是同一空间中间隔$\varepsilon\xi^{\mu}$的点）
+标量场的 Lie 微商可以表示为（注意 $P', P$ 是同一空间中间隔 $\varepsilon\xi^{\mu}$ 的点）
 \begin{align}
 \mathcal{L}_{\xi}\varphi\left(x\right)&=\lim_{\varepsilon\to0}\frac{\varphi\left(P'\right)-\varphi\left(P\to P'\right)}{\varepsilon}=\lim_{\varepsilon\to0}\frac{\varphi\left(P'\right)-\varphi\left(P\right)}{\varepsilon}\notag\\
 &=\lim_{\varepsilon\to0}\frac{\varphi_{,\mu}\varepsilon\xi^{\mu}}{\varepsilon}=\varphi_{,\mu}\xi^{\mu}.
 \end{align}
 
-对于逆变矢量，我们可以适当地选取一条曲线，让$P$点的矢量$k^{\mu}\left(P\right)$成为该曲线在$P$点处的切矢量$\dfrac{\symup{d}x^{\mu}_{P}}{\symup{d}\lambda}$,这样便引出了从$P$点出发的一个小位移$PQ=\symup{d}x^{\mu}_{P}=k^{\mu}\symup{d}\lambda$.将$P,Q$通过$\xi^{\mu}$映射到$P',Q'$,我们便可认为$P'Q'$对应着$k^{\mu}\left(P\to P'\right)\symup{d}\lambda$.通过$Q$到$Q'$的映射我们知道$Q'$的坐标
+对于逆变矢量，我们可以适当地选取一条曲线，让 $P$ 点的矢量 $k^{\mu}\left(P\right)$ 成为该曲线在 $P$ 点处的切矢量 $\dfrac{\symup{d}x^{\mu}_{P}}{\symup{d}\lambda}$, 这样便引出了从 $P$ 点出发的一个小位移 $PQ=\symup{d}x^{\mu}_{P}=k^{\mu}\symup{d}\lambda$. 将 $P, Q$ 通过 $\xi^{\mu}$ 映射到 $P', Q'$, 我们便可认为 $P'Q'$ 对应着 $k^{\mu}\left(P\to P'\right)\symup{d}\lambda$. 通过 $Q$ 到 $Q'$ 的映射我们知道 $Q'$ 的坐标
 \begin{equation}
 x^{\mu}_{Q'}=x^{\mu}_{P}+k^{\mu}\symup{d}\lambda+\varepsilon\xi^{\mu}\left(x^{\mu}_{P}+k^{\mu}\symup{d}\lambda\right).
 \end{equation}
-通过$P$到$P'$的映射我们知道$P'$的坐标
+通过 $P$ 到 $P'$ 的映射我们知道 $P'$ 的坐标
 \begin{equation}
 x^{\mu}_{P'}=x^{\mu}_{P}+\varepsilon\xi^{\mu}\left(x^{\mu}_{P}\right).
 \end{equation}
@@ -733,19 +733,19 @@ Lie 微商为
 \subsection{等度规映射和凯林 Killing 矢量}
 如果一对相邻点映射前后的距离不变，称该映射为等度规映射，等度规映射的生成元就叫 Killing 矢量场。我们现在研究对给定的度规场，什么样的矢量能成为 Killing 矢量。
 
-记$PQ=\symup{d}x^{\mu},P'Q'=\delta{}x^{\mu}$,等度规映射要求
+记 $PQ=\symup{d}x^{\mu}, P'Q'=\delta{}x^{\mu}$, 等度规映射要求
 \begin{equation}
 g_{\mu\nu}\left(P\right)\symup{d}x^{\mu}\symup{d}x^{\nu}=g_{\mu\nu}\left(P'\right)\delta{}x^{\mu}\delta{}x^{\nu}.
 \end{equation}
-首先要求出$P'$处的度规。由于是在同一空间中，故
+首先要求出 $P'$ 处的度规。由于是在同一空间中，故
 \begin{equation}
 g_{\mu\nu}\left(P'\right)=g_{\mu\nu}\left(P\right)+g_{\mu\nu,\lambda}\left(P\right)PP'.
 \end{equation}
-映射要求$PP'=\varepsilon\xi^{\lambda}$,故
+映射要求 $PP'=\varepsilon\xi^{\lambda}$, 故
 \begin{equation}
 g_{\mu\nu}\left(P'\right)=g_{\mu\nu}\left(P\right)+g_{\mu\nu,\lambda}\left(P\right)\varepsilon\xi^{\lambda}.
 \end{equation}
-接着利用 (\ref{1.11.6}) 式，得到$\symup{d}x^{\mu}$和$\delta{}x^{\mu}$的关系：
+接着利用 (\ref{1.11.6}) 式，得到 $\symup{d}x^{\mu}$ 和 $\delta{}x^{\mu}$ 的关系：
 \begin{equation}
 \delta{}x^{\mu}=\symup{d}x^{\mu}+\varepsilon\xi^{\mu}_{,\lambda}\symup{d}x^{\lambda}.
 \end{equation}
@@ -753,7 +753,7 @@ g_{\mu\nu}\left(P'\right)=g_{\mu\nu}\left(P\right)+g_{\mu\nu,\lambda}\left(P\rig
 \begin{equation}
 g_{\mu\nu,\lambda}\xi^{\lambda}+g_{\lambda\nu}\xi^{\lambda}_{,\mu}+g_{\mu\lambda}\xi^{\lambda}_{,\nu}=0.
 \end{equation}
-这等价于说$g_{\mu\nu}$在这种映射下的 Lie 微商为零。由于度规张量的协变微商为零，第一项就为零故该式还可改写成
+这等价于说 $g_{\mu\nu}$ 在这种映射下的 Lie 微商为零。由于度规张量的协变微商为零，第一项就为零故该式还可改写成
 \begin{equation}
 \xi_{\mu;\nu}+\xi_{\nu;\mu}=0.\label{1.12.6}
 \end{equation}
@@ -765,21 +765,21 @@ Killing 矢量的作用是刻画时空结构的对称性。黎曼空间某方向
 \subsection{时空间隔投影}
 在广义相对论框架下测量，我们需要考虑四个因素。第一是观测对象，即要测量的物理量。第二是时空的几何性质，即度规。第三是观测者，脱离观测者是没有测量概念的。第四是表述观测者运动情况和物理量的坐标系，理论上可以任取，因为对相同物理量相同观测者，观测量理应相同，是个标量。
 
-现在我们选定一个坐标系，任意事件时空坐标为$\left(x^{0},x^{1},x^{2},x^{3}\right)$.习惯上称以速率$t=\dfrac{x^{0}}{\symup{c}}$运行的钟为坐标钟，称$t$为坐标时间。值得注意是，坐标系中同时发生的事件并非是指坐标时间相同的事件。我们将在后续阐明。
+现在我们选定一个坐标系，任意事件时空坐标为 $\left(x^{0}, x^{1}, x^{2}, x^{3}\right)$. 习惯上称以速率 $t=\dfrac{x^{0}}{\symup{c}}$ 运行的钟为坐标钟，称 $t$ 为坐标时间。值得注意是，坐标系中同时发生的事件并非是指坐标时间相同的事件。我们将在后续阐明。
 
-设坐标系中有两个事件，$P$的时空坐标为$x^{\mu},Q$的时空坐标为$x^{\mu}+\symup{d}x^{\mu}$.坐标时间显然不是零阶张量，为此需要定义固有时间。狭义相对论中，固有时间指的是固定于惯性系中的时钟所记录的时间：
+设坐标系中有两个事件，$P$ 的时空坐标为 $x^{\mu}, Q$ 的时空坐标为 $x^{\mu}+\symup{d}x^{\mu}$. 坐标时间显然不是零阶张量，为此需要定义固有时间。狭义相对论中，固有时间指的是固定于惯性系中的时钟所记录的时间：
 \begin{equation}
 \symup{d}s^{2}=-\symup{c}^{2}\symup{d}t^{2}+\symup{d}x^{2}+\symup{d}y^{2}+\symup{d}z^{2}=-\symup{c}^{2}\symup{d}t^{2}+0=-\symup{c}^{2}\symup{d}\tau^{2}.
 \end{equation}
-可见固有时间$\symup{d}\tau$正比于世界线（即观测者在四维时空走过的曲线）长度，而后者正是个标量。广义相对论中也可这么考虑。黎曼时空中总可以找到一个沿测地线（即引力场中自由下落）无转动的无穷小坐标系作为局部惯性系。微分几何告诉我们，在一点的邻域，曲线的线元与其切线的线元相等。因此，我们可以沿观测者的世界线逐点建立无数相对观测者静止的局部惯性系，将它们各自记录的固有时间加起来作为观测者的固有时间。按这种定义，观测者的固有时间依旧正比于观测者的世界线长度。我们称观测者携带的钟为标准钟，记录的是观测者的固有时间。
+可见固有时间 $\symup{d}\tau$ 正比于世界线（即观测者在四维时空走过的曲线）长度，而后者正是个标量。广义相对论中也可这么考虑。黎曼时空中总可以找到一个沿测地线（即引力场中自由下落）无转动的无穷小坐标系作为局部惯性系。微分几何告诉我们，在一点的邻域，曲线的线元与其切线的线元相等。因此，我们可以沿观测者的世界线逐点建立无数相对观测者静止的局部惯性系，将它们各自记录的固有时间加起来作为观测者的固有时间。按这种定义，观测者的固有时间依旧正比于观测者的世界线长度。我们称观测者携带的钟为标准钟，记录的是观测者的固有时间。
 
 现在考虑固有时间和坐标时间的联系。还是任意定义某个坐标系，然后认为观测者相对该坐标系静止，有
 \begin{equation}
 \symup{d}\tau=\sqrt{-\frac{\symup{d}s^{2}}{\symup{c}^{2}}}=\frac{1}{\symup{c}}\sqrt{-g_{\mu\nu}\symup{d}x^{\mu}\symup{d}x^{\nu}}=\frac{1}{\symup{c}}\sqrt{-g_{00}}\symup{d}x^{0}=\sqrt{-g_{00}}\symup{d}t.\label{2.1.2}
 \end{equation}
-$g_{00}$是时空坐标的函数，因此每个时空点都不同，故固有时间计时一般只能在观测者邻域使用，要做大范围时空计算必须用到坐标时间。但要注意坐标时间是计算用虚构量，实验仪器只能测量固有时间。此外，固有时间依赖质点的世界线，但不依赖坐标系的选择；坐标时间依赖坐标系的选择，但不依赖质点的世界线。
+$g_{00}$ 是时空坐标的函数，因此每个时空点都不同，故固有时间计时一般只能在观测者邻域使用，要做大范围时空计算必须用到坐标时间。但要注意坐标时间是计算用虚构量，实验仪器只能测量固有时间。此外，固有时间依赖质点的世界线，但不依赖坐标系的选择；坐标时间依赖坐标系的选择，但不依赖质点的世界线。
 
-本节讨论的观测对象是事件的时空间隔。观测者可以将相对于他静止的局部惯性系时间轴指向观测者世界线的切向，然后考虑事件间隔$\symup{d}x^{\mu}$在其时间轴上的投影，这样就得到观测者的测量值。我们曾在测地线一节介绍过切矢量的定义。取标量性质参量为固有时间，世界线的切矢量就等于观测者的四维速度，简称四速。四速$U^{\mu}$定义如下：
+本节讨论的观测对象是事件的时空间隔。观测者可以将相对于他静止的局部惯性系时间轴指向观测者世界线的切向，然后考虑事件间隔 $\symup{d}x^{\mu}$ 在其时间轴上的投影，这样就得到观测者的测量值。我们曾在测地线一节介绍过切矢量的定义。取标量性质参量为固有时间，世界线的切矢量就等于观测者的四维速度，简称四速。四速 $U^{\mu}$ 定义如下：
 \begin{equation}
 U^{\mu}=\frac{\symup{d}x^{\mu}}{\symup{d}\tau}.
 \end{equation}
@@ -787,7 +787,7 @@ U^{\mu}=\frac{\symup{d}x^{\mu}}{\symup{d}\tau}.
 \begin{equation}
 U^{\mu}U_{\mu}=g_{\mu\nu}U^{\mu}U^{\nu}=\frac{g_{\mu\nu}\symup{d}x^{\mu}\symup{d}x^{\nu}}{\symup{d}\tau^{2}}=-\symup{c}^{2}.
 \end{equation}
-可见静止质量非零粒子的四维速度内积始终为$-\symup{c}^{2}$.由于很多时候我们希望时间轴基矢是个单位矢量，同时在广义相对论中常采用自然单位制取$\symup{c}=1$,故不妨再定义一个
+可见静止质量非零粒子的四维速度内积始终为 $-\symup{c}^{2}$. 由于很多时候我们希望时间轴基矢是个单位矢量，同时在广义相对论中常采用自然单位制取 $\symup{c}=1$, 故不妨再定义一个
 \begin{equation}
 u^{\mu}=\frac{1}{\symup{c}}U^{\mu},
 \end{equation}
@@ -801,7 +801,7 @@ u^{\mu}=\frac{1}{\symup{c}}U^{\mu},
 \begin{equation}
 A^{\mu}_{\parallel}=\pi^{\mu}_{\nu}A^{\nu}=-u_{\nu}A^{\nu}u^{\mu}.
 \end{equation}
-显然投影后结果还是个逆变矢量，且是平行于观测者时间轴的矢量。由此得到$PQ$事件时空间隔投影
+显然投影后结果还是个逆变矢量，且是平行于观测者时间轴的矢量。由此得到 $PQ$ 事件时空间隔投影
 \begin{equation}
 \symup{d}x^{\mu}_{\parallel}=\pi^{\mu}_{\nu}\symup{d}x^{\nu}.
 \end{equation}
@@ -811,14 +811,14 @@ A^{\mu}_{\parallel}=\pi^{\mu}_{\nu}A^{\nu}=-u_{\nu}A^{\nu}u^{\mu}.
 &=\sqrt{-g_{\mu\nu}u^{\mu}u^{\nu}u_{\alpha}u_{\beta}\symup{d}x^{\alpha}\symup{d}x^{\beta}}=\sqrt{u_{\alpha}u_{\beta}\symup{d}x^{\alpha}\symup{d}x^{\beta}}\notag\\
 &=-u_{\alpha}\symup{d}x^{\alpha}=-g_{\alpha\mu}u^{\mu}\symup{d}x^{\alpha}.
 \end{align}
-这是个标量。不同坐标系中所表征的，同一个观测者的四速、时空的度规分量、所观测的物理量张量分量各不相同，但对同一个观测者同一观测对象算出的观测量总是相同的。需要注意的是，上式中$g_{\alpha\mu},u^{\mu}$是观测者邻域的值，$\symup{d}x^{\alpha}$是事件的时空间隔，后二者的$\symup{d}x^{\alpha}$含义不同，不要混为一谈用$g_{\mu\nu}\symup{d}x^{\mu}\symup{d}x^{\nu}$算出个$-\symup{c}^{2}$出来。
+这是个标量。不同坐标系中所表征的，同一个观测者的四速、时空的度规分量、所观测的物理量张量分量各不相同，但对同一个观测者同一观测对象算出的观测量总是相同的。需要注意的是，上式中 $g_{\alpha\mu}, u^{\mu}$ 是观测者邻域的值，$\symup{d}x^{\alpha}$ 是事件的时空间隔，后二者的 $\symup{d}x^{\alpha}$ 含义不同，不要混为一谈用 $g_{\mu\nu}\symup{d}x^{\mu}\symup{d}x^{\nu}$ 算出个 $-\symup{c}^{2}$ 出来。
 
-利用投影算符我们可以给出洛伦兹变换中的经典结论。对于平坦时空的静观测者，采用闵氏度规，观测者四速为$u^{\mu}=\left(1,0,0,0\right)$,显然$\Delta{}t=-\dfrac{g_{\alpha\beta}u^{\alpha}\symup{d}x^{\beta}}{\symup{c}}=-\dfrac{g_{0\alpha}u^{0}\symup{d}x^{\alpha}}{\symup{c}}=-\dfrac{g_{00}u^{0}\symup{d}x^{0}}{\symup{c}}=\symup{d}t$.而对于一个与静观测者擦身而过，沿$x$正方向以速度$v$前进的观测者，他的坐标满足$\symup{d}x^{\mu}=\left(\symup{c}\symup{d}t,v\symup{d}t,0,0\right),\symup{d}\tau=\sqrt{-\dfrac{\symup{d}s^{2}}{\symup{c}^{2}}}=\symup{d}t\sqrt{1-\dfrac{v^{2}}{\symup{c}^{2}}}$,显然四速$u^{\mu}=\left(\dfrac{1}{\sqrt{1-\dfrac{v^{2}}{\symup{c}^{2}}}},\dfrac{\dfrac{v}{\symup{c}}}{\sqrt{1-\dfrac{v^{2}}{\symup{c}^{2}}}},0,0\right)$,因此他观测到的事件时间间隔为
+利用投影算符我们可以给出洛伦兹变换中的经典结论。对于平坦时空的静观测者，采用闵氏度规，观测者四速为 $u^{\mu}=\left(1, 0, 0, 0\right)$, 显然 $\Delta{}t=-\dfrac{g_{\alpha\beta}u^{\alpha}\symup{d}x^{\beta}}{\symup{c}}=-\dfrac{g_{0\alpha}u^{0}\symup{d}x^{\alpha}}{\symup{c}}=-\dfrac{g_{00}u^{0}\symup{d}x^{0}}{\symup{c}}=\symup{d}t$. 而对于一个与静观测者擦身而过，沿 $x$ 正方向以速度 $v$ 前进的观测者，他的坐标满足 $\symup{d}x^{\mu}=\left(\symup{c}\symup{d}t, v\symup{d}t, 0, 0\right),\symup{d}\tau=\sqrt{-\dfrac{\symup{d}s^{2}}{\symup{c}^{2}}}=\symup{d}t\sqrt{1-\dfrac{v^{2}}{\symup{c}^{2}}}$, 显然四速 $u^{\mu}=\left(\dfrac{1}{\sqrt{1-\dfrac{v^{2}}{\symup{c}^{2}}}},\dfrac{\dfrac{v}{\symup{c}}}{\sqrt{1-\dfrac{v^{2}}{\symup{c}^{2}}}}, 0, 0\right)$, 因此他观测到的事件时间间隔为
 \begin{equation}
 \Delta{}t=-\frac{g_{\alpha\beta}u^{\alpha}\symup{d}x^{\beta}}{\symup{c}}=-\frac{g_{0\alpha}u^{0}\symup{d}x^{\alpha}+g_{1\alpha}u^{1}\symup{d}x^{\alpha}}{\symup{c}}=\frac{\symup{d}t-\dfrac{v}{\symup{c}^{2}}\symup{d}x}{\sqrt{1-\dfrac{v^{2}}{\symup{c}^{2}}}}.
 \end{equation}
 
-类似地，我们希望得到空间投影算符。首先一个矢量的空间投影部分加上时间投影部分应该等于它自身，其次空间投影部分和时间轴应当垂直，因此$\gamma^{\mu}_{\nu}A^{\nu}=A^{\nu}-\pi_{\nu}^{\mu}A^{\nu}$,
+类似地，我们希望得到空间投影算符。首先一个矢量的空间投影部分加上时间投影部分应该等于它自身，其次空间投影部分和时间轴应当垂直，因此 $\gamma^{\mu}_{\nu}A^{\nu}=A^{\nu}-\pi_{\nu}^{\mu}A^{\nu}$,
 \begin{equation}
 \gamma^{\mu}_{\nu}=g^{\mu}_{\nu}-\pi^{\mu}_{\nu}=g_{\nu}^{\mu}+u^{\mu}u_{\nu}.
 \end{equation}
@@ -833,7 +833,7 @@ A^{\mu}_{\parallel}=\pi^{\mu}_{\nu}A^{\nu}=-u_{\nu}A^{\nu}u^{\mu}.
 -\left(\symup{c}\Delta{}t\right)^{2}+\Delta{}l^{2}=\left(\pi_{\alpha\beta}+\gamma_{\alpha\beta}\right)\symup{d}x^{\alpha}\symup{d}x^{\beta}=g_{\alpha\beta}\symup{d}x^{\alpha}\symup{d}x^{\beta}=\symup{d}s^{2}.
 \end{equation}
 
-对于空间投影同样给出洛伦兹变换中的结论。考虑平坦空间中的静观测者，空间投影算符非零项为$\gamma_{11}=\gamma_{22}=\gamma_{33}=1$,此时给出欧氏几何结果。而对于运动中的观测者（注意由于$u_{\mu}=g_{\mu\nu}u^{\nu},\gamma_{\mu\nu}$非对角分量前有负号），
+对于空间投影同样给出洛伦兹变换中的结论。考虑平坦空间中的静观测者，空间投影算符非零项为 $\gamma_{11}=\gamma_{22}=\gamma_{33}=1$, 此时给出欧氏几何结果。而对于运动中的观测者（注意由于 $u_{\mu}=g_{\mu\nu}u^{\nu},\gamma_{\mu\nu}$ 非对角分量前有负号），
 \begin{equation}
 \gamma_{\mu\nu}=\begin{pmatrix}
 -1 & 0 & 0 & 0\\
@@ -859,17 +859,17 @@ A^{\mu}_{\parallel}=\pi^{\mu}_{\nu}A^{\nu}=-u_{\nu}A^{\nu}u^{\mu}.
 \Delta{}l^{2}=\left(\frac{\symup{d}x^{1}-v\symup{d}t}{\sqrt{1-\dfrac{v^{2}}{\symup{c}^{2}}}}\right)^{2}+\left(\symup{d}x^{2}\right)^{2}+\left(\symup{d}x^{3}\right)^{2}.
 \end{equation}
 
-(\ref{2.1.11}) 式暗示$\gamma_{\alpha\beta}$扮演了空间度规的角色。我们可以验证一下。对于一个观测者，他应该会倾向于采用相对于他静止的坐标系进行观测。反过来讲，给定一个坐标系，考虑一个相对坐标系随动的观测者。该观测者随身携带的钟走时与坐标时间的关系其实就是 (\ref{2.1.2}) 式。这给出了该观测者的四速
+(\ref{2.1.11}) 式暗示 $\gamma_{\alpha\beta}$ 扮演了空间度规的角色。我们可以验证一下。对于一个观测者，他应该会倾向于采用相对于他静止的坐标系进行观测。反过来讲，给定一个坐标系，考虑一个相对坐标系随动的观测者。该观测者随身携带的钟走时与坐标时间的关系其实就是 (\ref{2.1.2}) 式。这给出了该观测者的四速
 \begin{equation}
-u^{\mu}=\frac{\symup{d}x^{\mu}}{\symup{c}\symup{d}\tau}=\frac{\left(\symup{c}\symup{d}t,0,0,0\right)}{\symup{c}\symup{d}\tau}=\left(\frac{1}{\sqrt{-g_{00}}},0,0,0\right).
+u^{\mu}=\frac{\symup{d}x^{\mu}}{\symup{c}\symup{d}\tau}=\frac{\left(\symup{c}\symup{d}t, 0, 0, 0\right)}{\symup{c}\symup{d}\tau}=\left(\frac{1}{\sqrt{-g_{00}}}, 0, 0, 0\right).
 \end{equation}
 空间投影算符为
 \begin{equation}
 \gamma_{\mu\nu}=g_{\mu\nu}+u_{\mu}u_{\nu}=g_{\mu\nu}+g_{\mu\alpha}g_{\nu\beta}u^{\alpha}u^{\beta}=g_{\mu\nu}+g_{\mu0}g_{\nu0}u^{0}u^{0}=g_{\mu\nu}-\frac{g_{\mu0}g_{\nu0}}{g_{00}}.
 \end{equation}
-代入数值，如$\mu=0$,可以简单发现$\gamma_{00}=\gamma_{0i}=\gamma_{i0}=0$,仅有空空分量起作用，所以它也叫纯空间度规。
+代入数值，如 $\mu=0$, 可以简单发现 $\gamma_{00}=\gamma_{0i}=\gamma_{i0}=0$, 仅有空空分量起作用，所以它也叫纯空间度规。
 
-我们可以用物理上更直观的方法得出空间度规。既然光速各向同性，可以利用光在两点间的反射测距。假设$A,B$为空间的两邻点，光信号在坐标时间${}^{\left(1\right)}x_{A}^{0}$自$A$射向$B$,在$x_{B}^{0}$时刻到达$B$并反射回$A$,再于${}^{\left(2\right)}x_{A}^{0}$时刻到达$A$.由于反射矢量相对原矢量空间位移取反，不妨统一记
+我们可以用物理上更直观的方法得出空间度规。既然光速各向同性，可以利用光在两点间的反射测距。假设 $A, B$ 为空间的两邻点，光信号在坐标时间 ${}^{\left(1\right)}x_{A}^{0}$ 自 $A$ 射向 $B$, 在 $x_{B}^{0}$ 时刻到达 $B$ 并反射回 $A$, 再于 ${}^{\left(2\right)}x_{A}^{0}$ 时刻到达 $A$. 由于反射矢量相对原矢量空间位移取反，不妨统一记
 \begin{equation}
 \symup{d}x^{0}_{\left(2\right)}={}^{\left(2\right)}x_{A}^{0}-x_{B}^{0},\symup{d}x^{0}_{\left(1\right)}={}^{\left(1\right)}x_{A}^{0}-x_{B}^{0},
 \end{equation}
@@ -878,7 +878,7 @@ u^{\mu}=\frac{\symup{d}x^{\mu}}{\symup{c}\symup{d}\tau}=\frac{\left(\symup{c}\sy
 \Delta{}x^{0}=\symup{d}x^{0}_{\left(2\right)}-\symup{d}x^{0}_{\left(1\right)}=\left({}^{\left(2\right)}x_{A}^{0}-x^{0}_{B}\right)-\left({}^{\left(1\right)}x_{A}^{0}-x^{0}_{B}\right).
 \end{equation}
 
-需要注意的，实践中在测定光速不变时，采用的时间计量是实验仪器的固有时间（哦当然是这样，固有时间才是零阶张量，$\symup{d}x^{0}_{\left(1\right)}$和$\symup{d}x^{0}_{\left(2\right)}$可不一定相等），因此我们必须引入一个局部静止惯性系，不妨就在$B$点建立，这样考虑光线的往返也比较方便。在$B$点与坐标时间$\Delta{}x^{0}$相应的固有时间是
+需要注意的，实践中在测定光速不变时，采用的时间计量是实验仪器的固有时间（哦当然是这样，固有时间才是零阶张量，$\symup{d}x^{0}_{\left(1\right)}$ 和 $\symup{d}x^{0}_{\left(2\right)}$ 可不一定相等），因此我们必须引入一个局部静止惯性系，不妨就在 $B$ 点建立，这样考虑光线的往返也比较方便。在 $B$ 点与坐标时间 $\Delta{}x^{0}$ 相应的固有时间是
 \begin{equation}
 \Delta{}\tau=\frac{1}{\symup{c}}\sqrt{-g_{00}}\Delta{}x^{0}.
 \end{equation}
@@ -886,7 +886,7 @@ u^{\mu}=\frac{\symup{d}x^{\mu}}{\symup{c}\symup{d}\tau}=\frac{\left(\symup{c}\sy
 \begin{equation}
 \symup{d}l=\frac{\symup{c}\Delta{}\tau}{2}=\frac12\sqrt{-g_{00}}\Delta{}x^{0}.
 \end{equation}
-接下来要得到$\Delta{}x^{0}$的具体表达式。我们知道光走过的路径满足（$\pm$对应往返的光信号）：
+接下来要得到 $\Delta{}x^{0}$ 的具体表达式。我们知道光走过的路径满足 ($\pm$ 对应往返的光信号）：
 \begin{align}
 \symup{d}s^{2}&=0=g_{00}\left(\symup{d}x^{0}\right)^{2}+2g_{0i}\symup{d}x^{0}\symup{d}x^{i}+g_{ik}\symup{d}x^{i}\symup{d}x^{k},\\
 \symup{d}x^{0}&=\frac{-g_{0i}\symup{d}x^{i}\pm\sqrt{\left(g_{0i}g_{0k}-g_{00}g_{ik}\right)\symup{d}x^{i}\symup{d}x^{k}}}{g_{00}}.\label{往返}\\
@@ -897,7 +897,7 @@ u^{\mu}=\frac{\symup{d}x^{\mu}}{\symup{c}\symup{d}\tau}=\frac{\left(\symup{c}\sy
 
 我们还可借此反射模型研究时钟的时刻校准（同时）和钟的快慢校准（同步）。
 
-对于同时，定义与 B 处$x_{B}^{0}$同时的$A$处坐标时刻为
+对于同时，定义与 B 处 $x_{B}^{0}$ 同时的 $A$ 处坐标时刻为
 \begin{equation}
 x_{A}^{0}=\frac{{}^{\left(1\right)}x_{A}^{0}+{}^{\left(2\right)}x_{A}^{0}}{2}.
 \end{equation}
@@ -905,7 +905,7 @@ x_{A}^{0}=\frac{{}^{\left(1\right)}x_{A}^{0}+{}^{\left(2\right)}x_{A}^{0}}{2}.
 \begin{equation}
 \delta{}x^{0}=x_{A}^{0}-x_{B}^{0}=\frac12\left(\symup{d}x^{0}_{\left(2\right)}+\symup{d}x^{0}_{\left(1\right)}\right)=\frac{-g_{0i}}{g_{00}}\symup{d}x^{i}.\label{2.1.26}
 \end{equation}
-这也意味着$t$相同时的两个异地事件不一定同时发生。这告诉我们，需要定义一四维开放路径，将路径上的钟全部调整成同时，“同时”被定义为相邻的坐标钟的指示相差$\delta{}x^{0}$.但由于其不是全微分，因此沿闭合路径的积分一般不等于零，因此沿着不同路径去校准两点坐标，结果会不同，因此同时不一定具有传递性。广义相对论中通常不能建立全局性的统一时间，只有$\delta{}x^{0}$是全微分时才能将空间各点的坐标钟调整到同时，而这一般意味着
+这也意味着 $t$ 相同时的两个异地事件不一定同时发生。这告诉我们，需要定义一四维开放路径，将路径上的钟全部调整成同时，“同时”被定义为相邻的坐标钟的指示相差 $\delta{}x^{0}$. 但由于其不是全微分，因此沿闭合路径的积分一般不等于零，因此沿着不同路径去校准两点坐标，结果会不同，因此同时不一定具有传递性。广义相对论中通常不能建立全局性的统一时间，只有 $\delta{}x^{0}$ 是全微分时才能将空间各点的坐标钟调整到同时，而这一般意味着
 \begin{equation}
 g_{0i}=0,
 \end{equation}
@@ -915,7 +915,7 @@ g_{0i}=0,
 \end{equation}
 如果度规分量各时空点不同，可测得的固有时间也不同。因此不一定能实现同步。
 
-对于同步，所需要的条件则要弱一点。根据 (\ref{2.1.26}) 式，可知$A,B$点第一个同时时刻坐标钟相差
+对于同步，所需要的条件则要弱一点。根据 (\ref{2.1.26}) 式，可知 $A, B$ 点第一个同时时刻坐标钟相差
 \begin{equation}
 \delta{}x_{1}^{0}=-\left(\frac{g_{0i}}{g_{00}}\right)_{i}\symup{d}x^{i},
 \end{equation}
@@ -927,7 +927,7 @@ g_{0i}=0,
 \begin{equation}
 \Delta{}\left(\delta{}x^{0}\right)=-\left[\left(\frac{g_{0i}}{g_{00}}\right)_{2}-\left(\frac{g_{0i}}{g_{00}}\right)_{1}\right]\symup{d}x^{i}.
 \end{equation}
-上式为零的条件是$\left(g_{0i}/g_{00}\right)$与坐标时间$x^{0}$无关，即空间各点坐标钟速率相同的充分条件是
+上式为零的条件是 $\left(g_{0i}/g_{00}\right)$ 与坐标时间 $x^{0}$ 无关，即空间各点坐标钟速率相同的充分条件是
 \begin{equation}
 \frac{\partial{}}{\partial{}x^{0}}\frac{g_{0i}}{g_{00}}=0.
 \end{equation}
@@ -940,10 +940,10 @@ g_{0i}=0,
 \subsection{物理的坐标系条件}
 按等效原理，引力场中任意一点都可引进局部惯性系。记局部惯性系中
 \begin{align}
-x^{\mu}&=\left(\symup{c}t,x^{1},x^{2},x^{3}\right),\\
+x^{\mu}&=\left(\symup{c}t, x^{1}, x^{2}, x^{3}\right),\\
 \symup{d}s^{2}&=\eta_{\mu\nu}\symup{d}x^{\mu}\symup{d}x^{\nu}.
 \end{align}
-其中$\eta_{\mu\nu}$是闵可夫斯基度规。引入坐标变换$\widetilde{x}^{\mu}=\widetilde{x}^{\mu}\left(x^{\nu}\right)$,要求连续、可微，且雅可比行列式满足
+其中 $\eta_{\mu\nu}$ 是闵可夫斯基度规。引入坐标变换 $\widetilde{x}^{\mu}=\widetilde{x}^{\mu}\left(x^{\nu}\right)$, 要求连续、可微，且雅可比行列式满足
 \begin{equation}
 \det\left\vert{}\frac{\partial{}\widetilde{x}^{\mu}}{\partial{}x^{\nu}}\right\vert{}\ne0.
 \end{equation}
@@ -952,7 +952,7 @@ x^{\mu}&=\left(\symup{c}t,x^{1},x^{2},x^{3}\right),\\
 \symup{d}s^{2}&=\eta_{\mu\nu}\symup{d}x^{\mu}\symup{d}x^{\nu}=g_{\mu\nu}\symup{d}\widetilde{x}^{\mu}\symup{d}\widetilde{x}^{\nu}.\\
 g_{\mu\nu}&=\eta_{\alpha\beta}\frac{\partial{}x^{\alpha}}{\partial{}\widetilde{x}^{\mu}}\frac{\partial{}x^{\beta}}{\partial{}\widetilde{x}^{\nu}}.
 \end{align}
-注意角标${i}$表示空间坐标。考虑新坐标空间任一固定点，应满足
+注意角标 ${i}$ 表示空间坐标。考虑新坐标空间任一固定点，应满足
 \begin{equation}
 \widetilde{x}^{i}=\symup{const},\symup{d}\widetilde{x}^{i}=0.
 \end{equation}
@@ -969,7 +969,7 @@ v^{i}=\frac{\symup{d}x^{i}}{\symup{d}t}=\frac{\symup{c}\symup{d}x^{i}}{\symup{d}
 \begin{equation}
 v^{i}=\symup{c}\left(\frac{\partial{}x^{i}}{\partial{}\widetilde{x}^{0}}/\frac{\partial{}x^{0}}{\partial{}\widetilde{x}^{0}}\right).
 \end{equation}
-由于光速是极限速度，$v^{2}/\symup{c}^{2}<1$,因此
+由于光速是极限速度，$v^{2}/\symup{c}^{2}<1$, 因此
 \begin{equation}
 g_{00}=\left(-1\right)\left(\frac{\partial{}x^{0}}{\partial{}\widetilde{x}^{0}}\right)\left(\frac{\partial{}x^{0}}{\partial{}\widetilde{x}^{0}}\right)+\left(\frac{\partial{}x^{i}}{\partial{}\widetilde{x}^{0}}\right)\left(\frac{\partial{}x^{i}}{\partial{}\widetilde{x}^{0}}\right)<0.\label{2.2.11}
 \end{equation}
@@ -1004,9 +1004,9 @@ g_{30} & g_{31} & g_{32} & g_{33}\\
 \end{equation}
 如果 (\ref{2.2.11})(\ref{2.2.13}) 式得不到满足，就意味着观测者无法相对这个坐标系静止，说明这个坐标系不代表物理上有意义的参考系。当然，广义相对论中还是允许使用这样的坐标系进行计算的。
 
-最后，能够在大范围内建立同时面的时空，坐标系必须时轴正交，即$g_{0i}=0$.此时，新坐标系度规应该满足：
+最后，能够在大范围内建立同时面的时空，坐标系必须时轴正交，即 $g_{0i}=0$. 此时，新坐标系度规应该满足：
 \begin{equation}
-g_{00}<0,g_{ii}>0,
+g_{00}<0, g_{ii}>0,
 \begin{vmatrix}
 g_{ii} & g_{ik}\\
 g_{ki} & g_{kk}\\
@@ -1027,10 +1027,10 @@ g_{31} & g_{32} & g_{33}\\
 
 如果两位四速不同的观测者世界线交于黎曼时空中的一点，可见两位观测者在这一点的时间轴指向并不一致，他们的观测量将通过局域的洛伦兹变换联系。
 
-在讨论张量在四轴系上的投影前，我们不妨先来看一个$g_{\mu\nu}=\begin{pmatrix}
+在讨论张量在四轴系上的投影前，我们不妨先来看一个 $g_{\mu\nu}=\begin{pmatrix}
 -1 & 0\\
 0 & 1\\
-\end{pmatrix}$坐标系中的例子。假如我们希望将矢量$A^{\mu}=\left(3,4\right)$投影到两个正交基矢$\omega^{\mu}_{\hat{1}}=\left(1,\sqrt{3}\right)$和$\omega^{\mu}_{\hat{2}}=\left(\dfrac{\sqrt{3}}{2},\dfrac{1}{2}\right)$上，根据线性代数知识我们知道首先要考虑坐标变换矩阵的逆矩阵：
+\end{pmatrix}$ 坐标系中的例子。假如我们希望将矢量 $A^{\mu}=\left(3, 4\right)$ 投影到两个正交基矢 $\omega^{\mu}_{\hat{1}}=\left(1,\sqrt{3}\right)$ 和 $\omega^{\mu}_{\hat{2}}=\left(\dfrac{\sqrt{3}}{2},\dfrac{1}{2}\right)$ 上，根据线性代数知识我们知道首先要考虑坐标变换矩阵的逆矩阵：
 \begin{equation}
 \frac{\partial{}x^{\mu}}{\partial{}\widetilde{x}^{\mu}}=\begin{pmatrix}
 1 & \dfrac{\sqrt{3}}{2}\\
@@ -1040,13 +1040,13 @@ g_{31} & g_{32} & g_{33}\\
 \sqrt{3} & -1\\
 \end{pmatrix},
 \end{equation}
-在新基矢下$A^{\mu}$的坐标为
+在新基矢下 $A^{\mu}$ 的坐标为
 \begin{equation}
-\widetilde{A}^{\mu}=\frac{\partial{}\widetilde{x}^{\mu}}{\partial{}x^{\mu}}A^{\mu}=\left(-\frac{3}{2}+2\sqrt{3},3\sqrt{3}-4\right),
+\widetilde{A}^{\mu}=\frac{\partial{}\widetilde{x}^{\mu}}{\partial{}x^{\mu}}A^{\mu}=\left(-\frac{3}{2}+2\sqrt{3}, 3\sqrt{3}-4\right),
 \end{equation}
 与量子力学类似，基矢前的系数就是可观测量。或许我们可以记观测量为：
 \begin{equation}
-A^{\hat{1}}=A^{\mu}\omega_{\mu}^{\hat{1}}=-\frac{3}{2}+2\sqrt{3},A^{\hat{2}}=A^{\mu}\omega_{\mu}^{\hat{2}}=3\sqrt{3}-4,
+A^{\hat{1}}=A^{\mu}\omega_{\mu}^{\hat{1}}=-\frac{3}{2}+2\sqrt{3}, A^{\hat{2}}=A^{\mu}\omega_{\mu}^{\hat{2}}=3\sqrt{3}-4,
 \end{equation}
 基矢前的系数又可看作是两个矢量内积后除以基矢长度的平方，由此定义（注意张量指标位置）
 \begin{equation}
@@ -1063,11 +1063,11 @@ A^{\hat{1}}=A^{\mu}\omega_{\mu}^{\hat{1}}=-\frac{3}{2}+2\sqrt{3},A^{\hat{2}}=A^{
 \end{pmatrix},
 \omega^{\hat{a}}_{\mu}=\xi^{\hat{a}\hat{b}}\omega_{\mu\hat{b}},
 \end{equation}
-注意轴指标上加符号$\hat{}$以表明它不是张量指标，而是用来指明它是代表哪条坐标轴基矢的指标，但因为仍能写成数表形式，故重复轴指标求和依旧代表数个矢量相加。其实对正交轴来讲本没有求和过程，但由于非对角元为零，上式只是$\xi^{aa}\omega_{\mu\hat{a}}$起作用，写成求和不影响结果，为了维持记号统一不妨沿用求和惯例。
+注意轴指标上加符号 $\hat{}$ 以表明它不是张量指标，而是用来指明它是代表哪条坐标轴基矢的指标，但因为仍能写成数表形式，故重复轴指标求和依旧代表数个矢量相加。其实对正交轴来讲本没有求和过程，但由于非对角元为零，上式只是 $\xi^{aa}\omega_{\mu\hat{a}}$ 起作用，写成求和不影响结果，为了维持记号统一不妨沿用求和惯例。
 
-而张量指标升降依旧依靠度规张量。以$A^{\hat{1}}$为例，
+而张量指标升降依旧依靠度规张量。以 $A^{\hat{1}}$ 为例，
 \begin{align}
-\omega^{\mu}_{\hat{1}}=\left(1,\sqrt{3}\right),\omega_{\mu\hat{1}}=\left(-1,\sqrt{3}\right),\omega^{\hat{1}}_{\mu}=\xi^{11}\omega_{\mu\hat{1}}=\left(-\frac{1}{2},\frac{\sqrt{3}}{2}\right),A^{\hat{1}}=A^{\mu}\omega_{\mu}^{\hat{1}}=-\frac{3}{2}+2\sqrt{3}.
+\omega^{\mu}_{\hat{1}}=\left(1,\sqrt{3}\right),\omega_{\mu\hat{1}}=\left(-1,\sqrt{3}\right),\omega^{\hat{1}}_{\mu}=\xi^{11}\omega_{\mu\hat{1}}=\left(-\frac{1}{2},\frac{\sqrt{3}}{2}\right), A^{\hat{1}}=A^{\mu}\omega_{\mu}^{\hat{1}}=-\frac{3}{2}+2\sqrt{3}.
 \end{align}
 于是我们便成功计算出了观测量。现在我们就可以讨论张量是如何在四轴系上进行投影的了。
 
@@ -1086,7 +1086,7 @@ g_{\mu\nu}\omega^{\mu}_{\hat{0}}\omega^{\nu}_{\hat{0}}=-1.
 1,&a=b,\\
 0,&a\ne b.
 \end{cases}\\
-&g_{\mu\nu}\omega^{\mu}_{\hat{a}}\omega^{\nu}_{\hat{0}}=0,\quad a=1,2,3.
+&g_{\mu\nu}\omega^{\mu}_{\hat{a}}\omega^{\nu}_{\hat{0}}=0,\quad a=1, 2, 3.
 \end{align}
 不妨定义
 \begin{equation}
@@ -1114,7 +1114,7 @@ g_{\mu\nu}\omega^{\mu}_{\hat{0}}\omega^{\nu}_{\hat{0}}=-1.
 \begin{equation}
 A^{\mu}=A^{\hat{a}}\omega^{\mu}_{\hat{a}},\label{2.3.16}
 \end{equation}
-其中$A^{\hat{a}}$是一个标量性质的量，即观测量，是基矢前的系数。利用正交归一条件可以得到
+其中 $A^{\hat{a}}$ 是一个标量性质的量，即观测量，是基矢前的系数。利用正交归一条件可以得到
 \begin{equation}
 A^{\mu}\omega_{\mu}^{\hat{a}}=A^{\hat{a}}.\label{2.3.17}
 \end{equation}
@@ -1126,13 +1126,13 @@ A^{\mu}=A^{\nu}\omega_{\nu}^{\hat{a}}\omega_{\hat{a}}^{\mu}.
 \begin{equation}
 \omega^{\hat{a}}_{\nu}\omega^{\mu}_{\hat{a}}=\delta{}^{\mu}_{\nu},
 \end{equation}
-此处对$\hat{a}=0,1,2,3$进行了求和，上式被称作四轴系的完备性条件，它和正交归一条件一样是四轴系的基本性质。这种求和形式令人联想到量子力学中的完全性关系，因此可以在推导过程中利用完备性条件。
+此处对 $\hat{a}=0, 1, 2, 3$ 进行了求和，上式被称作四轴系的完备性条件，它和正交归一条件一样是四轴系的基本性质。这种求和形式令人联想到量子力学中的完全性关系，因此可以在推导过程中利用完备性条件。
 
 为了更直观感受完备性条件，不妨沿用前文的例子：
 \begin{align}
-\omega^{\mu}_{\hat{1}}&=\left(1,\sqrt{3}\right),\omega_{\mu}^{\hat{1}}=\left(-\frac{1}{2},\frac{\sqrt{3}}{2}\right),\omega^{\mu}_{\hat{2}}=\left(\frac{\sqrt{3}}{2},\frac{1}{2}\right),\omega_{\mu}^{\hat{2}}=\left(\sqrt{3},-1\right),A^{\mu}=\left(X,Y\right),\notag\\
+\omega^{\mu}_{\hat{1}}&=\left(1,\sqrt{3}\right),\omega_{\mu}^{\hat{1}}=\left(-\frac{1}{2},\frac{\sqrt{3}}{2}\right),\omega^{\mu}_{\hat{2}}=\left(\frac{\sqrt{3}}{2},\frac{1}{2}\right),\omega_{\mu}^{\hat{2}}=\left(\sqrt{3},-1\right), A^{\mu}=\left(X, Y\right),\notag\\
 A^{\mu}&=\left(X\omega^{\hat{1}}_{1}+Y\omega^{\hat{1}}_{2}\right)\omega^{\mu}_{\hat{1}}+\left(X\omega^{\hat{2}}_{1}+Y\omega^{\hat{2}}_{2}\right)\omega^{\mu}_{\hat{2}}\notag\\
-=\left(X,Y\right)&=\left[\left(X\omega^{\hat{1}}_{1}+Y\omega^{\hat{1}}_{2}\right)\omega^{1}_{\hat{1}}+\left(X\omega^{\hat{2}}_{1}+Y\omega^{\hat{2}}_{2}\right)\omega^{1}_{\hat{2}},\left(X\omega^{\hat{1}}_{1}+Y\omega^{\hat{1}}_{2}\right)\omega^{2}_{\hat{1}}+\left(X\omega^{\hat{2}}_{1}+Y\omega^{\hat{2}}_{2}\right)\omega^{2}_{\hat{2}}\right].\notag
+=\left(X, Y\right)&=\left[\left(X\omega^{\hat{1}}_{1}+Y\omega^{\hat{1}}_{2}\right)\omega^{1}_{\hat{1}}+\left(X\omega^{\hat{2}}_{1}+Y\omega^{\hat{2}}_{2}\right)\omega^{1}_{\hat{2}},\left(X\omega^{\hat{1}}_{1}+Y\omega^{\hat{1}}_{2}\right)\omega^{2}_{\hat{1}}+\left(X\omega^{\hat{2}}_{1}+Y\omega^{\hat{2}}_{2}\right)\omega^{2}_{\hat{2}}\right].\notag
 \end{align}
 等式恒成立显然要求
 \begin{align}
@@ -1145,22 +1145,22 @@ A^{\mu}&=\left(X\omega^{\hat{1}}_{1}+Y\omega^{\hat{1}}_{2}\right)\omega^{\mu}_{\
 \begin{equation}
 T^{\hat{a}\hat{b}}=T^{\mu\nu}\omega_{\mu}^{\hat{a}}\omega_{\nu}^{\hat{b}},
 \end{equation}
-$T^{\hat{a}\hat{b}}$包含$4^{2}$个数（$T^{\hat{a}\hat{b}}$只是数表，不等于张量），称其为四轴系分量。四轴系分量都是标量，是可观测量。独立可观测量的个数与张量独立分量的个数是一致的。
+$T^{\hat{a}\hat{b}}$ 包含 $4^{2}$ 个数 ($T^{\hat{a}\hat{b}}$ 只是数表，不等于张量），称其为四轴系分量。四轴系分量都是标量，是可观测量。独立可观测量的个数与张量独立分量的个数是一致的。
 
 现在可以举几个应用的例子。
 
 首先是平坦时空中的静观测者。他的四轴系各矢量满足：
 \begin{align}
-\omega_{\hat{0}}^{\mu}&=\omega_{\mu}^{\hat{0}}=\left(1,0,0,0\right),\omega^{\mu\hat{0}}=\omega_{\mu\hat{0}}=\left(-1,0,0,0\right),\label{2.3.22}\\
-\omega_{\hat{1}}^{\mu}&=\omega_{\mu\hat{1}}=\omega^{\mu\hat{1}}=\omega_{\mu}^{\hat{1}}=\left(0,1,0,0\right),\\
-\omega_{\hat{2}}^{\mu}&=\omega_{\mu\hat{2}}=\omega^{\mu\hat{2}}=\omega_{\mu}^{\hat{2}}=\left(0,0,1,0\right),\\
-\omega_{\hat{3}}^{\mu}&=\omega_{\mu\hat{3}}=\omega^{\mu\hat{3}}=\omega_{\mu}^{\hat{3}}=\left(0,0,0,1\right),\label{2.3.25}
+\omega_{\hat{0}}^{\mu}&=\omega_{\mu}^{\hat{0}}=\left(1, 0, 0, 0\right),\omega^{\mu\hat{0}}=\omega_{\mu\hat{0}}=\left(-1, 0, 0, 0\right),\label{2.3.22}\\
+\omega_{\hat{1}}^{\mu}&=\omega_{\mu\hat{1}}=\omega^{\mu\hat{1}}=\omega_{\mu}^{\hat{1}}=\left(0, 1, 0, 0\right),\\
+\omega_{\hat{2}}^{\mu}&=\omega_{\mu\hat{2}}=\omega^{\mu\hat{2}}=\omega_{\mu}^{\hat{2}}=\left(0, 0, 1, 0\right),\\
+\omega_{\hat{3}}^{\mu}&=\omega_{\mu\hat{3}}=\omega^{\mu\hat{3}}=\omega_{\mu}^{\hat{3}}=\left(0, 0, 0, 1\right),\label{2.3.25}
 \end{align}
-对于张量$T^{\mu\nu}$,容易发现观测量满足
+对于张量 $T^{\mu\nu}$, 容易发现观测量满足
 \begin{equation}
 T^{\hat{a}\hat{b}}=T^{\mu\nu}\delta{}^{\hat{a}}_{\mu}\delta{}^{\hat{b}}_{\nu}=T^{ab},
 \end{equation}
-即在平坦时空中，张量在该坐标系下表征出的分量本身就等于该坐标系静观测者的可观测量。以粒子的能动张量$T^{\mu\nu}=\rho U^{\mu}U^{\nu}$为例。对于平坦时空中相对坐标系静止的粒子，其能动张量只有一项非零项，为
+即在平坦时空中，张量在该坐标系下表征出的分量本身就等于该坐标系静观测者的可观测量。以粒子的能动张量 $T^{\mu\nu}=\rho U^{\mu}U^{\nu}$ 为例。对于平坦时空中相对坐标系静止的粒子，其能动张量只有一项非零项，为
 \begin{equation}
 T^{00}=\rho \symup{c}^{2},
 \end{equation}
@@ -1168,11 +1168,11 @@ T^{00}=\rho \symup{c}^{2},
 \begin{equation}
 T^{\hat{0}\hat{0}}=T^{00}\omega_{0}^{\hat{0}}\omega_{0}^{\hat{0}}=\rho \symup{c}^{2}.
 \end{equation}
-可见确实一致。实际上，能动张量式中$\rho$的定义就是粒子随动参考系中测得的粒子质量密度。
+可见确实一致。实际上，能动张量式中 $\rho$ 的定义就是粒子随动参考系中测得的粒子质量密度。
 
 而当时空弯曲时，静观测者时间轴满足
 \begin{equation}
-\omega^{\mu}_{\hat{0}}=\left(\frac{1}{\sqrt{-g_{00}}},0,0,0\right),\omega^{\mu\hat{0}}=\left(-\frac{1}{\sqrt{-g_{00}}},0,0,0\right),\omega_{\mu}^{\hat{0}}=g_{\mu\nu}\omega^{\nu\hat{0}}=-\frac{g_{\mu0}}{\sqrt{-g_{00}}},
+\omega^{\mu}_{\hat{0}}=\left(\frac{1}{\sqrt{-g_{00}}}, 0, 0, 0\right),\omega^{\mu\hat{0}}=\left(-\frac{1}{\sqrt{-g_{00}}}, 0, 0, 0\right),\omega_{\mu}^{\hat{0}}=g_{\mu\nu}\omega^{\nu\hat{0}}=-\frac{g_{\mu0}}{\sqrt{-g_{00}}},
 \end{equation}
 可见此时观测量满足
 \begin{equation}
@@ -1188,14 +1188,14 @@ T^{\hat{0}\hat{0}}=-T^{00}\frac{g_{00}g_{00}}{g_{00}}=\rho \symup{c}^{2}.
 \end{equation}
 这正是我们需要观测量理论的理由。
 
-接下来可以考虑洛伦兹变换。对于平坦时空中的静观测者，根据 (\ref{2.3.22}) 到 (\ref{2.3.25}) 式，可知事件间隔$\left(\symup{c}\delta{}t,\delta{}x,\delta{}y,\delta{}z\right)$在四轴系上的投影就是其各分量。但对于向着$x$轴正方向运动的观测者，四轴系有
+接下来可以考虑洛伦兹变换。对于平坦时空中的静观测者，根据 (\ref{2.3.22}) 到 (\ref{2.3.25}) 式，可知事件间隔 $\left(\symup{c}\delta{}t,\delta{}x,\delta{}y,\delta{}z\right)$ 在四轴系上的投影就是其各分量。但对于向着 $x$ 轴正方向运动的观测者，四轴系有
 \begin{align}
-\omega^{\hat{0}}_{\mu}&=\left(\frac{1}{\sqrt{1-\dfrac{v^{2}}{\symup{c}^{2}}}},-\frac{\dfrac{v}{\symup{c}}}{\sqrt{1-\dfrac{v^{2}}{\symup{c}^{2}}}},0,0\right),\omega^{\hat{1}}_{\mu}=\left(-\frac{\dfrac{v}{\symup{c}}}{\sqrt{1-\dfrac{v^{2}}{\symup{c}^{2}}}},\frac{1}{\sqrt{1-\dfrac{v^{2}}{\symup{c}^{2}}}},0,0\right),\\
-\omega^{\hat{2}}_{\mu}&=\left(0,0,1,0\right),\omega^{\hat{3}}_{\mu}=\left(0,0,0,1\right).
+\omega^{\hat{0}}_{\mu}&=\left(\frac{1}{\sqrt{1-\dfrac{v^{2}}{\symup{c}^{2}}}},-\frac{\dfrac{v}{\symup{c}}}{\sqrt{1-\dfrac{v^{2}}{\symup{c}^{2}}}}, 0, 0\right),\omega^{\hat{1}}_{\mu}=\left(-\frac{\dfrac{v}{\symup{c}}}{\sqrt{1-\dfrac{v^{2}}{\symup{c}^{2}}}},\frac{1}{\sqrt{1-\dfrac{v^{2}}{\symup{c}^{2}}}}, 0, 0\right),\\
+\omega^{\hat{2}}_{\mu}&=\left(0, 0, 1, 0\right),\omega^{\hat{3}}_{\mu}=\left(0, 0, 0, 1\right).
 \end{align}
-把事件间隔$\left(\symup{c}\delta{}t,\delta{}x,\delta{}y,\delta{}z\right)$代入就得到洛伦兹变换了。
+把事件间隔 $\left(\symup{c}\delta{}t,\delta{}x,\delta{}y,\delta{}z\right)$ 代入就得到洛伦兹变换了。
 
-从洛伦兹变换推广开，考虑任意度规场中任意观测者观测到的时空间隔。记该坐标系中的事件间隔为$\delta{}x^{\mu}$,观测者观测到的时空间隔为
+从洛伦兹变换推广开，考虑任意度规场中任意观测者观测到的时空间隔。记该坐标系中的事件间隔为 $\delta{}x^{\mu}$, 观测者观测到的时空间隔为
 \begin{equation}
 \symup{c}\Delta{}t=\delta{}x^{\mu}\omega_{\mu}^{\hat{0}},\Delta{}x=\delta{}x^{\mu}\omega_{\mu}^{\hat{1}},\Delta{}y=\delta{}x^{\mu}\omega_{\mu}^{\hat{2}},\Delta{}z=\delta{}x^{\mu}\omega_{\mu}^{\hat{3}}.
 \end{equation}
@@ -1243,7 +1243,7 @@ A^{\mu}_{\parallel}=\pi^{\mu}_{\nu}\delta{}x^{\nu}=-u^{\mu}u_{\nu}\delta{}x^{\nu
 &=\delta{}x^{\alpha}\delta{}x^{\beta}\left(g_{\alpha\beta}+\omega_{\alpha\hat{0}}\omega_{\beta\hat{0}}\right)\notag\\
 &=\left(g_{\alpha\beta}+u_{\alpha}u_{\beta}\right)\delta{}x^{\alpha}\delta{}x^{\beta}.
 \end{align}
-正是空间算符投影后的结果。这表明投影量确实是正交的。背后的原因是我们提到过的数学原理，如果度规是常数，且度规矩阵行列式不为零，那么一定可以找到一个坐标变换，将二次型$\symup{d}s^{2}=g_{\mu\nu}\symup{d}x^{\mu}\symup{d}x^{\nu}$化成坐标微分的平方和差形式，将度规写作闵可夫斯基形式。正交标架只涉及弯曲时空中的一个点，我们又选取了两两正交的四轴系，这是必然的结果。
+正是空间算符投影后的结果。这表明投影量确实是正交的。背后的原因是我们提到过的数学原理，如果度规是常数，且度规矩阵行列式不为零，那么一定可以找到一个坐标变换，将二次型 $\symup{d}s^{2}=g_{\mu\nu}\symup{d}x^{\mu}\symup{d}x^{\nu}$ 化成坐标微分的平方和差形式，将度规写作闵可夫斯基形式。正交标架只涉及弯曲时空中的一个点，我们又选取了两两正交的四轴系，这是必然的结果。
 
 \subsection{四维加速度}
 上一节中我们提到过，仅靠四速是不足以完全描述四轴系的，我们还需考虑四轴系的加速运动，考虑加速运动满足什么条件才可以将其称为惯性系。当然这一点我们也多次提过了，沿测地线运动（如在引力场中自由下落，通过坐标变换可看作不受引力和惯性力的太空惯性系）不作空间自转的四轴系就是惯性系。
@@ -1262,23 +1262,23 @@ A^{\mu}_{\parallel}=\pi^{\mu}_{\nu}\delta{}x^{\nu}=-u^{\mu}u_{\nu}\delta{}x^{\nu
 \begin{equation}
 \dot{\omega}^{\mu}_{\hat{a}}=\omega^{\mu}_{\hat{a};\nu}U^{\nu}=\Omega_{\hat{a}\hat{b}}\omega^{\hat{b}\mu}.
 \end{equation}
-得到的$\Omega_{\hat{a}\hat{b}}$是标量数表，它是判断惯性系与否的可观测依据。
+得到的 $\Omega_{\hat{a}\hat{b}}$ 是标量数表，它是判断惯性系与否的可观测依据。
 
-首先来证明，由于四轴系正交归一，$\Omega_{\hat{a}\hat{b}}$是反称的。正交归一条件对$\tau$求微得到
+首先来证明，由于四轴系正交归一，$\Omega_{\hat{a}\hat{b}}$ 是反称的。正交归一条件对 $\tau$ 求微得到
 \begin{align}
 &g_{\mu\nu}\dot{\omega}^{\mu}_{\hat{a}}\omega^{\nu}_{\hat{b}}+g_{\mu\nu}\omega^{\mu}_{\hat{a}}\dot{\omega}^{\nu}_{\hat{b}}\notag\\
 =\,&g_{\mu\nu}\Omega_{\hat{a}\hat{c}}\omega^{\hat{c}\mu}\omega^{\nu}_{\hat{b}}+g_{\mu\nu}\omega^{\mu}_{\hat{a}}\Omega_{\hat{b}\hat{c}}\omega^{\hat{c}\nu}\notag\\
 =\,&\Omega_{\hat{a}\hat{c}}\delta{}^{\hat{c}}_{\hat{b}}+\Omega_{\hat{b}\hat{c}}\delta{}^{\hat{c}}_{\hat{a}}=\Omega_{\hat{a}\hat{b}}+\Omega_{\hat{b}\hat{a}}=0.
 \end{align}
-因此$\Omega_{\hat{a}\hat{c}}$是反称的，对角元为零，非对角元只有 6 个独立的标量。
+因此 $\Omega_{\hat{a}\hat{c}}$ 是反称的，对角元为零，非对角元只有 6 个独立的标量。
 
-接下来研究 6 个标量各自的物理意义，考虑$a=0$,
+接下来研究 6 个标量各自的物理意义，考虑 $a=0$,
 \begin{align}
 \dot{\omega}^{\mu}_{\hat{0}}=\dot{u}^{\mu}=\Omega_{\hat{0}\hat{b}}\omega^{\hat{b}\mu}=\Omega_{\hat{0}\hat{a}}\omega^{\hat{a}\mu}.
 \end{align}
-即三个标量$\Omega_{\hat{0}\hat{i}}$是“四维加速度”在类空轴上的投影。如果观测者沿测地线运动，即在引力场中自由运动，则可看作不受引力和惯性力，四维加速度为零，这三个分量也为零。
+即三个标量 $\Omega_{\hat{0}\hat{i}}$ 是“四维加速度”在类空轴上的投影。如果观测者沿测地线运动，即在引力场中自由运动，则可看作不受引力和惯性力，四维加速度为零，这三个分量也为零。
 
-分别取$a=1,2,3$得到
+分别取 $a=1, 2, 3$ 得到
 \begin{align}
 \dot{\omega}^{\mu}_{\hat{a}}&=\Omega_{\hat{a}\hat{0}}\omega^{\hat{0}\mu}+\Omega_{\hat{a}\hat{i}}\omega^{\hat{i}\mu}\notag\\
 &=\dot{u}_{\hat{a}}u^{\mu}+\Omega_{\hat{a}\hat{i}}\omega^{\hat{i}\mu}.
@@ -1291,16 +1291,16 @@ A^{\mu}_{\parallel}=\pi^{\mu}_{\nu}\delta{}x^{\nu}=-u^{\mu}u_{\nu}\delta{}x^{\nu
 \begin{equation}
 \varepsilon^{abc}=
 \begin{cases}
-1,&\quad \text{$a,b,c$ 是 $1,2,3$ 的偶置换，}\\
-0,&\quad \text{$a,b,c$ 至少有两个相等，}\\
--1,&\quad \text{$a,b,c$ 是 $1,2,3$ 的奇置换。}
+1,&\quad \text{$a, b, c$ 是 $1, 2, 3$ 的偶置换，}\\
+0,&\quad \text{$a, b, c$ 至少有两个相等，}\\
+-1,&\quad \text{$a, b, c$ 是 $1, 2, 3$ 的奇置换。}
 \end{cases}
 \end{equation}
 空间轴不转动的参考系被称作费米平动参考系。沿测地线运动的费米平动参考系才是局部惯性系。
 
 局部惯性系沿着测地线运动，一旦有了加速度就会偏离黎曼空间中的短程线，某种意义上这说明四维加速度是能带来绝对效应的，因为世界线长度是个标量，任何坐标系中都应当能用观测量理论确定它的相对长度。实际上四维加速度的影响可以解释双生子佯谬，因为引力势或惯性力场大的地方时钟走得慢。
 
-我们不妨以转动参考系为例来研究绝对效应。首先将实验室直角坐标系$X^{\mu}=\left(\symup{c}T,X,Y,Z\right)$变成转动坐标系$\left(\symup{c}t,r,\theta,z\right)$,坐标变换满足
+我们不妨以转动参考系为例来研究绝对效应。首先将实验室直角坐标系 $X^{\mu}=\left(\symup{c}T, X, Y, Z\right)$ 变成转动坐标系 $\left(\symup{c}t, r,\theta, z\right)$, 坐标变换满足
 \begin{equation}
 \begin{cases}
 X=r\cos\left(\theta+\omega t\right),\\
@@ -1327,15 +1327,15 @@ g_{\mu\nu}=\begin{pmatrix}
 \end{equation}
 由于转动系时轴非正交，无法定义大范围的同时面，故先前坐标变换中时间项只能用微分表示。此外该度规偏离了平直时空中的柱坐标系度规，在转动系静观测者看来是有惯性场或引力场作用。但这并不意味着时空发生了弯曲。联络可以“无中生有”，但是曲率是张量，实验室系中为零不可能在转动系中不为零，因此四维时空还是平直的，只是在转动系观测者看来三维子时空发生了弯曲。
 
-为更好地说明三维子时空的弯曲，我们现在来研究转动系中的几何。一个常被提及的问题是，对于转动系中心的观测者而言，遥远星系运行速度难道不是超光速了吗？且让我们看看超光速的结论是如何得到的。半径$r$处的，相对实验室系静止的恒星，转动系坐标时间$t=0$时恒星位于$A\left(0,r,0,z\right)$,经过时间$t$后恒星位于$B\left(\symup{c}t,r,-\omega t,z\right)$,当然我们知道距离测量是要同时的，所以还要考虑$C\left(\symup{c}t,r,0,0\right)$,将$B$和$C$一比较就知道角速度为$\omega$,那么线速度一定是$\omega r>\symup{c}$就超光速了。那么问题来了，$B$和$C$真的是同时的吗？不是“同时”测量得到的距离没有意义，但是转动系的坐标时间$t$是同时的判据吗？这样测量得到的距离是“合法”距离吗？其实这种测距方法是平直时空中的做法，它的不可行确实说明转动系几何与欧氏几何不同。
+为更好地说明三维子时空的弯曲，我们现在来研究转动系中的几何。一个常被提及的问题是，对于转动系中心的观测者而言，遥远星系运行速度难道不是超光速了吗？且让我们看看超光速的结论是如何得到的。半径 $r$ 处的，相对实验室系静止的恒星，转动系坐标时间 $t=0$ 时恒星位于 $A\left(0, r, 0, z\right)$, 经过时间 $t$ 后恒星位于 $B\left(\symup{c}t, r,-\omega t, z\right)$, 当然我们知道距离测量是要同时的，所以还要考虑 $C\left(\symup{c}t, r, 0, 0\right)$, 将 $B$ 和 $C$ 一比较就知道角速度为 $\omega$, 那么线速度一定是 $\omega r>\symup{c}$ 就超光速了。那么问题来了，$B$ 和 $C$ 真的是同时的吗？不是“同时”测量得到的距离没有意义，但是转动系的坐标时间 $t$ 是同时的判据吗？这样测量得到的距离是“合法”距离吗？其实这种测距方法是平直时空中的做法，它的不可行确实说明转动系几何与欧氏几何不同。
 
-接下来作定量分析。要研究几何必然要得到两点间的固有距离。但在实验室系中容易看出，不同半径处的四速不同，因此对同样的时空间隔不同的转动系静观测者也会得到不同的结果。另一方面，时轴非正交的坐标系中同时可以沿着不同的路径进行定义，因此两点同时测量得到的距离对同一个观测者来讲可能都不一样。而既然要研究几何，我们希望得到的是周长与半径$r$的关系。综上，我们暂且研究半径$r$处，实验室系静参考点在相对转动系转一圈的时空间隔对于半径$r$处的转动系静观测者意味着什么。而对于这样一个在实验室系中作加速运动的观测者，他的观测量应该是无数相对观测者瞬间静止的惯性系中记录的观测量求和。
+接下来作定量分析。要研究几何必然要得到两点间的固有距离。但在实验室系中容易看出，不同半径处的四速不同，因此对同样的时空间隔不同的转动系静观测者也会得到不同的结果。另一方面，时轴非正交的坐标系中同时可以沿着不同的路径进行定义，因此两点同时测量得到的距离对同一个观测者来讲可能都不一样。而既然要研究几何，我们希望得到的是周长与半径 $r$ 的关系。综上，我们暂且研究半径 $r$ 处，实验室系静参考点在相对转动系转一圈的时空间隔对于半径 $r$ 处的转动系静观测者意味着什么。而对于这样一个在实验室系中作加速运动的观测者，他的观测量应该是无数相对观测者瞬间静止的惯性系中记录的观测量求和。
 
-考虑测量四要素：观测量、观测者、度规、表征上述一切的坐标系。我们先选取转动系作为坐标系，转动系半径$r$处静观测者为观测者，该观测者与实验室系静参考点再次会和的事件间隔为观测量，度规前面已经给出。此时转动系静观测者的空间度规为
+考虑测量四要素：观测量、观测者、度规、表征上述一切的坐标系。我们先选取转动系作为坐标系，转动系半径 $r$ 处静观测者为观测者，该观测者与实验室系静参考点再次会和的事件间隔为观测量，度规前面已经给出。此时转动系静观测者的空间度规为
 \begin{equation}
 \gamma_{ik}=g_{ik}-\frac{g_{i0}g_{k0}}{g_{00}},\gamma_{11}=1,\gamma_{22}=\frac{r^{2}}{1-\dfrac{r^{2}\omega^{2}}{\symup{c}^{2}}},\gamma_{33}=1.
 \end{equation}
-将事件拆分成无数小间隔$\left(\symup{c}\symup{d}t,0,-\omega\symup{d}t,0\right)$,利用空间度规计算出
+将事件拆分成无数小间隔 $\left(\symup{c}\symup{d}t, 0,-\omega\symup{d}t, 0\right)$, 利用空间度规计算出
 \begin{equation}
 \Delta{}l=\sqrt{\gamma_{22}\symup{d}\theta^{2}}=\frac{\omega r\symup{d}t}{\sqrt{1-\dfrac{r^{2}\omega^{2}}{\symup{c}^{2}}}}.
 \end{equation}
@@ -1343,19 +1343,19 @@ g_{\mu\nu}=\begin{pmatrix}
 \begin{equation}
 l=\frac{2\pi r}{\sqrt{1-\dfrac{r^{2}\omega^{2}}{\symup{c}^{2}}}}.
 \end{equation}
-也就是说观测者再次与该参考点相遇时，他会认为该参考点走过的距离比$2\pi r$大。
+也就是说观测者再次与该参考点相遇时，他会认为该参考点走过的距离比 $2\pi r$ 大。
 
 我们还可计算转动系静观测者的固有时间，
 \begin{equation}
 \symup{d}\tau^{2}=-\frac{\symup{d}s^{2}}{\symup{c}^{2}}=-g_{00}\symup{d}t^{2}=-g_{00}\symup{d}T^{2}=\left(1-\frac{r^{2}\omega^{2}}{\symup{c}^{2}}\right)\symup{d}T^{2},
 \end{equation}
-而我们知道实验室系静参考点的固有时间等于$\symup{d}T$,因此二者再次会和时，转动系静观测者带的钟走得更慢，他更年轻。原因就是他走过的世界线不是短程线，比测地线更短一点。
+而我们知道实验室系静参考点的固有时间等于 $\symup{d}T$, 因此二者再次会和时，转动系静观测者带的钟走得更慢，他更年轻。原因就是他走过的世界线不是短程线，比测地线更短一点。
 
 通过固有时间计算得到静观测者的时间轴为
 \begin{align}
-\omega_{\hat{0}}^{\mu}=u^{\mu}=\left(\frac{1}{\sqrt{1-\dfrac{r^{2}\omega^{2}}{\symup{c}^{2}}}},0,0,0\right),\omega_{\mu}^{\hat{0}}=\left(\sqrt{1-\frac{r^{2}\omega^{2}}{\symup{c}^{2}}},0,-\frac{\dfrac{r^{2}\omega}{\symup{c}}}{\sqrt{1-\dfrac{r^{2}\omega^{2}}{\symup{c}^{2}}}},0\right),
+\omega_{\hat{0}}^{\mu}=u^{\mu}=\left(\frac{1}{\sqrt{1-\dfrac{r^{2}\omega^{2}}{\symup{c}^{2}}}}, 0, 0, 0\right),\omega_{\mu}^{\hat{0}}=\left(\sqrt{1-\frac{r^{2}\omega^{2}}{\symup{c}^{2}}}, 0,-\frac{\dfrac{r^{2}\omega}{\symup{c}}}{\sqrt{1-\dfrac{r^{2}\omega^{2}}{\symup{c}^{2}}}}, 0\right),
 \end{align}
-因此事件间隔$\left(\symup{c}\symup{d}t,0,-\omega t,0\right)$的投影为
+因此事件间隔 $\left(\symup{c}\symup{d}t, 0,-\omega t, 0\right)$ 的投影为
 \begin{equation}
 \symup{c}\Delta{}t=\sqrt{1-\frac{r^{2}\omega^{2}}{\symup{c}^{2}}}\symup{c}\symup{d}t+\frac{\dfrac{r^{2}\omega^{2}}{\symup{c}}\symup{d}t}{\sqrt{1-\dfrac{r^{2}\omega^{2}}{\symup{c}^{2}}}}=\frac{\symup{c}\symup{d}t}{\sqrt{1-\dfrac{r^{2}\omega^{2}}{\symup{c}^{2}}}}.
 \end{equation}
@@ -1367,16 +1367,16 @@ l=\frac{2\pi r}{\sqrt{1-\dfrac{r^{2}\omega^{2}}{\symup{c}^{2}}}}.
 \begin{equation}
 v=\frac{\Delta{}l}{\Delta{}t}=\omega r.
 \end{equation}
-可见对于中心处的观测者来讲，$r=0,v=\omega r=0$,静参考点确实没有运动。
+可见对于中心处的观测者来讲，$r=0, v=\omega r=0$, 静参考点确实没有运动。
 
-但读者朋友们肯定要问了，我们现在只解决了一半的问题啊，就是对于转动系中心观测者来讲，确实没有超光速发生。但是对于$r$很大的转动系随动观测者来讲呢？从物理的坐标系条件本身出发可以解释这个问题。当$\omega r>c$时我们发现遥远恒星处度规分量$g_{00}>0$,此时固有距离平方正定所要求的度规行列式小于 0 就不可能实现，这不是物理的坐标系，即在遥远恒星处观测者无法相对坐标系静止，但我们却强行规定观测者能实现随动，那么在遥远恒星处局域别的事物相对这个虚拟观测者超光速也不是什么无法实现的事，因为无法超光速指的是惯性质量不为零的物质在局域惯性系中速度不能超光速。
+但读者朋友们肯定要问了，我们现在只解决了一半的问题啊，就是对于转动系中心观测者来讲，确实没有超光速发生。但是对于 $r$ 很大的转动系随动观测者来讲呢？从物理的坐标系条件本身出发可以解释这个问题。当 $\omega r>c$ 时我们发现遥远恒星处度规分量 $g_{00}>0$, 此时固有距离平方正定所要求的度规行列式小于 0 就不可能实现，这不是物理的坐标系，即在遥远恒星处观测者无法相对坐标系静止，但我们却强行规定观测者能实现随动，那么在遥远恒星处局域别的事物相对这个虚拟观测者超光速也不是什么无法实现的事，因为无法超光速指的是惯性质量不为零的物质在局域惯性系中速度不能超光速。
 
 \newpage
 \section{相对论性的引力理论}
 广义相对论是⼀个协变的引⼒理论，它包含两部分。⼀部分是等效原理，它说明有引⼒场存在的时空构成弯曲的黎曼空间，空间度规起着引⼒势的作⽤。另⼀部分是爱因斯坦场⽅程，它指明空间度规即引⼒势对物质分布的依赖关系。本章讨论的就是这两部分内容。
 
 \subsection{等效原理}
-经典力学中曾经引入过两种质量，一种是在伽利略变换前提下表征动量与速度比例关系的惯性质量$m=\dfrac{\symbf{p}}{\symbf{v}}$,一种是在万有引力定律中衡量引力大小的引力质量。从概念上讲，这两个完全没关系，但实践却告诉我们二者在量级上等同。比方说自由落体情形，
+经典力学中曾经引入过两种质量，一种是在伽利略变换前提下表征动量与速度比例关系的惯性质量 $m=\dfrac{\symbf{p}}{\symbf{v}}$, 一种是在万有引力定律中衡量引力大小的引力质量。从概念上讲，这两个完全没关系，但实践却告诉我们二者在量级上等同。比方说自由落体情形，
 \begin{align}
 m_{\text{惯}}a&=m_{\text{引}}g,\\
 a&=\frac{m_{\text{引}}}{m_{\text{惯}}}g.
@@ -1400,15 +1400,15 @@ T=2\pi\sqrt{\frac{m_{\text{惯}}l}{m_{\text{引}}g}},
 \begin{equation}
 F_{\mu\nu}=T_{\mu\nu},
 \end{equation}
-其中$F_{\mu\nu}$是由度规及其微商构成的张量，$T_{\mu\nu}$是物质的能动张量。其次牛顿引力方程
+其中 $F_{\mu\nu}$ 是由度规及其微商构成的张量，$T_{\mu\nu}$ 是物质的能动张量。其次牛顿引力方程
 \begin{equation}
 \nabla^{2}\varphi=4\pi\symup{G}\rho
 \end{equation}
-是一个引力势的二阶线性偏微分方程，因此$F_{\mu\nu}$最高只含$g_{\mu\nu}$的二阶微商，且对二阶微商是线性的。黎曼几何中有一条定理：由度规张量及其一阶和二阶微商构成的，对二阶微商为线性的张量只有曲率张量及其缩并，此外就是$g_{\mu\nu}$自身，这一数学定理几乎完全确定了$F_{\mu\nu}$.它最一般只能是
+是一个引力势的二阶线性偏微分方程，因此 $F_{\mu\nu}$ 最高只含 $g_{\mu\nu}$ 的二阶微商，且对二阶微商是线性的。黎曼几何中有一条定理：由度规张量及其一阶和二阶微商构成的，对二阶微商为线性的张量只有曲率张量及其缩并，此外就是 $g_{\mu\nu}$ 自身，这一数学定理几乎完全确定了 $F_{\mu\nu}$. 它最一般只能是
 \begin{equation}
 F_{\mu\nu}=\alpha R_{\mu\nu}+\beta g_{\mu\nu}R+\gamma g_{\mu\nu}.
 \end{equation}
-能动张量守恒表现在其四维协变散度恒等于零，因此$F_{\mu\nu}$应该也满足
+能动张量守恒表现在其四维协变散度恒等于零，因此 $F_{\mu\nu}$ 应该也满足
 \begin{equation}
 F^{\mu}_{\nu,\mu}=0.
 \end{equation}
@@ -1416,7 +1416,7 @@ F^{\mu}_{\nu,\mu}=0.
 \begin{equation}
 G_{\mu\nu}+\lambda g_{\mu\nu}=\kappa T_{\mu\nu}.
 \end{equation}
-$\kappa$的具体形式可通过场方程的牛顿近似确定，现在先直接给出答案，后续给出证明。$\lambda$是唯一剩下的任意参量，读者也许已经注意到，$\lambda g_{\mu\nu}$这一项就是所谓的宇宙项，源于暗能量的作用。我们现在先令其为零，于是得到爱因斯坦场方程
+$\kappa$ 的具体形式可通过场方程的牛顿近似确定，现在先直接给出答案，后续给出证明。$\lambda$ 是唯一剩下的任意参量，读者也许已经注意到，$\lambda g_{\mu\nu}$ 这一项就是所谓的宇宙项，源于暗能量的作用。我们现在先令其为零，于是得到爱因斯坦场方程
 \begin{equation}
 G_{\mu\nu}=R_{\mu\nu}-\frac12g_{\mu\nu}R=\frac{8\pi\symup{G}}{\symup{c}^{4}}T_{\mu\nu}.
 \end{equation}
@@ -1428,7 +1428,7 @@ R=-\kappa T=-\kappa T^{\mu}_{\mu}.
 \begin{equation}
 R_{\mu\nu}=\kappa\left(T_{\mu\nu}-\frac12g_{\mu\nu}T\right).
 \end{equation}
-真空中能动张量和能动张量的迹$T^{\mu}_{\mu}$都为零，因此
+真空中能动张量和能动张量的迹 $T^{\mu}_{\mu}$ 都为零，因此
 \begin{equation}
 R_{\mu\nu}=0.
 \end{equation}
@@ -1445,7 +1445,7 @@ R_{\mu\nu}=0.
 &\frac{1}{\sqrt{-g}}\frac{\partial{}}{\partial{}x^{\nu}}\left(\sqrt{-g}T^{\mu\nu}\right)+\Gamma_{\alpha\nu}^{\mu}T^{\alpha\nu}=0.\notag\\
 &\frac{\partial{}}{\partial{}x^{0}}\left(\sqrt{-g}T^{0\mu}\right)+\frac{\partial{}}{\partial{}x^{i}}\left(\sqrt{-g}T^{i\mu}\right)+\sqrt{-g}\Gamma_{\alpha\nu}^{\mu}T^{\alpha\nu}=0.\notag
 \end{align}
-对$\symup{d}^{3}x=\symup{d}x^{1}\symup{d}x^{2}\symup{d}x^{3}$进行体积分
+对 $\symup{d}^{3}x=\symup{d}x^{1}\symup{d}x^{2}\symup{d}x^{3}$ 进行体积分
 \begin{equation}
 \int\frac{\partial{}}{\partial{}x^{0}}\left(\sqrt{-g}T^{0\mu}\right)\symup{d}^{3}x+\int\frac{\partial{}}{\partial{}x^{i}}\left(\sqrt{-g}T^{i\mu}\right)\symup{d}^{3}x+\int\sqrt{-g}\Gamma_{\alpha\nu}^{\mu}T^{\alpha\nu}\symup{d}^{3}x=0.\label{3.3.3}
 \end{equation}
@@ -1465,7 +1465,7 @@ R_{\mu\nu}=0.
 \begin{equation}
 \left(\rho U^{\nu}\right)_{;\nu}=\frac{1}{\sqrt{-g}}\left(\sqrt{-g}\rho U^{\nu}\right)_{;\nu}=0,
 \end{equation}
-两边同乘$\sqrt{-g}$后积分，空间部分同样通过高斯定理去除，剩下
+两边同乘 $\sqrt{-g}$ 后积分，空间部分同样通过高斯定理去除，剩下
 \begin{equation}
 \frac{\symup{d}}{\symup{d}x^{0}}\int\rho U^{0}\sqrt{-g}\symup{d}^{3}x=0.
 \end{equation}
@@ -1483,7 +1483,7 @@ R_{\mu\nu}=0.
 \begin{equation}
 \frac{\symup{d}}{\symup{d}\tau}\left(mU^{\mu}\right)+m\Gamma_{\alpha\beta}^{\mu}u^{\alpha}u^{\beta}=0.\label{3.3.11}
 \end{equation}
-这就是粒子在弯曲时空中的运动方程。当$m$不依赖固有时间$\tau$时，该式可化成测地线方程
+这就是粒子在弯曲时空中的运动方程。当 $m$ 不依赖固有时间 $\tau$ 时，该式可化成测地线方程
 \begin{equation}
 \frac{\symup{d}U^{\mu}}{\symup{d}\tau}+\Gamma_{\alpha\beta}^{\mu}u^{\alpha}u^{\beta}=0.
 \end{equation}
@@ -1493,7 +1493,7 @@ R_{\mu\nu}=0.
 \end{equation}
 即它的四维加速度为零。
 
-现在考虑运动方程 ($\ref{3.3.11}$) 的牛顿近似。首先引力场是弱场，闵氏度规$\eta_{\mu\nu}$仅添加一个小量$h_{\mu\nu}$.其次牛顿情形下，引力场静态，仅对空间缓变（平方反比）。最后粒子作低速运动，$\left\vert{}\dfrac{\symup{d}x^{i}}{\symup{d}x^{0}}\right\vert{}\ll1$,此时运动方程可以写作
+现在考虑运动方程 ($\ref{3.3.11}$) 的牛顿近似。首先引力场是弱场，闵氏度规 $\eta_{\mu\nu}$ 仅添加一个小量 $h_{\mu\nu}$. 其次牛顿情形下，引力场静态，仅对空间缓变（平方反比）。最后粒子作低速运动，$\left\vert{}\dfrac{\symup{d}x^{i}}{\symup{d}x^{0}}\right\vert{}\ll1$, 此时运动方程可以写作
 \begin{align}
 &\frac{\symup{d}}{\symup{d}\tau}\left(m\frac{\symup{d}x^{0}}{\symup{d}\tau}\right)=0,\\
 &\frac{\symup{d}}{\symup{d}\tau}\left(m\frac{\symup{d}x^{i}}{\symup{d}\tau}\right)+m\Gamma_{00}^{i}\left(\frac{\symup{d}x^{0}}{\symup{d}\tau}\right)^{2}=0.
@@ -1510,9 +1510,9 @@ m\frac{\symup{d}^{2}x^{i}}{\left(\symup{d}x^{0}\right)^{2}}=-m\Gamma_{00}^{i}.\l
 \begin{equation}
 \Gamma_{\alpha\beta}^{\mu}=\frac{1}{2}\eta^{\mu\rho}\left(h_{\rho\alpha,\beta}+h_{\rho\beta,\alpha}-h_{\alpha\beta,\rho}\right).
 \end{equation}
-再考虑到$x^{0}=\symup{c}t$,(\ref{3.3.17}) 式可以写作
+再考虑到 $x^{0}=\symup{c}t$,(\ref{3.3.17}) 式可以写作
 \begin{equation}
-m\frac{\symup{d}^{2}x^{i}}{\symup{d}t^{2}}=\frac{m}{2}\symup{c}^{2}h_{00,i}.
+m\frac{\symup{d}^{2}x^{i}}{\symup{d}t^{2}}=\frac{m}{2}\symup{c}^{2}h_{00, i}.
 \end{equation}
 我们知道在经典的万有引力场中，
 \begin{equation}
@@ -1529,15 +1529,15 @@ g_{00}&=-1+h_{00}=-\left(1+\frac{2\varphi}{\symup{c}^{2}}\right)=-\left(1-\frac{
 \end{align}
 
 \subsection{场方程的牛顿近似}
-本节将说明爱因斯坦场方程中能动张量前系数$\kappa$如何给出。
+本节将说明爱因斯坦场方程中能动张量前系数 $\kappa$ 如何给出。
 
 设引力元由非相对论性理想流体组成，这种流体的能动张量为
 \begin{equation}
 T^{\mu\nu}=\rho U^{\mu}U^{\nu}.
 \end{equation}
-其中$\rho$是随动惯性系中测得的质量密度。相对介质静止的坐标系中四速为
+其中 $\rho$ 是随动惯性系中测得的质量密度。相对介质静止的坐标系中四速为
 \begin{equation}
-U^{\mu}=\frac{\symup{d}x^{\mu}}{\symup{d}\tau}=\frac{1}{\sqrt{-g_{00}}}\left(\symup{c},0,0,0\right).
+U^{\mu}=\frac{\symup{d}x^{\mu}}{\symup{d}\tau}=\frac{1}{\sqrt{-g_{00}}}\left(\symup{c}, 0, 0, 0\right).
 \end{equation}
 此时能动张量只有一个不为零的分量，即
 \begin{equation}
@@ -1547,21 +1547,21 @@ T^{00}=-\rho\symup{c}^{2}/g_{00}.
 \begin{equation}
 T=g_{\mu\nu}T^{\mu\nu}=\rho U^{\mu}U_{\mu}=-\rho\symup{c}^{2}.
 \end{equation}
-静态弱场空间缓变近似，保留$h_{\mu\nu}$和$h_{\mu\nu,\rho}$的一阶小量，计算联络不为零的分量
+静态弱场空间缓变近似，保留 $h_{\mu\nu}$ 和 $h_{\mu\nu,\rho}$ 的一阶小量，计算联络不为零的分量
 \begin{align}
 &\Gamma_{\mu\nu}^{\lambda}=\frac12\eta^{\lambda\rho}\left(h_{\rho\mu,\nu}+h_{\rho\nu,\mu}-h_{\mu\nu,\rho}\right),\\
-&\Gamma_{0i}^{0}=-\frac12h_{00,i},\Gamma_{ij}^{0}=-\frac12\left(h_{0i,j}+h_{0j,i}\right),\Gamma_{00}^{i}=-\frac12h_{00,i},\\
-&\Gamma_{0j}^{i}=\frac12\left(h_{0i,j}-h_{0j,i}\right),\Gamma_{jk}^{i}=\frac12\left(h_{ij,k}+h_{ik,j}-h_{jk,i}\right).
+&\Gamma_{0i}^{0}=-\frac12h_{00, i},\Gamma_{ij}^{0}=-\frac12\left(h_{0i, j}+h_{0j, i}\right),\Gamma_{00}^{i}=-\frac12h_{00, i},\\
+&\Gamma_{0j}^{i}=\frac12\left(h_{0i, j}-h_{0j, i}\right),\Gamma_{jk}^{i}=\frac12\left(h_{ij, k}+h_{ik, j}-h_{jk, i}\right).
 \end{align}
 而 Ricci 张量二次项为二次小量，因此
 \begin{align}
 &R_{\mu\nu}=\Gamma_{\mu\nu,\lambda}^{\lambda}-\Gamma_{\mu\lambda,\nu}^{\lambda},\\
-&R_{00}=-\frac12h_{00,i,i},R_{0i}=\frac12\left(h_{k0,i,k}-h_{0i,k,k}\right),\\
-&R_{ij}=-\frac12\left(-h_{00,i,j}+h_{kk,i,j}-h_{ki,j,k}-h_{kj,i,k}+h_{ij,k,k}\right).
+&R_{00}=-\frac12h_{00, i, i}, R_{0i}=\frac12\left(h_{k0, i, k}-h_{0i, k, k}\right),\\
+&R_{ij}=-\frac12\left(-h_{00, i, j}+h_{kk, i, j}-h_{ki, j, k}-h_{kj, i, k}+h_{ij, k, k}\right).
 \end{align}
 而逆变 Ricci 张量满足
 \begin{equation}
-R^{00}=R_{00},R^{0i}=-R_{0i},R^{ij}=-R_{ij},
+R^{00}=R_{00}, R^{0i}=-R_{0i}, R^{ij}=-R_{ij},
 \end{equation}
 得到牛顿近似我们只关心场方程 00 分量方程
 \begin{equation}
@@ -1569,7 +1569,7 @@ R^{00}=\kappa\left(T^{00}-\frac12g^{00}T\right).
 \end{equation}
 可以得到
 \begin{equation}
-h_{00,i,i}=-\symup{c}^{2}\kappa\rho.
+h_{00, i, i}=-\symup{c}^{2}\kappa\rho.
 \end{equation}
 我们得到过引力势和度规的关系
 \begin{equation}
@@ -1597,7 +1597,7 @@ P^{\mu}=m_{0}U^{\mu}=\left(\frac{E}{\symup{c}},\symbf{p}\right)=\left(\frac{m_{0
 \begin{equation}
 \frac{\symup{d}P^{\mu}}{\symup{d}\tau}=F^{\mu}=\left(\frac{\symbf{f}\cdot\symbf{v}/\symup{c}}{\sqrt{1-\dfrac{v^{2}}{\symup{c}^{2}}}},\frac{\symbf{f}}{\sqrt{1-\dfrac{v^{2}}{\symup{c}^{2}}}}\right).
 \end{equation}
-号差 +2 时，$G_{00}=G^{00}=-1,U_{0}=-U^{0},P_{0}=-P^{0},F_{0}=-F^{0},U_{i}=U^{i},P_{i}=P^{i},F_{i}=F^{i}$.此外方程全部改成广义协变形式，将普通微商改成协变微商，普通导数改成协变导数，另外可记
+号差 $+2$ 时，$G_{00}=G^{00}=-1, U_{0}=-U^{0}, P_{0}=-P^{0}, F_{0}=-F^{0}, U_{i}=U^{i}, P_{i}=P^{i}, F_{i}=F^{i}$. 此外方程全部改成广义协变形式，将普通微商改成协变微商，普通导数改成协变导数，另外可记
 \begin{equation}
 \frac{1}{\sqrt{1-\dfrac{v^{2}}{\symup{c}^{2}}}}\to\frac{\symup{d}t}{\symup{d}\tau}.
 \end{equation}
@@ -1626,7 +1626,7 @@ F_{\mu\nu}=\begin{pmatrix}
 -E_{3} & -B_{2} & B_{1} & 0\\
 \end{pmatrix},
 \end{equation}
-它可以用电磁四矢$A_{\mu}=\left(\Phi,A_{i}\right)$表示
+它可以用电磁四矢 $A_{\mu}=\left(\Phi, A_{i}\right)$ 表示
 \begin{equation}
 F_{\mu\nu}=A_{\nu,\mu}-A_{\mu,\nu}.
 \end{equation}
@@ -1644,7 +1644,7 @@ F_{\mu\nu}=A_{\nu,\mu}-A_{\mu,\nu}.
 \begin{align}
 J^{\mu}=\rho_{0}u^{\mu}=\left(\symup{c}\rho,\symbf{j}\right)=\left(\frac{\symup{c}\rho_{0}}{\sqrt{1-\dfrac{v^{2}}{\symup{c}^{2}}}},\rho\symbf{v}\right),
 \end{align}
-其中$\rho_{0}$为静止粒子的电荷密度，$\symbf{j}$是三维电流密度。
+其中 $\rho_{0}$ 为静止粒子的电荷密度，$\symbf{j}$ 是三维电流密度。
 
 (\ref{3.5.15}) 式也可以写成
 \begin{align}
@@ -1688,7 +1688,7 @@ T_{\mu\nu}=\begin{pmatrix}
 \symup{c}M_{3} & T_{31} & T_{32} & T_{33}\\
 \end{pmatrix},
 \end{equation}
-其中$T_{ik}$是三维空间应力张量，$S_{k}$是三维能流密度矢量，$M_{i}$是三维动量密度矢量，$\varepsilon$是三维空间能量密度标量。注意它是个对称张量，且满足能量守恒定律
+其中 $T_{ik}$ 是三维空间应力张量，$S_{k}$ 是三维能流密度矢量，$M_{i}$ 是三维动量密度矢量，$\varepsilon$ 是三维空间能量密度标量。注意它是个对称张量，且满足能量守恒定律
 \begin{equation}
 T_{\mu\nu,\nu}=0.
 \end{equation}
@@ -1711,7 +1711,7 @@ T^{\mu\nu}=\frac{1}{4\pi}\left(F_{\lambda}^{\mu}F^{\lambda\nu}-\frac{1}{4}g^{\mu
 \end{equation}
 
 \subsection{坐标条件和边界条件}
-看似爱因斯坦场方程有 10 个独立方程，度规有 10 个未知独立分量，可唯一确定解，但由于 Bianchi 恒等式成立，10 个方程中有四个恒等式，因此不能唯一确定解。类似情形可在电磁理论中见到，电荷守恒及$F_{\mu\alpha,\alpha\mu}=0$使麦克斯韦方程组中含有一个恒等式，于是需要采用洛伦兹规范或者库伦规范。我们在广义相对论中也引入坐标条件来确定度规，不过这种方式无法确定一个唯一的坐标系，而是确定满足坐标条件的一组坐标系。显然，这种坐标条件不能是协变的，不然任何坐标系都能满足坐标条件，无法实现一开始的目的。而场方程是偏微分方程，因此还需要边界条件。同理边界条件也不协变。
+看似爱因斯坦场方程有 10 个独立方程，度规有 10 个未知独立分量，可唯一确定解，但由于 Bianchi 恒等式成立，10 个方程中有四个恒等式，因此不能唯一确定解。类似情形可在电磁理论中见到，电荷守恒及 $F_{\mu\alpha,\alpha\mu}=0$ 使麦克斯韦方程组中含有一个恒等式，于是需要采用洛伦兹规范或者库伦规范。我们在广义相对论中也引入坐标条件来确定度规，不过这种方式无法确定一个唯一的坐标系，而是确定满足坐标条件的一组坐标系。显然，这种坐标条件不能是协变的，不然任何坐标系都能满足坐标条件，无法实现一开始的目的。而场方程是偏微分方程，因此还需要边界条件。同理边界条件也不协变。
 
 谐和条件是一个重要的坐标条件，此时作弱场近似特别方便，而且去掉引力源能自然回到平直时空的惯性系。谐和条件定义为
 \begin{equation}
@@ -1789,23 +1789,23 @@ h_{\mu\nu}\to h_{\mu\nu}-\xi_{\mu,\nu}-xi_{\nu,\mu},
 \begin{equation}
 \xi^{,\alpha}_{\mu,\alpha}=0,\label{3.6.17}
 \end{equation}
-就不会破坏$h_{\mu\nu}$的洛伦兹规范性。
+就不会破坏 $h_{\mu\nu}$ 的洛伦兹规范性。
 
-值得一提的是，在一组确定坐标下解出$\overline{h}_{\mu\nu}$后，度规为
+值得一提的是，在一组确定坐标下解出 $\overline{h}_{\mu\nu}$ 后，度规为
 \begin{equation}
 g_{\mu\nu}=\eta_{\mu\nu}+h_{\mu\nu}=\eta_{\mu\nu}+\overline{h}_{\mu\nu}-\frac12\eta_{\mu\nu}\overline{h}.
 \end{equation}
 实际上通过计算可得
 \begin{equation}
-\overline{h}_{\mu\nu}\left(\symbf{r},t\right)=\frac{\kappa}{2\pi}\int\frac{T_{\mu\nu}\left(\symbf{r},t-\dfrac{r}{\symup{c}}\right)}{r}\symup{d}V',
+\overline{h}_{\mu\nu}\left(\symbf{r}, t\right)=\frac{\kappa}{2\pi}\int\frac{T_{\mu\nu}\left(\symbf{r}, t-\dfrac{r}{\symup{c}}\right)}{r}\symup{d}V',
 \end{equation}
-其中$\symup{d}V'$是体积元，而$r=\left[\left(x^{i}-x'^{i}\right)\cdot\left(x^{i}-x'^{i}\right)\right]^{\frac12}$.该解是推迟解，表明时刻$t$距离引力源$r$的引力势是$t-\dfrac{r}{\symup{c}}$时刻物质分布和运动状态决定的，这意味着引力场以光速传播。如果引力源局限于一个很小的区域，观测者又远离引力源，推迟解可简化为
+其中 $\symup{d}V'$ 是体积元，而 $r=\left[\left(x^{i}-x'^{i}\right)\cdot\left(x^{i}-x'^{i}\right)\right]^{\frac12}$. 该解是推迟解，表明时刻 $t$ 距离引力源 $r$ 的引力势是 $t-\dfrac{r}{\symup{c}}$ 时刻物质分布和运动状态决定的，这意味着引力场以光速传播。如果引力源局限于一个很小的区域，观测者又远离引力源，推迟解可简化为
 \begin{equation}
 \overline{h}_{\mu\nu}=\frac{\kappa}{2\pi r_{0}}\int T_{\mu\nu}^{*}\symup{d}V'.
 \end{equation}
-其中$r_{0}$是观测者到引力源的平均距离，*号表示推迟。
+其中 $r_{0}$ 是观测者到引力源的平均距离，*号表示推迟。
 
-当引力波在真空中传播时，真空中$T_{\mu\nu}=0$,用$R_{\mu\nu}=0$替代场方程，得到波动方程
+当引力波在真空中传播时，真空中 $T_{\mu\nu}=0$, 用 $R_{\mu\nu}=0$ 替代场方程，得到波动方程
 \begin{equation}
 h^{,\alpha}_{\mu\nu,\alpha}=0,\\
 \end{equation}
@@ -1815,26 +1815,26 @@ h^{,\alpha}_{\mu\alpha}-\frac{1}{2}\eta_{\mu\alpha}h^{,\alpha}=0.
 \end{equation}
 就是得到波动方程组。
 
-沿着$x$方向传播的平面单色波为
+沿着 $x$ 方向传播的平面单色波为
 \begin{equation}
 h_{\mu\nu}=A_{\mu\nu}\symup{e}^{i\left(kx\cdot\omega t\right)},
 \end{equation}
-波动方程要求$k=\omega$,洛伦兹规范要求$\overline{A}^{1}_{\mu}=\overline{A}^{0}_{\mu}$,其中
+波动方程要求 $k=\omega$, 洛伦兹规范要求 $\overline{A}^{1}_{\mu}=\overline{A}^{0}_{\mu}$, 其中
 \begin{equation}
 \overline{A}^{\nu}_{\mu}=A^{\nu}_{\mu}-\frac{1}{2}\delta{}^{\nu}_{\mu}A^{a}_{a},
 \end{equation}
-通过适当选取满足 (\ref{3.6.17}) 的坐标变换$\xi_{\mu}$,可以做到
+通过适当选取满足 (\ref{3.6.17}) 的坐标变换 $\xi_{\mu}$, 可以做到
 \begin{align}
 \overline{A}^{0}_{1}=\overline{A}^{0}_{2}=\overline{A}^{0}_{3}=0,\overline{A}^{2}_{2}+\overline{A}^{3}_{3}=0.
 \end{align}
-这些条件使$\mu=0,1$的振幅都为零，余下不为零的振幅为
+这些条件使 $\mu=0, 1$ 的振幅都为零，余下不为零的振幅为
 \begin{equation}
 \begin{pmatrix}
 \overline{A}^{2}_{2} & \overline{A}^{3}_{2}\\
 \overline{A}^{2}_{3} & \overline{A}^{3}_{3}\\
 \end{pmatrix},
 \end{equation}
-它对称无迹，因此只有两个独立的分量，可以取$A_{23}$和$A_{22}-A_{33}$.
+它对称无迹，因此只有两个独立的分量，可以取 $A_{23}$ 和 $A_{22}-A_{33}$.
 
 \newpage
 \section{球对称引力场}
@@ -1851,7 +1851,7 @@ R_{\mu\nu}=0.
 
 仅考虑几何上的对称性，最一般的真空球度规应该写成
 \begin{equation}
-\symup{d}s^{2}=b\left(r,t\right)\symup{c}^{2}\symup{d}t^{2}+a\left(r,t\right)\symup{d}r^{2}+r^{2}\left(\symup{d}\theta^{2}+\sin^{2}\theta\symup{d}\varphi^{2}\right).
+\symup{d}s^{2}=b\left(r, t\right)\symup{c}^{2}\symup{d}t^{2}+a\left(r, t\right)\symup{d}r^{2}+r^{2}\left(\symup{d}\theta^{2}+\sin^{2}\theta\symup{d}\varphi^{2}\right).
 \end{equation}
 
 1927 年，Birkhoff 证明只要引力源物质分布是球对称的，不管引力源是膨胀收缩还是径向振动，源外真空引力场一定球对称，而且静态。（一步步计算场方程所有项，得到该结果是容易的。）为了方便度规可以写作
@@ -1875,17 +1875,17 @@ g^{\mu\nu}=\begin{pmatrix}
 &\Gamma_{12}^{2}=\Gamma_{21}^{2}=\frac{1}{r},\Gamma_{33}^{2}=-\sin\theta\cos\theta,\Gamma_{13}^{3}=\Gamma_{31}^{3}=\frac{1}{r},\Gamma_{23}^{3}=\Gamma_{32}^{3}=\cot\theta.\notag\\
 &R_{00}=\symup{c}^{2}\symup{e}^{2\left(\beta-\alpha\right)}\left[\frac{\symup{d}^{2}\beta}{\symup{d}r^{2}}+\frac{2}{r}\frac{\symup{d}\beta}{\symup{d}r}+\frac{\symup{d}\beta}{\symup{d}r}\left(\frac{\symup{d}\beta}{\symup{d}r}-\frac{\symup{d}\alpha}{\symup{d}r}\right)\right],\notag\\
 &R_{11}=\left[-\frac{\symup{d}^{2}\beta}{\symup{d}r^{2}}+\frac{2}{r}\frac{\symup{d}\alpha}{\symup{d}r}-\frac{\symup{d}\beta}{\symup{d}r}\left(\frac{\symup{d}\beta}{\symup{d}r}-\frac{\symup{d}\alpha}{\symup{d}r}\right)\right],\notag\\
-&R_{22}=\symup{e}^{-2\alpha}\left[-1+\symup{e}^{2\alpha}-r\left(\frac{\symup{d}\beta}{\symup{d}r}-\frac{\symup{d}\alpha}{\symup{d}r}\right)\right],R_{33}=R_{22}\sin^{2}\theta.\notag
+&R_{22}=\symup{e}^{-2\alpha}\left[-1+\symup{e}^{2\alpha}-r\left(\frac{\symup{d}\beta}{\symup{d}r}-\frac{\symup{d}\alpha}{\symup{d}r}\right)\right], R_{33}=R_{22}\sin^{2}\theta.\notag
 \end{align}
-真空场方程要求$R_{\mu\nu}=0$.$R_{00},R_{11}$括号内相加可知$2\left(\alpha+\beta\right)=A=\symup{const}$,将这个结果代入$R_{22}$括号可以得到
+真空场方程要求 $R_{\mu\nu}=0$. $R_{00}, R_{11}$ 括号内相加可知 $2\left(\alpha+\beta\right)=A=\symup{const}$, 将这个结果代入 $R_{22}$ 括号可以得到
 \begin{equation}
-\symup{e}^{-2\alpha}=1-\frac{B}{r},B=\symup{const},
+\symup{e}^{-2\alpha}=1-\frac{B}{r}, B=\symup{const},
 \end{equation}
 即
 \begin{equation}
-g_{00}=-\symup{c}^{2}\symup{e}^{A}\left(1-\frac{B}{r}\right),g_{11}=\left(1-\frac{B}{r}\right)^{-1}.
+g_{00}=-\symup{c}^{2}\symup{e}^{A}\left(1-\frac{B}{r}\right), g_{11}=\left(1-\frac{B}{r}\right)^{-1}.
 \end{equation}
-通过改变时间尺度可以消去常数$\symup{e}^{A}$.将其与牛顿引力势对比，可以得到
+通过改变时间尺度可以消去常数 $\symup{e}^{A}$. 将其与牛顿引力势对比，可以得到
 \begin{equation}
 B=\frac{2\symup{G}M}{\symup{c}^{2}}.
 \end{equation}
@@ -1898,15 +1898,15 @@ B=\frac{2\symup{G}M}{\symup{c}^{2}}.
 \begin{equation}
 \symup{d}l^{2}=\left(1-\frac{2\symup{G}M}{\symup{c}^{2}r}\right)^{-1}\symup{d}r^{2}+r^{2}\left(\symup{d}\theta^{2}+\sin^{2}\theta\symup{d}\varphi^{2}\right).
 \end{equation}
-沿着$\theta,\varphi$方向就是普通欧氏空间球面几何，但是沿着$\symup{d}r$方向，坐标距离$\symup{d}r$不等于固有距离$\symup{d}l$.
+沿着 $\theta,\varphi$ 方向就是普通欧氏空间球面几何，但是沿着 $\symup{d}r$ 方向，坐标距离 $\symup{d}r$ 不等于固有距离 $\symup{d}l$.
 
 \subsection{引力源的内引力场}
-现在我们希望得到球对称引力源内部引力场的分布，或者说物质分布。注意$p,\rho$都是$r$的函数。
+现在我们希望得到球对称引力源内部引力场的分布，或者说物质分布。注意 $p,\rho$ 都是 $r$ 的函数。
 
 设引力源是静止的理想流体，它的能动张量和四速满足
 \begin{align}
 T^{\mu\nu}&=\left(\frac{p}{\symup{c}^{2}}+\rho\right)U^{\mu}U^{\nu}+pg^{\mu\nu}.\\
-U^{\mu}&=\left(\frac{\symup{c}}{\sqrt{-g_{00}}},0,0,0\right),U_{\mu}=\left(\frac{g_{00}\symup{c}}{\sqrt{-g_{00}}},0,0,0\right),
+U^{\mu}&=\left(\frac{\symup{c}}{\sqrt{-g_{00}}}, 0, 0, 0\right), U_{\mu}=\left(\frac{g_{00}\symup{c}}{\sqrt{-g_{00}}}, 0, 0, 0\right),
 \end{align}
 为简化场方程中的度规分量，利用能动张量混合形式
 \begin{equation}
@@ -1941,7 +1941,7 @@ R^{1}_{1}&=\symup{e}^{-2\alpha}\left[-\frac{\symup{d}^{2}\beta}{\symup{d}r^{2}}+
 R^{2}_{2}=R^{3}_{3}&=\symup{e}^{-2\alpha}\left[-\frac{1}{r^{2}}+\frac{1}{r^{2}}\symup{e}^{2\alpha}-\frac{1}{r}\left(\frac{\symup{d}\beta}{\symup{d}r}-\frac{\symup{d}\alpha}{\symup{d}r}\right)\right],\notag\\
 -\frac{1}{2}R&=-\frac{1}{2}R^{\mu}_{\mu}=\symup{e}^{-2\alpha}\left[\frac{\symup{d}^{2}\beta}{\symup{d}r^{2}}+\frac{\symup{d}\beta}{\symup{d}r}\left(\frac{\symup{d}\beta}{\symup{d}r}-\frac{\symup{d}\alpha}{\symup{d}r}\right)+\frac{1}{r^{2}}-\frac{1}{r^{2}}\symup{e}^{-2\alpha}+\frac{2}{r}\frac{\symup{d}\beta}{\symup{d}r}-\frac{2}{r}\frac{\symup{d}\alpha}{\symup{d}r}\right].\notag
 \end{align}
-由于$R^{2}_{2}=R^{3}_{3}$,场方程只有三个看似独立的分量式：
+由于 $R^{2}_{2}=R^{3}_{3}$, 场方程只有三个看似独立的分量式：
 \begin{align}
 \symup{e}^{-2\alpha}\left[-\frac{2}{r}\frac{\symup{d}\alpha}{\symup{d}r}+\frac{1}{r^{2}}\right]-\frac{1}{r^{2}}&=-\frac{8\pi\symup{G}}{\symup{c}^{2}}\rho,\label{4.2.5}\\
 \symup{e}^{-2\alpha}\left[\frac{2}{r}\frac{\symup{d}\beta}{\symup{d}r}+\frac{1}{r^{2}}\right]-\frac{1}{r^{2}}&=\frac{8\pi\symup{G}}{\symup{c}^{4}}p,\label{4.2.6}\\
@@ -1955,7 +1955,7 @@ T^{\mu\nu}_{;\nu}=\frac{1}{\sqrt{-g}}\frac{\partial{}}{\partial{}x^{\nu}}\left(T
 \end{equation}
 注意到
 \begin{equation}
-g=-\symup{c}^{2}\symup{e}^{\left(2\alpha+2\beta\right)}r^{4}\sin^{2}\theta,T^{\mu\nu}=
+g=-\symup{c}^{2}\symup{e}^{\left(2\alpha+2\beta\right)}r^{4}\sin^{2}\theta, T^{\mu\nu}=
 \begin{pmatrix}
 \rho \symup{e}^{-2\beta} & 0 & 0 & 0\\
 0 & p\symup{e}^{-2\alpha} & 0 & 0\\
@@ -1963,7 +1963,7 @@ g=-\symup{c}^{2}\symup{e}^{\left(2\alpha+2\beta\right)}r^{4}\sin^{2}\theta,T^{\m
 0 & 0 & 0 & \dfrac{p}{r^{2}\sin^{2}\theta}\\
 \end{pmatrix},
 \end{equation}
-计算能动张量守恒方程$\mu=1$的分量方程，得到
+计算能动张量守恒方程 $\mu=1$ 的分量方程，得到
 \begin{equation}
 \frac{\symup{d}p}{\symup{d}r}+\left(p+\rho \symup{c}^{2}\right)\frac{\symup{d}\beta}{\symup{d}r}=0.\label{4.2.10}
 \end{equation}
@@ -1986,7 +1986,7 @@ p\left(R\right)=0,\symup{e}^{2\beta\left(R\right)}=\symup{e}^{-2\alpha\left(R\ri
 \begin{equation}
 \frac{\symup{d}}{\symup{d}r}\left[r\left(1-\symup{e}^{-2\alpha}\right)\right],
 \end{equation}
-因此我们不妨定义半径为坐标距离$r$的球面内的质量为
+因此我们不妨定义半径为坐标距离 $r$ 的球面内的质量为
 \begin{equation}
 m\left(r\right)=\frac{\symup{c}^{2}}{2\symup{G}}r\left(1-\symup{e}^{-2\alpha}\right),\label{4.2.15}
 \end{equation}
@@ -2016,15 +2016,15 @@ m\left(r\right)=\frac{4\pi}{3}\rho_{0}r^{3},\label{4.2.19}
 &\frac{3p+\rho_{0}\symup{c}^{2}}{p+\rho_{0}\symup{c}^{2}}=\left(\frac{\dfrac{8\pi\symup{G}}{3\symup{c}^{2}}\rho_{0}r^{2}-1}{\dfrac{8\pi\symup{G}}{3\symup{c}^{2}}\rho_{0}R^{2}-1}\right)^{\frac{1}{2}},\notag\\
 &p\left(r\right)=\rho_{0}\symup{c}^{2}\frac{\left(1-\dfrac{8\pi\symup{G}}{3\symup{c}^{2}}\rho_{0}r^{2}\right)^{\frac{1}{2}}-\left(1-\dfrac{8\pi\symup{G}}{3\symup{c}^{2}}\rho_{0}R^{2}\right)^{\frac12}}{3\left(1-\dfrac{8\pi\symup{G}}{3\symup{c}^{2}}\rho_{0}R^{2}\right)^{\frac12}-\left(1-\dfrac{8\pi\symup{G}}{3\symup{c}^{2}}\rho_{0}r^{2}\right)^{\frac{1}{2}}}.\label{4.2.21}
 \end{align}
-(\ref{4.2.20}) 式告诉我们压力向中心递增。(\ref{4.2.21}) 式取$r=0$即为中心压力，得到
+(\ref{4.2.20}) 式告诉我们压力向中心递增。(\ref{4.2.21}) 式取 $r=0$ 即为中心压力，得到
 \begin{equation}
 p_{c}=p\left(0\right)=\rho_{0}\symup{c}^{2}\frac{1-\left(1-\dfrac{8\pi\symup{G}}{3\symup{c}^{2}}\rho_{0}R^{2}\right)^{\frac12}}{3\left(1-\dfrac{8\pi\symup{G}}{3\symup{c}^{2}}\rho_{0}R^{2}\right)^{\frac12}-1}.
 \end{equation}
-简单分析可知恒星半径$R$越大，中心压力越高。中心压力正无穷时，恒星半径和总质量$M$满足
+简单分析可知恒星半径 $R$ 越大，中心压力越高。中心压力正无穷时，恒星半径和总质量 $M$ 满足
 \begin{equation}
-R=\frac{\symup{c}}{\sqrt{3\pi\symup{G}\rho_{0}}},M=\frac{4}{3}\pi \rho_{0}R^{3}=\frac{4}{9}\frac{\symup{c}^{3}}{\sqrt{3\pi\symup{G}^{3}\rho_{0}}},\frac{2\symup{G}M}{\symup{c}^{2}R}=\frac{8}{9}.
+R=\frac{\symup{c}}{\sqrt{3\pi\symup{G}\rho_{0}}}, M=\frac{4}{3}\pi \rho_{0}R^{3}=\frac{4}{9}\frac{\symup{c}^{3}}{\sqrt{3\pi\symup{G}^{3}\rho_{0}}},\frac{2\symup{G}M}{\symup{c}^{2}R}=\frac{8}{9}.
 \end{equation}
-可以证明其他物态方程下$\dfrac{2\symup{G}M}{\symup{c}^{2}R}$极限值都小于$\dfrac{8}{9}$,注意到恒星表面时空偏离平坦的程度正是由$\dfrac{2\symup{G}M}{\symup{c}^{2}R}$表征，说明恒星表面引力场强度有极限。这也是牛顿引力所无法预言的。
+可以证明其他物态方程下 $\dfrac{2\symup{G}M}{\symup{c}^{2}R}$ 极限值都小于 $\dfrac{8}{9}$, 注意到恒星表面时空偏离平坦的程度正是由 $\dfrac{2\symup{G}M}{\symup{c}^{2}R}$ 表征，说明恒星表面引力场强度有极限。这也是牛顿引力所无法预言的。
 
 (\ref{4.2.21}) 式告诉我们均匀密度星体内部压强分布，因此我们可以推出史瓦西度规内部引力场分布。首先不妨将 (\ref{4.2.21}) 式改写成如下形式：
 \begin{equation}
@@ -2040,18 +2040,18 @@ p\left(r\right)=\rho_{0}\symup{c}^{2}\frac{\left(1-\dfrac{2\symup{G}M}{\symup{c}
 \symup{e}^{\beta}&=\frac{3}{2}\left(1-\dfrac{2\symup{G}M}{\symup{c}^{2}R}\right)^{\frac12}-\frac{1}{2}\left(1-\dfrac{2\symup{G}M}{\symup{c}^{2}R^{3}}r^{2}\right)^{\frac{1}{2}}.
 \end{align}
 
-有关$\alpha$的方程则要简单许多，联立 (\ref{4.2.15})(\ref{4.2.19}) 式简单得到
+有关 $\alpha$ 的方程则要简单许多，联立 (\ref{4.2.15})(\ref{4.2.19}) 式简单得到
 \begin{equation}
 \symup{e}^{\alpha}=\left(1-\frac{2\symup{G}M}{\symup{c}^{2}R^{3}}r^{2}\right)^{-\frac{1}{2}}.
 \end{equation}
 
 \subsection{时空对称性和守恒量}
-对称性和守恒量的关系在物理学中有广泛用途，比如说经典力学中可通过空间平移不变性和转动不变性推出动量守恒和角动量守恒。广义相对论中也应该有一些守恒量。当粒子在引力场中运动，其动力学守恒量是由度规场的时空对称性所决定的。可以证明，如果$\xi^{\mu}$所生成的映射是等度规映射，那么$\xi^{\mu}$和粒子四维协变动量的内积$P_{\mu}\xi^{\mu}$是一个守恒量。首先利用标量的协变导数
+对称性和守恒量的关系在物理学中有广泛用途，比如说经典力学中可通过空间平移不变性和转动不变性推出动量守恒和角动量守恒。广义相对论中也应该有一些守恒量。当粒子在引力场中运动，其动力学守恒量是由度规场的时空对称性所决定的。可以证明，如果 $\xi^{\mu}$ 所生成的映射是等度规映射，那么 $\xi^{\mu}$ 和粒子四维协变动量的内积 $P_{\mu}\xi^{\mu}$ 是一个守恒量。首先利用标量的协变导数
 \begin{align}
 \frac{\symup{d}}{\symup{d}\tau}\left(P_{\mu}\xi^{\mu}\right)&=\frac{\symup{d}}{\symup{d}\tau}\left(P^{\mu}\xi_{\mu}\right)=\left(P^{\mu}\xi_{\mu}\right)_{,\nu}U^{\nu}=\left(P^{\mu}\xi_{\mu}\right)_{;\nu}U^{\nu}\notag\\
 &=m\left(U^{\mu}_{;\nu}U^{\nu}\xi_{\mu}+\xi_{\mu;\nu}U^{\mu}U^{\nu}\right).
 \end{align}
-我们曾经推导过$m$不随固有时变化时测地线方程可以写作四维速度的协变导数
+我们曾经推导过 $m$ 不随固有时变化时测地线方程可以写作四维速度的协变导数
 \begin{equation}
 \dfrac{\symup{D}U^{\mu}}{\symup{d}\tau}=\dot{U}^{\mu}=U^{\mu}_{;\nu}U^{\nu}=0,\tag{\ref{3.3.13}}
 \end{equation}
@@ -2059,30 +2059,30 @@ p\left(r\right)=\rho_{0}\symup{c}^{2}\frac{\left(1-\dfrac{2\symup{G}M}{\symup{c}
 \begin{equation}
 \xi_{\mu;\nu}+\xi_{\nu;\mu}=0.\tag{\ref{1.12.6}}
 \end{equation}
-可知第二项（可以把$U^{\mu}U^{\nu},U^{\nu}U^{\mu}$对称分配一下）也为零。因此$P_{\mu}\xi^{\mu}$守恒。
+可知第二项（可以把 $U^{\mu}U^{\nu}, U^{\nu}U^{\mu}$ 对称分配一下）也为零。因此 $P_{\mu}\xi^{\mu}$ 守恒。
 
 一种常见的凯林矢量是
 \begin{equation}
 \xi^{\mu}=\delta{}^{\mu}_{k}.
 \end{equation}
-可见相当于$x^{\mu}$在$x^{k}$方向改变了一个小量，如果这是等度规映射，那么度规场与$x^{k}$无关，可以称$x^{k}$是度规场的循环坐标，对应的运动质点守恒量自然是
+可见相当于 $x^{\mu}$ 在 $x^{k}$ 方向改变了一个小量，如果这是等度规映射，那么度规场与 $x^{k}$ 无关，可以称 $x^{k}$ 是度规场的循环坐标，对应的运动质点守恒量自然是
 \begin{equation}
 P_{\mu}\xi^{\mu}=P_{\mu}\delta{}^{\mu}_{k}=P_{k}.
 \end{equation}
-即协变动量的该分量守恒。注意不是逆变动量。作为应用可以考虑质点在史瓦西场中的运动，很明显$t,\varphi$是该度规的循环坐标，因此$P_{\mu}$的$t$和$\varphi$分量守恒：
+即协变动量的该分量守恒。注意不是逆变动量。作为应用可以考虑质点在史瓦西场中的运动，很明显 $t,\varphi$ 是该度规的循环坐标，因此 $P_{\mu}$ 的 $t$ 和 $\varphi$ 分量守恒：
 \begin{align}
 P_{0}&=g_{0\nu}P^{\nu}=g_{00}P^{0}=-\left(1-\frac{2\symup{G}M}{\symup{c}^{2}r}\right)\frac{m\symup{c}\symup{d}t}{\symup{d}\tau}=\symup{const}.\\
 P_{3}&=g_{3\nu}P^{\nu}=g_{33}P^{3}=r^{2}\sin^{2}\theta\frac{m\symup{d}\varphi}{\symup{d}\tau}=\symup{const}.
 \end{align}
-通过这点我们就能得到引力红移的结果。不仅是史瓦西引力场，对稳定的引力场只要适当选取度规就能实现$P_{0}$守恒。而静止观测者观测到的光子能量为
+通过这点我们就能得到引力红移的结果。不仅是史瓦西引力场，对稳定的引力场只要适当选取度规就能实现 $P_{0}$ 守恒。而静止观测者观测到的光子能量为
 \begin{equation}
 \frac{E_{\text{obs}}}{\symup{c}}=P^{\mu}\left(-g_{\mu\nu}u^{\nu}\right)=-P_{\nu}u^{\nu}=-\frac{P_{0}}{\sqrt{-g_{00}}}.
 \end{equation}
-可见测得光子能量只与观测者所在度规有关，而远离引力场的地方$-g_{00}$越大，因此测得的能量越低，光子波长越大，产生引力红移。容易发现在太阳表面测起来频率为$\nu_{0}$的光传播到无穷远处变为$\nu$,二者之比为
+可见测得光子能量只与观测者所在度规有关，而远离引力场的地方 $-g_{00}$ 越大，因此测得的能量越低，光子波长越大，产生引力红移。容易发现在太阳表面测起来频率为 $\nu_{0}$ 的光传播到无穷远处变为 $\nu$, 二者之比为
 \begin{equation}
 \frac{\nu}{\nu_{0}}=\sqrt{1-\frac{2\symup{G}M}{\symup{c}^{2}R}}\approx1-\frac{\symup{G}M}{\symup{c}^{2}R},
 \end{equation}
-其中$R$是太阳半径。通常定义红移量为
+其中 $R$ 是太阳半径。通常定义红移量为
 \begin{equation}
 z=\frac{\nu_{0}}{\nu}-1\approx\frac{\symup{G}M}{R}.
 \end{equation}
@@ -2090,12 +2090,12 @@ z=\frac{\nu_{0}}{\nu}-1\approx\frac{\symup{G}M}{R}.
 
 此时要注意的是引力红移不意味着太阳表面的光子频率更低。光源的固有频率取决于原子的能级结构，是原子的固有属性。根据等效原理，局域的引力场总可以通过引入局部惯性系使其消失，因此太阳上的氢原子和地球上的具有相同的固有频率。
 
-我们也可以从观测者的固有时间出发考虑引力红移。一段时间内光源发出$N$个光子，一段时间后观测者接收到$N$个光子，总数是相等的，因此发射（接收）的固有频率乘当地固有时间总是一致的。定义度规分量与坐标时间无关的时空为稳态时空，时轴正交的稳态时空为静态时空。显然史瓦西时空是静态时空。取稳态时空$P_{1},P_{2}$两点，分别有静止的光源与静止的观测者。用坐标时刻记录，光信号于$t_{1}$自$P_{1}$发出，于$t_{2}$到达$P_{2}$.然后光源又在$t_{1}'$时刻发出了一个光信号，到达时间为$t_{2}'$.因为时空是稳态的，一定有
+我们也可以从观测者的固有时间出发考虑引力红移。一段时间内光源发出 $N$ 个光子，一段时间后观测者接收到 $N$ 个光子，总数是相等的，因此发射（接收）的固有频率乘当地固有时间总是一致的。定义度规分量与坐标时间无关的时空为稳态时空，时轴正交的稳态时空为静态时空。显然史瓦西时空是静态时空。取稳态时空 $P_{1}, P_{2}$ 两点，分别有静止的光源与静止的观测者。用坐标时刻记录，光信号于 $t_{1}$ 自 $P_{1}$ 发出，于 $t_{2}$ 到达 $P_{2}$. 然后光源又在 $t_{1}'$ 时刻发出了一个光信号，到达时间为 $t_{2}'$. 因为时空是稳态的，一定有
 \begin{align}
 \delta{}t&=t_{2}-t_{1}=t_{2}'-t_{1}'=\delta{}t'.\\
 \symup{d}t_{2}&=t_{2}'-t_{2}=t_{1}'-t_{1}=\symup{d}t_{1}.
 \end{align}
-$\symup{d}t_{1}$是发出光信号的坐标时间间隔，其对应的固有时间间隔为
+$\symup{d}t_{1}$ 是发出光信号的坐标时间间隔，其对应的固有时间间隔为
 \begin{equation}
 \symup{d}\tau_{1}=\left.\sqrt{-g_{00}}\right\vert{}_{\left(1\right)}\symup{d}t_{1}.
 \end{equation}
@@ -2111,11 +2111,11 @@ $\symup{d}t_{1}$是发出光信号的坐标时间间隔，其对应的固有时�
 \end{equation}
 
 \subsection{史瓦西时空中的运动方程与守恒量}
-由于球坐标的对称性，质点只会在初速度矢量（三维）与引力中心构成的平面上（或者说一种黄道面）运动，取垂直轨道平面的方向为极轴，$\theta$始终等于$\ang{90;;}$.
+由于球坐标的对称性，质点只会在初速度矢量（三维）与引力中心构成的平面上（或者说一种黄道面）运动，取垂直轨道平面的方向为极轴，$\theta$ 始终等于 $\ang{90;;}$.
 \begin{equation}
 \theta=\frac{\pi}{2},\frac{\symup{d}\theta}{\symup{d}\tau}=0.
 \end{equation}
-根据上节分析，$P_{0},P_{3}$是守恒量，不妨采用
+根据上节分析，$P_{0}, P_{3}$ 是守恒量，不妨采用
 \begin{align}
 E&=\left(1-\frac{2\symup{G}M}{\symup{c}^{2}r}\right)\frac{\symup{c}^{2}\symup{d}t}{\symup{d}\tau},\\
 \widetilde{L}&=r^{2}\sin^{2}\theta\frac{\symup{d}\varphi}{\symup{d}\tau}.
@@ -2131,7 +2131,7 @@ E&=\left(1-\frac{2\symup{G}M}{\symup{c}^{2}r}\right)\frac{\symup{c}^{2}\symup{d}
 \frac{\symup{c}^{2}\symup{d}t}{\symup{d}\tau}&=\frac{E}{1-\dfrac{2\symup{G}M}{\symup{c}^{2}r}},\\
 \left(\frac{\symup{d}r}{\symup{d}\tau}\right)^{2}&=\left(\frac{E}{\symup{c}}\right)^{2}-\left(\symup{c}^{2}-\frac{2\symup{G}M}{r}\right)\left(1+\frac{\widetilde{L}^{2}}{\symup{c}^{2}r^{2}}\right).\label{4.4.7}
 \end{align}
-对于光子，(\ref{4.4.4}) 式右端为零，采用的仿射参量也不能为$\tau$,但为了形式上统一，我们不妨定义
+对于光子，(\ref{4.4.4}) 式右端为零，采用的仿射参量也不能为 $\tau$, 但为了形式上统一，我们不妨定义
 \begin{equation}
 \eta=
 \begin{cases}
@@ -2139,7 +2139,7 @@ E&=\left(1-\frac{2\symup{G}M}{\symup{c}^{2}r}\right)\frac{\symup{c}^{2}\symup{d}
 1.\quad\text{质点，}
 \end{cases}
 \end{equation}
-(\ref{4.4.7}) 式写作（对于质点$\lambda=\tau$）
+(\ref{4.4.7}) 式写作（对于质点 $\lambda=\tau$)
 \begin{equation}
 \left(\frac{\symup{d}r}{\symup{d}\lambda}\right)^{2}=\left(\frac{E}{\symup{c}}\right)^{2}-\left(\symup{c}^{2}-\frac{2\symup{G}M}{r}\right)\left(\eta+\frac{\widetilde{L}^{2}}{\symup{c}^{2}r^{2}}\right).
 \end{equation}
@@ -2152,13 +2152,13 @@ L=\frac12\left(\frac{\symup{d}\tau}{\symup{d}\lambda}\right)^{2}=-\frac12g_{\alp
 \begin{equation}
 \frac{\partial{}L}{\partial{}x^{\nu}}-\frac{\symup{d}}{\symup{d}\lambda}\frac{\partial{}L}{\partial{}\dot{x}^{\nu}}=0.
 \end{equation}
-此过程中并未限制仿射参量，因此它对质点和光子都有效，尽管对光子$\lambda$仍然不能取$s$和$\tau$.
+此过程中并未限制仿射参量，因此它对质点和光子都有效，尽管对光子 $\lambda$ 仍然不能取 $s$ 和 $\tau$.
 
 史瓦西度规中的拉氏量为
 \begin{equation}
 L=\frac12\left[\left(1-\frac{2\symup{G}M}{\symup{c}^{2}r}\right)\symup{c}^{2}\dot{t}^{2}-\left(1-\frac{2\symup{G}M}{\symup{c}^{2}r}\right)^{-1}\dot{r}^{2}-r^{2}\dot{\theta}^{2}-r^{2}\sin^{2}\theta\dot{\varphi}^{2}\right].
 \end{equation}
-对于光子，$L=0$,对于质点，$\lambda=\tau$时$L=\dfrac12$.因此
+对于光子，$L=0$, 对于质点，$\lambda=\tau$ 时 $L=\dfrac12$. 因此
 \begin{equation}
 L=\frac{\eta}{2}.
 \end{equation}
@@ -2167,7 +2167,7 @@ L=\frac{\eta}{2}.
 E&=\frac{\partial{}L}{\partial{}\dot{t}}=\left(1-\frac{2\symup{G}M}{\symup{c}^{2}r}\right)\frac{\symup{c}^{2}\symup{d}t}{\symup{d}\lambda},\\
 \widetilde{L}&=-\frac{\partial{}L}{\partial{}\dot{\varphi}}=r^{2}\sin^{2}\theta\frac{\symup{d}\varphi}{\symup{d}\lambda}.
 \end{align}
-我们还可以得到关于$\theta$的方程：
+我们还可以得到关于 $\theta$ 的方程：
 \begin{equation}
 \frac{\partial{}L}{\partial{}\theta}-\frac{\symup{d}}{\symup{d}\lambda}\frac{\partial{}L}{\partial{}\dot{\theta}}=\frac{\symup{d}}{\symup{d}\lambda}\left(r^{2}\dot{\theta}\right)-r^{2}\dot{\varphi}^{2}\sin\theta\cos\theta=0.
 \end{equation}
@@ -2181,17 +2181,17 @@ E&=\frac{\partial{}L}{\partial{}\dot{t}}=\left(1-\frac{2\symup{G}M}{\symup{c}^{2
 \end{equation}
 那么粒子将一直保持在赤道面移动。
 
-从拉氏量的分析中我们发现$E$和$\widetilde{L}$分别对应单位质量的能量和角动量。当然这还不是观测者观测到的量。根据观测量理论有
+从拉氏量的分析中我们发现 $E$ 和 $\widetilde{L}$ 分别对应单位质量的能量和角动量。当然这还不是观测者观测到的量。根据观测量理论有
 \begin{equation}
 P^{\hat{0}}=P_{\mu}\omega^{\hat{0}\mu}=-P_{\mu}u^{\mu}=\frac{mE}{\sqrt{-g_{00}}}.
 \end{equation}
-可见实测得到的质点能量不守恒。这被称作质点能量的引力红移。考虑要无穷远处$g_{00}=-1$,可以认为$E$是无穷远处测到的单位质量质点的能量。当然一般粒子是束缚态无法前往无穷远处。
+可见实测得到的质点能量不守恒。这被称作质点能量的引力红移。考虑要无穷远处 $g_{00}=-1$, 可以认为 $E$ 是无穷远处测到的单位质量质点的能量。当然一般粒子是束缚态无法前往无穷远处。
 
-对于角动量，观测者得到的量为（注意$\omega_{\hat{3}}^{\mu}$形式受$g_{22}=r^{2}$归一影响）
+对于角动量，观测者得到的量为（注意 $\omega_{\hat{3}}^{\mu}$ 形式受 $g_{22}=r^{2}$ 归一影响）
 \begin{equation}
 P^{\hat{3}}=P_{\mu}\omega^{\hat{3}\mu}=P_{\mu}\omega^{\mu}_{\hat{3}}=\frac{m\widetilde{L}}{r}.
 \end{equation}
-可以认为$r P^{\hat{3}}$代表等效角动量，等效是因为$r$不是真实距离而是坐标距离。
+可以认为 $r P^{\hat{3}}$ 代表等效角动量，等效是因为 $r$ 不是真实距离而是坐标距离。
 
 \subsection{运动的分类}
 牛顿引力学中我们常会将角动量的作用看作一个势阱，相对论中同样可以引入相对论性的等效势：
@@ -2202,25 +2202,25 @@ U=2\Phi_{\text{eff}}\left(r\right)=\left(\symup{c}^{2}-\frac{2\symup{G}M}{r}\rig
 \begin{equation}
 \left(\frac{\symup{d}r}{\symup{d}\tau}\right)^{2}=\left(\frac{E}{\symup{c}}\right)^{2}-U.
 \end{equation}
-等式左边正定，运动只能发生在$\left(\dfrac{E}{\symup{c}}\right)^{2}>U$的地方。和牛顿等效势比起来，可以发现$U$多了一项$\symup{c}^{2}$和$-\dfrac{2\symup{G}M\widetilde{L}^{2}}{\symup{c}^{2}r^{3}}$. $\symup{c}^{2}$不是实质性的，因为相对论性的能量不再是单纯的动能，无穷远处静止质点$E\to \symup{c}^{2}$,减去这种静能的话和$\symup{c}^{2}$“相消”。而第二项在$r$很小的时候起决定作用，根本改变了运动情况。
+等式左边正定，运动只能发生在 $\left(\dfrac{E}{\symup{c}}\right)^{2}>U$ 的地方。和牛顿等效势比起来，可以发现 $U$ 多了一项 $\symup{c}^{2}$ 和 $-\dfrac{2\symup{G}M\widetilde{L}^{2}}{\symup{c}^{2}r^{3}}$. $\symup{c}^{2}$ 不是实质性的，因为相对论性的能量不再是单纯的动能，无穷远处静止质点 $E\to \symup{c}^{2}$, 减去这种静能的话和 $\symup{c}^{2}$ “相消”。而第二项在 $r$ 很小的时候起决定作用，根本改变了运动情况。
 
-这么多$\symup{c}^{2}$还是太麻烦了，我们不妨采用$\symup{c}=\symup{G}=1,\eta=1$,中心天体质量$M$也为 1，据此先将粒子可能的运动分成三类：
+这么多 $\symup{c}^{2}$ 还是太麻烦了，我们不妨采用 $\symup{c}=\symup{G}=1,\eta=1$, 中心天体质量 $M$ 也为 1, 据此先将粒子可能的运动分成三类：
 
-\quad-\quad $E^{2}<1,$束缚态；
+\quad-\quad $E^{2}<1,$ 束缚态；
 
-\quad-\quad $1\le E^{2}<U_{\max},$散射态；
+\quad-\quad $1\le E^{2}<U_{\max},$ 散射态；
 
-\quad-\quad $E^{2}\ge U_{\max},$吸收态。
+\quad-\quad $E^{2}\ge U_{\max},$ 吸收态。
 
 而等效势则写作
 \begin{equation}
 U=1-\frac{2}{r}+\frac{\widetilde{L}^{2}}{r^{2}}-\frac{2\widetilde{L}^{2}}{r^{3}}.
 \end{equation}
-可以看出它只依赖单一参量$\widetilde{L}$,其取不同值所绘制出的曲线可如图\ref{等效势阱。}所示。
+可以看出它只依赖单一参量 $\widetilde{L}$, 其取不同值所绘制出的曲线可如图\ref{等效势阱。}所示。
 \begin{figure}[!htb]
 \centering
 \tikzset{every picture/.style={line width=0.75pt}} %set default line width to 0.75pt
-\begin{tikzpicture}[x=0.6pt,y=0.6pt,yscale=120,xscale=20]
+\begin{tikzpicture}[x=0.6pt, y=0.6pt, yscale=120, xscale=20]
 %1. 标记重要的点
 \coordinate (0) at (0, 0);
 \coordinate (ymax) at (0, 2);
@@ -2230,10 +2230,10 @@ U=1-\frac{2}{r}+\frac{\widetilde{L}^{2}}{r^{2}}-\frac{2\widetilde{L}^{2}}{r^{3}}
 %2. 绘制基本的坐标轴
 \draw[-stealth, thick] (ymin) -- (ymax);
 \draw[-stealth, thick] (xmin) -- (xmax);
-\draw[dashed] (-0.3,1) -- (16,1);
-\node[blue, right=6pt, below] at (-2,2) {$U$};
-\node[blue, below=8pt, left] at (16,0) {$r$};
-%3. 给 x,y 轴加上刻度
+\draw[dashed] (-0.3, 1) -- (16, 1);
+\node[blue, right=6pt, below] at (-2, 2) {$U$};
+\node[blue, below=8pt, left] at (16, 0) {$r$};
+%3. 给 x, y 轴加上刻度
 \node[black, left=8pt, below] at (0) {$0$};
 \draw[black] (0, 0.5) -- (0.05, 0.5);
 
@@ -2253,15 +2253,15 @@ U=1-\frac{2}{r}+\frac{\widetilde{L}^{2}}{r^{2}}-\frac{2\widetilde{L}^{2}}{r^{3}}
 \label{等效势阱。}
 \end{figure}
 
-在$r$较小的地方，$\widetilde{L}>4$的时候有一峰值大于 1 的势垒，在$r$较大的地方有一势阱（图\ref{等效势阱。}并未绘制出，但随着$r$的增大，$U$会回升至趋向于 1 的情形），此时三类运动都是可能发生的。随着$\widetilde{L}$减小，势垒也在下降，$\widetilde{L}\le4$时，势垒降到 1 以下，散射态消失了。$\widetilde{L}<2\sqrt{3}$时，势垒也消失了，此时也没有势阱的概念了，粒子有很大可能向引力源坠落。实际上，牛顿引力论可以实现半径任意小的圆轨道，但是根据相对论的等效势不可能实现。对于
+在 $r$ 较小的地方，$\widetilde{L}>4$ 的时候有一峰值大于 1 的势垒，在 $r$ 较大的地方有一势阱（图\ref{等效势阱。}并未绘制出，但随着 $r$ 的增大，$U$ 会回升至趋向于 1 的情形），此时三类运动都是可能发生的。随着 $\widetilde{L}$ 减小，势垒也在下降，$\widetilde{L}\le4$ 时，势垒降到 1 以下，散射态消失了。$\widetilde{L}<2\sqrt{3}$ 时，势垒也消失了，此时也没有势阱的概念了，粒子有很大可能向引力源坠落。实际上，牛顿引力论可以实现半径任意小的圆轨道，但是根据相对论的等效势不可能实现。对于
 \begin{equation}
 \Phi_{\text{eff}}(r)=\frac{\widetilde{L}^{2}}{2r^{2}}-\frac{\symup{G}M\widetilde{L}^{2}}{\symup{c}^{2}r^{3}}-\frac{\symup{G}M}{r}+\frac12\symup{c}^{2},
 \end{equation}
-对$r$求导发现
+对 $r$ 求导发现
 \begin{equation}
 \frac{\symup{d}\Phi_{\text{eff}}}{\symup{d}r}=\frac{\widetilde{L}^{2}}{r^{4}}(\frac{3\symup{G}M}{\symup{c}^{2}}-r)+\frac{\symup{G}M}{r^{2}}.
 \end{equation}
-可见对于$r<3\symup{G}M_{\text{BH}}/\symup{c}^{2},\dfrac{\symup{d}\Phi_{\text{eff}}}{\symup{d}r}>0$,无法实现圆轨道。
+可见对于 $r<3\symup{G}M_{\text{BH}}/\symup{c}^{2},\dfrac{\symup{d}\Phi_{\text{eff}}}{\symup{d}r}>0$, 无法实现圆轨道。
 
 要实现稳定轨道，首先要求一阶导为零有解
 \begin{align}
@@ -2269,14 +2269,14 @@ r^{4}\frac{\symup{d}\Phi_{\text{eff}}}{\symup{d}r}&=\frac{3\widetilde{L}^{2}\sym
 \Delta{}&=\widetilde{L}^{4}-12\frac{\symup{G}^{2}M^{2}}{\symup{c}^{2}}\widetilde{L}^{2}>0,\\
 \widetilde{L}&>\frac{2\sqrt{3}\symup{G}M}{\symup{c}}.
 \end{align}
-这也是前文$2\sqrt{3}$的来源。进一步要求二阶导大于零，
+这也是前文 $2\sqrt{3}$ 的来源。进一步要求二阶导大于零，
 \begin{align}
 r^{5}\frac{\symup{d}^{2}\Phi_{\text{eff}}}{\symup{d}r^{2}}&=-\frac{12\widetilde{L}^{2}\symup{G}M}{\symup{c}^{2}}+3\widetilde{L}^{2}r-2\symup{G}Mr^{2}>0.\tag{5}\\
 r&=\frac{-3\widetilde{L}^{2}\pm\sqrt{(9\widetilde{L}^{4}-96\widetilde{L}^{2}\symup{G}^{2}M^{2}/\symup{c}^{2})}}{-4\symup{G}M},\notag\\
 \widetilde{L}&>\frac{2\sqrt3\symup{G}M}{\symup{c}},\notag\\
-r_{\min}&=\frac{6\symup{G}M}{\symup{c}^{2}},r_{\max}=\frac{12\symup{G}M}{\symup{c}^{2}}.\tag{6}
+r_{\min}&=\frac{6\symup{G}M}{\symup{c}^{2}}, r_{\max}=\frac{12\symup{G}M}{\symup{c}^{2}}.\tag{6}
 \end{align}
-因此最小可实现的圆轨道为$\dfrac{6\symup{G}M}{\symup{c}^{2}}$.
+因此最小可实现的圆轨道为 $\dfrac{6\symup{G}M}{\symup{c}^{2}}$.
 
 \subsection{行星的轨道}
 理论力学中，行星运动有关的第一积分是
@@ -2284,15 +2284,15 @@ r_{\min}&=\frac{6\symup{G}M}{\symup{c}^{2}},r_{\max}=\frac{12\symup{G}M}{\symup{
 \frac{\symup{d}\varphi}{\symup{d}t}&=\frac{L}{r^{2}},\\
 \frac12\left(\frac{\symup{d}r}{\symup{d}t}\right)^{2}&=E+\frac{\symup{G}M}{r}-\frac{L^{2}}{2r^{2}}.
 \end{align}
-其中$L$是行星的角动量。消去时间可以得到轨道方程
+其中 $L$ 是行星的角动量。消去时间可以得到轨道方程
 \begin{equation}
 \frac{1}{2}\left[\frac{\symup{d}}{\symup{d}\varphi}\left(\frac{1}{r}\right)\right]^{2}=\frac{E}{L^{2}}-\frac{1}{2r^{2}}+\frac{\symup{G}M}{rL^{2}}.
 \end{equation}
-对$\varphi$微商，得到
+对 $\varphi$ 微商，得到
 \begin{equation}
 \frac{\symup{d}^{2}}{\symup{d}\varphi^{2}}\left(\frac{1}{r}\right)+\frac{1}{r}=\frac{\symup{G}M}{L^{2}}.
 \end{equation}
-变量代换$u=\dfrac{\symup{G}M}{r}$,
+变量代换 $u=\dfrac{\symup{G}M}{r}$,
 \begin{equation}
 \frac{\symup{d}^{2}u}{\symup{d}\varphi^{2}}+u=\left(\frac{\symup{G}M}{L}\right)^{2}.
 \end{equation}
@@ -2300,7 +2300,7 @@ r_{\min}&=\frac{6\symup{G}M}{\symup{c}^{2}},r_{\max}=\frac{12\symup{G}M}{\symup{
 \begin{equation}
 u=\left(\frac{\symup{G}M}{L}\right)^{2}\left(1+e\cos\varphi\right).
 \end{equation}
-在极坐标系中根据“到准线和到焦点距离比值为定值”的定义容易发现这是一个椭圆轨道。$e$是偏心率。
+在极坐标系中根据“到准线和到焦点距离比值为定值”的定义容易发现这是一个椭圆轨道。$e$ 是偏心率。
 
 相对论动力学可作类似处理，行星轨道满足（继续采用自然单位制）
 \begin{align}
@@ -2308,11 +2308,11 @@ u=\left(\frac{\symup{G}M}{L}\right)^{2}\left(1+e\cos\varphi\right).
 \frac{\symup{d}\varphi}{\symup{d}\tau}&=\frac{\widetilde{L}}{r^{2}},\\
 \left(\frac{\symup{d}r}{\symup{d}\tau}\right)^{2}&=E^{2}-\left(1-\frac{2M}{r}\right)\left(1+\frac{\widetilde{L}^{2}}{r^{2}}\right).
 \end{align}
-消去固有时$\tau$,可以得到轨道方程
+消去固有时 $\tau$, 可以得到轨道方程
 \begin{equation}
 \frac{1}{2}\left[\frac{\symup{d}}{\symup{d}\varphi}\left(\frac{1}{r}\right)\right]^{2}=\frac{E^{2}-1}{2\widetilde{L}^{2}}-\frac{1}{2r^{2}}+\frac{M}{r^{3}}+\frac{M}{r\widetilde{L}^{2}}.
 \end{equation}
-对$\varphi$作微商，得到
+对 $\varphi$ 作微商，得到
 \begin{equation}
 \frac{\symup{d}^{2}}{\symup{d}\varphi^{2}}\left(\frac{1}{r}\right)+\frac{1}{r}=\frac{M}{\widetilde{L}^{2}}+\frac{3M}{r^{2}}.
 \end{equation}
@@ -2320,15 +2320,15 @@ u=\left(\frac{\symup{G}M}{L}\right)^{2}\left(1+e\cos\varphi\right).
 \begin{equation}
 \frac{\symup{d}^{2}u}{\symup{d}\varphi^{2}}+u=\left(\frac{M}{\widetilde{L}}\right)^{2}+3u^{2},
 \end{equation}
-可见其与牛顿理论的区别仅在于$3u^{2}$的修正，对于水星$u\sim10^{-7}$.牛顿解可以看作该非线性微分方程零级近似，代入上式转化成线性方程
+可见其与牛顿理论的区别仅在于 $3u^{2}$ 的修正，对于水星 $u\sim10^{-7}$. 牛顿解可以看作该非线性微分方程零级近似，代入上式转化成线性方程
 \begin{equation}
 \frac{\symup{d}^{2}u}{\symup{d}\varphi^{2}}+u\approx\left(\frac{M}{\widetilde{L}}\right)^{2}+3\left(\frac{M}{\widetilde{L}}\right)^{4}+6\left(\frac{M}{\widetilde{L}}\right)^{4}e\cos\varphi.
 \end{equation}
-其中略去了$e^{2}$项因为偏心率较小。比较常数项量级可再次简化为
+其中略去了 $e^{2}$ 项因为偏心率较小。比较常数项量级可再次简化为
 \begin{equation}
 \frac{\symup{d}^{2}u}{\symup{d}\varphi^{2}}+u\approx\left(\frac{M}{\widetilde{L}}\right)^{2}+6\left(\frac{M}{\widetilde{L}}\right)^{4}e\cos\varphi.
 \end{equation}
-将解分成两个部分$u=u_{1}+u_{2}$,分别对应后两项，可见$u_{1}$就是牛顿解，而通过
+将解分成两个部分 $u=u_{1}+u_{2}$, 分别对应后两项，可见 $u_{1}$ 就是牛顿解，而通过
 \begin{equation}
 \frac{\symup{d}^{2}u_{2}}{\symup{d}\varphi^{2}}+u_{2}=6\left(\frac{M}{\widetilde{L}}\right)^{4}e\cos\varphi
 \end{equation}
@@ -2336,12 +2336,12 @@ u=\left(\frac{\symup{G}M}{L}\right)^{2}\left(1+e\cos\varphi\right).
 \begin{equation}
 u_{2}=3\left(\frac{M}{\widetilde{L}}\right)^{4}e\varphi\sin\varphi.
 \end{equation}
-略去高于$\left(\dfrac{M}{\widetilde{L}}\right)^{4}$的项，得到水星轨道方程
+略去高于 $\left(\dfrac{M}{\widetilde{L}}\right)^{4}$ 的项，得到水星轨道方程
 \begin{align}
 u&=u_{1}+u_{2}=\left(\frac{M}{\widetilde{L}}\right)^{2}\left(1+e\cos\varphi+3\left(\frac{M}{\widetilde{L}}\right)^{2}e\varphi\sin\varphi\right)\notag\\
 &\approx\left(\frac{M}{\widetilde{L}}\right)^{2}\left\{1+e\cos\left(\left[1-3\left(\frac{M}{\widetilde{L}}\right)^{2}\right]\varphi\right)\right\}.
 \end{align}
-可见周期不再是$2\pi$,而是
+可见周期不再是 $2\pi$, 而是
 \begin{equation}
 T=\frac{2\pi}{1-3\left(\dfrac{M}{\widetilde{L}}\right)^{2}},
 \end{equation}
@@ -2353,10 +2353,10 @@ T=\frac{2\pi}{1-3\left(\dfrac{M}{\widetilde{L}}\right)^{2}},
 \begin{equation}
 \Delta{}\varphi=6\pi\left(\frac{M}{\widetilde{L}}\right)^{2}=6\pi\left(\frac{\symup{G}M}{\symup{c}\widetilde{L}}\right)^{2}.
 \end{equation}
-对于水星，每运动一周，$\Delta{}\varphi=\ang{;;0.1}$,累积一世纪积累的进动角是$\ang{;;43}$,与观测数据达成了惊人的一致。
+对于水星，每运动一周，$\Delta{}\varphi=\ang{;;0.1}$, 累积一世纪积累的进动角是 $\ang{;;43}$, 与观测数据达成了惊人的一致。
 
 \subsection{光线偏折}
-类似行星轨道，可以给出光线运动方程（此时采用其他的仿射参量，且$\eta=0$）
+类似行星轨道，可以给出光线运动方程（此时采用其他的仿射参量，且 $\eta=0$)
 \begin{align}
 \frac{\symup{d}t}{\symup{d}\lambda}&=E\cdot\left(1-\frac{2M}{r}\right)^{-1},\\
 \frac{\symup{d}\varphi}{\symup{d}\lambda}&=\frac{\widetilde{L}}{r^{2}},\\
@@ -2366,7 +2366,7 @@ T=\frac{2\pi}{1-3\left(\dfrac{M}{\widetilde{L}}\right)^{2}},
 \begin{equation}
 \frac{\symup{d}^{2}u}{\symup{d}\varphi^{2}}+u=3u^{2},
 \end{equation}
-其中$u=\dfrac{\symup{G}M}{\symup{c}^{2}r}=\dfrac{\symup{G}M}{\symup{c}^{2}}\widetilde{u}$,方程改写成
+其中 $u=\dfrac{\symup{G}M}{\symup{c}^{2}r}=\dfrac{\symup{G}M}{\symup{c}^{2}}\widetilde{u}$, 方程改写成
 \begin{equation}
 \frac{\symup{d}^{2}\widetilde{u}}{\symup{d}\varphi^{2}}+\widetilde{u}=\frac{3\symup{G}M}{\symup{c}^{2}}\widetilde{u}^{2}.
 \end{equation}
@@ -2378,11 +2378,11 @@ T=\frac{2\pi}{1-3\left(\dfrac{M}{\widetilde{L}}\right)^{2}},
 \begin{equation}
 \widetilde{u}_{0}=R^{-1}\cos\varphi,
 \end{equation}
-其中$R$是光线到恒星中心的最短距离。上式是一条通过“黄道面”的直线。零级近似代入原方程可求一级近似解
+其中 $R$ 是光线到恒星中心的最短距离。上式是一条通过“黄道面”的直线。零级近似代入原方程可求一级近似解
 \begin{equation}
 \frac{\symup{d}^{2}\widetilde{u}_{1}}{\symup{d}\varphi^{2}}+\widetilde{u}_{1}=\frac{3\symup{G}M}{\symup{c}^{2}R^{2}}\cos^{2}\varphi.
 \end{equation}
-猜测解形式为$\widetilde{u}_{1}=B\sin^{2}\varphi+B'$,可以定出系数具体值，得到特解：
+猜测解形式为 $\widetilde{u}_{1}=B\sin^{2}\varphi+B'$, 可以定出系数具体值，得到特解：
 \begin{equation}
 \widetilde{u}_{1}=\frac{\symup{G}M}{\symup{c}^{2}R^{2}}\left(1+\sin^{2}\varphi\right).
 \end{equation}
@@ -2390,13 +2390,13 @@ T=\frac{2\pi}{1-3\left(\dfrac{M}{\widetilde{L}}\right)^{2}},
 \begin{equation}
 \widetilde{u}=\widetilde{u}_{0}+\widetilde{u}_{1}=R^{-1}\cos\varphi+\frac{\symup{G}M}{\symup{c}^{2}R^{2}}\left(1+\sin^{2}\varphi\right).
 \end{equation}
-无穷远处 ($\widetilde{u}_{0}=0$) 直线解方位角为$\varphi=\pm\dfrac{\pi}{2}$,一级解可看作添加一个小量$a$,泰勒展开得到无穷远处
+无穷远处 ($\widetilde{u}_{0}=0$) 直线解方位角为 $\varphi=\pm\dfrac{\pi}{2}$, 一级解可看作添加一个小量 $a$, 泰勒展开得到无穷远处
 \begin{align}
 0&=-R^{-1}\sin\alpha+\frac{\symup{G}M}{\symup{c}^{2}R^{2}}\left(1+\cos^{2}\alpha\right).\\
 a&=\frac{2\symup{G}M}{\symup{c}^{2}R}.\\
 \Delta{}\theta&=2a=\frac{4\symup{G}M}{\symup{c}^{2}R}.
 \end{align}
-太阳附近数据为$\Delta{}\theta=\ang{;;1.75}$,已被日全食时拍摄的星空照片证实。
+太阳附近数据为 $\Delta{}\theta=\ang{;;1.75}$, 已被日全食时拍摄的星空照片证实。
 
 %\printbibliography
 
