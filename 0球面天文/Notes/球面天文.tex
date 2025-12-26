@@ -46,7 +46,7 @@
       showspaces      =    false,% 是否显示空格
       numberstyle     =    \zihao{-5}\ttfamily,% 行号的样式，小五号，tt 等宽字体
       showstringspaces=    false,
-      captionpos      =    t,%这段代码的名字所呈现的位置，t 指的是 top 上面
+      captionpos      =    t,% 这段代码的名字所呈现的位置，t 指的是 top 上面
       frame           =    lrtb,% 显示边框
 }
 
@@ -89,14 +89,14 @@
 \centering
 \tikzset{every picture/.style={line width=0.75pt}}
 \begin{tikzpicture}[x=0.45pt, y=0.45pt, yscale=0.5, xscale=0.5]
-%天球
+% 天球
 \draw (300, 0) arc(0:360:300);
-%大三角形
+% 大三角形
 \draw (0, 250) arc(53:3:500);
 \draw (0, 250) arc(127:177:500);
 \draw (0,-165) arc(270:293.5:500);
 \draw (0,-165) arc(270:246.5:500);
-%小三角形
+% 小三角形
 \draw (0, 150) arc(53:3:300);
 \draw [dashed](0, 150) arc(53:-12:300);
 \draw (0, 150) arc(127:177:300);
@@ -143,7 +143,7 @@ x\\y\\z
 \centering
 \tikzset{every picture/.style={line width=0.75pt}}
 \begin{tikzpicture}[x=0.45pt, y=0.45pt, yscale=0.5, xscale=0.5]
-%天球
+% 天球
 \draw (300, 0) arc(0:360:300);
 \draw (0, 0) -- (400, 0);
 \draw [shift={(400, 0)}, rotate=180][line width=0.75](10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0, 0) .. controls (3.31, 0.3) and (6.95, 1.4) .. (10.93, 3.29); 
@@ -151,7 +151,7 @@ x\\y\\z
 \draw [shift={(0, 400)}, rotate = -90] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0, 0) .. controls (3.31, 0.3) and (6.95, 1.4) .. (10.93, 3.29);
 \draw (0, 0) -- (-180,-180) ;
 \draw [shift={(-180,-180)}, rotate = 45][line width=0.75](10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0, 0) .. controls (3.31, 0.3) and (6.95, 1.4) .. (10.93, 3.29);
-%基本圈
+% 基本圈
 \draw (0,-100) arc(270:307:500);
 \draw (0,-100) arc(270:233:500);
 \draw [dashed](0, 100) arc(90:127:500);
@@ -262,7 +262,7 @@ P_YR_X\left(\theta\right)P_Y&=R_X\left(-\theta\right).
 \centering
 \tikzset{every picture/.style={line width=0.75pt}}
 \begin{tikzpicture}[x=0.42pt, y=0.42pt, yscale=0.5, xscale=0.5]
-%天球
+% 天球
 \draw (300, 0) arc(0:360:300);
 %x
 \draw (0, 0) -- (-400, 0);
@@ -277,7 +277,7 @@ P_YR_X\left(\theta\right)P_Y&=R_X\left(-\theta\right).
 %y
 \draw (0, 0) -- (180,-180) ;
 \draw [shift={(180,-180)}, rotate = 135][line width=0.75](10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0, 0) .. controls (3.31, 0.3) and (6.95, 1.4) .. (10.93, 3.29);
-%三角形
+% 三角形
 \draw (0, 300) arc(70:20:200);
 \draw (-180, 240) -- (120, 180);
 %Text
@@ -317,9 +317,9 @@ P_YR_X\left(\theta\right)P_Y&=R_X\left(-\theta\right).
 \centering
 \tikzset{every picture/.style={line width=0.75pt}}
 \begin{tikzpicture}[x=0.36pt, y=0.36pt, yscale=0.5, xscale=0.5]
-%天球
+% 天球
 \draw (300, 0) arc(0:360:300);
-%三角形
+% 三角形
 \draw (0, 300) arc(120:190:300);
 \draw (240, 180) arc(-30:-97:390);
 \draw (0, 300) arc(70:17:300);
@@ -505,7 +505,7 @@ A=\left(\alpha_0,\delta_0\right),\sigma=\left(\alpha,\delta\right),\sigma'=\left
 \centering
 \tikzset{every picture/.style={line width=0.75pt}}
 \begin{tikzpicture}[x=0.35pt, y=0.35pt, yscale=0.6, xscale=0.6]
-%天球
+% 天球
 \draw (300, 0) arc(0:360:300);
 \draw (0, 0) -- (400, 0);
 \draw [shift={(400, 0)}, rotate=180][line width=0.75](10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0, 0) .. controls (3.31, 0.3) and (6.95, 1.4) .. (10.93, 3.29); 
@@ -515,7 +515,7 @@ A=\left(\alpha_0,\delta_0\right),\sigma=\left(\alpha,\delta\right),\sigma'=\left
 \draw [shift={(-200,-120)}, rotate = 30][line width=0.75](10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0, 0) .. controls (3.31, 0.3) and (6.95, 1.4) .. (10.93, 3.29);
 \draw (0, 0) -- (-230, 34.5) ;
 \draw [shift={(-230, 34.5)}, rotate = -10][line width=0.75](10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0, 0) .. controls (3.31, 0.3) and (6.95, 1.4) .. (10.93, 3.29);
-%基本圈
+% 基本圈
 \draw (0,-100) arc(270:307:500);
 \draw (0,-100) arc(270:233:500);
 \draw (-60,-80) arc(233:270:500);
@@ -1013,9 +1013,9 @@ k&=-\frac{v}{\symup{c}}=-\frac{\rho}a\frac{v_0}{\symup{c}}\cos\varphi=-\frac{\rh
 \begin{minipage}[t]{0.45\textwidth}
 \tikzset{every picture/.style={line width=0.75pt}}
 \begin{tikzpicture}[x=0.45pt, y=0.45pt, yscale=0.5, xscale=0.5]
-%天球
+% 天球
 \draw (300, 0) arc(0:360:300);
-%三角形
+% 三角形
 \draw (240, 180) arc(-30:-63:390);
 \draw (0, 300) arc(50:10:400);
 %Text
@@ -1194,20 +1194,20 @@ M=E-e\sin E=\frac{2\pi}{T}\left(t-\tau_{0}\right).
 \centering
 \tikzset{every picture/.style={line width=0.75pt}} 
 \begin{tikzpicture}[x=0.42pt, y=0.42pt, yscale=-1, xscale=1]
-%切平面坐标系 
+% 切平面坐标系 
 \draw [dashed](300, 250) -- (500, 250) ;
 \draw [dashed](300, 250) -- (300, 50) ;
 \draw [dashed](300, 250) -- (240, 310) ;
-%天球
+% 天球
 \draw (500, 250) arc(0:-90:200);
 \draw (500, 250) arc(0:107.5:200 and 64);
 \draw (300, 50) arc(270:162:64 and 200);
-%双星轨道
+% 双星轨道
 \draw   (80.73, 325.53) .. controls (70.03, 293) and (133.25, 242.98) .. (221.94, 213.81) .. controls (310.62, 184.63) and (391.19, 187.35) .. (401.89, 219.87) .. controls (412.59, 252.4) and (349.37, 302.42) .. (260.69, 331.6) .. controls (172, 360.77) and (91.43, 358.06) .. (80.73, 325.53) -- cycle ;
-\draw (300, 250) -- (402, 221) ;%近心点
-\draw (300, 250) -- (384, 308) ;%升交点
-\draw (300, 250) -- (160, 239) ;%行星位置
-\draw (420.89, 259.87) .. controls (412.59, 292.4) and (349.37, 342.42) .. (260.69, 371.6) ;%外环
+\draw (300, 250) -- (402, 221) ;% 近心点
+\draw (300, 250) -- (384, 308) ;% 升交点
+\draw (300, 250) -- (160, 239) ;% 行星位置
+\draw (420.89, 259.87) .. controls (412.59, 292.4) and (349.37, 342.42) .. (260.69, 371.6) ;% 外环
 %Text
 \draw (200, 300) node [anchor=north west][inner sep=0.75pt]   [align=left] {$X$};
 \draw (505, 250) node [anchor=north west][inner sep=0.75pt]   [align=left] {$Y$};
@@ -1614,9 +1614,9 @@ x&=\frac{\symup{d}X_A}{\symup{d}t}=x_1+x_2T+x_3T^2.
 \centering
 \tikzset{every picture/.style={line width=0.75pt}}
 \begin{tikzpicture}[x=0.45pt, y=0.45pt, yscale=0.6, xscale=0.6]
-%天球
+% 天球
 \draw (300, 0) arc(0:360:300);
-%基本圈
+% 基本圈
 \draw (0,-100) arc(270:307:500);
 \draw (0,-100) arc(270:233:500);
 \draw (270, 130) arc(-20:-93:500);
@@ -1882,9 +1882,9 @@ M&=R_Z\left(-\alpha_0\right)R_Y\left(\delta_0-\ang{90;;}\right)R_Z\left(\varphi_
 \centering
 \tikzset{every picture/.style={line width=0.75pt}}
 \begin{tikzpicture}[x=0.5pt, y=0.5pt, yscale=0.5, xscale=0.5]
-%天球
+% 天球
 \draw (300, 0) arc(0:360:300);
-%三角形
+% 三角形
 \draw (0, 300) arc(-30:-90:300);
 \draw (240, 180) arc(-30:-77:390);
 \draw (0, 300) arc(70:17:300);
@@ -1939,9 +1939,9 @@ M&=R_Z\left(-\alpha_0\right)R_Y\left(\delta_0-\ang{90;;}\right)R_Z\left(\varphi_
 \centering
 \tikzset{every picture/.style={line width=0.75pt}}
 \begin{tikzpicture}[x=0.45pt, y=0.45pt, yscale=0.5, xscale=0.5]
-%天球
+% 天球
 \draw (300, 0) arc(0:360:300);
-%三角形
+% 三角形
 \draw (240, 180) arc(-30:-77:390);
 \draw (0, 300) arc(30:2.5:600);
 \draw (130, 60) arc(30:92:60);
