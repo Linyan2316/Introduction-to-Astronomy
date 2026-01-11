@@ -116,10 +116,10 @@ r\Delta\varepsilon&=\rho\varepsilon.\\
 碳氮氧循环的路径则为
 \begin{align*}
 \ce{^{12}C +^{1}H &->^{13}N}+\gamma,\\
-\ce{^{13}N &->^{13}C +e+}+\nu_{\ce{e}},\quad\text{$\beta$-decay $\tau_{\frac12}\sim\qty{10}{min}$},\\
+\ce{^{13}N &->^{13}C +e+}+\nu_{\ce{e}},\quad\text{$\beta$-decay $\tau_{\frac{1}{2}}\sim\qty{10}{min}$},\\
 \ce{^{13}C +^{1}H &->^{14}N}+\gamma,\\
 \ce{^{14}N +^{1}H &->^{15}O}+\gamma,\\
-\ce{^{15}O &->^{15}N +e+}+\nu_{\ce{e}},\quad\text{$\beta$-decay $\tau_{\frac12}\sim\qty{2}{min}$},\\
+\ce{^{15}O &->^{15}N +e+}+\nu_{\ce{e}},\quad\text{$\beta$-decay $\tau_{\frac{1}{2}}\sim\qty{2}{min}$},\\
 \ce{^{15}N +^{1}H &->^{12}C +^{4}He}.
 \end{align*}
 
@@ -254,7 +254,7 @@ P_{\text{g}}&=\rho k_{\text{B}}T\frac{X+\dfrac{1}{4}Y}{m_{\ce{H}}}.
 \end{align}
 同时我们还能给出电子气体的相对分子质量来表征其贡献
 \begin{equation}
-\mu_{{\color{blue}{\ce{e}}}}^{-1}=\sum_{i}\frac{Z_{i}\chi_{i}}{A_{i}}\approx X+\frac{1}{2}(1-X)=\frac{1+X}{2}.
+\mu_{{\color{blue}{\ce{e}}}}^{-1}=\sum_{i}\frac{Z_{i}\chi_{i}}{A_{i}}\approx X+\frac{1}{2}\left(1-X\right)=\frac{1+X}{2}.
 \end{equation}
 
 当引力越来越强时，即使密度不断提高，理想气体所提供的气压和辐射压也不足以抗衡引力，此时电子简并压逐渐发挥主导作用。根据泡利不相容原理，电子不可能占据两个相同的能态，宏观上呈现出一定的抗压缩性。简并压只依赖于粒子数密度，与温度无关。恒星是负热容系统，负热容系统丢失能量会收缩并升温，因此燃料耗尽后，恒星会不断收缩并提升温度和密度，试图点燃下一阶段的聚变，或者在此之前简并压就足以平衡引力。比如，低质量原恒星甚至未能点燃氢核聚变，因为在达到点火温度前简并压就足够强，我们称这种天体为褐矮星。又比如大质量主序星在核燃料燃烧殆尽后，会留下一个高温的 $\ce{CO}$ 核，变成白矮星。我们可以计算一下白矮星的电子简并压。
@@ -333,11 +333,11 @@ P=\frac{2\pi\symup{c}}{3h^{3}}p_{\text{F}}^{4}=\frac{3^{\frac{1}{3}}}{8\pi^{\fra
 \end{figure}
 
 \subsubsection{灰大气、能量传输和恒星振荡}
-我们在第一章中曾提到过，恒星内部不同半径处有不同的黑体谱。接下来我们将说明，能量和压强都依赖于局域黑体谱，能量的传输则依赖黑体谱的梯度。记 $\mu=\cos\theta$, 对于任意函数 $A\left(\nu\right)$, 其积分 $\int A\left(\mu\right)\symup{d}\Omega$ 结果为 $2\pi\int_{-1}^{1}A\left(\mu\right)\symup{d}\mu$, 因此有
+我们在第一章中曾提到过，恒星内部不同半径处有不同的黑体谱。接下来我们将说明，能量和压强都依赖于局域黑体谱，能量的传输则依赖黑体谱的梯度。记 $\mu=\cos{\theta}$, 对于任意函数 $A\left(\nu\right)$, 其积分 $\int A\left(\mu\right)\symup{d}\Omega$ 结果为 $2\pi\int_{-1}^{1}A\left(\mu\right)\symup{d}\mu$, 因此有
 \begin{align}
-U_{\nu}&=\frac{2\pi}{\symup{c}}\int_{-1}^{1}I_{\nu}\symup{d}\mu=\frac{4\pi}{\symup{c}}B_{\nu}(\tau_{\nu}),\\
+U_{\nu}&=\frac{2\pi}{\symup{c}}\int_{-1}^{1}I_{\nu}\symup{d}\mu=\frac{4\pi}{\symup{c}}B_{\nu}\left(\tau_{\nu}\right),\\
 F_{\nu}&=2\pi\int_{-1}^{1}I_{\nu}\mu\symup{d}\mu=\frac{4\pi}{3}\frac{\symup{d}B_{\nu}}{\symup{d}\tau_{\nu}},\\
-P_{\nu}&=\frac{2\pi}{\symup{c}}\int_{-1}^{1}I_{\nu}\mu^{2}\symup{d}\mu=\frac{4\pi}{3\symup{c}}B_{\nu}(\tau_{\nu}).\\
+P_{\nu}&=\frac{2\pi}{\symup{c}}\int_{-1}^{1}I_{\nu}\mu^{2}\symup{d}\mu=\frac{4\pi}{3\symup{c}}B_{\nu}\left(\tau_{\nu}\right).\\
 J_{\nu}&=\frac{1}{2}\int_{-1}^{1}I\symup{d}\mu=\frac{\symup{c}}{4\pi{}}U_{\nu}.
 \end{align}
 
@@ -476,12 +476,12 @@ a_{n}&=\left[\frac{\left(n+1\right)K}{4\pi\symup{G}}\rho_{\text{c}}^{\frac{1}{n}
 上式仅在 $n=0, 1, 5$ 时有解析解：
 \begin{align}
 \theta_{0}&=1-\frac{\xi^{2}}{6},\\
-\theta_{1}&=\frac{\sin\xi}{\xi},\\
+\theta_{1}&=\frac{\sin{\xi}}{\xi},\\
 \theta_{5}&=\left[1+\frac{\xi^{2}}{3}\right]^{-\frac{1}{2}}.
 \end{align}
 其结果表明恒星从表面到中心密度、温度、压强等物理量是单调上升的。
 
-不过实际情况 $n$ 可能无法取这三个正整数。此时要用到 scaling relation. 对于 $n<5$ 的情况，总存在一个半径 $R=a\xi_{1}$, 在此处 $\rho=0$. 对于相同的 $n$, 无论物体成分如何，其无量纲数 $\xi_{1}$ 总是一致的。根据 (\ref{2.1.86}) 式，对于给定的 $n$,$R\propto{}\rho_{\text{c}}^{\frac{1-n}{2n}}$. 总质量满足
+不过实际情况 $n$ 可能无法取这三个正整数。此时要用到 scaling relation. 对于 $n<5$ 的情况，总存在一个半径 $R=a\xi_{1}$, 在此处 $\rho=0$. 对于相同的 $n$, 无论物体成分如何，其无量纲数 $\xi_{1}$ 总是一致的。根据 (\ref{2.1.86}) 式，对于给定的 $n$, $R\propto{}\rho_{\text{c}}^{\frac{1-n}{2n}}$. 总质量满足
 \begin{equation}
 M=\int_{0}^{R}4\pi{}r^{2}\rho\symup{d}r=4\pi{}a^{3}\rho_{\text{c}}\int_{0}^{\xi_{1}}\xi^{2}\theta^{n}\symup{d}\xi,
 \end{equation}
@@ -815,7 +815,7 @@ $\ce{O}$ 型星 $\to$ 蓝超巨星 $\to$ 红超巨星 $\to$ WR 星 $\to$ \upperc
 \end{align}
 如果我们考虑椭圆轨道表达式
 \begin{equation}
-r=\frac{a\left(1-e^{2}\right)}{1+e\cos\left(\theta-\omega\right)},
+r=\frac{a\left(1-e^{2}\right)}{1+e\cos{\left(\theta-\omega\right)}},
 \end{equation}
 并假设偏心率 $e=0$, 两天体质量比 $q$, 那么
 \begin{align}
@@ -951,7 +951,7 @@ U_{\text{B}}&=\frac{4}{3}\pi{}R^{3}\frac{B^{2}}{8\pi},\notag\\
 
 与通常恒星相比中子星的温度很高，但相对于中子星物质的高密度而言，它可以非常好地用零温近似描述，因此费米能为
 \begin{align}
-\varepsilon_{\text{Feimi}}&=\frac{P_{\text{F}}^{2}}{2m_{\ce{n}}}=\frac{h^{2}}{2m_{\ce{n}}}\left(\frac{3n}{8\pi}\right)^{\frac23}=\qty{30}{MeV}\left(\frac{\rho}{\qty{e14}{g\cdot cm^{-3}}}\right)^{\frac{2}{3}}\gg k_{\text{B}}T.\\
+\varepsilon_{\text{Feimi}}&=\frac{P_{\text{F}}^{2}}{2m_{\ce{n}}}=\frac{h^{2}}{2m_{\ce{n}}}\left(\frac{3n}{8\pi}\right)^{\frac{2}{3}}=\qty{30}{MeV}\left(\frac{\rho}{\qty{e14}{g\cdot cm^{-3}}}\right)^{\frac{2}{3}}\gg k_{\text{B}}T.\\
 E_{\text{F}}&=\qty{1.64e53}{erg}\left(\frac{M}{\unit{M_{\odot}}}\right)^{\frac{5}{3}}\left(\frac{R}{\qty{10}{km}}\right)^{-2}.
 \end{align}
 
@@ -1002,7 +1002,7 @@ X 射线双星：吸积物质的引力势能转化为动能，进而转化为热
 
 \subsubsection{Schwarzschild}
 \begin{equation}
-\symup{d}s^{2}=\left(-1+\frac{2\symup{G}M}{r\symup{c}^{2}}\right)\symup{c}^{2}\symup{d}t^{2}+\frac{1}{1-\dfrac{2\symup{G}M}{r\symup{c}^{2}}}\symup{d}r^{2}+r^{2}\left(\symup{d}\theta^{2}-\sin^{2}\theta\symup{d}\phi^{2}\right).
+\symup{d}s^{2}=\left(-1+\frac{2\symup{G}M}{r\symup{c}^{2}}\right)\symup{c}^{2}\symup{d}t^{2}+\frac{1}{1-\dfrac{2\symup{G}M}{r\symup{c}^{2}}}\symup{d}r^{2}+r^{2}\left(\symup{d}\theta^{2}-\sin^{2}{\theta}\symup{d}\phi^{2}\right).
 \end{equation}
 
 视界：半径为史瓦西半径 $R_{\text{s}}$ 的球面，在视界内的任何信息都无法向外传递
@@ -1016,7 +1016,7 @@ r_{\text{h}}=\left(\frac{R_{\text{s}}}{2}\right)\left[m+\sqrt{m^{2}-a^{2}}\right
 \end{equation}
 能层为
 \begin{equation}
-r_{\text{st}}=\left(\frac{R_{\text{s}}}2\right)\left[m+\sqrt{m^{2}-a^{2}\cos^{2}\theta}\right].
+r_{\text{st}}=\left(\frac{R_{\text{s}}}2\right)\left[m+\sqrt{m^{2}-a^{2}\cos^{2}{\theta}}\right].
 \end{equation}
 能层：介于 $r_{\text{h}}$ 和 $r_{\text{st}}$ 之间的区域。
 
@@ -1084,13 +1084,13 @@ M_{\text{p}}\ll M_{1}, M_{\text{p}}=v_{1}M_{1}^{\frac{2}{3}}\left(\frac{T}{2\pi\
 
 还要考虑倾角
 \begin{equation}
-M_{\text{p}}\sin i=v_{1,\text{obs}}M_{1}^{\frac{2}{3}}\left(\frac{T}{2\pi\symup{G}}\right)^{\frac{1}{3}}.
+M_{\text{p}}\sin{i}=v_{1,\text{obs}}M_{1}^{\frac{2}{3}}\left(\frac{T}{2\pi\symup{G}}\right)^{\frac{1}{3}}.
 \end{equation}
 轨道倾角 $i$ 并非随机分布。考虑立体角积分方式，实际上是正弦分布。
 
 此外还要考虑选择效应：
 \begin{equation}
-v_{1,\text{obs}}=\symup{G}^{\frac{1}{2}}M_{1}^{-\frac{1}{2}}M_{\text{p}}r_{\text{p}}^{-\frac{1}{2}}\sin i.
+v_{1,\text{obs}}=\symup{G}^{\frac{1}{2}}M_{1}^{-\frac{1}{2}}M_{\text{p}}r_{\text{p}}^{-\frac{1}{2}}\sin{i}.
 \end{equation}
 即倾向于发现轨道小，主星小，行星大的热木星。它们可能由于行星迁移才来到内行星系。
 
@@ -1131,7 +1131,7 @@ a_{\text{total}}=a_{+}+a_{-}=\frac{u^{2}+2}{u\left(u^{2}+4\right)^{\frac{1}{2}}}
 
 对于系外源我们忽视 $\beta$ 的变化，我们会考虑恒星穿越透镜区域
 \begin{equation}
-\beta(t)=\left[\beta_{0}^{2}+\frac{v^{2}}{D_{\text{lo}}^{2}}\left(t-t_{0}\right)^{2}\right]^{\frac{1}{2}}.
+\beta\left(t\right)=\left[\beta_{0}^{2}+\frac{v^{2}}{D_{\text{lo}}^{2}}\left(t-t_{0}\right)^{2}\right]^{\frac{1}{2}}.
 \end{equation}
 因此会产生光变曲线。光变时标
 \begin{equation}
@@ -1148,13 +1148,13 @@ a_{\text{total}}=a_{+}+a_{-}=\frac{u^{2}+2}{u\left(u^{2}+4\right)^{\frac{1}{2}}}
 \subsubsection{潮汐效应}
 引力差距
 \begin{equation}
-\Delta{}F=\frac{\symup{G}Mm}{r^{2}}\left(\cos\phi\left(1+\frac{2R}{r}\cos\theta\right)-1\right)\hat{i}-\frac{\symup{G}Mm}{r^{2}}\left(1+\frac{2R}{r}\cos\theta\right)\sin\phi\hat{j}.
+\Delta{}F=\frac{\symup{G}Mm}{r^{2}}\left(\cos{\phi}\left(1+\frac{2R}{r}\cos{\theta}\right)-1\right)\hat{i}-\frac{\symup{G}Mm}{r^{2}}\left(1+\frac{2R}{r}\cos{\theta}\right)\sin{\phi}\hat{j}.
 \end{equation}
 其中 $\phi$ 是被引力体表面某点与引力体中心连线，相对二引力体中心连线的夹角。该式表明，被引力体赤道延伸，两极压缩。
 
 潮汐力会引起天体解体
 \begin{equation}
-\frac{2\symup{G}M_{\text{p}}R_{\text{m}}}{r^{3}}>\frac{\symup{G}M_{\text{m}}}{R_{\text{m}}^{2}}, r<2^{\frac{1}{3}}\left(\frac{M_{\text{p}}}{M_{\text{m}}}\right)^{\frac13}R_{\text{m}}.
+\frac{2\symup{G}M_{\text{p}}R_{\text{m}}}{r^{3}}>\frac{\symup{G}M_{\text{m}}}{R_{\text{m}}^{2}}, r<2^{\frac{1}{3}}\left(\frac{M_{\text{p}}}{M_{\text{m}}}\right)^{\frac{1}{3}}R_{\text{m}}.
 \end{equation}
 其中 $R_{\text{m}}$ 是卫星半径。
 

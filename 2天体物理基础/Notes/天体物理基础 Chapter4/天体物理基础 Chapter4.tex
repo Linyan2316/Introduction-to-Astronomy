@@ -93,13 +93,13 @@ R_{0}=\qty{8.5}{kpc}, V_{0}=\qty{220}{km\cdot{}s^{-1}}.
 \label{Oort 公式图示。}
 \end{figure}
 
-我们也可通过观测太阳附近恒星的运动来确定太阳的运动。如图\ref{Oort 公式图示。}所示，太阳附近银经为 $l$ 的恒星 $P$ 和太阳 $S$ 的转动角速度分别为 $\omega=\dfrac{V}{R}$ 和 $\omega_{0}=\dfrac{V_{0}}{R_{0}}$, 恒星相对于太阳的视向速度为 $V_{\text{r}}=V\cos\alpha-V_{0}\sin l$. 根据几何关系 $\cos\alpha=\dfrac{R_{0}\sin l}{R}$ 视向速度可写作 $V_{\text{r}}=R_{0}\left(\omega-\omega_{0}\right)\sin l$, 切向速度为 $V_{\text{t}}=R\omega\sin\alpha-R_{0}\omega_{0}\cos l$, 根据几何关系 $R\sin\alpha=R_{0}\cos l-d$ 可知切向速度为 $V_{\text{t}}=R_{0}\left(\omega-\omega_{0}\right)\cos l-\omega d$. 在 $R=R_{0}$ 附近将 $\omega-\omega_{0}$ 泰勒级数展开，
+我们也可通过观测太阳附近恒星的运动来确定太阳的运动。如图\ref{Oort 公式图示。}所示，太阳附近银经为 $l$ 的恒星 $P$ 和太阳 $S$ 的转动角速度分别为 $\omega=\dfrac{V}{R}$ 和 $\omega_{0}=\dfrac{V_{0}}{R_{0}}$, 恒星相对于太阳的视向速度为 $V_{\text{r}}=V\cos{\alpha}-V_{0}\sin{l}$. 根据几何关系 $\cos{\alpha}=\dfrac{R_{0}\sin{l}}{R}$ 视向速度可写作 $V_{\text{r}}=R_{0}\left(\omega-\omega_{0}\right)\sin{l}$, 切向速度为 $V_{\text{t}}=R\omega\sin{\alpha}-R_{0}\omega_{0}\cos{l}$, 根据几何关系 $R\sin{\alpha}=R_{0}\cos{l}-d$ 可知切向速度为 $V_{\text{t}}=R_{0}\left(\omega-\omega_{0}\right)\cos{l}-\omega d$. 在 $R=R_{0}$ 附近将 $\omega-\omega_{0}$ 泰勒级数展开，
 \begin{equation}
 \omega-\omega_{0}=\left(\frac{\symup{d}W}{\symup{d}R}\right)_{R_{0}}\left(R-R_{0}\right)+\cdots\approx\frac{1}{R_{0}^{2}}\left[R_{0}\left(\frac{\symup{d}V}{\symup{d}R}\right)_{R_{0}}-V_{0}\right]\left(R-R_{0}\right),
 \end{equation}
-对 $R\approx R_{0}\gg d, R-R_{0}\approx-d\cos l$ 有
+对 $R\approx R_{0}\gg d, R-R_{0}\approx-d\cos{l}$ 有
 \begin{equation}
-V_{\text{r}}=Ad\sin2l, V_{\text{t}}=Ad\cos2l+Bd,
+V_{\text{r}}=Ad\sin{\left(2l\right)}, V_{\text{t}}=Ad\cos{\left(2l\right)}+Bd,
 \end{equation}
 根据太阳附近恒星的视向和切向速度，可以求出奥尔特常数：
 \begin{align}
@@ -108,7 +108,7 @@ B&=-\frac{1}{2}\left[\frac{V_{0}}{R_{0}}+\left(\frac{\symup{d}V}{\symup{d}R}\rig
 \end{align}
 从而求出太阳绕银心转动角速度 $\omega_{0}=A-B=29\pm\qty{1.8}{km\cdot{}s^{-1}\cdot kpc^{-1}}$, 转动周期约 $\qty{2.2e8}{yr}$, 转动速度约 $238\pm\qty{15}{km\cdot{}s^{-1}}$. 上述数据是本地静止标准速度，太阳相对于该速度还有约 $\qty{10}{km\cdot{}s^{-1}}$ 的本动速度。
 
-接着我们来确定整个银河系不同半径处天体的自转速度，从而绘制出银河系自转曲线，进而确定银河系质量分布。$R<R_{0}$ 的区域，我们测量视线方向上 $\ce{H}\,\symup{\uppercase\expandafter{\romannumeral1}}$ 的 $\qty{21}{cm}$ 谱线和 $\ce{CO}$ 谱线的最大多普勒位移。为什么要确定“最大值”呢？在给定银经方向上，我们可以看到不同半径处的云团所发出的辐射，我们无法直接建立半径和视向速度的关系。但通过简单计算我们发现，在第一象限 $l\in(0, 90^{\circ})$ 中，中性氢所处轨道半径 $R=R_{0}\sin l$ 时视向速度最大，因此我们可以确定该点的轨道半径和视向速度。而速度满足 $V_{\text{r}}=R_{0}\left(\omega-\omega_{0}\right)\sin l$, 进而可以得到 $\omega\left(R\right)$ 和 $V\left(R\right)$. 这种方法被称作切点法。
+接着我们来确定整个银河系不同半径处天体的自转速度，从而绘制出银河系自转曲线，进而确定银河系质量分布。$R<R_{0}$ 的区域，我们测量视线方向上 $\ce{H}\,\symup{\uppercase\expandafter{\romannumeral1}}$ 的 $\qty{21}{cm}$ 谱线和 $\ce{CO}$ 谱线的最大多普勒位移。为什么要确定“最大值”呢？在给定银经方向上，我们可以看到不同半径处的云团所发出的辐射，我们无法直接建立半径和视向速度的关系。但通过简单计算我们发现，在第一象限 $l\in\left(0, \ang{90;;}\right)$ 中，中性氢所处轨道半径 $R=R_{0}\sin{l}$ 时视向速度最大，因此我们可以确定该点的轨道半径和视向速度。而速度满足 $V_{\text{r}}=R_{0}\left(\omega-\omega_{0}\right)\sin{l}$, 进而可以得到 $\omega\left(R\right)$ 和 $V\left(R\right)$. 这种方法被称作切点法。
 
 而 $R>R_{0}$ 的区域主要靠 $\ce{H}\,\symup{\uppercase\expandafter{\romannumeral2}}$ 区的发射线、分子云的 $\ce{CO}$ 分子毫米波谱线和 Maser 谱线来确定视向速度。视向速度指向我们时记为负。最后我们可以绘制出视向速度和银经的关系：
 \begin{figure}[!htbp]
@@ -242,7 +242,7 @@ Virial theorem
 
 恒星能量改变有以下几种方式。其一是弱远交会，
 \begin{align}
-&F_{\bot}=\frac{\symup{G}m^{2}}{b^{2}}\left[1+\left(\frac{vt}{b}\right)^{2}\right]^{-\frac32}.\\
+&F_{\bot}=\frac{\symup{G}m^{2}}{b^{2}}\left[1+\left(\frac{vt}{b}\right)^{2}\right]^{-\frac{3}{2}}.\\
 &\delta v_{\bot}=\frac{2\symup{G}m}{bv}.
 \end{align}
 考虑到数密度和随机游走的积累
@@ -272,7 +272,7 @@ n\sim\frac{1}{8\pi}\frac{N}{\ln N}.
 
 星系中心最亮，亮度向边缘递减。我们可以用面亮度（单位平方角秒的星等）描述亮度，多数椭圆星系满足
 \begin{equation}
-I\left(R\right)=I_{0}\exp\left[-7.67\left(\frac{R}{R_{\text{e}}}\right)^{\frac14}\right],
+I\left(R\right)=I_{0}\exp\left[-7.67\left(\frac{R}{R_{\text{e}}}\right)^{\frac{1}{4}}\right],
 \end{equation}
 
 椭圆星系有四个基本参数（其中三个是独立的）：星系光度，有效半径，平均面亮度，速度弥散。基本上，椭圆星系分布在有效半径、表面亮度和中心速度弥散组成的三维空间的平面附近：
@@ -284,7 +284,7 @@ I\left(R\right)=I_{0}\exp\left[-7.67\left(\frac{R}{R_{\text{e}}}\right)^{\frac14
 
 中心是球状或椭球状的核球。外面是扁平的星系盘，从核球两端延伸出两条或以上的螺旋状旋臂。盘外面是球状的星系晕。星系盘，特别是旋臂上主要是星族\uppercase\expandafter{\romannumeral1}恒星及气体和尘埃。核球和星系晕主要由星族\uppercase\expandafter{\romannumeral2}恒星构成，气体和尘埃很少。星系盘颜色偏蓝，星系晕和核偏红。盘中恒星和气体作圆轨道运动，晕中恒星作无规则轨道运动。旋臂中有恒星形成。
 
-同样有面亮度分布，不过椭圆星系是 $\exp\left(-\left(\dfrac{R}{R_{\text{e}}}\right)^{\frac14}\right)$, 盘星系是 $\exp\left(-\left(\dfrac{R}{R_{\text{e}}}\right)\right)$.
+同样有面亮度分布，不过椭圆星系是 $\exp\left(-\left(\dfrac{R}{R_{\text{e}}}\right)^{\frac{1}{4}}\right)$, 盘星系是 $\exp\left(-\left(\dfrac{R}{R_{\text{e}}}\right)\right)$.
 
 Faber-Jackson 关系
 
@@ -305,7 +305,7 @@ Faber-Jackson 关系
 
 \subsubsection{本星系群}
 
-大小约 $\qty{3}{Mpc}$, 包含至少 54 个成员星系，其中 3 个 (M31, Milky Way, M33) 是漩涡星系，其他是不规则星系和矮椭圆星系。银河系和仙女座星系 M31 是最大的两个星系，以二者引力为重心，大部分小星系被引力束缚在它们周围。M31 比银河系亮约 50\%, 第三亮的是 M33, 三者贡献了超过 90\%的光度。
+大小约 $\qty{3}{Mpc}$, 包含至少 54 个成员星系，其中 3 个 (M31, Milky Way, M33) 是漩涡星系，其他是不规则星系和矮椭圆星系。银河系和仙女座星系 M31 是最大的两个星系，以二者引力为重心，大部分小星系被引力束缚在它们周围。M31 比银河系亮约 50\%, 第三亮的是 M33, 三者贡献了超过 90\% 的光度。
 
 大麦哲伦云距离 $D=\qty{50}{kpc}, M=\qty{2e10}{M_{\odot}}, d=\qty{10}{kpc}$. SMC: 距离 $D=\qty{60}{kpc}, M=\qty{4e9}{M_{\odot}}, d=\qty{6}{kpc}$. 均为不规则星系，绕银河系转动，富含年轻恒星和中性气体。
 
@@ -342,7 +342,7 @@ X 射线观测发现星系团中温度达到 $\qty{e7}{K}$ 的热气体，星系
 
 由于宇宙膨胀和星系团相互间较弱的引力，处于膨胀或松散束缚状态，在宇宙空间呈网状相互连接。
 
-本超星系团中心在室女座星系团附近，直径 $\qty{60}{Mpc}$, 质量 $\qty{e15}{M_{\odot}}$, 本星系群以 $250\text{\textendash}\qty{350}{km\cdot{}s^{-1}}$ 的速度向中心运动。
+本超星系团直径 $\qty{60}{Mpc}$, 质量 $\qty{e15}{M_{\odot}}$, 中心在室女座星系团附近。本星系群以 $250\text{\textendash}\\\qty{350}{km\cdot{}s^{-1}}$ 的速度向中心运动。
 
 夜天亮度：紫外到红外波段的平均天光面亮度。天空比星系的大部分区域亮，因此星系该波段测光观测须在无月夜进行。
 
