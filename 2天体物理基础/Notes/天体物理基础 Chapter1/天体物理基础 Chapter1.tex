@@ -32,16 +32,16 @@ m_{1}-m_{2}=-2.5\log_{10}\left(\frac{F_{1}}{F_{2}}\right).\label{1.1.3}
 \subsubsection{辐射强度和辐射转移方程}
 从绝对星等的引入我们看出，亮度作为实际的可观测量，并不足以直接体现天体的固有性质。另一方面，各向同性的情形并没有那么常见，我们希望找到一种物理量，让亮度成为该物理量的积分。为此我们定义辐射强度 (Specific Intensity) $I_{\nu}$, 定义为一束通过面元 $\symup{d}A$ 、传播方向与面元法向呈 $\theta$ 角的，频率为 $\nu$ 的光线，单位时间单位频率间隔单位立体角内所传播的能量：
 \begin{equation}
-\symup{d}E_{\nu}=I_{\nu}\cos\theta\symup{d}A\symup{d}t\symup{d}\Omega\symup{d}\nu.
+\symup{d}E_{\nu}=I_{\nu}\cos{\theta}\symup{d}A\symup{d}t\symup{d}\Omega\symup{d}\nu.
 \end{equation}
 此处解释一下立体角。我们知道球面面元面积可以用经角 $\varphi$ 和纬角 $\ang{90;;}-\theta$ 描述：
 \begin{equation}
-\symup{d}A=r\symup{d}\theta\cdot r\sin\theta\symup{d}\varphi,
+\symup{d}A=r\symup{d}\theta\cdot r\sin{\theta}\symup{d}\varphi,
 \end{equation}
 定义立体角为
 \begin{align}
-\symup{d}\Omega&=\frac{\symup{d}A}{r^{2}}=\sin\theta\symup{d}\theta\symup{d}\varphi,\\
-\Omega&=\int\symup{d}\Omega=\int_{0}^{2\pi}\symup{d}\varphi\int_{0}^{\pi}\sin\theta\symup{d}\theta=4\pi.
+\symup{d}\Omega&=\frac{\symup{d}A}{r^{2}}=\sin{\theta}\symup{d}\theta\symup{d}\varphi,\\
+\Omega&=\int\symup{d}\Omega=\int_{0}^{2\pi}\symup{d}\varphi\int_{0}^{\pi}\sin{\theta}\symup{d}\theta=4\pi.
 \end{align}
 即整个球面的立体角为 $4\pi$, 考虑到弧度制与角度制的转换 $\ang{180;;}=\pi$, 全天立体角大约为 $4\pi\times\left(\dfrac{\ang{180;;}}{\pi}\right)^{2}\approx41252.96$ 平方度。目前最强的望远镜分辨率可以达到毫角秒 ($\unit{mas}$) 甚至微角秒 ($\unit{\mu as}$), 可见我们能分辨出的恒星确实是一个天文数字！
 
@@ -82,9 +82,9 @@ m_{1}-m_{2}=-2.5\log_{10}\left(\frac{F_{1}}{F_{2}}\right).\label{1.1.3}
 \label{辐射强度不变性。}
 \end{figure}
 
-那么，为什么要引入立体角进行这么麻烦的定义呢？一方面，定义式中出现了法向面元 $\symup{d}A\cos\theta$, 而 $\symup{d}A\cos\theta$ 相对遥远观测者会张成一个立体角。（换言之，如果要观测的对象不是一个面源，而是一个点源，辐射强度就不那么适用了。）另一方面，如此定义后辐射强度有一个非常好的性质。我们考虑一束通过恒星表面和望远镜表面两个面元的光线，如图\ref{辐射强度不变性。}所示，假定传播路径没有辐射或吸收辐射的成分起作用，通过的能量是一样的，根据辐射强度和立体角定义有
+那么，为什么要引入立体角进行这么麻烦的定义呢？一方面，定义式中出现了法向面元 $\symup{d}A\cos{\theta}$, 而 $\symup{d}A\cos{\theta}$ 相对遥远观测者会张成一个立体角。（换言之，如果要观测的对象不是一个面源，而是一个点源，辐射强度就不那么适用了。）另一方面，如此定义后辐射强度有一个非常好的性质。我们考虑一束通过恒星表面和望远镜表面两个面元的光线，如图\ref{辐射强度不变性。}所示，假定传播路径没有辐射或吸收辐射的成分起作用，通过的能量是一样的，根据辐射强度和立体角定义有
 \begin{equation}
-I\symup{d}A\cos\theta\cdot\frac{\symup{d}A'\cos\theta'}{r^{2}}\symup{d}t\symup{d}\nu=I'\symup{d}A'\cos\theta'\frac{\symup{d}A\cos\theta}{r^{2}}\symup{d}t\symup{d}\nu.
+I\symup{d}A\cos{\theta}\cdot\frac{\symup{d}A'\cos{\theta'}}{r^{2}}\symup{d}t\symup{d}\nu=I'\symup{d}A'\cos{\theta'}\frac{\symup{d}A\cos{\theta}}{r^{2}}\symup{d}t\symup{d}\nu.
 \end{equation}
 即接收到的辐射强度就等于天体发射的辐射强度，和距离没有关系。这是个非常有用的性质，在进行星系研究的时候，因为星系离我们很远，看起来比较暗淡，往往要直接积分所有恒星的光，研究星系的面亮度。常用的辐射探测器，比如电荷耦合器件 (charge-coupled device, CCD), 也是二维成像器件，它的一部分像素所记录的辐射强度，就是星系对应区域的面亮度。
 
@@ -109,7 +109,7 @@ I_{\nu\text{obs}}=I_{\nu0}\symup{e}^{-\int\alpha_{\nu}\symup{d}l},\label{1.1.13}
 \end{equation}
 由此我们可以定义光学深度（简称光深）
 \begin{equation}
-\symup{d}\tau_\nu=\alpha_{\nu}\symup{d}l,\\
+\symup{d}\tau_{\nu}=\alpha_{\nu}\symup{d}l,\\
 \end{equation}
 此时 (\ref{1.1.13}) 式改写为
 \begin{equation}
@@ -141,11 +141,11 @@ I_{\nu\text{obs}}&=I_{\nu0}\symup{e}^{-\tau_{\nu}}+S_{\nu}\int^{\tau_{\nu}}_{0}\
 \subsubsection{测光系统和星等系统}
 前文提到立体角的引入与面元有关。辐射强度的定义用到面元的优点是，很容易建立辐射强度与亮度的关系，这也是我们最初的目的之一。只要对立体角做积分（要对整个 $4\pi$ 积分，因为面元可以通过来自四面八方的辐射）就能得到自面元两侧方向穿过面元的能量的差额（如向左 $\qty{10}{J}$ 向右 $\qty{20}{J}$ 合计向右 $\qty{10}{J}$):
 \begin{equation}
-E_{\nu}=\int_{\Omega}I_{\nu}\cos\theta\symup{d}A\symup{d}t\symup{d}\nu\symup{d}\Omega,
+E_{\nu}=\int_{\Omega}I_{\nu}\cos{\theta}\symup{d}A\symup{d}t\symup{d}\nu\symup{d}\Omega,
 \end{equation}
 进一步就可知道单位时间单位面积单位频率间隔所通过的“净能量”（即差额）为
 \begin{equation}
-F_{\nu}=\int_{\Omega}I_{\nu}\cos\theta\symup{d}\Omega.
+F_{\nu}=\int_{\Omega}I_{\nu}\cos{\theta}\symup{d}\Omega.
 \end{equation}
 我们称其为流量密度 (Flux Density). 在一定频率范围内积分得到
 \begin{equation}
@@ -199,7 +199,7 @@ $\Delta{}\lambda\left(\unit{\angstrom}\right)$ & $680$ & $980$ & $890$ & $2200$ 
 
 此处可能有读者会疑惑为什么不用 $L=4\pi R^{2}\sigma_{\text{SB}}T^{4}$ 求温度，因为恒星离我们过于遥远，很难通过观测分辨其大小，即使能做到也很浪费观测资源，应该要反过来用这个公式求半径才对。
 
-我们注意到表\ref{常用滤光片波段。}中有一栏为 $\Delta{}\lambda$, 这个量又是如何定义的？首先对于滤光片，我们用带通 (Bandpass) 表征波长 $\lambda$ 处透过光的比例，取值范围 $0\le T_{\text{BP}}(\lambda)\le 1$, 光可以完全透过滤光片时 $T_{\text{BP}}$ 取 1. $\Delta\lambda$ 为滤光片带宽，是 $T_{\text{BP}}=0.5$ 所对应的两个波长的差值。习惯上用宽带 ($\Delta\lambda>\qty{30}{nm}$) 滤光片进行暗弱天体测光，或者粗略测量辐射的频率分布（连续谱），用窄带 ($\Delta\lambda<\qty{10}{nm}$) 滤光片测量吸收和发射谱线轮廓，中带滤光片带宽则介于二者之间。
+我们注意到表\ref{常用滤光片波段。}中有一栏为 $\Delta{}\lambda$, 这个量又是如何定义的？首先对于滤光片，我们用带通 (Bandpass) 表征波长 $\lambda$ 处透过光的比例，取值范围 $0\le T_{\text{BP}}\left(\lambda\right)\le 1$, 光可以完全透过滤光片时 $T_{\text{BP}}$ 取 1. $\Delta\lambda$ 为滤光片带宽，是 $T_{\text{BP}}=0.5$ 所对应的两个波长的差值。习惯上用宽带 ($\Delta\lambda>\qty{30}{nm}$) 滤光片进行暗弱天体测光，或者粗略测量辐射的频率分布（连续谱），用窄带 ($\Delta\lambda<\qty{10}{nm}$) 滤光片测量吸收和发射谱线轮廓，中带滤光片带宽则介于二者之间。
 
 采用不同的滤光片组合我们可以得到不同的测光系统。所谓测光，就是用辐射探测器配合望远镜测定天体的亮度。常用的有 UBVRI（紫外、蓝、可见、红、红外）五色测光系统，$m_{\text{pg}}, m_{\text{pv}}$ 二色测光系统，uvby 四色测光系统等。我们简单介绍一下后面两者吧。在各种光电器件（使用光电效应测光的器件）还没发明的时候，人类使用照相底片拍摄天区，于是有了照相星等 $m_{\text{pg}}$；另一方面则使用正色片前加黄滤光片测光得到仿视星等 $m_{\text{pv}}$（类似目视星等），如此以来便得到最初的色指数。uvby 四色系统波段则如表\ref{uvby 四色测光滤光片波段。}所示。我们发现 uvby 的带宽较 UVBRI 测光系统更窄一点，主要用来测吸收线。uvby 主要使用三个参数进行分析。首先 $\symup{b}-\symup{y}$ 与 $\symup{B}-\symup{V}$ 相当，只与恒星温度有关。接着是 $C_{1}=\left(\symup{u}-\symup{v}\right)-\left(\symup{v}-\symup{b}\right)$, 与 Balmer Break（我们后续会解释这是什么）有关。最后是 $m_{1}=\left(\symup{v}-\symup{b}\right)-\left(\symup{b}-\symup{y}\right)$, 与恒星金属丰度有关。
 
@@ -244,9 +244,9 @@ m_{\text{BP}}&=-2.5\log_{10}\left(\frac{\langle F_{\text{BP}}\rangle}{\langle F_
 \subsubsection{描述辐射场的其他物理量}
 本小节我们将通过辐射强度构建一些描述辐射场的物理量。
 
-首先我们介绍一种辐射强度的等价描述方法。我们已经知道辐射强度是用通过面元的能量来定义的，实际上这种能量也可以用通过面元的光子来描述。定义辐射场单位体积中光子数为 $f_{R}\left(\vec{r},\vec{m},\nu, t\right)$, 单位时间内通过面元的体积为 $\symup{d}A\cos\theta\symup{c}\symup{d}t$, 光子所携带的能量为
+首先我们介绍一种辐射强度的等价描述方法。我们已经知道辐射强度是用通过面元的能量来定义的，实际上这种能量也可以用通过面元的光子来描述。定义辐射场单位体积中光子数为 $f_{R}\left(\vec{r},\vec{m},\nu, t\right)$, 单位时间内通过面元的体积为 $\symup{d}A\cos{\theta}\symup{c}\symup{d}t$, 光子所携带的能量为
 \begin{equation}
-\symup{d}E_{\nu}=h\nu\cdot f_{R}\left(\vec{r},\vec{m},\nu, t\right)\left(\symup{d}A\cos\theta\symup{d}\Omega\symup{d}\nu\symup{c}\symup{d}t\right),
+\symup{d}E_{\nu}=h\nu\cdot f_{R}\left(\vec{r},\vec{m},\nu, t\right)\left(\symup{d}A\cos{\theta}\symup{d}\Omega\symup{d}\nu\symup{c}\symup{d}t\right),
 \end{equation}
 对照得到
 \begin{equation}
@@ -256,12 +256,12 @@ I_{\nu}\left(\vec{r},\vec{m}, t\right)=\symup{c}h\nu f_{R}\left(\vec{r},\vec{m},
 
 将 $I_{\nu}$ 对方向做平均可以得到平均辐射强度：
 \begin{equation}
-J_{\nu}=\frac1{4\pi}\int_{4\pi}I_{\nu}\symup{d}\Omega,
+J_{\nu}=\frac{1}{4\pi}\int_{4\pi}I_{\nu}\symup{d}\Omega,
 \end{equation}
 
 接着定义辐射流矢量
 \begin{equation}
-\vec{\mathcal{F}_{\nu}}(\vec{r}, t)=\int_{4\pi}I_{\nu}\left(\vec{r},\vec{m}, t\right)\vec{m}\symup{d}\Omega,
+\vec{\mathcal{F}_{\nu}}\left(\vec{r}, t\right)=\int_{4\pi}I_{\nu}\left(\vec{r},\vec{m}, t\right)\vec{m}\symup{d}\Omega,
 \end{equation}
 它与流量的关系为
 \begin{equation}
@@ -269,10 +269,10 @@ F_{\nu}=\vec{\mathcal{F}_{\nu}}\cdot\vec{n}.
 \end{equation}
 其中 $\vec{n}$ 是面元法向。
 
-辐射穿过单位体积元所用的时间为 $\symup{d}t=\dfrac{\symup{d}l\sec\theta}{\symup{c}}$, 该单位时间中还保留着能量
+辐射穿过单位体积元所用的时间为 $\symup{d}t=\dfrac{\symup{d}l\sec{\theta}}{\symup{c}}$, 该单位时间中还保留着能量
 \begin{align}
-\symup{d}E_{\nu}&=I_\nu\left(\vec{r},\vec{m}, t\right)\symup{d}A\cos\theta\symup{d}\Omega\symup{d}\nu\symup{d}t\notag\\
-&=\frac{1}{\symup{c}}I_\nu\left(\vec{r},\vec{m}, t\right)\symup{d}V\symup{d}\Omega\symup{d}\nu.
+\symup{d}E_{\nu}&=I_{\nu}\left(\vec{r},\vec{m}, t\right)\symup{d}A\cos{\theta}\symup{d}\Omega\symup{d}\nu\symup{d}t\notag\\
+&=\frac{1}{\symup{c}}I_{\nu}\left(\vec{r},\vec{m}, t\right)\symup{d}V\symup{d}\Omega\symup{d}\nu.
 \end{align}
 总计所有方向积分就得到体元从各个方向得到的能量。定义辐射密度
 \begin{equation}
@@ -282,16 +282,16 @@ U_{\nu}=\frac{1}{\symup{c}}\int_{4\pi}I_{\nu}\symup{d}\Omega=\frac{4\pi}{\symup{
 
 有能量自然要考虑动量。单位辐射能光子携带动量的法向分量为
 \begin{equation}
-\symup{d}p_{n}=\frac{\symup{d}E_{\nu}}{\symup{c}}\cos\theta=\frac{1}{\symup{c}}I_{\nu}\cos^{2}\theta\symup{d}\Omega\symup{d}\nu\symup{d}A\symup{d}t.
+\symup{d}p_{n}=\frac{\symup{d}E_{\nu}}{\symup{c}}\cos{\theta}=\frac{1}{\symup{c}}I_{\nu}\cos^{2}{\theta}\symup{d}\Omega\symup{d}\nu\symup{d}A\symup{d}t.
 \end{equation}
 进而可以根据单位面积单位频率间隔面元受力定义辐射压力
 \begin{equation}
-P_{R,\nu}=\frac{1}{\symup{c}}\int_{4\pi}I_{\nu}\cos^{2}\theta\symup{d}\Omega,
+P_{R,\nu}=\frac{1}{\symup{c}}\int_{4\pi}I_{\nu}\cos^{2}{\theta}\symup{d}\Omega,
 \end{equation}
 即单位频率间隔施加于面元的压强。它本质是个二阶对称张量
 \begin{align}
-\overset{\rightharpoonup\!\!\!\rightharpoonup}{P}_{R,\nu}\left(\vec{r}, t\right)&=\frac{1}{\symup{c}}\int_{4\pi}I_\nu\left(\vec{r},\vec{m}, t\right)\vec{m}\vec{m}\symup{d}\Omega,\\
-P&=\left[\overset{\rightharpoonup\!\!\!\rightharpoonup}P\cdot\vec n\right]\cdot\vec n.
+\overset{\rightharpoonup\!\!\!\rightharpoonup}{P}_{R,\nu}\left(\vec{r}, t\right)&=\frac{1}{\symup{c}}\int_{4\pi}I_{\nu}\left(\vec{r},\vec{m}, t\right)\vec{m}\vec{m}\symup{d}\Omega,\\
+P&=\left[\overset{\rightharpoonup\!\!\!\rightharpoonup}P\cdot\vec{n}\right]\cdot\vec{n}.
 \end{align}
 分量形式
 \begin{equation}
@@ -300,9 +300,9 @@ P&=\left[\overset{\rightharpoonup\!\!\!\rightharpoonup}P\cdot\vec n\right]\cdot\
 
 但更多时候我们并不关心压力的压强效果，而是关心压力所带来的加速度，因此有必要考虑介质的质量，为此先通过吸收系数定义质量吸收系数（或称不透明系数）
 \begin{equation}
-\kappa_\nu=\frac{\alpha_\nu}\rho=\frac{n\sigma_{\nu}}{\rho}=\frac{\sigma_\nu}{m}.
+\kappa_{\nu}=\frac{\alpha_{\nu}}\rho=\frac{n\sigma_{\nu}}{\rho}=\frac{\sigma_{\nu}}{m}.
 \end{equation}
-介质吸收某一辐射 $I_{\nu}\left(\vec{m}\right)$ 在 $\vec n$ 方向得到的动量为 $\dfrac{1}{\symup{c}}\left(\alpha_\nu I_\nu\symup{d}l\right)\symup{d}A\symup{d}\Omega\symup{d}\nu\symup{d}t\vec{m}\cdot\vec{n}$, 积分得到
+介质吸收某一辐射 $I_{\nu}\left(\vec{m}\right)$ 在 $\vec{n}$ 方向得到的动量为 $\dfrac{1}{\symup{c}}\left(\alpha_{\nu}I_{\nu}\symup{d}l\right)\symup{d}A\symup{d}\Omega\symup{d}\nu\symup{d}t\vec{m}\cdot\vec{n}$, 积分得到
 \begin{align}
 \vec{F}\symup{d}t&=\int_{\nu}\symup{d}\nu\int_{\Omega}\symup{d}\Omega\vec{m}\cdot\vec{n}\left[\frac{1}{\symup{c}}\left(\alpha_{\nu}I_{\nu}\symup{d}l\right)\symup{d}A\symup{d}t\right]\notag\\
 &=\int_{\nu}\symup{d}\nu\int_{\Omega}\symup{d}\Omega\vec{m}\cdot\vec{n}\cdot\left[\frac{1}{\symup{c}}\left(\kappa_{\nu}\frac{m}{\symup{d}l\symup{d}A}I_{\nu}\symup{d}l\right)\symup{d}A\symup{d}t\right]\notag\\
@@ -314,14 +314,14 @@ P&=\left[\overset{\rightharpoonup\!\!\!\rightharpoonup}P\cdot\vec n\right]\cdot\
 \end{equation}
 在球对称辐射场中常写作
 \begin{equation}
-f=\frac{1}{\symup{c}}\kappa F=\frac{1}{\symup{c}}\kappa\dfrac{L}{4\pi R^2}=\frac{L\sigma}{4\pi R^{2}\symup{c}m}.
+f=\frac{1}{\symup{c}}\kappa F=\frac{1}{\symup{c}}\kappa\dfrac{L}{4\pi R^{2}}=\frac{L\sigma}{4\pi{}R^{2}\symup{c}m}.
 \end{equation}
 可见介质受辐射力所得到的加速度取决于辐射源光度、介质散射截面大小（越大相当于面积越大，能接收到的光子越多）、介质到辐射源的距离以及介质质量。
 
 于是我们自然地引出 Eddington 光度。星系中心的超大质量黑洞，吸积物质时可以将物质的引力能转化为辐射能。当黑洞的引力与辐射力达到平衡时，吸积率就不能再上升，此时有最大光度。假设被吸积的物质为纯氢气体，散射截面为汤姆孙散射截面 $\sigma_{\text{T}}=\qty{6.65e-25}{cm^{2}}$, 此时最大光度被称作 Eddington 光度：
 \begin{align}
 \frac{\symup{G}M_{\text{BH}}}{R^{2}}&=\frac{L\sigma}{4\pi R^{2}\symup{c}m},\\
-L_{\text{Edd}}&=\frac{4\pi\symup{c}\symup{G}M_{\text{BH}}m_{\ce{H}}}{\sigma_{\text{T}}}=1.25\times10^{38}\frac{M_{\text{BH}}}{\unit{M_\odot}}\unit{erg\cdot{}s^{-1}}.
+L_{\text{Edd}}&=\frac{4\pi\symup{c}\symup{G}M_{\text{BH}}m_{\ce{H}}}{\sigma_{\text{T}}}=1.25\times10^{38}\frac{M_{\text{BH}}}{\unit{M_{\odot}}}\unit{erg\cdot{}s^{-1}}.
 \end{align}
 球对称吸积并不常见，大多数情况下吸积物质会形成一个盘，因此与盘呈一定夹角的辐射并不能有效转换为对物质的推力，因此可以实现超 Eddington 吸积。但随着黑洞质量逐渐提高，它的吸积能力可能会不断下降，一般超大质量黑洞辐射功率仅能达到 Eddington 光度的百分之一。但与太阳光度 $L_{\odot}=\qty{3.86e33}{erg\cdot{}s^{-1}}$ 对比，黑洞吸积能释放的辐射依旧是巨大的。
 
@@ -330,30 +330,33 @@ L_{\text{Edd}}&=\frac{4\pi\symup{c}\symup{G}M_{\text{BH}}m_{\ce{H}}}{\sigma_{\te
 
 注意到 $\symup{d}t=\dfrac{\symup{d}l}{\symup{c}}$, 辐射强度沿光线传播方向的变化可以写作
 \begin{align}
-I_{\nu}\left(\vec{r}+\symup{d}\vec{r}, t+\symup{d}t\right)&=I_\nu\left(\vec r, t\right)+\left(\frac{\partial I_\nu}{\partial t}\symup{d}t+\frac{\partial I_\nu}{\partial l}\symup{d}l\right)\notag\\
-&=I_\nu\left(\vec r, t\right)+\left(\frac{1}{\symup{c}}\frac{\partial}{\partial t}+\frac{\partial}{\partial l}\right)I_\nu \symup{d}l.
+I_{\nu}\left(\vec{r}+\symup{d}\vec{r}, t+\symup{d}t\right)&=I_{\nu}\left(\vec{r}, t\right)+\left(\frac{\partial I_{\nu}}{\partial t}\symup{d}t+\frac{\partial I_{\nu}}{\partial l}\symup{d}l\right)\notag\\
+&=I_{\nu}\left(\vec{r}, t\right)+\left(\frac{1}{\symup{c}}\frac{\partial}{\partial t}+\frac{\partial}{\partial l}\right)I_{\nu}\symup{d}l.
 \end{align}
 因此辐射转移方程可以写作
 \begin{equation}
-\left(\frac{1}{\symup{c}}\frac{\partial}{\partial t}+\frac{\partial}{\partial l}\right)I_\nu\left(\vec r, t\right)=j_\nu-\alpha_\nu I_\nu\left(\vec{r}, t\right).\label{1.1.51}
+\left(\frac{1}{\symup{c}}\frac{\partial}{\partial t}+\frac{\partial}{\partial l}\right)I_{\nu}\left(\vec{r}, t\right)=j_{\nu}-\alpha_{\nu}I_{\nu}\left(\vec{r}, t\right).\label{1.1.51}
 \end{equation}
 洛伦兹变换下，$t, I_{_{\nu}}, j_{\nu},\alpha_{\nu}$ 等都可能发生变化，我们并不确定换系后辐射转移方程是否还成立，因此要逐个分析各个物理量的变化。
 
 首先确定频率、辐射方向随参考系变换的变化。依旧遵循惯例，在 $x\text{\textendash}y\text{\textendash}z$ 直角坐标系中取经角 $\varphi$, 纬角 $\ang{90;;}-\theta$, 光子运动方向为
 \begin{equation}
-\left(n_x, n_y, n_z\right)=\left(\cos\varphi\sin\theta,\sin\varphi\sin\theta,\cos\theta\right).
+\left(n_{x}, n_{y}, n_{z}\right)=\left(\cos{\varphi}\sin{\theta},\sin{\varphi}\sin{\theta},\cos{\theta}\right).
 \end{equation}
-虽然听起来有点离谱，但此处我们采用 $i\symup{c}t$ “度规”，取 $x^{1}=x, x^{2}=y, x^{3}=z, x^{4}=i\symup{c}t,\beta=\dfrac{v}{\symup{c}},\gamma=\dfrac{1}{\sqrt{1-\dfrac{v^2}{\symup{c}^2}}}$, 光子四维动量写作
+虽然听起来有点离谱，但此处我们采用 $i\symup{c}t$ “度规”，取 $x^{1}=x, x^{2}=y, x^{3}=z, x^{4}=i\symup{c}t,\beta=\dfrac{v}{\symup{c}},\gamma=\dfrac{1}{\sqrt{1-\dfrac{v^{2}}{\symup{c}^{2}}}}$, 光子四维动量写作
 \begin{equation}
 p=\frac{h\nu}{\symup{c}}
 \begin{pmatrix}
-n_x, n_y, n_z, i
+n_{x}, n_{y}, n_{z}, i
 \end{pmatrix}.
 \end{equation}
 按照惯例面元法向方向是 $z$ 轴方向，因此洛伦兹变换写作
 \begin{equation}
 \begin{pmatrix}
-\nu' n'_z\\\nu' n'_y\\\nu' n'_x\\\nu' i
+\nu' n'_{z}\\
+\nu' n'_{y}\\
+\nu' n'_{x}\\
+\nu' i
 \end{pmatrix}=
 \begin{pmatrix}
 \gamma & 0 & 0 & i\gamma\beta\\
@@ -362,23 +365,23 @@ n_x, n_y, n_z, i
 -i\gamma\beta & 0 & 0 &\gamma
 \end{pmatrix}
 \begin{pmatrix}
-\nu n_z\\\nu n_y\\\nu n_x\\\nu i
+\nu n_{z}\\\nu n_{y}\\\nu n_{x}\\\nu i
 \end{pmatrix},
 \end{equation}
 解得
 \begin{align}
-\cos\theta'&=\frac{\cos\theta-\beta}{1-\cos\theta\beta}.\\
-\nu'&=\gamma\nu\left(1-\cos\theta\beta\right).\\
+\cos{\theta'}&=\frac{\cos{\theta}-\beta}{1-\cos{\theta}\beta}.\\
+\nu'&=\gamma\nu\left(1-\cos{\theta}\beta\right).\\
 \varphi'&=\varphi.
 \end{align}
 进而可以推得
 \begin{align}
-\frac{\symup{d}\nu'}{\symup{d}\nu}&=\gamma\left(1-\cos\theta\beta\right)=\frac{\nu'}{\nu},\\
-\symup{d}\cos\theta'&=\left(\frac{\nu}{\nu'}\right)^2\symup{d}\cos\theta.
+\frac{\symup{d}\nu'}{\symup{d}\nu}&=\gamma\left(1-\cos{\theta}\beta\right)=\frac{\nu'}{\nu},\\
+\symup{d}\cos{\theta'}&=\left(\frac{\nu}{\nu'}\right)^{2}\symup{d}\cos{\theta}.
 \end{align}
 注意到
 \begin{equation}
-\symup{d}\Omega=\sin\theta\symup{d}\theta\symup{d}\varphi=-\symup{d}\cos\theta\symup{d}\varphi,
+\symup{d}\Omega=\sin{\theta}\symup{d}\theta\symup{d}\varphi=-\symup{d}\cos{\theta}\symup{d}\varphi,
 \end{equation}
 可知
 \begin{equation}
@@ -388,36 +391,36 @@ n_x, n_y, n_z, i
 
 为了得到其他的洛伦兹不变量，我们势必要考虑辐射场中的标量。容易想到的自然是光子数。一定时间内通过同一面元的光子数是一定的。在一个相对面元静止的参考系中，
 \begin{equation}
-\symup{d}N=\frac{1}{h\nu}I\left(\cos\theta,\nu\right)\symup{d}A\cos\theta\symup{d}\Omega\symup{d}\nu \symup{d}t,
+\symup{d}N=\frac{1}{h\nu}I\left(\cos{\theta},\nu\right)\symup{d}A\cos{\theta}\symup{d}\Omega\symup{d}\nu \symup{d}t,
 \end{equation}
 换系后则要添加一项，面元扫过的区域中所含的光子数：
 \begin{align}
-\symup{d}N'&=\frac{1}{h\nu'}I'\left(\cos\theta',\nu'\right)\symup{d}A\cos\theta'\symup{d}\Omega'\symup{d}\nu' \symup{d}t'+f_{R}'\left(\vec{r'},\nu', t'\right)v\symup{d}t'\symup{d}A\symup{d}\Omega'\symup{d}\nu'\notag\\
-&=\frac{1}{h\nu'}I'\left(\cos\theta',\nu'\right)\symup{d}A\symup{d}\Omega'\symup{d}\nu'\symup{d}t'\left(\frac{v}{\symup{c}}+\cos\theta'\right),
+\symup{d}N'&=\frac{1}{h\nu'}I'\left(\cos{\theta'},\nu'\right)\symup{d}A\cos{\theta'}\symup{d}\Omega'\symup{d}\nu' \symup{d}t'+f_{R}'\left(\vec{r}',\nu', t'\right)v\symup{d}t'\symup{d}A\symup{d}\Omega'\symup{d}\nu'\notag\\
+&=\frac{1}{h\nu'}I'\left(\cos{\theta'},\nu'\right)\symup{d}A\symup{d}\Omega'\symup{d}\nu'\symup{d}t'\left(\frac{v}{\symup{c}}+\cos{\theta'}\right),
 \end{align}
 联立方程，配出 $\nu\symup{d}\nu\symup{d}\Omega$ 形式得到
 \begin{equation}
-\frac{1}{\nu^2}I_{\nu}\cos\theta\symup{d}t=\frac{1}{\nu'^2}I_{\nu'}'\symup{d}t'\left(\frac{v}{\symup{c}}+\cos\theta'\right).
+\frac{1}{\nu^{2}}I_{\nu}\cos{\theta}\symup{d}t=\frac{1}{\nu'^{2}}I_{\nu'}'\symup{d}t'\left(\frac{v}{\symup{c}}+\cos{\theta'}\right).
 \end{equation}
 根据对称性写出
 \begin{align}
 \symup{d}t'&=\gamma\symup{d}t,\\
-\cos\theta&=\dfrac{\cos\theta'+\beta}{1+\cos\theta'\beta},\\
-\nu&=\gamma\nu'\left(1+\cos\theta'\beta\right),
+\cos{\theta}&=\dfrac{\cos{\theta'}+\beta}{1+\cos{\theta'}\beta},\\
+\nu&=\gamma\nu'\left(1+\cos{\theta'}\beta\right),
 \end{align}
 最终得到
 \begin{equation}
-\frac{I_{\nu}}{\nu^3}=\frac{I_{\nu'}'}{\nu'^3}.
+\frac{I_{\nu}}{\nu^{3}}=\frac{I_{\nu'}'}{\nu'^{3}}.
 \end{equation}
 因此辐射强度和频率三次方成正比。辐射源靠近我们运动时，我们所观测到的频率会变高，上式告诉我们辐射强度会增强，反之变弱。实际观测中我们确实发现了该效应所引起的现象。超大质量黑洞吸积时会在两极产生喷流，但多数时候只能观测到一支喷流，原因就是另一支的物质远离我们运动，难以观测到。
 
 接着我们来研究发射系数和吸收系数的变化。同样考虑光子数，同一体元 $\symup{d}V$ 发射的光子数是一定的：
 \begin{equation}
-\frac{j_\nu\symup{d}V\symup{d}\Omega\symup{d}\nu\symup{d}t}{h\nu}=\frac{j_\nu'\symup{d}V'\symup{d}\Omega'\symup{d}\nu'\symup{d}t'}{h\nu'},
+\frac{j_{\nu}\symup{d}V\symup{d}\Omega\symup{d}\nu\symup{d}t}{h\nu}=\frac{j_{\nu'}'\symup{d}V'\symup{d}\Omega'\symup{d}\nu'\symup{d}t'}{h\nu'},
 \end{equation}
 注意到 $\symup{d}V\symup{d}t=\symup{d}V'\symup{d}t',\nu\symup{d}\nu\symup{d}\Omega=\nu'\symup{d}\nu'\symup{d}\Omega'$, 得到
 \begin{equation}
-\frac{j_\nu}{\nu^2}=\frac{j_\nu'}{\nu'^2}.
+\frac{j_{\nu}}{\nu^{2}}=\frac{j_{\nu'}'}{\nu'^{2}}.
 \end{equation}
 而吸收系数满足 $\alpha_{\nu}=\dfrac{j_{\nu}}{S_{\nu}}$, 因此我们直接写出
 \begin{equation}
@@ -429,20 +432,20 @@ n_x, n_y, n_z, i
 \dfrac{\partial}{\partial z}\\
 \dfrac{\partial}{\partial x}\\
 \dfrac{\partial}{\partial y}\\
-\dfrac1{i\symup{c}}\dfrac{\partial}{\partial t}\\
+\dfrac{1}{i\symup{c}}\dfrac{\partial}{\partial t}\\
 \end{pmatrix}
 =L^{-1}
 \begin{pmatrix}
 \dfrac{\partial}{\partial z'}\\
 \dfrac{\partial}{\partial x'}\\
 \dfrac{\partial}{\partial y'}\\
-\dfrac1{i\symup{c}}\dfrac{\partial}{\partial t'}\\
+\dfrac{1}{i\symup{c}}\dfrac{\partial}{\partial t'}\\
 \end{pmatrix}
 =\begin{pmatrix}
 \gamma\left(\dfrac{\partial}{\partial z'}-\dfrac{\beta}{\symup{c}}\dfrac{\partial}{\partial t'}\right)\\
 \dfrac{\partial}{\partial x'}\\
 \dfrac{\partial}{\partial y'}\\
-\dfrac\gamma{i\symup{c}}\left(\dfrac{\partial}{\partial t'}-\symup{c}\beta\dfrac{\partial}{\partial z'}\right)\\
+\dfrac{\gamma}{i\symup{c}}\left(\dfrac{\partial}{\partial t'}-\symup{c}\beta\dfrac{\partial}{\partial z'}\right)\\
 \end{pmatrix},
 \end{equation}
 \begin{equation}
@@ -482,7 +485,7 @@ n_x, n_y, n_z, i
 
 我们可以用偏振度 $\Pi$ 来区分（完全）偏振光、部分偏振光和非偏振光，其定义为偏振部分强度与总强度之比，
 \begin{equation}
-\Pi=\dfrac{\sqrt{Q^2+U^2+V^2}}I=\frac{I_{\text{pol}}}{I}.
+\Pi=\dfrac{\sqrt{Q^{2}+U^{2}+V^{2}}}I=\frac{I_{\text{pol}}}{I}.
 \end{equation}
 式中 $I, Q, U, V$ 被称作 Stokes 参数，其具体含义我们将在下一小节介绍。
 
@@ -520,114 +523,114 @@ n_x, n_y, n_z, i
 
 椭圆偏振光的电矢量强度可以沿椭圆长短轴方向分解：
 \begin{align}
-\xi_\chi&=\xi^{\left(0\right)}\cos\beta\sin\omega t,\\
-\xi_{\chi+\frac{\pi}{2}}&=\xi^{\left(0\right)}\sin\beta\cos\omega t.
+\xi_{\chi}&=\xi^{\left(0\right)}\cos{\beta}\sin{\left(\omega t\right)},\\
+\xi_{\chi+\frac{\pi}{2}}&=\xi^{\left(0\right)}\sin{\beta}\cos{\left(\omega t\right)}.
 \end{align}
 显然满足椭圆方程
 \begin{equation}
-\left(\frac{\xi_\chi}{\xi^{\left(0\right)}\cos\beta}\right)^2+\left(\frac{\xi_{\chi+\frac\pi2}}{\xi^{\left(0\right)}\sin\beta}\right)^2=1.
+\left(\frac{\xi_{\chi}}{\xi^{\left(0\right)}\cos{\beta}}\right)^{2}+\left(\frac{\xi_{\chi+\frac{\pi}{2}}}{\xi^{\left(0\right)}\sin{\beta}}\right)^{2}=1.
 \end{equation}
-定义椭率 $\cot\beta=\pm\dfrac{\text{长轴强度}}{\text{短轴强度}},-\dfrac{\pi}{4}\le\beta\le\dfrac{\pi}{4}$.
+定义椭率 $\cot{\beta}=\pm\dfrac{\text{长轴强度}}{\text{短轴强度}},-\dfrac{\pi}{4}\le\beta\le\dfrac{\pi}{4}$.
 
 现在任取一个坐标系，将其分解为沿两个不同坐标轴方向振动的线偏振光：
 \begin{align}
-\xi_l&=\xi_l^{\left(0\right)}\sin\left(\omega t-\varepsilon_l\right),\\
-\xi_r&=\xi_r^{\left(0\right)}\sin\left(\omega t-\varepsilon_r\right),\\
+\xi_{l}&=\xi_{l}^{\left(0\right)}\sin{\left(\omega t-\varepsilon_{l}\right)},\\
+\xi_{r}&=\xi_{r}^{\left(0\right)}\sin{\left(\omega t-\varepsilon_{r}\right)},\\
 \varepsilon_{r}&=\varepsilon_{l}+\delta.
 \end{align}
 根据几何关系
 \begin{align}
-\xi_l&=\xi_\chi\cos\chi-\xi_{\chi+\frac\pi2}\sin\chi,\notag\\
-\xi_r&=\xi_\chi\sin\chi+\xi_{\chi+\frac\pi2}\cos\chi,\notag
+\xi_{l}&=\xi_{\chi}\cos{\chi}-\xi_{\chi+\frac{\pi}{2}}\sin{\chi},\notag\\
+\xi_{r}&=\xi_{\chi}\sin{\chi}+\xi_{\chi+\frac{\pi}{2}}\cos{\chi},\notag
 \end{align}
 推出
 \begin{align}
-\xi_l^{\left(0\right)}\cos\varepsilon_l&=\xi^{\left(0\right)}\cos\beta\cos\chi,\\
-\xi_l^{\left(0\right)}\sin\varepsilon_l&=\xi^{\left(0\right)}\sin\beta\sin\chi,\\
-\xi_r^{\left(0\right)}\cos\varepsilon_r&=\xi^{\left(0\right)}\cos\beta\sin\chi,\\
-\xi_r^{\left(0\right)}\sin\varepsilon_r&=-\xi^{\left(0\right)}\sin\beta\cos\chi.
+\xi_{l}^{\left(0\right)}\cos{\varepsilon_{l}}&=\xi^{\left(0\right)}\cos{\beta}\cos{\chi},\\
+\xi_{l}^{\left(0\right)}\sin{\varepsilon_{l}}&=\xi^{\left(0\right)}\sin{\beta}\sin{\chi},\\
+\xi_{r}^{\left(0\right)}\cos{\varepsilon_{r}}&=\xi^{\left(0\right)}\cos{\beta}\sin{\chi},\\
+\xi_{r}^{\left(0\right)}\sin{\varepsilon_{r}}&=-\xi^{\left(0\right)}\sin{\beta}\cos{\chi}.
 \end{align}
 进而表示出两束线偏振光的强度和相位：
 \begin{align}
-\xi_l^{\left(0\right)}&=\xi^{\left(0\right)}\left(\cos^2\beta\cos^2\chi+\sin^2\beta\sin^2\chi\right)^\frac12,\\
-\xi_r^{\left(0\right)}&=\xi^{\left(0\right)}\left(\cos^2\beta\sin^2\chi+\sin^2\beta\cos^2\chi\right)^\frac12,\\
-\tan\varepsilon_l&=\tan\beta\tan\chi,\\
-\tan\varepsilon_r&=-\tan\beta\cot\chi.
+\xi_{l}^{\left(0\right)}&=\xi^{\left(0\right)}\left(\cos^{2}{\beta}\cos^{2}{\chi}+\sin^{2}{\beta}\sin^{2}{\chi}\right)^{\frac{1}{2}},\\
+\xi_{r}^{\left(0\right)}&=\xi^{\left(0\right)}\left(\cos^{2}{\beta}\sin^{2}{\chi}+\sin^{2}{\beta}\cos^{2}{\chi}\right)^{\frac{1}{2}},\\
+\tan{\varepsilon_{l}}&=\tan{\beta}\tan{\chi},\\
+\tan{\varepsilon_{r}}&=-\tan{\beta}\cot{\chi}.
 \end{align}
 由此定义四个 Stokes 参量：
 \begin{align}
-I&=\left[\xi^{\left(0\right)}\right]^2=
-\left[\xi_l^{\left(0\right)}\right]^2+\left[\xi_r^{\left(0\right)}\right]^2=I_l+I_r,\\
-Q&=\left[\xi_l^{\left(0\right)}\right]^2-\left[\xi_r^{\left(0\right)}\right]^2=I\cos2\beta\cos2\chi=I_l-I_r,\\
-U&=2\xi_l^{\left(0\right)}\xi_r^{\left(0\right)}\cos\left(\varepsilon_l-\varepsilon_r\right)=I\cos2\beta\sin2\chi=\left(I_l-I_r\right)\tan2\chi,\\
-V&=2\xi_l^{\left(0\right)}\xi_r^{\left(0\right)}\sin\left(\varepsilon_l-\varepsilon_r\right)=I\sin2\beta=\left(I_l-I_r\right)\tan2\beta\sec2\chi.
+I&=\left[\xi^{\left(0\right)}\right]^{2}=
+\left[\xi_{l}^{\left(0\right)}\right]^{2}+\left[\xi_{r}^{\left(0\right)}\right]^{2}=I_{l}+I_{r},\\
+Q&=\left[\xi_{l}^{\left(0\right)}\right]^{2}-\left[\xi_{r}^{\left(0\right)}\right]^{2}=I\cos{\left(2\beta\right)}\cos{\left(2\chi\right)}=I_{l}-I_{r},\\
+U&=2\xi_{l}^{\left(0\right)}\xi_{r}^{\left(0\right)}\cos{\left(\varepsilon_{l}-\varepsilon_{r}\right)}=I\cos{\left(2\beta\right)}\sin{\left(2\chi\right)}=\left(I_{l}-I_{r}\right)\tan{\left(2\chi\right)},\\
+V&=2\xi_{l}^{\left(0\right)}\xi_{r}^{\left(0\right)}\sin{\left(\varepsilon_{l}-\varepsilon_{r}\right)}=I\sin{\left(2\beta\right)}=\left(I_{l}-I_{r}\right)\tan{\left(2\beta\right)}\sec{\left(2\chi\right)}.
 \end{align}
 
 我们先前称将椭圆偏振光分解成沿坐标轴方向振动的线偏振光，其实这种说法是不准确的。椭圆偏振光分解成线偏振光的方式是唯一的，如果任取一个坐标系分解，这种分解仅在瞬时成立，因此振幅 $\xi_{l}^{\left(0\right)},\xi_{r}^{\left(0\right)}$, 相位 $\varepsilon_{l},\varepsilon_{r}$ 都在不断变化。不过，振幅比和相位差是恒定的，因此用一个周期内的时间平均量来定义 Stokes 参数更加严谨：
 \begin{align}
-I&=\overline{\left[\xi_l^{\left(0\right)}\right]^2}+\overline{\left[\xi_r^{\left(0\right)}\right]^2}, Q=\overline{\left[\xi_l^{\left(0\right)}\right]^2}-\overline{\left[\xi_r^{\left(0\right)}\right]^2},\notag\\
-U&=2\overline{\left[\xi_l^{\left(0\right)}\xi_r^{\left(0\right)}\right]}\cos\delta, V=2\overline{\left[\xi_l^{\left(0\right)}\xi_r^{\left(0\right)}\right]}\sin\delta.\notag
+I&=\overline{\left[\xi_{l}^{\left(0\right)}\right]^{2}}+\overline{\left[\xi_{r}^{\left(0\right)}\right]^{2}}, Q=\overline{\left[\xi_{l}^{\left(0\right)}\right]^{2}}-\overline{\left[\xi_{r}^{\left(0\right)}\right]^{2}},\notag\\
+U&=2\overline{\left[\xi_{l}^{\left(0\right)}\xi_{r}^{\left(0\right)}\right]}\cos{\delta}, V=2\overline{\left[\xi_{l}^{\left(0\right)}\xi_{r}^{\left(0\right)}\right]}\sin{\delta}.\notag
 \end{align}
 那么它们有什么物理意义呢？观察 $I$ 的表达式我们发现，它是 $l, r$ 两个方向的电矢量强度平方和，其实就表征了光强。而 $Q$ 则表示了两个方向线偏振强度之差，可记作 $I\left(\ang{0;;}\right)-I\left(\ang{90;;}\right)$. 同理 $U=I\left(\ang{45;;}\right)-I\left(\ang{135;;}\right)$, 可以在观测平面上沿 $\ang{45;;}$ 和 $\ang{135;;}$ 摆放偏振片测量该参数。而 $V=I\left(\text{RCP}\right)-I\left(\text{LCP}\right)$, 表示右旋圆偏振成分减去左旋圆偏振成分。如果它为 0, 自然就是线偏振光了。同理，如果 $Q=U=0$, 该偏振就是圆偏振。
 
 注意到，对于椭圆偏振光满足
 \begin{equation}
-I^2=Q^2+U^2+V^2.
+I^{2}=Q^{2}+U^{2}+V^{2}.
 \end{equation}
-而对于部分偏振光，$I^{2}>Q^{2}+U^{2}+V^{2}$, 因此多出来的那部分就是非偏振辐射强度 $I_{\text{e}}$, 而偏振部分强度是用 $I_{\text{pol}}\sqrt{Q^{2}+U^{2}+V^{2}}$ 表示的。如果 $I_{\text{pol}}=0$, 就是非偏振光。我们还可定义线偏振度 $\Pi_{\text{L}}=\dfrac{\sqrt{Q^2+U^2}}{I}$ 和圆偏振度 $\Pi_{\text{C}}=\dfrac{V}{I}$.
+而对于部分偏振光，$I^{2}>Q^{2}+U^{2}+V^{2}$, 因此多出来的那部分就是非偏振辐射强度 $I_{\text{e}}$, 而偏振部分强度是用 $I_{\text{pol}}\sqrt{Q^{2}+U^{2}+V^{2}}$ 表示的。如果 $I_{\text{pol}}=0$, 就是非偏振光。我们还可定义线偏振度 $\Pi_{\text{L}}=\dfrac{\sqrt{Q^{2}+U^{2}}}{I}$ 和圆偏振度 $\Pi_{\text{C}}=\dfrac{V}{I}$.
 
 \subsubsection{坐标系转动下 Stokes 参量的变换}
 $\left(l, r\right)$ 逆时针转动 $\varphi$, 此时长轴方位角变成 $\chi-\varphi$. $I, V$ 与 $\chi$ 无关，是转动不变量，其余 Stokes 参量变为
 \begin{align}
-Q'&=I\cos2\beta\cos2\left(\chi-\varphi\right)=Q\cos2\varphi+U\sin2\varphi,\\
-U'&=I\cos2\beta\sin2\left(\chi-\varphi\right)=-Q\sin2\varphi+U\cos2\varphi.
+Q'&=I\cos{\left(2\beta\right)}\cos{\left[2\left(\chi-\varphi\right)\right]}=Q\cos{\left(2\varphi\right)}+U\sin{\left(2\varphi\right)},\\
+U'&=I\cos{\left(2\beta\right)}\sin{\left[2\left(\chi-\varphi\right)\right]}=-Q\sin{\left(2\varphi\right)}+U\cos{\left(2\varphi\right)}.
 \end{align}
 可以解出新坐标系下向坐标轴的分解：
 \begin{align}
-I_\varphi&=I_l\cos^2\varphi+I_r\sin^2\varphi+\frac12U\sin2\varphi,\\
-I_{\varphi+\frac\pi2}&=I_l\sin^2\varphi+I_r\cos^2\varphi-\frac12U\sin2\varphi,
+I_{\varphi}&=I_{l}\cos^{2}{\varphi}+I_{r}\sin^{2}{\varphi}+\frac{1}{2}U\sin{\left(2\varphi\right)},\\
+I_{\varphi+\frac{\pi}{2}}&=I_{l}\sin^{2}{\varphi}+I_{r}\cos^{2}{\varphi}-\frac{1}{2}U\sin{\left(2\varphi\right)},
 \end{align}
 
 最终可以表示为
 \begin{align}
-L(\varphi)&=\begin{pmatrix}
-\cos^2\varphi &\sin^2\varphi &\dfrac12\sin2\varphi & 0\\
-\sin^2\varphi &\cos^2\varphi & -\dfrac12\sin2\varphi & 0\\
--\sin2\varphi &\sin2\varphi &\cos2\varphi & 0\\
+L\left(\varphi\right)&=\begin{pmatrix}
+\cos^{2}{\varphi} &\sin^{2}{\varphi} &\dfrac{1}{2}\sin{\left(2\varphi\right)} & 0\\
+\sin^{2}{\varphi} &\cos^{2}{\varphi} & -\dfrac{1}{2}\sin{\left(2\varphi\right)} & 0\\
+-\sin{\left(2\varphi\right)} &\sin{\left(2\varphi\right)} &\cos{\left(2\varphi\right)} & 0\\
 0 & 0 & 0 & 1
 \end{pmatrix},\\
 \symbf{I}'&=L\left(\varphi\right)\symbf{I}.
 \end{align}
 
 \subsubsection{实际观测中的瞬时强度}
-实际观测的辐射并不是完全偏振光，因此 $\dfrac{\xi_l^{\left(0\right)}}{\xi_r^{\left(0\right)}},\delta=\varepsilon_l-\varepsilon_r$ 也不恒定，同样要用平均量表示
+实际观测的辐射并不是完全偏振光，因此 $\dfrac{\xi_{l}^{\left(0\right)}}{\xi_{r}^{\left(0\right)}},\delta=\varepsilon_{l}-\varepsilon_{r}$ 也不恒定，同样要用平均量表示
 \begin{align}
-U=2\overline{\left[\xi_l^{\left(0\right)}\xi_r^{\left(0\right)}\right]\cos\delta},\\
-V=2\overline{\left[\xi_l^{\left(0\right)}\xi_r^{\left(0\right)}\right]\sin\delta}.
+U=2\overline{\left[\xi_{l}^{\left(0\right)}\xi_{r}^{\left(0\right)}\right]\cos{\delta}},\\
+V=2\overline{\left[\xi_{l}^{\left(0\right)}\xi_{r}^{\left(0\right)}\right]\sin{\delta}}.
 \end{align}
 
 实际测量得到的是瞬时强度 $I$ 及其方位角 $\psi$（从 $l$ 起逆时针计量）。记坐标轴方向分解分量间的固定相移为 $\eta$:
 \begin{equation}
-\xi_l=\xi_l^{\left(0\right)}\sin\omega t,\xi_r=\xi_r^{\left(0\right)}\sin\left(\omega t-\delta-\eta\right),
+\xi_{l}=\xi_{l}^{\left(0\right)}\sin{\left(\omega t\right)},\xi_{r}=\xi_{r}^{\left(0\right)}\sin{\left(\omega t-\delta-\eta\right)},
 \end{equation}
 $\psi$ 方向的电矢量振幅为
 \begin{align}
-\xi\left(\psi,\eta\right)&=\xi_l^{\left(0\right)}\sin\omega t\cos\psi+\xi_r^{\left(0\right)}\sin\left(\omega t-\delta-\eta\right)\sin\psi\notag\\
-&=\left[\xi_l^{\left(0\right)}\cos\psi+\xi_r^{\left(0\right)}\cos\left(\delta+\eta\right)\sin\psi\right]\sin\omega t-\xi_r^{\left(0\right)}\sin\left(\delta+\eta\right)\sin\psi\cos\omega t.
+\xi\left(\psi,\eta\right)&=\xi_{l}^{\left(0\right)}\sin{\left(\omega t\right)}\cos{\psi}+\xi_{r}^{\left(0\right)}\sin{\left(\omega t-\delta-\eta\right)}\sin{\psi}\notag\\
+&=\left[\xi_{l}^{\left(0\right)}\cos{\psi}+\xi_{r}^{\left(0\right)}\cos{\left(\delta+\eta\right)}\sin{\psi}\right]\sin{\left(\omega t\right)}-\xi_{r}^{\left(0\right)}\sin{\left(\delta+\eta\right)}\sin{\psi}\cos{\left(\omega t\right)}.
 \end{align}
 瞬时强度 $I$ 为 $\xi^{2}\left(\psi,\eta\right)$ 平方（时间平均量）：
 \begin{align}
-\xi^2\left(\psi,\eta\right)&=\left[\xi_l^{\left(0\right)}\right]^2\cos^2\psi+\left[\xi_r^{\left(0\right)}\right]^2\sin^2\psi+2\xi_l^{\left(0\right)}\xi_r^{\left(0\right)}\left(\cos\delta\cos\eta-\sin\delta\sin\eta\right)\sin\psi\cos\psi,\\
-I(\psi,\eta)&=\overline{\left[\xi_l^{\left(0\right)}\right]^2}\cos^2\psi+\overline{\left[\xi_r^{\left(0\right)}\right]^2}\sin^2\psi+2\overline{\left[\xi_l^{\left(0\right)}\xi_r^{\left(0\right)}\cos\delta\right]}\cos\eta-2\overline{\left[\xi_l^{\left(0\right)}\xi_r^{\left(0\right)}\sin\delta\right]}\sin\eta\notag\\
-&=I_l\cos^2\psi+I_r\sin^2\psi+\frac12\left(U\cos\eta-V\sin\eta\right)\sin2\psi\notag\\
-&=\frac12\left[I+Q\cos2\psi+\left(U\cos\eta-V\sin\eta\right)\sin2\psi\right].
+\xi^{2}\left(\psi,\eta\right)&=\left[\xi_{l}^{\left(0\right)}\right]^{2}\cos^{2}{\psi}+\left[\xi_{r}^{\left(0\right)}\right]^{2}\sin^{2}{\psi}+2\xi_{l}^{\left(0\right)}\xi_{r}^{\left(0\right)}\left(\cos{\delta}\cos{\eta}-\sin{\delta}\sin{\eta}\right)\sin{\psi}\cos{\psi},\\
+I\left(\psi,\eta\right)&=\overline{\left[\xi_{l}^{\left(0\right)}\right]^{2}}\cos^{2}{\psi}+\overline{\left[\xi_{r}^{\left(0\right)}\right]^{2}}\sin^{2}{\psi}+2\overline{\left[\xi_{l}^{\left(0\right)}\xi_{r}^{\left(0\right)}\cos{\delta}\right]}\cos{\eta}-2\overline{\left[\xi_{l}^{\left(0\right)}\xi_{r}^{\left(0\right)}\sin{\delta}\right]}\sin{\eta}\notag\\
+&=I_{l}\cos^{2}{\psi}+I_{r}\sin^{2}{\psi}+\frac{1}{2}\left(U\cos{\eta}-V\sin{\eta}\right)\sin{\left(2\psi\right)}\notag\\
+&=\frac{1}{2}\left[I+Q\cos{\left(2\psi\right)}+\left(U\cos{\eta}-V\sin{\eta}\right)\sin{\left(2\psi\right)}\right].
 \end{align}
 因此要完全了解偏振波性质需要通过持续观测确定 $I, Q, U, V,\psi,\eta$ 六个参量。
 
 \subsubsection{Faraday 旋转}
 天体物理学中，线偏振的电磁波在有磁场存在的等离子体中传播时，偏振面会发生旋转，原因在于左旋偏振光和右旋偏振光在磁等离子体中的相速度不同。相速度和等离子体折射率有关，$v=\dfrac{\symup{c}}{n}$. 磁场的存在造成磁等离子体空间各向异性，折射率不仅随电磁波频率而改变，也随传播方向与磁场的夹角改变，且给定频率和夹角有两个折射率，这两个折射率可以写成：
 \begin{equation}
-n^{2}_{\text{o, e}}=1-\frac{2V\left(1-V\right)}{2\left(1-V\right)-U\sin^{2}\theta\pm\left[U^{2}\sin^{4}\theta+4U\left(1-V\right)^{2}\cos^{2}\theta\right]^{\frac{1}{2}}},
+n^{2}_{\text{o, e}}=1-\frac{2V\left(1-V\right)}{2\left(1-V\right)-U\sin^{2}{\theta}\pm\left[U^{2}\sin^{4}{\theta}+4U\left(1-V\right)^{2}\cos^{2}{\theta}\right]^{\frac{1}{2}}},
 \end{equation}
 其中
 \begin{align}
@@ -651,11 +654,11 @@ n_{\text{e}}^{2}&=1-\frac{\omega_{\text{p}}^{2}\left(\omega^{2}-\omega_{\text{p}
 
 实际观测中我们往往考虑沿任意方向传播的高频成分（射电波段），此时电磁波的频率 $\omega\gg\omega_{\text{L}}$, 并且
 \begin{equation}
-1-\frac{\omega_{\text{p}}^{2}}{\omega^{2}}\gg\frac{\omega_{\text{L}}\sin^{2}\theta}{\omega\cos\theta},
+1-\frac{\omega_{\text{p}}^{2}}{\omega^{2}}\gg\frac{\omega_{\text{L}}\sin^{2}{\theta}}{\omega\cos{\theta}},
 \end{equation}
 此时折射率可以写成
 \begin{equation}
-n^{2}_{\text{o, e}}=1-\frac{\omega_{\text{p}}^{2}}{\omega\left(\omega\pm\omega_{\text{L}}'\right)},\omega_{\text{L}}'=\omega_{\text{L}}\cos\theta,\label{1.2.40}
+n^{2}_{\text{o, e}}=1-\frac{\omega_{\text{p}}^{2}}{\omega\left(\omega\pm\omega_{\text{L}}'\right)},\omega_{\text{L}}'=\omega_{\text{L}}\cos{\theta},\label{1.2.40}
 \end{equation}
 可以看到这个形式于平行磁场方向传播的模式非常近似，只是 Larmor 频率稍作修改。
 
@@ -665,17 +668,17 @@ n^{2}_{\text{o, e}}=1-\frac{\omega_{\text{p}}^{2}}{\omega\left(\omega\pm\omega_{
 \end{equation}
 将 (\ref{1.2.40}) 式代入其中，得到
 \begin{equation}
-\Delta{}=\frac{2\pi{\color{blue}{\ce{e}}}^{3}}{m_{0}^{2}\symup{c}^{2}\omega^{2}}N_{{\color{blue}{\ce{e}}}}rB\cos\theta=\frac{2\pi{\color{blue}{\ce{e}}}^{3}}{m_{0}^{2}\symup{c}^{2}\omega^{2}}\int_{0}^{r}N_{{\color{blue}{\ce{e}}}}B\cos\theta\symup{d}r.
+\Delta{}=\frac{2\pi{\color{blue}{\ce{e}}}^{3}}{m_{0}^{2}\symup{c}^{2}\omega^{2}}N_{{\color{blue}{\ce{e}}}}rB\cos{\theta}=\frac{2\pi{\color{blue}{\ce{e}}}^{3}}{m_{0}^{2}\symup{c}^{2}\omega^{2}}\int_{0}^{r}N_{{\color{blue}{\ce{e}}}}B\cos{\theta}\symup{d}r.
 \end{equation}
 所以偏振面的旋转角和等离子体密度、磁场、传播距离和传播方向与磁场方向夹角的余弦有关，且与偏振波的波长平方成正比。故定义旋转量度
 \begin{equation}
-R=\frac{{\color{blue}{\ce{e}}}^{3}}{2\pi m^{2}\symup{c}^{4}}\int_{0}^{r}N_{{\color{blue}{\ce{e}}}}B\cos\theta\symup{d}r,
+R=\frac{{\color{blue}{\ce{e}}}^{3}}{2\pi m^{2}\symup{c}^{4}}\int_{0}^{r}N_{{\color{blue}{\ce{e}}}}B\cos{\theta}\symup{d}r,
 \end{equation}
 波长为 $\lambda$ 的电磁波穿过长度为 $r$ 的等离子体后偏振面旋转的角度为
 \begin{equation}
 \Delta{}=R\lambda^{2}.
 \end{equation}
-距离取 $\unit{pc}$, 电子数密度 $\unit{cm^{-3}}$, 磁场取 $\unit{\mu G}$ 时，$R=0.81\int_{0}^{r}nB\cos\theta\symup{d}r$. 可见通过测量不同频率线偏振波偏振面的旋转角度可以确定 $R$ 的值。
+距离取 $\unit{pc}$, 电子数密度 $\unit{cm^{-3}}$, 磁场取 $\unit{\mu G}$ 时，$R=0.81\int_{0}^{r}nB\cos{\theta}\symup{d}r$. 可见通过测量不同频率线偏振波偏振面的旋转角度可以确定 $R$ 的值。
 
 下一个问题是，$R$ 中电子数密度和磁场是耦合在一起的，能不能将它们区分开呢？答案是可以的，要用到本小节开头提及的相速度。无磁场等离子体中射电波的相速度为
 \begin{equation}
@@ -699,7 +702,7 @@ D=\int_{0}^{r}n\symup{d}r.
 \end{equation}
 比较频散量和旋转量度可以近似得到视线方向平均磁场强度
 \begin{equation}
-\overline{B}=\frac{\int_{0}^{r}nB\cos\theta\symup{d}r}{\int_{0}^{r}n\symup{d}r}=1.232\frac{R}{D}\,\unit{\mu G}.
+\overline{B}=\frac{\int_{0}^{r}nB\cos{\theta}\symup{d}r}{\int_{0}^{r}n\symup{d}r}=1.232\frac{R}{D}\,\unit{\mu G}.
 \end{equation}
 实际观测中，脉冲星和活动星系核 (Active Galactic Nuclei, AGN, 指星系中心正在吸积物质的超大质量黑洞）可以产生强烈的射电偏振信号，可用来测量银河系磁场。其辐射机制我们将在下节阐述。
 
@@ -761,52 +764,52 @@ N_{r}=\sum_{i}N_{r, i}=\frac{N_{r, 1}}{g_{r, 1}}\left(g_{r, 1}\symup{e}^{-\frac{
 \end{equation}
 定义配分函数
 \begin{equation}
-U_r(T)=\sum_{i=1}^\infty g_{r, i}\symup{e}^{-\frac{\varepsilon_{r, i}}{k_{\text{B}}T}},
+U_{r}\left(T\right)=\sum_{i=1}^{\infty}g_{r, i}\symup{e}^{-\frac{\varepsilon_{r, i}}{k_{\text{B}}T}},
 \end{equation}
 可以得到
 \begin{equation}
-N_{r}=\frac{N_{r, 1}}{g_{r, 1}}U_r(T)=\frac{N_{r, k}}{g_{r, k}}\symup{e}^{\frac{\varepsilon_{r, k}}{k_{\text{B}}T}}U_r(T).
+N_{r}=\frac{N_{r, 1}}{g_{r, 1}}U_{r}\left(T\right)=\frac{N_{r, k}}{g_{r, k}}\symup{e}^{\frac{\varepsilon_{r, k}}{k_{\text{B}}T}}U_{r}\left(T\right).
 \end{equation}
 
 有一些机制可以引起原子在两能级间的跃迁。首先，处于高能级的原子本身就是不稳定的，会自发向低能级跃迁。在没有外辐射场的情况下，单位时间内一个原子从高能级 $k$ 跃迁到低能级 $i$ 同时在 $\symup{d}\Omega$ 立体角内发射光子的概率为 $A_{ki}\dfrac{\symup{d}\Omega}{4\pi}$. 当辐射场存在时，高能级原子会受到扰动，向低能级跃迁并发出光子，该光子与辐射场入射光子在频率、相位、偏振、传播方向可能都相同。记单位时间由于受激辐射而产生的跃迁概率为 $B_{ki}I_{\nu}\dfrac{\symup{d}\Omega}{4\pi}$. 以后，低能级原子可以吸收辐射场光子能量跃迁到高能级，记受激吸收系数为 $B_{ik}$.
 
 因此单位时间内，$\symup{d}\Omega$ 内发射光子数目为
 \begin{equation}
-n_{k\to i}=N_k(A_{ki}+B_{ki}I_\nu)\frac{\symup{d}\Omega}{4\pi}.
+n_{k\to i}=N_{k}\left(A_{ki}+B_{ki}I_{\nu}\right)\frac{\symup{d}\Omega}{4\pi}.
 \end{equation}
 吸收光子数目为
 \begin{equation}
-n_{i\to k}=N_iB_{ik}I_\nu\frac{\symup{d}\Omega}{4\pi},
+n_{i\to k}=N_{i}B_{ik}I_{\nu}\frac{\symup{d}\Omega}{4\pi},
 \end{equation}
 热动平衡下存在细致平衡原理，即
 \begin{equation}
-N_k(A_{ki}+B_{ki}I_\nu)=N_iB_{ik}I_\nu.
+N_{k}\left(A_{ki}+B_{ki}I_{\nu}\right)=N_{i}B_{ik}I_{\nu}.
 \end{equation}
 同时粒子数分布满足玻尔兹曼公式，得到
 \begin{align}
-A_{ki}+B_{ki}I_\nu&=\frac{g_i}{g_k}\symup{e}^{-\frac{\varepsilon_i-\varepsilon_k}{k_{\text{B}}T}}B_{ik}I_\nu,\\
-I_{\nu}&=\frac{\dfrac{A_{ki}}{B_{ki}}}{\dfrac{g_{i}B_{ik}}{g_{k}B_{ki}}\symup{e}^\frac{h\nu_{ki}}{k_{\text{B}}T}-1}.
+A_{ki}+B_{ki}I_{\nu}&=\frac{g_{i}}{g_{k}}\symup{e}^{-\frac{\varepsilon_{i}-\varepsilon_{k}}{k_{\text{B}}T}}B_{ik}I_{\nu},\\
+I_{\nu}&=\frac{\dfrac{A_{ki}}{B_{ki}}}{\dfrac{g_{i}B_{ik}}{g_{k}B_{ki}}\symup{e}^{\frac{h\nu_{ki}}{k_{\text{B}}T}}-1}.
 \end{align}
-前文提到热动平衡下辐射强度等于 $B_\nu(T)$, 对比形式得到
+前文提到热动平衡下辐射强度等于 $B_{\nu}\left(T\right)$, 对比形式得到
 \begin{align}
 g_{i}B_{ik}&=g_{k}B_{ki},\\
 A_{ki}&=\frac{2h\nu_{ki}^{3}}{\symup{c}^{2}}B_{ki}.
 \end{align}
 
-因为受激发射和受激吸收都涉及到辐射场，一般将二者合在一起考虑。如图\ref{三种光谱。}所示，线谱一般并非一条无限细的线，而是有一定的轮廓。定义自发发射轮廓 $\psi_\nu$, 受激吸收和受激发射轮廓 $\varphi_\nu$. 物质发射系数可记作
+因为受激发射和受激吸收都涉及到辐射场，一般将二者合在一起考虑。如图\ref{三种光谱。}所示，线谱一般并非一条无限细的线，而是有一定的轮廓。定义自发发射轮廓 $\psi_{\nu}$, 受激吸收和受激发射轮廓 $\varphi_{\nu}$. 物质发射系数可记作
 \begin{equation}
-j_\nu=\frac{h\nu}{4\pi}A_{ki}N_k\psi_\nu,
+j_{\nu}=\frac{h\nu}{4\pi}A_{ki}N_{k}\psi_{\nu},
 \end{equation}
 吸收系数为
 \begin{equation}
-\alpha_{\nu}=\frac{h\nu}{4\pi}(B_{ik}N_i-B_{ki}N_{k})\varphi_\nu.\label{1.3.14}
+\alpha_{\nu}=\frac{h\nu}{4\pi}\left(B_{ik}N_{i}-B_{ki}N_{k}\right)\varphi_{\nu}.\label{1.3.14}
 \end{equation}
 源函数
 \begin{equation}
-S_\nu=\frac{j_\nu}{\alpha_\nu}=\frac{A_{ki}}{B_{ki}}\frac{1}{\dfrac{g_{k}}{g_{i}}\dfrac{N_{i}}{N_{k}}-1}\frac{\psi_\nu}{\varphi
-_\nu}=\frac{2h\nu^3}{\symup{c}^{2}}\frac{1}{\dfrac{g_{k}}{g_{i}}\dfrac{N_{i}}{N_{k}}-1}\frac{\psi_{\nu}}{\varphi_{\nu}}.
+S_{\nu}=\frac{j_{\nu}}{\alpha_{\nu}}=\frac{A_{ki}}{B_{ki}}\frac{1}{\dfrac{g_{k}}{g_{i}}\dfrac{N_{i}}{N_{k}}-1}\frac{\psi_{\nu}}{\varphi
+_{\nu}}=\frac{2h\nu^{3}}{\symup{c}^{2}}\frac{1}{\dfrac{g_{k}}{g_{i}}\dfrac{N_{i}}{N_{k}}-1}\frac{\psi_{\nu}}{\varphi_{\nu}}.
 \end{equation}
-即当 $\psi_\nu=\varphi_\nu$, 且原子分布满足玻尔兹曼分布时，源函数才转化为普朗克函数。
+即当 $\psi_{\nu}=\varphi_{\nu}$, 且原子分布满足玻尔兹曼分布时，源函数才转化为普朗克函数。
 
 值得一提的是，此时吸收系数可以写作
 \begin{equation}
@@ -820,8 +823,8 @@ _\nu}=\frac{2h\nu^3}{\symup{c}^{2}}\frac{1}{\dfrac{g_{k}}{g_{i}}\dfrac{N_{i}}{N_
 
 一般情况下原子数目按能级分布会偏离玻尔兹曼分布：
 \begin{align}
-\frac{N_k}{N_i}&=\frac{b_k}{b_i}\frac{g_k}{g_i}\symup{e}^{-\frac{\varepsilon_i-\varepsilon_k}{k_{\text{B}}T}},\\
-S_\nu&=\frac{2h\nu^3}{\symup{c}^{2}}\frac{1}{\dfrac{b_{i}}{b_{k}}\symup{e}^{\frac{h\nu}{k_{\text{B}}T}}-1}\frac{\psi_\nu}{\varphi_\nu}.
+\frac{N_{k}}{N_{i}}&=\frac{b_{k}}{b_{i}}\frac{g_{k}}{g_{i}}\symup{e}^{-\frac{\varepsilon_{i}-\varepsilon_{k}}{k_{\text{B}}T}},\\
+S_{\nu}&=\frac{2h\nu^{3}}{\symup{c}^{2}}\frac{1}{\dfrac{b_{i}}{b_{k}}\symup{e}^{\frac{h\nu}{k_{\text{B}}T}}-1}\frac{\psi_{\nu}}{\varphi_{\nu}}.
 \end{align}
 
 观察 (\ref{1.3.14}) 式发现，如果 $B_{ik}N_{i}<B_{ki}N_{k}$, 那么吸收系数为负，相当于辐射沿着路径不断增强。此时高能级粒子跃迁到低能级时，释放的辐射被邻近粒子吸收，邻近粒子受激辐射，短时间内连续发生向低能级迁移，整体将形成强有力的放射。当放射波长为可见光到红外波段时称为激光 (Laser), 射电的情形则称为微波受激辐射放大 (Microwave Amplification by Stimulated Emission of Radiation, Maser), 又称脉泽。
@@ -876,50 +879,50 @@ Maser 强度极高，比热辐射的高几个数量级，易与其他辐射区�
 \label{恒星相同半径处不同位置光传播示意图。}
 \end{figure}
 
-其次，如图\ref{恒星相同半径处不同位置光传播示意图。}所示，相同半径处，$\theta$ 不同，所经历的消光是不一样的。我们观测到的太阳圆面，靠近中心处 $\theta\to0$, 穿过的大气较少，消光弱，圆面边缘处消光就强。（基于相同的原因，实际天文观测要观测天顶附近的恒星，因为此时光通过的地球大气较少。）光实际走过的距离 $\symup{d}l$ 满足 $\symup{d}l\cos\theta=\symup{d}r$, 因此辐射转移方程可以写作
+其次，如图\ref{恒星相同半径处不同位置光传播示意图。}所示，相同半径处，$\theta$ 不同，所经历的消光是不一样的。我们观测到的太阳圆面，靠近中心处 $\theta\to0$, 穿过的大气较少，消光弱，圆面边缘处消光就强。（基于相同的原因，实际天文观测要观测天顶附近的恒星，因为此时光通过的地球大气较少。）光实际走过的距离 $\symup{d}l$ 满足 $\symup{d}l\cos{\theta}=\symup{d}r$, 因此辐射转移方程可以写作
 \begin{equation}
-\frac{\symup{d}I_{\nu}}{\symup{d}r}\cos\theta=j_{\nu}-\alpha_{\nu}I_{\nu}.
+\frac{\symup{d}I_{\nu}}{\symup{d}r}\cos{\theta}=j_{\nu}-\alpha_{\nu}I_{\nu}.
 \end{equation}
-因为粒子分布也是各向同性的，故 $\alpha_{\nu}$ 也只和 $r$ 有关。尽管实际走过的光深为 $\alpha_{\nu}\left(r\right)\symup{d}r\sec\theta$, 但为了保留 $\theta$ 的独立性，也为了建立光深和半径的对应关系，定义 $\symup{d}\tau_{\nu}\left(r\right)=\alpha_{\nu}\left(r\right)\symup{d}r$, 辐射转移方程写作
+因为粒子分布也是各向同性的，故 $\alpha_{\nu}$ 也只和 $r$ 有关。尽管实际走过的光深为 $\alpha_{\nu}\left(r\right)\symup{d}r\sec{\theta}$, 但为了保留 $\theta$ 的独立性，也为了建立光深和半径的对应关系，定义 $\symup{d}\tau_{\nu}\left(r\right)=\alpha_{\nu}\left(r\right)\symup{d}r$, 辐射转移方程写作
 \begin{equation}
-\cos\theta\frac{\symup{d}I_{\nu}\left(\theta, r\right)}{\symup{d}\tau_{\nu}\left(r\right)}=S_{\nu}\left(r\right)-I_{\nu}\left(\theta, r\right).
+\cos{\theta}\frac{\symup{d}I_{\nu}\left(\theta, r\right)}{\symup{d}\tau_{\nu}\left(r\right)}=S_{\nu}\left(r\right)-I_{\nu}\left(\theta, r\right).
 \end{equation}
 每一项都是 $r$ 的函数，也就意味着每一项都是光深的函数，而我们对后者更感兴趣，因此方程写作
 \begin{equation}
-\cos\theta\frac{\symup{d}I_{\nu}\left(\theta,\tau_{\nu}\right)}{\symup{d}\tau_{\nu}}=S_{\nu}\left(\tau_{\nu}\right)-I_{\nu}\left(\theta,\tau_{\nu}\right).
+\cos{\theta}\frac{\symup{d}I_{\nu}\left(\theta,\tau_{\nu}\right)}{\symup{d}\tau_{\nu}}=S_{\nu}\left(\tau_{\nu}\right)-I_{\nu}\left(\theta,\tau_{\nu}\right).
 \end{equation}
 尽管我们还不知道 $S_{\nu}$ 对 $\tau_{\nu}$ 的依赖关系，但我们可以给出上述方程的形式解。
 
 首先，每个体元都有向外和向内（指向恒星内部）辐射的部分
 \begin{equation}
-I_\nu=\begin{cases}
-I_\nu(\theta,\tau_\nu), & 0\le\theta<\dfrac{\pi}{2},\\
-I_\nu'(\psi,\tau_\nu), & \dfrac{\pi}{2}<\theta\le\pi,\psi=\pi-\theta.
+I_{\nu}=\begin{cases}
+I_{\nu}\left(\theta,\tau_{\nu}\right), & 0\le\theta<\dfrac{\pi}{2},\\
+I_{\nu}'\left(\psi,\tau_{\nu}\right), & \dfrac{\pi}{2}<\theta\le\pi,\psi=\pi-\theta.
 \end{cases}
 \end{equation}
 一般的辐射转移教材中，$\symup{d}r$ 是从恒星表面向下计量的，因此方程要变号。向外的辐射转移方程为
 \begin{equation}
-\cos\theta\frac{\symup{d}I_\nu(\theta,\tau_\nu)}{\symup{d}\tau_\nu}=I_\nu(\theta,\tau_\nu)-S_\nu(\tau_\nu),
+\cos{\theta}\frac{\symup{d}I_{\nu}\left(\theta,\tau_{\nu}\right)}{\symup{d}\tau_{\nu}}=I_{\nu}\left(\theta,\tau_{\nu}\right)-S_{\nu}\left(\tau_{\nu}\right),
 \end{equation}
 向内
 \begin{equation}
--\cos\psi\frac{\symup{d}I'_\nu(\psi,\tau_\nu)}{\symup{d}\tau_\nu}=I'_\nu(\psi,\tau_\nu)-S_\nu(\tau_\nu).
+-\cos{\psi}\frac{\symup{d}I'_{\nu}\left(\psi,\tau_{\nu}\right)}{\symup{d}\tau_{\nu}}=I'_{\nu}\left(\psi,\tau_{\nu}\right)-S_{\nu}\left(\tau_{\nu}\right).
 \end{equation}
 解得
 \begin{align}
-I_\nu(\theta,\tau_\nu)&=C_\nu\symup{e}^{\tau_\nu\sec\theta}+\symup{e}^{\tau_\nu\sec\theta}\int_{\tau_\nu}^\infty S_\nu(t_\nu)\symup{e}^{-t_\nu\sec\theta}\sec\theta\symup{d}t_\nu,\\
-I'_\nu(\psi,\tau_\nu)&=D_\nu\symup{e}^{-\tau_\nu\sec\psi}+\symup{e}^{-\tau_\nu\sec\psi}\int_{0}^{\tau_\nu} S_\nu(t_\nu)\symup{e}^{t_\nu\sec\psi}\sec\psi\symup{d}t_\nu.
+I_{\nu}\left(\theta,\tau_{\nu}\right)&=C_{\nu}\symup{e}^{\tau_{\nu}\sec{\theta}}+\symup{e}^{\tau_{\nu}\sec{\theta}}\int_{\tau_{\nu}}^{\infty}S_{\nu}\left(t_{\nu}\right)\symup{e}^{-t_{\nu}\sec{\theta}}\sec{\theta}\symup{d}t_{\nu},\\
+I'_{\nu}\left(\psi,\tau_{\nu}\right)&=D_{\nu}\symup{e}^{-\tau_{\nu}\sec{\psi}}+\symup{e}^{-\tau_{\nu}\sec{\psi}}\int_{0}^{\tau_{\nu}}S_{\nu}\left(t_{\nu}\right)\symup{e}^{t_{\nu}\sec{\psi}}\sec{\psi}\symup{d}t_{\nu}.
 \end{align}
 可以发现得到的形式解与前文形式类似，只是角度独立出来。
 
 接着分析边界条件。恒星表面物质密度为零，光深肯定为零，同时从外向内的辐射也为零，因此 $D=0$. 在恒星最中心，是炽热的热核反应区域，可认为那里的光几乎传不到恒星表面，$\tau_{\nu}=\infty$, 但是辐射强度依然是有限值，因此 $C=0$. 简化后的形式解为
 \begin{align}
-I_\nu(\theta,\tau_\nu)&=\int_{\tau_\nu}^{\infty}S_\nu(t_\nu)\symup{e}^{-(t_\nu-\tau_\nu) \sec\theta}\sec\theta\symup{d}t_\nu,\\
-I_\nu'(\psi,\tau_\nu)&=\int_0^{\tau_\nu}S_\nu(t_\nu)\symup{e}^{-(\tau_\nu-t_\nu)\sec\psi}\sec\psi\symup{d}t_\nu.
+I_{\nu}\left(\theta,\tau_{\nu}\right)&=\int_{\tau_{\nu}}^{\infty}S_{\nu}\left(t_{\nu}\right)\symup{e}^{-\left(t_{\nu}-\tau_{\nu}\right)\sec{\theta}}\sec{\theta}\symup{d}t_{\nu},\\
+I_{\nu}'\left(\psi,\tau_{\nu}\right)&=\int_{0}^{\tau_{\nu}}S_{\nu}\left(t_{\nu}\right)\symup{e}^{-\left(\tau_{\nu}-t_{\nu}\right)\sec{\psi}}\sec{\psi}\symup{d}t_{\nu}.
 \end{align}
 积分限代表对辐射强度有贡献的区域，积分内 $\symup{e}$ ​的负指数代表消光的影响。实际观测量为（如果沿途没有消光的话）
 \begin{equation}
-I_\nu(\theta, 0)=\int_{0}^{\infty}S_\nu(t_\nu)\symup{e}^{-t_\nu\sec\theta}\sec\theta\symup{d}t_\nu,
+I_{\nu}\left(\theta, 0\right)=\int_{0}^{\infty}S_{\nu}\left(t_{\nu}\right)\symup{e}^{-t_{\nu}\sec{\theta}}\sec{\theta}\symup{d}t_{\nu},
 \end{equation}
 
 要使形式解真正有用，我们需要寻找源函数与光学深度的联系。假设呈现某种线性关系（或看作源函数泰勒展开一阶近似）
@@ -928,9 +931,9 @@ S_{\nu}\left(t_{\nu}\right)=S_{0}+S_{1}t_{\nu},
 \end{equation}
 积分结果为
 \begin{equation}
-I_\nu(\theta, 0)=S_{0}+S_{1}\cos\theta.
+I_{\nu}\left(\theta, 0\right)=S_{0}+S_{1}\cos{\theta}.
 \end{equation}
-观察这个结果我们发现，观测量实际上为 $\tau_{\nu}=\cos\theta$ 处的源函数。而光实际上走过的光深为 $\tau_{\nu}\sec\theta$, 因此我们所见的恒星其实是光深为 1 处的恒星。也正因如此，光深为 1 在天文研究中是个有意义的参量。我们所见到的天体的“表面”都可以看作是光深为 1 处的表面。
+观察这个结果我们发现，观测量实际上为 $\tau_{\nu}=\cos{\theta}$ 处的源函数。而光实际上走过的光深为 $\tau_{\nu}\sec{\theta}$, 因此我们所见的恒星其实是光深为 1 处的恒星。也正因如此，光深为 1 在天文研究中是个有意义的参量。我们所见到的天体的“表面”都可以看作是光深为 1 处的表面。
 
 值得注意的是，恒星不同元素含量不同，原子能级结构也不同，因此对不同的单色辐射来讲，相同半径处 $\alpha_{\nu}$ 也不同。换句话讲，即使光深都为 1, 随频率变化所对应的半径也是不同的，因此恒星圆面一小部分区域的黑体谱也是不同半径处黑体谱的拼接。可能在 B 波段所“采用”的是 $r_{1}$ 的一段黑体谱，在 V 波段是 $r_{2}$ 处的一段黑体谱。因此“恒星光谱近似黑体光谱”还有这层含义。在不同滤光片中所见到的恒星可如图\ref{不同波段所见到的光深为 1 处的恒星。}蓝色和红色线条所示。不过实际多半不会这么圆滑，取决于 $\alpha_{\nu}$ 和半径的具体关系。
 
@@ -959,11 +962,11 @@ I_\nu(\theta, 0)=S_{0}+S_{1}\cos\theta.
 
 而在厘米克秒制 (cgs) 中，只有 $\unit{g, cm, s}$ 三个基本单位。首先导出力的单位 $\qty{1}{dyne}=\\\qty{1}{g\cdot cm\cdot{}s^{-2}}=\qty{e-5}{N}$ 以及能量单位 $\qty{1}{erg}=\qty{1}{g\cdot cm^{2}\cdot{}s^{-2}}=\qty{e-7}{J}$.
 
-静电制中力与电磁的桥梁是库仑定律 $F=\dfrac{1}{4\pi\varepsilon_{0}}\dfrac{q_{1}q_{2}}{r^{2}}$. 静电制不希望看到前面的系数，故选择定义真空介电常数，取 $\varepsilon_{0\text{cgs}}=\dfrac{1}{4\pi},\mu_{0\text{cgs}}=\dfrac{4\pi}{\symup{c}^{2}}$, 其中 $\symup{c}$ 为真空光速。换句话讲静电制定义了 $\qty{1}{A}=0.1\symup{c}\cdot\unit{dyne}^{\frac12},\qty{1}{C}=0.1\symup{c}\cdot\rm{dyne}^{\frac12}\cdot s$. 类似的操作可在自然单位制中见到，那里定义 $\qty{1}{s}=\qty{3e8}{m}$ 故 $\symup{c}=1$.
+静电制中力与电磁的桥梁是库仑定律 $F=\dfrac{1}{4\pi\varepsilon_{0}}\dfrac{q_{1}q_{2}}{r^{2}}$. 静电制不希望看到前面的系数，故选择定义真空介电常数，取 $\varepsilon_{0\text{cgs}}=\dfrac{1}{4\pi},\mu_{0\text{cgs}}=\dfrac{4\pi}{\symup{c}^{2}}$, 其中 $\symup{c}$ 为真空光速。换句话讲静电制定义了 $\qty{1}{A}=0.1\symup{c}\cdot\unit{dyne}^{\frac{1}{2}},\qty{1}{C}=0.1\symup{c}\cdot\rm{dyne}^{\frac{1}{2}}\cdot s$. 类似的操作可在自然单位制中见到，那里定义 $\qty{1}{s}=\qty{3e8}{m}$ 故 $\symup{c}=1$.
 
 不管怎样库仑定律简化为 $F=\dfrac{q_{1}q_{2}}{r^{2}}$, 静电制中电荷单位也变为 $\qty{1}{statC}=\qty{1}{dyne^{\frac{1}{2}}\cdot cm}$. 考虑无量纲的真空光速数值 $\symup{c}_{\text{n}}$, $\qty{1}{C}=\qty{2.99792458e9}{statC}$. 静电制中电流基本单位 $\qty{1}{statA}=\qty{1}{esu}=\qty{1}{statC\cdot{}s^{-1}}$. 考虑 $B=\dfrac{F}{IL}$ 我们还可以得到磁感应强度基本单位 $\qty{1}{statT}=\qty{1}{dyne^{\frac{1}{2}}\cdot cm^{-2}\cdot s}=10^{-4}\symup{c}_{\text{n}}\,\unit{T}$.
 
-而在静磁制中，电流的基本单位用以下方法定义：相距 $\qty{1}{cm}$ 单位长度产生 $\qty{2}{dyne}$ 相互作用力时的导线中的电流强度为 $\qty{1}{emu}$. 即 $\qty{1}{emu}=\symup{c}\cdot\unit{dyne^{\frac{1}{2}}}=\qty{10}{A}$. 此时得到静磁制下磁感应强度基本单位 $\qty{1}{G}=\dfrac{1}{\symup{c}}\cdot\unit{dyne}^{\frac{1}{2}}\cdot\unit{cm}^{-1}=\qty{e-4}{T}=\dfrac1{\symup{c}_{\text{n}}}\,\unit{statT}$.
+而在静磁制中，电流的基本单位用以下方法定义：相距 $\qty{1}{cm}$ 单位长度产生 $\qty{2}{dyne}$ 相互作用力时的导线中的电流强度为 $\qty{1}{emu}$. 即 $\qty{1}{emu}=\symup{c}\cdot\unit{dyne^{\frac{1}{2}}}=\qty{10}{A}$. 此时得到静磁制下磁感应强度基本单位 $\qty{1}{G}=\dfrac{1}{\symup{c}}\cdot\unit{dyne}^{\frac{1}{2}}\cdot\unit{cm}^{-1}=\qty{e-4}{T}=\dfrac{1}{\symup{c}_{\text{n}}}\,\unit{statT}$.
 
 高斯单位制杂糅了静电制和静磁制，在电荷上使用静电制，磁场上使用静磁制，数值运算的时候可能会出现问题。如进行运动学运算的时候不能简单使用如 $B=\qty{3}{\mu G}$ 的数据，而要转变成 $B=\dfrac{3\mu}{\symup{c}_{\text{n}}}\,\unit{statT}$ 进行运算，否则静电制和静磁制会相互冲突。
 
@@ -1017,7 +1020,7 @@ t'=t-\frac{r\left(t'\right)}{\symup{c}},
 \end{equation}
 用 $\theta$ 表示加速度 $\dot{\symbf{v}}$ 和 $\symbf{n}$ 的夹角，则有
 \begin{equation}
-\frac{\symup{d}P\left(t'\right)}{\symup{d}\Omega}=\frac{q^{2}\dot{\symbf{v}}^{2}}{4\pi\symup{c}^{3}}\sin^{2}\theta.
+\frac{\symup{d}P\left(t'\right)}{\symup{d}\Omega}=\frac{q^{2}\dot{\symbf{v}}^{2}}{4\pi\symup{c}^{3}}\sin^{2}{\theta}.
 \end{equation}
 实际上这是偶极辐射的角分布，$q^{2}\dot{\symbf{v}}^{2}$ 就是偶极子 $\symbf{d}$ 的二阶时间导数。非相对论的辐射角分布有两个特点，其一辐射和速度无关而和加速度有关，其二辐射分布在很宽的角范围中。具体可如图\ref{非相对论性粒子辐射的角分布。}所示。
 \begin{figure}[!htbp]
@@ -1034,7 +1037,7 @@ t'=t-\frac{r\left(t'\right)}{\symup{c}},
 
 进一步，为了定量说明相对论粒子辐射角分布具体图形，考虑速度与加速度方向相互平行和相互垂直两种情况。先考虑平行情况，此时辐射角分布为
 \begin{equation}
-\frac{\symup{d}P\left(t'\right)}{\symup{d}\Omega}=\frac{q^{2}}{4\pi\symup{c}}\frac{\dot{\beta}^{2}\sin^{2}\theta}{\left(1-\beta\cos\theta\right)^{5}},
+\frac{\symup{d}P\left(t'\right)}{\symup{d}\Omega}=\frac{q^{2}}{4\pi\symup{c}}\frac{\dot{\beta}^{2}\sin^{2}{\theta}}{\left(1-\beta\cos{\theta}\right)^{5}},
 \end{equation}
 其中 $\theta$ 是 $\symbf{n}$ 和速度方向的夹角。此时的角分布图形与非相对论情形的对比可如图\ref{加速度与速度平行时相对论性粒子的辐射角分布。}所示。
 \begin{figure}[!htbp]
@@ -1064,9 +1067,9 @@ t'=t-\frac{r\left(t'\right)}{\symup{c}},
 \begin{equation}
 \frac{\symup{d}P\left(t'\right)}{\symup{d}\Omega}=\frac{q^{2}}{4\pi\symup{c}}\frac{\left(1-\symbf{n}\cdot\symbf{\beta}\right)^{2}\dot{\symbf{\beta}}^{2}-\left(1-\beta^{2}\right)\left(\symbf{n}\cdot\dot{\symbf{\beta}}\right)^{2}}{\left(1-\symbf{n}\cdot\symbf{\beta}\right)^{5}}.
 \end{equation}
-以 $\theta$ 表示 $\symbf{n}$ 与 $\symbf{\beta}$ 的夹角，$\varphi$ 表示 $\symbf{n}$ 与 $\symbf{\beta}$ 所成平面与 $\dot{\symbf{\beta}}$ 的夹角，并注意 $\symbf{n}\cdot\dot{\symbf{\beta}}=\dot{\symbf{\beta}}\cos\varphi\sin\theta$, 有
+以 $\theta$ 表示 $\symbf{n}$ 与 $\symbf{\beta}$ 的夹角，$\varphi$ 表示 $\symbf{n}$ 与 $\symbf{\beta}$ 所成平面与 $\dot{\symbf{\beta}}$ 的夹角，并注意 $\symbf{n}\cdot\dot{\symbf{\beta}}=\dot{\symbf{\beta}}\cos{\varphi}\sin{\theta}$, 有
 \begin{equation}
-\frac{\symup{d}P\left(t'\right)}{\symup{d}\Omega}=\frac{q^{2}}{4\pi\symup{c}}\dot{\symbf{\beta}}^{2}\frac{\gamma^{2}\left(1-\beta\cos\theta\right)^{2}-\sin^{2}\theta\cos^{2}\varphi}{\gamma^{2}\left(1-\beta\cos\theta\right)^{5}}.
+\frac{\symup{d}P\left(t'\right)}{\symup{d}\Omega}=\frac{q^{2}}{4\pi\symup{c}}\dot{\symbf{\beta}}^{2}\frac{\gamma^{2}\left(1-\beta\cos{\theta}\right)^{2}-\sin^{2}{\theta}\cos^{2}{\varphi}}{\gamma^{2}\left(1-\beta\cos{\theta}\right)^{5}}.
 \end{equation}
 此时辐射角分布可如图\ref{加速度与速度垂直时相对论性粒子的辐射角分布。}所示。
 \begin{figure}[!htbp]
@@ -1079,9 +1082,9 @@ t'=t-\frac{r\left(t'\right)}{\symup{c}},
 
 有了辐射的角分布公式，对所有方向的立体角积分就能得到辐射总功率。
 
-对非相对论粒子，此时 $\symup{d}\Omega=2\pi\sin\theta\symup{d}\theta$, 得到总功率为
+对非相对论粒子，此时 $\symup{d}\Omega=2\pi\sin{\theta}\symup{d}\theta$, 得到总功率为
 \begin{equation}
-P\left(t'\right)=\frac{\symup{d}W}{\symup{d}t'}=\int\frac{q^{2}\dot{v}^{2}}{4\pi \symup{c}^{3}}\sin^{2}\theta2\pi\sin\theta\symup{d}\theta=\frac{2q^{2}\dot{v}^{2}}{3\symup{c}^{3}}.
+P\left(t'\right)=\frac{\symup{d}W}{\symup{d}t'}=\int\frac{q^{2}\dot{v}^{2}}{4\pi \symup{c}^{3}}\sin^{2}{\theta}2\pi\sin{\theta}\symup{d}\theta=\frac{2q^{2}\dot{v}^{2}}{3\symup{c}^{3}}.
 \end{equation}
 对相对论粒子，加速度与速度平行时
 \begin{equation}
@@ -1126,7 +1129,7 @@ P=\frac{2}{3}r_{0}^{2}\symup{c}\gamma^{2}\beta_{\bot}^{2}B^{2}.
 \begin{equation}
 \langle{}P\rangle=\frac{4}{3}\sigma_{\text{T}}\symup{c}\gamma^{2}\beta^{2}U_{B}.\label{1.3.63}
 \end{equation}
-对于 (\ref{1.3.60}) 式，我们发现 $P=-\dfrac{\symup{d}E}{\symup{d}t}=bE^{2}, b=\dfrac{2{\color{blue}{\ce{e}}}^{4}}{3m_{0}^{4}\symup{c}^9}B^{2}v_{\bot}^{2}$, 解得，
+对于 (\ref{1.3.60}) 式，我们发现 $P=-\dfrac{\symup{d}E}{\symup{d}t}=bE^{2}, b=\dfrac{2{\color{blue}{\ce{e}}}^{4}}{3m_{0}^{4}\symup{c}^{9}}B^{2}v_{\bot}^{2}$, 解得，
 \begin{equation}
 E=\frac{E_{0}}{1+bE_{0}t}.
 \end{equation}
@@ -1138,7 +1141,7 @@ T_{\frac{1}{2}}=\frac{1}{bE_{0}}&=\frac{3m_{0}^{3}\symup{c}^{7}}{2{\color{blue}{
 
 查阅《天体物理中的辐射机制》（尤峻汉）可知，同步加速辐射是一种连续谱，其单位频率间隔的辐射功率为
 \begin{equation}
-\langle\frac{\symup{d}P_\nu}{\symup{d}\nu}\rangle=\frac{\sqrt3{\color{blue}{\ce{e}}}^{3}B}{m_{0}\symup{c}^{2}}\frac{\nu}{\nu_{\text{c}}}\int_{\frac{\nu}{\nu_{\text{c}}}}^{\infty}K_{\frac{5}{3}}\left(t\right)\symup{d}t,
+\langle\frac{\symup{d}P_{\nu}}{\symup{d}\nu}\rangle=\frac{\sqrt3{\color{blue}{\ce{e}}}^{3}B}{m_{0}\symup{c}^{2}}\frac{\nu}{\nu_{\text{c}}}\int_{\frac{\nu}{\nu_{\text{c}}}}^{\infty}K_{\frac{5}{3}}\left(t\right)\symup{d}t,
 \end{equation}
 其中 $K_{n}\left(x\right)$ 为 $n$ 阶修正的贝塞尔函数。辐射功率在低频波段以 $\nu^{\frac{1}{3}}$ 缓慢上升，辐射的峰值频率约为
 \begin{equation}
@@ -1155,8 +1158,8 @@ T_{\frac{1}{2}}=\frac{1}{bE_{0}}&=\frac{3m_{0}^{3}\symup{c}^{7}}{2{\color{blue}{
 
 对于电子集体来讲另一个要考虑的因素是，当电子密度足够大时，产生辐射的这些电子会与光子碰撞，反过来吸收辐射。吸收系数为
 \begin{align}
-\langle{}\alpha_{\nu}\rangle&=\frac{\sqrt{3}}{4}\Gamma\left(\frac{3\mu+2}{12}\right)\Gamma\left(\frac{3\mu+22}{12}\right)\frac{{\color{blue}{\ce{e}}}^{3}}{2\pi m_{0}}\left(\frac{3{\color{blue}{\ce{e}}}}{2\pi m_{0}^{3}\symup{c}^{5}}\right)^{\frac{\mu}{2}}N_{0}\left(B\sin\alpha\right)^{\frac{\mu+2}{2}}\nu^{-\frac{\mu+4}{2}}\notag\\
-&=g\left(\mu\right)\frac{{\color{blue}{\ce{e}}}^{3}}{2\pi m_{0}}\left(\frac{3{\color{blue}{\ce{e}}}}{2\pi m_{0}^{3}\symup{c}^{5}}\right)^{\frac{\mu}{2}}N_{0}\left(B\sin\alpha\right)^{\frac{\mu+2}{2}}\nu^{-\frac{\mu+4}{2}}.\label{1.3.69}
+\langle{}\alpha_{\nu}\rangle&=\frac{\sqrt{3}}{4}\Gamma\left(\frac{3\mu+2}{12}\right)\Gamma\left(\frac{3\mu+22}{12}\right)\frac{{\color{blue}{\ce{e}}}^{3}}{2\pi m_{0}}\left(\frac{3{\color{blue}{\ce{e}}}}{2\pi m_{0}^{3}\symup{c}^{5}}\right)^{\frac{\mu}{2}}N_{0}\left(B\sin{\alpha}\right)^{\frac{\mu+2}{2}}\nu^{-\frac{\mu+4}{2}}\notag\\
+&=g\left(\mu\right)\frac{{\color{blue}{\ce{e}}}^{3}}{2\pi m_{0}}\left(\frac{3{\color{blue}{\ce{e}}}}{2\pi m_{0}^{3}\symup{c}^{5}}\right)^{\frac{\mu}{2}}N_{0}\left(B\sin{\alpha}\right)^{\frac{\mu+2}{2}}\nu^{-\frac{\mu+4}{2}}.\label{1.3.69}
 \end{align}
 可见低频波段吸收系数较大，相当于说低频波段电子相对辐射是光学厚的。我们知道光学厚观测到的辐射为源函数，将 (\ref{1.3.68})(\ref{1.3.69}) 式相比得到
 \begin{equation}
@@ -1179,15 +1182,15 @@ S_{\nu}\propto{}\nu^{2.5}.
 
 记入射光子能量为 $h\nu$, 散射出的光子能量为 $h\nu_{1}$, 光子散射前后方向夹角为 $\theta$, 根据能量与动量守恒有
 \begin{equation}
-\nu_{1}=\frac{\nu}{1+\dfrac{h\nu}{m_{0}\symup{c}^{2}}\left(1-\cos\theta\right)}.
+\nu_{1}=\frac{\nu}{1+\dfrac{h\nu}{m_{0}\symup{c}^{2}}\left(1-\cos{\theta}\right)}.
 \end{equation}
 我们已经知道散射到 $\theta$ 方向光子的能量，但我们还需要知道朝此方向散射的光子数有多少。我们用微分散射截面描述光子散射到该立体角的概率：
 \begin{equation}
-\frac{\symup{d}\sigma}{\symup{d}\Omega}=\frac{1}{2}r_{0}^{2}\left(\frac{\nu_{1}}{\nu}\right)^{2}\left(\frac{\nu}{\nu_{1}}+\frac{\nu_{1}}{\nu}-\sin^{2}\theta\right).
+\frac{\symup{d}\sigma}{\symup{d}\Omega}=\frac{1}{2}r_{0}^{2}\left(\frac{\nu_{1}}{\nu}\right)^{2}\left(\frac{\nu}{\nu_{1}}+\frac{\nu_{1}}{\nu}-\sin^{2}{\theta}\right).
 \end{equation}
 这个公式被称作克莱因{}-{}仁科公式 (Klein-Nishina formula). 该式积分得到散射截面，散射截面描述了每个入射光子被散射的概率，
 \begin{equation}
-\sigma=\sigma_{\text{T}}\cdot\frac34\left\{\frac{1+x}{x^{3}}\left[\frac{2x\left(1+x\right)}{1+2x}-\ln\left(1+2x\right)\right]+\frac1{2x}\ln\left(1+2x\right)-\frac{1+3x}{\left(1+2x\right)^{2}}\right\},
+\sigma=\sigma_{\text{T}}\cdot\frac{3}{4}\left\{\frac{1+x}{x^{3}}\left[\frac{2x\left(1+x\right)}{1+2x}-\ln\left(1+2x\right)\right]+\frac{1}{2x}\ln\left(1+2x\right)-\frac{1+3x}{\left(1+2x\right)^{2}}\right\},
 \end{equation}
 其中 $x=\dfrac{h\nu}{m_{0}\symup{c}^{2}},\sigma_{\text{T}}=\dfrac{8\pi}{3}r_{0}^{2}$, 被称作汤姆孙散射截面。
 
@@ -1268,7 +1271,7 @@ AGN 中电子产生与湮灭速率可以平衡，康普顿厚 (compton-thick, CT
 
 还有一种对高能光子的重要吸收机制，即高能光子穿越强磁场时，被磁场吸收转化为正负电子对，其辐射吸收系数为
 \begin{equation}
-k=\frac{m_{0}\symup{c}}{\hbar}\alpha\frac{B\sin\theta}{2B_{\symup{c}}}\frac{1}{4}\left(\frac{3}{2}\right)^{\frac{1}{2}}\exp\left[-\frac{8m_{0}\symup{c}^{2}B_{\symup{c}}}{3EB\sin\theta}\right],
+k=\frac{m_{0}\symup{c}}{\hbar}\alpha\frac{B\sin{\theta}}{2B_{\symup{c}}}\frac{1}{4}\left(\frac{3}{2}\right)^{\frac{1}{2}}\exp\left[-\frac{8m_{0}\symup{c}^{2}B_{\symup{c}}}{3EB\sin{\theta}}\right],
 \end{equation}
 其中精细结构常数 $\alpha=\dfrac{{\color{blue}{\ce{e}}}^{2}}{\hbar\symup{c}}$, 中子星临界磁场 $B_{\symup{c}}=\dfrac{m_{0}\symup{c}^{3}}{{\color{blue}{\ce{e}}}\hbar}$, $\theta$ 是光子传播路径与磁场的夹角。
 
@@ -1490,20 +1493,20 @@ U_{\nu}=\frac{4\pi{}}{\symup{c}}B_{\nu}=\frac{8\pi\nu^{2}}{\symup{c}^{3}}\cdot\f
 \end{equation}
 对频率积分可以得到总能量密度：
 \begin{equation}
-U=\int\varepsilon\left(\nu\right)\symup{d}\nu=\frac{8\pi h}{\symup{c}^{3}}\int\frac{\nu^3\symup{d}\nu}{\symup{e}^{\frac{h\nu}{k_{\text{B}}T}}-1}=\frac{8\pi}{\symup{c}^{3}}\frac{k_{\text{B}}^4T^4}{h^3}\int\frac{x^3\symup{d}x}{\symup{e}^{x}-1}=\frac{8\pi^{5}k_{\text{B}}^{4}}{15h^{3}\symup{c}^{3}}T^{4}=a_{\text{B}}T^4.
+U=\int\varepsilon\left(\nu\right)\symup{d}\nu=\frac{8\pi h}{\symup{c}^{3}}\int\frac{\nu^{3}\symup{d}\nu}{\symup{e}^{\frac{h\nu}{k_{\text{B}}T}}-1}=\frac{8\pi}{\symup{c}^{3}}\frac{k_{\text{B}}^{4}T^{4}}{h^{3}}\int\frac{x^{3}\symup{d}x}{\symup{e}^{x}-1}=\frac{8\pi^{5}k_{\text{B}}^{4}}{15h^{3}\symup{c}^{3}}T^{4}=a_{\text{B}}T^{4}.
 \end{equation}
 而流量满足（仅考虑向外辐射部分，进而可通过 $F=\dfrac{L}{4\pi R^{2}}$ 确定系数）
 \begin{align}
-F_\nu&=\int I_\nu\cos\theta\symup{d}\Omega\notag\\
-&=\int_0^{2\pi}\symup{d}\varphi\int_0^{\frac{\pi}{2}}\frac{\symup{c}}{4\pi}U_\nu\cos\theta\sin\theta\symup{d}\theta\notag\\
-&=\frac{\symup{c}}{4}U_\nu\int_0^{\frac{\pi}{2}}\sin\left(2\theta\right)\symup{d}\left(2\theta\right)=\frac{\symup{c}}{4}U_\nu.\\
-\therefore F&=\frac{\symup{c}}{4}a_{\text{B}}T^4,\sigma_{\text{SB}}=\frac{\symup{c}a_{\text{B}}}{4}.
+F_{\nu}&=\int I_{\nu}\cos{\theta}\symup{d}\Omega\notag\\
+&=\int_{0}^{2\pi}\symup{d}\varphi\int_{0}^{\frac{\pi}{2}}\frac{\symup{c}}{4\pi}U_{\nu}\cos{\theta}\sin{\theta}\symup{d}\theta\notag\\
+&=\frac{\symup{c}}{4}U_{\nu}\int_{0}^{\frac{\pi}{2}}\sin{\left(2\theta\right)}\symup{d}\left(2\theta\right)=\frac{\symup{c}}{4}U_{\nu}.\\
+\therefore F&=\frac{\symup{c}}{4}a_{\text{B}}T^{4},\sigma_{\text{SB}}=\frac{\symup{c}a_{\text{B}}}{4}.
 \end{align}
 辐射压（要考虑各向同性贡献，因此积分限有变化）满足
 \begin{align}
-P_{R,\nu}&=\frac{1}{\symup{c}}\int_{4\pi{}}I_{\nu}\cos^{2}\theta\symup{d}\Omega\notag\\
-&=\frac{1}{\symup{c}}\int_{0}^{2\pi{}}\symup{d}\varphi\int_{0}^{\pi}\frac{\symup{c}}{4\pi{}}U_{\nu}\cos^{2}\theta\sin\theta\symup{d}\theta\notag\\
-&=-\frac{1}{2}U_{\nu}\int_{0}^{\pi}\cos^{2}\theta\symup{d}\cos\theta=\frac{1}{3}U_{\nu},\notag\\
+P_{R,\nu}&=\frac{1}{\symup{c}}\int_{4\pi{}}I_{\nu}\cos^{2}{\theta}\symup{d}\Omega\notag\\
+&=\frac{1}{\symup{c}}\int_{0}^{2\pi{}}\symup{d}\varphi\int_{0}^{\pi}\frac{\symup{c}}{4\pi{}}U_{\nu}\cos^{2}{\theta}\sin{\theta}\symup{d}\theta\notag\\
+&=-\frac{1}{2}U_{\nu}\int_{0}^{\pi}\cos^{2}{\theta}\symup{d}\cos{\theta}=\frac{1}{3}U_{\nu},\notag\\
 P_{\text{rad}}&=\frac{1}{3}a_{\text{B}}T^{4}.\label{1.4.9}
 \end{align}
 进一步地，我们可以建立起光度和质量的关系。在推导 Eddington 光度时我们曾经建立过有关光度和引力的方程，将其稍作修改可得
@@ -1580,9 +1583,9 @@ n=\frac{10\left(a-b\right)}{a}.
 
 椭圆星系没有星系盘、颜色偏红，星系中心最亮，亮度向边缘递减。椭圆星系主要由年老恒星和大量热气体组成，没有或仅有少量的冷气体和尘埃。椭圆星系的特征为强吸收线，少有发射线，因为年老的低光度恒星成员大气中有很多金属。普通椭圆星系光度为银河系数倍，特征尺度为数十个 $\unit{kpc}$.
 
-一种特殊的椭圆星系记作 cD, c 表示星系非常大，D 表示星系外观非常弥散，这种星系称作巨椭圆星系，通常为星系团中最明亮的星系，比银河系亮 100 倍以上，巨大弥散包层可延伸到数百 $\unit{kpc}$, 质量可达 $\qty{e13}{M_{\odot}}$. cD 多位于星系团中心，可能诞生自星系团中最亮的星系吞噬次亮星系，弥散包层（星系晕）可能为次亮星系的遗迹。这个推断并非空穴来风，实际上普通椭圆星系也有子结构。10\%\text{\textendash}20\%的椭圆星系外区有弧状壳和其他不对称的结构，应当是被大星系引力撕碎并捕获的小星系遗迹（这个过程是星系并合的一种），壳层是星系吸积过程的直接证据。
+一种特殊的椭圆星系记作 cD, c 表示星系非常大，D 表示星系外观非常弥散，这种星系称作巨椭圆星系，通常为星系团中最明亮的星系，比银河系亮 100 倍以上，巨大弥散包层可延伸到数百 $\unit{kpc}$, 质量可达 $\qty{e13}{M_{\odot}}$. cD 多位于星系团中心，可能诞生自星系团中最亮的星系吞噬次亮星系，弥散包层（星系晕）可能为次亮星系的遗迹。这个推断并非空穴来风，实际上普通椭圆星系也有子结构。10\%\text{\textendash}20\% 的椭圆星系外区有弧状壳和其他不对称的结构，应当是被大星系引力撕碎并捕获的小星系遗迹（这个过程是星系并合的一种），壳层是星系吸积过程的直接证据。
 
-除了普通椭圆星系和 cD, 还有暗椭圆星系。暗椭圆星系光度不足银河系光度十分之一，分为致密的矮椭圆星系 (dE)、暗弱的弥散矮椭圆星系和更暗的矮椭球星系 (dSph). 多数矮星系内部有球状星团存在。dE 是小的椭圆星系，质量可能只有 $\qty{e7}{M_{\odot}}$, 但属性与一般的椭圆星系差别较大。dSph 本质和 dE 可能并无区别，但面亮度更低，光度甚至接近球状星团，因此大部分是我们无法观测到的。dSph 内部几乎没有年轻的恒星（只有 2\%的恒星年龄小于 25 亿年），主要由老年、中年恒星组成（诞生于宇宙年龄 $3/7/15\,\unit{Gyr}$ 的三次暴发），说明 dSph 的形成时间很早。dSph 尘埃、气体很少，易受到主星系的引力作用从而碎裂、瓦解。dSph 中有大量暗物质，而球状星团中还没有探测到暗物质。
+除了普通椭圆星系和 cD, 还有暗椭圆星系。暗椭圆星系光度不足银河系光度十分之一，分为致密的矮椭圆星系 (dE)、暗弱的弥散矮椭圆星系和更暗的矮椭球星系 (dSph). 多数矮星系内部有球状星团存在。dE 是小的椭圆星系，质量可能只有 $\qty{e7}{M_{\odot}}$, 但属性与一般的椭圆星系差别较大。dSph 本质和 dE 可能并无区别，但面亮度更低，光度甚至接近球状星团，因此大部分是我们无法观测到的。dSph 内部几乎没有年轻的恒星（只有 2\% 的恒星年龄小于 25 亿年），主要由老年、中年恒星组成（诞生于宇宙年龄 $3/7/15\,\unit{Gyr}$ 的三次暴发），说明 dSph 的形成时间很早。dSph 尘埃、气体很少，易受到主星系的引力作用从而碎裂、瓦解。dSph 中有大量暗物质，而球状星团中还没有探测到暗物质。
 
 椭圆星系的光度决定了椭圆星系的很多特性。亮椭圆星系中恒星运动以随机（谈轨道随机主要指角速度方向随机，不会像银河系那样基本都指向北银极）的椭圆轨道运动为主，朝向统一方向的旋转运动少。反过来讲，较暗椭圆星系有较多的旋转运动，随机运动较小。dE 和 dSph 旋转和随机运动的相对重要性无明显规律。此外，一般来讲星系越暗，金属丰度越低。所有的 dSph 重元素丰度低，最亮的 dSph 金属丰度也不过太阳的 $\dfrac{1}{30}$. 原因在于这些星系恒星形成困难，难以通过热核反应生成重元素，同时引力较弱，即使生成了，由于主序阶段结束时剧烈的质量抛射，金属增丰的气体也容易脱离星系束缚来到星系际空间。
 
@@ -1610,7 +1613,7 @@ n=\frac{10\left(a-b\right)}{a}.
 
 尽管 S 和 Irr 数目众多，E 却包含了恒星总质量的大约一半。
 
-近邻星系样本中，大约有 70\%的 S, 30\%的 E 和 3\%的 Irr. 如此样本分布可能要考虑光度引起的选择效应（如果观测表明暗弱的星系比较少，不代表实际上真的比较少，可能是仪器没法发现）。
+近邻星系样本中，大约有 70\% 的 S, 30\% 的 E 和 3\% 的 Irr. 如此样本分布可能要考虑光度引起的选择效应（如果观测表明暗弱的星系比较少，不代表实际上真的比较少，可能是仪器没法发现）。
 
 \begin{table}[htbp]
 \centering
@@ -1652,7 +1655,7 @@ L&=L_{\odot}\times10^{-\frac{m-M_{\odot}}{2.5}-2}\times d^{2},\notag\\
 I\left(R\right)&=\frac{L}{\left(d\,\unit{pc}\times\ang{;;1}\right)^{2}}=\left(\frac{64800}{\pi}\right)^{2}\frac{L}{\left(d\,\unit{pc}\right)^{2}}=\left(\frac{64800}{\pi}\right)^{2}\times10^{-\frac{m-M_{\odot}}{2.5}-2}\,\unit{L_{\odot}pc^{-2}}.
 \end{align}
 
-确立了描述光度的方法，就可以确定边界了。首先定义等照度线，它是星系图像上面亮度相等的像源的连线。通常取 B 波段 $I_{\text{B}}(x)=\qty{25}{mag\cdot{}arcsec^{-2}}$ 的等照度线作为星系边界，对应的半径记为 $R_{25}$. 或者取霍姆伯格半径 $I_{\text{B}}(x)=\qty{26.5}{mag\cdot{}arcsec^{-2}}$.
+确立了描述光度的方法，就可以确定边界了。首先定义等照度线，它是星系图像上面亮度相等的像源的连线。通常取 B 波段 $I_{\text{B}}\left(x\right)=\qty{25}{mag\cdot{}arcsec^{-2}}$ 的等照度线作为星系边界，对应的半径记为 $R_{25}$. 或者取霍姆伯格半径 $I_{\text{B}}\left(x\right)=\qty{26.5}{mag\cdot{}arcsec^{-2}}$.
 
 有一类星系被称作 Low Surface Brightness Galaxy (LSBGs), 它们中心区域的 $I_{\text{B}}$ 低于 $\qty{23}{mag\cdot{}arcsec^{-2}}$. 多数 LSBGs 为矮星系。转动曲线显示质量光度比较大，可能的原因包括：暗物质比例大；平均气体密度小，恒星形成效率低，重子物质主要以气体而非恒星形式存在。
 
@@ -1677,14 +1680,14 @@ v=\frac{\symup{d}r}{\symup{d}t}=\frac{\symup{d}a}{\symup{d}t}x=\dot{a}\frac{ax}{
 \begin{equation}
 \symup{d}s^{2}=\symup{c}^{2}\symup{d}t^{2}-a^{2}\left(t\right)\left(\symup{d}r^{2}+S_{k}^{2}\left(r\right)\symup{d}\Omega^{2}\right),\quad S_{k}\left(r\right)=
 \begin{cases}
-\sin r,&k=1,\\
+\sin{r},&k=1,\\
 r,&k=0,\\
-\sinh r,&k=-1.
+\sinh{r},&k=-1.
 \end{cases}
 \end{equation}
 或者改写成更方便计算的形式：
 \begin{equation}
-\symup{d}s^{2}=-\symup{d}t^{2}+a^{2}\left(t\right)\left\{\frac{\symup{d}r^{2}}{1-kr^{2}}+r^{2}\left(\symup{d}\theta^{2}+\sin^{2}\theta\symup{d}\phi^{2}\right)\right\}.\label{1.6.4}
+\symup{d}s^{2}=-\symup{d}t^{2}+a^{2}\left(t\right)\left\{\frac{\symup{d}r^{2}}{1-kr^{2}}+r^{2}\left(\symup{d}\theta^{2}+\sin^{2}{\theta}\symup{d}\phi^{2}\right)\right\}.\label{1.6.4}
 \end{equation}
 $k=1$ 是封闭的球面，$k=0$ 是平直宇宙，$k=-1$ 是开放双曲宇宙。
 
@@ -1693,30 +1696,30 @@ $k=1$ 是封闭的球面，$k=0$ 是平直宇宙，$k=-1$ 是开放双曲宇宙�
 g_{00}&=-1,\notag\\
 g_{11}&=\frac{a\left(t\right)^{2}}{1-kr^{2}},\frac{\partial{}g_{11}}{\partial{}x^{0}}=2\frac{\dot a}{a}g_{11},\frac{\partial{}g_{11}}{\partial{}x^{1}}=\frac{2k}{1-kr^{2}}g_{11},\notag\\
 g_{22}&=a\left(t\right)^{2}r^{2},\frac{\partial{}g_{22}}{\partial{}x^{0}}=2\frac{\dot a}{a}g_{22},\frac{\partial{}g_{22}}{\partial{}x^{1}}=\frac{2g_{22}}{r},\notag\\
-g_{33}&=a\left(t\right)^{2}r^{2}\sin^{2}\theta,\frac{\partial{}g_{33}}{\partial{}x^{0}}=2\frac{\dot a}{a}g_{33},\frac{\partial{}g_{33}}{\partial{}x^{1}}=\frac{2g_{33}}{r},\frac{\partial{}g_{33}}{\partial{}x^{2}}=\frac{2g_{33}\cos\theta}{\sin\theta}.\notag
+g_{33}&=a\left(t\right)^{2}r^{2}\sin^{2}{\theta},\frac{\partial{}g_{33}}{\partial{}x^{0}}=2\frac{\dot a}{a}g_{33},\frac{\partial{}g_{33}}{\partial{}x^{1}}=\frac{2g_{33}}{r},\frac{\partial{}g_{33}}{\partial{}x^{2}}=\frac{2g_{33}\cos{\theta}}{\sin{\theta}}.\notag
 \end{align}
 接着根据
 \begin{equation}
-\Gamma_{\alpha\beta}^\mu=\frac{g^{\mu\nu}}{2}\left[g_{\alpha\nu,\beta}+g_{\beta\nu,\alpha}-g_{\alpha\beta,\nu}\right]
+\Gamma_{\alpha\beta}^{\mu}=\frac{g^{\mu\nu}}{2}\left[g_{\alpha\nu,\beta}+g_{\beta\nu,\alpha}-g_{\alpha\beta,\nu}\right]
 \end{equation}
 计算克氏符：
 \begin{align}
-\Gamma_{\alpha\beta}^0&=\frac{g^{00}}{2}\left[g_{\alpha0,\beta}+g_{\beta0,\alpha}-g_{\alpha\beta, 0}\right]=-\frac{g^{00}}{2}\frac{\partial{}g_{\alpha\beta}}{\partial{}t}\delta_{\alpha\beta}=g_{\alpha\beta}\frac{\dot a}{a}\delta_{\alpha\beta},\,\text{when}\,\alpha,\beta>0.\notag\\
-\Gamma_{0\beta}^\mu&=\frac{g^{\mu\mu}}{2}\left[g_{0\mu,\beta}+g_{\beta\mu, 0}-g_{0\beta,\mu}\right]=\frac{g^{\mu\mu}}{2}\frac{\partial{}g_{\beta\mu}}{\partial{}t}\delta_{\beta\mu}=\frac{\dot a}{a}\delta_{\beta\mu},\,\text{when}\,\mu,\beta>0.\notag\\
-\Gamma_{\alpha\beta}^1&=\frac{g^{11}}{2}\left[g_{\alpha1,\beta}+g_{\beta1,\alpha}-g_{\alpha\beta, 1}\right],\notag\\
+\Gamma_{\alpha\beta}^{0}&=\frac{g^{00}}{2}\left[g_{\alpha0,\beta}+g_{\beta0,\alpha}-g_{\alpha\beta, 0}\right]=-\frac{g^{00}}{2}\frac{\partial{}g_{\alpha\beta}}{\partial{}t}\delta_{\alpha\beta}=g_{\alpha\beta}\frac{\dot a}{a}\delta_{\alpha\beta},\,\text{when}\,\alpha,\beta>0.\notag\\
+\Gamma_{0\beta}^{\mu}&=\frac{g^{\mu\mu}}{2}\left[g_{0\mu,\beta}+g_{\beta\mu, 0}-g_{0\beta,\mu}\right]=\frac{g^{\mu\mu}}{2}\frac{\partial{}g_{\beta\mu}}{\partial{}t}\delta_{\beta\mu}=\frac{\dot a}{a}\delta_{\beta\mu},\,\text{when}\,\mu,\beta>0.\notag\\
+\Gamma_{\alpha\beta}^{1}&=\frac{g^{11}}{2}\left[g_{\alpha1,\beta}+g_{\beta1,\alpha}-g_{\alpha\beta, 1}\right],\notag\\
 \Gamma_{11}^{1}&=\frac{g^{11}}{2}\frac{\partial{}g_{11}}{\partial{}r},\Gamma_{22}^{1}=-\frac{g^{11}}{2}\frac{\partial{}g_{22}}{\partial{}r},\Gamma_{33}^{1}=-\frac{g^{11}}{2}\frac{\partial{}g_{33}}{\partial{}r}.\notag\\
-\Gamma_{\alpha\beta}^{2}&=\frac{g^{22}}{2}\left[\frac{\partial{}g_{\alpha2}}{\partial{}x^\beta}+\frac{\partial{}g_{\beta2}}{\partial{}x^\alpha}-\frac{\partial{}g_{\alpha\beta}}{\partial{}\theta}\right],\notag\\
-\Gamma_{12}^{2}&=\Gamma_{21}^{2}=\frac{1}{r},\Gamma_{33}^{2}=-\sin\theta\cos\theta.\notag\\
-\Gamma_{\alpha\beta}^{3}&=\frac{g^{33}}{2}\left[\frac{\partial{}g_{\alpha3}}{\partial{}x^\beta}+\frac{\partial{}g_{\beta3}}{\partial{}x^\alpha}\right],\notag\\
-\Gamma_{13}^{3}&=\Gamma_{31}^{3}=\frac{1}{r},\Gamma_{23}^{3}=\Gamma_{32}^{3}=\frac{\cos\theta}{\sin\theta}.\notag
+\Gamma_{\alpha\beta}^{2}&=\frac{g^{22}}{2}\left[\frac{\partial{}g_{\alpha2}}{\partial{}x^{\beta}}+\frac{\partial{}g_{\beta2}}{\partial{}x^{\alpha}}-\frac{\partial{}g_{\alpha\beta}}{\partial{}\theta}\right],\notag\\
+\Gamma_{12}^{2}&=\Gamma_{21}^{2}=\frac{1}{r},\Gamma_{33}^{2}=-\sin{\theta}\cos{\theta}.\notag\\
+\Gamma_{\alpha\beta}^{3}&=\frac{g^{33}}{2}\left[\frac{\partial{}g_{\alpha3}}{\partial{}x^{\beta}}+\frac{\partial{}g_{\beta3}}{\partial{}x^{\alpha}}\right],\notag\\
+\Gamma_{13}^{3}&=\Gamma_{31}^{3}=\frac{1}{r},\Gamma_{23}^{3}=\Gamma_{32}^{3}=\frac{\cos{\theta}}{\sin{\theta}}.\notag
 \end{align}
 我们不难发现只有 19 项不为 0,
 \begin{align}
-\Gamma_{11}^{0}&=\frac{a\left(t\right)\dot{a}\left(t\right)}{1-kr^{2}},\Gamma_{22}^{0}=a\left(t\right)\dot{a}\left(t\right)r^{2},\Gamma_{33}^{0}=a\left(t\right)\dot{a}\left(t\right)r^{2}\sin^{2}\theta,\notag\\
+\Gamma_{11}^{0}&=\frac{a\left(t\right)\dot{a}\left(t\right)}{1-kr^{2}},\Gamma_{22}^{0}=a\left(t\right)\dot{a}\left(t\right)r^{2},\Gamma_{33}^{0}=a\left(t\right)\dot{a}\left(t\right)r^{2}\sin^{2}{\theta},\notag\\
 \Gamma_{10}^{1}&=\Gamma_{01}^{1}=\frac{\dot a}{a},\Gamma_{11}^{1}=\frac{kr}{1-kr^{2}},\notag\\
-\Gamma_{22}^{1}&=-r\left(1-kr^{2}\right),\Gamma_{33}^{1}=-r\left(1-kr^{2}\right)\sin^{2}\theta,\notag\\
-\Gamma_{20}^{2}&=\Gamma_{02}^{2}=\frac{\dot a}{a},\Gamma_{12}^{2}=\Gamma_{21}^{2}=\frac{1}{r},\Gamma_{33}^{2}=-\sin\theta\cos\theta,\notag\\
-\Gamma_{30}^{3}&=\Gamma_{03}^{3}=\frac{\dot a}{a},\Gamma_{13}^{3}=\Gamma_{31}^{3}=\frac{1}{r},\Gamma_{23}^{3}=\Gamma_{32}^{3}=\frac{\cos\theta}{\sin\theta}.\notag
+\Gamma_{22}^{1}&=-r\left(1-kr^{2}\right),\Gamma_{33}^{1}=-r\left(1-kr^{2}\right)\sin^{2}{\theta},\notag\\
+\Gamma_{20}^{2}&=\Gamma_{02}^{2}=\frac{\dot a}{a},\Gamma_{12}^{2}=\Gamma_{21}^{2}=\frac{1}{r},\Gamma_{33}^{2}=-\sin{\theta}\cos{\theta},\notag\\
+\Gamma_{30}^{3}&=\Gamma_{03}^{3}=\frac{\dot a}{a},\Gamma_{13}^{3}=\Gamma_{31}^{3}=\frac{1}{r},\Gamma_{23}^{3}=\Gamma_{32}^{3}=\frac{\cos{\theta}}{\sin{\theta}}.\notag
 \end{align}
 进而可根据
 \begin{equation}
@@ -1734,7 +1737,7 @@ R_{22}&=\left[\frac{\partial{}\Gamma_{22}^{0}}{\partial{}t}+\frac{\partial{}\Gam
 &=a^{2}r^{2}\left(\frac{\ddot{a}}{a}+2\left(\frac{\dot{a}}{a}\right)^{2}+\frac{2k}{a^{2}}\right).\notag\\
 R_{33}&=\left[\frac{\partial{}\Gamma_{33}^{0}}{\partial{}t}+\frac{\partial{}\Gamma_{33}^{1}}{\partial{}r}+\frac{\partial{}\Gamma_{33}^{2}}{\partial{}\theta}\right]-\left[0\right]+\left[\Gamma_{33}^{0}\Gamma_{0\alpha}^{\alpha}+\Gamma_{33}^{1}\Gamma_{1\alpha}^{\alpha}+\Gamma_{33}^{2}\Gamma_{2\alpha}^{\alpha}\right]\notag\\
 &\quad-\left[\Gamma_{33}^{0}\Gamma_{30}^{3}+\Gamma_{33}^{1}\Gamma_{31}^{3}+\Gamma_{33}^{2}\Gamma_{32}^{3}+\Gamma_{03}^{3}\Gamma_{33}^{0}+\Gamma_{13}^{3}\Gamma_{33}^{1}+\Gamma_{23}^{3}\Gamma_{33}^{2}\right]\notag\\
-&=a^{2}r^{2}\sin^{2}\theta\left(\frac{\ddot a}{a}+2\left(\frac{\dot a}{a}\right)^{2}+\frac{2k}{a^{2}}\right).\notag
+&=a^{2}r^{2}\sin^{2}{\theta}\left(\frac{\ddot a}{a}+2\left(\frac{\dot a}{a}\right)^{2}+\frac{2k}{a^{2}}\right).\notag
 \end{align}
 幸运的是，其他几项很容易算
 \begin{align}
@@ -1841,7 +1844,7 @@ H^{2}\left(t\right)=H_{0}^{2}\left[\Omega_{\text{r, 0}}\left(\frac{a_{0}}{a\left
 \begin{equation}
 z=\frac{a_{0}}{a}-1=\frac{1}{a}-1.
 \end{equation}
-举个例子，当我们在说红移 $z=1$ 时，$a=\dfrac12$, 那时候宇宙只有现在一半大（半径）。
+举个例子，当我们在说红移 $z=1$ 时，$a=\dfrac{1}{2}$, 那时候宇宙只有现在一半大（半径）。
 
 有了红移的概念宇宙年龄可以写作
 \begin{equation}
@@ -1851,7 +1854,7 @@ t_{0}=\int_{0}^{a_{0}}\frac{\symup{d}a}{\dot a}=\int_{0}^{\infty}\frac{\symup{d}
 \subsubsection{特殊的距离}
 我们刚才介绍了光子的距离，它也被称作共动距离。我们已经知道了尺度因子、哈勃常数、红移之间的关系，因此它也可以改写成
 \begin{equation}
-\chi\left(a\right)=\int_{t\left(a\right)}^{t_0}\frac{\symup{c}\symup{d}t'}{a\left(t'\right)}=\symup{c}\int_{a}^{a_{0}}\frac{\symup{d}a'}{a'^{2}H\left(a'\right)}=\symup{c}\int\frac{\symup{d}a'}{\symup{d}z'}\frac{\symup{d}z'}{a'^{2}H'}=\int_{0}^{z}\frac{\symup{c}\symup{d}z}{H\left(z\right)}.
+\chi\left(a\right)=\int_{t\left(a\right)}^{t_{0}}\frac{\symup{c}\symup{d}t'}{a\left(t'\right)}=\symup{c}\int_{a}^{a_{0}}\frac{\symup{d}a'}{a'^{2}H\left(a'\right)}=\symup{c}\int\frac{\symup{d}a'}{\symup{d}z'}\frac{\symup{d}z'}{a'^{2}H'}=\int_{0}^{z}\frac{\symup{c}\symup{d}z}{H\left(z\right)}.
 \end{equation}
 取 $t\left(a\right)=0$, 即从宇宙诞生时刻算起，计算光子共动距离，再乘以某一时刻的尺度因子 $a\left(t\right)$, 就得到某一时刻的视界大小（即所能观测到的来自过去光线的最远距离）
 \begin{equation}
@@ -1869,24 +1872,24 @@ d_{\theta}=\frac{l}{\theta}=a\chi=\frac{\chi}{1+z}.
 
 在一个平坦的物质主导的 $\Omega=1$ 的宇宙中，
 \begin{align}
-a\left(t\right)&=a_{0}\left(\frac32H_{0}t\right)^{\frac23}.\notag\\
-H\left(z\right)&=\frac{\dot a}{a}=\frac{2}{3t}=H_{0}\left(1+z\right)^{\frac32}.\notag\\
-\chi&=\frac{\symup{c}}{H_{0}}\int_{0}^{z}\left(1+z\right)^{-\frac32}\symup{d}z=\frac{2\symup{c}}{H_{0}}\left(1-\left(1+z\right)^{-\frac12}\right).\notag\\
-\theta&=\frac{l}{\chi}\left(1+z\right)=\frac{lH_{0}}{2\symup{c}}\frac{1+z}{1-\left(1+z\right)^{-\frac12}}.
+a\left(t\right)&=a_{0}\left(\frac{3}{2}H_{0}t\right)^{\frac{2}{3}}.\notag\\
+H\left(z\right)&=\frac{\dot a}{a}=\frac{2}{3t}=H_{0}\left(1+z\right)^{\frac{3}{2}}.\notag\\
+\chi&=\frac{\symup{c}}{H_{0}}\int_{0}^{z}\left(1+z\right)^{-\frac{3}{2}}\symup{d}z=\frac{2\symup{c}}{H_{0}}\left(1-\left(1+z\right)^{-\frac{1}{2}}\right).\notag\\
+\theta&=\frac{l}{\chi}\left(1+z\right)=\frac{lH_{0}}{2\symup{c}}\frac{1+z}{1-\left(1+z\right)^{-\frac{1}{2}}}.
 \end{align}
 于是我们发现，天体的角直径随红移增加先下降后上升，高红移处天体看起来反而更大了。
 
 另一个要定义的距离则是光度距离。我们所接收到的光度为
 \begin{equation}
-F=\frac{L(\chi)}{4\pi \chi^2(a)}.
+F=\frac{L\left(\chi\right)}{4\pi \chi^{2}\left(a\right)}.
 \end{equation}
 因为宇宙膨胀，光子能量降低，同时视线方向单位长度包含的光子数少了，故 $L\left(\chi\right)=La^{2}$, 光度距离
 \begin{equation}
-d_{L}=\left(\frac{L}{4\pi F}\right)^{\frac12}=\chi\left(1+z\right).
+d_{L}=\left(\frac{L}{4\pi F}\right)^{\frac{1}{2}}=\chi\left(1+z\right).
 \end{equation}
 此时天体面亮度
 \begin{equation}
-I(x)=\frac{F}{\theta^{2}}=\frac{L/(4\pi d_{L}^{2})}{D^{2}/d_{\theta}^{2}}=\frac{L}{4\pi D^{2}}\frac{1}{\left(1+z\right)^{4}},
+I\left(x\right)=\frac{F}{\theta^{2}}=\frac{L/\left(4\pi d_{L}^{2}\right)}{D^{2}/d_{\theta}^{2}}=\frac{L}{4\pi D^{2}}\frac{1}{\left(1+z\right)^{4}},
 \end{equation}
 不再是常数，而是随着红移增加快速下降，因此高红移天体非常暗。
 
@@ -1917,7 +1920,7 @@ I(x)=\frac{F}{\theta^{2}}=\frac{L/(4\pi d_{L}^{2})}{D^{2}/d_{\theta}^{2}}=\frac{
 \label{距离阶梯。}
 \end{figure}
 
-不同的测距方法适用于不同的距离。最基本的三角视差法原理我们在《球面天文》已经介绍过了，通常只适用于 $30\text{\textendash}\qty{500}{pc}$ 范围内的恒星。它比较依赖望远镜的分辨率。一般来讲，地面望远镜单镜分辨率 $\sim\qty{10}{mas}$, 地面光学/近红外干涉 $\sim\qty{1}{mas}$, 甚长基线干涉 $\sim\qty{0.1}{mas}$, 空间天体测量卫星 Hipparcos 可达 $\qty{1}{mas}$, 天体测量卫星 Gaia 可达 $\qty{0.04}{mas}$. 有关 Gaia 卫星的原理我们可以在这里提一下，它沿用了 Hipparcos 的扫描空间天体测量原理 (the principle of scanning space astrometry). 考虑距离太阳一个天文单位的观测者，恒星视差 $\varpi$ 会造成恒星在天球上的位移，具体形式为 $\varpi\sin\theta$, 其中 $\theta$ 是天体方向单位矢量与太阳方向单位矢量的夹角。令卫星缓慢自转，当恒星通过卫星搭载的望远镜的视场时，恒星位移垂直自转轴的部分会影响到恒星通过焦平面的时间，因此可将视差测定转换成时间测定。同一视场内 $\theta$ 角差异极小，时间的差值难以测量，因此需要在垂直自转轴的平面上放置两个指向呈一定大角度 $\Gamma$ 的望远镜，比较两个视场内的天体。利用该方法不仅可以实现相对视差测量，还可在不依赖背景天体的情况下实现绝对视差测量。如图\ref{absolute_parallax}左所示，指向 P 点的望远镜测得的沿扫描方向视差位移 (along-scan shift, 简称 AL shift) 等于 0 时，指向 F 点的望远镜测得的沿扫描方向视差位移为 $\varpi_{F}\sin\theta\sin\psi=\varpi_{F}\sin\xi\sin\Gamma$, 其中 $\xi$ 是太阳方向单位矢量与自转轴的夹角。如此绝对视差测量就变得可行。
+不同的测距方法适用于不同的距离。最基本的三角视差法原理我们在《球面天文》已经介绍过了，通常只适用于 $30\text{\textendash}\qty{500}{pc}$ 范围内的恒星。它比较依赖望远镜的分辨率。一般来讲，地面望远镜单镜分辨率 $\sim\qty{10}{mas}$, 地面光学/近红外干涉 $\sim\qty{1}{mas}$, 甚长基线干涉 $\sim\qty{0.1}{mas}$, 空间天体测量卫星 Hipparcos 可达 $\qty{1}{mas}$, 天体测量卫星 Gaia 可达 $\qty{0.04}{mas}$. 有关 Gaia 卫星的原理我们可以在这里提一下，它沿用了 Hipparcos 的扫描空间天体测量原理 (the principle of scanning space astrometry). 考虑距离太阳一个天文单位的观测者，恒星视差 $\varpi$ 会造成恒星在天球上的位移，具体形式为 $\varpi\sin{\theta}$, 其中 $\theta$ 是天体方向单位矢量与太阳方向单位矢量的夹角。令卫星缓慢自转，当恒星通过卫星搭载的望远镜的视场时，恒星位移垂直自转轴的部分会影响到恒星通过焦平面的时间，因此可将视差测定转换成时间测定。同一视场内 $\theta$ 角差异极小，时间的差值难以测量，因此需要在垂直自转轴的平面上放置两个指向呈一定大角度 $\Gamma$ 的望远镜，比较两个视场内的天体。利用该方法不仅可以实现相对视差测量，还可在不依赖背景天体的情况下实现绝对视差测量。如图\ref{absolute_parallax}左所示，指向 P 点的望远镜测得的沿扫描方向视差位移 (along-scan shift, 简称 AL shift) 等于 0 时，指向 F 点的望远镜测得的沿扫描方向视差位移为 $\varpi_{F}\sin{\theta}\sin{\psi}=\varpi_{F}\sin{\xi}\sin{\Gamma}$, 其中 $\xi$ 是太阳方向单位矢量与自转轴的夹角。如此绝对视差测量就变得可行。
 \begin{figure}[!htp]
 \centering
 \includegraphics[width=0.9\textwidth]{figures/figure1_19.png}
@@ -1997,7 +2000,7 @@ Z&=\left(\sum_{n_{1}=1, 2,\cdots}\symup{e}^{-\beta n_{1}\varepsilon_{1}}\right)\
 汤姆孙散射可看作平面波驱动电子偶极震荡
 \begin{align}
 \symup{d}I&=\frac{1}{4\pi\symup{c}^{3}}\left(\ddot{\symbf{d}}\times\symbf{n}\right)^{2}\symup{d}\Omega=\frac{{\color{blue}{\ce{e}}}^{4}}{4\pi\symup{c}^{3}m_{0}^{2}}\left(\symbf{E}\times\symbf{n}\right)^{2}\symup{d}\Omega,\\
-\symup{d}\sigma\left(\theta,\phi\right)&=\sigma\left(\theta,\phi\right)\symup{d}\Omega=\frac{\symup{d}I\left(\theta,\phi\right)}{S}=\left[\frac{{\color{blue}{\ce{e}}}^{2}}{m_{0}\symup{c}^{2}}\right]^{2}\sin^{2}\theta\symup{d}\Omega,
+\symup{d}\sigma\left(\theta,\phi\right)&=\sigma\left(\theta,\phi\right)\symup{d}\Omega=\frac{\symup{d}I\left(\theta,\phi\right)}{S}=\left[\frac{{\color{blue}{\ce{e}}}^{2}}{m_{0}\symup{c}^{2}}\right]^{2}\sin^{2}{\theta}\symup{d}\Omega,
 \end{align}
 其中 $S$ 是 Poynting 矢量。总散射截面为
 \begin{equation}

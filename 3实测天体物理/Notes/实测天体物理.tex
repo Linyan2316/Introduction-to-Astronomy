@@ -8,7 +8,11 @@
 \definecolor{pagecolor}{HTML}{C7EDCC}
 \pagecolor{pagecolor}
 \setCJKmainfont[AutoFakeBold, AutoFakeSlant]{LXGW WenKai}
+\setCJKmonofont[AutoFakeBold, AutoFakeSlant]{MapleMono-CN-Regular}
+\setCJKsansfont[AutoFakeBold, AutoFakeSlant]{LXGW WenKai}
 \setmainfont[AutoFakeBold, AutoFakeSlant]{LXGW WenKai}
+\setmonofont[AutoFakeBold, AutoFakeSlant]{MapleMono-CN-Regular}
+\setsansfont[AutoFakeBold, AutoFakeSlant]{LXGW WenKai}
 \setmathfont{Latin Modern Math}
 \setmathrm{Latin Modern Math}
 
@@ -46,12 +50,12 @@
        showspaces      =    false,% 是否显示空格
        numberstyle     =    \zihao{-5}\ttfamily,% 行号的样式，小五号，tt 等宽字体
        showstringspaces=    false,
-       captionpos      =    t,%这段代码的名字所呈现的位置，t 指的是 top 上面
+       captionpos      =    t,% 这段代码的名字所呈现的位置，t 指的是 top 上面
        frame           =    lrtb,% 显示边框
 }
 
 \lstdefinestyle{Python}{
-       language=Python,     
+       language        =    Python,
        basicstyle      =    \zihao{-5}\ttfamily,
        numberstyle     =    \zihao{-5}\ttfamily,
        keywordstyle    =    \color{blue},
@@ -150,7 +154,7 @@
 
 利用开普勒第三定律
 \begin{equation}
-\frac{\alpha^3}{T^2}=\frac{\symup{G}}{4\pi^2}(M_1+M_2)
+\frac{\alpha^{3}}{T^{2}}=\frac{\symup{G}}{4\pi^{2}}\left(M_{1}+M_{2}\right)
 \end{equation}
 将恒星质量测量转换为双星轨道半长径和周期测量，进而转换成对恒星位置和运动的测量、或者测量谱线频率变化，光度变化和轨道倾角。还需知道一颗恒星的质量和质量比。
 
@@ -170,7 +174,7 @@
 
 1. 集光能力强，故可观测暗弱天体。
 
-2. 空间分辨本领强 $(\theta=1.22\lambda/D)$, 可看清天体的表面细节。
+2. 空间分辨本领强 ($\theta=1.22\lambda/D$), 可看清天体的表面细节。
 
 3. 追踪天体的周日视运动，从而可长时间曝光。
 
@@ -183,7 +187,7 @@
 
 相对口径：$A=D/f$. 倒数为焦比。面源成像面积正比于 $f^{2}$, 光通量 $\propto{}D^{2}$, 因此单位面积光强正比于 $A^{2}$. 相对口径 A 越大，就越能看到更暗弱的面源天体。实际的 A 值往往受到像差的限制而不能随意取值。折射 $A\sim\dfrac{1}{7}\text{\textendash}\dfrac{1}{5}$, 反射 $\sim\frac{1}{5}\text{\textendash}\frac{1}{3}$, 折反射 $\sim\dfrac{1}{3}\text{\textendash}\frac{1}{2}$, 甚至可以大于 1.
 
-目视望远镜的放大率指的是角放大率，$G=\dfrac{\tan\omega'}{\tan\omega}=\dfrac{f_{\text{物}}}{f_{\text{目}}}$.
+目视望远镜的放大率指的是角放大率，$G=\dfrac{\tan{\omega'}}{\tan{\omega}}=\dfrac{f_{\text{物}}}{f_{\text{目}}}$.
 
 照相望远镜没有目镜，直接在焦平面（不是像平面）成像，放大率指的是底片比例尺。
 
@@ -208,7 +212,7 @@
 
 球差：远轴光学并不汇聚于焦点。反射镜是球面镜尤为严重，为此中大型反射望远镜不采用球面镜。
 
-彗差：宽阔光束以一定角度入射成像会得到彗状斑点。齐明条件：入射光线在入射光瞳处的高度 $y$ 等于焦距 $f$ 乘折射（或反射）光线与光轴的夹角的正弦 $\sin\omega'$.
+彗差：宽阔光束以一定角度入射成像会得到彗状斑点。齐明条件：入射光线在入射光瞳处的高度 $y$ 等于焦距 $f$ 乘折射（或反射）光线与光轴的夹角的正弦 $\sin{\omega'}$.
 
 像散：点光源成像是个椭圆，原因是球形波面通过实际光学系统后变成非球形波面。
 
@@ -307,7 +311,7 @@ M\left(z\right)=\frac{\tau_{\lambda}\left(z\right)}{\tau_{\lambda}\left(0\right)
 
 定义透射系数 $P=\symup{e}^{-\tau}$, 天顶距为 $z$ 的方向，透射系数为
 \begin{equation}
-P_{\lambda}\left(z\right)=\symup{e}^{-\tau_{\lambda}\left(z\right)}=e^{-\tau_{\lambda}\left(0\right)M^{\left(z\right)}}=\left(P_{\lambda}\left(0\right)\right)^{M\left(z\right)}.
+P_{\lambda}\left(z\right)=\symup{e}^{-\tau_{\lambda}\left(z\right)}=\symup{e}^{-\tau_{\lambda}\left(0\right)M^{\left(z\right)}}=\left(P_{\lambda}\left(0\right)\right)^{M\left(z\right)}.
 \end{equation}
 而天体辐射在大气内外的辐射流之比为 $\dfrac{F_{\lambda}}{F_{0,\lambda}}=P_{\lambda}\left(z\right)$, 因此大气内外星等差为
 \begin{equation}
