@@ -370,7 +370,7 @@ A=\left(\alpha_{0},\delta_{0}\right),\sigma=\left(\alpha,\delta\right),\sigma'=\
 如此一来
 \begin{align}
 \cos{\angle{P\sigma\sigma'}}\sin{\overset{\frown}{A\sigma}}=-\sin{\overset{\frown}{A\sigma}}\cos{\angle{A\sigma P}}&=-\sin{\overset{\frown}{P\sigma}}\cos{\overset{\frown}{PA}}+\cos{\overset{\frown}{P\sigma}}\cos{\angle{AP\sigma}}\sin{\overset{\frown}{PA}}\notag\\
-&=\sin{\delta{}}\cos{\left(\alpha-\alpha_{0}\right)}\cos{\delta_{0}}-\cos{\delta{}\sin\delta{}_{0}}.\\
+&=\sin{\delta}\cos{\left(\alpha-\alpha_{0}\right)}\cos{\delta_{0}}-\cos{\delta}\sin{\delta_{0}}.\\
 \sin{\angle{P\sigma\sigma'}}\sin{\overset{\frown}{A\sigma}}=\sin{\overset{\frown}{AP}}\sin{\angle{AP\sigma}}&=\cos{\delta{}_{0}}\sin{\left(\alpha-\alpha_{0}\right)}.
 \end{align}
 由于恒星位移是个小量，我们可认为 $\cos{\delta'}=\cos{\delta}$, 最后得到
@@ -576,7 +576,7 @@ S_{\text{平}}=S_{0}+\omega{}t+m_{A}=S_{0}+\left(\omega+m\right)t+m't^{2},
 
 平恒星时加上章动改正就是真恒星时了。章动可分为黄经章动和交角章动，前者是平北天极和真北天极的黄经差，后者是平北天极和真北天极的黄纬差，前者影响黄赤交角的位置，后者影响黄赤交角 $\varepsilon$ 的大小，因此只需考虑黄经章动 $\Delta{}\psi$ 即可：
 \begin{equation}
-S_{\text{真}}=S_{\text{平}}+\Delta\psi\cos\varepsilon,
+S_{\text{真}}=S_{\text{平}}+\Delta\psi\cos{\varepsilon},
 \end{equation}
 其中 $\Delta\psi\cos{\varepsilon}$ 是赤经章动，是黄经章动在赤道上的分量。具体可见第五章章动部分。
 
@@ -654,11 +654,11 @@ BJD 是 JD 经过校正以考虑地球相对于太阳系质心的位置差异。
 \label{三角视差。}
 \end{figure}
 
-一条基线两端观测同一天体时，天体相对遥远背景天体发生位移，记位移前后天体方向单位矢量夹角为视差。视差显然与基线长度和天体距离有关。如三角视差采用日地距离作为基线，记日地距离平均值为一个天文单位 $\left(\unit{AU}\right),\qty{1}{AU}=\qty{1.496e8}{km}$, 记恒星到地球（或日心）距离为 $r$, 可用视差 $\pi$ 来表征距离：
+一条基线两端观测同一天体时，天体相对遥远背景天体发生位移，记位移前后天体方向单位矢量夹角为视差。视差显然与基线长度和天体距离有关。如三角视差采用日地距离作为基线，记日地距离平均值为一个天文单位 ($\unit{AU}$), $\qty{1}{AU}=\qty{1.496e8}{km}$, 记恒星到地球（或日心）距离为 $r$, 可用视差 $\pi$ 来表征距离：
 \begin{equation}
 \pi=\frac{\qty{1}{AU}}{r}.
 \end{equation}
-视差恰好为 $\ang{;;1}$ 时，称恒星距离我们一秒差距 $\left(\unit{pc}\right)$,
+视差恰好为 $\ang{;;1}$ 时，称恒星距离我们一秒差距 ($\unit{pc}$),
 \begin{equation}
 \qty{1}{pc}=\frac{\qty{1}{AU}}{\ang{;;1}}=\frac{\qty{1}{AU}}{\dfrac{\ang{1;;}}{3600}\times\dfrac{\pi}{\ang{180;;}}}\approx\qty{206265}{AU}.
 \end{equation}
@@ -671,7 +671,7 @@ BJD 是 JD 经过校正以考虑地球相对于太阳系质心的位置差异。
 我们从最简单的情况出发考虑大气折射近似公式，即认为大气层是 $N$ 个不同密度的平行平面均匀层组成。根据简单的折射定律可知
 \begin{align}
 n_{i}\sin{z_{i}}&=n_{i-1}\sin{z_{i-1}},\\
-n_{0}\sin{z_{\text{obs}}}&=\sin{z}=\sin\left(z_{\text{obs}}+\rho\right).
+n_{0}\sin{z_{\text{obs}}}&=\sin{z}=\sin{\left(z_{\text{obs}}+\rho\right)}.
 \end{align}
 其中大气折射 $\rho$ 是小量，展开移项后得到
 \begin{equation}
@@ -686,7 +686,7 @@ n_{0}\sin{z_{\text{obs}}}&=\sin{z}=\sin\left(z_{\text{obs}}+\rho\right).
 \end{align}
 其中 $\lambda$ 是以微米为单位的波长。
 
-现在我们可以考虑大气折射引起的恒星位移。向点 $A$ 显然是天顶 $Z$, 记地理纬度 $\varphi$, 任一恒星赤道坐标观测值 $\sigma\left(\alpha,\delta{}\right)$, 时角为 $t$, 则天顶赤道坐标为 $\left(\alpha+t,\varphi\right)$. 改正是从 $z_{\text{obs}}$ 向 $z$ 移动，$k$ 取正值，因此 $\symup{d}\theta=\rho=z-z_{\text{obs}}=k\sin\theta=k\sin{z_{\text{obs}}}=R\tan{z_{\text{obs}}}$, 简单计算可知
+现在我们可以考虑大气折射引起的恒星位移。向点 $A$ 显然是天顶 $Z$, 记地理纬度 $\varphi$, 任一恒星赤道坐标观测值 $\sigma\left(\alpha,\delta{}\right)$, 时角为 $t$, 则天顶赤道坐标为 $\left(\alpha+t,\varphi\right)$. 改正是从 $z_{\text{obs}}$ 向 $z$ 移动，$k$ 取正值，因此 $\symup{d}\theta=\rho=z-z_{\text{obs}}=k\sin{\theta}=k\sin{z_{\text{obs}}}=R\tan{z_{\text{obs}}}$, 简单计算可知
 \begin{align}
 k&=R\sec{z_{\text{obs}}}.\\
 \alpha'-\alpha&=k\sec{\delta}\cos{\varphi}\sin{\left(-t\right)},\\
@@ -840,7 +840,7 @@ r_{i+1}n_{i+1}\sin{\psi_{i+1}}&=r_{i}n_{i}\sin{\psi_{i}}=r_{0}n_{0}\sin{z_{\text
 \begin{align}
 \rho&=\rho_{1}-\rho_{2}+O\left(\frac{h^{2}}{r_{0}^{2}}\right),\\
 \rho_{1}&=n_{0}\sin{z_{0}}\int_{1}^{n_{0}}\frac{\symup{d}n}{n\sqrt{n^{2}-n_{0}^{2}\sin^{2}{z_{0}}}}=\arcsin\left(n_{0}\sin{z_{0}}\right)-z_{0},\\
-\rho_{2}&=\frac{n_{0}\sin{z_{0}}}{r_{0}}\int_{1}^{n_{0}}\frac{hn\symup{d}n}{\left(n^{2}-n_{0}^{2}\sin^{2}z_{0}\right)^{\frac{3}{2}}},
+\rho_{2}&=\frac{n_{0}\sin{z_{0}}}{r_{0}}\int_{1}^{n_{0}}\frac{hn\symup{d}n}{\left(n^{2}-n_{0}^{2}\sin^{2}{z_{0}}\right)^{\frac{3}{2}}},
 \end{align}
 如果将 $\rho_{1}$ 展开成 $n_{0}-1$ 的幂级数，仅保留到第二项可以得到
 \begin{equation}
@@ -953,7 +953,7 @@ y'&=ac\left(1-f\right)^{2}\sin{\varphi_{g}}=as\sin{\varphi_{g}},\\
 \draw (30,-10) node [anchor=north west][inner sep=0.75pt]   [align=left] {$E$};
 \draw (220, 217.84) node [anchor=north west][inner sep=0.75pt]   [align=left] {$\sigma'$};
 \draw (100, 217.84) node [anchor=north west][inner sep=0.75pt]   [align=left] {$\sigma$};
-\draw (110, 100) node [anchor=north west][inner sep=0.75pt]   [align=left] {$c\tau$};
+\draw (110, 100) node [anchor=north west][inner sep=0.75pt]   [align=left] {$\symup{c}\tau$};
 \draw (155, 230) node [anchor=north west][inner sep=0.75pt]   [align=left] {$v\tau$};
 \draw (40, 70) node [anchor=north west][inner sep=0.75pt]   [align=left] {$\alpha$};
 \draw (120, 190) node [anchor=north west][inner sep=0.75pt]   [align=left] {$\theta$};
@@ -1047,7 +1047,7 @@ k&=-\frac{v}{\symup{c}}=-\frac{\rho}{a}\frac{v_{0}}{\symup{c}}\cos{\varphi}=-\fr
 \begin{equation}
 \sin{p_{0}}=\frac{a}{r}.
 \end{equation}
-如对太阳而言，$r=\qty{1}{AU},\sin\pi_{\odot}=\ang{;;8.794148}$. 对遥远恒星可认为 $z'\approx z$.
+如对太阳而言，$r=\qty{1}{AU},\sin{\pi_{\odot}}=\ang{;;8.794148}$. 对遥远恒星可认为 $z'\approx z$.
 
 现在我们来研究恒星位移。类似周日光行差，考虑站心地心观测值 $\sigma'$ 围绕地心地心观测值 $\sigma$ 而成的视差椭圆。向点为地心天顶 $Z\left(S,\varphi\right)$, 记 $\sigma\left(\alpha,\delta{}\right), S=\alpha+t$.
 \begin{align}
@@ -1408,7 +1408,7 @@ k&=-K,\\
 \subsection{周年视差}
 有了周日视差的经验我们就不画示意图了。记日心为 $C$, 地球为 $E$, 日心系中恒星为 $\sigma$, 地心系中恒星为 $\sigma'$, $C\sigma=r, CE=R$, 周年视差为 $p$, 可见
 \begin{equation}
-\sin{p}=\frac{R}{r}\sin\angle{\sigma{}EC}.
+\sin{p}=\frac{R}{r}\sin{\angle{\sigma{}EC}}.
 \end{equation}
 取 $R=a,\angle{\sigma{}EC}=\ang{90;;}$, 定义恒星的周年视差（简称恒星视差）
 \begin{equation}
@@ -1511,7 +1511,7 @@ k&=-K,\\
 \end{align}
 代入之前的结果得到行星岁差对黄道坐标的影响
 \begin{align}
-\symup{d}\lambda&=-\chi\cos{\varepsilon}\symup{d}t+\pi\tan{\beta}\cos\left(\Pi-\lambda\right)\symup{d}t,\\
+\symup{d}\lambda&=-\chi\cos{\varepsilon}\symup{d}t+\pi\tan{\beta}\cos{\left(\Pi-\lambda\right)}\symup{d}t,\\
 \symup{d}\beta&=\pi\sin{\left(\Pi-\lambda\right)}\symup{d}t,
 \end{align}
 
@@ -1855,14 +1855,14 @@ V\cos{\theta}=r\frac{\symup{d}\theta}{\symup{d}t},
 \begin{align}
 -V\sin{\theta}\frac{\symup{d}\theta}{\symup{d}t}&=\frac{\symup{d}r}{\symup{d}t}\frac{\symup{d}\theta}{\symup{d}t}+r\frac{\symup{d}\mu}{\symup{d}t},\notag\\
 r\frac{\symup{d}\mu}{\symup{d}t}&=-2V\sin{\theta}\mu,\notag\\
-\frac{\symup{d}\mu}{\symup{d}t}&=-\frac{2V_r\mu\pi}{\qty{1}{AU}}.
+\frac{\symup{d}\mu}{\symup{d}t}&=-\frac{2V_{r}\mu\pi}{\qty{1}{AU}}.
 \end{align}
 因此 (\ref{6.2.13})(\ref{6.2.14}) 式可写作
 \begin{align}
 \frac{\symup{d}\mu_{\alpha}}{\symup{d}t}&=2\mu_{\alpha}\mu_{\delta}\tan{\delta}-\frac{2V_{r}\mu_{\alpha}\pi}{\qty{1}{AU}},\\
 \frac{\symup{d}\mu_{\delta}}{\symup{d}t}&=-\mu_{\alpha}^{2}\sin{\delta}\cos{\delta}-\frac{2V_{r}\mu_{\delta}\pi}{\qty{1}{AU}},
 \end{align}
-取 $\mu_{\alpha}$ 单位为 $\unit{s\cdot yr^{-1}}$, $\mu_{\delta}$ 单位为 $\unit{arcsec\cdot yr^{-1}}$, $\pi$ 单位为 $^{\prime\prime}$, $V_r$ 单位为 $\unit{km\cdot{}s^{-1}}$, 则数值上写作
+取 $\mu_{\alpha}$ 单位为 $\unit{s\cdot yr^{-1}}$, $\mu_{\delta}$ 单位为 $\unit{arcsec\cdot yr^{-1}}$, $\pi$ 单位为 $^{\prime\prime}$, $V_{r}$ 单位为 $\unit{km\cdot{}s^{-1}}$, 则数值上写作
 \begin{align}
 \frac{\symup{d}\mu_{\alpha}}{\symup{d}t}&=2\mu_{\alpha}\mu_{\delta}\tan{\delta}-\frac{2V_{r}\mu_{\alpha}\pi}{1.496\times10^{8}\left(\unit{km}\right)}\times\frac{3.156\times10^{7}\left(\unit{s}\right)}{1\left(\unit{yr}\right)}\\
 &=2\mu_{\alpha}\mu_{\delta}\tan{\delta}-0.422V_{r}\mu_{\alpha}\pi\quad\left(\unit{s\cdot arcsec\cdot yr^{-2}}\right),\\
@@ -2050,12 +2050,12 @@ B&=A-\omega_{0}.
 R_{0}\left(\omega-\omega_{0}\right)&=2Ar\cos{b}\cos{l},\\
 v_{r}&=Ar\cos^{2}{b}\sin{\left(2l\right)}.
 \end{align}
-其中 $r$ 单位为 $\unit{kpc}$, $v_r$ 单位为 $\unit{km\cdot{}s^{-1}}$.
+其中 $r$ 单位为 $\unit{kpc}$, $v_{r}$ 单位为 $\unit{km\cdot{}s^{-1}}$.
 
 而银河系自转引起的切向速度的银经和银纬分量可分别写为
 \begin{align}
-v_l&=\vec{v}\cdot\vec{l},\\
-v_b&=\vec{v}\cdot\vec{b}.
+v_{l}&=\vec{v}\cdot\vec{l},\\
+v_{b}&=\vec{v}\cdot\vec{b}.
 \end{align}
 $\vec{l}$ 沿着银经增加的方向，因此它平行于银道面并且垂直于 $\vec{S}$, 银河系自转方向与银经增加的方向相反，因此 $\vec{l}$ 与 $-\vec{\omega}\times\vec{S}$ 平行。$\vec{b}$ 沿着银纬增加的方向，垂直于 $\vec{S}$ 和 $\vec{l}$. 因此有
 \begin{align}
@@ -2111,5 +2111,7 @@ V_{r}=Ar\cos^{2}{b}\sin{\left(2l\right)}.
 \mu_{\delta}&=\left(\frac{A}{4.74}\cos{\left(2l\right)}\cos{b}+\frac{B}{4.74}\cos{b}\right)\sin{\psi}-\frac{A}{4.74}\sin{\left(2l\right)}\sin{b}\cos{b}\cos{\psi}.
 \end{align}
 其中 $\psi$ 是银道星位角。
+
 %\printbibliography
+
 \end{document}

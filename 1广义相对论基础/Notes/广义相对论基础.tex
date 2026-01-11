@@ -8,7 +8,11 @@
 \definecolor{pagecolor}{HTML}{C7EDCC}
 \pagecolor{pagecolor}
 \setCJKmainfont[AutoFakeBold, AutoFakeSlant]{LXGW WenKai}
+\setCJKmonofont[AutoFakeBold, AutoFakeSlant]{MapleMono-CN-Regular}
+\setCJKsansfont[AutoFakeBold, AutoFakeSlant]{LXGW WenKai}
 \setmainfont[AutoFakeBold, AutoFakeSlant]{LXGW WenKai}
+\setmonofont[AutoFakeBold, AutoFakeSlant]{MapleMono-CN-Regular}
+\setsansfont[AutoFakeBold, AutoFakeSlant]{LXGW WenKai}
 \setmathfont{Latin Modern Math}
 \setmathrm{Latin Modern Math}
 
@@ -46,12 +50,12 @@
       showspaces      =    false,% 是否显示空格
       numberstyle     =    \zihao{-5}\ttfamily,% 行号的样式，小五号，tt 等宽字体
       showstringspaces=    false,
-      captionpos      =    t,%这段代码的名字所呈现的位置，t 指的是 top 上面
+      captionpos      =    t,% 这段代码的名字所呈现的位置，t 指的是 top 上面
       frame           =    lrtb,% 显示边框
 }
 
 \lstdefinestyle{Python}{
-      language=Python,     
+      language        =    Python,
       basicstyle      =    \zihao{-5}\ttfamily,
       numberstyle     =    \zihao{-5}\ttfamily,
       keywordstyle    =    \color{blue},
@@ -471,7 +475,7 @@ g_{\lambda\mu,\nu}-g_{\alpha\mu}\Gamma_{\lambda\nu}^{\alpha}-g_{\alpha\alpha}\Ga
 (\ref{1.7.6})(\ref{1.7.7}) 式相加再减去 (\ref{1.7.5}) 式，并注意到无挠空间联络的对称性，可以得到
 \begin{align}
 \Gamma_{\lambda\mu\nu}&=g_{\lambda\alpha}\Gamma_{\mu\nu}^{\alpha}=\frac{1}{2}\left(g_{\mu\lambda,\nu}+g_{\nu\lambda,\mu}-g_{\mu\nu,\lambda}\right),\\
-\Gamma_{\mu\nu}^{\alpha}&=\frac12g^{\alpha\lambda}\left(g_{\mu\lambda,\nu}+g_{\nu\lambda,\mu}-g_{\mu\nu,\lambda}\right).
+\Gamma_{\mu\nu}^{\alpha}&=\frac{1}{2}g^{\alpha\lambda}\left(g_{\mu\lambda,\nu}+g_{\nu\lambda,\mu}-g_{\mu\nu,\lambda}\right).
 \end{align}
 于是我们建立了无挠黎曼空间中，保持矢量长度平移不变条件下对称联络与度规的泛函关系式。满足此式的联络称为 Christoffel 联络，简称克氏符。
 
@@ -515,8 +519,8 @@ S=\int_{A}^{B}\symup{d}s,
 \end{equation}
 线元可以记作
 \begin{align}
-\symup{d}s&=\left(g_{\alpha\beta}\symup{d}x^{\alpha}\symup{d}x^{\beta}\right)^{\frac12}=\left(g_{\alpha\beta}\frac{\symup{d}x^{\alpha}}{\symup{d}\lambda}\frac{\symup{d}x^{\beta}}{\symup{d}\lambda}\right)^{\frac12}\symup{d}\lambda\notag\\
-&=\left(g_{\alpha\beta}\dot{x}^{\alpha}\dot{x}^{\beta}\right)^{\frac12}\symup{d}\lambda=L\symup{d}\lambda.
+\symup{d}s&=\left(g_{\alpha\beta}\symup{d}x^{\alpha}\symup{d}x^{\beta}\right)^{\frac{1}{2}}=\left(g_{\alpha\beta}\frac{\symup{d}x^{\alpha}}{\symup{d}\lambda}\frac{\symup{d}x^{\beta}}{\symup{d}\lambda}\right)^{\frac{1}{2}}\symup{d}\lambda\notag\\
+&=\left(g_{\alpha\beta}\dot{x}^{\alpha}\dot{x}^{\beta}\right)^{\frac{1}{2}}\symup{d}\lambda=L\symup{d}\lambda.
 \end{align}
 其中 $L$ 是拉格朗日函数。(\ref{1.8.2}) 式改写为
 \begin{equation}
@@ -525,16 +529,16 @@ S=\int_{A}^{B}\symup{d}s,
 其满足的拉格朗日方程为
 \begin{align}
 \frac{\partial{}L}{\partial{}x^{\mu}}&-\frac{\symup{d}}{\symup{d}\lambda}\frac{\partial{}L}{\partial{}\dot{x}^{\nu}}=0.\\
-\frac{1}{\left(g_{\alpha\beta}\dot{x}^{\alpha}\dot{x}^{\beta}\right)^{\frac12}}\frac{\partial{}g_{\alpha\beta}}{\partial{}x^{\nu}}\dot{x}^{\alpha}\dot{x}^{\beta}&-\frac{\symup{d}}{\symup{d}\lambda}\frac{g_{\alpha\nu}\dot{x}^{\alpha}+g_{\beta\nu}\dot{x}^{\beta}}{\left(g_{\alpha\beta}\dot{x}^{\alpha}\dot{x}^{\beta}\right)^{\frac12}}=0.\label{1.8.6}
+\frac{1}{\left(g_{\alpha\beta}\dot{x}^{\alpha}\dot{x}^{\beta}\right)^{\frac{1}{2}}}\frac{\partial{}g_{\alpha\beta}}{\partial{}x^{\nu}}\dot{x}^{\alpha}\dot{x}^{\beta}&-\frac{\symup{d}}{\symup{d}\lambda}\frac{g_{\alpha\nu}\dot{x}^{\alpha}+g_{\beta\nu}\dot{x}^{\beta}}{\left(g_{\alpha\beta}\dot{x}^{\alpha}\dot{x}^{\beta}\right)^{\frac{1}{2}}}=0.\label{1.8.6}
 \end{align}
 如果标量参量 $\lambda$ 为线长 $\symup{d}s$, 则有
 \begin{equation}
-\left(g_{\alpha\beta}\dot{x}^{\alpha}\dot{x}^{\beta}\right)^{\frac12}=g_{\alpha\beta}\frac{\symup{d}x^{\alpha}}{\symup{d}\lambda}\frac{\symup{d}x^{\beta}}{\symup{d}\lambda}=g_{\alpha\beta}\frac{\symup{d}x^{\alpha}}{\symup{d}s}\frac{\symup{d}x^{\beta}}{\symup{d}s}=1,
+\left(g_{\alpha\beta}\dot{x}^{\alpha}\dot{x}^{\beta}\right)^{\frac{1}{2}}=g_{\alpha\beta}\frac{\symup{d}x^{\alpha}}{\symup{d}\lambda}\frac{\symup{d}x^{\beta}}{\symup{d}\lambda}=g_{\alpha\beta}\frac{\symup{d}x^{\alpha}}{\symup{d}s}\frac{\symup{d}x^{\beta}}{\symup{d}s}=1,
 \end{equation}
 (\ref{1.8.6}) 式可以写作
 \begin{align}
 &g_{\alpha\beta,\nu}\dot{x}^{\alpha}\dot{x}^{\beta}-2\frac{\symup{d}}{\symup{d}s}\left(g_{\alpha\nu}\dot{x}^{\alpha}\right)=0,\notag\\
-&g_{\alpha\nu}\frac{\symup{d}^{2}x^{\alpha}}{\symup{d}s^{2}}+\left(g_{\alpha\nu,\beta}-\frac12g_{\alpha\beta,\nu}\right)\frac{\symup{d}x^{\alpha}}{\symup{d}s}\frac{\symup{d}x^{\beta}}{\symup{d}s}=0.\label{1.8.8}
+&g_{\alpha\nu}\frac{\symup{d}^{2}x^{\alpha}}{\symup{d}s^{2}}+\left(g_{\alpha\nu,\beta}-\frac{1}{2}g_{\alpha\beta,\nu}\right)\frac{\symup{d}x^{\alpha}}{\symup{d}s}\frac{\symup{d}x^{\beta}}{\symup{d}s}=0.\label{1.8.8}
 \end{align}
 注意到
 \begin{equation}
@@ -542,7 +546,7 @@ g_{\alpha\nu,\beta}\frac{\symup{d}x^{\alpha}}{\symup{d}s}\frac{\symup{d}x^{\beta
 \end{equation}
 (\ref{1.8.8}) 式可以写作
 \begin{equation}
-g_{\mu\nu}\frac{\symup{d}^{2}x^{\mu}}{\symup{d}s^{2}}+\frac12\left[g_{\alpha\nu,\beta}+g_{\beta\nu,\alpha}-g_{\alpha\beta,\nu}\right]\frac{\symup{d}x^{\alpha}}{\symup{d}s}\frac{\symup{d}x^{\beta}}{\symup{d}s}=0,
+g_{\mu\nu}\frac{\symup{d}^{2}x^{\mu}}{\symup{d}s^{2}}+\frac{1}{2}\left[g_{\alpha\nu,\beta}+g_{\beta\nu,\alpha}-g_{\alpha\beta,\nu}\right]\frac{\symup{d}x^{\alpha}}{\symup{d}s}\frac{\symup{d}x^{\beta}}{\symup{d}s}=0,
 \end{equation}
 即
 \begin{equation}
@@ -557,7 +561,7 @@ g_{\mu\nu}\frac{\symup{d}^{2}x^{\mu}}{\symup{d}s^{2}}+\frac12\left[g_{\alpha\nu,
 \begin{equation}
 R_{\lambda\mu\nu}^{\rho}=\Gamma_{\lambda\nu,\mu}^{\rho}-\Gamma_{\lambda\mu,\nu}^{\rho}+\Gamma_{\lambda\nu}^{\sigma}\Gamma_{\sigma\mu}^{\rho}-\Gamma_{\lambda\mu}^{\sigma}\Gamma_{\sigma\nu}^{\rho}.\label{1.9.1}
 \end{equation}
-此为曲率张量的 $(1, 3)$ 型表示，为了进一步研究它的对称性，引入 $\left(0, 4\right)$ 型表示
+此为曲率张量的 (1, 3) 型表示，为了进一步研究它的对称性，引入 (0, 4) 型表示
 \begin{equation}
 R_{\rho\lambda\mu\nu}=g_{\rho\sigma}R^{\sigma}_{\lambda\mu\nu}.\label{1.9.2}
 \end{equation}
@@ -595,7 +599,7 @@ R=g^{\mu\nu}R_{\mu\nu}.
 \end{equation}
 最后定义爱因斯坦张量
 \begin{equation}
-G_{\mu\nu}=R_{\mu\nu}-\frac12g_{\mu\nu}R.
+G_{\mu\nu}=R_{\mu\nu}-\frac{1}{2}g_{\mu\nu}R.
 \end{equation}
 在 4 维空间中，$R_{\mu\nu}$ 有 $4^{2}$ 个分量，由于它是对称张量，因此独立分量个数为 $4+\dfrac{16-4}{2}=10$ 个。可见爱因斯坦张量独立分量也有 10 个。
 
@@ -625,11 +629,11 @@ R^{\sigma}_{\mu;\sigma}-R_{;\mu}+R^{\nu}_{\mu;\nu}=0.
 \end{equation}
 即
 \begin{equation}
-R^{\nu}_{\mu;\nu}-\frac12R_{;\mu}=0.
+R^{\nu}_{\mu;\nu}-\frac{1}{2}R_{;\mu}=0.
 \end{equation}
 也即
 \begin{equation}
-\left(R^{\nu}_{\mu}-\frac12\delta{}_{\mu}^{\nu}R\right)_{;\nu}=0.
+\left(R^{\nu}_{\mu}-\frac{1}{2}\delta{}_{\mu}^{\nu}R\right)_{;\nu}=0.
 \end{equation}
 这表明爱因斯坦张量的协变散度恒等于零，爱因斯坦引入它所要的正是这一性质：
 \begin{equation}
@@ -648,7 +652,7 @@ g\times\delta{}_{\alpha}^{\nu}&=g_{\alpha\rho}\Delta{}^{\nu\rho},\\
 
 接着引入一个特殊的 Christoffel 符号
 \begin{equation}
-\Gamma_{\alpha\mu}^{\mu}=\frac12g^{\mu\nu}g_{\mu\nu,\alpha}=-\frac{1}{2}g_{\mu\nu}g^{\mu\nu}_{,\alpha}=\frac{1}{2g}\frac{\partial{}g}{\partial{}x^{\alpha}}=\frac{\partial{}}{\partial{}x^{\alpha}}\left(\ln\sqrt{-g}\right).\label{1.10.6}
+\Gamma_{\alpha\mu}^{\mu}=\frac{1}{2}g^{\mu\nu}g_{\mu\nu,\alpha}=-\frac{1}{2}g_{\mu\nu}g^{\mu\nu}_{,\alpha}=\frac{1}{2g}\frac{\partial{}g}{\partial{}x^{\alpha}}=\frac{\partial{}}{\partial{}x^{\alpha}}\left(\ln\sqrt{-g}\right).\label{1.10.6}
 \end{equation}
 
 散度运算要用协变微商替代普通微商。对协变指标求散度要先升高指标。
@@ -824,7 +828,7 @@ A^{\mu}_{\parallel}=\pi^{\mu}_{\nu}A^{\nu}=-u_{\nu}A^{\nu}u^{\mu}.
 \end{equation}
 两事件的空间距离显然满足
 \begin{equation}
-\Delta{}l=\sqrt{g_{\mu\nu}\symup{d}x^{\mu}_{\bot}\symup{d}x^{\nu}_{\bot}}=\sqrt{g_{\mu\nu}\gamma^{\mu}_{\alpha}\symup{d}x^{\alpha}\gamma^{\nu}_{\beta}\symup{d}x^{\beta}}=\sqrt{\gamma_{\alpha\beta}\symup{d}x^{\alpha}\symup{d}x^{\beta}}.\label{2.1.11}
+\Delta{}l=\sqrt{g_{\mu\nu}\symup{d}x^{\mu}_{\bot}\symup{d}x^{\nu}_{\bot}}=\sqrt{g_{\mu\nu}\gamma^{\mu}_{\alpha}\symup{d}x^{\alpha}\gamma^{\nu}_{\beta}\symup{d}x^{\beta}}=\sqrt{\gamma_{\alpha\beta}\symup{d}x^{\alpha}\symup{d}x^{\beta}}.\label{2.1.12}
 \end{equation}
 这也是个标量，可以称其为固有空间距离。
 
@@ -859,7 +863,7 @@ A^{\mu}_{\parallel}=\pi^{\mu}_{\nu}A^{\nu}=-u_{\nu}A^{\nu}u^{\mu}.
 \Delta{}l^{2}=\left(\frac{\symup{d}x^{1}-v\symup{d}t}{\sqrt{1-\dfrac{v^{2}}{\symup{c}^{2}}}}\right)^{2}+\left(\symup{d}x^{2}\right)^{2}+\left(\symup{d}x^{3}\right)^{2}.
 \end{equation}
 
-(\ref{2.1.11}) 式暗示 $\gamma_{\alpha\beta}$ 扮演了空间度规的角色。我们可以验证一下。对于一个观测者，他应该会倾向于采用相对于他静止的坐标系进行观测。反过来讲，给定一个坐标系，考虑一个相对坐标系随动的观测者。该观测者随身携带的钟走时与坐标时间的关系其实就是 (\ref{2.1.2}) 式。这给出了该观测者的四速
+(\ref{2.1.12}) 式暗示 $\gamma_{\alpha\beta}$ 扮演了空间度规的角色。我们可以验证一下。对于一个观测者，他应该会倾向于采用相对于他静止的坐标系进行观测。反过来讲，给定一个坐标系，考虑一个相对坐标系随动的观测者。该观测者随身携带的钟走时与坐标时间的关系其实就是 (\ref{2.1.2}) 式。这给出了该观测者的四速
 \begin{equation}
 u^{\mu}=\frac{\symup{d}x^{\mu}}{\symup{c}\symup{d}\tau}=\frac{\left(\symup{c}\symup{d}t, 0, 0, 0\right)}{\symup{c}\symup{d}\tau}=\left(\frac{1}{\sqrt{-g_{00}}}, 0, 0, 0\right).
 \end{equation}
@@ -884,7 +888,7 @@ u^{\mu}=\frac{\symup{d}x^{\mu}}{\symup{c}\symup{d}\tau}=\frac{\left(\symup{c}\sy
 \end{equation}
 根据光速各向同性，得到纯空间距离为
 \begin{equation}
-\symup{d}l=\frac{\symup{c}\Delta{}\tau}{2}=\frac12\sqrt{-g_{00}}\Delta{}x^{0}.
+\symup{d}l=\frac{\symup{c}\Delta{}\tau}{2}=\frac{1}{2}\sqrt{-g_{00}}\Delta{}x^{0}.
 \end{equation}
 接下来要得到 $\Delta{}x^{0}$ 的具体表达式。我们知道光走过的路径满足 ($\pm$ 对应往返的光信号）：
 \begin{align}
@@ -903,19 +907,19 @@ x_{A}^{0}=\frac{{}^{\left(1\right)}x_{A}^{0}+{}^{\left(2\right)}x_{A}^{0}}{2}.
 \end{equation}
 即“同时”发生的事情，如果异地发生，其实它们的坐标时间并不相同，相差
 \begin{equation}
-\delta{}x^{0}=x_{A}^{0}-x_{B}^{0}=\frac12\left(\symup{d}x^{0}_{\left(2\right)}+\symup{d}x^{0}_{\left(1\right)}\right)=\frac{-g_{0i}}{g_{00}}\symup{d}x^{i}.\label{2.1.26}
+\delta{}x^{0}=x_{A}^{0}-x_{B}^{0}=\frac{1}{2}\left(\symup{d}x^{0}_{\left(2\right)}+\symup{d}x^{0}_{\left(1\right)}\right)=\frac{-g_{0i}}{g_{00}}\symup{d}x^{i}.\label{2.1.27}
 \end{equation}
 这也意味着 $t$ 相同时的两个异地事件不一定同时发生。这告诉我们，需要定义一四维开放路径，将路径上的钟全部调整成同时，“同时”被定义为相邻的坐标钟的指示相差 $\delta{}x^{0}$. 但由于其不是全微分，因此沿闭合路径的积分一般不等于零，因此沿着不同路径去校准两点坐标，结果会不同，因此同时不一定具有传递性。广义相对论中通常不能建立全局性的统一时间，只有 $\delta{}x^{0}$ 是全微分时才能将空间各点的坐标钟调整到同时，而这一般意味着
 \begin{equation}
 g_{0i}=0,
 \end{equation}
-即时轴正交。而做到这一点的时候，根据 (\ref{2.1.26}) 式，异地事件同时发生时坐标时间也已经相同了。当然，即使将坐标钟调同时了，由于固有时间
+即时轴正交。而做到这一点的时候，根据 (\ref{2.1.27}) 式，异地事件同时发生时坐标时间也已经相同了。当然，即使将坐标钟调同时了，由于固有时间
 \begin{equation}
 \Delta{}\tau=\frac{1}{\symup{c}}\sqrt{-g_{00}}\Delta{}x^{0},
 \end{equation}
 如果度规分量各时空点不同，可测得的固有时间也不同。因此不一定能实现同步。
 
-对于同步，所需要的条件则要弱一点。根据 (\ref{2.1.26}) 式，可知 $A, B$ 点第一个同时时刻坐标钟相差
+对于同步，所需要的条件则要弱一点。根据 (\ref{2.1.27}) 式，可知 $A, B$ 点第一个同时时刻坐标钟相差
 \begin{equation}
 \delta{}x_{1}^{0}=-\left(\frac{g_{0i}}{g_{00}}\right)_{i}\symup{d}x^{i},
 \end{equation}
@@ -1151,10 +1155,10 @@ $T^{\hat{a}\hat{b}}$ 包含 $4^{2}$ 个数 ($T^{\hat{a}\hat{b}}$ 只是数表，
 
 首先是平坦时空中的静观测者。他的四轴系各矢量满足：
 \begin{align}
-\omega_{\hat{0}}^{\mu}&=\omega_{\mu}^{\hat{0}}=\left(1, 0, 0, 0\right),\omega^{\mu\hat{0}}=\omega_{\mu\hat{0}}=\left(-1, 0, 0, 0\right),\label{2.3.22}\\
+\omega_{\hat{0}}^{\mu}&=\omega_{\mu}^{\hat{0}}=\left(1, 0, 0, 0\right),\omega^{\mu\hat{0}}=\omega_{\mu\hat{0}}=\left(-1, 0, 0, 0\right),\label{2.3.21}\\
 \omega_{\hat{1}}^{\mu}&=\omega_{\mu\hat{1}}=\omega^{\mu\hat{1}}=\omega_{\mu}^{\hat{1}}=\left(0, 1, 0, 0\right),\\
 \omega_{\hat{2}}^{\mu}&=\omega_{\mu\hat{2}}=\omega^{\mu\hat{2}}=\omega_{\mu}^{\hat{2}}=\left(0, 0, 1, 0\right),\\
-\omega_{\hat{3}}^{\mu}&=\omega_{\mu\hat{3}}=\omega^{\mu\hat{3}}=\omega_{\mu}^{\hat{3}}=\left(0, 0, 0, 1\right),\label{2.3.25}
+\omega_{\hat{3}}^{\mu}&=\omega_{\mu\hat{3}}=\omega^{\mu\hat{3}}=\omega_{\mu}^{\hat{3}}=\left(0, 0, 0, 1\right),\label{2.3.24}
 \end{align}
 对于张量 $T^{\mu\nu}$, 容易发现观测量满足
 \begin{equation}
@@ -1188,7 +1192,7 @@ T^{\hat{0}\hat{0}}=-T^{00}\frac{g_{00}g_{00}}{g_{00}}=\rho \symup{c}^{2}.
 \end{equation}
 这正是我们需要观测量理论的理由。
 
-接下来可以考虑洛伦兹变换。对于平坦时空中的静观测者，根据 (\ref{2.3.22}) 到 (\ref{2.3.25}) 式，可知事件间隔 $\left(\symup{c}\delta{}t,\delta{}x,\delta{}y,\delta{}z\right)$ 在四轴系上的投影就是其各分量。但对于向着 $x$ 轴正方向运动的观测者，四轴系有
+接下来可以考虑洛伦兹变换。对于平坦时空中的静观测者，根据 (\ref{2.3.21}) 到 (\ref{2.3.24}) 式，可知事件间隔 $\left(\symup{c}\delta{}t,\delta{}x,\delta{}y,\delta{}z\right)$ 在四轴系上的投影就是其各分量。但对于向着 $x$ 轴正方向运动的观测者，四轴系有
 \begin{align}
 \omega^{\hat{0}}_{\mu}&=\left(\frac{1}{\sqrt{1-\dfrac{v^{2}}{\symup{c}^{2}}}},-\frac{\dfrac{v}{\symup{c}}}{\sqrt{1-\dfrac{v^{2}}{\symup{c}^{2}}}}, 0, 0\right),\omega^{\hat{1}}_{\mu}=\left(-\frac{\dfrac{v}{\symup{c}}}{\sqrt{1-\dfrac{v^{2}}{\symup{c}^{2}}}},\frac{1}{\sqrt{1-\dfrac{v^{2}}{\symup{c}^{2}}}}, 0, 0\right),\\
 \omega^{\hat{2}}_{\mu}&=\left(0, 0, 1, 0\right),\omega^{\hat{3}}_{\mu}=\left(0, 0, 0, 1\right).
@@ -1230,13 +1234,13 @@ A^{\mu}_{\parallel}=\pi^{\mu}_{\nu}\delta{}x^{\nu}=-u^{\mu}u_{\nu}\delta{}x^{\nu
 \Delta{}x^{2}+\Delta{}y^{2}+\Delta{}z^{2}&=\left(\delta{}x^{\mu}\omega_{\mu\hat{1}}\right)^{2}+\left(\delta{}x^{\mu}\omega_{\mu\hat{2}}\right)^{2}+\left(\delta{}x^{\mu}\omega_{\mu\hat{3}}\right)^{2}\notag\\
 &=\delta{}x^{\alpha}\omega_{\alpha\hat{1}}\delta{}x^{\beta}g_{\beta\nu}\omega^{\nu}_{\hat{1}}+\delta{}x^{\alpha}\omega_{\alpha\hat{2}}\delta{}x^{\beta}g_{\beta\nu}\omega^{\nu}_{\hat{2}}+\delta{}x^{\alpha}\omega_{\alpha\hat{3}}\delta{}x^{\beta}g_{\beta\nu}\omega^{\nu}_{\hat{3}}\notag\\
 &=g_{\beta\nu}\delta{}x^{\alpha}\delta{}x^{\beta}\left(\omega_{\alpha\hat{1}}\omega^{\nu}_{\hat{1}}+\omega_{\alpha\hat{2}}\omega^{\nu}_{\hat{2}}+\omega_{\alpha\hat{3}}\omega^{\nu}_{\hat{3}}\right)\notag\\
-&=g_{\beta\nu}\delta{}x^{\alpha}\delta{}x^{\beta}\left(\omega_{\alpha}^{\hat{1}}\omega^{\nu}_{\hat{1}}+\omega_{\alpha}^{\hat{2}}\omega^{\nu}_{\hat{2}}+\omega_{\alpha}^{\hat{3}}\omega^{\nu}_{\hat{3}}\right),\label{2.3.43}
+&=g_{\beta\nu}\delta{}x^{\alpha}\delta{}x^{\beta}\left(\omega_{\alpha}^{\hat{1}}\omega^{\nu}_{\hat{1}}+\omega_{\alpha}^{\hat{2}}\omega^{\nu}_{\hat{2}}+\omega_{\alpha}^{\hat{3}}\omega^{\nu}_{\hat{3}}\right),\label{2.3.41}
 \end{align}
 注意到完备性关系要求
 \begin{equation}
 \omega_{\alpha}^{\hat{0}}\omega^{\nu}_{\hat{0}}+\omega_{\alpha}^{\hat{1}}\omega^{\nu}_{\hat{1}}+\omega_{\alpha}^{\hat{2}}\omega^{\nu}_{\hat{2}}+\omega_{\alpha}^{\hat{3}}\omega^{\nu}_{\hat{3}}=\delta{}^{\nu}_{\alpha}=g_{\alpha\beta}g^{\beta\nu},
 \end{equation}
-(\ref{2.3.43}) 式可以写作
+(\ref{2.3.41}) 式可以写作
 \begin{align}
 \Delta{}x^{2}+\Delta{}y^{2}+\Delta{}z^{2}&=g_{\beta\nu}\delta{}x^{\alpha}\delta{}x^{\beta}\left(g_{\alpha\beta}g^{\beta\nu}-\omega_{\alpha}^{\hat{0}}\omega^{\nu}_{\hat{0}}\right)\notag\\
 &=\delta{}x^{\alpha}\delta{}x^{\beta}\left(g_{\alpha\beta}-\omega^{\hat{0}}_{\alpha}\omega_{\beta\hat{0}}\right)\notag\\
@@ -1303,8 +1307,8 @@ A^{\mu}_{\parallel}=\pi^{\mu}_{\nu}\delta{}x^{\nu}=-u^{\mu}u_{\nu}\delta{}x^{\nu
 我们不妨以转动参考系为例来研究绝对效应。首先将实验室直角坐标系 $X^{\mu}=\left(\symup{c}T, X, Y, Z\right)$ 变成转动坐标系 $\left(\symup{c}t, r,\theta, z\right)$, 坐标变换满足
 \begin{equation}
 \begin{cases}
-X=r\cos\left(\theta+\omega t\right),\\
-Y=r\sin\left(\theta+\omega t\right),\\
+X=r\cos{\left(\theta+\omega t\right)},\\
+Y=r\sin{\left(\theta+\omega t\right)},\\
 Z=z,\\
 \symup{d}T=\symup{d}t.
 \end{cases}
@@ -1312,8 +1316,8 @@ Z=z,\\
 可知
 \begin{align}
 \symup{d}s^{2}&=-\left(\symup{c}\symup{d}T\right)^{2}+\symup{d}X^{2}+\symup{d}Y^{2}+\symup{d}Z^{2}\notag\\
-&=-\left(\symup{c}\symup{d}t\right)^{2}+\left[\symup{d}r\cos\left(\theta+\omega t\right)-r\sin\left(\theta+\omega t\right)\symup{d}\theta-r\sin\left(\theta+\omega t\right)\omega\symup{d}t\right]^{2}\notag\\
-&\quad+\left[\symup{d}r\sin\left(\theta+\omega t\right)+r\cos\left(\theta+\omega t\right)\symup{d}\theta+r\cos\left(\theta+\omega t\right)\omega\symup{d}t\right]^{2}+\symup{d}z^{2}\notag\\
+&=-\left(\symup{c}\symup{d}t\right)^{2}+\left[\symup{d}r\cos{\left(\theta+\omega{}t\right)}-r\sin{\left(\theta+\omega{}t\right)}\symup{d}\theta-r\sin{\left(\theta+\omega{}t\right)}\omega\symup{d}t\right]^{2}\notag\\
+&\quad+\left[\symup{d}r\sin{\left(\theta+\omega{}t\right)}+r\cos{\left(\theta+\omega{}t\right)}\symup{d}\theta+r\cos{\left(\theta+\omega t\right)}\omega\symup{d}t\right]^{2}+\symup{d}z^{2}\notag\\
 &=-\left(\symup{c}\symup{d}t\right)^{2}+\symup{d}r^{2}+r^{2}\symup{d}\theta^{2}+r^{2}\omega^{2}\symup{d} t^{2}+2r^{2}\omega\symup{d}\theta\symup{d}t+\symup{d}z^{2}.
 \end{align}
 可见转动系度规分量为
@@ -1369,7 +1373,7 @@ v=\frac{\Delta{}l}{\Delta{}t}=\omega r.
 \end{equation}
 可见对于中心处的观测者来讲，$r=0, v=\omega r=0$, 静参考点确实没有运动。
 
-但读者朋友们肯定要问了，我们现在只解决了一半的问题啊，就是对于转动系中心观测者来讲，确实没有超光速发生。但是对于 $r$ 很大的转动系随动观测者来讲呢？从物理的坐标系条件本身出发可以解释这个问题。当 $\omega r>c$ 时我们发现遥远恒星处度规分量 $g_{00}>0$, 此时固有距离平方正定所要求的度规行列式小于 0 就不可能实现，这不是物理的坐标系，即在遥远恒星处观测者无法相对坐标系静止，但我们却强行规定观测者能实现随动，那么在遥远恒星处局域别的事物相对这个虚拟观测者超光速也不是什么无法实现的事，因为无法超光速指的是惯性质量不为零的物质在局域惯性系中速度不能超光速。
+但读者朋友们肯定要问了，我们现在只解决了一半的问题啊，就是对于转动系中心观测者来讲，确实没有超光速发生。但是对于 $r$ 很大的转动系随动观测者来讲呢？从物理的坐标系条件本身出发可以解释这个问题。当 $\omega r>\symup{c}$ 时我们发现遥远恒星处度规分量 $g_{00}>0$, 此时固有距离平方正定所要求的度规行列式小于 0 就不可能实现，这不是物理的坐标系，即在遥远恒星处观测者无法相对坐标系静止，但我们却强行规定观测者能实现随动，那么在遥远恒星处局域别的事物相对这个虚拟观测者超光速也不是什么无法实现的事，因为无法超光速指的是惯性质量不为零的物质在局域惯性系中速度不能超光速。
 
 \newpage
 \section{相对论性的引力理论}
@@ -1418,7 +1422,7 @@ G_{\mu\nu}+\lambda g_{\mu\nu}=\kappa T_{\mu\nu}.
 \end{equation}
 $\kappa$ 的具体形式可通过场方程的牛顿近似确定，现在先直接给出答案，后续给出证明。$\lambda$ 是唯一剩下的任意参量，读者也许已经注意到，$\lambda g_{\mu\nu}$ 这一项就是所谓的宇宙项，源于暗能量的作用。我们现在先令其为零，于是得到爱因斯坦场方程
 \begin{equation}
-G_{\mu\nu}=R_{\mu\nu}-\frac12g_{\mu\nu}R=\frac{8\pi\symup{G}}{\symup{c}^{4}}T_{\mu\nu}.
+G_{\mu\nu}=R_{\mu\nu}-\frac{1}{2}g_{\mu\nu}R=\frac{8\pi\symup{G}}{\symup{c}^{4}}T_{\mu\nu}.
 \end{equation}
 将其升高一个指标再缩并可得
 \begin{equation}
@@ -1426,7 +1430,7 @@ R=-\kappa T=-\kappa T^{\mu}_{\mu}.
 \end{equation}
 因此场方程还可以写作
 \begin{equation}
-R_{\mu\nu}=\kappa\left(T_{\mu\nu}-\frac12g_{\mu\nu}T\right).
+R_{\mu\nu}=\kappa\left(T_{\mu\nu}-\frac{1}{2}g_{\mu\nu}T\right).
 \end{equation}
 真空中能动张量和能动张量的迹 $T^{\mu}_{\mu}$ 都为零，因此
 \begin{equation}
@@ -1493,7 +1497,7 @@ R_{\mu\nu}=0.
 \end{equation}
 即它的四维加速度为零。
 
-现在考虑运动方程 ($\ref{3.3.11}$) 的牛顿近似。首先引力场是弱场，闵氏度规 $\eta_{\mu\nu}$ 仅添加一个小量 $h_{\mu\nu}$. 其次牛顿情形下，引力场静态，仅对空间缓变（平方反比）。最后粒子作低速运动，$\left\vert{}\dfrac{\symup{d}x^{i}}{\symup{d}x^{0}}\right\vert{}\ll1$, 此时运动方程可以写作
+现在考虑运动方程 (\ref{3.3.11}) 的牛顿近似。首先引力场是弱场，闵氏度规 $\eta_{\mu\nu}$ 仅添加一个小量 $h_{\mu\nu}$. 其次牛顿情形下，引力场静态，仅对空间缓变（平方反比）。最后粒子作低速运动，$\left\vert{}\dfrac{\symup{d}x^{i}}{\symup{d}x^{0}}\right\vert{}\ll1$, 此时运动方程可以写作
 \begin{align}
 &\frac{\symup{d}}{\symup{d}\tau}\left(m\frac{\symup{d}x^{0}}{\symup{d}\tau}\right)=0,\\
 &\frac{\symup{d}}{\symup{d}\tau}\left(m\frac{\symup{d}x^{i}}{\symup{d}\tau}\right)+m\Gamma_{00}^{i}\left(\frac{\symup{d}x^{0}}{\symup{d}\tau}\right)^{2}=0.
@@ -1549,15 +1553,15 @@ T=g_{\mu\nu}T^{\mu\nu}=\rho U^{\mu}U_{\mu}=-\rho\symup{c}^{2}.
 \end{equation}
 静态弱场空间缓变近似，保留 $h_{\mu\nu}$ 和 $h_{\mu\nu,\rho}$ 的一阶小量，计算联络不为零的分量
 \begin{align}
-&\Gamma_{\mu\nu}^{\lambda}=\frac12\eta^{\lambda\rho}\left(h_{\rho\mu,\nu}+h_{\rho\nu,\mu}-h_{\mu\nu,\rho}\right),\\
-&\Gamma_{0i}^{0}=-\frac12h_{00, i},\Gamma_{ij}^{0}=-\frac12\left(h_{0i, j}+h_{0j, i}\right),\Gamma_{00}^{i}=-\frac12h_{00, i},\\
-&\Gamma_{0j}^{i}=\frac12\left(h_{0i, j}-h_{0j, i}\right),\Gamma_{jk}^{i}=\frac12\left(h_{ij, k}+h_{ik, j}-h_{jk, i}\right).
+&\Gamma_{\mu\nu}^{\lambda}=\frac{1}{2}\eta^{\lambda\rho}\left(h_{\rho\mu,\nu}+h_{\rho\nu,\mu}-h_{\mu\nu,\rho}\right),\\
+&\Gamma_{0i}^{0}=-\frac{1}{2}h_{00, i},\Gamma_{ij}^{0}=-\frac{1}{2}\left(h_{0i, j}+h_{0j, i}\right),\Gamma_{00}^{i}=-\frac{1}{2}h_{00, i},\\
+&\Gamma_{0j}^{i}=\frac{1}{2}\left(h_{0i, j}-h_{0j, i}\right),\Gamma_{jk}^{i}=\frac{1}{2}\left(h_{ij, k}+h_{ik, j}-h_{jk, i}\right).
 \end{align}
 而 Ricci 张量二次项为二次小量，因此
 \begin{align}
 &R_{\mu\nu}=\Gamma_{\mu\nu,\lambda}^{\lambda}-\Gamma_{\mu\lambda,\nu}^{\lambda},\\
-&R_{00}=-\frac12h_{00, i, i}, R_{0i}=\frac12\left(h_{k0, i, k}-h_{0i, k, k}\right),\\
-&R_{ij}=-\frac12\left(-h_{00, i, j}+h_{kk, i, j}-h_{ki, j, k}-h_{kj, i, k}+h_{ij, k, k}\right).
+&R_{00}=-\frac{1}{2}h_{00, i, i}, R_{0i}=\frac{1}{2}\left(h_{k0, i, k}-h_{0i, k, k}\right),\\
+&R_{ij}=-\frac{1}{2}\left(-h_{00, i, j}+h_{kk, i, j}-h_{ki, j, k}-h_{kj, i, k}+h_{ij, k, k}\right).
 \end{align}
 而逆变 Ricci 张量满足
 \begin{equation}
@@ -1565,7 +1569,7 @@ R^{00}=R_{00}, R^{0i}=-R_{0i}, R^{ij}=-R_{ij},
 \end{equation}
 得到牛顿近似我们只关心场方程 00 分量方程
 \begin{equation}
-R^{00}=\kappa\left(T^{00}-\frac12g^{00}T\right).
+R^{00}=\kappa\left(T^{00}-\frac{1}{2}g^{00}T\right).
 \end{equation}
 可以得到
 \begin{equation}
@@ -1719,7 +1723,7 @@ T^{\mu\nu}=\frac{1}{4\pi}\left(F_{\lambda}^{\mu}F^{\lambda\nu}-\frac{1}{4}g^{\mu
 \end{equation}
 利用第一章末尾提到的特殊克氏符
 \begin{equation}
-\Gamma_{\alpha\mu}^{\mu}=\frac12g^{\mu\nu}g_{\mu\nu,\alpha}=-\frac{1}{2}g_{\mu\nu}g^{\mu\nu}_{,\alpha}=\frac{1}{2g}\frac{\partial{}g}{\partial{}x^{\alpha}}=\frac{\partial{}}{\partial{}x^{\alpha}}\left(\ln\sqrt{-g}\right),\tag{\ref{1.10.6}}
+\Gamma_{\alpha\mu}^{\mu}=\frac{1}{2}g^{\mu\nu}g_{\mu\nu,\alpha}=-\frac{1}{2}g_{\mu\nu}g^{\mu\nu}_{,\alpha}=\frac{1}{2g}\frac{\partial{}g}{\partial{}x^{\alpha}}=\frac{\partial{}}{\partial{}x^{\alpha}}\left(\ln\sqrt{-g}\right),\tag{\ref{1.10.6}}
 \end{equation}
 以及
 \begin{equation}
@@ -1747,7 +1751,7 @@ g_{\mu\nu}=\eta_{\mu\nu}+h_{\mu\nu},
 \end{equation}
 克氏符写作
 \begin{equation}
-\Gamma_{\alpha\beta}^{\mu}=\frac12\eta^{\mu\nu}\left(h_{\nu\alpha,\beta}+h_{\nu\beta,\alpha}-h_{\alpha\beta,\nu}\right)=\frac12\left(h_{\alpha,\beta}^{\mu}+h_{\beta,\alpha}^{\mu}-h_{\alpha\beta}^{,\mu}\right),
+\Gamma_{\alpha\beta}^{\mu}=\frac{1}{2}\eta^{\mu\nu}\left(h_{\nu\alpha,\beta}+h_{\nu\beta,\alpha}-h_{\alpha\beta,\nu}\right)=\frac{1}{2}\left(h_{\alpha,\beta}^{\mu}+h_{\beta,\alpha}^{\mu}-h_{\alpha\beta}^{,\mu}\right),
 \end{equation}
 Ricci 张量写作
 \begin{equation}
@@ -1759,7 +1763,7 @@ h=h^{\alpha}_{\alpha}=\eta^{\alpha\beta}h_{\alpha\beta}=-h_{00}+h_{11}+h_{22}+h_
 \end{equation}
 定义
 \begin{equation}
-\overline{h}_{\mu\nu}=h_{\mu\nu}-\frac12\eta_{\mu\nu}h,
+\overline{h}_{\mu\nu}=h_{\mu\nu}-\frac{1}{2}\eta_{\mu\nu}h,
 \end{equation}
 线性化的场方程
 \begin{equation}
@@ -1793,13 +1797,13 @@ h_{\mu\nu}\to h_{\mu\nu}-\xi_{\mu,\nu}-xi_{\nu,\mu},
 
 值得一提的是，在一组确定坐标下解出 $\overline{h}_{\mu\nu}$ 后，度规为
 \begin{equation}
-g_{\mu\nu}=\eta_{\mu\nu}+h_{\mu\nu}=\eta_{\mu\nu}+\overline{h}_{\mu\nu}-\frac12\eta_{\mu\nu}\overline{h}.
+g_{\mu\nu}=\eta_{\mu\nu}+h_{\mu\nu}=\eta_{\mu\nu}+\overline{h}_{\mu\nu}-\frac{1}{2}\eta_{\mu\nu}\overline{h}.
 \end{equation}
 实际上通过计算可得
 \begin{equation}
 \overline{h}_{\mu\nu}\left(\symbf{r}, t\right)=\frac{\kappa}{2\pi}\int\frac{T_{\mu\nu}\left(\symbf{r}, t-\dfrac{r}{\symup{c}}\right)}{r}\symup{d}V',
 \end{equation}
-其中 $\symup{d}V'$ 是体积元，而 $r=\left[\left(x^{i}-x'^{i}\right)\cdot\left(x^{i}-x'^{i}\right)\right]^{\frac12}$. 该解是推迟解，表明时刻 $t$ 距离引力源 $r$ 的引力势是 $t-\dfrac{r}{\symup{c}}$ 时刻物质分布和运动状态决定的，这意味着引力场以光速传播。如果引力源局限于一个很小的区域，观测者又远离引力源，推迟解可简化为
+其中 $\symup{d}V'$ 是体积元，而 $r=\left[\left(x^{i}-x'^{i}\right)\cdot\left(x^{i}-x'^{i}\right)\right]^{\frac{1}{2}}$. 该解是推迟解，表明时刻 $t$ 距离引力源 $r$ 的引力势是 $t-\dfrac{r}{\symup{c}}$ 时刻物质分布和运动状态决定的，这意味着引力场以光速传播。如果引力源局限于一个很小的区域，观测者又远离引力源，推迟解可简化为
 \begin{equation}
 \overline{h}_{\mu\nu}=\frac{\kappa}{2\pi r_{0}}\int T_{\mu\nu}^{*}\symup{d}V'.
 \end{equation}
@@ -1841,7 +1845,7 @@ h_{\mu\nu}=A_{\mu\nu}\symup{e}^{i\left(kx\cdot\omega t\right)},
 \subsection{史瓦西度规}
 我们曾得到场方程的另一种表达方式
 \begin{equation}
-R_{\mu\nu}=\kappa\left(T_{\mu\nu}-\frac12g_{\mu\nu}T\right).
+R_{\mu\nu}=\kappa\left(T_{\mu\nu}-\frac{1}{2}g_{\mu\nu}T\right).
 \end{equation}
 真空中能动张量和它的迹都为零，因此真空场方程满足
 \begin{equation}
@@ -1851,7 +1855,7 @@ R_{\mu\nu}=0.
 
 仅考虑几何上的对称性，最一般的真空球度规应该写成
 \begin{equation}
-\symup{d}s^{2}=b\left(r, t\right)\symup{c}^{2}\symup{d}t^{2}+a\left(r, t\right)\symup{d}r^{2}+r^{2}\left(\symup{d}\theta^{2}+\sin^{2}\theta\symup{d}\varphi^{2}\right).
+\symup{d}s^{2}=b\left(r, t\right)\symup{c}^{2}\symup{d}t^{2}+a\left(r, t\right)\symup{d}r^{2}+r^{2}\left(\symup{d}\theta^{2}+\sin^{2}{\theta}\symup{d}\varphi^{2}\right).
 \end{equation}
 
 1927 年，Birkhoff 证明只要引力源物质分布是球对称的，不管引力源是膨胀收缩还是径向振动，源外真空引力场一定球对称，而且静态。（一步步计算场方程所有项，得到该结果是容易的。）为了方便度规可以写作
@@ -1860,22 +1864,22 @@ g_{\mu\nu}=\begin{pmatrix}
 -\symup{c}^{2}\symup{e}^{2\beta} & 0 & 0 & 0\\
 0 & \symup{e}^{2\alpha} & 0 & 0\\
 0 & 0 & r^{2} & 0\\
-0 & 0 & 0 & r^{2}\sin^{2}\theta\\
+0 & 0 & 0 & r^{2}\sin^{2}{\theta}\\
 \end{pmatrix},
 g^{\mu\nu}=\begin{pmatrix}
 -\dfrac{1}{\symup{c}^{2}}\symup{e}^{-2\beta} & 0 & 0 & 0\\
 0 & \symup{e}^{-2\alpha} & 0 & 0\\
 0 & 0 & r^{-2} & 0\\
-0 & 0 & 0 & \dfrac{1}{r^{2}\sin^{2}\theta}\\
+0 & 0 & 0 & \dfrac{1}{r^{2}\sin^{2}{\theta}}\\
 \end{pmatrix}.
 \end{equation}
 计算得到克氏符以及 Ricci 显式非零分量为
 \begin{align}
-&\Gamma_{10}^{0}=\Gamma_{01}^{0}=\frac{\symup{d}\beta}{\symup{d}r},\Gamma_{00}^{1}=\symup{c}^{2}\symup{e}^{2\left(\beta-\alpha\right)}\frac{\symup{d}\beta}{\symup{d}r},\Gamma_{11}^{1}=\frac{\symup{d}\alpha}{\symup{d}r},\Gamma_{22}^{1}=-r\symup{e}^{-2\alpha},\Gamma_{33}^{1}=-r\symup{e}^{-2\alpha}\sin^{2}\theta,\notag\\
-&\Gamma_{12}^{2}=\Gamma_{21}^{2}=\frac{1}{r},\Gamma_{33}^{2}=-\sin\theta\cos\theta,\Gamma_{13}^{3}=\Gamma_{31}^{3}=\frac{1}{r},\Gamma_{23}^{3}=\Gamma_{32}^{3}=\cot\theta.\notag\\
+&\Gamma_{10}^{0}=\Gamma_{01}^{0}=\frac{\symup{d}\beta}{\symup{d}r},\Gamma_{00}^{1}=\symup{c}^{2}\symup{e}^{2\left(\beta-\alpha\right)}\frac{\symup{d}\beta}{\symup{d}r},\Gamma_{11}^{1}=\frac{\symup{d}\alpha}{\symup{d}r},\Gamma_{22}^{1}=-r\symup{e}^{-2\alpha},\Gamma_{33}^{1}=-r\symup{e}^{-2\alpha}\sin^{2}{\theta},\notag\\
+&\Gamma_{12}^{2}=\Gamma_{21}^{2}=\frac{1}{r},\Gamma_{33}^{2}=-\sin{\theta}\cos{\theta},\Gamma_{13}^{3}=\Gamma_{31}^{3}=\frac{1}{r},\Gamma_{23}^{3}=\Gamma_{32}^{3}=\cot{\theta}.\notag\\
 &R_{00}=\symup{c}^{2}\symup{e}^{2\left(\beta-\alpha\right)}\left[\frac{\symup{d}^{2}\beta}{\symup{d}r^{2}}+\frac{2}{r}\frac{\symup{d}\beta}{\symup{d}r}+\frac{\symup{d}\beta}{\symup{d}r}\left(\frac{\symup{d}\beta}{\symup{d}r}-\frac{\symup{d}\alpha}{\symup{d}r}\right)\right],\notag\\
 &R_{11}=\left[-\frac{\symup{d}^{2}\beta}{\symup{d}r^{2}}+\frac{2}{r}\frac{\symup{d}\alpha}{\symup{d}r}-\frac{\symup{d}\beta}{\symup{d}r}\left(\frac{\symup{d}\beta}{\symup{d}r}-\frac{\symup{d}\alpha}{\symup{d}r}\right)\right],\notag\\
-&R_{22}=\symup{e}^{-2\alpha}\left[-1+\symup{e}^{2\alpha}-r\left(\frac{\symup{d}\beta}{\symup{d}r}-\frac{\symup{d}\alpha}{\symup{d}r}\right)\right], R_{33}=R_{22}\sin^{2}\theta.\notag
+&R_{22}=\symup{e}^{-2\alpha}\left[-1+\symup{e}^{2\alpha}-r\left(\frac{\symup{d}\beta}{\symup{d}r}-\frac{\symup{d}\alpha}{\symup{d}r}\right)\right], R_{33}=R_{22}\sin^{2}{\theta}.\notag
 \end{align}
 真空场方程要求 $R_{\mu\nu}=0$. $R_{00}, R_{11}$ 括号内相加可知 $2\left(\alpha+\beta\right)=A=\symup{const}$, 将这个结果代入 $R_{22}$ 括号可以得到
 \begin{equation}
@@ -1891,12 +1895,12 @@ B=\frac{2\symup{G}M}{\symup{c}^{2}}.
 \end{equation}
 因此静态球对称真空线元为
 \begin{equation}
-\symup{d}s^{2}=-\symup{c}^{2}\left(1-\frac{2\symup{G}M}{\symup{c}^{2}r}\right)\symup{d}t^{2}+\left(1-\frac{2\symup{G}M}{\symup{c}^{2}r}\right)^{-1}\symup{d}r^{2}+r^{2}\left(\symup{d}\theta^{2}+\sin^{2}\theta\symup{d}\varphi^{2}\right).
+\symup{d}s^{2}=-\symup{c}^{2}\left(1-\frac{2\symup{G}M}{\symup{c}^{2}r}\right)\symup{d}t^{2}+\left(1-\frac{2\symup{G}M}{\symup{c}^{2}r}\right)^{-1}\symup{d}r^{2}+r^{2}\left(\symup{d}\theta^{2}+\sin^{2}{\theta}\symup{d}\varphi^{2}\right).
 \end{equation}
 
 史瓦西时空时轴正交，这样的时空可以建立同时面，但要注意坐标时间没有测量意义，有意义的固有时间和坐标时间不同。类似我们知道，对于静止观测者有纯空间度规，史瓦西时空固有距离为
 \begin{equation}
-\symup{d}l^{2}=\left(1-\frac{2\symup{G}M}{\symup{c}^{2}r}\right)^{-1}\symup{d}r^{2}+r^{2}\left(\symup{d}\theta^{2}+\sin^{2}\theta\symup{d}\varphi^{2}\right).
+\symup{d}l^{2}=\left(1-\frac{2\symup{G}M}{\symup{c}^{2}r}\right)^{-1}\symup{d}r^{2}+r^{2}\left(\symup{d}\theta^{2}+\sin^{2}{\theta}\symup{d}\varphi^{2}\right).
 \end{equation}
 沿着 $\theta,\varphi$ 方向就是普通欧氏空间球面几何，但是沿着 $\symup{d}r$ 方向，坐标距离 $\symup{d}r$ 不等于固有距离 $\symup{d}l$.
 
@@ -1955,19 +1959,19 @@ T^{\mu\nu}_{;\nu}=\frac{1}{\sqrt{-g}}\frac{\partial{}}{\partial{}x^{\nu}}\left(T
 \end{equation}
 注意到
 \begin{equation}
-g=-\symup{c}^{2}\symup{e}^{\left(2\alpha+2\beta\right)}r^{4}\sin^{2}\theta, T^{\mu\nu}=
+g=-\symup{c}^{2}\symup{e}^{\left(2\alpha+2\beta\right)}r^{4}\sin^{2}{\theta}, T^{\mu\nu}=
 \begin{pmatrix}
 \rho \symup{e}^{-2\beta} & 0 & 0 & 0\\
 0 & p\symup{e}^{-2\alpha} & 0 & 0\\
 0 & 0 & pr^{-2} & 0\\
-0 & 0 & 0 & \dfrac{p}{r^{2}\sin^{2}\theta}\\
+0 & 0 & 0 & \dfrac{p}{r^{2}\sin^{2}{\theta}}\\
 \end{pmatrix},
 \end{equation}
 计算能动张量守恒方程 $\mu=1$ 的分量方程，得到
 \begin{equation}
 \frac{\symup{d}p}{\symup{d}r}+\left(p+\rho \symup{c}^{2}\right)\frac{\symup{d}\beta}{\symup{d}r}=0.\label{4.2.10}
 \end{equation}
-Bianchi 恒等式的性质使 (\ref{4.2.5})(\ref{4.2.6})(\ref{4.2.7})(\ref{4.2.10}) 式中只有三个独立方程。为计算简便可选择忽略 (4.2.7) 式。
+Bianchi 恒等式的性质使 (\ref{4.2.5})(\ref{4.2.6})(\ref{4.2.7})(\ref{4.2.10}) 式中只有三个独立方程。为计算简便可选择忽略 (\ref{4.2.7}) 式。
 
 其二是物态方程，这和构成恒星的物质有关：
 \begin{equation}
@@ -2014,11 +2018,11 @@ m\left(r\right)=\frac{4\pi}{3}\rho_{0}r^{3},\label{4.2.19}
 &\int_{0}^{p\left(r\right)}\frac{1}{\left(p+\rho_{0}\symup{c}^{2}\right)\left(p+\dfrac{1}{3}\rho_{0}\symup{c}^{2}\right)}\symup{d}p=\frac{4\pi\symup{G}}{\symup{c}^{4}}\int_{R}^{r}\frac{r}{\left(\dfrac{8\pi\symup{G}}{3\symup{c}^{2}}\rho_{0}r^{2}-1\right)}\symup{d}r,\notag\\
 &\frac{3}{2\rho_{0}\symup{c}^{2}}\int_{0}^{p\left(r\right)}\left(\frac{1}{p+\dfrac{1}{3}\rho_{0}\symup{c}^{2}}-\frac{1}{p+\rho_{0}\symup{c}^{2}}\right)\symup{d}p=\frac{3}{4\rho_{0}\symup{c}^{2}}\ln\left(\frac{\dfrac{8\pi\symup{G}}{3\symup{c}^{2}}\rho_{0}r^{2}-1}{\dfrac{8\pi\symup{G}}{3\symup{c}^{2}}\rho_{0}R^{2}-1}\right),\notag\\
 &\frac{3p+\rho_{0}\symup{c}^{2}}{p+\rho_{0}\symup{c}^{2}}=\left(\frac{\dfrac{8\pi\symup{G}}{3\symup{c}^{2}}\rho_{0}r^{2}-1}{\dfrac{8\pi\symup{G}}{3\symup{c}^{2}}\rho_{0}R^{2}-1}\right)^{\frac{1}{2}},\notag\\
-&p\left(r\right)=\rho_{0}\symup{c}^{2}\frac{\left(1-\dfrac{8\pi\symup{G}}{3\symup{c}^{2}}\rho_{0}r^{2}\right)^{\frac{1}{2}}-\left(1-\dfrac{8\pi\symup{G}}{3\symup{c}^{2}}\rho_{0}R^{2}\right)^{\frac12}}{3\left(1-\dfrac{8\pi\symup{G}}{3\symup{c}^{2}}\rho_{0}R^{2}\right)^{\frac12}-\left(1-\dfrac{8\pi\symup{G}}{3\symup{c}^{2}}\rho_{0}r^{2}\right)^{\frac{1}{2}}}.\label{4.2.21}
+&p\left(r\right)=\rho_{0}\symup{c}^{2}\frac{\left(1-\dfrac{8\pi\symup{G}}{3\symup{c}^{2}}\rho_{0}r^{2}\right)^{\frac{1}{2}}-\left(1-\dfrac{8\pi\symup{G}}{3\symup{c}^{2}}\rho_{0}R^{2}\right)^{\frac{1}{2}}}{3\left(1-\dfrac{8\pi\symup{G}}{3\symup{c}^{2}}\rho_{0}R^{2}\right)^{\frac{1}{2}}-\left(1-\dfrac{8\pi\symup{G}}{3\symup{c}^{2}}\rho_{0}r^{2}\right)^{\frac{1}{2}}}.\label{4.2.21}
 \end{align}
 (\ref{4.2.20}) 式告诉我们压力向中心递增。(\ref{4.2.21}) 式取 $r=0$ 即为中心压力，得到
 \begin{equation}
-p_{c}=p\left(0\right)=\rho_{0}\symup{c}^{2}\frac{1-\left(1-\dfrac{8\pi\symup{G}}{3\symup{c}^{2}}\rho_{0}R^{2}\right)^{\frac12}}{3\left(1-\dfrac{8\pi\symup{G}}{3\symup{c}^{2}}\rho_{0}R^{2}\right)^{\frac12}-1}.
+p_{c}=p\left(0\right)=\rho_{0}\symup{c}^{2}\frac{1-\left(1-\dfrac{8\pi\symup{G}}{3\symup{c}^{2}}\rho_{0}R^{2}\right)^{\frac{1}{2}}}{3\left(1-\dfrac{8\pi\symup{G}}{3\symup{c}^{2}}\rho_{0}R^{2}\right)^{\frac{1}{2}}-1}.
 \end{equation}
 简单分析可知恒星半径 $R$ 越大，中心压力越高。中心压力正无穷时，恒星半径和总质量 $M$ 满足
 \begin{equation}
@@ -2028,16 +2032,16 @@ R=\frac{\symup{c}}{\sqrt{3\pi\symup{G}\rho_{0}}}, M=\frac{4}{3}\pi \rho_{0}R^{3}
 
 (\ref{4.2.21}) 式告诉我们均匀密度星体内部压强分布，因此我们可以推出史瓦西度规内部引力场分布。首先不妨将 (\ref{4.2.21}) 式改写成如下形式：
 \begin{equation}
-p\left(r\right)=\rho_{0}\symup{c}^{2}\frac{\left(1-\dfrac{2\symup{G}M}{\symup{c}^{2}R^{3}}r^{2}\right)^{\frac{1}{2}}-\left(1-\dfrac{2\symup{G}M}{\symup{c}^{2}R}\right)^{\frac12}}{3\left(1-\dfrac{2\symup{G}M}{\symup{c}^{2}R}\right)^{\frac12}-\left(1-\dfrac{2\symup{G}M}{\symup{c}^{2}R^{3}}r^{2}\right)^{\frac{1}{2}}}.
+p\left(r\right)=\rho_{0}\symup{c}^{2}\frac{\left(1-\dfrac{2\symup{G}M}{\symup{c}^{2}R^{3}}r^{2}\right)^{\frac{1}{2}}-\left(1-\dfrac{2\symup{G}M}{\symup{c}^{2}R}\right)^{\frac{1}{2}}}{3\left(1-\dfrac{2\symup{G}M}{\symup{c}^{2}R}\right)^{\frac{1}{2}}-\left(1-\dfrac{2\symup{G}M}{\symup{c}^{2}R^{3}}r^{2}\right)^{\frac{1}{2}}}.
 \end{equation}
 代入 (\ref{4.2.17}) 式得到
 \begin{equation}
-\frac{\symup{d}\beta}{\symup{d}r}=\frac{\dfrac{2\symup{G}M}{\symup{c}^{2}R^{3}}r}{\left[3\left(1-\dfrac{2\symup{G}M}{\symup{c}^{2}R}\right)^{\frac12}-\left(1-\dfrac{2\symup{G}M}{\symup{c}^{2}R^{3}}r^{2}\right)^{\frac{1}{2}}\right]\left(1-\dfrac{2\symup{G}M}{\symup{c}^{2}R^{3}}r^{2}\right)^{\frac{1}{2}}},
+\frac{\symup{d}\beta}{\symup{d}r}=\frac{\dfrac{2\symup{G}M}{\symup{c}^{2}R^{3}}r}{\left[3\left(1-\dfrac{2\symup{G}M}{\symup{c}^{2}R}\right)^{\frac{1}{2}}-\left(1-\dfrac{2\symup{G}M}{\symup{c}^{2}R^{3}}r^{2}\right)^{\frac{1}{2}}\right]\left(1-\dfrac{2\symup{G}M}{\symup{c}^{2}R^{3}}r^{2}\right)^{\frac{1}{2}}},
 \end{equation}
 右侧原函数是个简单的对数函数，代入恒星表面引力场的边界条件，
 \begin{align}
-\beta-\ln\left(1-\frac{2\symup{G}M}{\symup{c}^{2}R}\right)^{\frac{1}{2}}&=\ln\left[\dfrac{3\left(1-\dfrac{2\symup{G}M}{\symup{c}^{2}R}\right)^{\frac12}-\left(1-\dfrac{2\symup{G}M}{\symup{c}^{2}R^{3}}r^{2}\right)^{\frac{1}{2}}}{3\left(1-\dfrac{2\symup{G}M}{\symup{c}^{2}R}\right)^{\frac12}-\left(1-\dfrac{2\symup{G}M}{\symup{c}^{2}R^{3}}R^{2}\right)^{\frac{1}{2}}}\right],\notag\\
-\symup{e}^{\beta}&=\frac{3}{2}\left(1-\dfrac{2\symup{G}M}{\symup{c}^{2}R}\right)^{\frac12}-\frac{1}{2}\left(1-\dfrac{2\symup{G}M}{\symup{c}^{2}R^{3}}r^{2}\right)^{\frac{1}{2}}.
+\beta-\ln\left(1-\frac{2\symup{G}M}{\symup{c}^{2}R}\right)^{\frac{1}{2}}&=\ln\left[\dfrac{3\left(1-\dfrac{2\symup{G}M}{\symup{c}^{2}R}\right)^{\frac{1}{2}}-\left(1-\dfrac{2\symup{G}M}{\symup{c}^{2}R^{3}}r^{2}\right)^{\frac{1}{2}}}{3\left(1-\dfrac{2\symup{G}M}{\symup{c}^{2}R}\right)^{\frac{1}{2}}-\left(1-\dfrac{2\symup{G}M}{\symup{c}^{2}R^{3}}R^{2}\right)^{\frac{1}{2}}}\right],\notag\\
+\symup{e}^{\beta}&=\frac{3}{2}\left(1-\dfrac{2\symup{G}M}{\symup{c}^{2}R}\right)^{\frac{1}{2}}-\frac{1}{2}\left(1-\dfrac{2\symup{G}M}{\symup{c}^{2}R^{3}}r^{2}\right)^{\frac{1}{2}}.
 \end{align}
 
 有关 $\alpha$ 的方程则要简单许多，联立 (\ref{4.2.15})(\ref{4.2.19}) 式简单得到
@@ -2072,7 +2076,7 @@ P_{\mu}\xi^{\mu}=P_{\mu}\delta{}^{\mu}_{k}=P_{k}.
 即协变动量的该分量守恒。注意不是逆变动量。作为应用可以考虑质点在史瓦西场中的运动，很明显 $t,\varphi$ 是该度规的循环坐标，因此 $P_{\mu}$ 的 $t$ 和 $\varphi$ 分量守恒：
 \begin{align}
 P_{0}&=g_{0\nu}P^{\nu}=g_{00}P^{0}=-\left(1-\frac{2\symup{G}M}{\symup{c}^{2}r}\right)\frac{m\symup{c}\symup{d}t}{\symup{d}\tau}=\symup{const}.\\
-P_{3}&=g_{3\nu}P^{\nu}=g_{33}P^{3}=r^{2}\sin^{2}\theta\frac{m\symup{d}\varphi}{\symup{d}\tau}=\symup{const}.
+P_{3}&=g_{3\nu}P^{\nu}=g_{33}P^{3}=r^{2}\sin^{2}{\theta}\frac{m\symup{d}\varphi}{\symup{d}\tau}=\symup{const}.
 \end{align}
 通过这点我们就能得到引力红移的结果。不仅是史瓦西引力场，对稳定的引力场只要适当选取度规就能实现 $P_{0}$ 守恒。而静止观测者观测到的光子能量为
 \begin{equation}
@@ -2118,7 +2122,7 @@ $\symup{d}t_{1}$ 是发出光信号的坐标时间间隔，其对应的固有时
 根据上节分析，$P_{0}, P_{3}$ 是守恒量，不妨采用
 \begin{align}
 E&=\left(1-\frac{2\symup{G}M}{\symup{c}^{2}r}\right)\frac{\symup{c}^{2}\symup{d}t}{\symup{d}\tau},\\
-\widetilde{L}&=r^{2}\sin^{2}\theta\frac{\symup{d}\varphi}{\symup{d}\tau}.
+\widetilde{L}&=r^{2}\sin^{2}{\theta}\frac{\symup{d}\varphi}{\symup{d}\tau}.
 \end{align}
 此外四速归一条件也提供一个方程
 \begin{equation}
@@ -2146,7 +2150,7 @@ E&=\left(1-\frac{2\symup{G}M}{\symup{c}^{2}r}\right)\frac{\symup{c}^{2}\symup{d}
 
 我们也可以从拉格朗日函数出发寻找守恒量
 \begin{equation}
-L=\frac12\left(\frac{\symup{d}\tau}{\symup{d}\lambda}\right)^{2}=-\frac12g_{\alpha\beta}\dot{x}^{\alpha}\dot{x}^{\beta},
+L=\frac{1}{2}\left(\frac{\symup{d}\tau}{\symup{d}\lambda}\right)^{2}=-\frac{1}{2}g_{\alpha\beta}\dot{x}^{\alpha}\dot{x}^{\beta},
 \end{equation}
 满足拉格朗日方程
 \begin{equation}
@@ -2156,20 +2160,20 @@ L=\frac12\left(\frac{\symup{d}\tau}{\symup{d}\lambda}\right)^{2}=-\frac12g_{\alp
 
 史瓦西度规中的拉氏量为
 \begin{equation}
-L=\frac12\left[\left(1-\frac{2\symup{G}M}{\symup{c}^{2}r}\right)\symup{c}^{2}\dot{t}^{2}-\left(1-\frac{2\symup{G}M}{\symup{c}^{2}r}\right)^{-1}\dot{r}^{2}-r^{2}\dot{\theta}^{2}-r^{2}\sin^{2}\theta\dot{\varphi}^{2}\right].
+L=\frac{1}{2}\left[\left(1-\frac{2\symup{G}M}{\symup{c}^{2}r}\right)\symup{c}^{2}\dot{t}^{2}-\left(1-\frac{2\symup{G}M}{\symup{c}^{2}r}\right)^{-1}\dot{r}^{2}-r^{2}\dot{\theta}^{2}-r^{2}\sin^{2}{\theta}\dot{\varphi}^{2}\right].
 \end{equation}
-对于光子，$L=0$, 对于质点，$\lambda=\tau$ 时 $L=\dfrac12$. 因此
+对于光子，$L=0$, 对于质点，$\lambda=\tau$ 时 $L=\dfrac{1}{2}$. 因此
 \begin{equation}
 L=\frac{\eta}{2}.
 \end{equation}
 度规不是时间和转角的函数，因此存在两个守恒量
 \begin{align}
 E&=\frac{\partial{}L}{\partial{}\dot{t}}=\left(1-\frac{2\symup{G}M}{\symup{c}^{2}r}\right)\frac{\symup{c}^{2}\symup{d}t}{\symup{d}\lambda},\\
-\widetilde{L}&=-\frac{\partial{}L}{\partial{}\dot{\varphi}}=r^{2}\sin^{2}\theta\frac{\symup{d}\varphi}{\symup{d}\lambda}.
+\widetilde{L}&=-\frac{\partial{}L}{\partial{}\dot{\varphi}}=r^{2}\sin^{2}{\theta}\frac{\symup{d}\varphi}{\symup{d}\lambda}.
 \end{align}
 我们还可以得到关于 $\theta$ 的方程：
 \begin{equation}
-\frac{\partial{}L}{\partial{}\theta}-\frac{\symup{d}}{\symup{d}\lambda}\frac{\partial{}L}{\partial{}\dot{\theta}}=\frac{\symup{d}}{\symup{d}\lambda}\left(r^{2}\dot{\theta}\right)-r^{2}\dot{\varphi}^{2}\sin\theta\cos\theta=0.
+\frac{\partial{}L}{\partial{}\theta}-\frac{\symup{d}}{\symup{d}\lambda}\frac{\partial{}L}{\partial{}\dot{\theta}}=\frac{\symup{d}}{\symup{d}\lambda}\left(r^{2}\dot{\theta}\right)-r^{2}\dot{\varphi}^{2}\sin{\theta}\cos{\theta}=0.
 \end{equation}
 如果将初始条件选作
 \begin{equation}
@@ -2255,11 +2259,11 @@ U=1-\frac{2}{r}+\frac{\widetilde{L}^{2}}{r^{2}}-\frac{2\widetilde{L}^{2}}{r^{3}}
 
 在 $r$ 较小的地方，$\widetilde{L}>4$ 的时候有一峰值大于 1 的势垒，在 $r$ 较大的地方有一势阱（图\ref{等效势阱。}并未绘制出，但随着 $r$ 的增大，$U$ 会回升至趋向于 1 的情形），此时三类运动都是可能发生的。随着 $\widetilde{L}$ 减小，势垒也在下降，$\widetilde{L}\le4$ 时，势垒降到 1 以下，散射态消失了。$\widetilde{L}<2\sqrt{3}$ 时，势垒也消失了，此时也没有势阱的概念了，粒子有很大可能向引力源坠落。实际上，牛顿引力论可以实现半径任意小的圆轨道，但是根据相对论的等效势不可能实现。对于
 \begin{equation}
-\Phi_{\text{eff}}(r)=\frac{\widetilde{L}^{2}}{2r^{2}}-\frac{\symup{G}M\widetilde{L}^{2}}{\symup{c}^{2}r^{3}}-\frac{\symup{G}M}{r}+\frac12\symup{c}^{2},
+\Phi_{\text{eff}}\left(r\right)=\frac{\widetilde{L}^{2}}{2r^{2}}-\frac{\symup{G}M\widetilde{L}^{2}}{\symup{c}^{2}r^{3}}-\frac{\symup{G}M}{r}+\frac{1}{2}\symup{c}^{2},
 \end{equation}
 对 $r$ 求导发现
 \begin{equation}
-\frac{\symup{d}\Phi_{\text{eff}}}{\symup{d}r}=\frac{\widetilde{L}^{2}}{r^{4}}(\frac{3\symup{G}M}{\symup{c}^{2}}-r)+\frac{\symup{G}M}{r^{2}}.
+\frac{\symup{d}\Phi_{\text{eff}}}{\symup{d}r}=\frac{\widetilde{L}^{2}}{r^{4}}\left(\frac{3\symup{G}M}{\symup{c}^{2}}-r\right)+\frac{\symup{G}M}{r^{2}}.
 \end{equation}
 可见对于 $r<3\symup{G}M_{\text{BH}}/\symup{c}^{2},\dfrac{\symup{d}\Phi_{\text{eff}}}{\symup{d}r}>0$, 无法实现圆轨道。
 
@@ -2272,7 +2276,7 @@ r^{4}\frac{\symup{d}\Phi_{\text{eff}}}{\symup{d}r}&=\frac{3\widetilde{L}^{2}\sym
 这也是前文 $2\sqrt{3}$ 的来源。进一步要求二阶导大于零，
 \begin{align}
 r^{5}\frac{\symup{d}^{2}\Phi_{\text{eff}}}{\symup{d}r^{2}}&=-\frac{12\widetilde{L}^{2}\symup{G}M}{\symup{c}^{2}}+3\widetilde{L}^{2}r-2\symup{G}Mr^{2}>0.\tag{5}\\
-r&=\frac{-3\widetilde{L}^{2}\pm\sqrt{(9\widetilde{L}^{4}-96\widetilde{L}^{2}\symup{G}^{2}M^{2}/\symup{c}^{2})}}{-4\symup{G}M},\notag\\
+r&=\frac{-3\widetilde{L}^{2}\pm\sqrt{\left(9\widetilde{L}^{4}-96\widetilde{L}^{2}\symup{G}^{2}M^{2}/\symup{c}^{2}\right)}}{-4\symup{G}M},\notag\\
 \widetilde{L}&>\frac{2\sqrt3\symup{G}M}{\symup{c}},\notag\\
 r_{\min}&=\frac{6\symup{G}M}{\symup{c}^{2}}, r_{\max}=\frac{12\symup{G}M}{\symup{c}^{2}}.\tag{6}
 \end{align}
@@ -2282,7 +2286,7 @@ r_{\min}&=\frac{6\symup{G}M}{\symup{c}^{2}}, r_{\max}=\frac{12\symup{G}M}{\symup
 理论力学中，行星运动有关的第一积分是
 \begin{align}
 \frac{\symup{d}\varphi}{\symup{d}t}&=\frac{L}{r^{2}},\\
-\frac12\left(\frac{\symup{d}r}{\symup{d}t}\right)^{2}&=E+\frac{\symup{G}M}{r}-\frac{L^{2}}{2r^{2}}.
+\frac{1}{2}\left(\frac{\symup{d}r}{\symup{d}t}\right)^{2}&=E+\frac{\symup{G}M}{r}-\frac{L^{2}}{2r^{2}}.
 \end{align}
 其中 $L$ 是行星的角动量。消去时间可以得到轨道方程
 \begin{equation}
@@ -2298,7 +2302,7 @@ r_{\min}&=\frac{6\symup{G}M}{\symup{c}^{2}}, r_{\max}=\frac{12\symup{G}M}{\symup
 \end{equation}
 该方程的解是
 \begin{equation}
-u=\left(\frac{\symup{G}M}{L}\right)^{2}\left(1+e\cos\varphi\right).
+u=\left(\frac{\symup{G}M}{L}\right)^{2}\left(1+e\cos{\varphi}\right).
 \end{equation}
 在极坐标系中根据“到准线和到焦点距离比值为定值”的定义容易发现这是一个椭圆轨道。$e$ 是偏心率。
 
@@ -2322,24 +2326,24 @@ u=\left(\frac{\symup{G}M}{L}\right)^{2}\left(1+e\cos\varphi\right).
 \end{equation}
 可见其与牛顿理论的区别仅在于 $3u^{2}$ 的修正，对于水星 $u\sim10^{-7}$. 牛顿解可以看作该非线性微分方程零级近似，代入上式转化成线性方程
 \begin{equation}
-\frac{\symup{d}^{2}u}{\symup{d}\varphi^{2}}+u\approx\left(\frac{M}{\widetilde{L}}\right)^{2}+3\left(\frac{M}{\widetilde{L}}\right)^{4}+6\left(\frac{M}{\widetilde{L}}\right)^{4}e\cos\varphi.
+\frac{\symup{d}^{2}u}{\symup{d}\varphi^{2}}+u\approx\left(\frac{M}{\widetilde{L}}\right)^{2}+3\left(\frac{M}{\widetilde{L}}\right)^{4}+6\left(\frac{M}{\widetilde{L}}\right)^{4}e\cos{\varphi}.
 \end{equation}
 其中略去了 $e^{2}$ 项因为偏心率较小。比较常数项量级可再次简化为
 \begin{equation}
-\frac{\symup{d}^{2}u}{\symup{d}\varphi^{2}}+u\approx\left(\frac{M}{\widetilde{L}}\right)^{2}+6\left(\frac{M}{\widetilde{L}}\right)^{4}e\cos\varphi.
+\frac{\symup{d}^{2}u}{\symup{d}\varphi^{2}}+u\approx\left(\frac{M}{\widetilde{L}}\right)^{2}+6\left(\frac{M}{\widetilde{L}}\right)^{4}e\cos{\varphi}.
 \end{equation}
 将解分成两个部分 $u=u_{1}+u_{2}$, 分别对应后两项，可见 $u_{1}$ 就是牛顿解，而通过
 \begin{equation}
-\frac{\symup{d}^{2}u_{2}}{\symup{d}\varphi^{2}}+u_{2}=6\left(\frac{M}{\widetilde{L}}\right)^{4}e\cos\varphi
+\frac{\symup{d}^{2}u_{2}}{\symup{d}\varphi^{2}}+u_{2}=6\left(\frac{M}{\widetilde{L}}\right)^{4}e\cos{\varphi}
 \end{equation}
 可以得到
 \begin{equation}
-u_{2}=3\left(\frac{M}{\widetilde{L}}\right)^{4}e\varphi\sin\varphi.
+u_{2}=3\left(\frac{M}{\widetilde{L}}\right)^{4}e\varphi\sin{\varphi}.
 \end{equation}
 略去高于 $\left(\dfrac{M}{\widetilde{L}}\right)^{4}$ 的项，得到水星轨道方程
 \begin{align}
-u&=u_{1}+u_{2}=\left(\frac{M}{\widetilde{L}}\right)^{2}\left(1+e\cos\varphi+3\left(\frac{M}{\widetilde{L}}\right)^{2}e\varphi\sin\varphi\right)\notag\\
-&\approx\left(\frac{M}{\widetilde{L}}\right)^{2}\left\{1+e\cos\left(\left[1-3\left(\frac{M}{\widetilde{L}}\right)^{2}\right]\varphi\right)\right\}.
+u&=u_{1}+u_{2}=\left(\frac{M}{\widetilde{L}}\right)^{2}\left(1+e\cos{\varphi}+3\left(\frac{M}{\widetilde{L}}\right)^{2}e\varphi\sin{\varphi}\right)\notag\\
+&\approx\left(\frac{M}{\widetilde{L}}\right)^{2}\left\{1+e\cos{\left(\left[1-3\left(\frac{M}{\widetilde{L}}\right)^{2}\right]\varphi\right)}\right\}.
 \end{align}
 可见周期不再是 $2\pi$, 而是
 \begin{equation}
@@ -2376,23 +2380,23 @@ T=\frac{2\pi}{1-3\left(\dfrac{M}{\widetilde{L}}\right)^{2}},
 \end{equation}
 的解为零级近似：
 \begin{equation}
-\widetilde{u}_{0}=R^{-1}\cos\varphi,
+\widetilde{u}_{0}=R^{-1}\cos{\varphi},
 \end{equation}
 其中 $R$ 是光线到恒星中心的最短距离。上式是一条通过“黄道面”的直线。零级近似代入原方程可求一级近似解
 \begin{equation}
-\frac{\symup{d}^{2}\widetilde{u}_{1}}{\symup{d}\varphi^{2}}+\widetilde{u}_{1}=\frac{3\symup{G}M}{\symup{c}^{2}R^{2}}\cos^{2}\varphi.
+\frac{\symup{d}^{2}\widetilde{u}_{1}}{\symup{d}\varphi^{2}}+\widetilde{u}_{1}=\frac{3\symup{G}M}{\symup{c}^{2}R^{2}}\cos^{2}{\varphi}.
 \end{equation}
-猜测解形式为 $\widetilde{u}_{1}=B\sin^{2}\varphi+B'$, 可以定出系数具体值，得到特解：
+猜测解形式为 $\widetilde{u}_{1}=B\sin^{2}{\varphi}+B'$, 可以定出系数具体值，得到特解：
 \begin{equation}
-\widetilde{u}_{1}=\frac{\symup{G}M}{\symup{c}^{2}R^{2}}\left(1+\sin^{2}\varphi\right).
+\widetilde{u}_{1}=\frac{\symup{G}M}{\symup{c}^{2}R^{2}}\left(1+\sin^{2}{\varphi}\right).
 \end{equation}
 因此光线轨道可以写作
 \begin{equation}
-\widetilde{u}=\widetilde{u}_{0}+\widetilde{u}_{1}=R^{-1}\cos\varphi+\frac{\symup{G}M}{\symup{c}^{2}R^{2}}\left(1+\sin^{2}\varphi\right).
+\widetilde{u}=\widetilde{u}_{0}+\widetilde{u}_{1}=R^{-1}\cos{\varphi}+\frac{\symup{G}M}{\symup{c}^{2}R^{2}}\left(1+\sin^{2}{\varphi}\right).
 \end{equation}
 无穷远处 ($\widetilde{u}_{0}=0$) 直线解方位角为 $\varphi=\pm\dfrac{\pi}{2}$, 一级解可看作添加一个小量 $a$, 泰勒展开得到无穷远处
 \begin{align}
-0&=-R^{-1}\sin\alpha+\frac{\symup{G}M}{\symup{c}^{2}R^{2}}\left(1+\cos^{2}\alpha\right).\\
+0&=-R^{-1}\sin{\alpha}+\frac{\symup{G}M}{\symup{c}^{2}R^{2}}\left(1+\cos^{2}{\alpha}\right).\\
 a&=\frac{2\symup{G}M}{\symup{c}^{2}R}.\\
 \Delta{}\theta&=2a=\frac{4\symup{G}M}{\symup{c}^{2}R}.
 \end{align}
