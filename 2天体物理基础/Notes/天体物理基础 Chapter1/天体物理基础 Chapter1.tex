@@ -162,7 +162,7 @@ m_{\nu}'=m_{\nu}+A_{\nu}=m_{\nu}-2.5\log_{10}\left(\symup{e}^{-\tau_{\nu}}\right
 
 前文已经提到过恒星的辐射可以近似地用\hyperref[黑体辐射能量密度简单推导]{黑体辐射}（此链接通往附录，简单推导了黑体辐射能量密度）来表示，即
 \begin{equation}
-I_{\nu}=B_{\nu}\left(T\right)=\frac{2h\nu^{3}}{\symup{c}^{2}}\frac{1}{\symup{e}^{\frac{h\nu}{k_{\text{B}}T}}-1},
+I_{\nu}=B_{\nu}\left(T\right)=\frac{2h\nu^{3}}{\symup{c}^{2}}\frac{1}{\symup{e}^{\frac{h\nu}{k_{\symup{B}}T}}-1},
 \end{equation}
 可见随着温度变化，辐射强度随频率的分布也会发生变化。一方面会体现在色指数上。温度较高，辐射会集中在频率较高的地方，色指数就较低。有各种经验公式
 \begin{equation}
@@ -754,21 +754,21 @@ S_{\nu}=B_{\nu}\left(T\right).
 
 我们将对此作进一步说明。首先，在热平衡状态下，两个能级的粒子数分布满足玻尔兹曼公式：
 \begin{equation}
-\frac{N_{r, k}}{N_{r, i}}=\frac{g_{r, k}}{g_{r, i}}\symup{e}^{-\frac{\varepsilon_{r, k}-\varepsilon_{r, i}}{k_{\text{B}}T}},\label{1.3.2}
+\frac{N_{r, k}}{N_{r, i}}=\frac{g_{r, k}}{g_{r, i}}\symup{e}^{-\frac{\varepsilon_{r, k}-\varepsilon_{r, i}}{k_{\symup{B}}T}},\label{1.3.2}
 \end{equation}
-$r$ 表示该原子已经被电离了 $r$ 个电子，表征电离级；$k, i$ 是第 $r+1$ 个电子所处的能级，表征激发态，基态时 $k=1$, $g$ 是统计权重；$\varepsilon$ 是从基态电离到该能级所需要的能量；$k_{\text{B}}$ 是玻尔兹曼常数。根据上式，热平衡状态时高能级原子数小于低能级原子数。但如果有某种外界能量输入使高能级原子数大于低能级原子数（称其为布居反转 (population invertion)), 那么此时体系的“温度”小于 0, 称作负温度。负温度只是形式上的温度，此时系统并不处于热平衡状态。
+$r$ 表示该原子已经被电离了 $r$ 个电子，表征电离级；$k, i$ 是第 $r+1$ 个电子所处的能级，表征激发态，基态时 $k=1$, $g$ 是统计权重；$\varepsilon$ 是从基态电离到该能级所需要的能量；$k_{\symup{B}}$ 是玻尔兹曼常数。根据上式，热平衡状态时高能级原子数小于低能级原子数。但如果有某种外界能量输入使高能级原子数大于低能级原子数（称其为布居反转 (population invertion)), 那么此时体系的“温度”小于 0, 称作负温度。负温度只是形式上的温度，此时系统并不处于热平衡状态。
 
 根据 (\ref{1.3.2}) 式，同一电离级原子总数为
 \begin{equation}
-N_{r}=\sum_{i}N_{r, i}=\frac{N_{r, 1}}{g_{r, 1}}\left(g_{r, 1}\symup{e}^{-\frac{\varepsilon_{r, 1}-\varepsilon_{r, 1}}{k_{\text{B}}T}}+g_{r, 2}\symup{e}^{-\frac{\varepsilon_{r, 2}-\varepsilon_{r, 1}}{k_{\text{B}}T}}+\cdots\right)=\frac{N_{r, 1}}{g_{r, 1}}\left(g_{r, 1}+g_{r, 2}\symup{e}^{-\frac{\varepsilon_{r, 2}}{k_{\text{B}}T}}+\cdots\right).
+N_{r}=\sum_{i}N_{r, i}=\frac{N_{r, 1}}{g_{r, 1}}\left(g_{r, 1}\symup{e}^{-\frac{\varepsilon_{r, 1}-\varepsilon_{r, 1}}{k_{\symup{B}}T}}+g_{r, 2}\symup{e}^{-\frac{\varepsilon_{r, 2}-\varepsilon_{r, 1}}{k_{\symup{B}}T}}+\cdots\right)=\frac{N_{r, 1}}{g_{r, 1}}\left(g_{r, 1}+g_{r, 2}\symup{e}^{-\frac{\varepsilon_{r, 2}}{k_{\symup{B}}T}}+\cdots\right).
 \end{equation}
 定义配分函数
 \begin{equation}
-U_{r}\left(T\right)=\sum_{i=1}^{\infty}g_{r, i}\symup{e}^{-\frac{\varepsilon_{r, i}}{k_{\text{B}}T}},
+U_{r}\left(T\right)=\sum_{i=1}^{\infty}g_{r, i}\symup{e}^{-\frac{\varepsilon_{r, i}}{k_{\symup{B}}T}},
 \end{equation}
 可以得到
 \begin{equation}
-N_{r}=\frac{N_{r, 1}}{g_{r, 1}}U_{r}\left(T\right)=\frac{N_{r, k}}{g_{r, k}}\symup{e}^{\frac{\varepsilon_{r, k}}{k_{\text{B}}T}}U_{r}\left(T\right).
+N_{r}=\frac{N_{r, 1}}{g_{r, 1}}U_{r}\left(T\right)=\frac{N_{r, k}}{g_{r, k}}\symup{e}^{\frac{\varepsilon_{r, k}}{k_{\symup{B}}T}}U_{r}\left(T\right).
 \end{equation}
 
 有一些机制可以引起原子在两能级间的跃迁。首先，处于高能级的原子本身就是不稳定的，会自发向低能级跃迁。在没有外辐射场的情况下，单位时间内一个原子从高能级 $k$ 跃迁到低能级 $i$ 同时在 $\symup{d}\Omega$ 立体角内发射光子的概率为 $A_{ki}\dfrac{\symup{d}\Omega}{4\pi}$. 当辐射场存在时，高能级原子会受到扰动，向低能级跃迁并发出光子，该光子与辐射场入射光子在频率、相位、偏振、传播方向可能都相同。记单位时间由于受激辐射而产生的跃迁概率为 $B_{ki}I_{\nu}\dfrac{\symup{d}\Omega}{4\pi}$. 以后，低能级原子可以吸收辐射场光子能量跃迁到高能级，记受激吸收系数为 $B_{ik}$.
@@ -787,8 +787,8 @@ N_{k}\left(A_{ki}+B_{ki}I_{\nu}\right)=N_{i}B_{ik}I_{\nu}.
 \end{equation}
 同时粒子数分布满足玻尔兹曼公式，得到
 \begin{align}
-A_{ki}+B_{ki}I_{\nu}&=\frac{g_{i}}{g_{k}}\symup{e}^{-\frac{\varepsilon_{i}-\varepsilon_{k}}{k_{\text{B}}T}}B_{ik}I_{\nu},\\
-I_{\nu}&=\frac{\dfrac{A_{ki}}{B_{ki}}}{\dfrac{g_{i}B_{ik}}{g_{k}B_{ki}}\symup{e}^{\frac{h\nu_{ki}}{k_{\text{B}}T}}-1}.
+A_{ki}+B_{ki}I_{\nu}&=\frac{g_{i}}{g_{k}}\symup{e}^{-\frac{\varepsilon_{i}-\varepsilon_{k}}{k_{\symup{B}}T}}B_{ik}I_{\nu},\\
+I_{\nu}&=\frac{\dfrac{A_{ki}}{B_{ki}}}{\dfrac{g_{i}B_{ik}}{g_{k}B_{ki}}\symup{e}^{\frac{h\nu_{ki}}{k_{\symup{B}}T}}-1}.
 \end{align}
 前文提到热动平衡下辐射强度等于 $B_{\nu}\left(T\right)$, 对比形式得到
 \begin{align}
@@ -813,9 +813,9 @@ _{\nu}}=\frac{2h\nu^{3}}{\symup{c}^{2}}\frac{1}{\dfrac{g_{k}}{g_{i}}\dfrac{N_{i}
 
 值得一提的是，此时吸收系数可以写作
 \begin{equation}
-\alpha_{\nu}=\frac{h\nu}{4\pi}B_{ik}N_{i}\left(1-\symup{e}^{-\frac{\varepsilon_{i}-\varepsilon_{k}}{k_{\text{B}}T}}\right)\varphi_{\nu}.
+\alpha_{\nu}=\frac{h\nu}{4\pi}B_{ik}N_{i}\left(1-\symup{e}^{-\frac{\varepsilon_{i}-\varepsilon_{k}}{k_{\symup{B}}T}}\right)\varphi_{\nu}.
 \end{equation}
-如果 $h\nu\ll k_{\text{B}}T$, 且沿光线传播路径温度不变，那么光深
+如果 $h\nu\ll k_{\symup{B}}T$, 且沿光线传播路径温度不变，那么光深
 \begin{equation}
 \tau_{\nu}=\int\alpha_{\nu}\symup{d}l\propto{}\int\frac{N_{i}\symup{d}l}{T},
 \end{equation}
@@ -823,8 +823,8 @@ _{\nu}}=\frac{2h\nu^{3}}{\symup{c}^{2}}\frac{1}{\dfrac{g_{k}}{g_{i}}\dfrac{N_{i}
 
 一般情况下原子数目按能级分布会偏离玻尔兹曼分布：
 \begin{align}
-\frac{N_{k}}{N_{i}}&=\frac{b_{k}}{b_{i}}\frac{g_{k}}{g_{i}}\symup{e}^{-\frac{\varepsilon_{i}-\varepsilon_{k}}{k_{\text{B}}T}},\\
-S_{\nu}&=\frac{2h\nu^{3}}{\symup{c}^{2}}\frac{1}{\dfrac{b_{i}}{b_{k}}\symup{e}^{\frac{h\nu}{k_{\text{B}}T}}-1}\frac{\psi_{\nu}}{\varphi_{\nu}}.
+\frac{N_{k}}{N_{i}}&=\frac{b_{k}}{b_{i}}\frac{g_{k}}{g_{i}}\symup{e}^{-\frac{\varepsilon_{i}-\varepsilon_{k}}{k_{\symup{B}}T}},\\
+S_{\nu}&=\frac{2h\nu^{3}}{\symup{c}^{2}}\frac{1}{\dfrac{b_{i}}{b_{k}}\symup{e}^{\frac{h\nu}{k_{\symup{B}}T}}-1}\frac{\psi_{\nu}}{\varphi_{\nu}}.
 \end{align}
 
 观察 (\ref{1.3.14}) 式发现，如果 $B_{ik}N_{i}<B_{ki}N_{k}$, 那么吸收系数为负，相当于辐射沿着路径不断增强。此时高能级粒子跃迁到低能级时，释放的辐射被邻近粒子吸收，邻近粒子受激辐射，短时间内连续发生向低能级迁移，整体将形成强有力的放射。当放射波长为可见光到红外波段时称为激光 (Laser), 射电的情形则称为微波受激辐射放大 (Microwave Amplification by Stimulated Emission of Radiation, Maser), 又称脉泽。
@@ -1200,7 +1200,7 @@ S_{\nu}\propto{}\nu^{2.5}.
 
 当辐射场与电子集体通过 CS 和 ICS 达到平衡的时候，电子集体得到和损失能量速度相同，我们称这种状态为康普顿化。此时电子集体温度 $T_{{\color{blue}{\ce{e}}}}$ 和辐射场平均频率满足
 \begin{equation}
-T_{{\color{blue}{\ce{e}}}}=\frac{h\overline{v}}{4k_{\text{B}}}=\frac{h}{4k_{\text{B}}}\frac{\int\nu L_{\nu}\symup{d}\nu}{L_{\nu}\symup{d}\nu},
+T_{{\color{blue}{\ce{e}}}}=\frac{h\overline{v}}{4k_{\symup{B}}}=\frac{h}{4k_{\symup{B}}}\frac{\int\nu L_{\nu}\symup{d}\nu}{L_{\nu}\symup{d}\nu},
 \end{equation}
 其中
 \begin{equation}
@@ -1280,18 +1280,18 @@ k=\frac{m_{0}\symup{c}}{\hbar}\alpha\frac{B\sin{\theta}}{2B_{\symup{c}}}\frac{1}
 
 一般仅考虑电子和正离子的碰撞。查阅\textit{Radiative Processes in Astrophysic} by George B. Rybicki 可知，速度服从 Maxwell 分布，温度为 $T$ 的等离子体，发射率为
 \begin{equation}
-4\pi j_{\nu}=\frac{2}{\pi}m\symup{c}^{2}\sigma_{\text{T}}^{\frac{3}{2}}\left(\frac{m\symup{c}^{2}}{k_{\text{B}}T}\right)^{\frac{1}{2}}Z^{2}n_{{\color{blue}{\ce{e}}}}n_{i}\exp\left(-\frac{h\nu}{k_{\text{B}}T}\right)\overline{g}_{\text{ff}}\left(T, Z,\nu\right),
+4\pi j_{\nu}=\frac{2}{\pi}m\symup{c}^{2}\sigma_{\text{T}}^{\frac{3}{2}}\left(\frac{m\symup{c}^{2}}{k_{\symup{B}}T}\right)^{\frac{1}{2}}Z^{2}n_{{\color{blue}{\ce{e}}}}n_{i}\exp\left(-\frac{h\nu}{k_{\symup{B}}T}\right)\overline{g}_{\text{ff}}\left(T, Z,\nu\right),
 \end{equation}
 其中 $Z$ 是离子电荷数，$\overline{g}_{\text{ff}}$ 是对速度作平均后的 Gaunt 因子。将 $\overline{g}_{\text{ff}}$ 进一步对频率作平均后得到 $\overline{g}_{B}$, 单位体积的功率为
 \begin{equation}
-C_{\text{ff}}=\left(\frac{2\pi k_{\text{B}}T}{3m}\right)^{\frac{1}{2}}\frac{2^{5}\pi{\color{blue}{\ce{e}}}^{6}}{3hm\symup{c}^{3}}Z^{2}n_{{\color{blue}{\ce{e}}}}n_{i}\overline{g}_{B}.
+C_{\text{ff}}=\left(\frac{2\pi k_{\symup{B}}T}{3m}\right)^{\frac{1}{2}}\frac{2^{5}\pi{\color{blue}{\ce{e}}}^{6}}{3hm\symup{c}^{3}}Z^{2}n_{{\color{blue}{\ce{e}}}}n_{i}\overline{g}_{B}.
 \end{equation}
 
 我们提到轫致辐射可看作是热辐射，因此吸收系数近似满足
 \begin{equation}
 \alpha_{\nu}=\frac{j_{\nu}}{B_{\nu}\left(T\right)},
 \end{equation}
-$h\nu\gg k_{\text{B}}T$ 时 $\alpha_{\nu}\propto{}\nu^{-3}$, $h\nu\ll k_{\text{B}}T$ 时 $\alpha_{\nu}\propto{}\nu^{-2}$. 因此低频波段光学厚，光谱是电子温度的黑体谱的 Rayleigh-Jeans 近似。而高频波段光学薄，谱形状与黑体谱很不一样，由 Gaunt 因子决定，近似平谱。
+$h\nu\gg k_{\symup{B}}T$ 时 $\alpha_{\nu}\propto{}\nu^{-3}$, $h\nu\ll k_{\symup{B}}T$ 时 $\alpha_{\nu}\propto{}\nu^{-2}$. 因此低频波段光学厚，光谱是电子温度的黑体谱的 Rayleigh-Jeans 近似。而高频波段光学薄，谱形状与黑体谱很不一样，由 Gaunt 因子决定，近似平谱。
 
 对于电离氢来说，$Z=1, n_{{\color{blue}{\ce{e}}}}=n_{i}$, 用吸收系数计算出的光深近似公式为
 \begin{equation}
@@ -1487,13 +1487,13 @@ M & $\qty{3000}{K}$ & 红 & 中性金属线、分子带\\
 \frac{\symup{G}M_{r}\rho\symup{d}A\symup{d}r}{r^{2}}&=\symup{d}P\symup{d}A,\\
 \frac{\symup{d}P}{\symup{d}r}&=\frac{\symup{G}M_{r}\rho}{r^{2}}.\label{1.4.4}
 \end{align}
-于是我们大概得知两种关系，$\dfrac{P}{R}\sim\dfrac{M\rho}{R^{2}},\rho\sim\dfrac{M}{R^{3}}$, 并由此推出 $P\sim\dfrac{M^{2}}{R^{4}}$. 我们一般假设恒星内部气体遵循理想气体状态方程，即 $P=\dfrac{\rho k_{\text{B}}T}{\mu m_{\ce{H}}}$, 其中 $\mu$ 是相对分子质量，$m_{\ce{H}}$ 是氢原子质量，由此得到 $T\sim\dfrac{M}{R}$. 与引力相抗衡的压力有辐射压和气压两种，此处我们只考虑辐射压存在，可进一步建立辐射压和温度的关系。我们曾介绍过球对称情况下的能量密度，对于黑体辐射，
+于是我们大概得知两种关系，$\dfrac{P}{R}\sim\dfrac{M\rho}{R^{2}},\rho\sim\dfrac{M}{R^{3}}$, 并由此推出 $P\sim\dfrac{M^{2}}{R^{4}}$. 我们一般假设恒星内部气体遵循理想气体状态方程，即 $P=\dfrac{\rho k_{\symup{B}}T}{\mu m_{\ce{H}}}$, 其中 $\mu$ 是相对分子质量，$m_{\ce{H}}$ 是氢原子质量，由此得到 $T\sim\dfrac{M}{R}$. 与引力相抗衡的压力有辐射压和气压两种，此处我们只考虑辐射压存在，可进一步建立辐射压和温度的关系。我们曾介绍过球对称情况下的能量密度，对于黑体辐射，
 \begin{equation}
-U_{\nu}=\frac{4\pi{}}{\symup{c}}B_{\nu}=\frac{8\pi\nu^{2}}{\symup{c}^{3}}\cdot\frac{1}{\symup{e}^{\frac{h\nu}{k_{\text{B}}T}}-1}\cdot h\nu.
+U_{\nu}=\frac{4\pi{}}{\symup{c}}B_{\nu}=\frac{8\pi\nu^{2}}{\symup{c}^{3}}\cdot\frac{1}{\symup{e}^{\frac{h\nu}{k_{\symup{B}}T}}-1}\cdot h\nu.
 \end{equation}
 对频率积分可以得到总能量密度：
 \begin{equation}
-U=\int\varepsilon\left(\nu\right)\symup{d}\nu=\frac{8\pi h}{\symup{c}^{3}}\int\frac{\nu^{3}\symup{d}\nu}{\symup{e}^{\frac{h\nu}{k_{\text{B}}T}}-1}=\frac{8\pi}{\symup{c}^{3}}\frac{k_{\text{B}}^{4}T^{4}}{h^{3}}\int\frac{x^{3}\symup{d}x}{\symup{e}^{x}-1}=\frac{8\pi^{5}k_{\text{B}}^{4}}{15h^{3}\symup{c}^{3}}T^{4}=a_{\text{B}}T^{4}.
+U=\int\varepsilon\left(\nu\right)\symup{d}\nu=\frac{8\pi h}{\symup{c}^{3}}\int\frac{\nu^{3}\symup{d}\nu}{\symup{e}^{\frac{h\nu}{k_{\symup{B}}T}}-1}=\frac{8\pi}{\symup{c}^{3}}\frac{k_{\symup{B}}^{4}T^{4}}{h^{3}}\int\frac{x^{3}\symup{d}x}{\symup{e}^{x}-1}=\frac{8\pi^{5}k_{\symup{B}}^{4}}{15h^{3}\symup{c}^{3}}T^{4}=a_{\text{B}}T^{4}.
 \end{equation}
 而流量满足（仅考虑向外辐射部分，进而可通过 $F=\dfrac{L}{4\pi R^{2}}$ 确定系数）
 \begin{align}
@@ -1978,7 +1978,7 @@ f\left(\nu\right)\symup{d}\nu=\frac{1}{\pi^{3}}\frac{1}{8}4\pi{}k^{2}\symup{d}k=
 f\left(\nu\right)\symup{d}\nu=\frac{8\pi{}\nu^{2}}{\symup{c}^{3}}\symup{d}\nu.
 \end{equation}
 
-下一步是求解频率为 $\nu$ 的量子态上的光子数。光子是玻色子，记 $\beta=\dfrac{1}{k_{\text{B}}T}$, 一堆混杂在一起的、频率各不相同的玻色子所构成的体系，其（简化）巨配分函数为
+下一步是求解频率为 $\nu$ 的量子态上的光子数。光子是玻色子，记 $\beta=\dfrac{1}{k_{\symup{B}}T}$, 一堆混杂在一起的、频率各不相同的玻色子所构成的体系，其（简化）巨配分函数为
 \begin{equation}
 Z=\sum_{n_{1}, n_{2},\cdots}\exp\left[-\beta\left(n_{1}\varepsilon_{1}+n_{2}\varepsilon_{2}+\cdots\right)\right].
 \end{equation}
@@ -1993,7 +1993,7 @@ Z&=\left(\sum_{n_{1}=1, 2,\cdots}\symup{e}^{-\beta n_{1}\varepsilon_{1}}\right)\
 \end{equation}
 综上我们便求得了黑体辐射的公式：
 \begin{equation}
-\varepsilon\left(\nu\right)\symup{d}\nu=\frac{8\pi{}\nu^{2}}{\symup{c}^{3}}\cdot\frac{1}{\symup{e}^{\frac{h\nu}{k_{\text{B}}T}}-1}\cdot{}h\nu\symup{d}\nu.
+\varepsilon\left(\nu\right)\symup{d}\nu=\frac{8\pi{}\nu^{2}}{\symup{c}^{3}}\cdot\frac{1}{\symup{e}^{\frac{h\nu}{k_{\symup{B}}T}}-1}\cdot{}h\nu\symup{d}\nu.
 \end{equation}
 
 \subsubsection{汤姆孙散射截面}

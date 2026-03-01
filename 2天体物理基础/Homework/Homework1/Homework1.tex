@@ -1,0 +1,216 @@
+% TeX Live 2025 XeLaTeX
+\documentclass[UTF8, 12pt, a4paper, oneside, twocolumn, fontset=none]{ctexart}
+\usepackage{anyfontsize}
+\usepackage{geometry}
+\geometry{left=1.5cm, right=1.5cm, top=1.8cm, bottom=0.9cm}
+
+\usepackage{unicode-math, mathrsfs, xcolor, inputenc}
+\definecolor{pagecolor}{HTML}{C7EDCC}
+\pagecolor{pagecolor}
+\setCJKmainfont[AutoFakeBold, AutoFakeSlant]{LXGW WenKai}
+\setCJKmonofont[AutoFakeBold, AutoFakeSlant]{MapleMono-CN-Regular}
+\setCJKsansfont[AutoFakeBold, AutoFakeSlant]{LXGW WenKai}
+\setmainfont[AutoFakeBold, AutoFakeSlant]{LXGW WenKai}
+\setmonofont[AutoFakeBold, AutoFakeSlant]{MapleMono-CN-Regular}
+\setsansfont[AutoFakeBold, AutoFakeSlant]{LXGW WenKai}
+\setmathfont{Latin Modern Math}
+\setmathrm{Latin Modern Math}
+
+\usepackage{amsmath, amsthm, cases, graphicx, subfigure, tikz, caption, subcaption, siunitx, keyval, physics2}
+\DeclareSIUnit\angstrom{Å}
+\usephysicsmodule{ab, ab.braket}
+\usepackage[version=4]{mhchem}
+\usepackage[flushleft]{threeparttable}
+\usepackage{hyperref, bookmark}
+\hypersetup{colorlinks=true, urlcolor=blue, filecolor=blue, linkcolor=blue}
+\usepackage[backend=biber, sorting=none]{biblatex}
+\addbibresource{/Users/Linyan/Database/Zotero/AllBibTeX.bib}
+%\addbibresource{/home/linyan/Database/Zotero/AllBibTeX.bib}
+
+\ctexset{section={format=\bfseries\zihao{4}\flushleft}}
+\renewcommand\thesubsection{\thesection.\arabic{subsection}}
+\numberwithin{equation}{subsection}
+\renewcommand\theequation{\thesubsection.\arabic{equation}}
+\makeatletter
+\renewcommand{\maketag@@@}[1]{\hbox{\m@th\normalsize\normalfont#1}}%
+\makeatother
+\usepackage{indentfirst}
+
+\usepackage{listings}
+\lstset{
+    basicstyle      =    \zihao{-5}\ttfamily,
+    numberstyle     =    \zihao{-5}\ttfamily,
+    keywordstyle    =    \color{blue},
+    keywordstyle    =    [2]\color{teal},
+    stringstyle     =    \color{magenta},
+    commentstyle    =    \color{red}\ttfamily,
+    breaklines=true,     % 自动换行
+    columns=fixed,       % 固定字间距
+    flexiblecolumns,     % 别问为什么，加上这个
+    numbers         =    left,% 行号的位置在左边
+    showspaces      =    false,% 是否显示空格
+    numberstyle     =    \zihao{-5}\ttfamily,% 行号的样式，小五号，tt 等宽字体
+    showstringspaces=    false,
+    captionpos      =    t,% 这段代码的名字所呈现的位置，t 指的是 top 上面
+    frame           =    lrtb,% 显示边框
+}
+
+\lstdefinestyle{Python}{
+    language        =    Python,
+    basicstyle      =    \zihao{-5}\ttfamily,
+    numberstyle     =    \zihao{-5}\ttfamily,
+    keywordstyle    =    \color{blue},
+    keywordstyle    =    [2]\color{teal},
+    stringstyle     =    \color{magenta},
+    commentstyle    =    \color{red}\ttfamily,
+    breaklines      =    true,% 自动换行，建议不要写太长的行
+    columns         =    fixed,% 如果不加这一句，字间距就不固定
+    basewidth       =    0.5em,
+}
+
+\begin{document}
+\section*{Homework1}
+
+\hspace*{\fill}
+
+\noindent\textcolor{purple}{1. The faintest M-dwarf star}
+
+\noindent What is the faintest observed (apparent) magnitude which we would expect to see for an M-dwarf star in the Milky Way? Assume that an M-dwarf star has an absolute magnitude of $+14$ and that the outer halo of the Milky Way extends $\qty{50}{kpc}$ from us.
+
+\hspace*{\fill}
+
+\noindent\textcolor{purple}{Solution}
+
+Note that $F=\dfrac{L}{4\pi{}r^{2}}$, then
+\begin{align}
+M-M_{\text{abs}}&=-2.5\log_{10}\left(\frac{f}{f_{\text{abs}}}\right)\notag\\
+&=-2.5\log_{10}\left(\frac{\qty{10}{pc}}{\qty{50}{kpc}}\right)^2.\tag{1}\\
+\therefore\enspace{}M&=32.495.\tag{2}
+\end{align}
+
+\hspace*{\fill}
+
+\noindent\textcolor{purple}{2. A pinhole camera}
+
+\noindent Consider a simple pinhole camera having a small circular hole of diameter $d$ in its front face and having a film placed at a distance $L$ behind it. Show that the flux $F_{\nu}$, at the film plane is related to the incident intensity $I_{\nu}\left(\theta,\phi\right)$ at the entrance hole in the following way
+\begin{equation}
+F_{\nu}=\frac{\pi{}d^{2}\cos^{4}{\theta}}{4L^{2}}I_{\nu}\left(\theta,\phi\right).\tag{1}
+\end{equation}
+
+\noindent\textcolor{purple}{Proof}
+
+Since optical paths are reversible,
+\begin{align}
+F_{\nu}&=\int{}I_{\nu}\left(\theta,\phi\right)\cos{\theta}\symup{d}\Omega\notag\\
+&=I_{\nu}\left(\theta,\phi\right)\cos{\theta}\frac{\pi\left(d/2\right)^{2}\cos{\theta}}{\left(L/\cos{\theta}\right)^{2}}\notag\\
+&=\frac{\pi{}d^{2}\cos^{4}{\theta}}{4L^{2}}I_{\nu}\left(\theta,\phi\right).\tag{1}
+\end{align}
+
+\hspace*{\fill}
+
+\noindent\textcolor{purple}{3. Radiative transfer through two adjacent clouds}
+
+\noindent There are two adjacent interstellar gas clouds with known thickness $d_{1}$ and $d_{2}$ found in front of an astronomical light source. Suppose that this source emits a beam of radiation with known specific intensity $I_{\nu0}$ as it enters the first cloud of interstellar gas. Assume that the values of $\alpha_{\nu}$ are constant within the clouds and are known quantities and that these clouds possess no emissivity.
+
+\hspace*{\fill}
+
+\noindent\textcolor{purple}{(a)} Calculate the specific intensify $I_{\nu}$ immediately after this beam has traversed the cloud A.
+
+\hspace*{\fill}
+
+\noindent\textcolor{purple}{Solution}
+\begin{align}
+\frac{\symup{d}I_{\nu}}{\symup{d}l}&=j_{\nu}-\alpha_{\nu, 1}I_{\nu}\notag\\
+&=-\alpha_{\nu, 1}I_{\nu}.\tag{1}\\
+I_{\nu}&=I_{\nu, 0}\symup{e}^{-\alpha_{\nu, 1}l}.\tag{2}\\
+\therefore\, I_{\nu,\text{after A}}&=I_{\nu, 0}\symup{e}^{-\alpha_{\nu, 1}d_{1}}.\tag{3}
+\end{align}
+
+\hspace*{\fill}
+
+\noindent\textcolor{purple}{(b)} Calculate the specific intensity after this beam has traversed both cloud A and B. Does it matter whether cloud A or cloud B is closer to the astronomical light source?
+
+\hspace*{\fill}
+
+\noindent\textcolor{purple}{Solution}
+
+Refer to the conclusion of the first question,
+\begin{equation}
+I_{\nu,\text{after A and B}}=I_{\nu, 0}\symup{e}^{-\alpha_{\nu, 1}d_{1}-\alpha_{\nu, 2}d_{2}}.\tag{1}
+\end{equation}
+
+Thus it doesn't matter.
+
+\hspace*{\fill}
+
+\noindent\textcolor{purple}{4. Thomson scattering in Earth's atmosphere}
+
+\noindent Consider if the Earth's atmosphere ($\rho=\qty{1.2e-3}{g\cdot{}cm^{-3}}$) was completely ionized. Using the fact that a beam of light passing through this atmosphere will be attenuated due to Thomson scattering by free electrons, calculate the path length which this beam has to traverse before its intensity is reduced to half its original strength. Explain what you would ``see'' if we could still live in such an atmosphere.
+
+\noindent Hint: you can assume that there is one electron per two nucleons in an atmosphere of Nitrogen and Oxygen.
+
+\hspace*{\fill}
+
+\noindent\textcolor{purple}{Solution}
+
+Thomson scattering does not change the radiation frequency and can be regarded as an elastic collision, so we can define the scattering absorption coefficient:
+\begin{equation}
+\sigma=n_{{\color{blue}{\ce{e}}}}\sigma_{\text{T}}.\tag{1}
+\end{equation}
+
+The average relative molecular mass of air is
+\begin{equation}
+M_{\text{air}}=32\times0.2+28\times0.8=28.8,\tag{2}
+\end{equation}
+thus the number density is equal to
+\begin{equation}
+n_{\text{air}}=\frac{\rho}{M_{\text{air}}m_{\ce{p}}}=\qty{2.5e19}{cm^{-3}}.\tag{3}
+\end{equation}
+
+Then we can obtain the scattering absorption coefficient
+\begin{equation}
+\sigma=\frac{n_{\text{air}}}{2}\sigma_{\text{T}}=\qty{8.3e-6}{cm^{-1}}.\tag{4}
+\end{equation}
+
+Thus
+\begin{align}
+\frac{\symup{d}I}{\symup{d}s}&=-\sigma{}I.\tag{5}\\
+I&=I_{0}\symup{e}^{-\sigma{}s}=\frac{1}{2}I_{0},\tag{6}\\
+\therefore s&=\frac{\ln2}{\sigma}=\qty{835.117}{m}.\tag{7}
+\end{align}
+
+After about 800 meters, light will lose half its original value, so we will only see darkness.
+
+\hspace*{\fill}
+
+\noindent\textcolor{purple}{5. Optically thick / optically thin}
+
+\noindent A fundamental property that determines the way we see astrophysical objects is the optical depth. Imagine two sources of radiation that are both surrounded by a spherical cloud. Source A is surrounded by optically thin material, while source B is surrounded by optically thick material.
+
+\hspace*{\fill}
+
+\noindent\textcolor{purple}{(a)} What will you qualitatively observe in both cases? Relate your answer to the photosphere and corona of the Sun.
+
+\hspace*{\fill}
+
+\noindent\textcolor{purple}{Answer}
+
+Source A we will observe a diffuse halo, in source B we will not see the underlying source, but the reprocessed light (i.e. the thick material itself). Source A is similar to the corona, while Source B is similar to the photosphere.
+
+\hspace*{\fill}
+
+\noindent\textcolor{purple}{(b)} What difference would it make if we can assume LTE in the optically thick cloud, or not?
+
+\hspace*{\fill}
+
+\noindent\textcolor{purple}{Answer}
+
+If we can assume LTE, the emergent spectrum in the optically thick case will be a blackbody spectrum in which the radiation is completely reprocessed by the material. If there is no LTE, then it will not be, and will be more like the original light emerging from the surface of the cloud.
+
+
+
+
+
+
+%\printbibliography
+\end{document}

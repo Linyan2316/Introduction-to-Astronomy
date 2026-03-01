@@ -1,0 +1,316 @@
+% TeX Live 2025 XeLaTeX
+\documentclass[UTF8, 12pt, a4paper, oneside, twocolumn, fontset=none]{ctexart}
+\usepackage{anyfontsize}
+\usepackage{geometry}
+\geometry{left=1.5cm, right=1.5cm, top=1.8cm, bottom=0.9cm}
+
+\usepackage{unicode-math, mathrsfs, xcolor, inputenc}
+\definecolor{pagecolor}{HTML}{C7EDCC}
+\pagecolor{pagecolor}
+\setCJKmainfont[AutoFakeBold, AutoFakeSlant]{LXGW WenKai}
+\setCJKmonofont[AutoFakeBold, AutoFakeSlant]{MapleMono-CN-Regular}
+\setCJKsansfont[AutoFakeBold, AutoFakeSlant]{LXGW WenKai}
+\setmainfont[AutoFakeBold, AutoFakeSlant]{LXGW WenKai}
+\setmonofont[AutoFakeBold, AutoFakeSlant]{MapleMono-CN-Regular}
+\setsansfont[AutoFakeBold, AutoFakeSlant]{LXGW WenKai}
+\setmathfont{Latin Modern Math}
+\setmathrm{Latin Modern Math}
+
+\usepackage{amsmath, amsthm, cases, graphicx, subfigure, tikz, caption, subcaption, siunitx, keyval, physics2}
+\DeclareSIUnit\angstrom{Å}
+\usephysicsmodule{ab, ab.braket}
+\usepackage[version=4]{mhchem}
+\usepackage[flushleft]{threeparttable}
+\usepackage{hyperref, bookmark}
+\hypersetup{colorlinks=true, urlcolor=blue, filecolor=blue, linkcolor=blue}
+\usepackage[backend=biber, sorting=none]{biblatex}
+\addbibresource{/Users/Linyan/Database/Zotero/MyBibTeX.bib}
+%\addbibresource{/home/linyan/Database/Zotero/My BibTeX.bib}
+
+\ctexset{section={format=\bfseries\zihao{4}\flushleft}}
+\renewcommand\thesubsection{\thesection.\arabic{subsection}}
+\numberwithin{equation}{subsection}
+\renewcommand\theequation{\thesubsection.\arabic{equation}}
+\makeatletter
+\renewcommand{\maketag@@@}[1]{\hbox{\m@th\normalsize\normalfont#1}}%
+\makeatother
+\usepackage{indentfirst}
+
+\usepackage{listings}
+\lstset{
+    basicstyle      =    \zihao{-5}\ttfamily,
+    numberstyle     =    \zihao{-5}\ttfamily,
+    keywordstyle    =    \color{blue},
+    keywordstyle    =    [2]\color{teal},
+    stringstyle     =    \color{magenta},
+    commentstyle    =    \color{red}\ttfamily,
+    breaklines=true,     % 自动换行
+    columns=fixed,       % 固定字间距
+    flexiblecolumns,     % 别问为什么，加上这个
+    numbers         =    left,% 行号的位置在左边
+    showspaces      =    false,% 是否显示空格
+    numberstyle     =    \zihao{-5}\ttfamily,% 行号的样式，小五号，tt 等宽字体
+    showstringspaces=    false,
+    captionpos      =    t,% 这段代码的名字所呈现的位置，t 指的是 top 上面
+    frame           =    lrtb,% 显示边框
+}
+
+\lstdefinestyle{Python}{
+    language        =    Python,
+    basicstyle      =    \zihao{-5}\ttfamily,
+    numberstyle     =    \zihao{-5}\ttfamily,
+    keywordstyle    =    \color{blue},
+    keywordstyle    =    [2]\color{teal},
+    stringstyle     =    \color{magenta},
+    commentstyle    =    \color{red}\ttfamily,
+    breaklines      =    true,% 自动换行，建议不要写太长的行
+    columns         =    fixed,% 如果不加这一句，字间距就不固定
+    basewidth       =    0.5em,
+}
+
+\begin{document}
+\section*{Homework2}
+
+\hspace*{\fill}
+
+\noindent\textcolor{purple}{1. The critical density of the $\ce{CO}$ molecule}
+
+\noindent\textcolor{purple}{(a)} Calculate the root mean square $\sqrt{\langle{}v^{2}\rangle}$ of $\ce{H2}$ molecules in a gas in thermal equilibrium at a temperature of $T=\qty{100}{K}$.
+
+\hspace*{\fill}
+
+\noindent\textcolor{purple}{Solution}
+
+The motions of $\ce{H2}$ molecules conform the Maxwell velocity distribution:
+\begin{align}
+f\left(v\right)\symup{d}v&=\left(\frac{m}{2\pi{}k_{\symup{B}}T}\right)^{\frac{3}{2}}\exp\left(-\frac{mv^{2}}{2k_{\symup{B}}T}\right)4\pi{}v^{2}\symup{d}v.\tag{1}\\
+\langle{}v^{2}\rangle&=\frac{\int_{0}^{\infty}v^{2}Nf\left(v\right)\symup{d}v}{N}=\frac{3k_{\symup{B}}T}{m_{\ce{H2}}},\tag{2}\\
+\sqrt{\langle{}v^{2}\rangle}&=\sqrt{\frac{3k_{\symup{B}}T}{m_{\ce{H2}}}}=\qty{1112.7}{km\cdot{}s^{-1}}.\tag{3}
+\end{align}
+
+\hspace*{\fill}
+
+\noindent\textcolor{purple}{(b)} Consider a $\ce{CO}$ molecule in a gas that is almost entirely composed of $\ce{H2}$. In terms of the number density of $\ce{H2}$ molecules $n\,\unit{cm^{-3}}$, how often does a $\ce{CO}$ molecule collide with an $\ce{H2}$ molecule? You should assume that the collision cross-section between a $\ce{CO}$ and an $\ce{H2}$ molecule is $\sigma=\qty{e-15}{cm^{-2}}$. You should neglect the velocity of the much more massive $\ce{CO}$ molecule.
+
+\hspace*{\fill}
+
+\noindent\textcolor{purple}{Solution}
+
+Note that the average velocity of $\ce{H2}$ can be expressed as
+\begin{equation}
+\overline{v}=\sqrt{\frac{8k_{\symup{B}}T}{\pi{}m_{\ce{H2}}}},\tag{1}
+\end{equation}
+then we can obtain the number of collisions per unit time
+\begin{equation}
+f=\frac{n\sigma\overline{v}\Delta{}t}{\Delta{}t}=n\sigma\overline{v},\tag{2}
+\end{equation}
+so the time interval between collisions is equal to
+\begin{align}
+\Delta{}t_{\text{c}}&=\frac{1}f=\frac{1}{n\sigma}\sqrt{\frac{\pi{}m_{\ce{H2}}}{8k_{\symup{B}}T}}\tag{3}\\
+&=\frac{9.75}{n}\times10^{9}\,\unit{s},\tag{4}
+\end{align}
+where $T=\qty{100}{K}$.
+
+\hspace*{\fill}
+
+\noindent\textcolor{purple}{(c)} We are often interested in comparing collision rates in gas clouds with the spontaneous de-excitation rates given by the Einstein $A$ coefficient for a particular transition. Calculate the density at which the rate of collisions for a $\ce{CO}$ molecule equals the rate of spontaneous emission. Gas above this density will have a ``rotational temperature'' equal to the usual kinetic temperature, because the frequent collisions will ensure that the population of excited states reflects thermal equilibrium. You should assume that the $\ce{CO}$ molecule has $A=\qty{7e-8}{s^{-1}}$.
+
+\hspace*{\fill}
+
+\noindent\textcolor{purple}{Solution}
+
+Rotational energy levels of $\ce{CO}$:
+\begin{equation}
+E_{\text{rot}}=\frac{J\left(J+1\right)\hbar^{2}}{2I},\tag{1}
+\end{equation}
+where rotational inertia $I$ is equal to
+\begin{align}
+I&=\mu{}R^{2}=\frac{m_{\ce{C}}m_{\ce{O}}}{m_{\ce{C}}+m_{\ce{O}}}\times\left(1.1\,\unit{\angstrom}\right)^{2}\notag\\
+&=\qty{1.3878e-46}{kg\cdot{}m^{2}}.\tag{2}
+\end{align}
+Thus
+\begin{align}
+B&=\frac{\hbar^{2}}{2I}=\qty{4e-23}{J}.\tag{3}\\
+E_{\text{rot}}&=BJ\left(J+1\right).\tag{4}
+\end{align}
+
+For $J=1\to0$, the photon emitted has a frequency of
+\begin{equation}
+\nu_{\min}=\qty{1.2e11}{Hz}.\tag{5}
+\end{equation}
+
+Because it's in thermodynamic equilibrium, the minimum rotational temperature can be expressed as
+\begin{equation}
+T_{\min}\sim\frac{h\nu_{\min}}{k_{\symup{B}}}=\qty{5.8}{K}.\tag{6}
+\end{equation}
+
+Notice that it's mainly $\ce{H2}$ that collide with $\ce{CO}$, then we can obtain the number of collisions per unit time
+\begin{align}
+f&=n\sigma\overline{v}\notag\\
+&=n\sigma\sqrt{\frac{8k_{\symup{B}}T_{\min}}{\pi{}m_{\ce{H2}}}}\notag\\
+&=n\times2.469\times10^{-11}\sim A,\tag{7}
+\end{align}
+thus the minimum number density of $\symup{H_{2}}$ gas is equal to
+\begin{equation}
+n\sim\qty{2835.21}{cm^{-3}}.\tag{8}
+\end{equation}
+
+\hspace*{\fill}
+
+\noindent\textcolor{purple}{2. Stellar structure of two spheres}
+
+\noindent Consider two self-gravitating spheres with mass and radius $M$ and $R$. Sphere A has a uniform density and sphere B has a density that increases towards the centre as $\rho\left(r\right)=\rho_{\text{c}}\left(1-r/R\right)$. Answer questions (a) and (b) for both spheres.
+
+\hspace*{\fill}
+
+\noindent\textcolor{purple}{(a)} Calculate the gravitational potential energy. Express your answer in terms of $M$ and $R$ by finding the relation between the central density, $M$ and $R$ for sphere B.
+
+\hspace*{\fill}
+
+\noindent\textcolor{purple}{Solution}
+
+For sphere A, $M_{r\text{A}}=\dfrac{4}{3}\pi\rho{}r^{3}$, the gravitational potential energy is
+\begin{align}
+E_{\text{A}}&=\int_{0}^{R}-\frac{\symup{G}M_{r\text{A}}}{r}4\pi\rho{}r^{2}\symup{d}r\notag\\
+&=\int_{0}^{R}-\frac{16}{3}\symup{G}\pi^{2}\rho^{2}r^{4}\symup{d}r\notag\\
+&=-\frac{16}{15}\symup{G}\pi^{2}\rho^{2}R^{5}\notag\\
+&=-\frac{3}{5}\frac{\symup{G}M^{2}}{R}.\tag{1}
+\end{align}
+
+
+For sphere B,
+\begin{align}
+M_{r\text{B}}&=\int_{0}^{r}4\pi{}r^{2}\rho_{r}\symup{d}r\notag\\
+&=\int_{0}^{r}4\pi{}r^{2}\rho_{\text{c}}\left(1-\frac{r}{R}\right)\symup{d}r\notag\\
+&=4\pi\rho_{c}\left(\frac{1}{3}r^{3}-\frac{1}{4}\frac{r^{4}}{R}\right).\tag{2}\\
+\rho_{c}&=\frac{3M}{\pi R^{3}},\tag{3}
+\end{align}
+the gravitational potential energy is
+\begin{align}
+E_{\text{B}}&=\int_{0}^{R}-\frac{\symup{G}M_{r\text{B}}}{r}4\pi\rho_{r}r^{2}\symup{d}r\notag\\
+&=\int_{0}^{R}-16\symup{G}\pi^{2}\rho_{\text{c}}^{2}\left(\frac{1}{3}r^{3}-\frac{1}{4}\frac{r^{4}}{R}\right)\left(1-\frac{r}{R}\right)r\symup{d}r\notag\\
+&=-16\symup{G}\pi^{2}\rho_{\text{c}}^{2}\left.\left(\frac{1}{15}r^{5}-\frac{7}{72}\frac{r^{6}}{R}+\frac{1}{28}\frac{r^{7}}{R^{2}}\right)\right\vert_{0}^{R}\notag\\
+&=-\frac{26}{315}\symup{G}\pi^{2}\rho_{\text{c}}^{2}R^{5}\notag\\
+&=-\frac{26}{35}\frac{\symup{G}M^{2}}{R}.\tag{4}
+\end{align}
+
+\hspace*{\fill}
+
+\noindent\textcolor{purple}{(b)} Assuming that the object is in hydrostatic equilibrium, determine how the pressure varies with radius within the sphere and derive the central pressure.
+
+\hspace*{\fill}
+
+\noindent\textcolor{purple}{Solution}
+
+For sphere A
+\begin{align}
+\frac{\symup{d}P}{\symup{d}r}&=-\frac{\symup{G}M_{r\text{A}}}{r^{2}}\rho\notag\\
+P\left(r\right)&=\int_{R}^{r}-\frac{\symup{G}M_{r\text{A}}}{r^{2}}\rho\symup{d}r\notag\\
+&=\int_{R}^{r}-\frac{4}{3}\symup{G}\pi\rho^{2}r\symup{d}r\notag\\
+&=\frac{2}{3}\symup{G}\pi\rho^{2}\left(R^{2}-r^{2}\right)\notag\\
+&=\frac{3}{8}\frac{\symup{G}M^{2}}{\pi{}R^{6}}\left(R^{2}-r^{2}\right).\notag
+\end{align}
+When $r=0$,
+\begin{equation}
+P_{\text{cA}}=\frac{3}{8}\frac{\symup{G}M^{2}}{\pi{}R^{4}}.\tag{5}
+\end{equation}
+
+For sphere B
+\begin{align}
+P\left(r\right)&=\int_{R}^{r}-\frac{\symup{G}M_{r\text{B}}}{r^{2}}\rho_{r}\symup{d}r\notag\\
+&=\int_{R}^{r}-4\symup{G}\pi\rho_{\text{c}}^{2}\left(\frac{1}{3}r-\frac{1}{4}\frac{r^{2}}{R}\right)\left(1-\frac{r}{R}\right)\symup{d}r\notag\\
+&=-4\symup{G}\pi\rho_{\text{c}}^{2}\left(\frac{1}{6}r^{2}-\frac{7}{36}\frac{r^{3}}{R}+\frac{1}{16}\frac{r^{4}}{R^{2}}-\frac{5}{144}R^{2}\right).\notag
+\end{align}
+When $r=0$,
+\begin{equation}
+P_{\text{cB}}=\frac{5}{36}\symup{G}\pi\rho_{\text{c}}^{2}R^{2}=\frac{5}{4}\frac{\symup{G}M^{2}}{\pi{}R^{4}}.\tag{6}
+\end{equation}
+
+\hspace*{\fill}
+
+\noindent\textcolor{purple}{3. Central pressure}
+
+\noindent Calculate the ratio of the radiation pressure to the gas pressure in the centre of the Sun. Assume that the sun has a central temperature $T\sim\qty{1.6e7}{K}$ and a central density of about $\rho\sim\qty{1.5e5}{kg\cdot{}m^{-3}}$. Here, for simplicity assume the abundances are $X=0.7$ and $Y=0.3$ and that the gas is fully ionized.
+
+\hspace*{\fill}
+
+\noindent\textcolor{purple}{Solution}
+
+Radiation pressure
+\begin{equation}
+P_{\text{rad}}=\frac{1}{3}a_{B}T^{4}=\qty{1.65e13}{W\cdot{}m^{-2}}.\tag{1}
+\end{equation}
+
+Gas pressure
+\begin{align}
+P_{\text{g}}&=\frac{\rho}{\mu{}m_{\ce{H}}}k_{\symup{B}}T=\frac{\rho}{m_{\ce{H}}}k_{\symup{B}}T\left(2X+\frac{3}{4}Y\right)\notag\\
+&=\qty{3.22e16}{W\cdot{}m^{-2}}.\tag{2}
+\end{align}
+
+Ratio
+\begin{equation}
+\frac{P_{\text{rad}}}{P_{\text{g}}}\sim\qty{5e-4}{}.\tag{3}
+\end{equation}
+
+\hspace*{\fill}
+
+\noindent\textcolor{purple}{4. Surface gravity}
+
+\noindent It is often practical to introduce the concept of surface gravity, which is the gravitational acceleration experienced at a surface of a sphere with radius $r$.
+
+\hspace*{\fill}
+
+\noindent\textcolor{purple}{(a)} As a refresher, calculate the mass of the Earth under the assumption that it is a homogeneous sphere with surface gravity $\qty{9.8}{m\cdot{}s^{-2}}$ at the surface of the Earth and a circumference $\qty{4e4}{km}$.
+
+\hspace*{\fill}
+
+\noindent\textcolor{purple}{Solution}
+\begin{align}
+a&=\frac{\symup{G}M_{\text{Earth}}}{r^{2}}\notag\\
+M_{\text{Earth}}&=\frac{a\left(\dfrac{l}{2\pi}\right)^{2}}{\symup{G}}=\qty{6e24}{kg}.\tag{1}
+\end{align}
+
+\hspace*{\fill}
+
+\noindent\textcolor{purple}{(b)} Starting from the basic equation for hydrostatical support $\dfrac{\symup{d}P}{\symup{d}r}=-\dfrac{\symup{G}M\rho}{r^{2}}$, show that you can express the derivative of $\dfrac{\symup{d}P}{\symup{d}\tau}$ (where $\tau$ the optical depth) simply in terms of the ratio of the surface gravity $g\left(r\right)$ and the opacity $\chi$.
+
+\hspace*{\fill}
+
+\noindent\textcolor{purple}{Solution}
+\begin{align}
+\frac{\symup{d}P}{\symup{d}\tau}=\frac{\symup{d}P}{\symup{d}r}\frac{\symup{d}r}{\symup{d}\tau}=\frac{\symup{d}P}{\symup{d}r}\frac{1}{\rho\chi}=\frac{g\left(r\right)}{\chi}.\tag{2}
+\end{align}
+
+\hspace*{\fill}
+
+\noindent\textcolor{purple}{(c)} Given the scaling relations of stars on the main sequence, derive how surface gravity varies with mass along the main sequence.
+
+\noindent\textbf{Solution}
+\begin{align}
+L&=4\pi{}R^{2}\sigma{}T^{4},\notag\\
+R&\propto{}L^{\frac{1}{2}}T^{-2}\propto{}M^{\frac{3}{2}}M^{-2}R^{2},\notag\\
+R&\propto{}M^{\frac{1}{2}}.\tag{3}\\
+g&\propto{}\frac{\symup{G}M}{R^{2}}\propto{}M^{0},\text{doesn't varies with}\, M.\notag
+\end{align}
+
+\hspace*{\fill}
+
+\noindent\textcolor{purple}{5. Energy balance of the Sun}
+
+\noindent If the Sun was producing its energy by slow contraction as suggested by Helmholtz and Kelvin, estimate the amount by which the radius of the Sun has to decrease every year to produce the observed luminosity. Hint: you should make some approximations, but state what they are.
+
+\hspace*{\fill}
+
+\noindent\textbf{Solution}
+
+According to the law of virial forces, half of the gravitational potential energy can be used to heat the star.
+\begin{align}
+\frac{\symup{d}U}{\symup{d}t}&=\frac{\symup{d}U}{\symup{d}R}\frac{\symup{d}R}{\symup{d}t},\notag\\
+\frac{\symup{d}U}{\symup{d}R}&=-\frac{3\symup{G}M^{2}}{5R^{2}},\notag\\
+\frac{\symup{d}U}{\symup{d}t}&=2L,\notag\\
+\frac{\symup{d}R}{\symup{d}t}&=-2L\frac{5R^{2}}{3\symup{G}M^{2}}.\notag\\
+\frac{R_{\odot}}{\Delta{}R}&\sim\qty{e7}{yr}\sim\text{Helmholtz-Kelvin contraction time}.\notag
+\end{align}
+
+%\printbibliography
+\end{document}
