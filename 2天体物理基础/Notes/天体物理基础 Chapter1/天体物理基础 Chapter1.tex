@@ -983,11 +983,11 @@ I_{\nu}\left(\theta, 0\right)=S_{0}+S_{1}\cos{\theta}.
 
 我们先来研究角分布。我们用 Poynting 矢量描述空间中某一点的瞬时能量通量：
 \begin{equation}
-\symbf{S}=\frac{1}{\mu_{0}}\symbf{E}\times\symbf{B}_{\text{SI}}=\frac{\symup{c}^{2}}{4\pi}\symbf{E}\times\frac{\symbf{B}_{\text{G}}}{\symup{c}}=\frac{\symup{c}}{4\pi}\symbf{E}\times\left(\symbf{n}\times\symbf{E}\right)=\frac{\symup{c}}{4\pi}\left\vert{}\symbf{E}\right\vert{}^{2}\symbf{n}.
+\symbf{S}=\frac{1}{\mu_{0}}\symbf{E}\times\symbf{B}_{\text{SI}}=\frac{\symup{c}^{2}}{4\pi}\symbf{E}\times\frac{\symbf{B}_{\text{G}}}{\symup{c}}=\frac{\symup{c}}{4\pi}\symbf{E}\times\left(\symbf{n}\times\symbf{E}\right)=\frac{\symup{c}}{4\pi}\left\vert{}\symbf{E}\right\vert^{2}\symbf{n}.
 \end{equation}
 在观察点 $\left(x, y, z\right)$ 作一小面元 $\symup{d}\symbf{\sigma}$, 其法向沿 Poynting 矢量方向。该面元对 $t'$ 时刻粒子所在点张的立体角为 $\symup{d}\Omega,\symup{d}\symbf{\sigma}=r^{2}\symup{d}\Omega\symbf{n}$, 故单位时间通过 $\symup{d}\symbf{\sigma}$ 的能量为
 \begin{equation}
-\symup{d}P\left(t\right)=\symbf{S}\cdot\symup{d}\symbf{\sigma}=\left(\symbf{S}\cdot\symbf{n}\right)r^{2}\symup{d}\Omega=\frac{\symup{c}}{4\pi}r^{2}\left\vert{}\symbf{E}\right\vert{}^{2}\symup{d}\Omega.
+\symup{d}P\left(t\right)=\symbf{S}\cdot\symup{d}\symbf{\sigma}=\left(\symbf{S}\cdot\symbf{n}\right)r^{2}\symup{d}\Omega=\frac{\symup{c}}{4\pi}r^{2}\left\vert{}\symbf{E}\right\vert^{2}\symup{d}\Omega.
 \end{equation}
 由此我们就得到了每单位立体角辐射的功率。但需要注意的是，这是 $t'$ 时刻发出的辐射 $t$ 时刻的观测者处所接收到的部分，而我们更关心 $t'$ 时刻粒子处的辐射分布。所以需要改写。$t$ 至 $t+\symup{d}t$ 时间段内观测者在面元 $\symup{d}\sigma$ 中接收的能量 $\symup{d}P\left(t\right)\symup{d}t$ 是电荷在 $t'$ 至 $t'+\symup{d}t'$ 时间段内发出的，按能量守恒有
 \begin{equation}
@@ -1007,7 +1007,7 @@ t'=t-\frac{r\left(t'\right)}{\symup{c}},
 \end{equation}
 因此粒子单位时间中沿给定方向单位立体角辐射的能量为
 \begin{equation}
-\frac{\symup{d}P\left(t'\right)}{\symup{d}\Omega}=\frac{\symup{d}P\left(t\right)}{\symup{d}\Omega}\frac{\symup{d}t}{\symup{d}t'}=\frac{\symup{c}K}{4\pi}r^{2}\left\vert{}\symbf{E}\right\vert{}^{2}.
+\frac{\symup{d}P\left(t'\right)}{\symup{d}\Omega}=\frac{\symup{d}P\left(t\right)}{\symup{d}\Omega}\frac{\symup{d}t}{\symup{d}t'}=\frac{\symup{c}K}{4\pi}r^{2}\left\vert{}\symbf{E}\right\vert^{2}.
 \end{equation}
 注意 (\ref{1.3.38}) 式等号右侧第二项，由此得出粒子辐射的角分布特征：
 \begin{equation}
@@ -1230,7 +1230,7 @@ L_{\nu}=\int j_{\nu}\symup{d}V,
 
 图\ref{同步加速辐射和 SSC 能谱示意图。}就展示了同步加速辐射和 SSC 能谱。可以发现左侧能谱左侧第一段受到同步加速辐射自吸收的影响。第二段的谱指数则与 SSC 一致。同步加速辐射第三段以 $\symup{e}$ 指数下降，而右侧 SSC 能谱则在高能处截断。因此光谱中能观测到双峰分布，根据 (\ref{1.3.63})(\ref{1.3.78}) 式可知二者峰值比为
 \begin{equation}
-\frac{P_{\text{sync}}}{P_{\text{ICS}}}=\frac{\left.\nu F_{\nu}\right\vert{}_{\text{sync}}}{\left.\nu F_{\nu}\right\vert{}_{\text{ICS}}}=\frac{U_{B}}{U_{\text{rad}}}.
+\frac{P_{\text{sync}}}{P_{\text{ICS}}}=\frac{\left.\nu F_{\nu}\right\vert_{\text{sync}}}{\left.\nu F_{\nu}\right\vert_{\text{ICS}}}=\frac{U_{B}}{U_{\text{rad}}}.
 \end{equation}
 其中已经用到了 $\beta\to1$ 的假定，可见峰值反映了磁场和辐射场的比值。
 
