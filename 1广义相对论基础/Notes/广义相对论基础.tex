@@ -16,7 +16,7 @@
 \setmathfont{Latin Modern Math}
 \setmathrm{Latin Modern Math}
 
-\usepackage{amsmath, amsthm, cases, graphicx, subfigure, tikz, caption, subcaption, siunitx, keyval, physics2}
+\usepackage{amsmath, amsthm, cases, graphicx, subfigure, tikz, caption, subcaption, siunitx, keyval, physics2, tensor}
 \DeclareSIUnit\angstrom{Å}
 \usephysicsmodule{ab, ab.braket}
 \usepackage[version=4]{mhchem}
@@ -102,9 +102,9 @@
 \widetilde{U}^{\mu}&=\frac{\partial{}\widetilde{x}^{\mu}}{\partial{}x^{\nu}}U^{\nu},\\
 \widetilde{V}_{\mu}&=\frac{\partial{}{x}^{\nu}}{\partial{}\widetilde{x}^{\mu}}V_{\nu}.
 \end{align}
-式中已经用到了爱因斯坦求和约定，重复的上下指标需要求和，即 $\nu$ 分别取 $0, 1, 2\cdots$ 得到的项全部求和。重复指标又称傀儡指标、傀标。逆变向量的指标永远在右上角，协变向量的指标永远在右下角。由于计算可写成矩阵乘法的形式，故 $\dfrac{\partial{}\widetilde{x}^{\mu}}{\partial{}x^{\nu}},\dfrac{\partial{}x^{\mu}}{\partial{}\widetilde{x}^{\nu}}$ 可以看作坐标变换矩阵。每一个时空点都有各自的坐标变换矩阵。我们可以定义 Kroneker 符号 $\delta{}^{\mu}_{\nu}$ 来给出坐标变换矩阵应该满足的关系：
+式中已经用到了爱因斯坦求和约定，重复的上下指标需要求和，即 $\nu$ 分别取 $0, 1, 2\cdots$ 得到的项全部求和。重复指标又称傀儡指标、傀标。逆变向量的指标永远在右上角，协变向量的指标永远在右下角。由于计算可写成矩阵乘法的形式，故 $\dfrac{\partial{}\widetilde{x}^{\mu}}{\partial{}x^{\nu}},\dfrac{\partial{}x^{\mu}}{\partial{}\widetilde{x}^{\nu}}$ 可以看作坐标变换矩阵。每一个时空点都有各自的坐标变换矩阵。我们可以定义 Kroneker 符号 $\delta^{\mu}_{\nu}$ 来给出坐标变换矩阵应该满足的关系：
 \begin{equation}
-\frac{\partial{}\widetilde{x}^{\mu}}{\partial{}x^{\alpha}}\cdot\frac{\partial{}x^{\alpha}}{\partial{}\widetilde{x}^{\nu}}=\delta{}_{\nu}^{\mu}=
+\frac{\partial{}\widetilde{x}^{\mu}}{\partial{}x^{\alpha}}\cdot\frac{\partial{}x^{\alpha}}{\partial{}\widetilde{x}^{\nu}}=\delta_{\nu}^{\mu}=
 \begin{cases}
 1,\mu=\nu,\\
 0,\mu\ne\nu.
@@ -171,7 +171,7 @@ $\Gamma_{\mu\nu}^{\lambda}\left(P\right)$ 被称作 $P$ 点的仿射联络，简
 \end{align}
 将 (\ref{1.2.1})(\ref{1.2.3}) 式代入 (\ref{1.2.2}) 式得到
 \begin{equation}
-\widetilde{A}_{\mu}+\widetilde{\Gamma}_{\mu\nu}^{\lambda}\cdot\widetilde{A}_{\lambda}\cdot\symup{d}\widetilde{x}^{\nu}=\left(\frac{\partial{}x^{\alpha}}{\partial{}\widetilde{x}^{\mu}}+\frac{\partial{}^{2}x^{\alpha}}{\partial{}\widetilde{x}^{\nu}\partial{}\widetilde{x}^{\mu}}\frac{\partial{}\widetilde{x}^{\nu}}{\partial{}x^{\sigma}}\symup{d}x^{\sigma}\right)\cdot\left(A_{\alpha}+\Gamma_{\alpha\gamma}^{\beta}\cdot A_{\beta}\cdot\symup{d}x^{\gamma}\right).
+\widetilde{A}_{\mu}+\widetilde{\Gamma}_{\mu\nu}^{\lambda}\cdot\widetilde{A}_{\lambda}\cdot\symup{d}\widetilde{x}^{\nu}=\left(\frac{\partial{}x^{\alpha}}{\partial{}\widetilde{x}^{\mu}}+\frac{\partial{}^{2}x^{\alpha}}{\partial{}\widetilde{x}^{\nu}\partial{}\widetilde{x}^{\mu}}\frac{\partial{}\widetilde{x}^{\nu}}{\partial{}x^{\sigma}}\symup{d}x^{\sigma}\right)\cdot\left(A_{\alpha}+\Gamma_{\alpha\gamma}^{\beta}\cdot{}A_{\beta}\cdot\symup{d}x^{\gamma}\right).
 \end{equation}
 这些量都是在 $P$ 点处定义的量，所以省略了记号 ${}_{P}$. 而在 $P$ 点处满足
 \begin{equation}
@@ -261,7 +261,7 @@ T_{\nu;\lambda}^{\mu}&=T_{\nu,\lambda}^{\mu}+\Gamma_{\rho\lambda}^{\mu}T_{\nu}^{
 \end{align}
 因此 Kroneker 符号的协变微商为
 \begin{align}
-\delta{}_{\nu;\lambda}^{\mu}&=\delta{}_{\nu,\lambda}^{\mu}+\Gamma_{\rho\lambda}^{\mu}\delta{}_{\nu}^{\rho}-\Gamma_{\nu\lambda}^{\rho}\delta{}_{\rho}^{\mu}=\delta{}_{\nu,\lambda}^{\mu}=0.
+\delta_{\nu;\lambda}^{\mu}&=\delta_{\nu,\lambda}^{\mu}+\Gamma_{\rho\lambda}^{\mu}\delta_{\nu}^{\rho}-\Gamma_{\nu\lambda}^{\rho}\delta_{\rho}^{\mu}=\delta_{\nu,\lambda}^{\mu}=0.
 \end{align}
 
 \subsection{测地线和仿射参量}
@@ -422,7 +422,7 @@ g_{\mu\nu}=
 
 度规张量的所有坐标分量可以组成一个 $4\times4$ 的对称矩阵，它的逆矩阵对应一个二阶逆变张量 $g^{\mu\nu}$, 应满足
 \begin{equation}
-g_{\mu\alpha}g^{\alpha\nu}=g^{\nu}_{\mu}=\delta{}_{\mu}^{\nu}=
+g_{\mu\alpha}g^{\alpha\nu}=g^{\nu}_{\mu}=\delta_{\mu}^{\nu}=
 \begin{cases}
 1,\mu=\nu,\\
 0,\mu\ne\nu.
@@ -490,7 +490,7 @@ x^{\mu}-x^{\mu}_{P}=\widetilde{x}^{\mu}+\frac{1}{2}C_{\alpha\beta}^{\mu}\widetil
 \end{equation}
 其中 $C_{\alpha\beta}^{\mu}=C_{\beta\alpha}^{\mu}$, 分量都是常数。根据上式得到 $P$ 点坐标变换矩阵满足
 \begin{equation}
-\left(\frac{\partial{}x^{\mu}}{\partial{}\widetilde{x}^{\lambda}}\right)_{P}=\delta{}^{\mu}_{\nu},\left(\frac{\partial{}\widetilde{x}^{\mu}}{\partial{}x^{\lambda}}\right)_{P}=\delta{}^{\mu}_{\lambda},\left(\frac{\partial{}^{2}x^{\mu}}{\partial{}\widetilde{x}^{\lambda}\partial{}\widetilde{x}^{\nu}}\right)_{P}=C_{\lambda\nu}^{\mu},
+\left(\frac{\partial{}x^{\mu}}{\partial{}\widetilde{x}^{\lambda}}\right)_{P}=\delta^{\mu}_{\nu},\left(\frac{\partial{}\widetilde{x}^{\mu}}{\partial{}x^{\lambda}}\right)_{P}=\delta^{\mu}_{\lambda},\left(\frac{\partial{}^{2}x^{\mu}}{\partial{}\widetilde{x}^{\lambda}\partial{}\widetilde{x}^{\nu}}\right)_{P}=C_{\lambda\nu}^{\mu},
 \end{equation}
 将其带入联络变换式得到
 \begin{equation}
@@ -633,7 +633,7 @@ R^{\nu}_{\mu;\nu}-\frac{1}{2}R_{;\mu}=0.
 \end{equation}
 也即
 \begin{equation}
-\left(R^{\nu}_{\mu}-\frac{1}{2}\delta{}_{\mu}^{\nu}R\right)_{;\nu}=0.
+\left(R^{\nu}_{\mu}-\frac{1}{2}\delta_{\mu}^{\nu}R\right)_{;\nu}=0.
 \end{equation}
 这表明爱因斯坦张量的协变散度恒等于零，爱因斯坦引入它所要的正是这一性质：
 \begin{equation}
@@ -644,7 +644,7 @@ G_{\mu;\nu}^{\nu}=G_{\mu\nu}^{;\nu}=G^{\mu\nu}_{;\nu}=0.
 首先是度规的微分。记 $g$ 为协变度规张量的行列式，$\Delta{}^{\mu\nu}$ 为对应的代数余子式，度规张量满足
 \begin{align}
 g^{\mu\nu}&=\frac{\Delta{}^{\mu\nu}}{g}.\\
-g\times\delta{}_{\alpha}^{\nu}&=g_{\alpha\rho}\Delta{}^{\nu\rho},\\
+g\times\delta_{\alpha}^{\nu}&=g_{\alpha\rho}\Delta{}^{\nu\rho},\\
 \frac{\partial{}g}{\partial{}g_{\mu\nu}}&=\Delta{}^{\mu\nu}=g\cdot g^{\mu\nu}.\\
 \symup{d}g&=g\cdot g^{\mu\nu}\symup{d}g_{\mu\nu}=-g\cdot g_{\mu\nu}\symup{d}g^{\mu\nu}.\\
 \frac{\partial{}g}{\partial{}x^{\alpha}}&=\frac{\partial{}g}{\partial{}g_{\mu\nu}}\frac{\partial{}g_{\mu\nu}}{\partial{}x^{\alpha}}.
@@ -1111,7 +1111,7 @@ g_{\mu\nu}\omega^{\mu}_{\hat{0}}\omega^{\nu}_{\hat{0}}=-1.
 &g_{\mu\nu}\omega^{\mu}_{\hat{a}}\omega^{\nu}_{\hat{b}}=\xi_{\hat{a}\hat{b}},\\
 &\omega^{\mu\hat{a}}=\xi^{\hat{a}\hat{b}}\omega^{\mu}_{\hat{b}},\\
 &\omega_{\mu}^{\hat{a}}=g_{\mu\nu}\omega^{\nu\hat{a}}=g_{\mu\nu}\xi^{\hat{a}\hat{c}}\omega^{\nu}_{\hat{c}}=\xi^{\hat{a}\hat{c}}\omega_{\mu\hat{c}},\\
-&\omega^{\hat{a}}_{\mu}\omega^{\mu}_{\hat{b}}=g_{\mu\nu}\xi^{\hat{a}\hat{c}}\omega^{\nu}_{\hat{c}}\omega^{\mu}_{\hat{b}}=\xi^{\hat{a}\hat{c}}\xi_{\hat{b}\hat{c}}=\delta{}^{\hat{a}}_{\hat{b}}.
+&\omega^{\hat{a}}_{\mu}\omega^{\mu}_{\hat{b}}=g_{\mu\nu}\xi^{\hat{a}\hat{c}}\omega^{\nu}_{\hat{c}}\omega^{\mu}_{\hat{b}}=\xi^{\hat{a}\hat{c}}\xi_{\hat{b}\hat{c}}=\delta^{\hat{a}}_{\hat{b}}.
 \end{align}
 
 四轴系在四维时空中具有完备性，即任一矢量都可以用这组基矢的线性组合来构成，记作
@@ -1128,7 +1128,7 @@ A^{\mu}=A^{\nu}\omega_{\nu}^{\hat{a}}\omega_{\hat{a}}^{\mu}.
 \end{equation}
 它对任何矢量都成立，因此
 \begin{equation}
-\omega^{\hat{a}}_{\nu}\omega^{\mu}_{\hat{a}}=\delta{}^{\mu}_{\nu},
+\omega^{\hat{a}}_{\nu}\omega^{\mu}_{\hat{a}}=\delta^{\mu}_{\nu},
 \end{equation}
 此处对 $\hat{a}=0, 1, 2, 3$ 进行了求和，上式被称作四轴系的完备性条件，它和正交归一条件一样是四轴系的基本性质。这种求和形式令人联想到量子力学中的完全性关系，因此可以在推导过程中利用完备性条件。
 
@@ -1162,7 +1162,7 @@ $T^{\hat{a}\hat{b}}$ 包含 $4^{2}$ 个数 ($T^{\hat{a}\hat{b}}$ 只是数表，
 \end{align}
 对于张量 $T^{\mu\nu}$, 容易发现观测量满足
 \begin{equation}
-T^{\hat{a}\hat{b}}=T^{\mu\nu}\delta{}^{\hat{a}}_{\mu}\delta{}^{\hat{b}}_{\nu}=T^{ab},
+T^{\hat{a}\hat{b}}=T^{\mu\nu}\delta^{\hat{a}}_{\mu}\delta^{\hat{b}}_{\nu}=T^{ab},
 \end{equation}
 即在平坦时空中，张量在该坐标系下表征出的分量本身就等于该坐标系静观测者的可观测量。以粒子的能动张量 $T^{\mu\nu}=\rho U^{\mu}U^{\nu}$ 为例。对于平坦时空中相对坐标系静止的粒子，其能动张量只有一项非零项，为
 \begin{equation}
@@ -1238,7 +1238,7 @@ A^{\mu}_{\parallel}=\pi^{\mu}_{\nu}\delta{}x^{\nu}=-u^{\mu}u_{\nu}\delta{}x^{\nu
 \end{align}
 注意到完备性关系要求
 \begin{equation}
-\omega_{\alpha}^{\hat{0}}\omega^{\nu}_{\hat{0}}+\omega_{\alpha}^{\hat{1}}\omega^{\nu}_{\hat{1}}+\omega_{\alpha}^{\hat{2}}\omega^{\nu}_{\hat{2}}+\omega_{\alpha}^{\hat{3}}\omega^{\nu}_{\hat{3}}=\delta{}^{\nu}_{\alpha}=g_{\alpha\beta}g^{\beta\nu},
+\omega_{\alpha}^{\hat{0}}\omega^{\nu}_{\hat{0}}+\omega_{\alpha}^{\hat{1}}\omega^{\nu}_{\hat{1}}+\omega_{\alpha}^{\hat{2}}\omega^{\nu}_{\hat{2}}+\omega_{\alpha}^{\hat{3}}\omega^{\nu}_{\hat{3}}=\delta^{\nu}_{\alpha}=g_{\alpha\beta}g^{\beta\nu},
 \end{equation}
 (\ref{2.3.41}) 式可以写作
 \begin{align}
@@ -1272,7 +1272,7 @@ A^{\mu}_{\parallel}=\pi^{\mu}_{\nu}\delta{}x^{\nu}=-u^{\mu}u_{\nu}\delta{}x^{\nu
 \begin{align}
 &g_{\mu\nu}\dot{\omega}^{\mu}_{\hat{a}}\omega^{\nu}_{\hat{b}}+g_{\mu\nu}\omega^{\mu}_{\hat{a}}\dot{\omega}^{\nu}_{\hat{b}}\notag\\
 =\,&g_{\mu\nu}\Omega_{\hat{a}\hat{c}}\omega^{\hat{c}\mu}\omega^{\nu}_{\hat{b}}+g_{\mu\nu}\omega^{\mu}_{\hat{a}}\Omega_{\hat{b}\hat{c}}\omega^{\hat{c}\nu}\notag\\
-=\,&\Omega_{\hat{a}\hat{c}}\delta{}^{\hat{c}}_{\hat{b}}+\Omega_{\hat{b}\hat{c}}\delta{}^{\hat{c}}_{\hat{a}}=\Omega_{\hat{a}\hat{b}}+\Omega_{\hat{b}\hat{a}}=0.
+=\,&\Omega_{\hat{a}\hat{c}}\delta^{\hat{c}}_{\hat{b}}+\Omega_{\hat{b}\hat{c}}\delta^{\hat{c}}_{\hat{a}}=\Omega_{\hat{a}\hat{b}}+\Omega_{\hat{b}\hat{a}}=0.
 \end{align}
 因此 $\Omega_{\hat{a}\hat{c}}$ 是反称的，对角元为零，非对角元只有 6 个独立的标量。
 
@@ -1727,13 +1727,13 @@ T^{\mu\nu}=\frac{1}{4\pi}\left(F_{\lambda}^{\mu}F^{\lambda\nu}-\frac{1}{4}g^{\mu
 \end{equation}
 以及
 \begin{equation}
-\delta{}^{\lambda}_{\mu,\nu}=\left(g^{\lambda\rho}g_{\rho\mu}\right)_{,\nu}=g^{\lambda\rho}g_{\rho\mu,\nu}+g_{\rho\mu}g^{\lambda\rho}_{,\nu}=0,
+\delta^{\lambda}_{\mu,\nu}=\left(g^{\lambda\rho}g_{\rho\mu}\right)_{,\nu}=g^{\lambda\rho}g_{\rho\mu,\nu}+g_{\rho\mu}g^{\lambda\rho}_{,\nu}=0,
 \end{equation}
 谐和条件可写作
 \begin{align}
 \Gamma^{\lambda}&=\frac{1}{2}g^{\mu\nu}g^{\lambda\rho}\left(g_{\rho\mu,\nu}+g_{\rho\nu,\mu}-g_{\mu\nu,\rho}\right)\notag\\
 &=\frac{1}{2}g^{\mu\nu}\left(-g_{\rho\mu}g^{\lambda\rho}_{,\nu}\right)+\frac{1}{2}g^{\mu\nu}\left(-g_{\rho\nu}g^{\lambda\rho}_{,\mu}\right)-\frac{1}{2}g^{\mu\nu}g^{\lambda\rho}g_{\mu\nu,\rho}\notag\\
-&=-\delta{}^{\nu}_{\rho}g^{\lambda\rho}_{,\nu}-g^{\lambda\rho}\frac{1}{\sqrt{-g}}\frac{\partial{}}{\partial{}x^{\rho}}\left(\sqrt{-g}\right)=-\frac{1}{\sqrt{-g}}\frac{\partial{}}{\partial{}x^{\rho}}\left(\sqrt{-g}g^{\lambda\rho}\right)=0.
+&=-\delta^{\nu}_{\rho}g^{\lambda\rho}_{,\nu}-g^{\lambda\rho}\frac{1}{\sqrt{-g}}\frac{\partial{}}{\partial{}x^{\rho}}\left(\sqrt{-g}\right)=-\frac{1}{\sqrt{-g}}\frac{\partial{}}{\partial{}x^{\rho}}\left(\sqrt{-g}g^{\lambda\rho}\right)=0.
 \end{align}
 我们知道谐和量需满足谐和方程：
 \begin{equation}
@@ -1825,7 +1825,7 @@ h_{\mu\nu}=A_{\mu\nu}\symup{e}^{i\left(kx\cdot\omega t\right)},
 \end{equation}
 波动方程要求 $k=\omega$, 洛伦兹规范要求 $\overline{A}^{1}_{\mu}=\overline{A}^{0}_{\mu}$, 其中
 \begin{equation}
-\overline{A}^{\nu}_{\mu}=A^{\nu}_{\mu}-\frac{1}{2}\delta{}^{\nu}_{\mu}A^{a}_{a},
+\overline{A}^{\nu}_{\mu}=A^{\nu}_{\mu}-\frac{1}{2}\delta^{\nu}_{\mu}A^{a}_{a},
 \end{equation}
 通过适当选取满足 (\ref{3.6.17}) 的坐标变换 $\xi_{\mu}$, 可以做到
 \begin{align}
@@ -1936,7 +1936,7 @@ T^{\mu}_{\nu}=\left(\frac{p}{\symup{c}^{2}}+\rho\right)
 \end{equation}
 以及混合形式引力场方程
 \begin{equation}
-R^{\mu}_{\nu}-\frac{1}{2}\delta{}^{\mu}_{\nu}R=\frac{8\pi\symup{G}}{\symup{c}^{4}}T^{\mu}_{\nu},
+R^{\mu}_{\nu}-\frac{1}{2}\delta^{\mu}_{\nu}R=\frac{8\pi\symup{G}}{\symup{c}^{4}}T^{\mu}_{\nu},
 \end{equation}
 其中
 \begin{align}
@@ -2067,11 +2067,11 @@ p\left(r\right)=\rho_{0}\symup{c}^{2}\frac{\left(1-\dfrac{2\symup{G}M}{\symup{c}
 
 一种常见的凯林矢量是
 \begin{equation}
-\xi^{\mu}=\delta{}^{\mu}_{k}.
+\xi^{\mu}=\delta^{\mu}_{k}.
 \end{equation}
 可见相当于 $x^{\mu}$ 在 $x^{k}$ 方向改变了一个小量，如果这是等度规映射，那么度规场与 $x^{k}$ 无关，可以称 $x^{k}$ 是度规场的循环坐标，对应的运动质点守恒量自然是
 \begin{equation}
-P_{\mu}\xi^{\mu}=P_{\mu}\delta{}^{\mu}_{k}=P_{k}.
+P_{\mu}\xi^{\mu}=P_{\mu}\delta^{\mu}_{k}=P_{k}.
 \end{equation}
 即协变动量的该分量守恒。注意不是逆变动量。作为应用可以考虑质点在史瓦西场中的运动，很明显 $t,\varphi$ 是该度规的循环坐标，因此 $P_{\mu}$ 的 $t$ 和 $\varphi$ 分量守恒：
 \begin{align}
