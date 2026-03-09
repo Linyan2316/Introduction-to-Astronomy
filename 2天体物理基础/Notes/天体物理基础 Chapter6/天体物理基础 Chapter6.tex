@@ -4,7 +4,7 @@
 \subsection{基本认知}
 奥伯斯佯谬：宇宙无限，恒星分布均匀，那么夜晚天空应该像白天一样明亮。考虑球壳中恒星发光
 \begin{equation}
-E=\int_{0}^{\infty}\frac{L}{4\pi r^{2}}\times n\times4\pi r^{2}\symup{d}r\to\infty.
+E=\int_{0}^{\infty}\frac{L}{4\pi r^{2}}\times n\times4\pi r^{2}\d{}r\to\infty.
 \end{equation}
 其中 $n$ 是恒星数密度，有几种解释：恒星寿命有限；宇宙不是无限的；宇宙小尺度不是均匀的；宇宙年龄有限，遥远的星光还未到达我们；有星际消光存在；宇宙在膨胀光子发生红移；宇宙膨胀过快，光子无法到达。
 
@@ -27,7 +27,7 @@ $\Omega=1$, 临界束缚，无限膨胀
 
 物质含量可通过旋转曲线、星系团内部热气体辐射功率、引力透镜、近期轻元素丰度对原初核合成限制等确定。此外，物质、辐射、曲率、暗能量不同占比会影响 CMB 功率谱，也可作为限制。
 
-由于太阳的运动，CMB 相对我们有一多普勒偶极不对称性，相对背景量级在 $10^{-3}$. 扣除此效应和星系前景辐射，CMB 各向异性 $\dfrac{\Delta{}T}{T}$ 仅有 $10^{-5}$ 量级的变化。
+由于太阳的运动，CMB 相对我们有一多普勒偶极不对称性，相对背景量级在 $10^{-3}$. 扣除此效应和星系前景辐射，CMB 各向异性 $\dfrac{\laplacian{}T}{T}$ 仅有 $10^{-5}$ 量级的变化。
 
 这个各向异性来自声波振荡：引力和光压的相互作用导致等离子体在引力势中振荡。只要物质和辐射之间有耦合，物质分布中的微小扰动都会被光子的扩散所牵制，发生粘滞性衰减。物质和辐射解耦，物质变为独立后，质量稍有超出的区域，其范围就会由于对周围的引力作用而增长。因此 CMB 功率谱携带了早期宇宙结构的信息。CMB 中热点和冷点在天空中角距离尺度为 $\ang{1;;}$ 左右。
 
@@ -69,7 +69,7 @@ Y=2\frac{\ce{n}/\ce{p}}{1+\ce{n}/\ce{p}}\sim0.36.
 \subsection{微波背景辐射}
 早期炽热宇宙冷却，残留热辐射红移至微波波段，高度各向同性的 $\qty{2.73}{K}$ 黑体辐射。
 
-偶极不对称性：太阳相对哈勃流运动引起的涨落，太阳朝向和背向温度变化约 $10^{-3}$, $\Delta T=\qty{3.353}{mK}$
+偶极不对称性：太阳相对哈勃流运动引起的涨落，太阳朝向和背向温度变化约 $10^{-3}$, $\laplacian{}T=\qty{3.353}{mK}$
 
 扣除银河系尘埃辐射和偶极不对称性有十几万分之几 $\unit{K}$ 变化，表明宇宙演化早期有微小的不均匀性，导致星系形成。
 
@@ -87,15 +87,15 @@ Sunyaev-Zel'dovich 效应：CMB 光子被星系团热气体中高能电子散射
 \end{equation}
 计算光深
 \begin{equation}
-\tau\left(z\right)=\int_{0}^{z}n_{{\color{blue}{\ce{e}}}}\left(z\right)\chi\left(z\right)\sigma_{\text{T}}\frac{\symup{d}l}{\symup{d}z}\symup{d}z.
+\tau\left(z\right)=\int_{0}^{z}n_{{\color{blue}{\ce{e}}}}\left(z\right)\chi\left(z\right)\sigma_{\text{T}}\frac{\d{}l}{\d{}z}\d{}z.
 \end{equation}
-$n_{{\color{blue}{\ce{e}}}}$ 和 $\dfrac{\symup{d}l}{\symup{d}z}$ 依赖于 $\Omega_{\text{b}},\Omega_{\text{m}}$ 和 $h_{70}^{2}$, 因此积分结果最后只和 $z$ 有关
+$n_{{\color{blue}{\ce{e}}}}$ 和 $\dfrac{\d{}l}{\d{}z}$ 依赖于 $\Omega_{\text{b}},\Omega_{\text{m}}$ 和 $h_{70}^{2}$, 因此积分结果最后只和 $z$ 有关
 \begin{equation}
 \tau\left(z\right)=0.37\left(\frac{z}{1000}\right)^{14.25}.
 \end{equation}
 散射概率为 $P=\symup{e}^{-\tau}$, 最终散射概率密度分布为
 \begin{equation}
-P'\left(z\right)\symup{d}z=-\frac{\symup{d}P}{\symup{d}z}\symup{d}z=\symup{e}^{-\tau}\frac{\symup{d}\tau}{\symup{d}z}\symup{d}z.
+P'\left(z\right)\d{}z=-\frac{\d{}P}{\d{}z}\d{}z=\symup{e}^{-\tau}\frac{\d\tau}{\d{}z}\d{}z.
 \end{equation}
 这近似高斯分布，峰值 $z=1065,\sigma_{z}\sim80$, 大部分 CMB 光子来自 $950<z<1100$, 大约大爆炸后 37 万年。值得注意的是此时电离度只有 0.09. 其功率峰值粗略对应于光子{}-{}重子流体脱耦时的振荡特征。峰值位置反映了宇宙曲率，重子密度，暗物质密度。再电离时期对 CMB 光深的贡献只有 0.06. CMB $10^{-5}$ 级别的波动告诉我们绝热扰动、多普勒运动和引力红移的影响，角度 $\ang{1;;}$ 时候扰动最大，因此现在观察 CMB 背景可以看到角距离 $\ang{1;;}$ 的峰值和峰谷。
 
@@ -139,15 +139,15 @@ P'\left(z\right)\symup{d}z=-\frac{\symup{d}P}{\symup{d}z}\symup{d}z=\symup{e}^{-
 
 张量扰动能影响 CMB 偏振全部分量，标量扰动只能影响部分。
 
-我们可以想办法描述这种振荡的演化。定义扰动场 $\delta{}\left(\vec{x}\right)$, 进行 Fourier 变换
+我们可以想办法描述这种振荡的演化。定义扰动场 $\delta\left(\vec{x}\right)$, 进行 Fourier 变换
 \begin{align}
-\delta{}\left(\vec{x}\right)&=\frac{1}{\left(2\pi\right)^{\frac{3}{2}}}\int\delta{}\left(\vec{k}\right)\symup{e}^{-i\symbf{k}\cdot\symbf{x}}\symup{d}^{3}\vec{k}.\\
-\delta{}\left(\vec{k}\right)&=\frac{1}{\left(2\pi\right)^{\frac{3}{2}}}\int\delta{}\left(\vec{x}\right)\symup{e}^{i\symbf{k}\cdot\symbf{x}}\symup{d}^{3}\vec{x}.
+\delta\left(\vec{x}\right)&=\frac{1}{\left(2\pi\right)^{\frac{3}{2}}}\int\delta\left(\vec{k}\right)\symup{e}^{-i\symbf{k}\cdot\symbf{x}}\d{}^{3}\vec{k}.\\
+\delta\left(\vec{k}\right)&=\frac{1}{\left(2\pi\right)^{\frac{3}{2}}}\int\delta\left(\vec{x}\right)\symup{e}^{i\symbf{k}\cdot\symbf{x}}\d{}^{3}\vec{x}.
 \end{align}
 定义物质扰动满足
 \begin{align}
-&\frac{\delta{}\rho}{\rho_{0}}=\delta{}\left(t\right)\symup{e}^{i\symbf{k}\cdot\symbf{r}}.\\
-&\frac{\symup{d}^{2}\delta{}}{\symup{d}t^{2}}+2\left(\frac{\dot a}{a}\right)\frac{\symup{d}\delta{}}{\symup{d}t}-\delta{}\left(4\pi\symup{G}\rho_{0}-k^{2}c_{\text{s}}^{2}\right)=0.\label{6.5.4}
+&\frac{\delta\rho}{\rho_{0}}=\delta\left(t\right)\symup{e}^{i\symbf{k}\cdot\symbf{r}}.\\
+&\frac{\d{}^{2}\delta}{\d{}t^{2}}+2\left(\frac{\dot a}{a}\right)\frac{\d\delta}{\d{}t}-\delta\left(4\pi\symup{G}\rho_{0}-k^{2}c_{\text{s}}^{2}\right)=0.\label{6.5.4}
 \end{align}
 
 对于小扰动，忽略声波，考虑纯物质宇宙
@@ -156,9 +156,9 @@ P'\left(z\right)\symup{d}z=-\frac{\symup{d}P}{\symup{d}z}\symup{d}z=\symup{e}^{-
 \end{equation}
 (\ref{6.5.4}) 式变为
 \begin{equation}
-\frac{\symup{d}^{2}\delta{}}{\symup{d}t^{2}}+\frac{4}{3t}\frac{\symup{d}\delta{}}{\symup{d}t}-\frac{2}{3t^{2}}\delta{}=0.
+\frac{\d{}^{2}\delta}{\d{}t^{2}}+\frac{4}{3t}\frac{\d\delta}{\d{}t}-\frac{2}{3t^{2}}\delta=0.
 \end{equation}
-取试探解 $\delta{}=at^{n}$, 代入得到
+取试探解 $\delta=at^{n}$, 代入得到
 \begin{equation}
 n_{1}=\frac{2}{3}, n_{2}=-1.
 \end{equation}
@@ -169,15 +169,15 @@ n_{1}=\frac{2}{3}, n_{2}=-1.
 
 曲率为主的宇宙，
 \begin{equation}
-\frac{\symup{d}^{2}\delta{}}{\symup{d}t^{2}}+\frac{2}{t}\frac{\symup{d}\delta{}}{\symup{d}t}=0.
+\frac{\d{}^{2}\delta}{\d{}t^{2}}+\frac{2}{t}\frac{\d\delta}{\d{}t}=0.
 \end{equation}
 解只有 $n=0,-1$, 即扰动不能增长。
 
 辐射主导时，
 \begin{equation}
-\frac{\symup{d}^{2}\delta{}}{\symup{d}t^{2}}+2\left(\frac{\dot a}{a}\right)\frac{\symup{d}\delta{}}{\symup{d}t}-\delta{}\left(\frac{32}{3}\pi{}\symup{G}\rho-k^{2}c_{\text{s}}^{2}\right)=0.
+\frac{\d{}^{2}\delta}{\d{}t^{2}}+2\left(\frac{\dot a}{a}\right)\frac{\d\delta}{\d{}t}-\delta\left(\frac{32}{3}\pi\symup{G}\rho-k^{2}c_{\text{s}}^{2}\right)=0.
 \end{equation}
-考虑到 $a\propto{}\tau^{\frac{1}{2}}$,
+考虑到 $a\propto\tau^{\frac{1}{2}}$,
 \begin{equation}
 \delta_{k}=\delta_{0}\left(\frac{a}{a_{0}}\right)^{2}.
 \end{equation}

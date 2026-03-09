@@ -16,15 +16,20 @@
 \setmathfont{Latin Modern Math}
 \setmathrm{Latin Modern Math}
 
-\usepackage{amsmath, amsthm, cases, graphicx, subfigure, tikz, caption, subcaption, siunitx, keyval, physics2}
+\usepackage{amsmath, amsthm, cases, graphicx, subfigure, tikz, caption, subcaption, siunitx, keyval, physics2, tensor, fixdif}
 \DeclareSIUnit\angstrom{Å}
 \usephysicsmodule{ab, ab.braket}
+\letdif*{\dr}{delta}
+\letdif*{\laplacian}{Delta}
+\letdif*{\nabla}{nabla}
+\letdif*{\mdlgwhtsquare}{mdlgwhtsquare}
 \usepackage[version=4]{mhchem}
 \usepackage[flushleft]{threeparttable}
 \usepackage{hyperref, bookmark}
 \hypersetup{colorlinks=true, urlcolor=blue, filecolor=blue, linkcolor=blue}
-\usepackage[backend=biber, sorting=none]{biblatex}
+\usepackage[backend=biber, sorting=none, style=authoryear, natbib=true]{biblatex}
 \addbibresource{/Users/Linyan/Database/Zotero/AllBibTeX.bib}
+%\addbibresource{/home/linyan/Database/Zotero/AllBibTeX.bib}
 
 \ctexset{section={format=\bfseries\zihao{4}\flushleft}}
 \renewcommand\thesubsection{\thesection.\arabic{subsection}}
@@ -315,7 +320,7 @@ P_{\lambda}\left(z\right)=\symup{e}^{-\tau_{\lambda}\left(z\right)}=\symup{e}^{-
 \end{equation}
 而天体辐射在大气内外的辐射流之比为 $\dfrac{F_{\lambda}}{F_{0,\lambda}}=P_{\lambda}\left(z\right)$, 因此大气内外星等差为
 \begin{equation}
-\Delta{}m=m_{\lambda}-m_{0,\lambda}=-2.5\lg\frac{F_{\lambda}}{F_{0,\lambda}}=-2.5M\left(z\right)\lg P_{\lambda}\left(0\right).
+\laplacian{}m=m_{\lambda}-m_{0,\lambda}=-2.5\lg\frac{F_{\lambda}}{F_{0,\lambda}}=-2.5M\left(z\right)\lg P_{\lambda}\left(0\right).
 \end{equation}
 
 \textbf{大气折射}：地球大气有一定的折射率，观测到的天体位置跟真实位置有偏折，改变天体辐射的方向。电离层中等离子体也会使天体辐射发生折射。

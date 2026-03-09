@@ -16,16 +16,18 @@
 \setmathfont{Latin Modern Math}
 \setmathrm{Latin Modern Math}
 
-\usepackage{amsmath, amsthm, cases, graphicx, subfigure, tikz, caption, subcaption, siunitx, keyval, physics2}
+\usepackage{amsmath, amsthm, cases, graphicx, subfigure, tikz, caption, subcaption, siunitx, keyval, physics2, tensor, fixdif}
 \DeclareSIUnit\angstrom{Å}
 \usephysicsmodule{ab, ab.braket}
+\letdif*{\dr}{delta}
+\letdif*{\laplacian}{Delta}
 \usepackage[version=4]{mhchem}
 \usepackage[flushleft]{threeparttable}
 \usepackage{hyperref, bookmark}
 \hypersetup{colorlinks=true, urlcolor=blue, filecolor=blue, linkcolor=blue}
 \usepackage[backend=biber, sorting=none]{biblatex}
-\addbibresource{/Users/Linyan/Database/Zotero/MyBibTeX.bib}
-%\addbibresource{/home/linyan/Database/Zotero/My BibTeX.bib}
+\addbibresource{/Users/Linyan/Database/Zotero/AllBibTeX.bib}
+%\addbibresource{/home/linyan/Database/Zotero/AllBibTeX.bib}
 
 \ctexset{section={format=\bfseries\zihao{4}\flushleft}}
 \renewcommand\thesubsection{\thesection.\arabic{subsection}}
@@ -73,7 +75,7 @@
 
 \hspace*{\fill}
 
-\noindent\textcolor{purple}{1. The critical density of the $\ce{CO}$ molecule}
+\noindent\textcolor{blue}{1. The critical density of the $\ce{CO}$ molecule}
 
 \noindent\textcolor{purple}{(a)} Calculate the root mean square $\sqrt{\langle{}v^{2}\rangle}$ of $\ce{H2}$ molecules in a gas in thermal equilibrium at a temperature of $T=\qty{100}{K}$.
 
@@ -157,7 +159,7 @@ n\sim\qty{2835.21}{cm^{-3}}.\tag{8}
 
 \hspace*{\fill}
 
-\noindent\textcolor{purple}{2. Stellar structure of two spheres}
+\noindent\textcolor{blue}{2. Stellar structure of two spheres}
 
 \noindent Consider two self-gravitating spheres with mass and radius $M$ and $R$. Sphere A has a uniform density and sphere B has a density that increases towards the centre as $\rho\left(r\right)=\rho_{\text{c}}\left(1-r/R\right)$. Answer questions (a) and (b) for both spheres.
 
@@ -228,7 +230,7 @@ P_{\text{cB}}=\frac{5}{36}\symup{G}\pi\rho_{\text{c}}^{2}R^{2}=\frac{5}{4}\frac{
 
 \hspace*{\fill}
 
-\noindent\textcolor{purple}{3. Central pressure}
+\noindent\textcolor{blue}{3. Central pressure}
 
 \noindent Calculate the ratio of the radiation pressure to the gas pressure in the centre of the Sun. Assume that the sun has a central temperature $T\sim\qty{1.6e7}{K}$ and a central density of about $\rho\sim\qty{1.5e5}{kg\cdot{}m^{-3}}$. Here, for simplicity assume the abundances are $X=0.7$ and $Y=0.3$ and that the gas is fully ionized.
 
@@ -254,7 +256,7 @@ Ratio
 
 \hspace*{\fill}
 
-\noindent\textcolor{purple}{4. Surface gravity}
+\noindent\textcolor{blue}{4. Surface gravity}
 
 \noindent It is often practical to introduce the concept of surface gravity, which is the gravitational acceleration experienced at a surface of a sphere with radius $r$.
 
@@ -285,7 +287,9 @@ M_{\text{Earth}}&=\frac{a\left(\dfrac{l}{2\pi}\right)^{2}}{\symup{G}}=\qty{6e24}
 
 \noindent\textcolor{purple}{(c)} Given the scaling relations of stars on the main sequence, derive how surface gravity varies with mass along the main sequence.
 
-\noindent\textbf{Solution}
+\hspace*{\fill}
+
+\noindent\textcolor{purple}{Solution}
 \begin{align}
 L&=4\pi{}R^{2}\sigma{}T^{4},\notag\\
 R&\propto{}L^{\frac{1}{2}}T^{-2}\propto{}M^{\frac{3}{2}}M^{-2}R^{2},\notag\\
@@ -295,13 +299,13 @@ g&\propto{}\frac{\symup{G}M}{R^{2}}\propto{}M^{0},\text{doesn't varies with}\, M
 
 \hspace*{\fill}
 
-\noindent\textcolor{purple}{5. Energy balance of the Sun}
+\noindent\textcolor{blue}{5. Energy balance of the Sun}
 
 \noindent If the Sun was producing its energy by slow contraction as suggested by Helmholtz and Kelvin, estimate the amount by which the radius of the Sun has to decrease every year to produce the observed luminosity. Hint: you should make some approximations, but state what they are.
 
 \hspace*{\fill}
 
-\noindent\textbf{Solution}
+\noindent\textcolor{purple}{Solution}
 
 According to the law of virial forces, half of the gravitational potential energy can be used to heat the star.
 \begin{align}
@@ -309,8 +313,275 @@ According to the law of virial forces, half of the gravitational potential energ
 \frac{\symup{d}U}{\symup{d}R}&=-\frac{3\symup{G}M^{2}}{5R^{2}},\notag\\
 \frac{\symup{d}U}{\symup{d}t}&=2L,\notag\\
 \frac{\symup{d}R}{\symup{d}t}&=-2L\frac{5R^{2}}{3\symup{G}M^{2}}.\notag\\
-\frac{R_{\odot}}{\Delta{}R}&\sim\qty{e7}{yr}\sim\text{Helmholtz-Kelvin contraction time}.\notag
+\frac{R_{\odot}}{\Delta{}R}&\sim\qty{e7}{yr}.\notag
 \end{align}
+
+\hspace*{\fill}
+
+\noindent\textcolor{blue}{6. SN1987a}
+
+\noindent On 24 February 1987, a supernova SN1987a was observed in the Large Magellanic Cloud, which is a satellite galaxy of our own Milky Way. Even though the distance to SN1987a is $\qty{54.1}{kpc}$, this is nearest observed supernova since the year 1604 and was visible by the naked eye during its peak brightness. Two to three hours before the visual detection, three neutrino detectors on Earth detected 25 neutrinos (in total) from SN1987a with a 12 s spread in arrival times.
+
+\hspace*{\fill}
+
+\noindent\textcolor{purple}{(a)} Assuming that the neutrinos originated from the collapse of a core with mass $\qty{1.5}{M_{\odot}}$, calculate how many neutrinos were produced in this event.
+
+\hspace*{\fill}
+
+\noindent\textcolor{purple}{Solution}
+\begin{equation}
+n_{\nu}\sim n_{\ce{p}}\sim\frac{\qty{1.5}{M_{\odot}}}{m_{\ce{p}}}=\qty{1.8e57}{}.\tag{1}
+\end{equation}
+
+\hspace*{\fill}
+
+\noindent\textcolor{purple}{(b)} How many neutrinos originating from SN1987a went through an average human on 24 February 1987? For this exercise, assume humans can be approximated by spheres with a radius $\qty{0.25}{m}$.
+
+\hspace*{\fill}
+
+\noindent\textcolor{purple}{Solution}
+\begin{equation}
+n=n_{\nu}\times\frac{\pi\times\left(\qty{0.25}{m}\right)^{2}}{4\pi\times\left(\qty{51.4}{kpc}\right)^{2}}=\qty{1.1e13}{}.\tag{2}
+\end{equation}
+
+\hspace*{\fill}
+
+\noindent\textcolor{purple}{(c)} The neutrinos that reached Earth were found to have energies in the range $6\text{\textendash}\qty{39}{MeV}$. If the spread in arrival times was caused by neutrinos of different energies travelling at different speeds, show that the neutrino mass cannot be much more than $\qty{13}{eV}$. Hint: for a relativistic particle, use the relation $D=vt$ where $D$ is the distance, $t$ the travel time and $v=\symup{c}\sqrt{1-\dfrac{1}{\gamma^{2}}}$ the speed, with $\gamma$ the Lorentz factor. Also use the first approximation of the binomial expansion $\left(1+x\right)^{n}=1-nx$.
+
+\hspace*{\fill}
+
+\noindent\textcolor{purple}{Solution}
+\begin{align}
+\Delta{}t&=\frac{D}{v_{1}}-\frac{D}{v_{2}}=\frac{D}{\symup{c}}\left(1-\frac{1}{2}\gamma_{1}^{-2}-1+\frac{1}{2}\gamma_{2}^{-2}\right)\notag\\
+&=\frac{D}{2}m_{0}^{2}\symup{c}^{3}\left(\frac{1}{E_{1}^{2}}-\frac{1}{E_{2}^{2}}\right)=E_{0}^{2}\frac{D}{2\symup{c}}(\frac{1}{E_{1}^{2}}-\frac{1}{E_{2}^{2}}).\tag{3}\\
+E_{0}&=\qty{12.93}{eV}.\tag{4}
+\end{align}
+
+\noindent\textcolor{blue}{7. Classical evolution of stars in galaxies}
+
+\noindent In this exercise we will follow the classical model of the evolution of stars in galaxies from Beatrice Tinsley (1973). We saw in the lectures that the main-sequence lifetime is a function of mass following $t\propto{}M^{-2}$.
+
+\hspace*{\fill}
+
+\noindent\textcolor{purple}{(a)} Knowing that the Sun has a main sequence lifetime of $\qty{e10}{yr}$, calculate the main sequence lifetime of a star with $\qty{50}{M_{\odot}}$.
+
+\hspace*{\fill}
+
+\noindent\textcolor{purple}{Solution}
+\begin{equation}
+t=t_{\odot}\frac{M_{\odot}^{2}}{M^{2}}=\qty{4e6}{yr}.\tag{1}
+\end{equation}
+
+\hspace*{\fill}
+
+\noindent\textcolor{purple}{(b)} If we assume that the red giant phase of stars last 10\% of their main sequence lifetime, find the time-dependence of the change in the number of red giants as a function of time in a single population of stars (i.e. all stars are born at the same time) characterised by a Kroupa IMF. For simplicity, assume that only stars with a mass $>\qty{0.5}{M_{\odot}}$ go through a red giant phase. Note, for this question we are only interested in the temporal dependence and normalisation constants may be ignored.
+
+\hspace*{\fill}
+
+\noindent\textcolor{purple}{Solution}
+
+According to the Kroupa IMF, the number of newly formed stars per unit volume per unit mass satisfies the following relationship (note that all stars are born in the same time)
+\begin{equation}
+\symup{d}N=\xi_{0}M^{-2.3}\symup{d}M,\, M>\qty{0.5}{M_{\odot}}.\tag{1}
+\end{equation}
+
+At time $t$, stars that happen to be red giants have masses of
+\begin{equation}
+M_{1}=M_{\odot}\sqrt{\frac{t_{\odot}}{t}},\notag\\
+\end{equation}
+the mass of the star corresponding to the disappearance of the red giant is
+\begin{equation}
+M_{2}=M_{\odot}\sqrt{\frac{1.1t_{\odot}}{t}}.\notag\\
+\end{equation}
+So the change in the number of red giants per unit mass at time $t$ satisfies
+\begin{equation}
+\symup{d}N=\symup{d}N_{1}-\symup{d}N_{2}=0.104\xi_{0}M_{\odot}^{-2.3}t_{\odot}^{-1.15}t^{1.15}\symup{d}M.\tag{2}
+\end{equation}
+Well, it seems that we need to consider $\dfrac{\symup{d}M}{\symup{d}t}\symup{d}t\propto{}t^{-1.5}t$, thus $\symup{d}N\propto{}t^{0.65}$.
+
+\hspace*{\fill}
+
+\noindent\textcolor{blue}{8. The properties of extra-solar planets}
+
+\noindent Current observational limitations mean that the majority of known exoplanets have been detected and characterised using indirect techniques, such as the radial velocity and transit methods. A number of physical parameters can be derived using these data.
+
+\hspace*{\fill}
+
+\noindent\textcolor{purple}{(a)} A planet is discovered using the radial velocity method. The Doppler data reveal a sinusoidal variation with an amplitude of $\qty{84.3}{m\cdot{}s^{-1}}$ and a period of $\qty{35.2}{d}$. Its host star is a G0V main sequence star with a radius of $\qty{1.2}{R_{\odot}}$ and a mass of $\qty{1.15}{M_{\odot}}$. From these data estimate the exoplanet's orbital radius and mass. Express your answers in Astronomical Units and Jupiter mass, respectively.
+
+\hspace*{\fill}
+
+\noindent\textcolor{purple}{Solution}
+\begin{align}
+M_{\ce{p}}\ge{}v_{1}M_{1}^{\frac{2}{3}}(\frac{T}{2\pi\symup{G}})^{\frac{1}{3}}=\qty{0.7}{M_{\text{Jupiter}}}.\tag{1}\\
+r_{\ce{p}}=\symup{G}M_{1}^{-1}M_{\ce{p}}^{2}v_{1}^{-2}=\qty{0.047}{AU}.\tag{2}
+\end{align}
+
+\hspace*{\fill}
+
+\noindent\textcolor{purple}{(b)} This system was later followed up and the exoplanet was found to transit its host star. What impact does this discovery have on your estimate of the exoplanet's mass?
+
+\hspace*{\fill}
+
+\noindent\textcolor{purple}{Solution}
+
+In fact
+\begin{align}
+M_{\ce{p}}\sin{i}=v_{1,\text{obs}}M_{1}^{\frac{2}{3}}\left(\frac{T}{2\pi \symup{G}}\right)^{\frac{1}{3}}.\tag{3}
+\end{align}
+This discovery helps us limit orbital inclination $i$.
+
+\hspace*{\fill}
+
+\noindent\textcolor{purple}{(c)} The transit photometry reveal that the depth of the transit is just $1.3\%$ of the flux of the star. Using this information and your answer from part a, calculate the mean density of the exoplanet.
+
+\hspace*{\fill}
+
+\noindent\textcolor{purple}{Solution}
+\begin{align}
+R_{\ce{p}}&\sim\sqrt{1.3\%}\times\qty{1.2}{R_{\odot}}=\qty{9.52685e7}{m}.\tag{4}\\
+\rho&=\frac{M_{\ce{p}}}{\dfrac{4}{3}\pi{}R_{\ce{p}}^{3}}=\qty{364.37}{kg\cdot{}m^{-3}}.\tag{5}
+\end{align}
+
+\hspace*{\fill}
+
+\noindent\textcolor{blue}{9. Gravitational Lensing}
+
+\noindent Another indirect method of surveying exoplanets is gravitational microlensing, where foreground systems lens background stars. Gravitational microlensing has also been used to search for dark objects, such as brown dwarfs and black holes, which light is difficult to detect directly. These objects were once a candidate for dark matter.
+
+\hspace*{\fill}
+
+\noindent\textcolor{purple}{(a)} What is the Einstein angle $\theta_{\symup{E}}$ of a $\qty{1000}{M_{\odot}}$ object at a distance of $\qty{25}{kpc}$. You can assume an observer-source distance of $\qty{50}{kpc}$.
+
+\hspace*{\fill}
+
+\noindent\textcolor{purple}{Solution}
+\begin{align}
+\theta_{\symup{E}}&=\left(\frac{4\symup{G}M}{\symup{c}^{2}}\frac{D_{\text{sl}}}{D_{\text{lo}}D_{\text{so}}}\right)^{\frac{1}{2}}\notag\\
+&=\left(\frac{4\symup{G}\times\qty{1000}{M_{\odot}}}{\symup{c}^{2}}\frac{\qty{25}{kpc}}{\qty{25}{kpc}\times\qty{50}{kpc}}\right)^{\frac{1}{2}}\notag\\
+&=\qty{6.2e-8}{}=\qty{3.55e-6}{deg}.\tag{1}
+\end{align}
+
+\hspace*{\fill}
+
+\noindent\textcolor{purple}{(b)} Imagine that there are a large number of such black holes in the outer parts of the galaxy. Assume for simplicity that these black holes form a thin screen at a distance of $\qty{25}{kpc}$, in which the number surface density of the black holes is $\qty{e4}{deg^{-2}}$. Also assume that each black hole is moving with a random speed (perpendicular to the line of sight) of $\qty{200}{km\cdot{}s^{-1}}$. Imagine that we try to detect these black holes by looking for lensing amplications of stars in a background field in the Large Magellanic Cloud, which you can assume lie twice as far away. These stars have a number surface density of $\qty{e7}{deg^{-2}}$. The LMC has an solid angle of $\qty{40}{deg^{2}}$. Estimate roughly how many lensing amplifications of $a_{\text{total}}>10$ you would expect to see each year. Roughly how long would each lensing event take?
+
+\hspace*{\fill}
+
+\noindent\textcolor{purple}{Solution}
+\begin{align}
+&a_{\text{total}}=\frac{u^{2}+2}{u\left(u^{2}+4\right)^{\frac{1}{2}}}>10, u=\frac{\beta}{\theta_{\symup{E}}},\notag\\
+&u<0.1,\beta<\qty{0.1}{\theta_{\symup{E}}}=\qty{3.55e-7}{deg}.\tag{1}
+\end{align}
+Angular velocity of the black hole
+\begin{equation}
+\omega=\frac{\qty{200}{km\cdot{}s^{-1}}}{\qty{25}{kpc}}=\qty{1.485e-14}{deg\cdot{}s^{-1}}.\tag{2}
+\end{equation}
+The numbers of lensing event that occurs in a year
+\begin{equation}
+N=n_{\text{BH}}\omega\left(2\beta\right)n_{\text{stars}}\times\qty{40}{deg^{2}}\times\qty{1}{yr}=1.33.\tag{3}
+\end{equation}
+Each lensing event take
+\begin{equation}
+\tau=\theta_{\symup{E}}/\omega=\qty{2.4e8}{s}=\qty{7.58}{yr}.\tag{4}
+\end{equation}
+
+\hspace*{\fill}
+
+\noindent\textcolor{blue}{10. Tidal Forces}
+
+\noindent The physical origin for the ocean tides was a matter of controversy among early astronomers. Modern theory has explained this phenomenon as the result of gravitational interactions which deform the Earth, causing a tidal bulge. The tidal potential energy of a mass $m$ on the Earth's surface can be expressed as:
+\begin{equation}
+U_{\text{t}}=-\dfrac{\symup{G}M_{\text{moon}}m}{2r^{3}}R^{2}\left(3\cos^{2}\phi-1\right),\tag{1}
+\end{equation}
+where $R$ is the radius of the Earth, $r$ is the Earth-Moon distance, $\phi$ is the angle between the line from the Earth's center to mass $m$ and the Earth-Moon vector.
+
+\hspace*{\fill}
+
+\noindent\textcolor{purple}{(a)} Estimate the height of the Earth's ocean tides imposed by the Moon's gravity. Under the simplifying assumption that the Earth is covered with water, the water will follow a surface of constant gravitational potential. Note that we are neglecting rotation and ocean currents.
+
+\hspace*{\fill}
+
+\noindent\textcolor{purple}{Solution}
+\begin{align}
+&-\frac{\symup{G}M_{\text{moon}}}{2r^{3}}R^{2}\left(3-1-0+1\right)\notag\\
+&=-\frac{\symup{G}M_{\text{Earth}}}{R}+\frac{\symup{G}M_{\text{Earth}}}{R+h},\notag\\
+&h=\frac{3M_{\text{moon}}R^{4}}{2M_{\text{Earth}}r^{3}}=\qty{0.535}{m}.\tag{1}
+\end{align}
+
+\hspace*{\fill}
+
+\noindent\textcolor{purple}{(b)} Now repeat this calculation for the effect of the Sun. Discuss what behaviour you would expect to observe in the tides over the course of a month.
+
+\hspace*{\fill}
+
+\noindent\textcolor{purple}{Solution}
+\begin{equation}
+h_{\odot}=\frac{3M_{\odot}R^{4}}{2M_{\text{Earth}}\left(\qty{1}{AU}\right)^{3}}=\qty{0.247}{m}.\tag{2}
+\end{equation}
+
+Tidal heights are highest during the new and full moons, and lowest during the first and second quarters.
+
+\hspace*{\fill}
+
+\noindent\textcolor{blue}{11. Radial Velocity Exoplanets}
+
+\noindent Detecting Earth-like ($T\approx\qty{300}{K}$) extrasolar planets is a major goal of modern astrophysics. In the case of our Sun, the radial velocity-signal due to the gravitational interaction with the Earth is very small ($\sim\qty{0.09}{m\cdot{}s^{-1}}$) and below the sensitivity of current instrumentation.
+
+\hspace*{\fill}
+
+\noindent\textcolor{purple}{(a)} Calculate the expected RV-signal of an Earth-like planet around a low mass star with $M_{S}=\qty{0.3}{M_{\odot}}$ and $L=\qty{0.04}{L_{\odot}}$. The separation between the planet and the star is $\qty{0.2}{AU}$. At this distance the planet receives the same intensity of light as Earth does from the Sun. Thus, this planet may also be habitable. Calculate the RV-signal for assumed inclinations of $i=\ang{90;;}, \ang{60;;}, \ang{30;;}$, and $\ang{0;;}$.
+
+\hspace*{\fill}
+
+\noindent\textcolor{purple}{Solution}
+
+Note that
+\begin{equation}
+V_{\text{obs}}=\symup{G}^{\frac{1}{2}}M_{1}^{-\frac{1}{2}}M_{\ce{p}}r_{\ce{p}}^{-\frac{1}{2}}\sin{i}.\tag{1}
+\end{equation}
+With $M_{1}=\qty{0.3}{M_{\odot}}, r_{\ce{p}}=\qty{0.2}{AU}$,
+\begin{equation}
+V_{\text{obs}}=\qty{0.09}{m\cdot{}s^{-1}}\times0.3^{-\frac{1}{2}}\times0.2^{-\frac{1}{2}}\times\sin{i}.\tag{2}
+\end{equation}
+$i=\ang{90;;}, V_{\text{obs}}=\qty{0.367}{m\cdot{}s^{-1}}$.
+
+\noindent $i=\ang{60;;}, V_{\text{obs}}=\qty{0.318}{m\cdot{}s^{-1}}$.
+
+\noindent $i=\ang{30;;}, V_{\text{obs}}=\qty{0.183}{m\cdot{}s^{-1}}$.
+
+\noindent $i=\ang{0;;}, V_{\text{obs}}=\qty{0}{m\cdot{}s^{-1}}$.
+
+\hspace*{\fill}
+
+\noindent\textcolor{purple}{(b)} For a system that is randomly oriented in space, is it more likely that the inclination is $i=\ang{90;;}$, or that it is $\ang{0;;}$? Write down the form of the probability of finding a system at an arbitrary angle $i$. Hint: It is useful to consider this problem in terms of solid angle.
+
+\hspace*{\fill}
+
+\noindent\textcolor{purple}{Solution}
+
+It more likely that the inclination $i=\ang{90;;}$.
+
+Note that
+\begin{align}
+&\Omega=\int_{0}^{2\pi}\symup{d}\varphi\int_{0}^{\pi}\sin{i}\d{}i,\notag\\
+&\frac{\symup{d}n}{\symup{d}i}\sim\frac{\symup{d}\Omega}{\symup{d}i}=\sin{i}.\tag{3}
+\end{align}
+
+So the number of systems whose angular momentum direction is perpendicular to the line of sight direction is the highest.
+
+\hspace*{\fill}
+
+\noindent\textbf{c)} Discussion question: What are the factors that might make the detection of planets in the habitable zone around low-mass stars easier and/or harder compared to solar-mass stars?
+
+\noindent\textbf{Solution}
+
+It may be easier to make the detection of planets in the habitable zone around low-mass stars:
+
+1. For low-mass stars, in order to receive the same intensity of light as Earth does from the Sun, the distance between the planet and the star must be relatively small. As $V_{\text{obs}}\propto{}M_{S}^{-\frac12}, V_{\text{obs}}\propto{}r_{\text{p}}^{-\frac12}$, the RV-signal is easier to detect.
+
+2. Less massive stars also have smaller radius, and when the occultation occurs, the light changes more dramatically and is easier to detect.
+
 
 %\printbibliography
 \end{document}

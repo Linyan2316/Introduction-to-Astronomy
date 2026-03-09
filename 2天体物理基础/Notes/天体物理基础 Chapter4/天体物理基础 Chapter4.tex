@@ -34,7 +34,7 @@
 \subsubsection{银盘}
 银河系的银盘分为薄盘加厚盘，恒星密度分布满足
 \begin{equation}
-n\left(R, z\right)\propto{}\left(\symup{e}^{-\left\vert{}z\right\vert{}/h_{\text{thin}}}+0.02\symup{e}^{-\left\vert{}z\right\vert{}/h_{\text{thick}}}\right)\symup{e}^{-R/h_{\text{R}}}.
+n\left(R, z\right)\propto\left(\symup{e}^{-\left\vert{}z\right\vert{}/h_{\text{thin}}}+0.02\symup{e}^{-\left\vert{}z\right\vert{}/h_{\text{thick}}}\right)\symup{e}^{-R/h_{\text{R}}}.
 \end{equation}
 银盘标长 $\qty{2.5}{kpc}$, 对年老恒星而言标高 $\qty{0.4}{kpc}$, 对气体和年轻恒星而言 $\qty{0.13}{kpc}$. 太阳轨道半径 $\qty{8.3}{kpc}$, 公转周期 $2$ 亿年。银盘质量 $\qty{5e10}{M_{\odot}}$, 总质量中十分之一在星际介质中。
 
@@ -94,7 +94,7 @@ R_{0}=\qty{8.5}{kpc}, V_{0}=\qty{220}{km\cdot{}s^{-1}}.
 
 我们也可通过观测太阳附近恒星的运动来确定太阳的运动。如图\ref{Oort 公式图示。}所示，太阳附近银经为 $l$ 的恒星 $P$ 和太阳 $S$ 的转动角速度分别为 $\omega=\dfrac{V}{R}$ 和 $\omega_{0}=\dfrac{V_{0}}{R_{0}}$, 恒星相对于太阳的视向速度为 $V_{\text{r}}=V\cos{\alpha}-V_{0}\sin{l}$. 根据几何关系 $\cos{\alpha}=\dfrac{R_{0}\sin{l}}{R}$ 视向速度可写作 $V_{\text{r}}=R_{0}\left(\omega-\omega_{0}\right)\sin{l}$, 切向速度为 $V_{\text{t}}=R\omega\sin{\alpha}-R_{0}\omega_{0}\cos{l}$, 根据几何关系 $R\sin{\alpha}=R_{0}\cos{l}-d$ 可知切向速度为 $V_{\text{t}}=R_{0}\left(\omega-\omega_{0}\right)\cos{l}-\omega d$. 在 $R=R_{0}$ 附近将 $\omega-\omega_{0}$ 泰勒级数展开，
 \begin{equation}
-\omega-\omega_{0}=\left(\frac{\symup{d}W}{\symup{d}R}\right)_{R_{0}}\left(R-R_{0}\right)+\cdots\approx\frac{1}{R_{0}^{2}}\left[R_{0}\left(\frac{\symup{d}V}{\symup{d}R}\right)_{R_{0}}-V_{0}\right]\left(R-R_{0}\right),
+\omega-\omega_{0}=\left(\frac{\d{}W}{\d{}R}\right)_{R_{0}}\left(R-R_{0}\right)+\cdots\approx\frac{1}{R_{0}^{2}}\left[R_{0}\left(\frac{\d{}V}{\d{}R}\right)_{R_{0}}-V_{0}\right]\left(R-R_{0}\right),
 \end{equation}
 对 $R\approx R_{0}\gg d, R-R_{0}\approx-d\cos{l}$ 有
 \begin{equation}
@@ -102,8 +102,8 @@ V_{\text{r}}=Ad\sin{\left(2l\right)}, V_{\text{t}}=Ad\cos{\left(2l\right)}+Bd,
 \end{equation}
 根据太阳附近恒星的视向和切向速度，可以求出奥尔特常数：
 \begin{align}
-A&=\frac{1}{2}\left[\frac{V_{0}}{R_{0}}-\left(\frac{\symup{d}V}{\symup{d}R}\right)_{R_{0}}\right]\approx\qty{15}{km\cdot{}s^{-1}\cdot kpc^{-1}}.\notag\\
-B&=-\frac{1}{2}\left[\frac{V_{0}}{R_{0}}+\left(\frac{\symup{d}V}{\symup{d}R}\right)_{R_{0}}\right]\approx\qty{-14}{km\cdot{}s^{-1}\cdot{kpc^{-1}}}.
+A&=\frac{1}{2}\left[\frac{V_{0}}{R_{0}}-\left(\frac{\d{}V}{\d{}R}\right)_{R_{0}}\right]\approx\qty{15}{km\cdot{}s^{-1}\cdot kpc^{-1}}.\notag\\
+B&=-\frac{1}{2}\left[\frac{V_{0}}{R_{0}}+\left(\frac{\d{}V}{\d{}R}\right)_{R_{0}}\right]\approx\qty{-14}{km\cdot{}s^{-1}\cdot{kpc^{-1}}}.
 \end{align}
 从而求出太阳绕银心转动角速度 $\omega_{0}=A-B=29\pm\qty{1.8}{km\cdot{}s^{-1}\cdot kpc^{-1}}$, 转动周期约 $\qty{2.2e8}{yr}$, 转动速度约 $238\pm\qty{15}{km\cdot{}s^{-1}}$. 上述数据是本地静止标准速度，太阳相对于该速度还有约 $\qty{10}{km\cdot{}s^{-1}}$ 的本动速度。
 
@@ -221,8 +221,8 @@ Conroy et al. arViv:2204.02989 有一副晕、厚盘、薄盘元素丰度的图
 \subsubsection{恒星轨道变化}
 Virial theorem
 \begin{align}
-&\frac{\symup{d}}{\symup{d}t}\left(\symbf{p}\cdot\symbf{x}\right)=\frac{\symup{d}\symbf{p}}{\symup{d}t}\cdot\symbf{x}+\symbf{p}\cdot\frac{\symup{d}\symbf{x}}{\symup{d}t}=\symbf{F}\cdot\symbf{x}+2E_{\text{k}}.\\
-&\frac{1}{\tau}\Delta{}\left(\symbf{p}\cdot\symbf{x}\right)=\overline{\symbf{F}\cdot\symbf{x}}+2\overline{E_{\text{k}}}.
+&\frac{\d{}}{\d{}t}\left(\symbf{p}\cdot\symbf{x}\right)=\frac{\d\symbf{p}}{\d{}t}\cdot\symbf{x}+\symbf{p}\cdot\frac{\d\symbf{x}}{\d{}t}=\symbf{F}\cdot\symbf{x}+2E_{\text{k}}.\\
+&\frac{1}{\tau}\laplacian\left(\symbf{p}\cdot\symbf{x}\right)=\overline{\symbf{F}\cdot\symbf{x}}+2\overline{E_{\text{k}}}.
 \end{align}
 热动平衡系统中相空间变化对称因此
 \begin{equation}
@@ -234,20 +234,20 @@ Virial theorem
 \end{equation}
 因此
 \begin{align}
-\sum_{i}\symbf{F}_{i}\cdot\symbf{x}_{i}&=\sum_{i}\sum_{j\ne i}\symup{G}m_{i}\frac{m_{j}}{\left\vert{}\symbf{x}_{j}-\symbf{x}_{i}\right\vert^{3}}\left(x_{j}-x_{i}\right)\cdot x_{i}\notag\\
-&=-\sum\overline{\frac{\symup{G}m_{i}m_{j}}{\left\vert{}\symbf{x}_{j}-\symbf{x}_{i}\right\vert{}}}=\overline{E_{\text{g}}}.
+\sum_{i}\symbf{F}_{i}\cdot\symbf{x}_{i}&=\sum_{i}\sum_{j\ne i}\symup{G}m_{i}\frac{m_{j}}{\left\vert\symbf{x}_{j}-\symbf{x}_{i}\right\vert^{3}}\left(x_{j}-x_{i}\right)\cdot x_{i}\notag\\
+&=-\sum\overline{\frac{\symup{G}m_{i}m_{j}}{\left\vert\symbf{x}_{j}-\symbf{x}_{i}\right\vert{}}}=\overline{E_{\text{g}}}.
 \end{align}
 因此恒星的轨道运动也满足 Virial theorem.
 
 恒星能量改变有以下几种方式。其一是弱远交会，
 \begin{align}
 &F_{\bot}=\frac{\symup{G}m^{2}}{b^{2}}\left[1+\left(\frac{vt}{b}\right)^{2}\right]^{-\frac{3}{2}}.\\
-&\delta v_{\bot}=\frac{2\symup{G}m}{bv}.
+&\dr{}v_{\bot}=\frac{2\symup{G}m}{bv}.
 \end{align}
 考虑到数密度和随机游走的积累
 \begin{align}
-\delta v_{\bot}^{2}&=\left(\frac{2\symup{G}m}{bv}\right)^{2}\frac{2\pi N}{R^{2}}b\symup{d}b,\\
-\Delta{}v_{\bot}^{2}&=8\pi N\left(\frac{\symup{G}m}{Rv}\right)^{2}\ln
+\dr{}v_{\bot}^{2}&=\left(\frac{2\symup{G}m}{bv}\right)^{2}\frac{2\pi N}{R^{2}}b\d{}b,\\
+\laplacian{}v_{\bot}^{2}&=8\pi N\left(\frac{\symup{G}m}{Rv}\right)^{2}\ln
 \left(\frac{b_{\max}}{b_{\min}}\right).
 \end{align}
 
@@ -258,7 +258,7 @@ n\sim\frac{1}{8\pi}\frac{N}{\ln N}.
 
 另一种方式是暴力弛豫：
 \begin{equation}
-\frac{\symup{d}E}{\symup{d}t}=\frac{1}{2}\frac{\symup{d}v^{2}}{\symup{d}t}+\frac{\symup{d}\Phi}{\symup{d}t}=\symbf{v}\cdot\frac{\symup{d}\symbf{v}}{\symup{d}t}+\frac{\partial{}\Phi}{\partial{}t}+\symbf{v}\cdot\nabla\Phi=\frac{\partial{}\Phi}{\partial{}t},
+\frac{\d{}E}{\d{}t}=\frac{1}{2}\frac{\d{}v^{2}}{\d{}t}+\frac{\d\Phi}{\d{}t}=\symbf{v}\cdot\frac{\d\symbf{v}}{\d{}t}+\frac{\partial\Phi}{\partial{}t}+\symbf{v}\cdot\nabla\Phi=\frac{\partial\Phi}{\partial{}t},
 \end{equation}
 因此当整个星系的引力势发生改变（比如有个外来星系路过）时，恒星的动能会发生改变。与弱远交会不同，此时不同质量的恒星速度的变化是一致的。
 
@@ -276,7 +276,7 @@ I\left(R\right)=I_{0}\exp\left[-7.67\left(\frac{R}{R_{\text{e}}}\right)^{\frac{1
 
 椭圆星系有四个基本参数（其中三个是独立的）：星系光度，有效半径，平均面亮度，速度弥散。基本上，椭圆星系分布在有效半径、表面亮度和中心速度弥散组成的三维空间的平面附近：
 \begin{equation}
-\log R_{\text{e}}=a\log\sigma_{0}+b\log\langle{}\mu\rangle+\text{const}.
+\log R_{\text{e}}=a\log\sigma_{0}+b\log\langle\mu\rangle+\text{const}.
 \end{equation}
 
 \paragraph{漩涡星系}~{}

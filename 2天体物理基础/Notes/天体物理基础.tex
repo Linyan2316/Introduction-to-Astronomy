@@ -16,15 +16,20 @@
 \setmathfont{Latin Modern Math}
 \setmathrm{Latin Modern Math}
 
-\usepackage{amsmath, amsthm, cases, graphicx, subfigure, tikz, caption, subcaption, siunitx, keyval, physics2}
+\usepackage{amsmath, amsthm, cases, graphicx, subfigure, tikz, caption, subcaption, siunitx, keyval, physics2, tensor, fixdif}
 \DeclareSIUnit\angstrom{Å}
 \usephysicsmodule{ab, ab.braket}
+\letdif*{\dr}{delta}
+\letdif*{\laplacian}{Delta}
+\letdif*{\nabla}{nabla}
+\letdif*{\mdlgwhtsquare}{mdlgwhtsquare}
 \usepackage[version=4]{mhchem}
 \usepackage[flushleft]{threeparttable}
 \usepackage{hyperref, bookmark}
 \hypersetup{colorlinks=true, urlcolor=blue, filecolor=blue, linkcolor=blue}
-\usepackage[backend=biber, sorting=none]{biblatex}
+\usepackage[backend=biber, sorting=none, style=authoryear, natbib=true]{biblatex}
 \addbibresource{/Users/Linyan/Database/Zotero/AllBibTeX.bib}
+%\addbibresource{/home/linyan/Database/Zotero/AllBibTeX.bib}
 
 \ctexset{section={format=\bfseries\zihao{4}\flushleft}}
 \renewcommand\thesubsection{\thesection.\arabic{subsection}}
