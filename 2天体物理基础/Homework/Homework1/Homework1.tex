@@ -16,14 +16,18 @@
 \setmathfont{Latin Modern Math}
 \setmathrm{Latin Modern Math}
 
-\usepackage{amsmath, amsthm, cases, graphicx, subfigure, tikz, caption, subcaption, siunitx, keyval, physics2}
+\usepackage{amsmath, amsthm, cases, graphicx, subfigure, tikz, caption, subcaption, siunitx, keyval, physics2, tensor, fixdif}
 \DeclareSIUnit\angstrom{Å}
 \usephysicsmodule{ab, ab.braket}
+\letdif*{\dr}{delta}
+\letdif*{\laplacian}{Delta}
+\letdif*{\nabla}{nabla}
+\letdif*{\mdlgwhtsquare}{mdlgwhtsquare}
 \usepackage[version=4]{mhchem}
 \usepackage[flushleft]{threeparttable}
 \usepackage{hyperref, bookmark}
 \hypersetup{colorlinks=true, urlcolor=blue, filecolor=blue, linkcolor=blue}
-\usepackage[backend=biber, sorting=none]{biblatex}
+\usepackage[backend=biber, sorting=none, style=authoryear, natbib=true]{biblatex}
 \addbibresource{/Users/Linyan/Database/Zotero/AllBibTeX.bib}
 %\addbibresource{/home/linyan/Database/Zotero/AllBibTeX.bib}
 
@@ -73,7 +77,7 @@
 
 \hspace*{\fill}
 
-\noindent\textcolor{purple}{1. The faintest M-dwarf star}
+\noindent\textcolor{blue}{1. The faintest M-dwarf star}
 
 \noindent What is the faintest observed (apparent) magnitude which we would expect to see for an M-dwarf star in the Milky Way? Assume that an M-dwarf star has an absolute magnitude of $+14$ and that the outer halo of the Milky Way extends $\qty{50}{kpc}$ from us.
 
@@ -83,32 +87,43 @@
 
 Note that $F=\dfrac{L}{4\pi{}r^{2}}$, then
 \begin{align}
-M-M_{\text{abs}}&=-2.5\log_{10}\left(\frac{f}{f_{\text{abs}}}\right)\notag\\
-&=-2.5\log_{10}\left(\frac{\qty{10}{pc}}{\qty{50}{kpc}}\right)^2.\tag{1}\\
+M-M_{\symup{abs}}&=-2.5\log_{10}\left(\frac{f}{f_{\symup{abs}}}\right)\notag\\
+&=-2.5\log_{10}\left(\frac{\qty{10}{pc}}{\qty{50}{kpc}}\right)^{2}.\tag{1}\\
 \therefore\enspace{}M&=32.495.\tag{2}
 \end{align}
 
 \hspace*{\fill}
 
-\noindent\textcolor{purple}{2. A pinhole camera}
+\noindent\textcolor{blue}{2. A pinhole camera}
 
 \noindent Consider a simple pinhole camera having a small circular hole of diameter $d$ in its front face and having a film placed at a distance $L$ behind it. Show that the flux $F_{\nu}$, at the film plane is related to the incident intensity $I_{\nu}\left(\theta,\phi\right)$ at the entrance hole in the following way
 \begin{equation}
-F_{\nu}=\frac{\pi{}d^{2}\cos^{4}{\theta}}{4L^{2}}I_{\nu}\left(\theta,\phi\right).\tag{1}
+F_{\nu}=\frac{\pi{}d^{2}\cos^{4}{\theta}}{4L^{2}}I_{\nu}\left(\theta,\phi\right).\notag
 \end{equation}
+
+\hspace*{\fill}
 
 \noindent\textcolor{purple}{Proof}
 
-Since optical paths are reversible,
+Note that the definition for the Flux $F_{\nu}$:
+\begin{equation}
+F_{\nu}=\int{}I_{\nu}\cos{\theta}\d\Omega,\tag{1}
+\end{equation}
+when $d$ is much smaller than $L$, $I_{\nu}$ and $\theta$ will not vary along the solid angle so they can be taken out of the integral:
 \begin{align}
-F_{\nu}&=\int{}I_{\nu}\left(\theta,\phi\right)\cos{\theta}\symup{d}\Omega\notag\\
-&=I_{\nu}\left(\theta,\phi\right)\cos{\theta}\frac{\pi\left(d/2\right)^{2}\cos{\theta}}{\left(L/\cos{\theta}\right)^{2}}\notag\\
-&=\frac{\pi{}d^{2}\cos^{4}{\theta}}{4L^{2}}I_{\nu}\left(\theta,\phi\right).\tag{1}
+F_{\nu}&=I_{\nu}\cos{\theta}\int_{\Omega}\d\Omega\notag\\
+&=I_{\nu}\cos{\theta}\int\frac{\hat{r}\cdot{}\hat{n}\d{}A}{r^{2}}.\tag{2}
+\end{align}
+
+Use $r=\dfrac{L}{\cos{\theta}}$, $\hat{r}\cdot{}\hat{n}=\cos{\theta}$ and $A=\pi\left(\dfrac{d}{2}\right)^{2}$, we can obtain that
+\begin{align}
+F_{\nu}&=I_{\nu}\cos{\theta}\frac{\cos^{3}{\theta}}{L^{2}}\int{}\d{}A\notag\\
+&=\frac{\pi{}d^{2}\cos^{4}{\theta}}{4L^{2}}I_{\nu}\left(\theta,\phi\right).\tag{3}
 \end{align}
 
 \hspace*{\fill}
 
-\noindent\textcolor{purple}{3. Radiative transfer through two adjacent clouds}
+\noindent\textcolor{blue}{3. Radiative transfer through two adjacent clouds}
 
 \noindent There are two adjacent interstellar gas clouds with known thickness $d_{1}$ and $d_{2}$ found in front of an astronomical light source. Suppose that this source emits a beam of radiation with known specific intensity $I_{\nu0}$ as it enters the first cloud of interstellar gas. Assume that the values of $\alpha_{\nu}$ are constant within the clouds and are known quantities and that these clouds possess no emissivity.
 
@@ -120,10 +135,8 @@ F_{\nu}&=\int{}I_{\nu}\left(\theta,\phi\right)\cos{\theta}\symup{d}\Omega\notag\
 
 \noindent\textcolor{purple}{Solution}
 \begin{align}
-\frac{\symup{d}I_{\nu}}{\symup{d}l}&=j_{\nu}-\alpha_{\nu, 1}I_{\nu}\notag\\
-&=-\alpha_{\nu, 1}I_{\nu}.\tag{1}\\
-I_{\nu}&=I_{\nu, 0}\symup{e}^{-\alpha_{\nu, 1}l}.\tag{2}\\
-\therefore\, I_{\nu,\text{after A}}&=I_{\nu, 0}\symup{e}^{-\alpha_{\nu, 1}d_{1}}.\tag{3}
+\frac{\d{}I_{\nu}}{\d{}l}&=j_{\nu}-\alpha_{\nu, 1}I_{\nu}=-\alpha_{\nu, 1}I_{\nu}.\tag{1}\\
+\therefore\enspace{}I_{\nu,\text{after A}}&=I_{\nu, 0}\symup{e}^{-\alpha_{\nu, 1}d_{1}}.\tag{2}
 \end{align}
 
 \hspace*{\fill}
@@ -143,7 +156,7 @@ Thus it doesn't matter.
 
 \hspace*{\fill}
 
-\noindent\textcolor{purple}{4. Thomson scattering in Earth's atmosphere}
+\noindent\textcolor{blue}{4. Thomson scattering in Earth's atmosphere}
 
 \noindent Consider if the Earth's atmosphere ($\rho=\qty{1.2e-3}{g\cdot{}cm^{-3}}$) was completely ionized. Using the fact that a beam of light passing through this atmosphere will be attenuated due to Thomson scattering by free electrons, calculate the path length which this beam has to traverse before its intensity is reduced to half its original strength. Explain what you would ``see'' if we could still live in such an atmosphere.
 
@@ -155,35 +168,28 @@ Thus it doesn't matter.
 
 Thomson scattering does not change the radiation frequency and can be regarded as an elastic collision, so we can define the scattering absorption coefficient:
 \begin{equation}
-\sigma=n_{{\color{blue}{\ce{e}}}}\sigma_{\text{T}}.\tag{1}
+\alpha=n_{{\color{blue}{\ce{e}}}}\sigma_{\symup{T}}.\tag{1}
 \end{equation}
 
-The average relative molecular mass of air is
+The number density of electrons is equal to
 \begin{equation}
-M_{\text{air}}=32\times0.2+28\times0.8=28.8,\tag{2}
+n_{{\color{blue}{\ce{e}}}}=\frac{1}{2}\frac{\rho}{m_{\ce{p}}}=\qty{3.587e20}{cm^{-3}}.\tag{2}
 \end{equation}
-thus the number density is equal to
-\begin{equation}
-n_{\text{air}}=\frac{\rho}{M_{\text{air}}m_{\ce{p}}}=\qty{2.5e19}{cm^{-3}}.\tag{3}
-\end{equation}
-
 Then we can obtain the scattering absorption coefficient
 \begin{equation}
-\sigma=\frac{n_{\text{air}}}{2}\sigma_{\text{T}}=\qty{8.3e-6}{cm^{-1}}.\tag{4}
+\alpha=n_{{\color{blue}{\ce{e}}}}\sigma_{\symup{T}}=\qty{2.15e-4}{cm^{-1}}.\tag{3}
 \end{equation}
-
 Thus
 \begin{align}
-\frac{\symup{d}I}{\symup{d}s}&=-\sigma{}I.\tag{5}\\
-I&=I_{0}\symup{e}^{-\sigma{}s}=\frac{1}{2}I_{0},\tag{6}\\
-\therefore s&=\frac{\ln2}{\sigma}=\qty{835.117}{m}.\tag{7}
+\frac{\d{}I}{\d{}s}&=-\alpha{}I.\tag{4}\\
+I&=I_{0}\symup{e}^{-\alpha{}s}=\frac{1}{2}I_{0},\tag{5}\\
+\therefore\enspace{}s&=\frac{\ln2}{\alpha}=\qty{32.2}{m}.\tag{6}
 \end{align}
-
-After about 800 meters, light will lose half its original value, so we will only see darkness.
+After about 32 meters, light will lose half its original value, so we will only see a very thick frog.
 
 \hspace*{\fill}
 
-\noindent\textcolor{purple}{5. Optically thick / optically thin}
+\noindent\textcolor{blue}{5. Optically thick / optically thin}
 
 \noindent A fundamental property that determines the way we see astrophysical objects is the optical depth. Imagine two sources of radiation that are both surrounded by a spherical cloud. Source A is surrounded by optically thin material, while source B is surrounded by optically thick material.
 
@@ -195,7 +201,7 @@ After about 800 meters, light will lose half its original value, so we will only
 
 \noindent\textcolor{purple}{Answer}
 
-Source A we will observe a diffuse halo, in source B we will not see the underlying source, but the reprocessed light (i.e. the thick material itself). Source A is similar to the corona, while Source B is similar to the photosphere.
+In Source A we will observe a diffuse halo, in source B we will not see the underlying source, but the reprocessed light (i.e. the thick material itself). Source A is similar to the corona, while Source B is similar to the photosphere.
 
 \hspace*{\fill}
 
@@ -206,10 +212,6 @@ Source A we will observe a diffuse halo, in source B we will not see the underly
 \noindent\textcolor{purple}{Answer}
 
 If we can assume LTE, the emergent spectrum in the optically thick case will be a blackbody spectrum in which the radiation is completely reprocessed by the material. If there is no LTE, then it will not be, and will be more like the original light emerging from the surface of the cloud.
-
-
-
-
 
 
 %\printbibliography

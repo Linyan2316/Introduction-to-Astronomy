@@ -1,0 +1,299 @@
+% TeX Live 2025 XeLaTeX
+\documentclass[UTF8, 12pt, a4paper, oneside, twocolumn, fontset=none]{ctexart}
+\usepackage{anyfontsize}
+\usepackage{geometry}
+\geometry{left=1.5cm, right=1.5cm, top=1.8cm, bottom=0.9cm}
+
+\usepackage{unicode-math, mathrsfs, xcolor, inputenc}
+\definecolor{pagecolor}{HTML}{C7EDCC}
+\pagecolor{pagecolor}
+\setCJKmainfont[AutoFakeBold, AutoFakeSlant]{LXGW WenKai}
+\setCJKmonofont[AutoFakeBold, AutoFakeSlant]{MapleMono-CN-Regular}
+\setCJKsansfont[AutoFakeBold, AutoFakeSlant]{LXGW WenKai}
+\setmainfont[AutoFakeBold, AutoFakeSlant]{LXGW WenKai}
+\setmonofont[AutoFakeBold, AutoFakeSlant]{MapleMono-CN-Regular}
+\setsansfont[AutoFakeBold, AutoFakeSlant]{LXGW WenKai}
+\setmathfont{Latin Modern Math}
+\setmathrm{Latin Modern Math}
+
+\usepackage{amsmath, amsthm, cases, graphicx, subfigure, tikz, caption, subcaption, siunitx, keyval, physics2, tensor, fixdif}
+\DeclareSIUnit\angstrom{Å}
+\usephysicsmodule{ab, ab.braket}
+\letdif*{\dr}{delta}
+\letdif*{\laplacian}{Delta}
+\letdif*{\nabla}{nabla}
+\letdif*{\mdlgwhtsquare}{mdlgwhtsquare}
+\usepackage[version=4]{mhchem}
+\usepackage[flushleft]{threeparttable}
+\usepackage{hyperref, bookmark}
+\hypersetup{colorlinks=true, urlcolor=blue, filecolor=blue, linkcolor=blue}
+\usepackage[backend=biber, sorting=none, style=authoryear, natbib=true]{biblatex}
+\addbibresource{/Users/Linyan/Database/Zotero/AllBibTeX.bib}
+%\addbibresource{/home/linyan/Database/Zotero/AllBibTeX.bib}
+
+\ctexset{section={format=\bfseries\zihao{4}\flushleft}}
+\renewcommand\thesubsection{\thesection.\arabic{subsection}}
+\numberwithin{equation}{subsection}
+\renewcommand\theequation{\thesubsection.\arabic{equation}}
+\makeatletter
+\renewcommand{\maketag@@@}[1]{\hbox{\m@th\normalsize\normalfont#1}}%
+\makeatother
+\usepackage{indentfirst}
+
+\usepackage{listings}
+\lstset{
+    basicstyle      =    \zihao{-5}\ttfamily,
+    numberstyle     =    \zihao{-5}\ttfamily,
+    keywordstyle    =    \color{blue},
+    keywordstyle    =    [2]\color{teal},
+    stringstyle     =    \color{magenta},
+    commentstyle    =    \color{red}\ttfamily,
+    breaklines=true,     % 自动换行
+    columns=fixed,       % 固定字间距
+    flexiblecolumns,     % 别问为什么，加上这个
+    numbers         =    left,% 行号的位置在左边
+    showspaces      =    false,% 是否显示空格
+    numberstyle     =    \zihao{-5}\ttfamily,% 行号的样式，小五号，tt 等宽字体
+    showstringspaces=    false,
+    captionpos      =    t,% 这段代码的名字所呈现的位置，t 指的是 top 上面
+    frame           =    lrtb,% 显示边框
+}
+
+\lstdefinestyle{Python}{
+    language        =    Python,
+    basicstyle      =    \zihao{-5}\ttfamily,
+    numberstyle     =    \zihao{-5}\ttfamily,
+    keywordstyle    =    \color{blue},
+    keywordstyle    =    [2]\color{teal},
+    stringstyle     =    \color{magenta},
+    commentstyle    =    \color{red}\ttfamily,
+    breaklines      =    true,% 自动换行，建议不要写太长的行
+    columns         =    fixed,% 如果不加这一句，字间距就不固定
+    basewidth       =    0.5em,
+}
+
+\begin{document}
+\section*{Homework6}
+
+\hspace*{\fill}
+
+\noindent\textcolor{blue}{1. Size and distance in de Sitter space}
+
+\noindent An $\Omega=1$ Universe that contains only a false vacuum expands exponentially as $R\left(t\right)/R_{0}=\exp\left\{H_{0}\left(t-t_{0}\right)\right\}$ and is spatially flat with $k=0$. It is often called `de Sitter space'.
+
+\hspace*{\fill}
+
+\noindent\textcolor{purple}{(a)} Derive an expression for $s\left(\omega\right)$ to an object at redshift $z$. This is the quantity that is used in calculating the brightnesses and angular sizes of objects in such a Universe.
+
+\noindent Hint: You can use the following equation:
+\begin{equation}
+\symup{c}\d{}t=-R\left(t\right)\d{}\omega\tag{1}
+\end{equation}
+to determine $\d{}\omega/\d{}z$ and thus $\omega\left(z\right)$. Also, for a spatially flat universe $s\left(\omega\right)=\omega$. Finally, in a flat geometry the angles of triangles are well-behaved.
+
+\hspace*{\fill}
+
+\noindent\textcolor{purple}{Solution}
+\begin{align}
+R\left(t\right)&=R_{0}\symup{e}^{H_{0}\left(t-t_{0}\right)},\tag{1}\\
+\dot{R}\left(t\right)&=H_{0}R\left(t\right)=H_{0}R_{0}\symup{e}^{H_{0}\left(t-t_{0}\right)}.\tag{2}\\
+z\left(t\right)&=\frac{R_{0}}{R\left(t\right)}-1=\frac{1}{\symup{e}^{H_{0}\left(t-t_{0}\right)}}-1.\tag{3}\\
+\frac{\d{}z}{\d{}t}&=-H_{0}\symup{e}^{-H_{0}\left(t-t_{0}\right)}=-H_{0}R_{0}/R\left(t\right),\tag{4}\\
+\frac{\d{}\omega}{\d{}z}&=\frac{\d{}\omega}{\d{}t}\frac{\d{}t}{\d{}z}=\frac{\symup{c}}{R\left(t\right)}\frac{R\left(t\right)}{H_{0}R_{0}}=\frac{\symup{c}}{H_{0}R_{0}}.\tag{5}\\
+\omega&=\frac{\symup{c}z}{H_{0}R_{0}}.\tag{6}\\
+k&=0, s\left(\omega\right)=\omega=\frac{\symup{c}z}{H_{0}R_{0}}.\tag{7}
+\end{align}
+
+\hspace*{\fill}
+
+\noindent\textcolor{purple}{(b)} What is the angular size (as seen by us) of a $\qty{1}{kpc}$ rod (placed perpendicular to the line of sight) as a function of redshift? Show your result in a plot.
+
+\noindent Hint: The expansion of the universe will not change shapes or angles as the universe expands, so it is easiest to think of this in terms of the comoving size of the rod at different redshifts and the comoving distance to those redshifts.
+
+\hspace*{\fill}
+
+\noindent\textcolor{purple}{Solution}
+
+Comoving distance
+\begin{equation}
+\chi=\int_{t}^{t_{0}}\frac{\symup{c}}{R\left(t'\right)}\d{}t'=\int_{0}^{z}\frac{\symup{c}}{H\left(z'\right)}\d{}z'.\tag{1}
+\end{equation}
+In de Sitter space, $H\left(z\right)=\dfrac{\dot{R}}{R}=H_{0}$,
+\begin{equation}
+\chi=\frac{\symup{c}z}{H_{0}}.\tag{2}
+\end{equation}
+And the angular size euqals
+\begin{equation}
+\theta=\frac{lR_{0}/R}{\chi}=\qty{1}{kpc}\cdot\frac{H_{0}}{\symup{c}}\cdot\frac{1+z}{z}.\tag{3}
+\end{equation}
+
+\begin{figure}[!htp]
+\centering
+\tikzset{every picture/.style={line width=0.75pt}}
+\begin{tikzpicture}[x=0.5pt, y=0.5pt, yscale=1, xscale=1]
+\draw (0, 0) -- (0, 250);
+\draw [shift={(0, 250)}, rotate=270][line width=0.75](10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0, 0) .. controls (3.31, 0.3) and (6.95, 1.4) .. (10.93, 3.29); 
+\draw (0, 0) -- (270, 0);
+\draw [shift={(270, 0)}, rotate=180][line width=0.75](10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0, 0) .. controls (3.31, 0.3) and (6.95, 1.4) .. (10.93, 3.29);
+\draw[blue, semithick, domain=5:200][samples=200] plot(\x, {50+1000/\x}); 
+\draw[black, semithick, dashed] (0, 50) -- (200, 50); 
+%Text
+\draw (-20, 250) node [anchor=north west][inner sep=0.75pt]   [align=left] {$\theta$};
+\draw (230,-20) node [anchor=north west][inner sep=0.75pt]   [align=left] {$z$};
+\draw (-110, 65) node [anchor=north west][inner sep=0.75pt]   [align=left] {$\qty{1}{kpc}\cdot\dfrac{H_{0}}{\symup{c}}$};
+\end{tikzpicture}
+\captionsetup{justification=raggedright, singlelinecheck=false}
+\caption*{}
+\label{de Sitter space}
+\end{figure}
+
+\hspace*{\fill}
+
+\noindent\textcolor{blue}{2. Distance to the horizon}
+
+\noindent In any decelerating universe, it turns out that there is a maximum comoving distance over which light can travel since the Big Bang.
+
+\hspace*{\fill}
+
+\noindent\textcolor{purple}{(a)} Repeating Question 1, derive $\omega\left(z\right)$ for the case of a spatially flat $\Omega=1$ matter-dominanted universe in which $R\left(t\right)$ follows $R\left(t\right)=R_{0}\left(\dfrac{3}{2}H_{0}t\right)^{\frac{2}{3}}$. This is often called an `Einstein-de Sitter' universe. Add the angular size of a $\qty{1}{kpc}$ rod as a function of redshift to your plot from Q1 as well.
+
+\hspace*{\fill}
+
+\noindent\textcolor{purple}{Solution}
+\begin{align}
+R\left(t\right)&=R_{0}\left(\frac{3}{2}H_{0}t\right)^{\frac{2}{3}}.\tag{1}\\
+z\left(t\right)&=\frac{R_{0}}{R\left(t\right)}-1=\left(\frac{3}{2}H_{0}t\right)^{-\frac{2}{3}}-1.\tag{2}\\
+\frac{\d{}z}{\d{}t}&=-H_{0}\left(\frac{3}{2}H_{0}t\right)^{-\frac{5}{3}}=-H_{0}\left(\frac{R\left(t\right)}{R_{0}}\right)^{-\frac{5}{2}}.\tag{3}\\
+\frac{\d{}\omega}{\d{}z}&=\frac{3\symup{c}t}{2R_{0}}=\frac{\symup{c}}{H_{0}R_{0}}\left(1+z\right)^{-\frac{3}{2}}.\tag{4}\\
+\omega&=\int_{0}^{z}\frac{\symup{c}}{H_{0}R_{0}}\left(1+z\right)^{-\frac{3}{2}}\d{}z\notag\\
+&=\frac{2\symup{c}}{H_{0}R_{0}}\left(1-\left(1+z\right)^{-\frac{1}{2}}\right).\tag{5}
+\end{align}
+Comoving distance
+\begin{equation}
+\chi=\int_{0}^{z}\frac{\symup{c}}{H\left(z'\right)}\d{}z'.\tag{6}
+\end{equation}
+In Einstein-de Sitter universe,
+\begin{align}
+H\left(z\right)&=\frac{\dot{R}}{R}=\frac{2}{3t}=H_{0}\left(1+z\right)^{\frac{3}{2}}.\tag{7}\\
+\chi&=\frac{\symup{c}}{H_{0}}\int_{0}^{z}\left(1+z'\right)^{-\frac{3}{2}}\d{}z'\notag\\
+&=\frac{2\symup{c}}{H_{0}}\left(1-\left(1+z\right)^{-\frac{1}{2}}\right).\tag{8}\\
+\theta&=\frac{l}{\chi}\left(1+z\right)=\frac{lH_{0}}{2\symup{c}}\frac{1+z}{1-\left(1+z\right)^{-\frac{1}{2}}}.\tag{9}
+\end{align}
+
+\begin{figure}[!htp]
+\centering
+\tikzset{every picture/.style={line width=0.75pt}}
+\begin{tikzpicture}[x=0.5pt, y=0.5pt, yscale=20, xscale=20]
+\draw (0, 0) -- (0, 12.5);
+\draw [shift={(0, 12.5)}, rotate=270][line width=0.75](1.093,-0.329) .. controls (0.695,-0.14) and (0.331,-0.03) .. (0, 0) .. controls (0.331, 0.03) and (0.695, 0.14) .. (1.093, 0.329); 
+\draw (0, 0) -- (13.5, 0);
+\draw [shift={(13.5, 0)}, rotate=180][line width=0.75](1.093,-0.329) .. controls (0.695,-0.14) and (0.331,-0.03) .. (0, 0) .. controls (0.331, 0.03) and (0.695, 0.14) .. (1.093, 0.329); 
+\draw[blue, semithick, domain=0.25:10][samples=200] plot(\x, {-3+(1+\x)/(1-1/(1+\x)^(0.5)}); 
+\draw[dashed] (1.25, 0) -- (1.25, 3.75);
+%Text
+\draw (-1, 12.5) node [anchor=north west][inner sep=0.75pt]   [align=left] {$\theta$};
+\draw (-8, 4.5) node [anchor=north west][inner sep=0.75pt]   [align=left] {$\qty{1}{kpc}\cdot\dfrac{27H_{0}}{8\symup{c}}$};
+\draw (11.5,-1) node [anchor=north west][inner sep=0.75pt]   [align=left] {$z$};
+\draw (0.6,-1) node [anchor=north west][inner sep=0.75pt]   [align=left] {$1.25$};
+\end{tikzpicture}
+\captionsetup{justification=raggedright, singlelinecheck=false}
+\caption*{}
+\label{model}
+\end{figure}
+
+\hspace*{\fill}
+
+\noindent\textcolor{purple}{(b)} Show that in this universe, $\omega\left(z\right)$ converges to a finite value, $\omega_{H}$, as $z$ approaches infinity. This limit is called the particle horizon and represents a limit to the ``observable universe''. Calculate the comoving volume of the currently observable Universe (over the whole sky) that lies within this horizon distance $\omega_{H}$. Again, we have a flat geometry, so $s\left(\omega\right)=\omega$ and the volume of a sphere is $4\pi\omega^{2}$.
+
+\hspace*{\fill}
+
+\noindent\textcolor{purple}{Solution}
+
+$z\to\infty$,
+\begin{align}
+\omega_{H}&=\frac{2\symup{c}}{H_{0}R_{0}}.\tag{1}\\
+V&=\frac{4}{3}\pi\omega_{H}^{3}=\frac{{3}{2}\pi\symup{c}^{3}}{3H_{0}^{3}R_{0}^{3}}.\tag{2}
+\end{align}
+
+\hspace*{\fill}
+
+\noindent\textcolor{purple}{(c)} Galaxies similar to our Milky Way Galaxy have a number density in the universe today of roughly $\qty{0.001}{Mpc^{-3}}$ (there are additionally rather more lower mass galaxies). Estimate the approximate number of galaxies similar to our own that are therefore located within our observable Universe.
+
+\hspace*{\fill}
+
+\noindent\textcolor{purple}{Solution}
+\begin{align}
+N&=nV=0.001R_{0}^{3}\qty{}{Mpc^{-3}}\frac{32\pi\symup{c}^{3}}{3H_{0}^{3}R_{0}^{3}}\notag\\
+&=0.001\times\frac{32\pi\times\left(3\times10^{5}\right)^{3}}{3\times73.4^{3}}=\qty{2.288e9}{}.\tag{1}
+\end{align}
+
+\hspace*{\fill}
+
+\noindent\textcolor{blue}{3. The critical density of the Universe}
+
+\noindent\textcolor{purple}{(a)} Starting from the Friedmann equation, show that the critical density $\rho_{\symup{c}}$ (i.e. the density at which the Universe is flat with $\Omega=1, k=0$) equals
+\begin{equation}
+\rho_{\symup{c}}=\frac{3H\left(t\right)^{2}}{8\pi\symup{G}}.\notag
+\end{equation}
+
+\hspace*{\fill}
+
+\noindent\textcolor{purple}{Solution}
+\begin{align}
+\dot{R}^{2}&=\frac{8\pi\symup{G}}{3}\rho{}R^{2}-\frac{k\symup{c}^{2}}{A^{2}}.\tag{1}\\
+H^{2}&=\frac{8\pi\symup{G}}{3}\rho_{i}-\frac{k\symup{c}^{2}}{R^{2}A^{2}},\notag\\
+\rho_{\symup{cri}}&=\frac{3H\left(t\right)^{2}}{8\pi\symup{G}}.\tag{2}
+\end{align}
+
+\hspace*{\fill}
+
+\noindent\textcolor{purple}{(b)} Assuming that the present day Hubble parameter equals $H_{0}=\qty{70}{km\cdot{}s^{-1}\cdot{}Mpc^{-1}}$, express the critical density in terms of the number of hydrogen atoms per cubic meter and in terms of $\qty{}{M_{\odot}Mpc^{-3}}$.
+
+\hspace*{\fill}
+
+\noindent\textcolor{purple}{Solution}
+\begin{align}
+\rho_{\symup{cri}}&=\frac{3H\left(t\right)^{2}}{8\pi\symup{G}}=\qty{9.2e-27}{kg\cdot{}m^{-3}}\tag{1}\\
+&=5.5m_{\ce{H}}\qty{}{m^{-3}}\tag{2}\\
+&=\qty{2.7e41}{kg\cdot{}Mpc^{-3}}\notag\\
+&=\qty{1.35e11}{M_{\odot}\cdot{}Mpc^{-3}}.\tag{3}
+\end{align}
+
+\hspace*{\fill}
+
+\noindent\textcolor{purple}{(c)} Use your answer from question (b) to calculate the actual average baryon density of the Universe given that we know that $\Omega_{\symup{baryon}}=0.04$.
+
+\hspace*{\fill}
+
+\noindent\textcolor{purple}{Solution}
+\begin{equation}
+\rho_{\symup{b}}=0.04\rho_{\symup{cri}}=\qty{3.7e-28}{kg\cdot{}m^{-3}}.\tag{1}
+\end{equation}
+
+\hspace*{\fill}
+
+\noindent\textcolor{blue}{4. Photon number density}
+
+\noindent The cosmic microwave background (CMB) radiation is characterised by a blackbody with a temperature $T=\qty{2.73}{K}$. Calculate the photon number density of these photons in the Universe. Use this answer to derive the ratio of the number of photons to the number of baryons (neutrons + protons) in the Universe.
+
+\noindent Hint: Use the fact that $\Omega_{\symup{baryon}}=0.04$ and use the Stefan-Boltzmann law, combined with average photon energy for a blackbody with $T=T_{\symup{CMB}}$.
+
+\hspace*{\fill}
+
+\noindent\textcolor{purple}{Solution}
+
+The number density of photons is
+\begin{equation}
+n=\int_{0}^{\infty}\frac{8\pi\nu^{2}}{\symup{c}^{3}}\cdot\frac{1}{\symup{e}^{\frac{h\nu}{k_{\symup{B}}T}}-1}\d{}\nu.\tag{1}
+\end{equation}
+By calculating the Riemann Zeta fuction we can obtain that
+\begin{equation}
+n_{\gamma}=\qty{411}{cm^{-3}}.\tag{2}
+\end{equation}
+Refer to question 3,
+\begin{align}
+\frac{n_{\gamma}}{n_{\symup{b}}}&=\frac{\qty{411}{}}{5.5\times10^{-6}\times0.04}\sim\qty{2e9}{}.\tag{3}
+\end{align}
+
+%\printbibliography
+\end{document}

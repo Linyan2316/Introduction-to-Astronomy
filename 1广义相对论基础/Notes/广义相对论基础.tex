@@ -2085,7 +2085,7 @@ P_{3}&=g_{3\nu}P^{\nu}=g_{33}P^{3}=r^{2}\sin^{2}{\theta}\frac{m\d\varphi}{\d\tau
 \end{align}
 通过这点我们就能得到引力红移的结果。不仅是史瓦西引力场，对稳定的引力场只要适当选取度规就能实现 $P_{0}$ 守恒。而静止观测者观测到的光子能量为
 \begin{equation}
-\frac{E_{\text{obs}}}{\symup{c}}=P^{\mu}\left(-g_{\mu\nu}u^{\nu}\right)=-P_{\nu}u^{\nu}=-\frac{P_{0}}{\sqrt{-g_{00}}}.
+\frac{E_{\symup{obs}}}{\symup{c}}=P^{\mu}\left(-g_{\mu\nu}u^{\nu}\right)=-P_{\nu}u^{\nu}=-\frac{P_{0}}{\sqrt{-g_{00}}}.
 \end{equation}
 可见测得光子能量只与观测者所在度规有关，而远离引力场的地方 $-g_{00}$ 越大，因此测得的能量越低，光子波长越大，产生引力红移。容易发现在太阳表面测起来频率为 $\nu_{0}$ 的光传播到无穷远处变为 $\nu$, 二者之比为
 \begin{equation}
@@ -2205,7 +2205,7 @@ P^{\hat{3}}=P_{\mu}\omega^{\hat{3}\mu}=P_{\mu}\omega^{\mu}_{\hat{3}}=\frac{m\wid
 \subsection{运动的分类}
 牛顿引力学中我们常会将角动量的作用看作一个势阱，相对论中同样可以引入相对论性的等效势：
 \begin{equation}
-U=2\Phi_{\text{eff}}\left(r\right)=\left(\symup{c}^{2}-\frac{2\symup{G}M}{r}\right)\left(\eta+\frac{\widetilde{L}^{2}}{\symup{c}^{2}r^{2}}\right),
+U=2\Phi_{\symup{eff}}\left(r\right)=\left(\symup{c}^{2}-\frac{2\symup{G}M}{r}\right)\left(\eta+\frac{\widetilde{L}^{2}}{\symup{c}^{2}r^{2}}\right),
 \end{equation}
 径向方程写作
 \begin{equation}
@@ -2264,23 +2264,23 @@ U=1-\frac{2}{r}+\frac{\widetilde{L}^{2}}{r^{2}}-\frac{2\widetilde{L}^{2}}{r^{3}}
 
 在 $r$ 较小的地方，$\widetilde{L}>4$ 的时候有一峰值大于 1 的势垒，在 $r$ 较大的地方有一势阱（图\ref{等效势阱。}并未绘制出，但随着 $r$ 的增大，$U$ 会回升至趋向于 1 的情形），此时三类运动都是可能发生的。随着 $\widetilde{L}$ 减小，势垒也在下降，$\widetilde{L}\le4$ 时，势垒降到 1 以下，散射态消失了。$\widetilde{L}<2\sqrt{3}$ 时，势垒也消失了，此时也没有势阱的概念了，粒子有很大可能向引力源坠落。实际上，牛顿引力论可以实现半径任意小的圆轨道，但是根据相对论的等效势不可能实现。对于
 \begin{equation}
-\Phi_{\text{eff}}\left(r\right)=\frac{\widetilde{L}^{2}}{2r^{2}}-\frac{\symup{G}M\widetilde{L}^{2}}{\symup{c}^{2}r^{3}}-\frac{\symup{G}M}{r}+\frac{1}{2}\symup{c}^{2},
+\Phi_{\symup{eff}}\left(r\right)=\frac{\widetilde{L}^{2}}{2r^{2}}-\frac{\symup{G}M\widetilde{L}^{2}}{\symup{c}^{2}r^{3}}-\frac{\symup{G}M}{r}+\frac{1}{2}\symup{c}^{2},
 \end{equation}
 对 $r$ 求导发现
 \begin{equation}
-\frac{\d\Phi_{\text{eff}}}{\d{}r}=\frac{\widetilde{L}^{2}}{r^{4}}\left(\frac{3\symup{G}M}{\symup{c}^{2}}-r\right)+\frac{\symup{G}M}{r^{2}}.
+\frac{\d\Phi_{\symup{eff}}}{\d{}r}=\frac{\widetilde{L}^{2}}{r^{4}}\left(\frac{3\symup{G}M}{\symup{c}^{2}}-r\right)+\frac{\symup{G}M}{r^{2}}.
 \end{equation}
-可见对于 $r<3\symup{G}M_{\text{BH}}/\symup{c}^{2},\dfrac{\d\Phi_{\text{eff}}}{\d{}r}>0$, 无法实现圆轨道。
+可见对于 $r<3\symup{G}M_{\symup{BH}}/\symup{c}^{2},\dfrac{\d\Phi_{\symup{eff}}}{\d{}r}>0$, 无法实现圆轨道。
 
 要实现稳定轨道，首先要求一阶导为零有解
 \begin{align}
-r^{4}\frac{\d\Phi_{\text{eff}}}{\d{}r}&=\frac{3\widetilde{L}^{2}\symup{G}M}{\symup{c}^{2}}-\widetilde{L}^{2}r+\symup{G}Mr^{2}=0,\\
+r^{4}\frac{\d\Phi_{\symup{eff}}}{\d{}r}&=\frac{3\widetilde{L}^{2}\symup{G}M}{\symup{c}^{2}}-\widetilde{L}^{2}r+\symup{G}Mr^{2}=0,\\
 \Delta&=\widetilde{L}^{4}-12\frac{\symup{G}^{2}M^{2}}{\symup{c}^{2}}\widetilde{L}^{2}>0,\\
 \widetilde{L}&>\frac{2\sqrt{3}\symup{G}M}{\symup{c}}.
 \end{align}
 这也是前文 $2\sqrt{3}$ 的来源。进一步要求二阶导大于零，
 \begin{align}
-r^{5}\frac{\d{}^{2}\Phi_{\text{eff}}}{\d{}r^{2}}&=-\frac{12\widetilde{L}^{2}\symup{G}M}{\symup{c}^{2}}+3\widetilde{L}^{2}r-2\symup{G}Mr^{2}>0.\tag{5}\\
+r^{5}\frac{\d{}^{2}\Phi_{\symup{eff}}}{\d{}r^{2}}&=-\frac{12\widetilde{L}^{2}\symup{G}M}{\symup{c}^{2}}+3\widetilde{L}^{2}r-2\symup{G}Mr^{2}>0.\tag{5}\\
 r&=\frac{-3\widetilde{L}^{2}\pm\sqrt{\left(9\widetilde{L}^{4}-96\widetilde{L}^{2}\symup{G}^{2}M^{2}/\symup{c}^{2}\right)}}{-4\symup{G}M},\notag\\
 \widetilde{L}&>\frac{2\sqrt3\symup{G}M}{\symup{c}},\notag\\
 r_{\min}&=\frac{6\symup{G}M}{\symup{c}^{2}}, r_{\max}=\frac{12\symup{G}M}{\symup{c}^{2}}.\tag{6}

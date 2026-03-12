@@ -555,10 +555,10 @@ A=\left(\alpha_{0},\delta_{0}\right),\sigma=\left(\alpha,\delta\right),\sigma'=\
 
 通过银道坐标系的例子我们可以发现坐标系间的变换无非是各种坐标变换矩阵的组合。也可以用恒星和两个坐标系第一极组成的球面三角形进行坐标转换。
 
-另外我们也可以根据北银极的赤道坐标 $\left(\alpha_{\text{G}},\delta_{\text{G}}\right)$ 和银经零点的位置角 $\theta=l_{N}+\ang{90;;}$ 来确定变换方式。通过简单的观察和具体观测 (1950.0 历元）可知
+另外我们也可以根据北银极的赤道坐标 $\left(\alpha_{\symup{G}},\delta_{\symup{G}}\right)$ 和银经零点的位置角 $\theta=l_{N}+\ang{90;;}$ 来确定变换方式。通过简单的观察和具体观测 (1950.0 历元）可知
 \begin{align}
-\alpha_{N}&=\alpha_{\text{G}}+\ang{90;;}=\ang{282.85948;;},\\
-i&=\ang{90;;}-\delta_{\text{G}}=\ang{62.87175;;},\\
+\alpha_{N}&=\alpha_{\symup{G}}+\ang{90;;}=\ang{282.85948;;},\\
+i&=\ang{90;;}-\delta_{\symup{G}}=\ang{62.87175;;},\\
 l_{N}&=\theta-\ang{90;;}=\ang{32.93192;;}.
 \end{align}
 
@@ -670,36 +670,36 @@ BJD 是 JD 经过校正以考虑地球相对于太阳系质心的位置差异。
 
 \newpage
 \section{站心坐标}
-从天体到观测者的光线因通过地球大气层而产生弯曲，观测者测得的天体位置与没有大气时不同，方向差 $\rho=z-z_{\text{obs}}$ 称为大气折射。作了大气折射改正后得到的天体坐标为站心坐标。
+从天体到观测者的光线因通过地球大气层而产生弯曲，观测者测得的天体位置与没有大气时不同，方向差 $\rho=z-z_{\symup{obs}}$ 称为大气折射。作了大气折射改正后得到的天体坐标为站心坐标。
 
 \subsection{平面平行层大气}
 我们从最简单的情况出发考虑大气折射近似公式，即认为大气层是 $N$ 个不同密度的平行平面均匀层组成。根据简单的折射定律可知
 \begin{align}
 n_{i}\sin{z_{i}}&=n_{i-1}\sin{z_{i-1}},\\
-n_{0}\sin{z_{\text{obs}}}&=\sin{z}=\sin{\left(z_{\text{obs}}+\rho\right)}.
+n_{0}\sin{z_{\symup{obs}}}&=\sin{z}=\sin{\left(z_{\symup{obs}}+\rho\right)}.
 \end{align}
 其中大气折射 $\rho$ 是小量，展开移项后得到
 \begin{equation}
-\rho=\left(n_{0}-1\right)\tan{z_{\text{obs}}}=R\tan{z_{\text{obs}}}.
+\rho=\left(n_{0}-1\right)\tan{z_{\symup{obs}}}=R\tan{z_{\symup{obs}}}.
 \end{equation}
 大气温度 $t=\qty{0}{\degreeCelsius}$, 大气压为 $H=\qty{760}{mmHg}$ 时，$R=n_{0}-1=\ang{;; 60.4}$.
 
 天顶距不太大时也可使用下面两式描述大气折射：
 \begin{align}
-\rho&=\ang{;; 60.4}\frac{\dfrac{H}{\qty{760}{mmHg}}}{1+\dfrac{t}{\qty{273}{K}}}\tan{z_{\text{obs}}}.\\
-\rho&=\ang{;; 21.3}\frac{\dfrac{H}{\unit{mmHg}}\left(1+\dfrac{0.00567}{\lambda^{2}}\right)}{\dfrac{t}{\unit{K}}+273}\tan{z_{\text{obs}}}.
+\rho&=\ang{;; 60.4}\frac{\dfrac{H}{\qty{760}{mmHg}}}{1+\dfrac{t}{\qty{273}{K}}}\tan{z_{\symup{obs}}}.\\
+\rho&=\ang{;; 21.3}\frac{\dfrac{H}{\unit{mmHg}}\left(1+\dfrac{0.00567}{\lambda^{2}}\right)}{\dfrac{t}{\unit{K}}+273}\tan{z_{\symup{obs}}}.
 \end{align}
 其中 $\lambda$ 是以微米为单位的波长。
 
-现在我们可以考虑大气折射引起的恒星位移。向点 $A$ 显然是天顶 $Z$, 记地理纬度 $\varphi$, 任一恒星赤道坐标观测值 $\sigma\left(\alpha,\delta\right)$, 时角为 $t$, 则天顶赤道坐标为 $\left(\alpha+t,\varphi\right)$. 改正是从 $z_{\text{obs}}$ 向 $z$ 移动，$k$ 取正值，因此 $\d\theta=\rho=z-z_{\text{obs}}=k\sin{\theta}=k\sin{z_{\text{obs}}}=R\tan{z_{\text{obs}}}$, 简单计算可知
+现在我们可以考虑大气折射引起的恒星位移。向点 $A$ 显然是天顶 $Z$, 记地理纬度 $\varphi$, 任一恒星赤道坐标观测值 $\sigma\left(\alpha,\delta\right)$, 时角为 $t$, 则天顶赤道坐标为 $\left(\alpha+t,\varphi\right)$. 改正是从 $z_{\symup{obs}}$ 向 $z$ 移动，$k$ 取正值，因此 $\d\theta=\rho=z-z_{\symup{obs}}=k\sin{\theta}=k\sin{z_{\symup{obs}}}=R\tan{z_{\symup{obs}}}$, 简单计算可知
 \begin{align}
-k&=R\sec{z_{\text{obs}}}.\\
+k&=R\sec{z_{\symup{obs}}}.\\
 \alpha'-\alpha&=k\sec{\delta}\cos{\varphi}\sin{\left(-t\right)},\\
 \delta'-\delta&=k\left[\sin{\delta}\cos{\varphi}\cos{\left(-t\right)}-\cos{\delta}\sin{\varphi}\right].
 \end{align}
 接着在球面三角形 $\Delta{}PZ\sigma$ 中我们可以得到
 \begin{equation}
-\cos{z_{\text{obs}}}=\sin{\varphi}\sin{\delta}+\cos{\varphi}\cos{\delta}\cos{t},
+\cos{z_{\symup{obs}}}=\sin{\varphi}\sin{\delta}+\cos{\varphi}\cos{\delta}\cos{t},
 \end{equation}
 因此
 \begin{align}
@@ -772,7 +772,7 @@ S_{0}=\begin{pmatrix}
 \draw (220, 200) node {$\sigma'$};
 \draw (-20, 240) node {$A$};
 \draw (20, 60) node {$\theta$};
-\draw (20, 180) node {$z_{\text{obs}}$};
+\draw (20, 180) node {$z_{\symup{obs}}$};
 \draw (120, 250) node {$\theta$};
 \draw (150, 220) node {$\psi$};
 \end{tikzpicture}
@@ -822,8 +822,8 @@ S_{0}=\begin{pmatrix}
 \begin{align}
 n_{i+1}\sin{\psi_{i+1}}&=n_{i}\sin{\chi},\\
 \frac{\sin{\chi}}{r_{i}}&=\frac{\sin{\psi_{i}}}{r_{i+1}},\\
-r_{i+1}n_{i+1}\sin{\psi_{i+1}}&=r_{i}n_{i}\sin{\psi_{i}}=r_{0}n_{0}\sin{z_{\text{obs}}},\\
-\tan{\psi}&=\frac{r_{0}n_{0}\sin{z_{\text{obs}}}}{\sqrt{r^{2}n^{2}-r_{0}^{2}n_{0}^{2}\sin^{2}{z_{\text{obs}}}}}.
+r_{i+1}n_{i+1}\sin{\psi_{i+1}}&=r_{i}n_{i}\sin{\psi_{i}}=r_{0}n_{0}\sin{z_{\symup{obs}}},\\
+\tan{\psi}&=\frac{r_{0}n_{0}\sin{z_{\symup{obs}}}}{\sqrt{r^{2}n^{2}-r_{0}^{2}n_{0}^{2}\sin^{2}{z_{\symup{obs}}}}}.
 \end{align}
 微分 $rn\sin{\psi}=\symup{const}$ 得到
 \begin{align}
@@ -833,11 +833,11 @@ r_{i+1}n_{i+1}\sin{\psi_{i+1}}&=r_{i}n_{i}\sin{\psi_{i}}=r_{0}n_{0}\sin{z_{\text
 \end{align}
 积分就可得到大气折射引起的天顶距的变化，
 \begin{equation}
-\rho'=\int_{M}^{\sigma'}\d{}z=\int_{1}^{n_{0}}\frac{r_{0}n_{0}\sin{z_{\text{obs}}}}{n\sqrt{r^{2}n^{2}-r_{0}^{2}n_{0}^{2}\sin^{2}{z_{\text{obs}}}}}\d{}n.\label{2.2.8}
+\rho'=\int_{M}^{\sigma'}\d{}z=\int_{1}^{n_{0}}\frac{r_{0}n_{0}\sin{z_{\symup{obs}}}}{n\sqrt{r^{2}n^{2}-r_{0}^{2}n_{0}^{2}\sin^{2}{z_{\symup{obs}}}}}\d{}n.\label{2.2.8}
 \end{equation}
 之所以加角标是因为，$\rho'$ 还不是真正的大气折射。$\rho'$ 是 $M\sigma$ 和 $\sigma'$ 处光线切线 $A\sigma'$ 的夹角，$\rho$ 是 $M\sigma$ 和 $M\sigma'$ 的夹角，$\rho=\rho'-\angle{M\sigma'A}$. 现在我们先认为 $\rho=\rho'$.
 
-现在的问题是我们不知道 $r$ 和 $n$ 的具体关系，只能作一些假设。首先令 $r=r_{0}+h$, 顺便记 $z_{\text{obs}}=z_{0}$, (\ref{2.2.8}) 式转化为
+现在的问题是我们不知道 $r$ 和 $n$ 的具体关系，只能作一些假设。首先令 $r=r_{0}+h$, 顺便记 $z_{\symup{obs}}=z_{0}$, (\ref{2.2.8}) 式转化为
 \begin{equation}
 \rho=n_{0}\sin{z_{0}}\int_{1}^{n_{0}}\frac{\d{}n}{n\sqrt{\left(1+\dfrac{h}{r_{0}}^{2}\right)n^{2}-n_{0}^{2}\sin^{2}{z_{0}}}},
 \end{equation}
@@ -1733,10 +1733,10 @@ x\cos{\varphi_{0}}\cos{\lambda_{0}}-y\cos{\varphi_{0}}\sin{\lambda_{0}}+\sin{\va
 \section{恒星的运动}
 如果恒星全部静止不动，经过章动和岁差改正后我们已经得到了星表历元太阳系质心平赤道坐标。但实际上恒星相对太阳有速度，这会引起坐标位移，且这种位移随观测历元和定向历元发生改变。为此我们需要研究恒星的运动。确定恒星的自行后，对观测历元太阳系质心真赤道坐标系坐标进行章动改正后可得观测历元太阳系质心平赤道坐标系坐标，再进行岁差和自行改正可得星表历元太阳系质心平赤道坐标系坐标。
 
-记恒星速度为 $\vec{V}$, 恒星方向单位矢量 $\vec{S}$, 可见视向速度 $\vec{V}_{r}$ 和切向速度 $\vec{V}_{\text{T}}$ 满足
+记恒星速度为 $\vec{V}$, 恒星方向单位矢量 $\vec{S}$, 可见视向速度 $\vec{V}_{r}$ 和切向速度 $\vec{V}_{\symup{T}}$ 满足
 \begin{align}
 \vec{V}_{r}&=\left(\vec{V}\cdot\vec{S}\right)\vec{S}, V_{r}=V\sin{\theta}=\frac{\d{}r}{\d{}t},\\
-\vec{V}_{\text{T}}&=\left(\vec{S}\times\vec{V}\right)\times\vec{S}, V_{\text{T}}=V\cos{\theta}=r\frac{\d\theta}{\d{}t}.
+\vec{V}_{\symup{T}}&=\left(\vec{S}\times\vec{V}\right)\times\vec{S}, V_{\symup{T}}=V\cos{\theta}=r\frac{\d\theta}{\d{}t}.
 \end{align}
 过太阳作恒星速度矢量的垂线，天体方向单位矢量与垂线的夹角为 $\theta$, 具体如图\ref{恒星速度。}所示。
 \begin{figure}[!htp]
@@ -1795,11 +1795,11 @@ r=\frac{\qty{1}{AU}}{\pi},
 \end{equation}
 切向速度为
 \begin{equation}
-V_{\text{T}}=\qty{1}{AU}\cdot\frac{\mu}{\pi},
+V_{\symup{T}}=\qty{1}{AU}\cdot\frac{\mu}{\pi},
 \end{equation}
-如果取 $\pi$ 单位为角秒，$\mu$ 单位为角秒每年，$V_{\text{T}}$ 单位为 $\unit{km\cdot{}s^{-1}}$, 并令字母仅代表数值，则
+如果取 $\pi$ 单位为角秒，$\mu$ 单位为角秒每年，$V_{\symup{T}}$ 单位为 $\unit{km\cdot{}s^{-1}}$, 并令字母仅代表数值，则
 \begin{equation}
-V_{\text{T}}=4.74\frac{\mu}{\pi}.
+V_{\symup{T}}=4.74\frac{\mu}{\pi}.
 \end{equation}
 
 时间单位用年表示的恒星自行被称为恒星的周年自行，也称总自行。它沿赤经和赤纬方向分解为赤经周年自行 $\mu_{\alpha}$ 和赤纬周年自行 $\mu_{\delta}$. 考虑天极 $P$, 位移前的恒星 $\sigma$, 位移后的恒星 $\sigma'$, 记 $\angle{P\sigma\sigma'}$ 为位置角 $\varphi$, 自行是个小量，可认为赤经方向运动了 $\mu\d{}t\sin{\varphi}$, 赤纬方向运动了 $\mu\d{}t\cos{\varphi}$. 由于赤经方向的变化位于小圆上，而小圆的半径是 $\cos{\delta}$ 而非大圆的单位一，因此赤经变化和赤经方向实际的角度变化有偏差，
@@ -1985,9 +1985,9 @@ h^{\prime\prime}=\frac{nV_{\odot}\,\unit{km}}{r}=\frac{nV_{\odot}\,\unit{km}}{\q
 
 为了确定 $\mu_{s}$, 考虑太阳本动对切向速度的影响
 \begin{equation}
-V_{\text{T}}'=V_{\odot}\sin{\lambda},
+V_{\symup{T}}'=V_{\odot}\sin{\lambda},
 \end{equation}
-根据数值关系 $V_{\text{T}}=4.74\dfrac{\mu}{\pi}$ 可得
+根据数值关系 $V_{\symup{T}}=4.74\dfrac{\mu}{\pi}$ 可得
 \begin{equation}
 \mu_{s}=\frac{V_{\odot}\pi\sin{\lambda}}{4.74}=h\sin{\lambda}.
 \end{equation}
