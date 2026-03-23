@@ -1,0 +1,77 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{LinyanPreamble}[2026/03/23 Custom LaTeX style package for XeLaTeX]
+
+% 字体设置
+\RequirePackage{anyfontsize, unicode-math, mathrsfs, xcolor}
+\setCJKmainfont[AutoFakeBold, AutoFakeSlant]{LXGW WenKai}
+\setCJKmonofont[AutoFakeBold, AutoFakeSlant]{MapleMono-CN-Regular}
+\setCJKsansfont[AutoFakeBold, AutoFakeSlant]{LXGW WenKai}
+\setmainfont[AutoFakeBold, AutoFakeSlant]{LXGW WenKai}
+\setmonofont[AutoFakeBold, AutoFakeSlant]{MapleMono-CN-Regular}
+\setsansfont[AutoFakeBold, AutoFakeSlant]{LXGW WenKai}
+\setmathfont{Latin Modern Math}
+\setmathrm{Latin Modern Math}
+
+% 数学、物理与化学宏包
+\RequirePackage{amsmath, amsthm, cases, fixdif}
+\RequirePackage{siunitx, keyval, physics2, tensor}
+\RequirePackage[version=4]{mhchem}
+
+\DeclareSIUnit\angstrom{Å}
+\usephysicsmodule{ab, ab.braket}
+\letdif*{\dr}{delta}
+\letdif*{\laplacian}{Delta}
+\letdif*{\nabla}{nabla}
+\letdif*{\mdlgwhtsquare}{mdlgwhtsquare}
+
+% 图表与其他排版宏包
+\RequirePackage{graphicx, tikz, caption, subcaption} 
+\RequirePackage[flushleft]{threeparttable}
+\RequirePackage{indentfirst}
+
+% 交叉引用与书签
+\RequirePackage{hyperref, bookmark}
+
+% 章节与公式编号格式修改
+\ctexset{section={format=\bfseries\zihao{4}\flushleft}}
+\renewcommand\thesubsection{\thesection.\arabic{subsection}}
+\numberwithin{equation}{subsection}
+\renewcommand\theequation{\thesubsection.\arabic{equation}}
+
+\makeatletter
+\renewcommand{\maketag@@@}[1]{\hbox{\m@th\normalsize\normalfont#1}}%
+\makeatother
+
+% 代码格式
+\RequirePackage{listings}
+\lstset{
+       basicstyle      =    \zihao{-5}\ttfamily,
+       numberstyle     =    \zihao{-5}\ttfamily,
+       keywordstyle    =    \color{blue},
+       keywordstyle    =    [2]\color{teal},
+       stringstyle     =    \color{magenta},
+       commentstyle    =    \color{red}\ttfamily,
+       breaklines      =    true,     % 自动换行
+       columns         =    fixed,    % 固定字间距
+       flexiblecolumns,               % 别问为什么，加上这个
+       numbers         =    left,     % 行号的位置在左边
+       showspaces      =    false,    % 是否显示空格
+       showstringspaces=    false,
+       captionpos      =    t,        % 这段代码的名字所呈现的位置，t 指的是 top 上面
+       frame           =    lrtb,     % 显示边框
+}
+
+\lstdefinestyle{Python}{
+       language        =    Python,
+       basicstyle      =    \zihao{-5}\ttfamily,
+       numberstyle     =    \zihao{-5}\ttfamily,
+       keywordstyle    =    \color{blue},
+       keywordstyle    =    [2]\color{teal},
+       stringstyle     =    \color{magenta},
+       commentstyle    =    \color{red}\ttfamily,
+       breaklines      =    true,     % 自动换行，建议不要写太长的行
+       columns         =    fixed,    % 如果不加这一句，字间距就不固定
+       basewidth       =    0.5em,
+}
+
+\endinput % 结束宏包读取

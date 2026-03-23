@@ -1,76 +1,20 @@
 % TeX Live 2026 XeLaTeX
+% 页面和边距设置
 \documentclass[UTF8, 12pt, a4paper, oneside, onecolumn, fontset=none]{ctexart}
-\usepackage{anyfontsize}
 \usepackage{geometry}
 \geometry{left=1.5cm, right=1.5cm, top=1.8cm, bottom=0.9cm}
 
-\usepackage{unicode-math, mathrsfs, xcolor, inputenc}
+\usepackage{LinyanPreamble}
+
+% 颜色设置
 \definecolor{pagecolor}{HTML}{C7EDCC}
 \pagecolor{pagecolor}
-\setCJKmainfont[AutoFakeBold, AutoFakeSlant]{LXGW WenKai}
-\setCJKmonofont[AutoFakeBold, AutoFakeSlant]{MapleMono-CN-Regular}
-\setCJKsansfont[AutoFakeBold, AutoFakeSlant]{LXGW WenKai}
-\setmainfont[AutoFakeBold, AutoFakeSlant]{LXGW WenKai}
-\setmonofont[AutoFakeBold, AutoFakeSlant]{MapleMono-CN-Regular}
-\setsansfont[AutoFakeBold, AutoFakeSlant]{LXGW WenKai}
-\setmathfont{Latin Modern Math}
-\setmathrm{Latin Modern Math}
-
-\usepackage{amsmath, amsthm, cases, graphicx, subfigure, tikz, caption, subcaption, siunitx, keyval, physics2, tensor, fixdif}
-\DeclareSIUnit\angstrom{Å}
-\usephysicsmodule{ab, ab.braket}
-\letdif*{\dr}{delta}
-\letdif*{\laplacian}{Delta}
-\letdif*{\nabla}{nabla}
-\letdif*{\mdlgwhtsquare}{mdlgwhtsquare}
-\usepackage[version=4]{mhchem}
-\usepackage[flushleft]{threeparttable}
-\usepackage{hyperref, bookmark}
 \hypersetup{colorlinks=true, urlcolor=blue, filecolor=blue, linkcolor=blue}
+
+% 文献引用设置
 \usepackage[backend=biber, sorting=none, style=authoryear, natbib=true]{biblatex}
 \addbibresource{/Users/Linyan/Database/Zotero/AllBibTeX.bib}
 %\addbibresource{/home/linyan/Database/Zotero/AllBibTeX.bib}
-
-\ctexset{section={format=\bfseries\zihao{4}\flushleft}}
-\renewcommand\thesubsection{\thesection.\arabic{subsection}}
-\numberwithin{equation}{subsection}
-\renewcommand\theequation{\thesubsection.\arabic{equation}}
-\makeatletter
-\renewcommand{\maketag@@@}[1]{\hbox{\m@th\normalsize\normalfont#1}}%
-\makeatother
-\usepackage{indentfirst}
-
-\usepackage{listings}
-\lstset{
-       basicstyle      =    \zihao{-5}\ttfamily,
-       numberstyle     =    \zihao{-5}\ttfamily,
-       keywordstyle    =    \color{blue},
-       keywordstyle    =    [2]\color{teal},
-       stringstyle     =    \color{magenta},
-       commentstyle    =    \color{red}\ttfamily,
-       breaklines=true,     % 自动换行
-       columns=fixed,       % 固定字间距
-       flexiblecolumns,     % 别问为什么，加上这个
-       numbers         =    left,% 行号的位置在左边
-       showspaces      =    false,% 是否显示空格
-       numberstyle     =    \zihao{-5}\ttfamily,% 行号的样式，小五号，tt 等宽字体
-       showstringspaces=    false,
-       captionpos      =    t,% 这段代码的名字所呈现的位置，t 指的是 top 上面
-       frame           =    lrtb,% 显示边框
-}
-
-\lstdefinestyle{Python}{
-       language        =    Python,
-       basicstyle      =    \zihao{-5}\ttfamily,
-       numberstyle     =    \zihao{-5}\ttfamily,
-       keywordstyle    =    \color{blue},
-       keywordstyle    =    [2]\color{teal},
-       stringstyle     =    \color{magenta},
-       commentstyle    =    \color{red}\ttfamily,
-       breaklines      =    true,% 自动换行，建议不要写太长的行
-       columns         =    fixed,% 如果不加这一句，字间距就不固定
-       basewidth       =    0.5em,
-}
 
 \title{天体物理基础}
 \author{林衍}
