@@ -4,13 +4,15 @@
 
 此项目还是 demo 版本，尚未注明图片来源，可能有版权风险，请注意。
 
-除却页面和边距、颜色、文献引用设置，其余模版设置放在 Preamble 文件夹中。你也可以将其放在本地自定义宏包存放文件夹中使用，该文件夹可通过在 terminal 中输入
+除却页面和边距、颜色、文献引用设置，其余模版设置放在 Preamble 文件夹中。你也可以将其放在本地自定义宏包存放文件夹中使用。首先在 terminal 中输入
 ```shell
 kpsewhich -var-value=TEXMFLOCAL
 ```
-确定。
-
-你可能需要根据模版设置安装必要的字体。
+确定 texmf-local 文件夹所在路径，然后将宏包存放于 texmf-local/tex/latex/local 文件夹中，最后在 terminal 中输入
+```shell
+texhash
+```
+更新自定义宏包。此外，你可能需要根据模版设置安装必要的字体。
 ```shell
 brew install font-lxgw-wenkai
 brew install font-maple-mono-cn
