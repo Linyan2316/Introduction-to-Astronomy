@@ -47,11 +47,11 @@ pass 这部分时标可能有点问题。
 
 我们用一个指标 $T_{10}$ 来描述某一温度 $T_{10}\times\qty{e10}{K}$ 对应的宇宙年龄 $\tau$ 和反应时标。由于
 \begin{equation}
-\frac{a}{a_{0}}=\left(\frac{32\pi\symup{G}}{3\symup{c}^{2}}U_{0}\right)^{\frac{1}{4}}\tau^{\frac{1}{2}},
+\frac{a}{a_{0}}=\mleft(\frac{32\pi\symup{G}}{3\symup{c}^{2}}U_{0}\mright)^{\frac{1}{4}}\tau^{\frac{1}{2}},
 \end{equation}
 因此
 \begin{equation}
-\tau=\left(\frac{32\pi\symup{G}}{3\symup{c}^{2}}U\right)^{-\frac{1}{2}}\sim T_{10}^{-2}\,\unit{s}.
+\tau=\mleft(\frac{32\pi\symup{G}}{3\symup{c}^{2}}U\mright)^{-\frac{1}{2}}\sim T_{10}^{-2}\,\unit{s}.
 \end{equation}
 
 如同化学反应一样，物质湮灭和转化的速率依赖于温度和数密度，但宇宙在不断膨胀，如果膨胀速率超过了反应速率，物质间将不再能相互作用，便会维持最后的相对占比，我们称其为 freeze out.
@@ -83,19 +83,19 @@ Sunyaev-Zel'dovich 效应：CMB 光子被星系团热气体中高能电子散射
 
 光子持续和电子发生康普顿散射，使 $T_{\mathrm{matter}}\sim{}T_{\mathrm{rad}}$, 直到 $z\sim1500$ 温度小于 $\qty{13.6}{eV}$. 引入电离度
 \begin{equation}
-\chi\left(z\right)=\qty{3.4e-3}{}\frac{\left(\Omega_{\mathrm{m}}h_{70}^{2}\right)^{\frac{1}{2}}}{\Omega_{\mathrm{b}}h_{70}^{2}}\left(\frac{z}{1000}\right)^{12.75}=0.04\left(\frac{z}{1000}\right)^{12.75},
+\chi\mleft(z\mright)=\qty{3.4e-3}{}\frac{\mleft(\Omega_{\mathrm{m}}h_{70}^{2}\mright)^{\frac{1}{2}}}{\Omega_{\mathrm{b}}h_{70}^{2}}\mleft(\frac{z}{1000}\mright)^{12.75}=0.04\mleft(\frac{z}{1000}\mright)^{12.75},
 \end{equation}
 计算光深
 \begin{equation}
-\tau\left(z\right)=\int_{0}^{z}n_{{\color{blue}{\ce{e}}}}\left(z\right)\chi\left(z\right)\sigma_{\mathrm{T}}\frac{\d{}l}{\d{}z}\d{}z.
+\tau\mleft(z\mright)=\int_{0}^{z}n_{{\color{blue}{\ce{e}}}}\mleft(z\mright)\chi\mleft(z\mright)\sigma_{\mathrm{T}}\frac{\d{}l}{\d{}z}\d{}z.
 \end{equation}
 $n_{{\color{blue}{\ce{e}}}}$ 和 $\dfrac{\d{}l}{\d{}z}$ 依赖于 $\Omega_{\mathrm{b}},\Omega_{\mathrm{m}}$ 和 $h_{70}^{2}$, 因此积分结果最后只和 $z$ 有关
 \begin{equation}
-\tau\left(z\right)=0.37\left(\frac{z}{1000}\right)^{14.25}.
+\tau\mleft(z\mright)=0.37\mleft(\frac{z}{1000}\mright)^{14.25}.
 \end{equation}
 散射概率为 $P=\symup{e}^{-\tau}$, 最终散射概率密度分布为
 \begin{equation}
-P'\left(z\right)\d{}z=-\frac{\d{}P}{\d{}z}\d{}z=\symup{e}^{-\tau}\frac{\d\tau}{\d{}z}\d{}z.
+P'\mleft(z\mright)\d{}z=-\frac{\d{}P}{\d{}z}\d{}z=\symup{e}^{-\tau}\frac{\d\tau}{\d{}z}\d{}z.
 \end{equation}
 这近似高斯分布，峰值 $z=1065,\sigma_{z}\sim80$, 大部分 CMB 光子来自 $950<z<1100$, 大约大爆炸后 37 万年。值得注意的是此时电离度只有 0.09. 其功率峰值粗略对应于光子{}-{}重子流体脱耦时的振荡特征。峰值位置反映了宇宙曲率，重子密度，暗物质密度。再电离时期对 CMB 光深的贡献只有 0.06. CMB $10^{-5}$ 级别的波动告诉我们绝热扰动、多普勒运动和引力红移的影响，角度 $\ang{1;;}$ 时候扰动最大，因此现在观察 CMB 背景可以看到角距离 $\ang{1;;}$ 的峰值和峰谷。
 
@@ -139,15 +139,15 @@ P'\left(z\right)\d{}z=-\frac{\d{}P}{\d{}z}\d{}z=\symup{e}^{-\tau}\frac{\d\tau}{\
 
 张量扰动能影响 CMB 偏振全部分量，标量扰动只能影响部分。
 
-我们可以想办法描述这种振荡的演化。定义扰动场 $\delta\left(\vec{x}\right)$, 进行 Fourier 变换
+我们可以想办法描述这种振荡的演化。定义扰动场 $\delta\mleft(\vec{x}\mright)$, 进行 Fourier 变换
 \begin{align}
-\delta\left(\vec{x}\right)&=\frac{1}{\left(2\pi\right)^{\frac{3}{2}}}\int\delta\left(\vec{k}\right)\symup{e}^{-i\symbf{k}\cdot\symbf{x}}\d{}^{3}\vec{k}.\\
-\delta\left(\vec{k}\right)&=\frac{1}{\left(2\pi\right)^{\frac{3}{2}}}\int\delta\left(\vec{x}\right)\symup{e}^{i\symbf{k}\cdot\symbf{x}}\d{}^{3}\vec{x}.
+\delta\mleft(\vec{x}\mright)&=\frac{1}{\mleft(2\pi\mright)^{\frac{3}{2}}}\int\delta\mleft(\vec{k}\mright)\symup{e}^{-i\symbf{k}\cdot\symbf{x}}\d{}^{3}\vec{k}.\\
+\delta\mleft(\vec{k}\mright)&=\frac{1}{\mleft(2\pi\mright)^{\frac{3}{2}}}\int\delta\mleft(\vec{x}\mright)\symup{e}^{i\symbf{k}\cdot\symbf{x}}\d{}^{3}\vec{x}.
 \end{align}
 定义物质扰动满足
 \begin{align}
-&\frac{\delta\rho}{\rho_{0}}=\delta\left(t\right)\symup{e}^{i\symbf{k}\cdot\symbf{r}}.\\
-&\frac{\d{}^{2}\delta}{\d{}t^{2}}+2\left(\frac{\dot a}{a}\right)\frac{\d\delta}{\d{}t}-\delta\left(4\pi\symup{G}\rho_{0}-k^{2}\symup{c}_{\mathrm{s}}^{2}\right)=0.\label{6.5.4}
+&\frac{\delta\rho}{\rho_{0}}=\delta\mleft(t\mright)\symup{e}^{i\symbf{k}\cdot\symbf{r}}.\\
+&\frac{\d{}^{2}\delta}{\d{}t^{2}}+2\mleft(\frac{\dot a}{a}\mright)\frac{\d\delta}{\d{}t}-\delta\mleft(4\pi\symup{G}\rho_{0}-k^{2}\symup{c}_{\mathrm{s}}^{2}\mright)=0.\label{6.5.4}
 \end{align}
 
 对于小扰动，忽略声波，考虑纯物质宇宙
@@ -164,7 +164,7 @@ n_{1}=\frac{2}{3}, n_{2}=-1.
 \end{equation}
 只有 $\dfrac{2}{3}$ 符合物理。因此
 \begin{equation}
-\delta_{k}=\delta_{k, 0}\left(\frac{t}{t_{0}}\right)^{\frac{2}{3}}=\delta_{k, 0}\left(\frac{a}{a_{0}}\right).
+\delta_{k}=\delta_{k, 0}\mleft(\frac{t}{t_{0}}\mright)^{\frac{2}{3}}=\delta_{k, 0}\mleft(\frac{a}{a_{0}}\mright).
 \end{equation}
 
 曲率为主的宇宙，
@@ -175,11 +175,11 @@ n_{1}=\frac{2}{3}, n_{2}=-1.
 
 辐射主导时，
 \begin{equation}
-\frac{\d{}^{2}\delta}{\d{}t^{2}}+2\left(\frac{\dot a}{a}\right)\frac{\d\delta}{\d{}t}-\delta\left(\frac{32}{3}\pi\symup{G}\rho-k^{2}\symup{c}_{\mathrm{s}}^{2}\right)=0.
+\frac{\d{}^{2}\delta}{\d{}t^{2}}+2\mleft(\frac{\dot a}{a}\mright)\frac{\d\delta}{\d{}t}-\delta\mleft(\frac{32}{3}\pi\symup{G}\rho-k^{2}\symup{c}_{\mathrm{s}}^{2}\mright)=0.
 \end{equation}
 考虑到 $a\propto\tau^{\frac{1}{2}}$,
 \begin{equation}
-\delta_{k}=\delta_{0}\left(\frac{a}{a_{0}}\right)^{2}.
+\delta_{k}=\delta_{0}\mleft(\frac{a}{a_{0}}\mright)^{2}.
 \end{equation}
 物质扰动不增长，因此不会坍缩，Jeans 质量会一直增长，符合之前的描述。
 

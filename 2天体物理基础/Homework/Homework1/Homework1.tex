@@ -4,7 +4,7 @@
 \usepackage{geometry}
 \geometry{left=1.5cm, right=1.5cm, top=1.8cm, bottom=0.9cm}
 
-\usepackage{LinyanPreamble}
+\usepackage{../../../Preamble/LinyanPreamble}
 
 % 颜色设置
 \definecolor{pagecolor}{HTML}{C7EDCC}
@@ -30,8 +30,8 @@
 
 Note that $F=\dfrac{L}{4\pi{}r^{2}}$, then
 \begin{align}
-M-M_{\mathrm{abs}}&=-2.5\log_{10}\left(\frac{f}{f_{\mathrm{abs}}}\right)\notag\\
-&=-2.5\log_{10}\left(\frac{\qty{10}{pc}}{\qty{50}{kpc}}\right)^{2}.\tag{1}\\
+M-M_{\mathrm{abs}}&=-2.5\log_{10}\mleft(\frac{f}{f_{\mathrm{abs}}}\mright)\notag\\
+&=-2.5\log_{10}\mleft(\frac{\qty{10}{pc}}{\qty{50}{kpc}}\mright)^{2}.\tag{1}\\
 \therefore\enspace{}M&=32.495.\tag{2}
 \end{align}
 
@@ -39,9 +39,9 @@ M-M_{\mathrm{abs}}&=-2.5\log_{10}\left(\frac{f}{f_{\mathrm{abs}}}\right)\notag\\
 
 \noindent\textcolor{blue}{2. A pinhole camera}
 
-\noindent Consider a simple pinhole camera having a small circular hole of diameter $d$ in its front face and having a film placed at a distance $L$ behind it. Show that the flux $F_{\nu}$, at the film plane is related to the incident intensity $I_{\nu}\left(\theta,\phi\right)$ at the entrance hole in the following way
+\noindent Consider a simple pinhole camera having a small circular hole of diameter $d$ in its front face and having a film placed at a distance $L$ behind it. Show that the flux $F_{\nu}$, at the film plane is related to the incident intensity $I_{\nu}\mleft(\theta,\phi\mright)$ at the entrance hole in the following way
 \begin{equation}
-F_{\nu}=\frac{\pi{}d^{2}\cos^{4}{\theta}}{4L^{2}}I_{\nu}\left(\theta,\phi\right).\notag
+F_{\nu}=\frac{\pi{}d^{2}\cos^{4}{\theta}}{4L^{2}}I_{\nu}\mleft(\theta,\phi\mright).\notag
 \end{equation}
 
 \hspace*{\fill}
@@ -58,10 +58,10 @@ F_{\nu}&=I_{\nu}\cos{\theta}\int_{\Omega}\d\Omega\notag\\
 &=I_{\nu}\cos{\theta}\int\frac{\hat{r}\cdot{}\hat{n}\d{}A}{r^{2}}.\tag{2}
 \end{align}
 
-Use $r=\dfrac{L}{\cos{\theta}}$, $\hat{r}\cdot{}\hat{n}=\cos{\theta}$ and $A=\pi\left(\dfrac{d}{2}\right)^{2}$, we can obtain that
+Use $r=\dfrac{L}{\cos{\theta}}$, $\hat{r}\cdot{}\hat{n}=\cos{\theta}$ and $A=\pi\mleft(\dfrac{d}{2}\mright)^{2}$, we can obtain that
 \begin{align}
 F_{\nu}&=I_{\nu}\cos{\theta}\frac{\cos^{3}{\theta}}{L^{2}}\int{}\d{}A\notag\\
-&=\frac{\pi{}d^{2}\cos^{4}{\theta}}{4L^{2}}I_{\nu}\left(\theta,\phi\right).\tag{3}
+&=\frac{\pi{}d^{2}\cos^{4}{\theta}}{4L^{2}}I_{\nu}\mleft(\theta,\phi\mright).\tag{3}
 \end{align}
 
 \hspace*{\fill}

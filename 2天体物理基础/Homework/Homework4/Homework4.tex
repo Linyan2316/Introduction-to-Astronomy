@@ -4,7 +4,7 @@
 \usepackage{geometry}
 \geometry{left=1.5cm, right=1.5cm, top=1.8cm, bottom=0.9cm}
 
-\usepackage{LinyanPreamble}
+\usepackage{../../../Preamble/LinyanPreamble}
 
 % 颜色设置
 \definecolor{pagecolor}{HTML}{C7EDCC}
@@ -32,10 +32,10 @@
 
 \noindent\textcolor{purple}{Solution}
 \begin{align}
-\rho\left(r, z\right)&=\rho_{0}\symup{e}^{-\frac{\left\vert{}r\right\vert}{r_{0}}}\symup{e}^{-\frac{\left\vert{}z\right\vert}{z_{0}}}.\tag{1}\\
+\rho\mleft(r, z\mright)&=\rho_{0}\symup{e}^{-\frac{\mleft\vert{}r\mright\vert}{r_{0}}}\symup{e}^{-\frac{\mleft\vert{}z\mright\vert}{z_{0}}}.\tag{1}\\
 \rho_{\odot}&=\rho_{0}\symup{e}^{-\frac{\qty{8}{kpc}}{\qty{2.5}{kpc}}}\symup{e}^{-\frac{\qty{0.025}{kpc}}{\qty{0.4}{kpc}}}=\qty{4.3e-21}{kg\cdot{}m^{-3}}.\notag\\
 \rho_{0}&=\qty{1.12e-19}{kg\cdot{}m^{-3}}.\tag{2}\\
-\Sigma\left(r\right)&=2\int_{0}^{\infty}\rho\left(r, z\right)\d{}z\notag\\
+\Sigma\mleft(r\mright)&=2\int_{0}^{\infty}\rho\mleft(r, z\mright)\d{}z\notag\\
 &=2z_{0}\rho_{0}\symup{e}^{-\frac{r}{r_{0}}}.\tag{3}
 \end{align}
 
@@ -47,8 +47,8 @@
 
 \noindent\textcolor{purple}{Solution}
 \begin{align}
-\Sigma\left(r\right)&=\rho_{\text{water}}h\left(r\right),\notag\\
-h\left(r\right)&=2z_{0}\frac{\rho_{0}}{\rho_{\text{water}}}\symup{e}^{-\frac{r}{r_{0}}}.\tag{1}
+\Sigma\mleft(r\mright)&=\rho_{\text{water}}h\mleft(r\mright),\notag\\
+h\mleft(r\mright)&=2z_{0}\frac{\rho_{0}}{\rho_{\text{water}}}\symup{e}^{-\frac{r}{r_{0}}}.\tag{1}
 \end{align}
 
 \hspace*{\fill}
@@ -60,7 +60,7 @@ h\left(r\right)&=2z_{0}\frac{\rho_{0}}{\rho_{\text{water}}}\symup{e}^{-\frac{r}{
 \noindent\textcolor{purple}{Solution}
 \begin{align}
 \Sigma_{\odot}&=\frac{M_{\odot}}{\pi{}R_{\odot}^{2}}=\qty{1.316e12}{kg\cdot{}m^{-2}}.\tag{1}\\
-\eta\left(r\right)&=1-\frac{\Sigma\left(r\right)}{\Sigma_{\odot}}=1-2.1\times10^{-12}\symup{e}^{-\frac{r}{r_{0}}}.\tag{2}
+\eta\mleft(r\mright)&=1-\frac{\Sigma\mleft(r\mright)}{\Sigma_{\odot}}=1-2.1\times10^{-12}\symup{e}^{-\frac{r}{r_{0}}}.\tag{2}
 \end{align}
 All most everywhere is empty.
 
@@ -82,8 +82,8 @@ Gauss's Law of Gravity
 \end{equation}
 here the integral is over a closed surface and $M$ is the mass enclosed in this volume.
 \begin{align}
-\oint_{S}\symbf{F}_{\mathrm{g}1}\cdot\d{}\symbf{S}&=-2F_{\mathrm{g}1}S=-4\pi\symup{G}S\left(h-z\right)\rho.\tag{2}\\
-\oint_{S}\symbf{F}_{\mathrm{g}2}\cdot\d{}\symbf{S}&=-2F_{\mathrm{g}2}S=-4\pi\symup{G}S\left(h+z\right)\rho.\tag{3}\\
+\oint_{S}\symbf{F}_{\mathrm{g}1}\cdot\d{}\symbf{S}&=-2F_{\mathrm{g}1}S=-4\pi\symup{G}S\mleft(h-z\mright)\rho.\tag{2}\\
+\oint_{S}\symbf{F}_{\mathrm{g}2}\cdot\d{}\symbf{S}&=-2F_{\mathrm{g}2}S=-4\pi\symup{G}S\mleft(h+z\mright)\rho.\tag{3}\\
 F_{\mathrm{g}}&=F_{\mathrm{g}2}-F_{\mathrm{g}1}=4\pi\symup{G}\rho{}z=kz.\tag{4}
 \end{align}
 Note that

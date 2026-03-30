@@ -4,7 +4,7 @@
 \usepackage{geometry}
 \geometry{left=1.5cm, right=1.5cm, top=1.8cm, bottom=0.9cm}
 
-\usepackage{LinyanPreamble}
+\usepackage{../../../Preamble/LinyanPreamble}
 
 % 颜色设置
 \definecolor{pagecolor}{HTML}{C7EDCC}
@@ -32,8 +32,8 @@
 
 The motions of $\ce{H2}$ molecules conform the Maxwell velocity distribution:
 \begin{align}
-f\left(v\right)\d{}v&=\left(\frac{m}{2\pi{}\symup{k}_{\mathrm{B}}T}\right)^{\frac{3}{2}}\exp\left(-\frac{mv^{2}}{2\symup{k}_{\mathrm{B}}T}\right)4\pi{}v^{2}\d{}v.\tag{1}\\
-\langle{}v^{2}\rangle&=\frac{\int_{0}^{\infty}v^{2}Nf\left(v\right)\d{}v}{N}=\frac{3\symup{k}_{\mathrm{B}}T}{m_{\ce{H2}}},\tag{2}\\
+f\mleft(v\mright)\d{}v&=\mleft(\frac{m}{2\pi{}\symup{k}_{\mathrm{B}}T}\mright)^{\frac{3}{2}}\exp\mleft(-\frac{mv^{2}}{2\symup{k}_{\mathrm{B}}T}\mright) 4\pi{}v^{2}\d{}v.\tag{1}\\
+\langle{}v^{2}\rangle&=\frac{\int_{0}^{\infty}v^{2}Nf\mleft(v\mright)\d{}v}{N}=\frac{3\symup{k}_{\mathrm{B}}T}{m_{\ce{H2}}},\tag{2}\\
 \sqrt{\langle{}v^{2}\rangle}&=\sqrt{\frac{3\symup{k}_{\mathrm{B}}T}{m_{\ce{H2}}}}=\qty{1112.7}{km\cdot{}s^{-1}}.\tag{3}
 \end{align}
 
@@ -82,7 +82,7 @@ where $T=\qty{100}{K}$.
 
 \noindent\textcolor{blue}{2. Stellar structure of two spheres}
 
-\noindent Consider two self-gravitating spheres with mass and radius $M$ and $R$. Sphere A has a uniform density and sphere B has a density that increases towards the centre as $\rho\left(r\right)=\rho_{\mathrm{c}}\left(1-r/R\right)$. Answer questions (a) and (b) for both spheres.
+\noindent Consider two self-gravitating spheres with mass and radius $M$ and $R$. Sphere A has a uniform density and sphere B has a density that increases towards the centre as $\rho\mleft(r\mright)=\rho_{\mathrm{c}}\mleft(1-r/R\mright)$. Answer questions (a) and (b) for both spheres.
 
 \hspace*{\fill}
 
@@ -104,16 +104,16 @@ U_{\text{A}}&=\int_{0}^{R}-\frac{\symup{G}M_{r\text{A}}}{r}4\pi\rho{}r^{2}\d{}r\
 For sphere B,
 \begin{align}
 M_{r\text{B}}&=\int_{0}^{r}4\pi{}r^{2}\rho_{r}\d{}r\notag\\
-&=\int_{0}^{r}4\pi{}r^{2}\rho_{\mathrm{c}}\left(1-\frac{r}{R}\right)\d{}r\notag\\
-&=4\pi\rho_{\mathrm{c}}\left(\frac{1}{3}r^{3}-\frac{1}{4}\frac{r^{4}}{R}\right).\tag{2}\\
+&=\int_{0}^{r}4\pi{}r^{2}\rho_{\mathrm{c}}\mleft(1-\frac{r}{R}\mright)\d{}r\notag\\
+&=4\pi\rho_{\mathrm{c}}\mleft(\frac{1}{3}r^{3}-\frac{1}{4}\frac{r^{4}}{R}\mright).\tag{2}\\
 M_{\text{B}}&=\frac{1}{3}\pi{}r_{\mathrm{c}}R^{3},\notag\\
 \rho_{\mathrm{c}}&=\frac{3M}{\pi R^{3}},\tag{3}
 \end{align}
 the gravitational potential energy is
 \begin{align}
 U_{\text{B}}&=\int_{0}^{R}-\frac{\symup{G}M_{r\text{B}}}{r}4\pi\rho_{r}r^{2}\d{}r\notag\\
-&=\int_{0}^{R}-16\symup{G}\pi^{2}\rho_{\mathrm{c}}^{2}\left(\frac{1}{3}r^{3}-\frac{1}{4}\frac{r^{4}}{R}\right)\left(1-\frac{r}{R}\right)r\d{}r\notag\\
-&=-16\symup{G}\pi^{2}\rho_{\mathrm{c}}^{2}\left.\left(\frac{1}{15}r^{5}-\frac{7}{72}\frac{r^{6}}{R}+\frac{1}{28}\frac{r^{7}}{R^{2}}\right)\right\vert_{0}^{R}\notag\\
+&=\int_{0}^{R}-16\symup{G}\pi^{2}\rho_{\mathrm{c}}^{2}\mleft(\frac{1}{3}r^{3}-\frac{1}{4}\frac{r^{4}}{R}\mright)\mleft(1-\frac{r}{R}\mright) r\d{}r\notag\\
+&=-16\symup{G}\pi^{2}\rho_{\mathrm{c}}^{2}\mleft.\mleft(\frac{1}{15}r^{5}-\frac{7}{72}\frac{r^{6}}{R}+\frac{1}{28}\frac{r^{7}}{R^{2}}\mright)\mright\vert_{0}^{R}\notag\\
 &=-\frac{26}{315}\symup{G}\pi^{2}\rho_{\mathrm{c}}^{2}R^{5}\notag\\
 &=-\frac{26}{35}\frac{\symup{G}M^{2}}{R}.\tag{4}
 \end{align}
@@ -129,10 +129,10 @@ U_{\text{B}}&=\int_{0}^{R}-\frac{\symup{G}M_{r\text{B}}}{r}4\pi\rho_{r}r^{2}\d{}
 For sphere A
 \begin{align}
 \frac{\d{}P}{\d{}r}&=-\frac{\symup{G}M_{r\text{A}}}{r^{2}}\rho\notag\\
-P\left(r\right)&=\int_{R}^{r}-\frac{\symup{G}M_{r\text{A}}}{r^{2}}\rho\d{}r\notag\\
+P\mleft(r\mright)&=\int_{R}^{r}-\frac{\symup{G}M_{r\text{A}}}{r^{2}}\rho\d{}r\notag\\
 &=\int_{R}^{r}-\frac{4}{3}\symup{G}\pi\rho^{2}r\d{}r\notag\\
-&=\frac{2}{3}\symup{G}\pi\rho^{2}\left(R^{2}-r^{2}\right)\notag\\
-&=\frac{3}{8}\frac{\symup{G}M^{2}}{\pi{}R^{6}}\left(R^{2}-r^{2}\right).\tag{1}
+&=\frac{2}{3}\symup{G}\pi\rho^{2}\mleft(R^{2}-r^{2}\mright)\notag\\
+&=\frac{3}{8}\frac{\symup{G}M^{2}}{\pi{}R^{6}}\mleft(R^{2}-r^{2}\mright).\tag{1}
 \end{align}
 When $r=0$,
 \begin{equation}
@@ -141,9 +141,9 @@ P_{\mathrm{c}\text{A}}=\frac{3}{8}\frac{\symup{G}M^{2}}{\pi{}R^{4}}.\tag{2}
 
 For sphere B
 \begin{align}
-P\left(r\right)&=\int_{R}^{r}-\frac{\symup{G}M_{r\text{B}}}{r^{2}}\rho_{r}\d{}r\notag\\
-&=\int_{R}^{r}-4\symup{G}\pi\rho_{\mathrm{c}}^{2}\left(\frac{1}{3}r-\frac{1}{4}\frac{r^{2}}{R}\right)\left(1-\frac{r}{R}\right)\d{}r\notag\\
-&=-\symup{G}\pi\rho_{\mathrm{c}}^{2}\left(\frac{2}{3}r^{2}-\frac{7}{9}\frac{r^{3}}{R}+\frac{1}{4}\frac{r^{4}}{R^{2}}-\frac{5}{36}R^{2}\right).\tag{3}
+P\mleft(r\mright)&=\int_{R}^{r}-\frac{\symup{G}M_{r\text{B}}}{r^{2}}\rho_{r}\d{}r\notag\\
+&=\int_{R}^{r}-4\symup{G}\pi\rho_{\mathrm{c}}^{2}\mleft(\frac{1}{3}r-\frac{1}{4}\frac{r^{2}}{R}\mright)\mleft(1-\frac{r}{R}\mright)\d{}r\notag\\
+&=-\symup{G}\pi\rho_{\mathrm{c}}^{2}\mleft(\frac{2}{3}r^{2}-\frac{7}{9}\frac{r^{3}}{R}+\frac{1}{4}\frac{r^{4}}{R^{2}}-\frac{5}{36}R^{2}\mright).\tag{3}
 \end{align}
 When $r=0$,
 \begin{equation}
@@ -167,7 +167,7 @@ P_{\mathrm{rad}}=\frac{1}{3}a_{\mathrm{B}}T^{4}=\qty{1.65e13}{W\cdot{}m^{-2}}.\t
 
 Gas pressure
 \begin{align}
-P_{\mathrm{gas}}&=\frac{\rho}{\mu{}m_{\ce{H}}}\symup{k}_{\mathrm{B}}T=\frac{\rho}{m_{\ce{H}}}\symup{k}_{\mathrm{B}}T\left(2X+\frac{3}{4}Y\right)\notag\\
+P_{\mathrm{gas}}&=\frac{\rho}{\mu{}m_{\ce{H}}}\symup{k}_{\mathrm{B}}T=\frac{\rho}{m_{\ce{H}}}\symup{k}_{\mathrm{B}}T\mleft(2X+\frac{3}{4}Y\mright)\notag\\
 &=\qty{3.22e16}{W\cdot{}m^{-2}}.\tag{2}
 \end{align}
 
@@ -191,18 +191,18 @@ Ratio
 \noindent\textcolor{purple}{Solution}
 \begin{align}
 a&=\frac{\symup{G}M_{\mathrm{Earth}}}{r^{2}}\notag\\
-M_{\mathrm{Earth}}&=\frac{a\left(\dfrac{l}{2\pi}\right)^{2}}{\symup{G}}=\qty{6e24}{kg}.\tag{1}
+M_{\mathrm{Earth}}&=\frac{a\mleft(\dfrac{l}{2\pi}\mright)^{2}}{\symup{G}}=\qty{6e24}{kg}.\tag{1}
 \end{align}
 
 \hspace*{\fill}
 
-\noindent\textcolor{purple}{(b)} Starting from the basic equation for hydrostatical support $\dfrac{\d{}P}{\d{}r}=-\dfrac{\symup{G}M\rho}{r^{2}}$, show that you can express the derivative of $\dfrac{\d{}P}{\d\tau}$ (where $\tau$ is the optical depth) simply in terms of the ratio of the surface gravity $g\left(r\right)$ and the opacity $\chi$.
+\noindent\textcolor{purple}{(b)} Starting from the basic equation for hydrostatical support $\dfrac{\d{}P}{\d{}r}=-\dfrac{\symup{G}M\rho}{r^{2}}$, show that you can express the derivative of $\dfrac{\d{}P}{\d\tau}$ (where $\tau$ is the optical depth) simply in terms of the ratio of the surface gravity $g\mleft(r\mright)$ and the opacity $\chi$.
 
 \hspace*{\fill}
 
 \noindent\textcolor{purple}{Solution}
 \begin{align}
-\frac{\d{}P}{\d\tau}=\frac{\d{}P}{\d{}r}\frac{\d{}r}{\d\tau}=\frac{\d{}P}{\d{}r}\frac{1}{\rho\chi}=\frac{g\left(r\right)}{\chi}.\tag{1}
+\frac{\d{}P}{\d\tau}=\frac{\d{}P}{\d{}r}\frac{\d{}r}{\d\tau}=\frac{\d{}P}{\d{}r}\frac{1}{\rho\chi}=\frac{g\mleft(r\mright)}{\chi}.\tag{1}
 \end{align}
 
 \hspace*{\fill}
@@ -270,21 +270,21 @@ n_{\nu}\sim n_{\ce{p}}\sim\frac{\qty{1.5}{M_{\odot}}}{m_{\ce{p}}}=\qty{1.8e57}{}
 
 \noindent\textcolor{purple}{Solution}
 \begin{equation}
-n=n_{\nu}\times\frac{\pi\times\left(\qty{0.25}{m}\right)^{2}}{4\pi\times\left(\qty{51.4}{kpc}\right)^{2}}=\qty{1.1e13}{}.\tag{1}
+n=n_{\nu}\times\frac{\pi\times\mleft(\qty{0.25}{m}\mright)^{2}}{4\pi\times\mleft(\qty{51.4}{kpc}\mright)^{2}}=\qty{1.1e13}{}.\tag{1}
 \end{equation}
 
 \hspace*{\fill}
 
 \noindent\textcolor{purple}{(c)} The neutrinos that reached Earth were found to have energies in the range $6\text{\textendash}\qty{39}{MeV}$. If the spread in arrival times was caused by neutrinos of different energies travelling at different speeds, show that the neutrino mass cannot be much more than $\qty{13}{eV}$.
 
-\noindent Hint: for a relativistic particle, use the relation $D=vt$ where $D$ is the distance, $t$ the travel time and $v=\symup{c}\sqrt{1-\dfrac{1}{\gamma^{2}}}$ the speed, with $\gamma$ the Lorentz factor. Also use the first approximation of the binomial expansion $\left(1+x\right)^{n}=1-nx$.
+\noindent Hint: for a relativistic particle, use the relation $D=vt$ where $D$ is the distance, $t$ the travel time and $v=\symup{c}\sqrt{1-\dfrac{1}{\gamma^{2}}}$ the speed, with $\gamma$ the Lorentz factor. Also use the first approximation of the binomial expansion $\mleft(1+x\mright)^{n}=1-nx$.
 
 \hspace*{\fill}
 
 \noindent\textcolor{purple}{Solution}
 \begin{align}
-\laplacian{}t&=\frac{D}{v_{1}}-\frac{D}{v_{2}}=\frac{D}{\symup{c}}\left(1-\frac{1}{2}\gamma_{1}^{-2}-1+\frac{1}{2}\gamma_{2}^{-2}\right)\notag\\
-&=\frac{D}{2}m_{0}^{2}\symup{c}^{3}\left(\frac{1}{E_{1}^{2}}-\frac{1}{E_{2}^{2}}\right)=E_{0}^{2}\frac{D}{2\symup{c}}\left(\frac{1}{E_{1}^{2}}-\frac{1}{E_{2}^{2}}\right).\tag{3}\\
+\laplacian{}t&=\frac{D}{v_{1}}-\frac{D}{v_{2}}=\frac{D}{\symup{c}}\mleft(1-\frac{1}{2}\gamma_{1}^{-2}-1+\frac{1}{2}\gamma_{2}^{-2}\mright)\notag\\
+&=\frac{D}{2}m_{0}^{2}\symup{c}^{3}\mleft(\frac{1}{E_{1}^{2}}-\frac{1}{E_{2}^{2}}\mright)=E_{0}^{2}\frac{D}{2\symup{c}}\mleft(\frac{1}{E_{1}^{2}}-\frac{1}{E_{2}^{2}}\mright).\tag{3}\\
 E_{0}&=\qty{12.93}{eV}.\tag{4}
 \end{align}
 
@@ -349,7 +349,7 @@ Note that $\dfrac{\d{}M}{\d{}t}\d{}t\propto{}t^{-1.5}t\propto{}t^{-0.5}$, then
 
 \noindent\textcolor{purple}{Solution}
 \begin{align}
-M_{\mathrm{planet}}\ge{}v_{1}M_{1}^{\frac{2}{3}}\left(\frac{T}{2\pi\symup{G}}\right)^{\frac{1}{3}}=\qty{0.7}{M_{\mathrm{Jupiter}}}.\tag{1}\\
+M_{\mathrm{planet}}\ge{}v_{1}M_{1}^{\frac{2}{3}}\mleft(\frac{T}{2\pi\symup{G}}\mright)^{\frac{1}{3}}=\qty{0.7}{M_{\mathrm{Jupiter}}}.\tag{1}\\
 r_{\mathrm{planet}}=\symup{G}M_{1}^{-1}M_{\mathrm{planet}}^{2}v_{1}^{-2}=\qty{0.047}{AU}.\tag{2}
 \end{align}
 
@@ -363,7 +363,7 @@ r_{\mathrm{planet}}=\symup{G}M_{1}^{-1}M_{\mathrm{planet}}^{2}v_{1}^{-2}=\qty{0.
 
 In fact
 \begin{equation}
-M_{\mathrm{planet}}\sin{i}=v_{1,\mathrm{obs}}M_{1}^{\frac{2}{3}}\left(\frac{T}{2\pi \symup{G}}\right)^{\frac{1}{3}}.\tag{1}
+M_{\mathrm{planet}}\sin{i}=v_{1,\mathrm{obs}}M_{1}^{\frac{2}{3}}\mleft(\frac{T}{2\pi \symup{G}}\mright)^{\frac{1}{3}}.\tag{1}
 \end{equation}
 Since the planet is observed to transit its host star, this discovery helps us limit orbital inclination $i\approx\ang{90;;}$.
 
@@ -393,8 +393,8 @@ R_{\mathrm{planet}}&\sim\sqrt{1.3\%}\times\qty{1.2}{R_{\odot}}=\qty{9.52685e7}{m
 
 \noindent\textcolor{purple}{Solution}
 \begin{align}
-\theta_{\mathrm{E}}&=\left(\frac{4\symup{G}M}{\symup{c}^{2}}\frac{D_{\mathrm{sl}}}{D_{\mathrm{lo}}D_{\mathrm{so}}}\right)^{\frac{1}{2}}\notag\\
-&=\left(\frac{4\symup{G}\times\qty{1000}{M_{\odot}}}{\symup{c}^{2}}\frac{\qty{25}{kpc}}{\qty{25}{kpc}\times\qty{50}{kpc}}\right)^{\frac{1}{2}}\notag\\
+\theta_{\mathrm{E}}&=\mleft(\frac{4\symup{G}M}{\symup{c}^{2}}\frac{D_{\mathrm{sl}}}{D_{\mathrm{lo}}D_{\mathrm{so}}}\mright)^{\frac{1}{2}}\notag\\
+&=\mleft(\frac{4\symup{G}\times\qty{1000}{M_{\odot}}}{\symup{c}^{2}}\frac{\qty{25}{kpc}}{\qty{25}{kpc}\times\qty{50}{kpc}}\mright)^{\frac{1}{2}}\notag\\
 &=\qty{6.2e-8}{}=\qty{3.55e-6}{deg}.\tag{1}
 \end{align}
 
@@ -406,7 +406,7 @@ R_{\mathrm{planet}}&\sim\sqrt{1.3\%}\times\qty{1.2}{R_{\odot}}=\qty{9.52685e7}{m
 
 \noindent\textcolor{purple}{Solution}
 \begin{align}
-&a_{\mathrm{total}}=\frac{u^{2}+2}{u\left(u^{2}+4\right)^{\frac{1}{2}}}, u=\frac{\beta}{\theta_{\mathrm{E}}},\notag\\
+&a_{\mathrm{total}}=\frac{u^{2}+2}{u\mleft(u^{2}+4\mright)^{\frac{1}{2}}}, u=\frac{\beta}{\theta_{\mathrm{E}}},\notag\\
 &a_{\mathrm{total}}<0.1,\beta<\qty{0.1}{\theta_{\mathrm{E}}}=\qty{3.55e-7}{deg}.\tag{1}
 \end{align}
 Angular velocity of the black hole
@@ -415,7 +415,7 @@ Angular velocity of the black hole
 \end{equation}
 The numbers of lensing event that occurs in a year
 \begin{equation}
-N=n_{\mathrm{BH}}\omega\cdot{}\left(2\beta\right)\cdot{}n_{\mathrm{stars}}\cdot{}\qty{40}{deg^{2}}\cdot{}\qty{1}{yr}=1.33.\tag{3}
+N=n_{\mathrm{BH}}\omega\cdot{}\mleft(2\beta\mright)\cdot{}n_{\mathrm{stars}}\cdot{}\qty{40}{deg^{2}}\cdot{}\qty{1}{yr}=1.33.\tag{3}
 \end{equation}
 Each lensing event take
 \begin{equation}
@@ -428,7 +428,7 @@ Each lensing event take
 
 \noindent The physical origin for the ocean tides was a matter of controversy among early astronomers. Modern theory has explained this phenomenon as the result of gravitational interactions which deform the Earth, causing a tidal bulge. The tidal potential energy of a mass $m$ on the Earth's surface can be expressed as:
 \begin{equation}
-U_{\mathrm{tidal}}=-\dfrac{\symup{G}M_{\mathrm{Moon}}m}{2r^{3}}R^{2}\left(3\cos^{2}{\phi}-1\right),\notag
+U_{\mathrm{tidal}}=-\dfrac{\symup{G}M_{\mathrm{Moon}}m}{2r^{3}}R^{2}\mleft(3\cos^{2}{\phi}-1\mright),\notag
 \end{equation}
 where $R$ is the radius of the Earth, $r$ is the Earth-Moon distance, $\phi$ is the angle between the line from the Earth's center to mass $m$ and the Earth-Moon vector.
 
@@ -440,7 +440,7 @@ where $R$ is the radius of the Earth, $r$ is the Earth-Moon distance, $\phi$ is 
 
 \noindent\textcolor{purple}{Solution}
 \begin{align}
-&-\frac{\symup{G}M_{\mathrm{Moon}}}{2r^{3}}R^{2}\left(3-1-0+1\right)\notag\\
+&-\frac{\symup{G}M_{\mathrm{Moon}}}{2r^{3}}R^{2}\mleft(3-1-0+1\mright)\notag\\
 &=-\frac{\symup{G}M_{\mathrm{Earth}}}{R}+\frac{\symup{G}M_{\mathrm{Earth}}}{R+h},\notag\\
 &h=\frac{3M_{\mathrm{Moon}}R^{4}}{2M_{\mathrm{Earth}}r^{3}}=\qty{0.535}{m}.\tag{1}
 \end{align}
@@ -453,7 +453,7 @@ where $R$ is the radius of the Earth, $r$ is the Earth-Moon distance, $\phi$ is 
 
 \noindent\textcolor{purple}{Solution}
 \begin{equation}
-h_{\odot}=\frac{3M_{\odot}R^{4}}{2M_{\mathrm{Earth}}\left(\qty{1}{AU}\right)^{3}}=\qty{0.247}{m}.\tag{2}
+h_{\odot}=\frac{3M_{\odot}R^{4}}{2M_{\mathrm{Earth}}\mleft(\qty{1}{AU}\mright)^{3}}=\qty{0.247}{m}.\tag{2}
 \end{equation}
 Then we expect the Moon to be the primary deriver to the tidal cycle, and we expect to see two higher tides per day due to the rotation of Earth, which get an hour later each day. Over the course of a month, tidal heights are highest during the new and full Moons, and lowest during the first and second quarters.
 
@@ -537,7 +537,7 @@ It may be easier to make the detection of planets in the habitable zone around l
 \begin{align}
 M_{\mathrm{J}}&=\frac{1}{6}\pi\rho\lambda_{\mathrm{J}}^{3}=\frac{1}{6}\pi^{\frac{5}{2}}\symup{G}^{-\frac{3}{2}}\rho^{-\frac{1}{2}}\symup{c}_{\mathrm{s}}^{3},\tag{1}\\
 \symup{c}_{\mathrm{s}}&\sim{}v_{\mathrm{rms}}=\sqrt{\dfrac{3\symup{k}_{\mathrm{B}}T}{m_{\ce{H2}}}},\tag{2}\\
-M_{\mathrm{J}}&=\frac{1}{6}\pi^{\frac{5}{2}}\symup{G}^{-\frac{3}{2}}\left(n_{\ce{H2}}m_{\ce{H2}}\right)^{-\frac{1}{2}}\left(\dfrac{3\symup{k}_{\mathrm{B}}T}{m_{\ce{H2}}}\right)^{\frac{3}{2}}\notag\\
+M_{\mathrm{J}}&=\frac{1}{6}\pi^{\frac{5}{2}}\symup{G}^{-\frac{3}{2}}\mleft(n_{\ce{H2}}m_{\ce{H2}}\mright)^{-\frac{1}{2}}\mleft(\dfrac{3\symup{k}_{\mathrm{B}}T}{m_{\ce{H2}}}\mright)^{\frac{3}{2}}\notag\\
 &=\qty{4e31}{kg}.\tag{3}
 \end{align}
 
@@ -549,7 +549,7 @@ M_{\mathrm{J}}&=\frac{1}{6}\pi^{\frac{5}{2}}\symup{G}^{-\frac{3}{2}}\left(n_{\ce
 
 \noindent\textcolor{purple}{Solution}
 \begin{align}
-M_{\mathrm{J}}&=\frac{1}{6}\pi^{\frac{5}{2}}\symup{G}^{-\frac{3}{2}}\rho^{-\frac{1}{2}}\left(\dfrac{3\symup{k}_{\mathrm{B}}T}{m_{\ce{H}}}\right)^{\frac{3}{2}}\notag\\
+M_{\mathrm{J}}&=\frac{1}{6}\pi^{\frac{5}{2}}\symup{G}^{-\frac{3}{2}}\rho^{-\frac{1}{2}}\mleft(\dfrac{3\symup{k}_{\mathrm{B}}T}{m_{\ce{H}}}\mright)^{\frac{3}{2}}\notag\\
 &=\qty{4.5e36}{kg}.\tag{1}
 \end{align}
 

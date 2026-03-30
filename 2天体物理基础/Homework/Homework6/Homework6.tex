@@ -4,7 +4,7 @@
 \usepackage{geometry}
 \geometry{left=1.5cm, right=1.5cm, top=1.8cm, bottom=0.9cm}
 
-\usepackage{LinyanPreamble}
+\usepackage{../../../Preamble/LinyanPreamble}
 
 % 颜色设置
 \definecolor{pagecolor}{HTML}{C7EDCC}
@@ -22,29 +22,29 @@
 
 \noindent\textcolor{blue}{1. Size and distance in de Sitter space}
 
-\noindent An $\Omega=1$ Universe that contains only a false vacuum expands exponentially as $R\left(t\right)/R_{0}=\exp\left\{H_{0}\left(t-t_{0}\right)\right\}$ and is spatially flat with $k=0$. It is often called `de Sitter space'.
+\noindent An $\Omega=1$ Universe that contains only a false vacuum expands exponentially as $R\mleft(t\mright)/R_{0}=\exp\mleft\{H_{0}\mleft(t-t_{0}\mright)\mright\}$ and is spatially flat with $k=0$. It is often called `de Sitter space'.
 
 \hspace*{\fill}
 
-\noindent\textcolor{purple}{(a)} Derive an expression for $s\left(\omega\right)$ to an object at redshift $z$. This is the quantity that is used in calculating the brightnesses and angular sizes of objects in such a Universe.
+\noindent\textcolor{purple}{(a)} Derive an expression for $s\mleft(\omega\mright)$ to an object at redshift $z$. This is the quantity that is used in calculating the brightnesses and angular sizes of objects in such a Universe.
 
 \noindent Hint: You can use the following equation:
 \begin{equation}
-\symup{c}\d{}t=-R\left(t\right)\d{}\omega\tag{1}
+\symup{c}\d{}t=-R\mleft(t\mright)\d{}\omega\tag{1}
 \end{equation}
-to determine $\d{}\omega/\d{}z$ and thus $\omega\left(z\right)$. Also, for a spatially flat universe $s\left(\omega\right)=\omega$. Finally, in a flat geometry the angles of triangles are well-behaved.
+to determine $\d{}\omega/\d{}z$ and thus $\omega\mleft(z\mright)$. Also, for a spatially flat universe $s\mleft(\omega\mright)=\omega$. Finally, in a flat geometry the angles of triangles are well-behaved.
 
 \hspace*{\fill}
 
 \noindent\textcolor{purple}{Solution}
 \begin{align}
-R\left(t\right)&=R_{0}\symup{e}^{H_{0}\left(t-t_{0}\right)},\tag{1}\\
-\dot{R}\left(t\right)&=H_{0}R\left(t\right)=H_{0}R_{0}\symup{e}^{H_{0}\left(t-t_{0}\right)}.\tag{2}\\
-z\left(t\right)&=\frac{R_{0}}{R\left(t\right)}-1=\frac{1}{\symup{e}^{H_{0}\left(t-t_{0}\right)}}-1.\tag{3}\\
-\frac{\d{}z}{\d{}t}&=-H_{0}\symup{e}^{-H_{0}\left(t-t_{0}\right)}=-H_{0}R_{0}/R\left(t\right),\tag{4}\\
-\frac{\d{}\omega}{\d{}z}&=\frac{\d{}\omega}{\d{}t}\frac{\d{}t}{\d{}z}=\frac{\symup{c}}{R\left(t\right)}\frac{R\left(t\right)}{H_{0}R_{0}}=\frac{\symup{c}}{H_{0}R_{0}}.\tag{5}\\
+R\mleft(t\mright)&=R_{0}\symup{e}^{H_{0}\mleft(t-t_{0}\mright)},\tag{1}\\
+\dot{R}\mleft(t\mright)&=H_{0}R\mleft(t\mright)=H_{0}R_{0}\symup{e}^{H_{0}\mleft(t-t_{0}\mright)}.\tag{2}\\
+z\mleft(t\mright)&=\frac{R_{0}}{R\mleft(t\mright)}-1=\frac{1}{\symup{e}^{H_{0}\mleft(t-t_{0}\mright)}}-1.\tag{3}\\
+\frac{\d{}z}{\d{}t}&=-H_{0}\symup{e}^{-H_{0}\mleft(t-t_{0}\mright)}=-H_{0}R_{0}/R\mleft(t\mright),\tag{4}\\
+\frac{\d{}\omega}{\d{}z}&=\frac{\d{}\omega}{\d{}t}\frac{\d{}t}{\d{}z}=\frac{\symup{c}}{R\mleft(t\mright)}\frac{R\mleft(t\mright)}{H_{0}R_{0}}=\frac{\symup{c}}{H_{0}R_{0}}.\tag{5}\\
 \omega&=\frac{\symup{c}z}{H_{0}R_{0}}.\tag{6}\\
-k&=0, s\left(\omega\right)=\omega=\frac{\symup{c}z}{H_{0}R_{0}}.\tag{7}
+k&=0, s\mleft(\omega\mright)=\omega=\frac{\symup{c}z}{H_{0}R_{0}}.\tag{7}
 \end{align}
 
 \hspace*{\fill}
@@ -59,9 +59,9 @@ k&=0, s\left(\omega\right)=\omega=\frac{\symup{c}z}{H_{0}R_{0}}.\tag{7}
 
 Comoving distance
 \begin{equation}
-\chi=\int_{t}^{t_{0}}\frac{\symup{c}}{R\left(t'\right)}\d{}t'=\int_{0}^{z}\frac{\symup{c}}{H\left(z'\right)}\d{}z'.\tag{1}
+\chi=\int_{t}^{t_{0}}\frac{\symup{c}}{R\mleft(t'\mright)}\d{}t'=\int_{0}^{z}\frac{\symup{c}}{H\mleft(z'\mright)}\d{}z'.\tag{1}
 \end{equation}
-In de Sitter space, $H\left(z\right)=\dfrac{\dot{R}}{R}=H_{0}$,
+In de Sitter space, $H\mleft(z\mright)=\dfrac{\dot{R}}{R}=H_{0}$,
 \begin{equation}
 \chi=\frac{\symup{c}z}{H_{0}}.\tag{2}
 \end{equation}
@@ -98,29 +98,29 @@ And the angular size euqals
 
 \hspace*{\fill}
 
-\noindent\textcolor{purple}{(a)} Repeating Question 1, derive $\omega\left(z\right)$ for the case of a spatially flat $\Omega=1$ matter-dominanted universe in which $R\left(t\right)$ follows $R\left(t\right)=R_{0}\left(\dfrac{3}{2}H_{0}t\right)^{\frac{2}{3}}$. This is often called an `Einstein-de Sitter' universe. Add the angular size of a $\qty{1}{kpc}$ rod as a function of redshift to your plot from Q1 as well.
+\noindent\textcolor{purple}{(a)} Repeating Question 1, derive $\omega\mleft(z\mright)$ for the case of a spatially flat $\Omega=1$ matter-dominanted universe in which $R\mleft(t\mright)$ follows $R\mleft(t\mright)=R_{0}\mleft(\dfrac{3}{2}H_{0}t\mright)^{\frac{2}{3}}$. This is often called an `Einstein-de Sitter' universe. Add the angular size of a $\qty{1}{kpc}$ rod as a function of redshift to your plot from Q1 as well.
 
 \hspace*{\fill}
 
 \noindent\textcolor{purple}{Solution}
 \begin{align}
-R\left(t\right)&=R_{0}\left(\frac{3}{2}H_{0}t\right)^{\frac{2}{3}}.\tag{1}\\
-z\left(t\right)&=\frac{R_{0}}{R\left(t\right)}-1=\left(\frac{3}{2}H_{0}t\right)^{-\frac{2}{3}}-1.\tag{2}\\
-\frac{\d{}z}{\d{}t}&=-H_{0}\left(\frac{3}{2}H_{0}t\right)^{-\frac{5}{3}}=-H_{0}\left(\frac{R\left(t\right)}{R_{0}}\right)^{-\frac{5}{2}}.\tag{3}\\
-\frac{\d{}\omega}{\d{}z}&=\frac{3\symup{c}t}{2R_{0}}=\frac{\symup{c}}{H_{0}R_{0}}\left(1+z\right)^{-\frac{3}{2}}.\tag{4}\\
-\omega&=\int_{0}^{z}\frac{\symup{c}}{H_{0}R_{0}}\left(1+z\right)^{-\frac{3}{2}}\d{}z\notag\\
-&=\frac{2\symup{c}}{H_{0}R_{0}}\left(1-\left(1+z\right)^{-\frac{1}{2}}\right).\tag{5}
+R\mleft(t\mright)&=R_{0}\mleft(\frac{3}{2}H_{0}t\mright)^{\frac{2}{3}}.\tag{1}\\
+z\mleft(t\mright)&=\frac{R_{0}}{R\mleft(t\mright)}-1=\mleft(\frac{3}{2}H_{0}t\mright)^{-\frac{2}{3}}-1.\tag{2}\\
+\frac{\d{}z}{\d{}t}&=-H_{0}\mleft(\frac{3}{2}H_{0}t\mright)^{-\frac{5}{3}}=-H_{0}\mleft(\frac{R\mleft(t\mright)}{R_{0}}\mright)^{-\frac{5}{2}}.\tag{3}\\
+\frac{\d{}\omega}{\d{}z}&=\frac{3\symup{c}t}{2R_{0}}=\frac{\symup{c}}{H_{0}R_{0}}\mleft(1+z\mright)^{-\frac{3}{2}}.\tag{4}\\
+\omega&=\int_{0}^{z}\frac{\symup{c}}{H_{0}R_{0}}\mleft(1+z\mright)^{-\frac{3}{2}}\d{}z\notag\\
+&=\frac{2\symup{c}}{H_{0}R_{0}}\mleft(1-\mleft(1+z\mright)^{-\frac{1}{2}}\mright).\tag{5}
 \end{align}
 Comoving distance
 \begin{equation}
-\chi=\int_{0}^{z}\frac{\symup{c}}{H\left(z'\right)}\d{}z'.\tag{6}
+\chi=\int_{0}^{z}\frac{\symup{c}}{H\mleft(z'\mright)}\d{}z'.\tag{6}
 \end{equation}
 In Einstein-de Sitter universe,
 \begin{align}
-H\left(z\right)&=\frac{\dot{R}}{R}=\frac{2}{3t}=H_{0}\left(1+z\right)^{\frac{3}{2}}.\tag{7}\\
-\chi&=\frac{\symup{c}}{H_{0}}\int_{0}^{z}\left(1+z'\right)^{-\frac{3}{2}}\d{}z'\notag\\
-&=\frac{2\symup{c}}{H_{0}}\left(1-\left(1+z\right)^{-\frac{1}{2}}\right).\tag{8}\\
-\theta&=\frac{l}{\chi}\left(1+z\right)=\frac{lH_{0}}{2\symup{c}}\frac{1+z}{1-\left(1+z\right)^{-\frac{1}{2}}}.\tag{9}
+H\mleft(z\mright)&=\frac{\dot{R}}{R}=\frac{2}{3t}=H_{0}\mleft(1+z\mright)^{\frac{3}{2}}.\tag{7}\\
+\chi&=\frac{\symup{c}}{H_{0}}\int_{0}^{z}\mleft(1+z'\mright)^{-\frac{3}{2}}\d{}z'\notag\\
+&=\frac{2\symup{c}}{H_{0}}\mleft(1-\mleft(1+z\mright)^{-\frac{1}{2}}\mright).\tag{8}\\
+\theta&=\frac{l}{\chi}\mleft(1+z\mright)=\frac{lH_{0}}{2\symup{c}}\frac{1+z}{1-\mleft(1+z\mright)^{-\frac{1}{2}}}.\tag{9}
 \end{align}
 
 \begin{figure}[!htp]
@@ -146,7 +146,7 @@ H\left(z\right)&=\frac{\dot{R}}{R}=\frac{2}{3t}=H_{0}\left(1+z\right)^{\frac{3}{
 
 \hspace*{\fill}
 
-\noindent\textcolor{purple}{(b)} Show that in this universe, $\omega\left(z\right)$ converges to a finite value, $\omega_{H}$, as $z$ approaches infinity. This limit is called the particle horizon and represents a limit to the ``observable universe''. Calculate the comoving volume of the currently observable Universe (over the whole sky) that lies within this horizon distance $\omega_{H}$. Again, we have a flat geometry, so $s\left(\omega\right)=\omega$ and the volume of a sphere is $4\pi\omega^{2}$.
+\noindent\textcolor{purple}{(b)} Show that in this universe, $\omega\mleft(z\mright)$ converges to a finite value, $\omega_{H}$, as $z$ approaches infinity. This limit is called the particle horizon and represents a limit to the ``observable universe''. Calculate the comoving volume of the currently observable Universe (over the whole sky) that lies within this horizon distance $\omega_{H}$. Again, we have a flat geometry, so $s\mleft(\omega\mright)=\omega$ and the volume of a sphere is $4\pi\omega^{2}$.
 
 \hspace*{\fill}
 
@@ -167,7 +167,7 @@ V&=\frac{4}{3}\pi\omega_{H}^{3}=\frac{{3}{2}\pi\symup{c}^{3}}{3H_{0}^{3}R_{0}^{3
 \noindent\textcolor{purple}{Solution}
 \begin{align}
 N&=nV=0.001R_{0}^{3}\qty{}{Mpc^{-3}}\frac{32\pi\symup{c}^{3}}{3H_{0}^{3}R_{0}^{3}}\notag\\
-&=0.001\times\frac{32\pi\times\left(3\times10^{5}\right)^{3}}{3\times73.4^{3}}=\qty{2.288e9}{}.\tag{1}
+&=0.001\times\frac{32\pi\times\mleft(3\times10^{5}\mright)^{3}}{3\times73.4^{3}}=\qty{2.288e9}{}.\tag{1}
 \end{align}
 
 \hspace*{\fill}
@@ -176,7 +176,7 @@ N&=nV=0.001R_{0}^{3}\qty{}{Mpc^{-3}}\frac{32\pi\symup{c}^{3}}{3H_{0}^{3}R_{0}^{3
 
 \noindent\textcolor{purple}{(a)} Starting from the Friedmann equation, show that the critical density $\rho_{\mathrm{c}}$ (i.e. the density at which the Universe is flat with $\Omega=1, k=0$) equals
 \begin{equation}
-\rho_{\mathrm{c}}=\frac{3H\left(t\right)^{2}}{8\pi\symup{G}}.\notag
+\rho_{\mathrm{c}}=\frac{3H\mleft(t\mright)^{2}}{8\pi\symup{G}}.\notag
 \end{equation}
 
 \hspace*{\fill}
@@ -185,7 +185,7 @@ N&=nV=0.001R_{0}^{3}\qty{}{Mpc^{-3}}\frac{32\pi\symup{c}^{3}}{3H_{0}^{3}R_{0}^{3
 \begin{align}
 \dot{R}^{2}&=\frac{8\pi\symup{G}}{3}\rho{}R^{2}-\frac{k\symup{c}^{2}}{A^{2}}.\tag{1}\\
 H^{2}&=\frac{8\pi\symup{G}}{3}\rho_{i}-\frac{k\symup{c}^{2}}{R^{2}A^{2}},\notag\\
-\rho_{\mathrm{cri}}&=\frac{3H\left(t\right)^{2}}{8\pi\symup{G}}.\tag{2}
+\rho_{\mathrm{cri}}&=\frac{3H\mleft(t\mright)^{2}}{8\pi\symup{G}}.\tag{2}
 \end{align}
 
 \hspace*{\fill}
@@ -196,7 +196,7 @@ H^{2}&=\frac{8\pi\symup{G}}{3}\rho_{i}-\frac{k\symup{c}^{2}}{R^{2}A^{2}},\notag\
 
 \noindent\textcolor{purple}{Solution}
 \begin{align}
-\rho_{\mathrm{cri}}&=\frac{3H\left(t\right)^{2}}{8\pi\symup{G}}=\qty{9.2e-27}{kg\cdot{}m^{-3}}\tag{1}\\
+\rho_{\mathrm{cri}}&=\frac{3H\mleft(t\mright)^{2}}{8\pi\symup{G}}=\qty{9.2e-27}{kg\cdot{}m^{-3}}\tag{1}\\
 &=5.5m_{\ce{H}}\qty{}{m^{-3}}\tag{2}\\
 &=\qty{2.7e41}{kg\cdot{}Mpc^{-3}}\notag\\
 &=\qty{1.35e11}{M_{\odot}\cdot{}Mpc^{-3}}.\tag{3}

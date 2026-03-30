@@ -4,7 +4,7 @@
 \usepackage{geometry}
 \geometry{left=1.5cm, right=1.5cm, top=1.8cm, bottom=0.9cm}
 
-\usepackage{LinyanPreamble}
+\usepackage{../../Preamble/LinyanPreamble}
 
 % 颜色设置
 \definecolor{pagecolor}{HTML}{C7EDCC}
@@ -28,13 +28,13 @@
 
 \newpage
 \section{太阳}
-黑子由本影与半影组成，温度约 $3000\text{\textendash}\qty{4500}{K}$, 产生原因是黑子下方的强磁场 $\left(\sim\qty{e3}{G}\right)$ 阻碍了物质对流，使热量难以到达该处。
+黑子由本影与半影组成，温度约 $3000\text{\textendash}\qty{4500}{K}$, 产生原因是黑子下方的强磁场 $\mleft(\sim\qty{e3}{G}\mright)$ 阻碍了物质对流，使热量难以到达该处。
 
 太阳内部等离子体转动产生磁场。由于对流区较差转动产生横向磁场。磁力线突出日面就形成黑子、日珥和耀斑。
 
 太阳磁场的发电机理论：太阳内部等离子体的转动产生磁场：
 \begin{equation}
-\frac{\partial{}\symbf{B}}{\partial{}t}=\nabla\times\left(\symbf{u}\times\symbf{B}-\eta\nabla\times\symbf{B}\right),
+\frac{\partial{}\symbf{B}}{\partial{}t}=\nabla\times\mleft(\symbf{u}\times\symbf{B}-\eta\nabla\times\symbf{B}\mright),
 \end{equation}
 其中 $\eta$ 是磁扩散系数。
 
@@ -101,7 +101,7 @@
 
 利用开普勒第三定律
 \begin{equation}
-\frac{\alpha^{3}}{T^{2}}=\frac{\symup{G}}{4\pi^{2}}\left(M_{1}+M_{2}\right)
+\frac{\alpha^{3}}{T^{2}}=\frac{\symup{G}}{4\pi^{2}}\mleft(M_{1}+M_{2}\mright)
 \end{equation}
 将恒星质量测量转换为双星轨道半长径和周期测量，进而转换成对恒星位置和运动的测量、或者测量谱线频率变化，光度变化和轨道倾角。还需知道一颗恒星的质量和质量比。
 
@@ -253,16 +253,16 @@ X 射线和伽马射线：与电离层内带电离子作用，根本观测不到
 因此观测中常要进行消光改正。因为密度随高度的指数变化，下层大气的消光作用是主要的。
 首先定义大气质量：在天文学上指来自天体的光穿过大气层的路径长度。
 \begin{equation}
-M\left(z\right)=\frac{\tau_{\lambda}\left(z\right)}{\tau_{\lambda}\left(0\right)}.
+M\mleft(z\mright)=\frac{\tau_{\lambda}\mleft(z\mright)}{\tau_{\lambda}\mleft(0\mright)}.
 \end{equation}
 
 定义透射系数 $P=\symup{e}^{-\tau}$, 天顶距为 $z$ 的方向，透射系数为
 \begin{equation}
-P_{\lambda}\left(z\right)=\symup{e}^{-\tau_{\lambda}\left(z\right)}=\symup{e}^{-\tau_{\lambda}\left(0\right) M^{\left(z\right)}}=\left(P_{\lambda}\left(0\right)\right)^{M\left(z\right)}.
+P_{\lambda}\mleft(z\mright)=\symup{e}^{-\tau_{\lambda}\mleft(z\mright)}=\symup{e}^{-\tau_{\lambda}\mleft(0\mright) M^{\mleft(z\mright)}}=\mleft(P_{\lambda}\mleft(0\mright)\mright)^{M\mleft(z\mright)}.
 \end{equation}
-而天体辐射在大气内外的辐射流之比为 $\dfrac{F_{\lambda}}{F_{0,\lambda}}=P_{\lambda}\left(z\right)$, 因此大气内外星等差为
+而天体辐射在大气内外的辐射流之比为 $\dfrac{F_{\lambda}}{F_{0,\lambda}}=P_{\lambda}\mleft(z\mright)$, 因此大气内外星等差为
 \begin{equation}
-\laplacian{}m=m_{\lambda}-m_{0,\lambda}=-2.5\lg\frac{F_{\lambda}}{F_{0,\lambda}}=-2.5M\left(z\right)\lg P_{\lambda}\left(0\right).
+\laplacian{}m=m_{\lambda}-m_{0,\lambda}=-2.5\lg\frac{F_{\lambda}}{F_{0,\lambda}}=-2.5M\mleft(z\mright)\lg P_{\lambda}\mleft(0\mright).
 \end{equation}
 
 \textbf{大气折射}：地球大气有一定的折射率，观测到的天体位置跟真实位置有偏折，改变天体辐射的方向。电离层中等离子体也会使天体辐射发生折射。

@@ -5,13 +5,13 @@
 \subsection{磁流体力学}
 在讲这部分内容前，我们可以先了解一下磁流体力学的基本知识。首先磁流体的运动方程满足
 \begin{equation}
-\rho\frac{\d\symbf{v}}{\d{}t}+\rho\nabla\symbf{\Phi}=-\nabla\symbf{P}+\frac{1}{4\pi}\left(\nabla\times\symbf{B}\right)\times\symbf{B}+\rho\symbf{F}_{\mathrm{rad}}.
+\rho\frac{\d\symbf{v}}{\d{}t}+\rho\nabla\symbf{\Phi}=-\nabla\symbf{P}+\frac{1}{4\pi}\mleft(\nabla\times\symbf{B}\mright)\times\symbf{B}+\rho\symbf{F}_{\mathrm{rad}}.
 \end{equation}
 其中 $\symbf{\Phi}$ 是引力势，$\symbf{P}$ 是压力张量，$\symbf{F}$ 是外力，这里主要是辐射压，中间则是洛伦兹力。此方程并未考虑流体的粘度，是完全理想流体。
 
 星际流体尺度较大，一般都是大雷诺数，也就是说主要是磁流体的运动在影响磁场，此时
 \begin{equation}
-\frac{\partial\symbf{B}}{\partial{}t}=\nabla\times\left(\nabla\times\symbf{B}\right),
+\frac{\partial\symbf{B}}{\partial{}t}=\nabla\times\mleft(\nabla\times\symbf{B}\mright),
 \end{equation}
 这个方程和该式与理想不可压流体中涡旋所满足的方程形式一样。涡旋黏附在流体质点上运动，因此磁力线也黏附在流体质点上一起运动，此即磁场冻结效应。起初位于某根磁力线上的流体质点以后将一直位于该磁力线上。一个贴切的比喻是，磁力线好比琴弦，上面串了一串珍珠。琴弦有张力，沿磁力线方向也有张力，而垂直于磁场方向则有压力，这两种力支撑了磁流体结构。
 
@@ -148,7 +148,7 @@ p&=\frac{\symup{G}M\rho}{r^{2}}\frac{h^{2}}{r}.\\
 
 旋转时会产生一个粘滞力（单位面积）
 \begin{equation}
-f=\eta r\frac{\partial{}}{\partial{}r}\left(\frac{\sqrt\dfrac{\symup{G}M}{r}}{r}\right)=\eta r\frac{\partial\Omega}{\partial{}r}.
+f=\eta r\frac{\partial{}}{\partial{}r}\mleft(\frac{\sqrt\dfrac{\symup{G}M}{r}}{r}\mright)=\eta r\frac{\partial\Omega}{\partial{}r}.
 \end{equation}
 力矩
 \begin{equation}
@@ -170,13 +170,13 @@ M=\frac{\partial{}T}{\partial{}r}\d{}r.
 \end{equation}
 因此温度
 \begin{equation}
-T=\left(\frac{\symup{G}M\dot{m}}{8\pi\sigma}\right)^{\frac{1}{4}}r^{-\frac{3}{4}}.
+T=\mleft(\frac{\symup{G}M\dot{m}}{8\pi\sigma}\mright)^{\frac{1}{4}}r^{-\frac{3}{4}}.
 \end{equation}
 看似质量越大温度越高，不过质量越大半径也会越高，超大质量黑洞附近温度反而低，因为 $T\sim M^{-\frac{1}{2}}$. 一个太阳质量的中子星温度 $\qty{e8}{K}$ 能有 X 光子，$\qty{e7}{M_{\odot}}$ 黑洞可能只有 $\qty{e5}{K}$, 紫外光子。
 
 总光度为
 \begin{equation}
-L=\dfrac{1}{2}\symup{G}M\dot{m}\left(\frac{1}{r_{\min}}-\frac{1}{r_{\max}}\right).
+L=\dfrac{1}{2}\symup{G}M\dot{m}\mleft(\frac{1}{r_{\min}}-\frac{1}{r_{\max}}\mright).
 \end{equation}
 对于没有自旋的黑洞而言，
 \begin{equation}
@@ -186,7 +186,7 @@ r_{\min}=3R_{\mathrm{s}}=\frac{6\symup{G}M}{\symup{c}^{2}}, L=\frac{1}{12}\dot{m
 
 吸积盘是一个个圆轨道叠加组成的，总辐射强度也可看作一个个黑体谱叠加，大致满足
 \begin{equation}
-I_{\nu}\propto{}v^{\frac{1}{3}}\int_{r_{\min}}^{r_{\max}}x^{\frac{4}{3}}\left[\exp\left(\frac{h\nu}{\symup{k}_{\mathrm{B}}T}\right)-1\right]^{-1}x^{\frac{1}{3}}\d{}x.
+I_{\nu}\propto{}v^{\frac{1}{3}}\int_{r_{\min}}^{r_{\max}}x^{\frac{4}{3}}\mleft[\exp\mleft(\frac{h\nu}{\symup{k}_{\mathrm{B}}T}\mright)-1\mright]^{-1}x^{\frac{1}{3}}\d{}x.
 \end{equation}
 
 Eddington 光度 $L=\dfrac{4\pi\symup{c}\symup{G}Mm_{\ce{p}}}{\sigma_{\mathrm{T}}}$ 给定了最大吸积速率。
@@ -199,7 +199,7 @@ Eddington 光度 $L=\dfrac{4\pi\symup{c}\symup{G}Mm_{\ce{p}}}{\sigma_{\mathrm{T}
 \end{equation}
 
 \subsection{谱线}
-$\left[\ce{O}\,\mathrm{\uppercase\expandafter{\romannumeral3}}\right]$ 禁线可作为 AGN 吸积过程中，产生的 outflow 的示踪谱线。
+$\mleft[\ce{O}\,\mathrm{\uppercase\expandafter{\romannumeral3}}\mright]$ 禁线可作为 AGN 吸积过程中，产生的 outflow 的示踪谱线。
 
 铁的 K 层的电子占据的两条轨道中，其中一条有空位时，L 层的电子跃迁至 K 层会放出发射线。$\mathrm{K}\alpha$ 线大致分为铁原子整体为中性的情况（中性铁 $\mathrm{K}\alpha$ 线）和 26 个电子几乎全部电离的情况（高电离化态铁 $\mathrm{K}\alpha$ 线）。
 
