@@ -24,7 +24,7 @@
 
 \noindent\textcolor{purple}{(a)} Calculate the root mean square $\sqrt{\langle{}v^{2}\rangle}$ of $\ce{H2}$ molecules in a gas in thermal equilibrium at a temperature of $T=\qty{100}{K}$.
 
-\noindent Hint: in thermal equilibrium $\dfrac{1}{2}mv^{2}=\dfrac{3}{2}k_{\symup{B}}T$.
+\noindent Hint: in thermal equilibrium $\dfrac{1}{2}mv^{2}=\dfrac{3}{2}\symup{k}_{\mathrm{B}}T$.
 
 \hspace*{\fill}
 
@@ -32,9 +32,9 @@
 
 The motions of $\ce{H2}$ molecules conform the Maxwell velocity distribution:
 \begin{align}
-f\left(v\right)\d{}v&=\left(\frac{m}{2\pi{}k_{\symup{B}}T}\right)^{\frac{3}{2}}\exp\left(-\frac{mv^{2}}{2k_{\symup{B}}T}\right)4\pi{}v^{2}\d{}v.\tag{1}\\
-\langle{}v^{2}\rangle&=\frac{\int_{0}^{\infty}v^{2}Nf\left(v\right)\d{}v}{N}=\frac{3k_{\symup{B}}T}{m_{\ce{H2}}},\tag{2}\\
-\sqrt{\langle{}v^{2}\rangle}&=\sqrt{\frac{3k_{\symup{B}}T}{m_{\ce{H2}}}}=\qty{1112.7}{km\cdot{}s^{-1}}.\tag{3}
+f\left(v\right)\d{}v&=\left(\frac{m}{2\pi{}\symup{k}_{\mathrm{B}}T}\right)^{\frac{3}{2}}\exp\left(-\frac{mv^{2}}{2\symup{k}_{\mathrm{B}}T}\right)4\pi{}v^{2}\d{}v.\tag{1}\\
+\langle{}v^{2}\rangle&=\frac{\int_{0}^{\infty}v^{2}Nf\left(v\right)\d{}v}{N}=\frac{3\symup{k}_{\mathrm{B}}T}{m_{\ce{H2}}},\tag{2}\\
+\sqrt{\langle{}v^{2}\rangle}&=\sqrt{\frac{3\symup{k}_{\mathrm{B}}T}{m_{\ce{H2}}}}=\qty{1112.7}{km\cdot{}s^{-1}}.\tag{3}
 \end{align}
 
 \hspace*{\fill}
@@ -47,7 +47,7 @@ f\left(v\right)\d{}v&=\left(\frac{m}{2\pi{}k_{\symup{B}}T}\right)^{\frac{3}{2}}\
 
 Note that the average velocity of $\ce{H2}$ can be expressed as
 \begin{equation}
-\overline{v}=\sqrt{\frac{8k_{\symup{B}}T}{\pi{}m_{\ce{H2}}}},\tag{1}
+\overline{v}=\sqrt{\frac{8\symup{k}_{\mathrm{B}}T}{\pi{}m_{\ce{H2}}}},\tag{1}
 \end{equation}
 then we can obtain the number of collisions per unit time
 \begin{equation}
@@ -55,7 +55,7 @@ f=\frac{n\sigma\overline{v}\laplacian{}t}{\laplacian{}t}=n\sigma\overline{v},\ta
 \end{equation}
 so the time interval between collisions is equal to
 \begin{align}
-\laplacian{}t_{\symup{c}}&=\frac{1}{f}=\frac{1}{n\sigma}\sqrt{\frac{\pi{}m_{\ce{H2}}}{8k_{\symup{B}}T}}\notag\\
+\laplacian{}t_{\mathrm{c}}&=\frac{1}{f}=\frac{1}{n\sigma}\sqrt{\frac{\pi{}m_{\ce{H2}}}{8\symup{k}_{\mathrm{B}}T}}\notag\\
 &=\frac{\qty{9.75e15}{s\cdot{}m^{-3}}}{n},\tag{3}
 \end{align}
 where $T=\qty{100}{K}$.
@@ -82,7 +82,7 @@ where $T=\qty{100}{K}$.
 
 \noindent\textcolor{blue}{2. Stellar structure of two spheres}
 
-\noindent Consider two self-gravitating spheres with mass and radius $M$ and $R$. Sphere A has a uniform density and sphere B has a density that increases towards the centre as $\rho\left(r\right)=\rho_{\symup{c}}\left(1-r/R\right)$. Answer questions (a) and (b) for both spheres.
+\noindent Consider two self-gravitating spheres with mass and radius $M$ and $R$. Sphere A has a uniform density and sphere B has a density that increases towards the centre as $\rho\left(r\right)=\rho_{\mathrm{c}}\left(1-r/R\right)$. Answer questions (a) and (b) for both spheres.
 
 \hspace*{\fill}
 
@@ -104,17 +104,17 @@ U_{\text{A}}&=\int_{0}^{R}-\frac{\symup{G}M_{r\text{A}}}{r}4\pi\rho{}r^{2}\d{}r\
 For sphere B,
 \begin{align}
 M_{r\text{B}}&=\int_{0}^{r}4\pi{}r^{2}\rho_{r}\d{}r\notag\\
-&=\int_{0}^{r}4\pi{}r^{2}\rho_{\symup{c}}\left(1-\frac{r}{R}\right)\d{}r\notag\\
-&=4\pi\rho_{\symup{c}}\left(\frac{1}{3}r^{3}-\frac{1}{4}\frac{r^{4}}{R}\right).\tag{2}\\
-M_{\text{B}}&=\frac{1}{3}\pi{}r_{\symup{c}}R^{3},\notag\\
-\rho_{\symup{c}}&=\frac{3M}{\pi R^{3}},\tag{3}
+&=\int_{0}^{r}4\pi{}r^{2}\rho_{\mathrm{c}}\left(1-\frac{r}{R}\right)\d{}r\notag\\
+&=4\pi\rho_{\mathrm{c}}\left(\frac{1}{3}r^{3}-\frac{1}{4}\frac{r^{4}}{R}\right).\tag{2}\\
+M_{\text{B}}&=\frac{1}{3}\pi{}r_{\mathrm{c}}R^{3},\notag\\
+\rho_{\mathrm{c}}&=\frac{3M}{\pi R^{3}},\tag{3}
 \end{align}
 the gravitational potential energy is
 \begin{align}
 U_{\text{B}}&=\int_{0}^{R}-\frac{\symup{G}M_{r\text{B}}}{r}4\pi\rho_{r}r^{2}\d{}r\notag\\
-&=\int_{0}^{R}-16\symup{G}\pi^{2}\rho_{\symup{c}}^{2}\left(\frac{1}{3}r^{3}-\frac{1}{4}\frac{r^{4}}{R}\right)\left(1-\frac{r}{R}\right)r\d{}r\notag\\
-&=-16\symup{G}\pi^{2}\rho_{\symup{c}}^{2}\left.\left(\frac{1}{15}r^{5}-\frac{7}{72}\frac{r^{6}}{R}+\frac{1}{28}\frac{r^{7}}{R^{2}}\right)\right\vert_{0}^{R}\notag\\
-&=-\frac{26}{315}\symup{G}\pi^{2}\rho_{\symup{c}}^{2}R^{5}\notag\\
+&=\int_{0}^{R}-16\symup{G}\pi^{2}\rho_{\mathrm{c}}^{2}\left(\frac{1}{3}r^{3}-\frac{1}{4}\frac{r^{4}}{R}\right)\left(1-\frac{r}{R}\right)r\d{}r\notag\\
+&=-16\symup{G}\pi^{2}\rho_{\mathrm{c}}^{2}\left.\left(\frac{1}{15}r^{5}-\frac{7}{72}\frac{r^{6}}{R}+\frac{1}{28}\frac{r^{7}}{R^{2}}\right)\right\vert_{0}^{R}\notag\\
+&=-\frac{26}{315}\symup{G}\pi^{2}\rho_{\mathrm{c}}^{2}R^{5}\notag\\
 &=-\frac{26}{35}\frac{\symup{G}M^{2}}{R}.\tag{4}
 \end{align}
 
@@ -136,18 +136,18 @@ P\left(r\right)&=\int_{R}^{r}-\frac{\symup{G}M_{r\text{A}}}{r^{2}}\rho\d{}r\nota
 \end{align}
 When $r=0$,
 \begin{equation}
-P_{\symup{c}\text{A}}=\frac{3}{8}\frac{\symup{G}M^{2}}{\pi{}R^{4}}.\tag{2}
+P_{\mathrm{c}\text{A}}=\frac{3}{8}\frac{\symup{G}M^{2}}{\pi{}R^{4}}.\tag{2}
 \end{equation}
 
 For sphere B
 \begin{align}
 P\left(r\right)&=\int_{R}^{r}-\frac{\symup{G}M_{r\text{B}}}{r^{2}}\rho_{r}\d{}r\notag\\
-&=\int_{R}^{r}-4\symup{G}\pi\rho_{\symup{c}}^{2}\left(\frac{1}{3}r-\frac{1}{4}\frac{r^{2}}{R}\right)\left(1-\frac{r}{R}\right)\d{}r\notag\\
-&=-\symup{G}\pi\rho_{\symup{c}}^{2}\left(\frac{2}{3}r^{2}-\frac{7}{9}\frac{r^{3}}{R}+\frac{1}{4}\frac{r^{4}}{R^{2}}-\frac{5}{36}R^{2}\right).\tag{3}
+&=\int_{R}^{r}-4\symup{G}\pi\rho_{\mathrm{c}}^{2}\left(\frac{1}{3}r-\frac{1}{4}\frac{r^{2}}{R}\right)\left(1-\frac{r}{R}\right)\d{}r\notag\\
+&=-\symup{G}\pi\rho_{\mathrm{c}}^{2}\left(\frac{2}{3}r^{2}-\frac{7}{9}\frac{r^{3}}{R}+\frac{1}{4}\frac{r^{4}}{R^{2}}-\frac{5}{36}R^{2}\right).\tag{3}
 \end{align}
 When $r=0$,
 \begin{equation}
-P_{\symup{c}\text{B}}=\frac{5}{36}\symup{G}\pi\rho_{\symup{c}}^{2}R^{2}=\frac{5}{4}\frac{\symup{G}M^{2}}{\pi{}R^{4}}.\tag{4}
+P_{\mathrm{c}\text{B}}=\frac{5}{36}\symup{G}\pi\rho_{\mathrm{c}}^{2}R^{2}=\frac{5}{4}\frac{\symup{G}M^{2}}{\pi{}R^{4}}.\tag{4}
 \end{equation}
 
 \hspace*{\fill}
@@ -162,18 +162,18 @@ P_{\symup{c}\text{B}}=\frac{5}{36}\symup{G}\pi\rho_{\symup{c}}^{2}R^{2}=\frac{5}
 
 Radiation pressure
 \begin{equation}
-P_{\symup{rad}}=\frac{1}{3}a_{\symup{B}}T^{4}=\qty{1.65e13}{W\cdot{}m^{-2}}.\tag{1}
+P_{\mathrm{rad}}=\frac{1}{3}a_{\mathrm{B}}T^{4}=\qty{1.65e13}{W\cdot{}m^{-2}}.\tag{1}
 \end{equation}
 
 Gas pressure
 \begin{align}
-P_{\symup{gas}}&=\frac{\rho}{\mu{}m_{\ce{H}}}k_{\symup{B}}T=\frac{\rho}{m_{\ce{H}}}k_{\symup{B}}T\left(2X+\frac{3}{4}Y\right)\notag\\
+P_{\mathrm{gas}}&=\frac{\rho}{\mu{}m_{\ce{H}}}\symup{k}_{\mathrm{B}}T=\frac{\rho}{m_{\ce{H}}}\symup{k}_{\mathrm{B}}T\left(2X+\frac{3}{4}Y\right)\notag\\
 &=\qty{3.22e16}{W\cdot{}m^{-2}}.\tag{2}
 \end{align}
 
 Ratio
 \begin{equation}
-\frac{P_{\symup{rad}}}{P_{\symup{gas}}}\sim\qty{5e-4}{}.\tag{3}
+\frac{P_{\mathrm{rad}}}{P_{\mathrm{gas}}}\sim\qty{5e-4}{}.\tag{3}
 \end{equation}
 
 \hspace*{\fill}
@@ -190,8 +190,8 @@ Ratio
 
 \noindent\textcolor{purple}{Solution}
 \begin{align}
-a&=\frac{\symup{G}M_{\symup{Earth}}}{r^{2}}\notag\\
-M_{\symup{Earth}}&=\frac{a\left(\dfrac{l}{2\pi}\right)^{2}}{\symup{G}}=\qty{6e24}{kg}.\tag{1}
+a&=\frac{\symup{G}M_{\mathrm{Earth}}}{r^{2}}\notag\\
+M_{\mathrm{Earth}}&=\frac{a\left(\dfrac{l}{2\pi}\right)^{2}}{\symup{G}}=\qty{6e24}{kg}.\tag{1}
 \end{align}
 
 \hspace*{\fill}
@@ -213,7 +213,7 @@ M_{\symup{Earth}}&=\frac{a\left(\dfrac{l}{2\pi}\right)^{2}}{\symup{G}}=\qty{6e24
 
 \noindent\textcolor{purple}{Solution}
 \begin{align}
-L&=4\pi{}R^{2}\sigma_{\symup{SB}}T^{4},\notag\\
+L&=4\pi{}R^{2}\sigma_{\mathrm{SB}}T^{4},\notag\\
 R&\propto{}L^{\frac{1}{2}}T^{-2}\propto{}M^{\frac{3}{2}}\cdot{}M^{-1}\propto{}M^{\frac{1}{2}}.\tag{1}\\
 g&\propto\frac{\symup{G}M}{R^{2}}\propto{}M^{0},\text{doesn't varies with}\, M.\notag
 \end{align}
@@ -349,8 +349,8 @@ Note that $\dfrac{\d{}M}{\d{}t}\d{}t\propto{}t^{-1.5}t\propto{}t^{-0.5}$, then
 
 \noindent\textcolor{purple}{Solution}
 \begin{align}
-M_{\symup{planet}}\ge{}v_{1}M_{1}^{\frac{2}{3}}\left(\frac{T}{2\pi\symup{G}}\right)^{\frac{1}{3}}=\qty{0.7}{M_{\symup{Jupiter}}}.\tag{1}\\
-r_{\symup{planet}}=\symup{G}M_{1}^{-1}M_{\symup{planet}}^{2}v_{1}^{-2}=\qty{0.047}{AU}.\tag{2}
+M_{\mathrm{planet}}\ge{}v_{1}M_{1}^{\frac{2}{3}}\left(\frac{T}{2\pi\symup{G}}\right)^{\frac{1}{3}}=\qty{0.7}{M_{\mathrm{Jupiter}}}.\tag{1}\\
+r_{\mathrm{planet}}=\symup{G}M_{1}^{-1}M_{\mathrm{planet}}^{2}v_{1}^{-2}=\qty{0.047}{AU}.\tag{2}
 \end{align}
 
 \hspace*{\fill}
@@ -363,7 +363,7 @@ r_{\symup{planet}}=\symup{G}M_{1}^{-1}M_{\symup{planet}}^{2}v_{1}^{-2}=\qty{0.04
 
 In fact
 \begin{equation}
-M_{\symup{planet}}\sin{i}=v_{1,\symup{obs}}M_{1}^{\frac{2}{3}}\left(\frac{T}{2\pi \symup{G}}\right)^{\frac{1}{3}}.\tag{1}
+M_{\mathrm{planet}}\sin{i}=v_{1,\mathrm{obs}}M_{1}^{\frac{2}{3}}\left(\frac{T}{2\pi \symup{G}}\right)^{\frac{1}{3}}.\tag{1}
 \end{equation}
 Since the planet is observed to transit its host star, this discovery helps us limit orbital inclination $i\approx\ang{90;;}$.
 
@@ -375,8 +375,8 @@ Since the planet is observed to transit its host star, this discovery helps us l
 
 \noindent\textcolor{purple}{Solution}
 \begin{align}
-R_{\symup{planet}}&\sim\sqrt{1.3\%}\times\qty{1.2}{R_{\odot}}=\qty{9.52685e7}{m}.\notag\\
-\rho&=\frac{M_{\symup{planet}}}{\dfrac{4}{3}\pi{}R_{\symup{planet}}^{3}}=\qty{364.37}{kg\cdot{}m^{-3}}.\tag{1}
+R_{\mathrm{planet}}&\sim\sqrt{1.3\%}\times\qty{1.2}{R_{\odot}}=\qty{9.52685e7}{m}.\notag\\
+\rho&=\frac{M_{\mathrm{planet}}}{\dfrac{4}{3}\pi{}R_{\mathrm{planet}}^{3}}=\qty{364.37}{kg\cdot{}m^{-3}}.\tag{1}
 \end{align}
 
 \hspace*{\fill}
@@ -387,27 +387,27 @@ R_{\symup{planet}}&\sim\sqrt{1.3\%}\times\qty{1.2}{R_{\odot}}=\qty{9.52685e7}{m}
 
 \hspace*{\fill}
 
-\noindent\textcolor{purple}{(a)} What is the Einstein angle $\theta_{\symup{E}}$ of a $\qty{1000}{M_{\odot}}$ object at a distance of $\qty{25}{kpc}$. You can assume an observer-source distance of $\qty{50}{kpc}$.
+\noindent\textcolor{purple}{(a)} What is the Einstein angle $\theta_{\mathrm{E}}$ of a $\qty{1000}{M_{\odot}}$ object at a distance of $\qty{25}{kpc}$. You can assume an observer-source distance of $\qty{50}{kpc}$.
 
 \hspace*{\fill}
 
 \noindent\textcolor{purple}{Solution}
 \begin{align}
-\theta_{\symup{E}}&=\left(\frac{4\symup{G}M}{\symup{c}^{2}}\frac{D_{\symup{sl}}}{D_{\symup{lo}}D_{\symup{so}}}\right)^{\frac{1}{2}}\notag\\
+\theta_{\mathrm{E}}&=\left(\frac{4\symup{G}M}{\symup{c}^{2}}\frac{D_{\mathrm{sl}}}{D_{\mathrm{lo}}D_{\mathrm{so}}}\right)^{\frac{1}{2}}\notag\\
 &=\left(\frac{4\symup{G}\times\qty{1000}{M_{\odot}}}{\symup{c}^{2}}\frac{\qty{25}{kpc}}{\qty{25}{kpc}\times\qty{50}{kpc}}\right)^{\frac{1}{2}}\notag\\
 &=\qty{6.2e-8}{}=\qty{3.55e-6}{deg}.\tag{1}
 \end{align}
 
 \hspace*{\fill}
 
-\noindent\textcolor{purple}{(b)} Imagine that there are a large number of such black holes in the outer parts of the galaxy. Assume for simplicity that these black holes form a thin screen at a distance of $\qty{25}{kpc}$, in which the number surface density of the black holes is $\qty{e4}{deg^{-2}}$. Also assume that each black hole is moving with a random speed (perpendicular to the line of sight) of $\qty{200}{km\cdot{}s^{-1}}$. Imagine that we try to detect these black holes by looking for lensing amplications of stars in a background field in the Large Magellanic Cloud, which you can assume lie twice as far away. These stars have a number surface density of $\qty{e7}{deg^{-2}}$. The LMC has an solid angle of $\qty{40}{deg^{2}}$. Estimate roughly how many lensing amplifications of $a_{\symup{total}}>10$ you would expect to see each year. Roughly how long would each lensing event take?
+\noindent\textcolor{purple}{(b)} Imagine that there are a large number of such black holes in the outer parts of the galaxy. Assume for simplicity that these black holes form a thin screen at a distance of $\qty{25}{kpc}$, in which the number surface density of the black holes is $\qty{e4}{deg^{-2}}$. Also assume that each black hole is moving with a random speed (perpendicular to the line of sight) of $\qty{200}{km\cdot{}s^{-1}}$. Imagine that we try to detect these black holes by looking for lensing amplications of stars in a background field in the Large Magellanic Cloud, which you can assume lie twice as far away. These stars have a number surface density of $\qty{e7}{deg^{-2}}$. The LMC has an solid angle of $\qty{40}{deg^{2}}$. Estimate roughly how many lensing amplifications of $a_{\mathrm{total}}>10$ you would expect to see each year. Roughly how long would each lensing event take?
 
 \hspace*{\fill}
 
 \noindent\textcolor{purple}{Solution}
 \begin{align}
-&a_{\symup{total}}=\frac{u^{2}+2}{u\left(u^{2}+4\right)^{\frac{1}{2}}}, u=\frac{\beta}{\theta_{\symup{E}}},\notag\\
-&a_{\symup{total}}<0.1,\beta<\qty{0.1}{\theta_{\symup{E}}}=\qty{3.55e-7}{deg}.\tag{1}
+&a_{\mathrm{total}}=\frac{u^{2}+2}{u\left(u^{2}+4\right)^{\frac{1}{2}}}, u=\frac{\beta}{\theta_{\mathrm{E}}},\notag\\
+&a_{\mathrm{total}}<0.1,\beta<\qty{0.1}{\theta_{\mathrm{E}}}=\qty{3.55e-7}{deg}.\tag{1}
 \end{align}
 Angular velocity of the black hole
 \begin{equation}
@@ -415,11 +415,11 @@ Angular velocity of the black hole
 \end{equation}
 The numbers of lensing event that occurs in a year
 \begin{equation}
-N=n_{\symup{BH}}\omega\cdot{}\left(2\beta\right)\cdot{}n_{\symup{stars}}\cdot{}\qty{40}{deg^{2}}\cdot{}\qty{1}{yr}=1.33.\tag{3}
+N=n_{\mathrm{BH}}\omega\cdot{}\left(2\beta\right)\cdot{}n_{\mathrm{stars}}\cdot{}\qty{40}{deg^{2}}\cdot{}\qty{1}{yr}=1.33.\tag{3}
 \end{equation}
 Each lensing event take
 \begin{equation}
-\tau=\theta_{\symup{E}}/\omega=\qty{2.4e8}{s}=\qty{7.58}{yr}.\tag{4}
+\tau=\theta_{\mathrm{E}}/\omega=\qty{2.4e8}{s}=\qty{7.58}{yr}.\tag{4}
 \end{equation}
 
 \hspace*{\fill}
@@ -428,7 +428,7 @@ Each lensing event take
 
 \noindent The physical origin for the ocean tides was a matter of controversy among early astronomers. Modern theory has explained this phenomenon as the result of gravitational interactions which deform the Earth, causing a tidal bulge. The tidal potential energy of a mass $m$ on the Earth's surface can be expressed as:
 \begin{equation}
-U_{\symup{tidal}}=-\dfrac{\symup{G}M_{\symup{Moon}}m}{2r^{3}}R^{2}\left(3\cos^{2}{\phi}-1\right),\notag
+U_{\mathrm{tidal}}=-\dfrac{\symup{G}M_{\mathrm{Moon}}m}{2r^{3}}R^{2}\left(3\cos^{2}{\phi}-1\right),\notag
 \end{equation}
 where $R$ is the radius of the Earth, $r$ is the Earth-Moon distance, $\phi$ is the angle between the line from the Earth's center to mass $m$ and the Earth-Moon vector.
 
@@ -440,9 +440,9 @@ where $R$ is the radius of the Earth, $r$ is the Earth-Moon distance, $\phi$ is 
 
 \noindent\textcolor{purple}{Solution}
 \begin{align}
-&-\frac{\symup{G}M_{\symup{Moon}}}{2r^{3}}R^{2}\left(3-1-0+1\right)\notag\\
-&=-\frac{\symup{G}M_{\symup{Earth}}}{R}+\frac{\symup{G}M_{\symup{Earth}}}{R+h},\notag\\
-&h=\frac{3M_{\symup{Moon}}R^{4}}{2M_{\symup{Earth}}r^{3}}=\qty{0.535}{m}.\tag{1}
+&-\frac{\symup{G}M_{\mathrm{Moon}}}{2r^{3}}R^{2}\left(3-1-0+1\right)\notag\\
+&=-\frac{\symup{G}M_{\mathrm{Earth}}}{R}+\frac{\symup{G}M_{\mathrm{Earth}}}{R+h},\notag\\
+&h=\frac{3M_{\mathrm{Moon}}R^{4}}{2M_{\mathrm{Earth}}r^{3}}=\qty{0.535}{m}.\tag{1}
 \end{align}
 
 \hspace*{\fill}
@@ -453,7 +453,7 @@ where $R$ is the radius of the Earth, $r$ is the Earth-Moon distance, $\phi$ is 
 
 \noindent\textcolor{purple}{Solution}
 \begin{equation}
-h_{\odot}=\frac{3M_{\odot}R^{4}}{2M_{\symup{Earth}}\left(\qty{1}{AU}\right)^{3}}=\qty{0.247}{m}.\tag{2}
+h_{\odot}=\frac{3M_{\odot}R^{4}}{2M_{\mathrm{Earth}}\left(\qty{1}{AU}\right)^{3}}=\qty{0.247}{m}.\tag{2}
 \end{equation}
 Then we expect the Moon to be the primary deriver to the tidal cycle, and we expect to see two higher tides per day due to the rotation of Earth, which get an hour later each day. Over the course of a month, tidal heights are highest during the new and full Moons, and lowest during the first and second quarters.
 
@@ -461,7 +461,7 @@ Then we expect the Moon to be the primary deriver to the tidal cycle, and we exp
 
 \noindent\textcolor{blue}{11. Radial Velocity Exoplanets}
 
-\noindent Detecting Earth-like ($T\approx\qty{300}{K}, M\approx{}M_{\symup{Earth}}$) extrasolar planets is a major goal of modern astrophysics. In the case of our Sun, the radial velocity (RV)-signal due to the gravitational interaction with the Earth is very small ($\sim\qty{0.09}{m\cdot{}s^{-1}}$) and below the sensitivity of current instrumentation.
+\noindent Detecting Earth-like ($T\approx\qty{300}{K}, M\approx{}M_{\mathrm{Earth}}$) extrasolar planets is a major goal of modern astrophysics. In the case of our Sun, the radial velocity (RV)-signal due to the gravitational interaction with the Earth is very small ($\sim\qty{0.09}{m\cdot{}s^{-1}}$) and below the sensitivity of current instrumentation.
 
 \hspace*{\fill}
 
@@ -473,19 +473,19 @@ Then we expect the Moon to be the primary deriver to the tidal cycle, and we exp
 
 Note that
 \begin{equation}
-V_{\symup{obs}}=\symup{G}^{\frac{1}{2}}M_{1}^{-\frac{1}{2}}M_{\symup{p}}r_{\symup{p}}^{-\frac{1}{2}}\sin{i}.\tag{1}
+V_{\mathrm{obs}}=\symup{G}^{\frac{1}{2}}M_{1}^{-\frac{1}{2}}M_{\mathrm{p}}r_{\mathrm{p}}^{-\frac{1}{2}}\sin{i}.\tag{1}
 \end{equation}
-With $M_{1}=\qty{0.3}{M_{\odot}}, r_{\symup{p}}=\qty{0.2}{AU}$,
+With $M_{1}=\qty{0.3}{M_{\odot}}, r_{\mathrm{p}}=\qty{0.2}{AU}$,
 \begin{equation}
-V_{\symup{obs}}=\qty{0.09}{m\cdot{}s^{-1}}\times0.3^{-\frac{1}{2}}\times0.2^{-\frac{1}{2}}\times\sin{i}.\tag{2}
+V_{\mathrm{obs}}=\qty{0.09}{m\cdot{}s^{-1}}\times0.3^{-\frac{1}{2}}\times0.2^{-\frac{1}{2}}\times\sin{i}.\tag{2}
 \end{equation}
-$i=\ang{90;;}, V_{\symup{obs}}=\qty{0.367}{m\cdot{}s^{-1}}$.
+$i=\ang{90;;}, V_{\mathrm{obs}}=\qty{0.367}{m\cdot{}s^{-1}}$.
 
-\noindent $i=\ang{60;;}, V_{\symup{obs}}=\qty{0.318}{m\cdot{}s^{-1}}$.
+\noindent $i=\ang{60;;}, V_{\mathrm{obs}}=\qty{0.318}{m\cdot{}s^{-1}}$.
 
-\noindent $i=\ang{30;;}, V_{\symup{obs}}=\qty{0.183}{m\cdot{}s^{-1}}$.
+\noindent $i=\ang{30;;}, V_{\mathrm{obs}}=\qty{0.183}{m\cdot{}s^{-1}}$.
 
-\noindent $i=\ang{0;;}, V_{\symup{obs}}=\qty{0}{m\cdot{}s^{-1}}$.
+\noindent $i=\ang{0;;}, V_{\mathrm{obs}}=\qty{0}{m\cdot{}s^{-1}}$.
 
 \hspace*{\fill}
 
@@ -517,7 +517,7 @@ So the number of systems whose angular momentum direction is perpendicular to th
 
 It may be easier to make the detection of planets in the habitable zone around low-mass stars:
 
-1. For low-mass stars, in order to receive the same intensity of light as Earth does from the Sun, the distance between the planet and the star must be relatively small. As $V_{\symup{obs}}\propto{}M_{S}^{-\frac{1}{2}}, V_{\symup{obs}}\propto{}r_{\symup{p}}^{-\frac{1}{2}}$, the RV-signal is easier to detect.
+1. For low-mass stars, in order to receive the same intensity of light as Earth does from the Sun, the distance between the planet and the star must be relatively small. As $V_{\mathrm{obs}}\propto{}M_{S}^{-\frac{1}{2}}, V_{\mathrm{obs}}\propto{}r_{\mathrm{p}}^{-\frac{1}{2}}$, the RV-signal is easier to detect.
 
 2. Less massive stars also have smaller radius, and when the occultation occurs, the light changes more dramatically and is easier to detect.
 
@@ -535,9 +535,9 @@ It may be easier to make the detection of planets in the habitable zone around l
 
 \noindent\textcolor{purple}{Solution}
 \begin{align}
-M_{\symup{J}}&=\frac{1}{6}\pi\rho\lambda_{\symup{J}}^{3}=\frac{1}{6}\pi^{\frac{5}{2}}\symup{G}^{-\frac{3}{2}}\rho^{-\frac{1}{2}}\symup{c}_{\symup{s}}^{3},\tag{1}\\
-\symup{c}_{\symup{s}}&\sim{}v_{\symup{rms}}=\sqrt{\dfrac{3k_{\symup{B}}T}{m_{\ce{H2}}}},\tag{2}\\
-M_{\symup{J}}&=\frac{1}{6}\pi^{\frac{5}{2}}\symup{G}^{-\frac{3}{2}}\left(n_{\ce{H2}}m_{\ce{H2}}\right)^{-\frac{1}{2}}\left(\dfrac{3k_{\symup{B}}T}{m_{\ce{H2}}}\right)^{\frac{3}{2}}\notag\\
+M_{\mathrm{J}}&=\frac{1}{6}\pi\rho\lambda_{\mathrm{J}}^{3}=\frac{1}{6}\pi^{\frac{5}{2}}\symup{G}^{-\frac{3}{2}}\rho^{-\frac{1}{2}}\symup{c}_{\mathrm{s}}^{3},\tag{1}\\
+\symup{c}_{\mathrm{s}}&\sim{}v_{\mathrm{rms}}=\sqrt{\dfrac{3\symup{k}_{\mathrm{B}}T}{m_{\ce{H2}}}},\tag{2}\\
+M_{\mathrm{J}}&=\frac{1}{6}\pi^{\frac{5}{2}}\symup{G}^{-\frac{3}{2}}\left(n_{\ce{H2}}m_{\ce{H2}}\right)^{-\frac{1}{2}}\left(\dfrac{3\symup{k}_{\mathrm{B}}T}{m_{\ce{H2}}}\right)^{\frac{3}{2}}\notag\\
 &=\qty{4e31}{kg}.\tag{3}
 \end{align}
 
@@ -549,7 +549,7 @@ M_{\symup{J}}&=\frac{1}{6}\pi^{\frac{5}{2}}\symup{G}^{-\frac{3}{2}}\left(n_{\ce{
 
 \noindent\textcolor{purple}{Solution}
 \begin{align}
-M_{\symup{J}}&=\frac{1}{6}\pi^{\frac{5}{2}}\symup{G}^{-\frac{3}{2}}\rho^{-\frac{1}{2}}\left(\dfrac{3k_{\symup{B}}T}{m_{\ce{H}}}\right)^{\frac{3}{2}}\notag\\
+M_{\mathrm{J}}&=\frac{1}{6}\pi^{\frac{5}{2}}\symup{G}^{-\frac{3}{2}}\rho^{-\frac{1}{2}}\left(\dfrac{3\symup{k}_{\mathrm{B}}T}{m_{\ce{H}}}\right)^{\frac{3}{2}}\notag\\
 &=\qty{4.5e36}{kg}.\tag{1}
 \end{align}
 

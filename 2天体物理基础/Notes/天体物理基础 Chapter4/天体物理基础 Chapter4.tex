@@ -34,7 +34,7 @@
 \subsubsection{银盘}
 银河系的银盘分为薄盘加厚盘，恒星密度分布满足
 \begin{equation}
-n\left(R, z\right)\propto\left(\symup{e}^{-\left\vert{}z\right\vert{}/h_{\text{thin}}}+0.02\symup{e}^{-\left\vert{}z\right\vert{}/h_{\text{thick}}}\right)\symup{e}^{-R/h_{\symup{R}}}.
+n\left(R, z\right)\propto\left(\symup{e}^{-\left\vert{}z\right\vert{}/h_{\text{thin}}}+0.02\symup{e}^{-\left\vert{}z\right\vert{}/h_{\text{thick}}}\right)\symup{e}^{-R/h_{\mathrm{R}}}.
 \end{equation}
 银盘标长 $\qty{2.5}{kpc}$, 对年老恒星而言标高 $\qty{0.4}{kpc}$, 对气体和年轻恒星而言 $\qty{0.13}{kpc}$. 太阳轨道半径 $\qty{8.3}{kpc}$, 公转周期 $2$ 亿年。银盘质量 $\qty{5e10}{M_{\odot}}$, 总质量中十分之一在星际介质中。
 
@@ -92,13 +92,13 @@ R_{0}=\qty{8.5}{kpc}, V_{0}=\qty{220}{km\cdot{}s^{-1}}.
 \label{Oort 公式图示。}
 \end{figure}
 
-我们也可通过观测太阳附近恒星的运动来确定太阳的运动。如图\ref{Oort 公式图示。}所示，太阳附近银经为 $l$ 的恒星 $P$ 和太阳 $S$ 的转动角速度分别为 $\omega=\dfrac{V}{R}$ 和 $\omega_{0}=\dfrac{V_{0}}{R_{0}}$, 恒星相对于太阳的视向速度为 $V_{r}=V\cos{\alpha}-V_{0}\sin{l}$. 根据几何关系 $\cos{\alpha}=\dfrac{R_{0}\sin{l}}{R}$ 视向速度可写作 $V_{r}=R_{0}\left(\omega-\omega_{0}\right)\sin{l}$, 切向速度为 $V_{\symup{t}}=R\omega\sin{\alpha}-R_{0}\omega_{0}\cos{l}$, 根据几何关系 $R\sin{\alpha}=R_{0}\cos{l}-d$ 可知切向速度为 $V_{\symup{t}}=R_{0}\left(\omega-\omega_{0}\right)\cos{l}-\omega d$. 在 $R=R_{0}$ 附近将 $\omega-\omega_{0}$ 泰勒级数展开，
+我们也可通过观测太阳附近恒星的运动来确定太阳的运动。如图\ref{Oort 公式图示。}所示，太阳附近银经为 $l$ 的恒星 $P$ 和太阳 $S$ 的转动角速度分别为 $\omega=\dfrac{V}{R}$ 和 $\omega_{0}=\dfrac{V_{0}}{R_{0}}$, 恒星相对于太阳的视向速度为 $V_{r}=V\cos{\alpha}-V_{0}\sin{l}$. 根据几何关系 $\cos{\alpha}=\dfrac{R_{0}\sin{l}}{R}$ 视向速度可写作 $V_{r}=R_{0}\left(\omega-\omega_{0}\right)\sin{l}$, 切向速度为 $V_{\mathrm{t}}=R\omega\sin{\alpha}-R_{0}\omega_{0}\cos{l}$, 根据几何关系 $R\sin{\alpha}=R_{0}\cos{l}-d$ 可知切向速度为 $V_{\mathrm{t}}=R_{0}\left(\omega-\omega_{0}\right)\cos{l}-\omega d$. 在 $R=R_{0}$ 附近将 $\omega-\omega_{0}$ 泰勒级数展开，
 \begin{equation}
 \omega-\omega_{0}=\left(\frac{\d{}W}{\d{}R}\right)_{R_{0}}\left(R-R_{0}\right)+\cdots\approx\frac{1}{R_{0}^{2}}\left[R_{0}\left(\frac{\d{}V}{\d{}R}\right)_{R_{0}}-V_{0}\right]\left(R-R_{0}\right),
 \end{equation}
 对 $R\approx R_{0}\gg d, R-R_{0}\approx-d\cos{l}$ 有
 \begin{equation}
-V_{r}=Ad\sin{\left(2l\right)}, V_{\symup{t}}=Ad\cos{\left(2l\right)}+Bd,
+V_{r}=Ad\sin{\left(2l\right)}, V_{\mathrm{t}}=Ad\cos{\left(2l\right)}+Bd,
 \end{equation}
 根据太阳附近恒星的视向和切向速度，可以求出奥尔特常数：
 \begin{align}
@@ -107,9 +107,9 @@ B&=-\frac{1}{2}\left[\frac{V_{0}}{R_{0}}+\left(\frac{\d{}V}{\d{}R}\right)_{R_{0}
 \end{align}
 从而求出太阳绕银心转动角速度 $\omega_{0}=A-B=29\pm\qty{1.8}{km\cdot{}s^{-1}\cdot kpc^{-1}}$, 转动周期约 $\qty{2.2e8}{yr}$, 转动速度约 $238\pm\qty{15}{km\cdot{}s^{-1}}$. 上述数据是本地静止标准速度，太阳相对于该速度还有约 $\qty{10}{km\cdot{}s^{-1}}$ 的本动速度。
 
-接着我们来确定整个银河系不同半径处天体的自转速度，从而绘制出银河系自转曲线，进而确定银河系质量分布。$R<R_{0}$ 的区域，我们测量视线方向上 $\ce{H}\,\symup{\uppercase\expandafter{\romannumeral1}}$ 的 $\qty{21}{cm}$ 谱线和 $\ce{CO}$ 谱线的最大多普勒位移。为什么要确定“最大值”呢？在给定银经方向上，我们可以看到不同半径处的云团所发出的辐射，我们无法直接建立半径和视向速度的关系。但通过简单计算我们发现，在第一象限 $l\in\left(0, \ang{90;;}\right)$ 中，中性氢所处轨道半径 $R=R_{0}\sin{l}$ 时视向速度最大，因此我们可以确定该点的轨道半径和视向速度。而速度满足 $V_{r}=R_{0}\left(\omega-\omega_{0}\right)\sin{l}$, 进而可以得到 $\omega\left(R\right)$ 和 $V\left(R\right)$. 这种方法被称作切点法。
+接着我们来确定整个银河系不同半径处天体的自转速度，从而绘制出银河系自转曲线，进而确定银河系质量分布。$R<R_{0}$ 的区域，我们测量视线方向上 $\ce{H}\,\mathrm{\uppercase\expandafter{\romannumeral1}}$ 的 $\qty{21}{cm}$ 谱线和 $\ce{CO}$ 谱线的最大多普勒位移。为什么要确定“最大值”呢？在给定银经方向上，我们可以看到不同半径处的云团所发出的辐射，我们无法直接建立半径和视向速度的关系。但通过简单计算我们发现，在第一象限 $l\in\left(0, \ang{90;;}\right)$ 中，中性氢所处轨道半径 $R=R_{0}\sin{l}$ 时视向速度最大，因此我们可以确定该点的轨道半径和视向速度。而速度满足 $V_{r}=R_{0}\left(\omega-\omega_{0}\right)\sin{l}$, 进而可以得到 $\omega\left(R\right)$ 和 $V\left(R\right)$. 这种方法被称作切点法。
 
-而 $R>R_{0}$ 的区域主要靠 $\ce{H}\,\symup{\uppercase\expandafter{\romannumeral2}}$ 区的发射线、分子云的 $\ce{CO}$ 分子毫米波谱线和 Maser 谱线来确定视向速度。视向速度指向我们时记为负。最后我们可以绘制出视向速度和银经的关系：
+而 $R>R_{0}$ 的区域主要靠 $\ce{H}\,\mathrm{\uppercase\expandafter{\romannumeral2}}$ 区的发射线、分子云的 $\ce{CO}$ 分子毫米波谱线和 Maser 谱线来确定视向速度。视向速度指向我们时记为负。最后我们可以绘制出视向速度和银经的关系：
 \begin{figure}[!htbp]
 \centering
 \includegraphics[width=10cm]{figures/figure4_1.png}
@@ -137,13 +137,13 @@ M=\frac{R_{0}V_{0}^{2}}{\symup{G}}\sim\qty{e11}{M_{\odot}},
 
 光学观测：
 
-示踪天体：OB 型星，年轻的疏散星团、发射星云和 $\ce{H}\,\symup{\uppercase\expandafter{\romannumeral2}}$ 区、经典造父变星
+示踪天体：OB 型星，年轻的疏散星团、发射星云和 $\ce{H}\,\mathrm{\uppercase\expandafter{\romannumeral2}}$ 区、经典造父变星
 
 限制：星际尘埃消光
 
 射电观测：
 
-示踪天体：$\ce{H}\,\symup{\uppercase\expandafter{\romannumeral1}}$ 区、分子云
+示踪天体：$\ce{H}\,\mathrm{\uppercase\expandafter{\romannumeral1}}$ 区、分子云
 
 方法：测量 $\qty{21}{cm}$ 谱线和分子云毫米波谱线的多普勒位移，与银河系自转曲线比较，从而得到距离、甚长基线三角视差法
 
@@ -221,12 +221,12 @@ Conroy et al. arViv:2204.02989 有一副晕、厚盘、薄盘元素丰度的图
 \subsubsection{恒星轨道变化}
 Virial theorem
 \begin{align}
-&\frac{\d{}}{\d{}t}\left(\symbf{p}\cdot\symbf{x}\right)=\frac{\d\symbf{p}}{\d{}t}\cdot\symbf{x}+\symbf{p}\cdot\frac{\d\symbf{x}}{\d{}t}=\symbf{F}\cdot\symbf{x}+2E_{\symup{k}}.\\
-&\frac{1}{\tau}\laplacian\left(\symbf{p}\cdot\symbf{x}\right)=\overline{\symbf{F}\cdot\symbf{x}}+2\overline{E_{\symup{k}}}.
+&\frac{\d{}}{\d{}t}\left(\symbf{p}\cdot\symbf{x}\right)=\frac{\d\symbf{p}}{\d{}t}\cdot\symbf{x}+\symbf{p}\cdot\frac{\d\symbf{x}}{\d{}t}=\symbf{F}\cdot\symbf{x}+2E_{\mathrm{k}}.\\
+&\frac{1}{\tau}\laplacian\left(\symbf{p}\cdot\symbf{x}\right)=\overline{\symbf{F}\cdot\symbf{x}}+2\overline{E_{\mathrm{k}}}.
 \end{align}
 热动平衡系统中相空间变化对称因此
 \begin{equation}
-\overline{\symbf{F}\cdot\symbf{x}}+2\overline{E_{\symup{k}}}=0.
+\overline{\symbf{F}\cdot\symbf{x}}+2\overline{E_{\mathrm{k}}}=0.
 \end{equation}
 注意到
 \begin{equation}
@@ -234,8 +234,8 @@ Virial theorem
 \end{equation}
 因此
 \begin{align}
-\sum_{i}\symbf{F}_{i}\cdot\symbf{x}_{i}&=\sum_{i}\sum_{j\ne i}\symup{G}m_{i}\frac{m_{j}}{\left\vert\symbf{x}_{j}-\symbf{x}_{i}\right\vert^{3}}\left(x_{j}-x_{i}\right)\cdot x_{i}\notag\\
-&=-\sum\overline{\frac{\symup{G}m_{i}m_{j}}{\left\vert\symbf{x}_{j}-\symbf{x}_{i}\right\vert{}}}=\overline{E_{\symup{g}}}.
+\sum_{i}\symbf{F}_{i}\cdot\symbf{x}_{i}&=\sum_{i}\sum_{j\ne{}i}\symup{G}m_{i}\frac{m_{j}}{\left\vert\symbf{x}_{j}-\symbf{x}_{i}\right\vert^{3}}\left(x_{j}-x_{i}\right)\cdot x_{i}\notag\\
+&=-\sum\overline{\frac{\symup{G}m_{i}m_{j}}{\left\vert\symbf{x}_{j}-\symbf{x}_{i}\right\vert{}}}=\overline{E_{\mathrm{g}}}.
 \end{align}
 因此恒星的轨道运动也满足 Virial theorem.
 
@@ -271,19 +271,19 @@ n\sim\frac{1}{8\pi}\frac{N}{\ln N}.
 
 星系中心最亮，亮度向边缘递减。我们可以用面亮度（单位平方角秒的星等）描述亮度，多数椭圆星系满足
 \begin{equation}
-I\left(R\right)=I_{0}\exp\left[-7.67\left(\frac{R}{R_{\symup{e}}}\right)^{\frac{1}{4}}\right],
+I\left(R\right)=I_{0}\exp\left[-7.67\left(\frac{R}{R_{\mathrm{e}}}\right)^{\frac{1}{4}}\right],
 \end{equation}
 
 椭圆星系有四个基本参数（其中三个是独立的）：星系光度，有效半径，平均面亮度，速度弥散。基本上，椭圆星系分布在有效半径、表面亮度和中心速度弥散组成的三维空间的平面附近：
 \begin{equation}
-\log R_{\symup{e}}=a\log\sigma_{0}+b\log\langle\mu\rangle+\symup{const}.
+\log R_{\mathrm{e}}=a\log\sigma_{0}+b\log\langle\mu\rangle+\mathrm{const}.
 \end{equation}
 
 \paragraph{漩涡星系}~{}
 
 中心是球状或椭球状的核球。外面是扁平的星系盘，从核球两端延伸出两条或以上的螺旋状旋臂。盘外面是球状的星系晕。星系盘，特别是旋臂上主要是星族\uppercase\expandafter{\romannumeral1}恒星及气体和尘埃。核球和星系晕主要由星族\uppercase\expandafter{\romannumeral2}恒星构成，气体和尘埃很少。星系盘颜色偏蓝，星系晕和核偏红。盘中恒星和气体作圆轨道运动，晕中恒星作无规则轨道运动。旋臂中有恒星形成。
 
-同样有面亮度分布，不过椭圆星系是 $\exp\left(-\left(\dfrac{R}{R_{\symup{e}}}\right)^{\frac{1}{4}}\right)$, 盘星系是 $\exp\left(-\left(\dfrac{R}{R_{\symup{e}}}\right)\right)$.
+同样有面亮度分布，不过椭圆星系是 $\exp\left(-\left(\dfrac{R}{R_{\mathrm{e}}}\right)^{\frac{1}{4}}\right)$, 盘星系是 $\exp\left(-\left(\dfrac{R}{R_{\mathrm{e}}}\right)\right)$.
 
 Faber-Jackson 关系
 
