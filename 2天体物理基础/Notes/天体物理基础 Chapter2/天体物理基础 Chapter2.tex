@@ -32,27 +32,27 @@ U_{\mathrm{g}}&=-\symup{G}\int_{0}^{R}\frac{4}{3}\pi r^{3}\rho\frac{4\pi r^{2}\r
 
 到了 1920 年代，卢瑟福等人已经测定了原子核的质量，同时相对论质能方程的提出让人们意识到恒星的能量可能来自于热核反应。那么恒星内部环境支持核聚变发生吗？我们先估计一下电荷数最小的氢原子聚变所需克服的经典库仑势垒。取质子直径 $r\sim\qty{e-15}{m}$, 所需的温度为
 \begin{align}
-\frac{1}{2}m_{\ce{H}}v^{2}&=\frac{3}{2}\symup{k}_{\mathrm{B}}T_{\mathrm{classical}}=\frac{1}{4\pi\varepsilon_{0}}\frac{Z_{1}Z_{2}{\color{blue}{\ce{e}}}^{2}}{r},\\
-T_{\mathrm{classical}}&=\frac{Z_{1}Z_{2}{\color{blue}{\ce{e}}}^{2}}{6\pi\varepsilon_{0}\symup{k}_{\mathrm{B}}r}\sim\qty{e10}{K}.
+\frac{1}{2}m_{\ce{H}}v^{2}&=\frac{3}{2}k_{\mathrm{B}}T_{\mathrm{classical}}=\frac{1}{4\pi\varepsilon_{0}}\frac{Z_{1}Z_{2}{\color{blue}{\ce{e}}}^{2}}{r},\\
+T_{\mathrm{classical}}&=\frac{Z_{1}Z_{2}{\color{blue}{\ce{e}}}^{2}}{6\pi\varepsilon_{0}k_{\mathrm{B}}r}\sim\qty{e10}{K}.
 \end{align}
 对于恒星来讲这个温度实在是难以达到。好在量子图景下，即使核子动能不足以跨越库仑势垒，它也有一定的概率穿越它。此时所需的温度为
 \begin{align}
 \frac{1}{4\pi\varepsilon_{0}}\frac{Z_{1}Z_{2}{\color{blue}{\ce{e}}}^{2}}{\lambda}&=\frac{p^{2}}{2m_{\ce{H}}}=\frac{\mleft(h/\lambda\mright)^{2}}{2m_{\ce{H}}},\\
 \lambda&=\frac{2\pi\varepsilon_{0}h^{2}}{Z_{1}Z_{2}{\color{blue}{\ce{e}}}^{2}m_{\ce{H}}}\to r,\\
-T_{\mathrm{quantum}}&=\frac{Z_{1}^{2}Z_{2}^{2}{\color{blue}{\ce{e}}}^{4}m_{\ce{H}}}{12\pi^{2}\varepsilon_{0}^{2}\symup{k}_{\mathrm{B}}h^{2}}\sim\qty{e7}{K}.
+T_{\mathrm{quantum}}&=\frac{Z_{1}^{2}Z_{2}^{2}{\color{blue}{\ce{e}}}^{4}m_{\ce{H}}}{12\pi^{2}\varepsilon_{0}^{2}k_{\mathrm{B}}h^{2}}\sim\qty{e7}{K}.
 \end{align}
 这个温度就比较容易达到了。我们可以来估计一下太阳内部的压力和温度。根据 (\ref{2.1.2}) 式可知，
 \begin{equation}
 P=\int_{0}^{P}\d{}P=\int_{R}^{0}-\frac{\symup{G}M_{r}\rho}{r^{2}}\d{}r=\int_{R}^{0}-\frac{\symup{G}4\pi{}r^{3}\rho^{2}}{3r^{2}}\d{}r=\frac{2\pi{}}{3}\rho^{2}\symup{G}R^{2},\overline{P}\sim\qty{e14}{Pa},
 \end{equation}
-因此太阳平均温度可达 $T=\dfrac{\mu m_{\ce{H}}\overline{P}}{\symup{k}_{\mathrm{B}}\rho}\sim\qty{5e6}{K}$, 核心温度可达 $\qty{1.5e7}{K}$, 因此仅凭借云团坍缩过程中所释放的引力能就足以达到支持热核反应所需要的高温。
+因此太阳平均温度可达 $T=\dfrac{\mu m_{\ce{H}}\overline{P}}{k_{\mathrm{B}}\rho}\sim\qty{5e6}{K}$, 核心温度可达 $\qty{1.5e7}{K}$, 因此仅凭借云团坍缩过程中所释放的引力能就足以达到支持热核反应所需要的高温。
 
 热核反应的速率取决于粒子速度分布和反应截面（沿用了散射截面的概念，表征具有某速度的粒子穿越库仑势垒的概率）。粒子速度越高反应截面越大，但由于粒子分布大多满足 Maxwell 速度分布，速度越高粒子数越少，反应速率降低，因此只有速度在一定区间内的粒子才能进行有效的反应，这个区间也被称作 Gamov 窗口。
 
 首先 Maxwell 速度分布为
 \begin{align}
-f\mleft(v\mright)\d{}v&=\mleft(\frac{m}{2\pi\symup{k}_{\mathrm{B}}T}\mright)^{\frac{3}{2}}\exp\mleft(-\frac{mv^{2}}{2\symup{k}_{\mathrm{B}}T}\mright) 4\pi v^{2}\d{}v,\\
-f\mleft(E\mright)\d{}E&=\frac{2}{\sqrt{\pi}}\frac{E^{\frac{1}{2}}}{\mleft(\symup{k}_{\mathrm{B}}T\mright)^{\frac{3}{2}}\exp\mleft(-\dfrac{E}{\symup{k}_{\mathrm{B}}T}\mright)}\d{}E.
+f\mleft(v\mright)\d{}v&=\mleft(\frac{m}{2\pi{}k_{\mathrm{B}}T}\mright)^{\frac{3}{2}}\exp\mleft(-\frac{mv^{2}}{2k_{\mathrm{B}}T}\mright) 4\pi v^{2}\d{}v,\\
+f\mleft(E\mright)\d{}E&=\frac{2}{\sqrt{\pi}}\frac{E^{\frac{1}{2}}}{\mleft(k_{\mathrm{B}}T\mright)^{\frac{3}{2}}\exp\mleft(-\dfrac{E}{k_{\mathrm{B}}T}\mright)}\d{}E.
 \end{align}
 其中 $m$ 是两粒子的约化质量 $\dfrac{m_{1}m_{2}}{m_{1}+m_{2}}$. 其次量子隧穿的概率为
 \begin{equation}
@@ -66,13 +66,13 @@ E_{\mathrm{G}}&=\mleft[\frac{1}{2\varepsilon_{0}\hbar}\mleft(\frac{m}{2}\mright)
 结合 Maxwell 速度分布就能得到反应速率：
 \begin{align}
 r&=n_{1}n_{2}\int_{0}^{\infty}\sigma\mleft(E\mright) vf\mleft(E\mright)\d{}E\notag\\
-&=n_{1}n_{2}\frac{2^{\frac{3}{2}}}{\mleft(\pi m\mright)^{\frac{1}{2}}}\frac{1}{\mleft(\symup{k}_{\mathrm{B}}T\mright)^{\frac{3}{2}}}\int_{0}^{\infty}S\mleft(E\mright)\exp\mleft(-\frac{E_{\mathrm{G}}^{\frac{1}{2}}}{E^{\frac{1}{2}}}\mright)\exp\mleft(-\frac{E}{\symup{k}_{\mathrm{B}}T}\mright)\d{}E.
+&=n_{1}n_{2}\frac{2^{\frac{3}{2}}}{\mleft(\pi m\mright)^{\frac{1}{2}}}\frac{1}{\mleft(k_{\mathrm{B}}T\mright)^{\frac{3}{2}}}\int_{0}^{\infty}S\mleft(E\mright)\exp\mleft(-\frac{E_{\mathrm{G}}^{\frac{1}{2}}}{E^{\frac{1}{2}}}\mright)\exp\mleft(-\frac{E}{k_{\mathrm{B}}T}\mright)\d{}E.
 \end{align}
 观察上式可知在某个能量处反应速率最大，也就是 Gamow Peak:
 \begin{equation}
-E_{0}=\mleft[\mleft(\frac{m}{2}\mright)^{\frac{1}{2}}\frac{Z_{1}Z_{2}{\color{blue}{\ce{e}}}^{2}\symup{k}_{\mathrm{B}}T}{4\varepsilon_{0}\hbar}\mright]^{\frac{2}{3}}=\mleft(\frac{E_{\mathrm{G}}^{\frac{1}{2}}\symup{k}_{\mathrm{B}}T}{2}\mright)^{\frac{2}{3}}.
+E_{0}=\mleft[\mleft(\frac{m}{2}\mright)^{\frac{1}{2}}\frac{Z_{1}Z_{2}{\color{blue}{\ce{e}}}^{2}k_{\mathrm{B}}T}{4\varepsilon_{0}\hbar}\mright]^{\frac{2}{3}}=\mleft(\frac{E_{\mathrm{G}}^{\frac{1}{2}}k_{\mathrm{B}}T}{2}\mright)^{\frac{2}{3}}.
 \end{equation}
-看表达式可知 $E_{0}$ 是热能 $\symup{k}_{\mathrm{B}}T$ 和 $E_{\mathrm{G}}$ 按照 $2: 1$ 的几何平均。
+看表达式可知 $E_{0}$ 是热能 $k_{\mathrm{B}}T$ 和 $E_{\mathrm{G}}$ 按照 $2: 1$ 的几何平均。
 
 接着计算能量产生效率，首先一次反应释放的能量为
 \begin{equation}
@@ -80,13 +80,13 @@ E_{0}=\mleft[\mleft(\frac{m}{2}\mright)^{\frac{1}{2}}\frac{Z_{1}Z_{2}{\color{blu
 \end{equation}
 将 $S\mleft(E_{0}\mright)$ 从反应速率表达式的积分中提出来，得到
 \begin{equation}
-r\propto{}n_{1}n_{2}\frac{S\mleft(E_{0}\mright)}{T^{\frac{2}{3}}}\exp\mleft[-3\mleft(\frac{{\color{blue}{\ce{e}}}^{4}}{32\varepsilon_{0}^{2}\symup{k}_{\mathrm{B}}\hbar^{2}}\frac{mZ_{1}^{2}Z_{2}^{2}}{T}\mright)^{\frac{1}{3}}\mright].
+r\propto{}n_{1}n_{2}\frac{S\mleft(E_{0}\mright)}{T^{\frac{2}{3}}}\exp\mleft[-3\mleft(\frac{{\color{blue}{\ce{e}}}^{4}}{32\varepsilon_{0}^{2}k_{\mathrm{B}}\hbar^{2}}\frac{mZ_{1}^{2}Z_{2}^{2}}{T}\mright)^{\frac{1}{3}}\mright].
 \end{equation}
 
 于是我们可以定义聚变效率 $C$, 一般用实验而不是计算确定。最后可借此得到单位体积的能量产生率 $\varepsilon$
 \begin{align}
 r\laplacian\varepsilon&=\rho\varepsilon.\\
-&\varepsilon=C\rho X_{1}X_{2}\frac{1}{T^{\frac{2}{3}}}\exp\mleft[-3\mleft(\frac{{\color{blue}{\ce{e}}}^{4}}{32\varepsilon_{0}^{2}\symup{k}_{\mathrm{B}}\hbar^{2}}\frac{mZ_{1}^{2}Z_{2}^{2}}{T}\mright)^{\frac{1}{3}}\mright].
+&\varepsilon=C\rho X_{1}X_{2}\frac{1}{T^{\frac{2}{3}}}\exp\mleft[-3\mleft(\frac{{\color{blue}{\ce{e}}}^{4}}{32\varepsilon_{0}^{2}k_{\mathrm{B}}\hbar^{2}}\frac{mZ_{1}^{2}Z_{2}^{2}}{T}\mright)^{\frac{1}{3}}\mright].
 \end{align}
 
 \subsubsection{恒星中的聚变过程}
@@ -211,7 +211,7 @@ $\ce{Si}$ & $\ce{Si, S, Ar, Ca, Ti, Cr, Fe, Ni}$ & $\qty{1}{d}$ & $4.1$ & $\qty{
 \begin{equation}
 -\int_{0}^{R}3P4\pi{}r^{2}\d{}r=\int_{0}^{R}\mleft(-\frac{\symup{G}M_{r}}{r}\mright) 4\pi{}r^{2}\rho\d{}r.
 \end{equation}
-对于理想气体而言，气压 $P=n\symup{k}_{\mathrm{B}}T$, 内能 $E_{\mathrm{T}}=\dfrac{3}{2}n\symup{k}_{\mathrm{B}}T$, 因此 $3P=2E_{\mathrm{T}}$, 上式积分左侧结果为 $-2U_{\mathrm{T}}$, 而右侧正是引力能 $U_{\mathrm{g}}$, 因此恒星总能量为 $U_{\mathrm{total}}=U_{\mathrm{T}}+U_{\mathrm{g}}=\dfrac{1}{2}U_{\mathrm{g}}=-U_{\mathrm{T}}$, 恒星温度升高，动能上高，总能量反而下降，因此恒星是个负热容系统。
+对于理想气体而言，气压 $P=n{}k_{\mathrm{B}}T$, 内能 $E_{\mathrm{T}}=\dfrac{3}{2}nk_{\mathrm{B}}T$, 因此 $3P=2E_{\mathrm{T}}$, 上式积分左侧结果为 $-2U_{\mathrm{T}}$, 而右侧正是引力能 $U_{\mathrm{g}}$, 因此恒星总能量为 $U_{\mathrm{total}}=U_{\mathrm{T}}+U_{\mathrm{g}}=\dfrac{1}{2}U_{\mathrm{g}}=-U_{\mathrm{T}}$, 恒星温度升高，动能上高，总能量反而下降，因此恒星是个负热容系统。
 
 而对相对论物质来说，因为 $E_{\mathrm{T}}=3P$, 因此 $U_{\mathrm{T}}=-U_{\mathrm{g}}$, 因此总能量为 $0$.
 
@@ -224,7 +224,7 @@ P_{\mathrm{rad}}=\frac{1}{3}a_{\mathrm{B}}T^{4}.
 \end{equation}
 而对于气压，我们假设非简并气体状态方程为理想气体状态方程
 \begin{equation}
-P_{\mathrm{g}}=n\symup{k}_{\mathrm{B}}T,
+P_{\mathrm{g}}=n{}k_{\mathrm{B}}T,
 \end{equation}
 其中 $n$ 是粒子数密度。记气体一共包含 $n'$ 摩尔的分子，那么
 \begin{equation}
@@ -232,11 +232,11 @@ n=\frac{n'N_{\mathrm{A}}}{V}=\frac{n'N_{\mathrm{A}}}{\dfrac{m}{\rho}}=\frac{\rho
 \end{equation}
 其中 $N_{\mathrm{A}}$ 是阿伏伽德罗常数，$\mu$ 为平均相对分子质量，$m_{\ce{H}}$ 是质子的实际质量，数值上等于 $\dfrac{1}{N_{\mathrm{A}}}$. 故非简并理想气体的气压可以写作
 \begin{equation}
-P_{\mathrm{g}}=\frac{\rho\symup{k}_{\mathrm{B}}T}{\mu m_{\ce{H}}}.
+P_{\mathrm{g}}=\frac{\rho{}k_{\mathrm{B}}T}{\mu m_{\ce{H}}}.
 \end{equation}
 进一步，我们需要确定恒星中气体的相对分子量。考虑完全电离的中性等离子体，记 $n_{i}$ 是各元素数密度，$\chi_{i}$ 是各元素所占的质量分数，$Z_{i}$ 是该元素的质子数（电荷数），$A_{i}$ 是该元素的质量数（即质子和中子数和），那么气压将是电子气体气压和各离子气体气压之和
 \begin{equation}
-P_{\mathrm{g}}=n_{{\color{blue}{\ce{e}}}}\symup{k}_{\mathrm{B}}T+\sum_{i}n_{i}\symup{k}_{\mathrm{B}}T=\sum_{i}\mleft(Z_{i}+1\mright) n_{i}\symup{k}_{\mathrm{B}}T=\sum_{i}\mleft(1+Z_{i}\mright)\frac{\rho\chi_{i}\symup{k}_{\mathrm{B}}T}{A_{i}m_{\ce{H}}}=\frac{\rho\symup{k}_{\mathrm{B}}T}{\mu m_{\ce{H}}}.
+P_{\mathrm{g}}=n_{{\color{blue}{\ce{e}}}}k_{\mathrm{B}}T+\sum_{i}n_{i}k_{\mathrm{B}}T=\sum_{i}\mleft(Z_{i}+1\mright) n_{i}k_{\mathrm{B}}T=\sum_{i}\mleft(1+Z_{i}\mright)\frac{\rho\chi_{i}k_{\mathrm{B}}T}{A_{i}m_{\ce{H}}}=\frac{\rho{}k_{\mathrm{B}}T}{\mu m_{\ce{H}}}.
 \end{equation}
 因此相对分子量为
 \begin{equation}
@@ -244,13 +244,13 @@ P_{\mathrm{g}}=n_{{\color{blue}{\ce{e}}}}\symup{k}_{\mathrm{B}}T+\sum_{i}n_{i}\s
 \end{equation}
 习惯上记 $\ce{H},\ce{He}$ 和金属元素的质量百分比为 $X, Y, Z$, 且认为金属元素质子数与中子数相当，即 $\dfrac{Z_{i}}{A_{i}}=\dfrac{1}{2}$, 那么对于考虑电子气体的情况，
 \begin{equation}
-P_{\mathrm{g}}=\rho\symup{k}_{\mathrm{B}}T\frac{2X+\dfrac{3}{4}Y+\dfrac{1}{2}Z}{m_{\ce{H}}}.
+P_{\mathrm{g}}=\rho{}k_{\mathrm{B}}T\frac{2X+\dfrac{3}{4}Y+\dfrac{1}{2}Z}{m_{\ce{H}}}.
 \end{equation}
 
 有时候我们不考虑电子气体的贡献，即只有一大堆离子，那么
 \begin{align}
 \frac{1}{\mu}&=\sum_{i}\frac{\chi_{i}}{A_{i}}\\
-P_{\mathrm{g}}&=\rho\symup{k}_{\mathrm{B}}T\frac{X+\dfrac{1}{4}Y}{m_{\ce{H}}}.
+P_{\mathrm{g}}&=\rho{}k_{\mathrm{B}}T\frac{X+\dfrac{1}{4}Y}{m_{\ce{H}}}.
 \end{align}
 同时我们还能给出电子气体的相对分子质量来表征其贡献
 \begin{equation}
@@ -265,7 +265,7 @@ P=\frac{1}{3}\int vpf\mleft(p\mright) 4\pi p^{2}\d{}p.\label{2.1.37}
 \end{equation}
 一般理想气体的分布满足麦克斯韦分布，因此压强满足
 \begin{equation}
-P=n\symup{k}_{\mathrm{B}}T.
+P=nk_{\mathrm{B}}T.
 \end{equation}
 而密度足够高的情况下，泡利不相容原则迫使粒子占据更高的动量态，因此
 \begin{equation}
@@ -427,7 +427,7 @@ $\kappa$ 与物质的密度、温度、组分有关，根据上式可发现 $L_{
 
 我们可以研究一下绝热条件下的温度梯度。假设恒星内部流体元在上升过程中绝热膨胀，不与周围交换热量，根据
 \begin{equation}
-P_{\mathrm{g}}=\frac{\rho\symup{k}_{\mathrm{B}}T}{\mu m_{\ce{H}}}
+P_{\mathrm{g}}=\frac{\rho{}k_{\mathrm{B}}T}{\mu m_{\ce{H}}}
 \end{equation}
 和
 \begin{equation}
@@ -437,7 +437,7 @@ P=K\rho^{\gamma}
 \begin{align}
 \frac{\d{}P}{\d{}r}&=-\frac{P}{\mu}\frac{\d\mu}{\d{}r}+\frac{P}{\rho}\frac{\d\rho}{\d{}r}+\frac{P}{T}\frac{\d{}T}{\d{}r},\notag\\
 \frac{\d{}P}{\d{}r}&=\gamma\frac{P}{\rho}\frac{\d\rho}{\d{}r},\notag\\
-\mleft.\frac{\d{}T}{\d{}r}\mright\vert_{\mathrm{ad}}&=\mleft(1-\frac{1}{\gamma}\mright)\frac{T}{P}\frac{\d{}P}{\d{}r}=-\mleft(1-\frac{1}{\gamma}\mright)\frac{\mu m_{\ce{H}}}{\symup{k}_{\mathrm{B}}}\frac{\symup{G}M_{r}}{r^{2}}.
+\mleft.\frac{\d{}T}{\d{}r}\mright\vert_{\mathrm{ad}}&=\mleft(1-\frac{1}{\gamma}\mright)\frac{T}{P}\frac{\d{}P}{\d{}r}=-\mleft(1-\frac{1}{\gamma}\mright)\frac{\mu m_{\ce{H}}}{k_{\mathrm{B}}}\frac{\symup{G}M_{r}}{r^{2}}.
 \end{align}
 我们认为 $\mleft\vert\dfrac{\d{}T}{\d{}r}\mright\vert_{\mathrm{actual}}<\mleft\vert\dfrac{\d{}T}{\d{}r}\mright\vert_{\mathrm{ad}}$ 的是辐射区，反之是对流区。
 
@@ -534,7 +534,7 @@ t_{\mathrm{dyn}}=\frac{R}{V}\approx\sqrt\frac{R^{3}}{\symup{G}M}\approx\qty{27}{
 对于自引力场，定义引力势 $F=-\nabla\Phi,\nabla^{2}\Phi_{0}=4\pi\symup{G}\rho_{0},\nabla P_{0}=-\rho_{0}\nabla\Phi_{0}$.
 现在考虑一个小扰动
 \begin{equation}
-\frac{P_{0}+P_{1}}{P_{0}}=\mleft(\frac{\rho_{0}+\rho_{1}}{\rho_{0}}\mright)^{\gamma}, P_{1}=\symup{c}_{\mathrm{s}}^{2}\rho_{1},
+\frac{P_{0}+P_{1}}{P_{0}}=\mleft(\frac{\rho_{0}+\rho_{1}}{\rho_{0}}\mright)^{\gamma}, P_{1}=c_{\mathrm{s}}^{2}\rho_{1},
 \end{equation}
 连续性方程变为
 \begin{equation}
@@ -546,20 +546,20 @@ t_{\mathrm{dyn}}=\frac{R}{V}\approx\sqrt\frac{R^{3}}{\symup{G}M}\approx\qty{27}{
 \end{equation}
 解得
 \begin{align}
-&\rho_{0}\frac{\partial\symbf{v}_{1}}{\partial t}=-\symup{c}_{\mathrm{s}}^{2}\nabla\rho_{1}-\rho_{0}\nabla\Phi_{1}.\\
-&\mleft(\frac{\partial{}^{2}}{\partial{}t^{2}}-\symup{c}_{\mathrm{s}}^{2}\nabla^{2}-4\pi\symup{G}\rho_{0}\mright)\rho_{1}=0.
+&\rho_{0}\frac{\partial\symbf{v}_{1}}{\partial t}=-c_{\mathrm{s}}^{2}\nabla\rho_{1}-\rho_{0}\nabla\Phi_{1}.\\
+&\mleft(\frac{\partial{}^{2}}{\partial{}t^{2}}-c_{\mathrm{s}}^{2}\nabla^{2}-4\pi\symup{G}\rho_{0}\mright)\rho_{1}=0.
 \end{align}
 上式中，如果引力可被忽略，就是声波方程。如果压力可被忽略，$\rho_{1}\propto\exp\mleft[\sqrt{4\pi\symup{G}\rho_{0}}t\mright]$. 通过三维傅立叶变换可以看出波数和密度分布。引入流体静力学色散关系：
 \begin{equation}
-\omega^{2}=k^{2}\symup{c}_{\mathrm{s}}^{2}-4\pi\symup{G}\rho_{0},
+\omega^{2}=k^{2}c_{\mathrm{s}}^{2}-4\pi\symup{G}\rho_{0},
 \end{equation}
 要让波发生演化而不是形成驻波，要求 $\omega$ 是复数。于是我们引入金斯波长
 \begin{equation}
-\lambda_{\mathrm{J}}=\frac{h}{p_{\mathrm{J}}}=\frac{2\pi}{\symup{k}_{\mathrm{J}}}=\sqrt{\frac{\pi\symup{c}_{\mathrm{s}}^{2}}{\symup{G}\rho_{0}}},
+\lambda_{\mathrm{J}}=\frac{h}{p_{\mathrm{J}}}=\frac{2\pi}{\symup{k}_{\mathrm{J}}}=\sqrt{\frac{\pi{}c_{\mathrm{s}}^{2}}{\symup{G}\rho_{0}}},
 \end{equation}
 同时有金斯质量：
 \begin{equation}
-M_{\mathrm{J}}=\frac{4\pi}{3}\rho\mleft(\frac{\lambda_{\mathrm{J}}}{2}\mright)^{3}\sim 2M_{\odot}\cdot\mleft(\frac{\symup{c}_{\mathrm{s}}}{\qty{0.2}{km\cdot{}s^{-1}}}\mright)^{3}\mleft(\frac{n}{\qty{e3}{cm^{-3}}}\mright)^{-\frac{1}{2}}.
+M_{\mathrm{J}}=\frac{4\pi}{3}\rho\mleft(\frac{\lambda_{\mathrm{J}}}{2}\mright)^{3}\sim 2M_{\odot}\cdot\mleft(\frac{c_{\mathrm{s}}}{\qty{0.2}{km\cdot{}s^{-1}}}\mright)^{3}\mleft(\frac{n}{\qty{e3}{cm^{-3}}}\mright)^{-\frac{1}{2}}.
 \end{equation}
 质量大于这个值的分子云才能坍缩。
 
@@ -567,11 +567,11 @@ M_{\mathrm{J}}=\frac{4\pi}{3}\rho\mleft(\frac{\lambda_{\mathrm{J}}}{2}\mright)^{
 
 更大尺度的星系盘上，气体会因较差自转被拉扯，因此要考虑旋转的影响。
 \begin{equation}
-\frac{\partial{}^{2}\Delta_{k}}{\partial{}t^{2}}=\mleft(2\pi\symup{G}\Sigma_{0}k-\Omega^{2}-k^{2}\symup{c}_{\mathrm{s}}^{2}\mright)\Delta_{k}.
+\frac{\partial{}^{2}\Delta_{k}}{\partial{}t^{2}}=\mleft(2\pi\symup{G}\Sigma_{0}k-\Omega^{2}-k^{2}c_{\mathrm{s}}^{2}\mright)\Delta_{k}.
 \end{equation}
 Toomre Q parameter
 \begin{equation}
-Q=\frac{\symup{c}_{\mathrm{s}}\Omega}{\pi\symup{G}\Sigma}<1
+Q=\frac{c_{\mathrm{s}}\Omega}{\pi\symup{G}\Sigma}<1
 \end{equation}
 时才会坍缩。
 
@@ -600,7 +600,7 @@ $M<M_{\mathrm{c}}$, 则结合能胜利，成为固态行星，否则分子间电
 
 当然，成为等离子体也不等于成为恒星，比如木星就是一颗气态行星，但它并没有进行氢核聚变。原因在于木星质量还不够大，引力能转化为内能后所达到的温度还不够高。我们可以估算一下达到点火温度所需要的质量。首先，根据恒星的 Virial theorem, 我们知道
 \begin{equation}
-U_{\mathrm{g}}=\frac{\symup{G}M^{2}}{R}\sim U_{\mathrm{k}}=N\symup{k}_{\mathrm{B}}T,
+U_{\mathrm{g}}=\frac{\symup{G}M^{2}}{R}\sim U_{\mathrm{k}}=Nk_{\mathrm{B}}T,
 \end{equation}
 记粒子间的距离为 $d, d=R\times N^{-\frac{1}{3}}$, 因此
 \begin{equation}
@@ -951,7 +951,7 @@ U_{\mathrm{B}}&=\frac{4}{3}\pi{}R^{3}\frac{B^{2}}{8\pi},\notag\\
 
 与通常恒星相比中子星的温度很高，但相对于中子星物质的高密度而言，它可以非常好地用零温近似描述，因此费米能为
 \begin{align}
-\varepsilon_{\mathrm{Feimi}}&=\frac{P_{\mathrm{F}}^{2}}{2m_{\ce{n}}}=\frac{h^{2}}{2m_{\ce{n}}}\mleft(\frac{3n}{8\pi}\mright)^{\frac{2}{3}}=\qty{30}{MeV}\mleft(\frac{\rho}{\qty{e14}{g\cdot cm^{-3}}}\mright)^{\frac{2}{3}}\gg\symup{k}_{\mathrm{B}}T.\\
+\varepsilon_{\mathrm{Feimi}}&=\frac{P_{\mathrm{F}}^{2}}{2m_{\ce{n}}}=\frac{h^{2}}{2m_{\ce{n}}}\mleft(\frac{3n}{8\pi}\mright)^{\frac{2}{3}}=\qty{30}{MeV}\mleft(\frac{\rho}{\qty{e14}{g\cdot cm^{-3}}}\mright)^{\frac{2}{3}}\gg{}k_{\mathrm{B}}T.\\
 E_{\mathrm{F}}&=\qty{1.64e53}{erg}\mleft(\frac{M}{\unit{M_{\odot}}}\mright)^{\frac{5}{3}}\mleft(\frac{R}{\qty{10}{km}}\mright)^{-2}.
 \end{align}
 
